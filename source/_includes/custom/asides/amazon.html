@@ -1,0 +1,23 @@
+<section>
+  <h1>Recommended reading...</h1>
+  <ul id="recommended_reading">
+  	{% if post.asins %}  	
+  		{% assign asins = post.asins %}
+  	{% elsif page.asins %}
+  		{% assign asins = page.asins %}
+    {% else %}
+      {% assign asins = site.asins %}
+  	{% endif %}
+    {% for asin in asins limit: site.recommended_reading %}
+      <li class="recommended_reading">
+      <p> 
+        {{ asin | amazon_medium_image }}
+      </p>
+      <p>
+        {{ asin | amazon_link }}
+        by {{ asin | amazon_authors }}
+      </p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
