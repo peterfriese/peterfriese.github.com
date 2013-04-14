@@ -1,0 +1,21 @@
+---
+author: Peter
+comments: true
+date: 2008-05-06 15:17:16
+layout: post
+slug: eclipse-stammtisch-hamburg-recap
+title: Eclipse Stammtisch Hamburg recap
+wordpress_id: 89
+categories:
+- Eclipse
+---
+
+Yesterday, the first Eclipse Stammtisch in Hamburg took place. We had about 30 registrations in advance and were quite surprised that even more people showed up. The [location](http://www.google.com/maps?f=q&hl=de&geocode=&q=Bahrenfelder+Stra%C3%9Fe+(Bolero+Ottensen)&sll=53.553343,9.929225&sspn=0.016368,0.047035&ie=UTF8&z=15&iwloc=addr) ([Bolero Bar](http://www.bolerobar.de/new/locationsdetail55.html) in [Hamburg Ottensen](http://en.wikipedia.org/wiki/Hamburg-Ottensen)) was well-suited: we had a nice room good enough for about 60 people with a looooong table set up for us. Although I planned to arrive early, I arrived late due to the catastrophic parking situation in Hamburg Ottensen (have to take this into account the next time...).![](http://farm4.static.flickr.com/3132/2469883821_09fef9f9a3.jpg?v=0)
+
+We had some frosty beverages (a big thank-you to [Ralph](http://ralph-at-eclipse.blog.de/) from all attendees!), nice tex-mex food and a lot of Eclipsy (and also non-Eclipsy) conversations. Networking opportunities were great - lots of well-known people like OSGi afficionados [Martin Lippert](http://martinlippert.blogspot.com/) and [Gerd Wütherich](http://blog.wuetherich.com/), "The Modeling Guys (tm)" from [itemis](http://www.itemis.eu) [(Sven](http://effi-blog.blogspot.com/), [Jan](http://koehnlein.blogspot.com/), [Holger](https://www.xing.com/profile/Holger_Schill2), [Moritz](https://www.xing.com/profile/Moritz_Eysholdt) and me) and [Gentleware](http://www.gentleware.com) ([Stefan](https://www.xing.com/profile/Stefan_Zeug) and [André](http://www.xing.com/profile/Andre_Lahs)), [Stefan Reichert](http://www.wickedshell.net/blog/) of [WickedShell](http://www.wickedshell.net/) fame,[ Karsten Panier](http://www.aysada.de/wordpress/) of [StIXDB](http://stixdb.aysada.de/), [Uwe](https://www.xing.com/profile/Uwe_Petschke) [Petschke](http://www.bookya.de/autor/Uwe+Petschke/) of [The Way Out](http://www.thewayout.de/) ([ObjectFab](http://www.objectfab.de/com/index.html)) and a whole bunch of people from companies like [OTTO](http://www.otto.de), [Immonet](http://www.immonet.de/), [Lufthansa Systems](http://www.lhsystems.com), [Kühne & Nagel](http://www.kn-portal.com/). Academia was also present: [Simon Zambrovski](http://www.techjava.de/) of the [Technical University of Hamburg-Harburg](http://www.tu-harburg.de/index_e.html) brought some of his students. Last not least, [Ralph Müller](http://www.eclipse.org/org/foundation/staff.php) of the [Eclipse Foundation](http://www.eclipse.org/org/), who tirelessly answered questions and connected people.
+
+Everybody Ralph and I talked to thought that the event was a big success and asked for more. As the term "[Stammtisch](http://www.toytowngermany.com/wiki/Stammtisch)" implies, this is a somewhat regular event, so there will most definitely be a follow-up event later this year. If there is enough interest (just leave a comment on this post), we will try to arrange an Eclipse Stammtisch each quarter, so stay tuned.
+
+Another excellent opportunity to network and exchange ideas concerning Eclipse is the upcoming [Eclipse DemoCamp in Hamburg](http://wiki.eclipse.org/Eclipse_DemoCamps_2008_-_Ganymede_Edition/Hamburg), which I happen to organize together with [Martin Lippert](https://www.xing.com/profile/Martin_Lippert) of [it-agile](http://www.it-agile.de/). After the Stammtisch, Martin and I went to check out a possible location for this event which looked quite promising. If you are interested in attending the Eclipse DemoCamp in Hamburg, add yourself to the list of attendees in the [wiki](http://wiki.eclipse.org/Eclipse_DemoCamps_2008_-_Ganymede_Edition/Hamburg). If you would like to _give_ a demo, please add yourself to the list of presenters. If you cannot come to [Hamburg](http://en.wikipedia.org/wiki/Hamburg) to attend the DemoCamp, choose one of the [DemoCamps in a city near you](http://wiki.eclipse.org/Eclipse_DemoCamps_2008_-_Ganymede_Edition) or organize your own DemoCamp.
+
+PS: thanks to [Simon](http://www.flickr.com/photos/sza/sets/72157604913902429/) for allowing me to use a photo I took using his camera!

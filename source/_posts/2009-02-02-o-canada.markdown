@@ -1,0 +1,46 @@
+---
+author: Peter
+comments: true
+date: 2009-02-02 22:03:56
+layout: post
+slug: o-canada
+title: O Canada
+wordpress_id: 168
+categories:
+- Canada
+- MDSD
+---
+
+So I arrived in Canada on Friday night aboard Air Canada 877 from Frankfurt to Toronto. I was very pleased to see that the flight wasn't fully booked, so I had the luxury of using two seats for the price of one. They have a fancy lighting system aboard these air crafts which might be supposed to simulate the diurnal rhythm, but if that's actually true, I lived through several days and nights on that flight!
+
+[
+
+![Disco lights aboard Air Canada 877](http://farm4.static.flickr.com/3372/3242484712_a9be61503c.jpg)
+
+](http://www.flickr.com/photos/81029262@N00/3242484712)
+
+After having a nice supper and watching "[Burn After Reading](http://en.wikipedia.org/wiki/Burn_After_Reading)", I took the chance to have a nap and actually arrived well rested at Toronto Pearson Airport.
+
+[
+
+![Approaching Toronto](http://farm4.static.flickr.com/3083/3242490062_f2ae80743c.jpg)
+
+](http://www.flickr.com/photos/81029262@N00/3242490062)
+
+Canada is full of snow at this time, which I like very much - we do not have so much snow up in Hamburg, where I live.
+
+[
+
+![Ballantrae](http://static.flickr.com/3390/3244884282_ffb97a69a3.jpg)
+
+](http://www.flickr.com/photos/81029262@N00/3244884282)
+
+I am staying at Ed Merks' place for the next few weeks in order to talk about business opportunities for itemis here in North America.
+
+[
+
+![Ed's house](http://farm4.static.flickr.com/3368/3241511257_4d846e81b0.jpg)
+
+](http://www.flickr.com/photos/81029262@N00/3241511257)
+
+So, if you're interested in doing model driven software development or need some advise on EMF, openArchitectureWare or textual DSLs (with Xtext), just drop me or Ed a note. You can reach me via peter at itemis dot com.
