@@ -1,3 +1,0 @@
-[submodule "plugins/amazon"]
-	path = plugins/amazon
-	url = git://github.com/longkey1/octopress-amazon-plugin.git
