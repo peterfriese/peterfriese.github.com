@@ -1,0 +1,27 @@
+---
+author: Peter
+comments: false
+date: 2005-05-02 22:10:19
+layout: post
+slug: '48'
+title: 'Reviews: FindBugs, Quantum DB'
+wordpress_id: 48
+categories:
+- Articles
+- Eclipse
+---
+
+[Issue 3.2005](http://www.eclipsemagazin.de/itr/ausgaben/psecom,id,263,nodeid,228.html) of the german Eclipse Magazin contains two short reviews written by me: 
+
+
+
+
+	
+  * [Review of FindBugs](http://f3.tobject.de/wp-content/downloads/articles/review_findbugs.pdf)
+
+	
+  * [Review of Quantum DB](http://f3.tobject.de/wp-content/downloads/articles/review_quantum.pdf)
+
+
+
+

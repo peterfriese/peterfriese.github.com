@@ -1,0 +1,100 @@
+---
+author: Peter
+comments: true
+date: 2010-01-31 22:56:11
+layout: post
+slug: 140-x-365-2659
+title: 140 x 365 = 2659
+wordpress_id: 382
+categories:
+- Tools
+---
+
+It's exactly one year since I posted [my first tweet](http://twitter.com/peterfriese/status/1164566213) on Twitter - time for a review.
+
+Before I give some reasons why I use Twitter, let's have a look at some stats.
+
+I sent out roughly 2660 tweets, on average 8.4 per day:
+
+
+[![TweetStats :: for peterfriese](http://farm3.static.flickr.com/2703/4316305253_ec08e825af_o.jpg)](http://www.flickr.com/photos/81029262@N00/4316305253)
+
+
+
+Looking at my tweet density, I hardly seem to be getting any sleep, which is not entirely true ;-)
+<!-- more -->
+
+
+[![TweetStats :: for peterfriese](http://farm5.static.flickr.com/4012/4316315167_c157b5410f_o.jpg)](http://www.flickr.com/photos/81029262@N00/4316315167)
+
+
+
+Over the last year, I tried quite a few twitter clients, but I like Tweetie the most (yes, I'm using a Mac):
+
+
+[![TweetStats :: for peterfriese](http://farm3.static.flickr.com/2684/4317057428_3b5487fdab_o.jpg)](http://www.flickr.com/photos/81029262@N00/4317057428)
+
+
+
+
+
+### Why I use Twitter
+
+
+
+
+
+	
+  * Twitter helps me to keep informed about topics I am interested in, while at the same time giving me the chance to get in touch with the sources of that information and give feedback.
+
+	
+  * Many vendors and dev teams have Twitter accounts and use them to twitter about what they're currently doing / developing, again helping me to keep up-to-date about current developments
+
+	
+  * Twitter helps me to "hear" what others are saying about the tools I and my teammates develop. Twitter clients like TweetDeck and Nambu allow you to define custom searches. E.g., I've got a search defined for "Xtext OR DSLs" so I will be informed each time someone tweets about either Xtext or DSLs. This allows me to give instant feedback to users needing help or ranting about [Xtext](http://twitter.com/xtext) (actually, most users praise Xtext, so I'm mostly using this search to retweet that praise)
+
+	
+  * Twitter is like a big room in which everybody can hear what you're saying. You can use this fact to use Twitter as a marketing channel, and that's what we do with [Xtext](http://www.xtext.org), too. We get the word out on Xtext, e.g. by announcing cool new features or talks we're giving at upcoming conferences.
+
+	
+  * I also use Twitter to get / keep in touch with co-workers, friend and also clients. More often than not when meeting new clients, I hear people say "nice to meet you in person after we have been talking on Twitter". Sometimes, I use Twitter instead of my phone to ping people ("give me a call when you are available") - works great!
+
+	
+  * By using Twitter, you will actually feel much closer to your peers ("[tweeps](http://www.urbandictionary.com/define.php?term=tweep)") than you did before. This holds true especially for the Eclipse crowd. Many of us follow each other on Twitter and thus know what we do in our day to day job (and in our spare time, too) better than before.
+
+
+
+
+
+### Some recommendations
+
+
+Whether you're new to Twitter or have been using it for years, here is my list of recommendations for Twitter. May it be inspirational for you:
+
+
+
+	
+  * Find a decent client. The web interface is O.K., but in order to use all the power of Twitter, you need to use a real client. My main work horse is [Tweetie](http://www.atebits.com/tweetie-mac/) (on the Mac), mostly because it allows me to view conversations in a really neat manner. [On the iPhone I recommend TweetDeck](http://www.tweetdeck.com/iphone/) - you can easily define additional columns to display custom searches, DMs, tweets nearby and so on. [Nambu](http://www.nambu.com/) also is very nice - and native! [TweetDeck on the Mac](http://www.tweetdeck.com/) is also great, but eats a lot of resources, which is why I rarely use it any more. If you want to issue tweets without losing context, give [Google Quick Search Bar](http://code.google.com/p/qsb-mac/) a try - [there's a plug-in that allows you](http://code.google.com/p/qsb-mac/wiki/GettingStarted#How_do_I_tweet_with_Twitter) to tweet from QSB.
+
+	
+  * Do NOT protect your updates. After all, you want to get in touch with other people. So there really is no point in protecting your updates.
+
+	
+  * If you're new to Twitter, make sure to post some tweets before starting to follow other people. You want to make sure other people are following you too, but why should they follow you if you've got nothing to say?
+
+	
+  * We're not interested in disgusting details about you, your family or your friends, [so keep them for you](http://theoatmeal.com/comics/facebook_suck).
+
+	
+  * I follow people mostly for professional reasons. Tweeting personal stuff is perfectly OK and can add that grain of salt which makes you human, but you should try to keep a balance.
+
+
+
+
+
+### Summing up
+
+
+Summing up all things, using Twitter has helped me to get in touch with a huge amount of people I wouldn't have interacted with if I hadn't been using Twitter. 
+
+If you read all this, let me lift the secret about the obviously wrong mathematical equation in the title of this post: it's the number of characters you may use for one tweet (140), the number of days since I started using Twitter and the total number of tweets I sent out (2659). Actually, as I am using [Twitter Tools for Wordpress](http://alexking.org/projects/wordpress), this blog post will automatically be announced on Twitter and thus be [tweet number 2660](http://twitter.com/peterfriese/status/8465879177).

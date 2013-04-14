@@ -1,0 +1,14 @@
+---
+author: Peter
+comments: false
+date: 2007-01-23 05:11:14
+layout: post
+slug: oop-2007
+title: OOP 2007
+wordpress_id: 65
+categories:
+- Computer
+- Conferences
+---
+
+I am on my way to [OOP 2007 conference in Munich](http://www.oopconference.com). Today at 14:00, I'll be giving [a talk on Open Source MDA](http://www.sigs-datacom.de/sd/kongresse/oop_2007/program.php?cat=session&ID=13) together with Stefan Reichert of  [Lufthansa Systems](http://www.lhsystems.com). If you happen to be there, drop by and say hello. You can also meet me at the [Gentleware](http://www.gentleware.com) booth in the exhibition area.

@@ -1,0 +1,33 @@
+---
+author: Peter
+comments: false
+date: 2005-12-22 00:09:10
+layout: post
+slug: '41'
+title: Paper on AndroMDA
+wordpress_id: 41
+categories:
+- MDA
+---
+
+[Daniel Schulz](mailto:d.schulz@ewetel.net) has written a nice paper titled "MDA Frameworks: AndroMDA" on [AndroMDA](http://www.andromda.org). Read it [here](http://www.wi.uni-muenster.de/pi/lehre/ws0506/seminar/02_andromda.pdf) (it is written in German).
+
+There are two things I particularly like about the paper: Daniel demonstrates why it is a good idea to use OCL to write queries, and he refers to Android.
+
+
+
+#### Why it is a good idea to write queries in OCL
+
+
+Most enterprise applications have to deal with a certain amount of data, so almost all models for enterprise applications do contain a rather large number of entities. Querying the database for information is one of the most popular operations being performed in enterprise applications. You do it almost all of the time. Depending on which persistence framework you are using, you'll have to use the correct query language. If you persistence framework is Hibernate, you're likely to use HQL to create your queries. If you're using EJB, you'll want to use EJB-QL. 
+
+As we all know, MDA is about raising the bar of abstraction. We have the PIM (Platform Independent Model) and the PSM (Platform Specific Model). The PIM should not contain any platform-specific assumptions. So, we should avoid using platform-specific things like HQL or EJB-QL in our PIMs. That's where OCL comes to the rescue: OCL is a platform-independent query language and can be translated to almost any platform specific query language. AndroMDA features OCL translation libraries for HQL and EJB-QL. 
+
+Using OCL, you can make your models more re-usable, since you can change the persistence framework more easily.
+
+
+
+#### Android
+
+
+Daniel refers to Android and states that it will contain "everything but a modelling tool" that one will need for using AndroMDA. I am working hard to make this dream come true. Currently, I am working on the configuration editor. You will soon be able to edit the `andromda.xml` file with a cool Eclipse Forms-based graphical editor.

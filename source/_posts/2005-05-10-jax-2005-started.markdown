@@ -1,0 +1,17 @@
+---
+author: Peter
+comments: false
+date: 2005-05-10 08:21:54
+layout: post
+slug: jax-2005-started
+title: JAX 2005 started!
+wordpress_id: 18
+categories:
+- Conferences
+- Java
+---
+
+Today, JAX 2005 started with an overwhelming number of 120 sessions. Detailed information can be found [here](http://jax2005.de), a live blogging site has been set up [here](http://www.jax.de/weblogs/jax/).  The topics most intersting for me are [Eclipse](http://www.jax.de/konferenzen/psecom,id,277,nodeid,,.html), [Modelling](http://www.jax.de/konferenzen/psecom,id,272,nodeid,,.html) and the current discussion around heavyweight (EJB-centric) and lightweight (Spring, PicoContainer) containers.
+
+Currently, I am attending Craig Russel's keynote on persistence. He started with a nice story about architects:
+A manager, an engineer and an architect are traveling to a fereign country. They are stopped at the customs and are asked what they do. "We are selling object relational mapping", they answer. "Oh, intersting", the customs officer replies, "Which kind of object relational mapping?". The reply is "We are doing Java Data Objects". The customer says: "Oh, in this country we are using Toplink. I am sorry, but we'll have to kill you." The manager, the engineer and the architects have to stand in a row. When it comes to shooting the manager, the gun is jammed. "This must be divine revelation, you are free to go", says the customs officer and the manager leaves. Now the engineer is about to be shot, but the gun blocks again. He may go as well. The architect is the last man standing. "Is there anything you want to say before we shoot you?" - "Oh yes, " answers the architect, "I think I know what the problem is."
