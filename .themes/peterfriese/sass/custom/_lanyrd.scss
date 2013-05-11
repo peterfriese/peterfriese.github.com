@@ -1,0 +1,36 @@
+.speaking-box {
+	border: solid 1px #AAA;
+	background-color: white;
+    padding-left: 15px;
+	padding-right: 15px;
+    margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; 
+    border-radius: 5px;
+    display: block;
+
+    h2 {
+    	font-size: 1.5em;
+    }
+
+    ol {
+    	li.vevent {
+		    background: url('images/speaking-icon.png') no-repeat top left;
+		    padding-left: 12px;
+			padding-right: 12px;
+		    margin: 0.5em;
+		    margin-bottom: 1.5em;
+
+		    h2 {
+				font-size: 1.2em;
+				font-weight: normal;
+				border-bottom: dotted 1px #AAA;
+				a {
+					text-decoration: none;	    
+				}
+		    }    	
+    	}
+    }
+}

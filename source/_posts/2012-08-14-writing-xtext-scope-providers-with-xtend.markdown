@@ -12,12 +12,10 @@ asins:
 - "1481218581" # DSL Engineering: Designing, Implementing and Using Domain-Specific Languages
 - "1935182455" # DSLs in Action
 - "0321712943" # Fowler: Domain Specific Languages
+teaserimage: /images/2012-08-14-writing-xtext-scope-providers-with-xtend/scope_150x150.jpg
 ---
 
-
-{% img left /images/2012-08-14-writing-xtext-scope-providers-with-xtend/scope_150x150.jpg %}
-
-[Scope][1] is an [important concept][2] in the design of programming language. In Xtext, scoping is used [to drive two major parts][3] of your DSL: [linking][4] and [content assist][5]. While Xtext applies the [80/20 rule][6] very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you'll have to roll up your sleeves and write your own scope provider.
+[Scope][1] is an [important concept][2] in the design of programming languages. In Xtext, scoping is used [to drive two major parts][3] of your DSL: [linking][4] and [content assist][5]. While Xtext applies the [80/20 rule][6] very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you'll have to roll up your sleeves and write your own scope provider.
 
   [1]: http://en.wikipedia.org/wiki/Scope_(computer_science)
   [2]: http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html
