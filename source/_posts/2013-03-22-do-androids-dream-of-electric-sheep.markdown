@@ -10,9 +10,8 @@ categories:
 - iOS
 - Talks
 asins: 
-- "0321535022"
-- "1935182536"
- 
+- "0345453743" # The Ultimate Hitchhiker's Guide to the Galaxy
+- "0716704633" # Computer Power and Human Reason: From Judgement to Calculation
 ---
 
 Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being _2001 - A Space Odyssey_, _Blade Runner_, _Star Trek_, _The Hitchhiker’s Guide to the Galaxy_ and _I, Robot_.
@@ -38,20 +37,13 @@ In my Pecha Kucha, I went on to tell my audience to make better use of the capab
 
 So to set a good example, I decided to create [ElizaApp](http://elizaapp.com) - an app that can listen to what you say and answer in spoken language. This is going to be a great project, because I’ll show several very interesting things:
 
+1. How to analyse spoken language on a mobile device
 
+2. How to synthesize speech on mobile devices
 
-	
-  1. How to analyse spoken language on a mobile device
+3. How to integrate a JavaScript engine in your mobile app
 
-	
-  2. How to synthesize speech on mobile devices
-
-	
-  3. How to integrate a JavaScript engine in your mobile app
-
-	
-  4. How to create a Siri-look-alike chat UI
-
+4. How to create a Siri-look-alike chat UI
 
 Over the course of the next few weeks, I will write several posts covering these topics. If there is anything that interests you in particular, feel free to add a comment.
 

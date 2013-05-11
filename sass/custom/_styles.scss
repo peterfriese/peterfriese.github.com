@@ -1,2 +1,25 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+/* FancyBox Galleries */
+$rad: 6px;
+ul.gallery {
+  text-align: center;
+  padding: 5px;
+  li {
+    display: inline;
+    padding: 5px;
+  }
+}
+ul.gallery2 {
+  border: thin solid gray;
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+  border-radius: $rad;
+  text-align: center;
+  padding: 5px;
+  li {
+    display: inline;
+    padding: 5px;
+  }
+}
