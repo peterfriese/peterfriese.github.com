@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: AdHoc | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/adhoc/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T22:07:19+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[What's your number?]]></title>
+    <link href="http://peterfriese.github.io/whats-your-number/"/>
+    <updated>2011-01-27T02:00:47+01:00</updated>
+    <id>http://peterfriese.github.io/whats-your-number</id>
+    <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you've been asking yourself "what's this number, and where do I find it?", read on!</p>
+
+<!-- more -->
+
+
+<p>The Unique Device IDentifier is a 40-digit number that uniquely identifies your iPhone or iPad. It's tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.</p>
+
+<p>Here's how you can find this number and send it to your developer:</p>
+
+<ol>
+<li>Connect your iPhone / iPad to your computer using the white USB connection cable.</li>
+<li>Wait for iTunes to start up. If it doesn't start automatically, start it manually (Windows users will find it in the depths of the Start Menu, Mac users can use Spotlight to search for it).</li>
+<li>Click on the name of your iPhone / iPad on the left-hand side of the iTunes Window: <a href="http://www.flickr.com/photos/81029262@N00/5391569342"><img src="http://farm6.static.flickr.com/5180/5391569342_79b2d97180.jpg" alt="Finding your iPhone's UDID, step 1" /></a></li>
+<li>Details about your device will be displayed in the main area of the iTunes window.</li>
+<li>Find the label titled <strong>Serial Number</strong>. The serial number IS NOT the UDID!</li>
+<li>Holding down the CMD (on the Mac) or the CTRL (on Windows) key, click on the label <strong>Serial Number</strong></li>
+<li>The label's title will change to <strong>Identifier (UDID</strong>:<a href="http://www.flickr.com/photos/81029262@N00/5391652500"><img src="http://farm6.static.flickr.com/5291/5391652500_1c2dbaf918.jpg" alt="Finding your iPhone's UDID, step 2" /></a></li>
+<li>Press CMD+C (on Mac) or CTRL+C (on Windows) to copy the UDID to your clipboard</li>
+<li>Open a new mail, insert the UDID and a friendly message and send it to your developer.</li>
+</ol>
+
+
+<p>Easy, isn't it?</p>
+
+<p>Oh, and please do NOT send a screenshot of the UDID. You should know better now.</p>
+]]></content>
+  </entry>
+  
+</feed>

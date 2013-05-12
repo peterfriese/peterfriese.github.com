@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Apple | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/apple/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-05-12T16:11:47+02:00</updated>
+  <updated>2013-05-12T22:07:19+02:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,17 +18,28 @@
     <link href="http://peterfriese.github.io/appropriate-use-of-mapkit/"/>
     <updated>2011-02-16T11:48:38+01:00</updated>
     <id>http://peterfriese.github.io/appropriate-use-of-mapkit</id>
-    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you're violating Google's terms of service, I was wondering what in particular was wrong. <!-- more -->At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google's terms of service for Maps</a>, but can you spot what is wrong?</p>
+    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you're violating Google's terms of service, I was wondering what in particular was wrong.</p>
 
-<p>[caption id="attachment_687" align="aligncenter" width="172" caption="What's wrong with this map?"]<a href="http://www.peterfriese.de/wp-content/maps_without_google_logo.png"><img src="http://www.peterfriese.de/wp-content/maps_without_google_logo-172x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a>[/caption]</p>
+<!-- more -->
+
+
+<p>At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google's terms of service for Maps</a>, but can you spot what is wrong?</p>
+
+<p><ul class="gallery">
+<li><a href="/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png" class="fancybox" rel="gallery-b85ba1d38e1c89eca83ecb8ce17b14bc" title="Google Maps in your app - without Google Logo: you're doing it wrong!"><img src="/thumbs/maps_without_google_logo_240x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a></li>
+</ul></p>
 
 <p>Maybe you can better see what's wrong when I show you another screenshot, this time obeying the TOS:</p>
 
-<p>[caption id="attachment_688" align="aligncenter" width="169" caption="With logo: well done!"]<a href="http://www.peterfriese.de/wp-content/maps_with_google_logo.png"><img src="http://www.peterfriese.de/wp-content/maps_with_google_logo-169x300.png" alt="Google Maps with logo: well done!" /></a>[/caption]</p>
+<p><ul class="gallery">
+<li><a href="/images/2011-02-16-appropriate-use-of-mapkit/maps_with_google_logo.png" class="fancybox" rel="gallery-8590c5cd892556ccc1df97f31d1c3e84" title="Google Maps with logo: well done!"><img src="/thumbs/maps_with_google_logo_240x300.png" alt="Google Maps with logo: well done!" /></a></li>
+</ul></p>
 
 <p>Can you spot the difference? It's the Google logo!</p>
 
 <p>The reason why it is not shown in the first screenshot is that the bounds for the map are not set correctly. In the offending version of my app, I used a piece of code similar to this one:</p>
+
+<p>``` objc</p>
 
 <pre><code>- (void)viewDidLoad {
   [super viewDidLoad];
@@ -40,7 +51,11 @@
 }
 </code></pre>
 
+<p>```</p>
+
 <p>Nothing wrong with it, but it lacks one essential line:</p>
+
+<p>``` objc</p>
 
 <pre><code>- (void)viewDidLoad {
   [super viewDidLoad];
@@ -55,6 +70,8 @@
 }
 </code></pre>
 
+<p>```</p>
+
 <p>So, next time you write an app that contains Google Maps, make sure the Google logo is visible. You can get the full source code for this example <a href="http://github.com/peterfriese/MapKitSample">on my GitHub page</a>.</p>
 ]]></content>
   </entry>
@@ -64,13 +81,18 @@
     <link href="http://peterfriese.github.io/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
     <updated>2011-02-10T11:38:26+01:00</updated>
     <id>http://peterfriese.github.io/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
-    <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn't the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security. <!-- more -->HP is definitely doing something right. Never before has one single Tablet thrilled the interwebs as much as the TouchPad - except for the iPad, of course. Even <a href="http://scobleizer.com/2011/02/09/hp-makes-google-look-even-more-creaky/">die-hard Apple</a> fans are thrilled.</p>
+    <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn't the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
+
+<!-- more -->
+
+
+<p>HP is definitely doing something right. Never before has one single Tablet thrilled the interwebs as much as the TouchPad - except for the iPad, of course. Even <a href="http://scobleizer.com/2011/02/09/hp-makes-google-look-even-more-creaky/">die-hard Apple</a> fans are thrilled.</p>
 
 <p>Here's why I think HP's TouchPad will score a considerable market share:</p>
 
 <ol>
 <li><p>It's programmed with web technologies like HTML, CSS and JavaScript. Don't get me wrong - the iPad can also be programmed with web technologies: when the iPhone was first released and no one but Apple was allowed to write native apps, Steve himself told everyone that "mobile web applications are the future". And despite the fact Apple has opened it's SDK and we can now program the iPad / iPhone in Objective-C, many developers are more interested in writing apps with web technologies. Tools like PhoneGap and Appcelerator try to alleviate this situation, basically allowing you to wrap web code in more or less tiny wrapper apps so your web apps can be submitted to the App Store. However, most apps written using web technologies do not feel the same as real native apps on the iOS platform. So why do I think the situation will be better on the TouchPad? Well, because the TouchPad has been built for running web-based apps! It has been optimized for it. Web apps look stunningly great on the TouchPad. Now, every web developer can download the webOS SDK and get started writing apps for the TouchPad. It's a safe bet to assume there are more web developers out there than Objective-C developers, so it shouldn't take long until we've got a similar amount of apps for the TouchPad as we've got for the iPad.</p></li>
-<li><p>The manufacturing process. HP has a very powerful production pipeline, capable of pumping out high volumes of devices. In <a href="http://www.itchannelplanet.com/trends/article.php/3920936/Gartner-Global-PC-Shipments-Total-351-Million-Units-in-2010-Gain-138-Percent-US-Q4-PC-Market-Slides-Nearly-7-Percent.htm">Q4/2010, they shipped 17.6</a> million PCs (<a href="http://www.apple.com/pr/library/2011/01/18results.html">Apple sold 7.33 million iPads</a> in the same quarter). So if they are serious about it, it should be easy for HP to both produce and distribute high volumes of TouchPads._</p></li>
+<li><p>The manufacturing process. HP has a very powerful production pipeline, capable of pumping out high volumes of devices. In <a href="http://www.itchannelplanet.com/trends/article.php/3920936/Gartner-Global-PC-Shipments-Total-351-Million-Units-in-2010-Gain-138-Percent-US-Q4-PC-Market-Slides-Nearly-7-Percent.htm">Q4/2010, they shipped 17.6</a> million PCs (<a href="http://www.apple.com/pr/library/2011/01/18results.html">Apple sold 7.33 million iPads</a> in the same quarter). So if they are serious about it, it should be easy for HP to both produce and distribute high volumes of TouchPads.</p></li>
 <li><p>Security. When it comes to enterprise computing, security becomes a vital feature of your product. CIOs need to make sure to not compromise their company's security by introducing products and devices that have no proper support for security mechanisms. There have always been <a href="http://www.wired.com/gadgetlab/2009/07/iphone-encryption/">security concerns</a> with respect to the iOS platform: for a long time, there hasn't been a way to nuke a lost iOS device remotely. <a href="http://support.apple.com/kb/HT4175">It wasn't before iOS 4</a> that Apple introduced data protection APIs to secure data that apps store on the device. <a href="">WebOS has several security features built in</a> (not bolted on later) which make it rather attractive for enterprise computing right from the start.</p></li>
 </ol>
 
@@ -78,39 +100,6 @@
 <p>It's my firm belief that the release of the HP TouchPad is a milestone for the perception of personal computing in the long run. It looks great, we'll see tons of great apps for it in no time and HP as a major computer vendor has the power to push it to the market.</p>
 
 <p>Good-bye, PC.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What's your number?]]></title>
-    <link href="http://peterfriese.github.io/whats-your-number/"/>
-    <updated>2011-01-27T02:00:47+01:00</updated>
-    <id>http://peterfriese.github.io/whats-your-number</id>
-    <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you've been asking yourself "what's this number, and where do I find it?", read on!</p>
-
-<!-- more -->
-
-
-<p>The Unique Device IDentifier is a 40-digit number that uniquely identifies your iPhone or iPad. It's tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.</p>
-
-<p>Here's how you can find this number and send it to your developer:</p>
-
-<ol>
-<li><p>Connect your iPhone / iPad to your computer using the white USB connection cable.</p></li>
-<li><p>Wait for iTunes to start up. If it doesn't start automatically, start it manually (Windows users will find it in the depths of the Start Menu, Mac users can use Spotlight to search for it).</p></li>
-<li><p>Click on the name of your iPhone / iPad on the left-hand side of the iTunes Window: <a href="http://www.flickr.com/photos/81029262@N00/5391569342"><img src="http://farm6.static.flickr.com/5180/5391569342_79b2d97180.jpg" alt="Finding your iPhone's UDID, step 1" /></a></p></li>
-<li><p>Details about your device will be displayed in the main area of the iTunes window.</p></li>
-<li><p>Find the label titled <strong>Serial Number</strong>. The serial number IS NOT the UDID!</p></li>
-<li><p>Holding down the CMD (on the Mac) or the CTRL (on Windows) key, click on the label <strong>Serial Number</strong></p></li>
-<li><p>The label's title will change to <strong>Identifier (UDID</strong>:<a href="http://www.flickr.com/photos/81029262@N00/5391652500"><img src="http://farm6.static.flickr.com/5291/5391652500_1c2dbaf918.jpg" alt="Finding your iPhone's UDID, step 2" /></a></p></li>
-<li><p>Press CMD+C (on Mac) or CTRL+C (on Windows) to copy the UDID to your clipboard</p></li>
-<li><p>Open a new mail, insert the UDID and a friendly message and send it to your developer.</p></li>
-</ol>
-
-
-<p>Easy, isn't it?</p>
-
-<p>Oh, and please do NOT send a screenshot of the UDID. You should know better now.</p>
 ]]></content>
   </entry>
   
@@ -209,6 +198,15 @@
 <p>It all boils down to being more productive and ensuring better sustainability. Using the right tool for the job helps you to achieve a faster time to market. If you're able to use the same language on the frontend and the backend, this will help you to secure your investment in this technology.</p>
 
 <p>Please note that I'm not saying you should by all means write your frontend and your backend using the same technology and language. The first and foremost question you need to answer is, "what's the right tool for this job". Being able to make a real choice will help you to give a better answer to this question.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Why Your Next App Should be Open Sourced]]></title>
+    <link href="http://peterfriese.github.io/why-your-next-app-should-be-open-sourced/"/>
+    <updated>2010-09-06T15:15:17+02:00</updated>
+    <id>http://peterfriese.github.io/why-your-next-app-should-be-open-sourced</id>
+    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   

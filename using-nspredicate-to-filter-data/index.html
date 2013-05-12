@@ -131,13 +131,20 @@
 
 <p>If you look at an arbitrary code base, chances are you&#8217;ll sooner or later run into a piece of code similar to this one:</p>
 
-<pre><code>NSMutableArray *oldSkoolFiltered = [[NSMutableArray alloc] init];
-for (Book *book in bookshelf) {
-    if ([book.publisher isEqualToString:@"Apress"]) {
-        [oldSkoolFiltered addObject:book];
-    }
-}
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSMutableArray</span> <span class="o">*</span><span class="n">oldSkoolFiltered</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSMutableArray</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="n">Book</span> <span class="o">*</span><span class="n">book</span> <span class="k">in</span> <span class="n">bookshelf</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">([</span><span class="n">book</span><span class="p">.</span><span class="n">publisher</span> <span class="nl">isEqualToString:</span><span class="s">@&quot;Apress&quot;</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">oldSkoolFiltered</span> <span class="nl">addObject:</span><span class="n">book</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>It&#8217;s a straight-forward approach to filtering an array of items (in this case, we&#8217;re talking about books) using a rather simple <code>if</code>-statement. Nothing wrong with this, but despite the fact we&#8217;re using a fairly simple expression here, the code is rather verbose. We can easily imagine what will happen in case we need to use more complicated selection criteria or a combination of filtering criteria.</p>
 
@@ -149,10 +156,14 @@ for (Book *book in bookshelf) {
 
 <p>Let&#8217;s have a look at how our example looks like when using <code>NSPredicate</code>:</p>
 
-<pre><code>NSPredicate *predicate = 
-  [NSPredicate predicateWithFormat:@"publisher == %@", @"Apress" ];
-NSArray *filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSPredicate</span> <span class="o">*</span><span class="n">predicate</span> <span class="o">=</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">NSPredicate</span> <span class="nl">predicateWithFormat:</span><span class="s">@&quot;publisher == %@&quot;</span><span class="p">,</span> <span class="s">@&quot;Apress&quot;</span> <span class="p">];</span>
+</span><span class='line'><span class="n">NSArray</span> <span class="o">*</span><span class="n">filtered</span>  <span class="o">=</span> <span class="p">[</span><span class="n">bookshelf</span> <span class="nl">filteredArrayUsingPredicate:</span><span class="n">predicate</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Much shorter and better readable!</p>
 
@@ -162,10 +173,14 @@ NSArray *filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
 
 <p>Let&#8217;s filter all books that are about iPad or iPhone programming:</p>
 
-<pre><code>predicate = [NSPredicate predicateWithFormat:@"title MATCHES '.*(iPhone|iPad).*'"];
-filtered = [bookshelf filteredArrayUsingPredicate:predicate];
-dumpBookshelf(@"Books that contain 'iPad' or 'iPhone' in their title", filtered);
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">predicate</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSPredicate</span> <span class="nl">predicateWithFormat:</span><span class="s">@&quot;title MATCHES &#39;.*(iPhone|iPad).*&#39;&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="n">filtered</span> <span class="o">=</span> <span class="p">[</span><span class="n">bookshelf</span> <span class="nl">filteredArrayUsingPredicate:</span><span class="n">predicate</span><span class="p">];</span>
+</span><span class='line'><span class="n">dumpBookshelf</span><span class="p">(</span><span class="s">@&quot;Books that contain &#39;iPad&#39; or &#39;iPhone&#39; in their title&quot;</span><span class="p">,</span> <span class="n">filtered</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>You need to obey some rules when using regular expressions in <code>NSPredicate</code>: most importantly, <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/Articles/pUsing.html#//apple_ref/doc/uid/TP40001794-SW9">you cannot use regular expression metacharacters inside a pattern set</a>.</p>
 
@@ -173,11 +188,16 @@ dumpBookshelf(@"Books that contain 'iPad' or 'iPhone' in their title", filtered)
 
 <p>Let&#8217;s for a moment assume you want to filter all books that have been published by your favorite publishers. Using the <code>IN</code> operator, this is rather simple: first, we need to set up a set containing the publishers we&#8217;re interested in. Then, we can create the predicate and finally perform the filtering operation:</p>
 
-<pre><code>NSArray *favoritePublishers = [NSArray arrayWithObjects:@"Apress", @"O'Reilly", nil];
-predicate = [NSPredicate predicateWithFormat:@"publisher IN %@", favoritePublishers];
-filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
-dumpBookshelf(@"Books published by my favorite publishers", filtered);
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSArray</span> <span class="o">*</span><span class="n">favoritePublishers</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="s">@&quot;Apress&quot;</span><span class="p">,</span> <span class="s">@&quot;O&#39;Reilly&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'><span class="n">predicate</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSPredicate</span> <span class="nl">predicateWithFormat:</span><span class="s">@&quot;publisher IN %@&quot;</span><span class="p">,</span> <span class="n">favoritePublishers</span><span class="p">];</span>
+</span><span class='line'><span class="n">filtered</span>  <span class="o">=</span> <span class="p">[</span><span class="n">bookshelf</span> <span class="nl">filteredArrayUsingPredicate:</span><span class="n">predicate</span><span class="p">];</span>
+</span><span class='line'><span class="n">dumpBookshelf</span><span class="p">(</span><span class="s">@&quot;Books published by my favorite publishers&quot;</span><span class="p">,</span> <span class="n">filtered</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>Advanced filtering thanks to KVC goodness</h2>
 
@@ -185,15 +205,21 @@ dumpBookshelf(@"Books published by my favorite publishers", filtered);
 
 <p>Let&#8217;s for example retrieve a list of books written by authors with the name &#8220;Mark&#8221;:</p>
 
-<pre><code>predicate = 
-  [NSPredicate predicateWithFormat:@"authors.lastName CONTAINS %@", @"Mark" ];
-filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">predicate</span> <span class="o">=</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">NSPredicate</span> <span class="nl">predicateWithFormat:</span><span class="s">@&quot;authors.lastName CONTAINS %@&quot;</span><span class="p">,</span> <span class="s">@&quot;Mark&quot;</span> <span class="p">];</span>
+</span><span class='line'><span class="n">filtered</span>  <span class="o">=</span> <span class="p">[</span><span class="n">bookshelf</span> <span class="nl">filteredArrayUsingPredicate:</span><span class="n">predicate</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>In case we&#8217;d want to return the value of one of the aggregate functions, we don&#8217;t need to use NSPredicate itself, but instead use KVC directly. Let&#8217;s retrieve the average price of all books on our shelf:</p>
 
-<pre><code>NSNumber *average = [bookshelf valueForKeyPath:@"@avg.price"];
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSNumber</span> <span class="o">*</span><span class="n">average</span> <span class="o">=</span> <span class="p">[</span><span class="n">bookshelf</span> <span class="nl">valueForKeyPath:</span><span class="s">@&quot;@avg.price&quot;</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>Conclusion</h2>
 

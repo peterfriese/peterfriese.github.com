@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Android | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-05-12T16:11:47+02:00</updated>
+  <updated>2013-05-12T22:07:19+02:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -57,17 +57,24 @@
     <link href="http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
     <updated>2011-02-25T23:15:57+01:00</updated>
     <id>http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
-    <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are! <!-- more -->This year, we're providing a rather impressive lineup of mobile apps for iPhone, iPod Touch, iPad (thanks to <a href="http://www.compeople.eu/blog/?p=786">Christian Campo who created a stand-alone iPad app</a>), BlackBerry (<a href="http://ekkes-apps.org/">Ekke is working on a updated version, AFAIK</a>), and all other smart phones that feature a browser.</p>
+    <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
+
+<!-- more -->
+
+
+<p>This year, we're providing a rather impressive lineup of mobile apps for iPhone, iPod Touch, iPad (thanks to <a href="http://www.compeople.eu/blog/?p=786">Christian Campo who created a stand-alone iPad app</a>), BlackBerry (<a href="http://ekkes-apps.org/">Ekke is working on a updated version, AFAIK</a>), and all other smart phones that feature a browser.</p>
 
 <p>All apps allow you to browse the program, select your favorite talks and get to know the speakers (with headshots so you recognise them in the hallways). We also have included maps of the convention center as well as Santa Clara.</p>
 
 <p>For a first glimpse, watch our video:</p>
 
+<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/20377509 "></iframe></div></p>
+
 <p>As of today, both iPhone and Android users can download the apps from the Apple App Store respectively the Android Marketplace. Here are the links:</p>
 
 <ol>
-<li><p><a href="http://bit.ly/econ2011iphone">EclipseCon 2011 iPhone App</a></p></li>
-<li><p><a href="http://bit.ly/econ2011android">EclipseCon 2011 Android App</a></p></li>
+<li><a href="http://bit.ly/econ2011iphone">EclipseCon 2011 iPhone App</a></li>
+<li><a href="http://bit.ly/econ2011android">EclipseCon 2011 Android App</a></li>
 </ol>
 
 

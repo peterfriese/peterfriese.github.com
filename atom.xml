@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://peterfriese.github.io/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-05-12T16:11:47+02:00</updated>
+  <updated>2013-05-12T22:07:19+02:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -486,13 +486,20 @@
 
 <p>If you look at an arbitrary code base, chances are you&#8217;ll sooner or later run into a piece of code similar to this one:</p>
 
-<pre><code>NSMutableArray *oldSkoolFiltered = [[NSMutableArray alloc] init];
-for (Book *book in bookshelf) {
-    if ([book.publisher isEqualToString:@"Apress"]) {
-        [oldSkoolFiltered addObject:book];
-    }
-}
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSMutableArray</span> <span class="o">*</span><span class="n">oldSkoolFiltered</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSMutableArray</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="n">Book</span> <span class="o">*</span><span class="n">book</span> <span class="k">in</span> <span class="n">bookshelf</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">([</span><span class="n">book</span><span class="p">.</span><span class="n">publisher</span> <span class="nl">isEqualToString:</span><span class="s">@&quot;Apress&quot;</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">oldSkoolFiltered</span> <span class="nl">addObject:</span><span class="n">book</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>It&#8217;s a straight-forward approach to filtering an array of items (in this case, we&#8217;re talking about books) using a rather simple <code>if</code>-statement. Nothing wrong with this, but despite the fact we&#8217;re using a fairly simple expression here, the code is rather verbose. We can easily imagine what will happen in case we need to use more complicated selection criteria or a combination of filtering criteria.</p>
 
@@ -504,10 +511,14 @@ for (Book *book in bookshelf) {
 
 <p>Let&#8217;s have a look at how our example looks like when using <code>NSPredicate</code>:</p>
 
-<pre><code>NSPredicate *predicate = 
-  [NSPredicate predicateWithFormat:@"publisher == %@", @"Apress" ];
-NSArray *filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSPredicate</span> <span class="o">*</span><span class="n">predicate</span> <span class="o">=</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">NSPredicate</span> <span class="nl">predicateWithFormat:</span><span class="s">@&quot;publisher == %@&quot;</span><span class="p">,</span> <span class="s">@&quot;Apress&quot;</span> <span class="p">];</span>
+</span><span class='line'><span class="n">NSArray</span> <span class="o">*</span><span class="n">filtered</span>  <span class="o">=</span> <span class="p">[</span><span class="n">bookshelf</span> <span class="nl">filteredArrayUsingPredicate:</span><span class="n">predicate</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Much shorter and better readable!</p>
 
@@ -517,10 +528,14 @@ NSArray *filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
 
 <p>Let&#8217;s filter all books that are about iPad or iPhone programming:</p>
 
-<pre><code>predicate = [NSPredicate predicateWithFormat:@"title MATCHES '.*(iPhone|iPad).*'"];
-filtered = [bookshelf filteredArrayUsingPredicate:predicate];
-dumpBookshelf(@"Books that contain 'iPad' or 'iPhone' in their title", filtered);
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">predicate</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSPredicate</span> <span class="nl">predicateWithFormat:</span><span class="s">@&quot;title MATCHES &#39;.*(iPhone|iPad).*&#39;&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="n">filtered</span> <span class="o">=</span> <span class="p">[</span><span class="n">bookshelf</span> <span class="nl">filteredArrayUsingPredicate:</span><span class="n">predicate</span><span class="p">];</span>
+</span><span class='line'><span class="n">dumpBookshelf</span><span class="p">(</span><span class="s">@&quot;Books that contain &#39;iPad&#39; or &#39;iPhone&#39; in their title&quot;</span><span class="p">,</span> <span class="n">filtered</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>You need to obey some rules when using regular expressions in <code>NSPredicate</code>: most importantly, <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/Articles/pUsing.html#//apple_ref/doc/uid/TP40001794-SW9">you cannot use regular expression metacharacters inside a pattern set</a>.</p>
 
@@ -528,11 +543,16 @@ dumpBookshelf(@"Books that contain 'iPad' or 'iPhone' in their title", filtered)
 
 <p>Let&#8217;s for a moment assume you want to filter all books that have been published by your favorite publishers. Using the <code>IN</code> operator, this is rather simple: first, we need to set up a set containing the publishers we&#8217;re interested in. Then, we can create the predicate and finally perform the filtering operation:</p>
 
-<pre><code>NSArray *favoritePublishers = [NSArray arrayWithObjects:@"Apress", @"O'Reilly", nil];
-predicate = [NSPredicate predicateWithFormat:@"publisher IN %@", favoritePublishers];
-filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
-dumpBookshelf(@"Books published by my favorite publishers", filtered);
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSArray</span> <span class="o">*</span><span class="n">favoritePublishers</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="s">@&quot;Apress&quot;</span><span class="p">,</span> <span class="s">@&quot;O&#39;Reilly&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'><span class="n">predicate</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSPredicate</span> <span class="nl">predicateWithFormat:</span><span class="s">@&quot;publisher IN %@&quot;</span><span class="p">,</span> <span class="n">favoritePublishers</span><span class="p">];</span>
+</span><span class='line'><span class="n">filtered</span>  <span class="o">=</span> <span class="p">[</span><span class="n">bookshelf</span> <span class="nl">filteredArrayUsingPredicate:</span><span class="n">predicate</span><span class="p">];</span>
+</span><span class='line'><span class="n">dumpBookshelf</span><span class="p">(</span><span class="s">@&quot;Books published by my favorite publishers&quot;</span><span class="p">,</span> <span class="n">filtered</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>Advanced filtering thanks to KVC goodness</h2>
 
@@ -540,15 +560,21 @@ dumpBookshelf(@"Books published by my favorite publishers", filtered);
 
 <p>Let&#8217;s for example retrieve a list of books written by authors with the name &#8220;Mark&#8221;:</p>
 
-<pre><code>predicate = 
-  [NSPredicate predicateWithFormat:@"authors.lastName CONTAINS %@", @"Mark" ];
-filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">predicate</span> <span class="o">=</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">NSPredicate</span> <span class="nl">predicateWithFormat:</span><span class="s">@&quot;authors.lastName CONTAINS %@&quot;</span><span class="p">,</span> <span class="s">@&quot;Mark&quot;</span> <span class="p">];</span>
+</span><span class='line'><span class="n">filtered</span>  <span class="o">=</span> <span class="p">[</span><span class="n">bookshelf</span> <span class="nl">filteredArrayUsingPredicate:</span><span class="n">predicate</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>In case we&#8217;d want to return the value of one of the aggregate functions, we don&#8217;t need to use NSPredicate itself, but instead use KVC directly. Let&#8217;s retrieve the average price of all books on our shelf:</p>
 
-<pre><code>NSNumber *average = [bookshelf valueForKeyPath:@"@avg.price"];
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSNumber</span> <span class="o">*</span><span class="n">average</span> <span class="o">=</span> <span class="p">[</span><span class="n">bookshelf</span> <span class="nl">valueForKeyPath:</span><span class="s">@&quot;@avg.price&quot;</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>Conclusion</h2>
 
@@ -569,17 +595,25 @@ filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
     <link href="http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
     <updated>2011-02-25T23:15:57+01:00</updated>
     <id>http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
-    <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are! <!-- more -->This year, we&#8217;re providing a rather impressive lineup of mobile apps for iPhone, iPod Touch, iPad (thanks to <a href="http://www.compeople.eu/blog/?p=786">Christian Campo who created a stand-alone iPad app</a>), BlackBerry (<a href="http://ekkes-apps.org/">Ekke is working on a updated version, AFAIK</a>), and all other smart phones that feature a browser.</p>
+    <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
+
+<!-- more -->
+
+
+<p>This year, we&#8217;re providing a rather impressive lineup of mobile apps for iPhone, iPod Touch, iPad (thanks to <a href="http://www.compeople.eu/blog/?p=786">Christian Campo who created a stand-alone iPad app</a>), BlackBerry (<a href="http://ekkes-apps.org/">Ekke is working on a updated version, AFAIK</a>), and all other smart phones that feature a browser.</p>
 
 <p>All apps allow you to browse the program, select your favorite talks and get to know the speakers (with headshots so you recognise them in the hallways). We also have included maps of the convention center as well as Santa Clara.</p>
 
 <p>For a first glimpse, watch our video:</p>
 
+<div class="embed-video-container"><iframe src="http://player.vimeo.com/video/20377509 "></iframe></div>
+
+
 <p>As of today, both iPhone and Android users can download the apps from the Apple App Store respectively the Android Marketplace. Here are the links:</p>
 
 <ol>
-<li><p><a href="http://bit.ly/econ2011iphone">EclipseCon 2011 iPhone App</a></p></li>
-<li><p><a href="http://bit.ly/econ2011android">EclipseCon 2011 Android App</a></p></li>
+<li><a href="http://bit.ly/econ2011iphone">EclipseCon 2011 iPhone App</a></li>
+<li><a href="http://bit.ly/econ2011android">EclipseCon 2011 Android App</a></li>
 </ol>
 
 
@@ -596,42 +630,74 @@ filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
     <link href="http://peterfriese.github.io/appropriate-use-of-mapkit/"/>
     <updated>2011-02-16T11:48:38+01:00</updated>
     <id>http://peterfriese.github.io/appropriate-use-of-mapkit</id>
-    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&#8217;re violating Google&#8217;s terms of service, I was wondering what in particular was wrong. <!-- more -->At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google&#8217;s terms of service for Maps</a>, but can you spot what is wrong?</p>
+    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&#8217;re violating Google&#8217;s terms of service, I was wondering what in particular was wrong.</p>
 
-<p>[caption id=&#8221;attachment_687&#8221; align=&#8221;aligncenter&#8221; width=&#8221;172&#8221; caption=&#8221;What&#8217;s wrong with this map?&#8221;]<a href="http://www.peterfriese.de/wp-content/maps_without_google_logo.png"><img src="http://www.peterfriese.de/wp-content/maps_without_google_logo-172x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a>[/caption]</p>
+<!-- more -->
+
+
+<p>At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google&#8217;s terms of service for Maps</a>, but can you spot what is wrong?</p>
+
+<ul class="gallery">
+<li><a href="http://peterfriese.github.io/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png" class="fancybox" rel="gallery-b85ba1d38e1c89eca83ecb8ce17b14bc" title="Google Maps in your app - without Google Logo: you're doing it wrong!"><img src="http://peterfriese.github.io/thumbs/maps_without_google_logo_240x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a></li>
+</ul>
+
 
 <p>Maybe you can better see what&#8217;s wrong when I show you another screenshot, this time obeying the TOS:</p>
 
-<p>[caption id=&#8221;attachment_688&#8221; align=&#8221;aligncenter&#8221; width=&#8221;169&#8221; caption=&#8221;With logo: well done!&#8221;]<a href="http://www.peterfriese.de/wp-content/maps_with_google_logo.png"><img src="http://www.peterfriese.de/wp-content/maps_with_google_logo-169x300.png" alt="Google Maps with logo: well done!" /></a>[/caption]</p>
+<ul class="gallery">
+<li><a href="http://peterfriese.github.io/images/2011-02-16-appropriate-use-of-mapkit/maps_with_google_logo.png" class="fancybox" rel="gallery-8590c5cd892556ccc1df97f31d1c3e84" title="Google Maps with logo: well done!"><img src="http://peterfriese.github.io/thumbs/maps_with_google_logo_240x300.png" alt="Google Maps with logo: well done!" /></a></li>
+</ul>
+
 
 <p>Can you spot the difference? It&#8217;s the Google logo!</p>
 
 <p>The reason why it is not shown in the first screenshot is that the bounds for the map are not set correctly. In the offending version of my app, I used a piece of code similar to this one:</p>
 
-<pre><code>- (void)viewDidLoad {
-  [super viewDidLoad];
-  mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+</span><span class='line'>  <span class="n">mapView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MKMapView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="n">mapView</span><span class="p">.</span><span class="n">showsUserLocation</span><span class="o">=</span><span class="nb">TRUE</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">mapView</span><span class="p">.</span><span class="n">mapType</span><span class="o">=</span><span class="n">MKMapTypeStandard</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nl">addSubview:</span><span class="n">mapView</span><span class="p">];</span>       
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-  mapView.showsUserLocation=TRUE;
-  mapView.mapType=MKMapTypeStandard;
-  [self.view addSubview:mapView];       
-}
-</code></pre>
 
 <p>Nothing wrong with it, but it lacks one essential line:</p>
 
-<pre><code>- (void)viewDidLoad {
-  [super viewDidLoad];
-  mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+</span><span class='line'>  <span class="n">mapView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">MKMapView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">mapView</span><span class="p">.</span><span class="n">autoresizingMask</span> <span class="o">=</span>
+</span><span class='line'>    <span class="p">(</span><span class="n">UIViewAutoresizingFlexibleWidth</span> <span class="o">|</span> <span class="n">UIViewAutoresizingFlexibleHeight</span><span class="p">);</span>  
+</span><span class='line'>
+</span><span class='line'>  <span class="n">mapView</span><span class="p">.</span><span class="n">showsUserLocation</span><span class="o">=</span><span class="nb">TRUE</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">mapView</span><span class="p">.</span><span class="n">mapType</span><span class="o">=</span><span class="n">MKMapTypeStandard</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="nl">addSubview:</span><span class="n">mapView</span><span class="p">];</span>       
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-  mapView.autoresizingMask = 
-    (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);   
-
-  mapView.showsUserLocation=TRUE;
-  mapView.mapType=MKMapTypeStandard;
-  [self.view addSubview:mapView];       
-}
-</code></pre>
 
 <p>So, next time you write an app that contains Google Maps, make sure the Google logo is visible. You can get the full source code for this example <a href="http://github.com/peterfriese/MapKitSample">on my GitHub page</a>.</p>
 ]]></content>
@@ -642,13 +708,18 @@ filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
     <link href="http://peterfriese.github.io/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
     <updated>2011-02-10T11:38:26+01:00</updated>
     <id>http://peterfriese.github.io/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
-    <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn&#8217;t the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security. <!-- more -->HP is definitely doing something right. Never before has one single Tablet thrilled the interwebs as much as the TouchPad - except for the iPad, of course. Even <a href="http://scobleizer.com/2011/02/09/hp-makes-google-look-even-more-creaky/">die-hard Apple</a> fans are thrilled.</p>
+    <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn&#8217;t the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
+
+<!-- more -->
+
+
+<p>HP is definitely doing something right. Never before has one single Tablet thrilled the interwebs as much as the TouchPad - except for the iPad, of course. Even <a href="http://scobleizer.com/2011/02/09/hp-makes-google-look-even-more-creaky/">die-hard Apple</a> fans are thrilled.</p>
 
 <p>Here&#8217;s why I think HP&#8217;s TouchPad will score a considerable market share:</p>
 
 <ol>
 <li><p>It&#8217;s programmed with web technologies like HTML, CSS and JavaScript. Don&#8217;t get me wrong - the iPad can also be programmed with web technologies: when the iPhone was first released and no one but Apple was allowed to write native apps, Steve himself told everyone that &#8220;mobile web applications are the future&#8221;. And despite the fact Apple has opened it&#8217;s SDK and we can now program the iPad / iPhone in Objective-C, many developers are more interested in writing apps with web technologies. Tools like PhoneGap and Appcelerator try to alleviate this situation, basically allowing you to wrap web code in more or less tiny wrapper apps so your web apps can be submitted to the App Store. However, most apps written using web technologies do not feel the same as real native apps on the iOS platform. So why do I think the situation will be better on the TouchPad? Well, because the TouchPad has been built for running web-based apps! It has been optimized for it. Web apps look stunningly great on the TouchPad. Now, every web developer can download the webOS SDK and get started writing apps for the TouchPad. It&#8217;s a safe bet to assume there are more web developers out there than Objective-C developers, so it shouldn&#8217;t take long until we&#8217;ve got a similar amount of apps for the TouchPad as we&#8217;ve got for the iPad.</p></li>
-<li><p>The manufacturing process. HP has a very powerful production pipeline, capable of pumping out high volumes of devices. In <a href="http://www.itchannelplanet.com/trends/article.php/3920936/Gartner-Global-PC-Shipments-Total-351-Million-Units-in-2010-Gain-138-Percent-US-Q4-PC-Market-Slides-Nearly-7-Percent.htm">Q4/2010, they shipped 17.6</a> million PCs (<a href="http://www.apple.com/pr/library/2011/01/18results.html">Apple sold 7.33 million iPads</a> in the same quarter). So if they are serious about it, it should be easy for HP to both produce and distribute high volumes of TouchPads._</p></li>
+<li><p>The manufacturing process. HP has a very powerful production pipeline, capable of pumping out high volumes of devices. In <a href="http://www.itchannelplanet.com/trends/article.php/3920936/Gartner-Global-PC-Shipments-Total-351-Million-Units-in-2010-Gain-138-Percent-US-Q4-PC-Market-Slides-Nearly-7-Percent.htm">Q4/2010, they shipped 17.6</a> million PCs (<a href="http://www.apple.com/pr/library/2011/01/18results.html">Apple sold 7.33 million iPads</a> in the same quarter). So if they are serious about it, it should be easy for HP to both produce and distribute high volumes of TouchPads.</p></li>
 <li><p>Security. When it comes to enterprise computing, security becomes a vital feature of your product. CIOs need to make sure to not compromise their company&#8217;s security by introducing products and devices that have no proper support for security mechanisms. There have always been <a href="http://www.wired.com/gadgetlab/2009/07/iphone-encryption/">security concerns</a> with respect to the iOS platform: for a long time, there hasn&#8217;t been a way to nuke a lost iOS device remotely. <a href="http://support.apple.com/kb/HT4175">It wasn&#8217;t before iOS 4</a> that Apple introduced data protection APIs to secure data that apps store on the device. <a href="">WebOS has several security features built in</a> (not bolted on later) which make it rather attractive for enterprise computing right from the start.</p></li>
 </ol>
 
@@ -674,15 +745,15 @@ filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
 <p>Here&#8217;s how you can find this number and send it to your developer:</p>
 
 <ol>
-<li><p>Connect your iPhone / iPad to your computer using the white USB connection cable.</p></li>
-<li><p>Wait for iTunes to start up. If it doesn&#8217;t start automatically, start it manually (Windows users will find it in the depths of the Start Menu, Mac users can use Spotlight to search for it).</p></li>
-<li><p>Click on the name of your iPhone / iPad on the left-hand side of the iTunes Window: <a href="http://www.flickr.com/photos/81029262@N00/5391569342"><img src="http://farm6.static.flickr.com/5180/5391569342_79b2d97180.jpg" alt="Finding your iPhone's UDID, step 1" /></a></p></li>
-<li><p>Details about your device will be displayed in the main area of the iTunes window.</p></li>
-<li><p>Find the label titled <strong>Serial Number</strong>. The serial number IS NOT the UDID!</p></li>
-<li><p>Holding down the CMD (on the Mac) or the CTRL (on Windows) key, click on the label <strong>Serial Number</strong></p></li>
-<li><p>The label&#8217;s title will change to <strong>Identifier (UDID</strong>:<a href="http://www.flickr.com/photos/81029262@N00/5391652500"><img src="http://farm6.static.flickr.com/5291/5391652500_1c2dbaf918.jpg" alt="Finding your iPhone's UDID, step 2" /></a></p></li>
-<li><p>Press CMD+C (on Mac) or CTRL+C (on Windows) to copy the UDID to your clipboard</p></li>
-<li><p>Open a new mail, insert the UDID and a friendly message and send it to your developer.</p></li>
+<li>Connect your iPhone / iPad to your computer using the white USB connection cable.</li>
+<li>Wait for iTunes to start up. If it doesn&#8217;t start automatically, start it manually (Windows users will find it in the depths of the Start Menu, Mac users can use Spotlight to search for it).</li>
+<li>Click on the name of your iPhone / iPad on the left-hand side of the iTunes Window: <a href="http://www.flickr.com/photos/81029262@N00/5391569342"><img src="http://farm6.static.flickr.com/5180/5391569342_79b2d97180.jpg" alt="Finding your iPhone's UDID, step 1" /></a></li>
+<li>Details about your device will be displayed in the main area of the iTunes window.</li>
+<li>Find the label titled <strong>Serial Number</strong>. The serial number IS NOT the UDID!</li>
+<li>Holding down the CMD (on the Mac) or the CTRL (on Windows) key, click on the label <strong>Serial Number</strong></li>
+<li>The label&#8217;s title will change to <strong>Identifier (UDID</strong>:<a href="http://www.flickr.com/photos/81029262@N00/5391652500"><img src="http://farm6.static.flickr.com/5291/5391652500_1c2dbaf918.jpg" alt="Finding your iPhone's UDID, step 2" /></a></li>
+<li>Press CMD+C (on Mac) or CTRL+C (on Windows) to copy the UDID to your clipboard</li>
+<li>Open a new mail, insert the UDID and a friendly message and send it to your developer.</li>
 </ol>
 
 

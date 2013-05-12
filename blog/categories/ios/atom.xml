@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-05-12T16:11:47+02:00</updated>
+  <updated>2013-05-12T22:07:19+02:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -327,6 +327,8 @@ dependency 'RestKit/ObjectMapping/JSON'
 
 <p>If you look at an arbitrary code base, chances are you'll sooner or later run into a piece of code similar to this one:</p>
 
+<p>``` objc</p>
+
 <pre><code>NSMutableArray *oldSkoolFiltered = [[NSMutableArray alloc] init];
 for (Book *book in bookshelf) {
     if ([book.publisher isEqualToString:@"Apress"]) {
@@ -334,6 +336,8 @@ for (Book *book in bookshelf) {
     }
 }
 </code></pre>
+
+<p>```</p>
 
 <p>It's a straight-forward approach to filtering an array of items (in this case, we're talking about books) using a rather simple <code>if</code>-statement. Nothing wrong with this, but despite the fact we're using a fairly simple expression here, the code is rather verbose. We can easily imagine what will happen in case we need to use more complicated selection criteria or a combination of filtering criteria.</p>
 
@@ -345,10 +349,14 @@ for (Book *book in bookshelf) {
 
 <p>Let's have a look at how our example looks like when using <code>NSPredicate</code>:</p>
 
+<p>``` objc</p>
+
 <pre><code>NSPredicate *predicate = 
   [NSPredicate predicateWithFormat:@"publisher == %@", @"Apress" ];
 NSArray *filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
 </code></pre>
+
+<p>```</p>
 
 <p>Much shorter and better readable!</p>
 
@@ -358,10 +366,14 @@ NSArray *filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
 
 <p>Let's filter all books that are about iPad or iPhone programming:</p>
 
+<p>``` objc</p>
+
 <pre><code>predicate = [NSPredicate predicateWithFormat:@"title MATCHES '.*(iPhone|iPad).*'"];
 filtered = [bookshelf filteredArrayUsingPredicate:predicate];
 dumpBookshelf(@"Books that contain 'iPad' or 'iPhone' in their title", filtered);
 </code></pre>
+
+<p>```</p>
 
 <p>You need to obey some rules when using regular expressions in <code>NSPredicate</code>: most importantly, <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/Articles/pUsing.html#//apple_ref/doc/uid/TP40001794-SW9">you cannot use regular expression metacharacters inside a pattern set</a>.</p>
 
@@ -369,11 +381,15 @@ dumpBookshelf(@"Books that contain 'iPad' or 'iPhone' in their title", filtered)
 
 <p>Let's for a moment assume you want to filter all books that have been published by your favorite publishers. Using the <code>IN</code> operator, this is rather simple: first, we need to set up a set containing the publishers we're interested in. Then, we can create the predicate and finally perform the filtering operation:</p>
 
+<p>``` objc</p>
+
 <pre><code>NSArray *favoritePublishers = [NSArray arrayWithObjects:@"Apress", @"O'Reilly", nil];
 predicate = [NSPredicate predicateWithFormat:@"publisher IN %@", favoritePublishers];
 filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
 dumpBookshelf(@"Books published by my favorite publishers", filtered);
 </code></pre>
+
+<p>```</p>
 
 <h2>Advanced filtering thanks to KVC goodness</h2>
 
@@ -381,15 +397,23 @@ dumpBookshelf(@"Books published by my favorite publishers", filtered);
 
 <p>Let's for example retrieve a list of books written by authors with the name "Mark":</p>
 
+<p>``` objc</p>
+
 <pre><code>predicate = 
   [NSPredicate predicateWithFormat:@"authors.lastName CONTAINS %@", @"Mark" ];
 filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
 </code></pre>
 
+<p>```</p>
+
 <p>In case we'd want to return the value of one of the aggregate functions, we don't need to use NSPredicate itself, but instead use KVC directly. Let's retrieve the average price of all books on our shelf:</p>
+
+<p>``` objc</p>
 
 <pre><code>NSNumber *average = [bookshelf valueForKeyPath:@"@avg.price"];
 </code></pre>
+
+<p>```</p>
 
 <h2>Conclusion</h2>
 
@@ -402,6 +426,40 @@ filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
 <h2>Code</h2>
 
 <p>The code for this post is available on my github page: <a href="http://github.com/peterfriese/NSPredicateDemo">get forking</a>!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
+    <link href="http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
+    <updated>2011-02-25T23:15:57+01:00</updated>
+    <id>http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
+    <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
+
+<!-- more -->
+
+
+<p>This year, we're providing a rather impressive lineup of mobile apps for iPhone, iPod Touch, iPad (thanks to <a href="http://www.compeople.eu/blog/?p=786">Christian Campo who created a stand-alone iPad app</a>), BlackBerry (<a href="http://ekkes-apps.org/">Ekke is working on a updated version, AFAIK</a>), and all other smart phones that feature a browser.</p>
+
+<p>All apps allow you to browse the program, select your favorite talks and get to know the speakers (with headshots so you recognise them in the hallways). We also have included maps of the convention center as well as Santa Clara.</p>
+
+<p>For a first glimpse, watch our video:</p>
+
+<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/20377509 "></iframe></div></p>
+
+<p>As of today, both iPhone and Android users can download the apps from the Apple App Store respectively the Android Marketplace. Here are the links:</p>
+
+<ol>
+<li><a href="http://bit.ly/econ2011iphone">EclipseCon 2011 iPhone App</a></li>
+<li><a href="http://bit.ly/econ2011android">EclipseCon 2011 Android App</a></li>
+</ol>
+
+
+<p>If you don't own an iPhone or Android, you can always use the HTML-only version of the conference program available at <a href="http://bit.ly/econ2011html">http://bit.ly/econ2011html</a>.</p>
+
+<p>The iPad and BlackBerry apps will be available soon, so stay tuned!</p>
+
+<p>By the way, if <strong>you</strong> run a conference and are interested in having an app like this, <a href="http://mobile.itemis.com">get in touch with us</a>.</p>
 ]]></content>
   </entry>
   
