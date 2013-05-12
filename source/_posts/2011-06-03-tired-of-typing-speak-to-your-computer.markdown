@@ -7,13 +7,11 @@ slug: tired-of-typing-speak-to-your-computer
 title: Tired of Typing? Speak to Your Computer!
 wordpress_id: 773
 categories:
-- Computer
-- Eclipse
-- HTML
-tags:
-- chrome
-- html5
-- speech
+- HTML5
+- Speech
+- Chrome
+teaserimage: /images/2011-06-03-tired-of-typing-speak-to-your-computer/HAL9000_150x150.png
+
 ---
 
 For some reason, humans have always dreamt of using natural language to communicate with computers. Quite a number of movies have been made that revolve around this theme, [2001: A Space Odyssey](http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey) and [I, Robot](http://en.wikipedia.org/wiki/I,_Robot_(film)) (named after the [great collection of SF stories](http://en.wikipedia.org/wiki/I_robot) by [Isaac Asimov](http://en.wikipedia.org/wiki/Isaac_Asimov)) just being two of them.

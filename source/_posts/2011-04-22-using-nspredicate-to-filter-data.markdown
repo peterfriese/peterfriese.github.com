@@ -7,14 +7,11 @@ slug: using-nspredicate-to-filter-data
 title: Using NSPredicate to Filter Data
 wordpress_id: 725
 categories:
-- iPhone
-- Mac
-- Mobile
-tags:
-- filtering
-- nsarray
-- nspredicate
-- predicate
+- iOS
+- NSPredicate
+- NSArray
+teaserimage: /images/2011-04-22-using-nspredicate-to-filter-data/coffee_filtered_150x150.png
+
 ---
 
 Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you're applying a filter to the huge set of data we call the internet. 

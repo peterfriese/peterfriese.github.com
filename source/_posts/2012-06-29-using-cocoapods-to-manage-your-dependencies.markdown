@@ -14,6 +14,8 @@ categories:
 asins:
 - "1481812785" # iOS 6 By Tutorials: Volume 1 (Wenderlich)
 - "1482092409" # iOS 5 by Tutorials: Volume 1 (2nd Edition) (Wenderlich)
+teaserimage: /images/2012-06-29-using-cocoapods-to-manage-your-dependencies/cocoabean_150x150.png
+
 ---
 
 One of the few things that I find really annoying about developing apps for the iOS platform is how cumbersome it is to include third party libraries in your projects. Depending on the complexity of the library (e.g. its respective dependencies and transitive dependencies) and the effort the authors put into the consumability of their library, the steps required to add a library to your project range from just copying a few files into your source folder to a whopping two-page description of drag'n'drop wizardry.

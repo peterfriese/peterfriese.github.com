@@ -12,7 +12,8 @@ categories:
 asins: 
 - "0345453743" # The Ultimate Hitchhiker's Guide to the Galaxy
 - "0716704633" # Computer Power and Human Reason: From Judgement to Calculation
-teaserimage: /images/2013-03-22-do-androids-dream-of-electric-sheep/DoAndroidsTeaser-175x150.png
+teaserimage: /images/2013-03-22-do-androids-dream-of-electric-sheep/DoAndroidsTeaser_150x150
+
 ---
 
 Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being _2001 - A Space Odyssey_, _Blade Runner_, _Star Trek_, _The Hitchhiker’s Guide to the Galaxy_ and _I, Robot_.

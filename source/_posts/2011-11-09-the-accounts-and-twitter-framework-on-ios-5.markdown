@@ -7,12 +7,11 @@ slug: the-accounts-and-twitter-framework-on-ios-5
 title: The Accounts and Twitter Framework on iOS 5
 wordpress_id: 850
 categories:
-- Apple
-- iPhone
-tags:
+- iOS
+- Twitter
 - API
-- ios5
-- twitter
+- iOS5
+teaserimage: /images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_150x150.png
 
 ---
 

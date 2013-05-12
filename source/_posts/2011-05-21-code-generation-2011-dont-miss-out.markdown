@@ -19,6 +19,8 @@ tags:
 - Language Workbench
 - LOP
 - MDSD
+teaserimage: /images/2011-05-21-code-generation-2011-dont-miss-out/cg2011_150x150.png
+
 ---
 
 Code Generation 2011 is [just around the corner](http://www.codegeneration.net/cg2011/index.php) and if you haven't booked yet, [you should hurry up](http://evbk.software-acumen.com/makebooking.php?event=CG2011) - a few places are still available!
