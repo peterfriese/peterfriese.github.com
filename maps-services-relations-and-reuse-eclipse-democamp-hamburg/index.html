@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Maps, Services, Relations and Reuse: Eclipse DemoCamp Hamburg - Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="On November 10th, the Hamburg Eclipse DemoCamp took place in the stylish EAST Hotel.
+[ ](http://www.flickr.com/photos/81029262@N00/3030032841) We &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://peterfriese.github.io/maps-services-relations-and-reuse-eclipse-democamp-hamburg/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+  
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Software Architect / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:peterfriese.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Maps, Services, Relations and Reuse: Eclipse DemoCamp Hamburg</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-15T03:25:18+01:00" pubdate data-updated="true">Nov 15<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+  
+  <p>On November 10th, the Hamburg Eclipse DemoCamp took place in the <a href="http://east-hamburg.de/">stylish EAST Hotel</a>.
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3040/3030032841_0940054426.jpg" alt="EAST Hotel" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3030032841)</p>
+
+<p>We had 45 reservations and almost all of them made it to the Camp. I always get a little bit nervous 15 minutes before the event starts if no more than 10 people have shown up so far, but I guess that&#8217;s alright.</p>
+
+<p>Martin and I welcomed the crowd on behalf of our sponsors <a href="http://www.eclipse.org">(Eclipse Foundation</a>, <a href="http://www.froglogic.com/">froglogic</a>, <a href="http://www.it-agile.de/">it-agile</a> and <a href="http://www.itemis.de">itemis</a>):
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3024/3030045195_f9cefec1a1.jpg" alt="Martin Lippert and Peter Friese welcome the crowd" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3030045195)</p>
+
+<p>After that, Harald Wellmann of Harman Becker told us that the world is a disc. Well, at least he and his company try to make it a disc again - Harald leads a team that develops a so called &#8220;map compiler&#8221;. A map compiler takes map source data and condenses that data by extracting only the relevant parts of it. As you may guess this is a long-running process which can hugely benefit from parallelization. Harald and his team use OSGi to modularize their software and make sure they use computing resources efficiently. One thing worth noting is that OSGi is even being used in car entertainment systems: Harald told us about one entertainment system which makes use of OSGi to act as an intermediate / glue layer between the UI (written in Java) and the core (written in C++).
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3226/3030054785_56b25b784a.jpg" alt="3022446041_2273030e59_b" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3030054785)</p>
+
+<p><a href="http://gerd-wuetherich.de">Gerd Wütherich</a> (Independent) continued where Harald stopped and showed us how to use Spring Dynamic Modules and OSGi in his excellent talk - interspersed with some neat demos:
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3013/3030910128_c0d80a4c35.jpg" alt="Eclipse DemoCamp Hamburg" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3030910128)
+Together with Nils Hartmann, Mathias Lübken and Bernd Kolb, he wrote the   first German book on OSGi, so he really knows what he is talking about.</p>
+
+<p>After those talks, we took a break to grab some refreshments and take the chance to get in touch with the other attending Eclipse enthusiasts. I had the impression that everybody had a good time discussing all things Eclipse - in fact Martin and I had to interrupt a lot of lively discussions for the second run of talks.</p>
+
+<p>In the first talk after the break, Miguel Garcia and Rakesh Prithiviraj (both Technical University of Hamburg-Harburg) gave us an update of their research on how to integrate LINQ (Language Integrated Queries) in Java:
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3005/3030138183_9d68a22655.jpg" alt="Eclipse DemoCamp Hamburg November 2008" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3030138183)[</p>
+
+<p><img src="http://farm4.static.flickr.com/3171/3030138427_514e449208.jpg" alt="Eclipse DemoCamp Hamburg November 2008" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3030138427)</p>
+
+<p>The final demo was deliverd by Stephan Herrmann who showed us Object Teams / Equinox, an amazing piece of software that can be used to re-use existing Eclipse plug-ins in an aspect-oriented way. To get an idea of how powerful this approach is, have a look at the following screenshot -  this is the JDT, but enhanced by Object Teams in order to support their very own syntax extensions for Java:
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3025/3030986548_6a084a5c01.jpg" alt="AddUnimplementedMethods" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3030986548)
+To learn more about Object Teams, browse to their web site at http://trac.objectteams.org/ot/wiki/OtEquinox.
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3277/3030160123_ae092a0af3.jpg" alt="3023294590_3c5d9c364b_b" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3030160123)
+Everyone in the room was quite impressed with what is possible with Object Teams / Equinox, so you should check it out (<a href="http://www.objectteams.org/distrib/otdt.html">it&#8217;s available for free</a>). If you can manage to go the <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008/Berlin">DemoCamp in Berlin</a>, you&#8217;ll have the chance to see it live.</p>
+
+<p>The feedback we received from the attendees was great - some people even sent emails thanking us for organizing the event, so I guess the DemoCamp can be considered a success!</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Peter</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-15T03:25:18+01:00" pubdate data-updated="true">Nov 15<span>th</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/conferences/'>Conferences</a>, <a class='category' href='/blog/categories/eclipse/'>Eclipse</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://peterfriese.github.io/maps-services-relations-and-reuse-eclipse-democamp-hamburg/" data-via="peterfriese" data-counturl="http://peterfriese.github.io/maps-services-relations-and-reuse-eclipse-democamp-hamburg/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/eclipse-democamps/" title="Previous Post: Eclipse DemoCamps">&laquo; Eclipse DemoCamps</a>
+      
+      
+        <a class="basic-alignment right articlenav" href="/ese-building-refactoring-tools-with-ltk-and-ludwig/" title="Next Post: ESE: Building Refactoring Tools with LTK and Ludwig">ESE: Building Refactoring Tools with LTK and Ludwig &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
+      </li>
+    
+      <li class="post">
+        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tired-of-typing-speak-to-your-computer/">Tired of Typing? Speak to Your Computer!</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recommended reading...</h1>
+  <ul id="recommended_reading">
+  	
+      
+  	
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'peterfriese',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'peterfriese';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://peterfriese.github.io/maps-services-relations-and-reuse-eclipse-democamp-hamburg/';
+        var disqus_url = 'http://peterfriese.github.io/maps-services-relations-and-reuse-eclipse-democamp-hamburg/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

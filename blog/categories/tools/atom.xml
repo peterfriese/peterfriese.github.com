@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tools | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using CocoaPods to manage your dependencies]]></title>
+    <link href="http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies/"/>
+    <updated>2012-06-30T00:42:22+02:00</updated>
+    <id>http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies</id>
+    <content type="html"><![CDATA[<p>One of the few things that I find really annoying about developing apps for the iOS platform is how cumbersome it is to include third party libraries in your projects. Depending on the complexity of the library (e.g. its respective dependencies and transitive dependencies) and the effort the authors put into the consumability of their library, the steps required to add a library to your project range from just copying a few files into your source folder to a whopping two-page description of drag'n'drop wizardry.</p>
+
+<!--more-->
+
+
+<p>Wouldn't it be awesome if you could just specify a list of dependencies and be done? You might have heard of RubyGems, Maven, Ivy, NuGet or npm that bring dependency management to the worlds of Ruby, Java, .NET and JavaScript developers.</p>
+
+<p>Well, it turns out there finally is a solution for us Cocoa developers - CocoaPods. Getting started with CocoaPods is really easy and once you started using it, you won't look back again.</p>
+
+<h2>Installation</h2>
+
+<p>CocoaPods itself is distributed as a Ruby gem, so installing it is as simple as:</p>
+
+<p><code>bash
+[sudo] gem install cocoapods
+pod setup
+</code></p>
+
+<h2>Usage</h2>
+
+<p>Using CocoaPods to manage your project's dependencies is a two-step process:</p>
+
+<ol>
+<li>Specify the dependency in you project's dependency specification file, <code>Podfile</code></li>
+<li>Run <code>pod install</code></li>
+</ol>
+
+
+<p>Let me illustrate this by way of a simple example. Let's assume you want to build an application with the awesome <a href="http://www.restkit.org">RestKit</a> library. If you have used RestKit before, you know that adding it to your project is a rather involved process. Over the years, it has become significantly easier, but it still needs a very detailed installation instruction with lots of screenshots - check out their <a href="https://github.com/RestKit/RestKit/wiki/Installing-RestKit-in-Xcode-4.x">wiki page</a>.</p>
+
+<p>With CocoaPods, all you need to do is this:</p>
+
+<ul>
+<li>Create a new empty project, naming it <code>RestEasyWithCocoaPods</code></li>
+<li>In your project folder, create a new file, <code>Podfile</code></li>
+<li>Fill in the following information:</li>
+</ul>
+
+
+<p>``` ruby Podfile</p>
+
+<pre><code>platform :ios
+dependency 'RestKit'
+dependency 'RestKit/UI'
+dependency 'RestKit/Network'
+dependency 'RestKit/ObjectMapping'
+dependency 'RestKit/ObjectMapping/CoreData'
+dependency 'RestKit/ObjectMapping/XML'
+dependency 'RestKit/ObjectMapping/JSON'
+</code></pre>
+
+<p>```</p>
+
+<ul>
+<li>Run <code>pod install RestEasyWithCocoaPods.xcodeproj</code></li>
+<li>Open the newly created workspace, <code>RestEasyWithCocoaPods.xcworkspace</code></li>
+<li>Add the RestKit headers to <code>RestEasyWithCocoaPods-Prefix.pch</code>:</li>
+</ul>
+
+
+<p>``` objc RestEasyWithCocoaPods-Prefix.pch</p>
+
+<pre><code>#ifdef __OBJC__
+#import &lt;UIKit/UIKit.h&gt;
+#import &lt;Foundation/Foundation.h&gt;
+#import &lt;RestKit/RestKit.h&gt;
+#endif
+</code></pre>
+
+<p>```</p>
+
+<ul>
+<li>Done. Go and build awesome stuff with RestKit (more on this in another post).</li>
+</ul>
+
+
+<h2>Where to go from here</h2>
+
+<p>Wasn't that a lot easier than all the other ways to install third party libraries?</p>
+
+<p>If you are curious which libraries are supported by CocoaPods, go to <a href="http://cocoapods.org">CocoaPods.org</a> - they have a nice little UI for searching their pod specification repository. If you are more include to using the command line, you are welcome to use <code>pod search &lt;yoursearchterm&gt;</code> to search for a specific library.</p>
+
+<p>If your preferred library is not yet supported, why not help them out and build a pod spec? <a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a> itself and the <a href="https://github.com/CocoaPods/Specs">pod spec repository</a> are hosted on Github, so adding new pod specifications is really easy. The CocoaPods wiki has a section on <a href="https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format">creating</a> and <a href="https://github.com/CocoaPods/CocoaPods/wiki/Sharing-pod-specifications">publishing</a> new podspec files.</p>
+
+<p>Now go and create awesome stuff!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Your Windows IDE sucks? Replace it with Your Favorite Editor on the Mac!]]></title>
+    <link href="http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/"/>
+    <updated>2011-01-05T01:11:11+01:00</updated>
+    <id>http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac</id>
+    <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.<!-- more -->The IDE in question is Samsung's TV App SDK. Basically, it's just a Windows-based Visual-Studio look-alike IDE with editor support for CSS, JavaScript and HTML and an Emulator for Samsung TV kits. Nothing too complicated, really. In fact, the editor is quite OK.</p>
+
+<p>[caption id="attachment_647" align="alignleft" width="300" caption="Samsung TV App SDK"]<a href="http://www.peterfriese.de/wp-content/Samsung-TV-App-SDK.png"><img src="http://www.peterfriese.de/wp-content/Samsung-TV-App-SDK-300x208.png" alt="Samsung TV App SDK" /></a>[/caption]</p>
+
+<p>The part about it that really sucks is the project management. How come tool vendors still think it's good style in 2010 to place the projects under <em>Program Files\Samsung TV Apps SDK\Apps</em>? There's no way to store your project files in a different location. The project open dialog just won't let you navigate to some other place:</p>
+
+<p>[caption id="attachment_642" align="alignleft" width="300" caption="Samsung TV App SDK Project Management Dialog"]<a href="http://www.peterfriese.de/wp-content/Samsung_TV_App_SDK_ProjectManagement.png"><img src="http://www.peterfriese.de/wp-content/Samsung_TV_App_SDK_ProjectManagement-300x219.png" alt="Samsung TV App SDK Project Management Dialog" /></a>[/caption]</p>
+
+<p>So I wanted to be able to edit my files on the Mac (using <a href="http://macromates.com/">TextMate</a>) while still using the good parts of the Samsung TV SDK (i.e., the Emulator).</p>
+
+<p>I'm using VMware Fusion to run Windows 7 and the Samsung SDK (no, there is no version for the Mac). Most virtualization solutions offer a mechanism to share folders between the host and the guest OS. So I quickly set up folder sharing between my Mac and the guest OS, in this case Windows 7.</p>
+
+<p>Now that I can see the project files both on the Mac and on the Windows machine, how can I make sure I can open the project in the Samsung TV SDK IDE? As I mentioned before, there's no way to tell the IDE to open projects form other locations than <em>Program Files\Samsung TV Apps SDK\Apps</em>!</p>
+
+<p>After playing around with some more or less usable folder synchronization utilities, I came up with something most MacOS / Linux users should be familiar with: <a href="http://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a>! While symlinks have been around in Unix-like OSes for ages, they have been rarely known to Windows users for most of the time. However, <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">starting with Windows NT</a>, you can create symbolic links, hard links and junctions using a nifty little tool called <em><a href="http://www.howtogeek.com/howto/windows-vista/using-symlinks-in-windows-vista/">mklink</a></em>. Unfortunately, you're not allowed to run <em>mklink</em> if you're not an administrator. Using <em>runas</em> (which is Windows' equivalent of <em>sudo</em>), didn't help as the shared folders weren't visible to the admin user.</p>
+
+<p>To cut a long story short, I found <a href="http://code.google.com/p/symlinker">Symlinker</a>, a UI tool that helps in creating symlinks on Windows. As it is a UI tool, you can run it with administrator privileges (by selecting Run as Admin from the context menu). Using a <a href="http://en.wikipedia.org/wiki/Path_(computing">UNC</a>) path, you can create a <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">symlink</a> to a VMware shared folder and place this symlink in the location the Samsung IDE expects it to be.</p>
+
+<p>Finally, I can edit my files on the Mac and run the app in Samsung's Emulator on my hosted Windows machine. And as the files on my Mac are mapped to the hosted Windows machine via a symlink, I do not suffer a synchronization lag - all files are updated instantaneously :-)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[140 x 365 = 2659]]></title>
+    <link href="http://peterfriese.github.io/140-x-365-2659/"/>
+    <updated>2010-01-31T23:56:11+01:00</updated>
+    <id>http://peterfriese.github.io/140-x-365-2659</id>
+    <content type="html"><![CDATA[<p>It's exactly one year since I posted <a href="http://twitter.com/peterfriese/status/1164566213">my first tweet</a> on Twitter - time for a review.</p>
+
+<p>Before I give some reasons why I use Twitter, let's have a look at some stats.</p>
+
+<p>I sent out roughly 2660 tweets, on average 8.4 per day:</p>
+
+<p><a href="http://www.flickr.com/photos/81029262@N00/4316305253"><img src="http://farm3.static.flickr.com/2703/4316305253_ec08e825af_o.jpg" alt="TweetStats :: for peterfriese" /></a></p>
+
+<p>Looking at my tweet density, I hardly seem to be getting any sleep, which is not entirely true ;-)</p>
+
+<!-- more -->
+
+
+<p><a href="http://www.flickr.com/photos/81029262@N00/4316315167"><img src="http://farm5.static.flickr.com/4012/4316315167_c157b5410f_o.jpg" alt="TweetStats :: for peterfriese" /></a></p>
+
+<p>Over the last year, I tried quite a few twitter clients, but I like Tweetie the most (yes, I'm using a Mac):</p>
+
+<p><a href="http://www.flickr.com/photos/81029262@N00/4317057428"><img src="http://farm3.static.flickr.com/2684/4317057428_3b5487fdab_o.jpg" alt="TweetStats :: for peterfriese" /></a></p>
+
+<h3>Why I use Twitter</h3>
+
+<ul>
+<li><p>Twitter helps me to keep informed about topics I am interested in, while at the same time giving me the chance to get in touch with the sources of that information and give feedback.</p></li>
+<li><p>Many vendors and dev teams have Twitter accounts and use them to twitter about what they're currently doing / developing, again helping me to keep up-to-date about current developments</p></li>
+<li><p>Twitter helps me to "hear" what others are saying about the tools I and my teammates develop. Twitter clients like TweetDeck and Nambu allow you to define custom searches. E.g., I've got a search defined for "Xtext OR DSLs" so I will be informed each time someone tweets about either Xtext or DSLs. This allows me to give instant feedback to users needing help or ranting about <a href="http://twitter.com/xtext">Xtext</a> (actually, most users praise Xtext, so I'm mostly using this search to retweet that praise)</p></li>
+<li><p>Twitter is like a big room in which everybody can hear what you're saying. You can use this fact to use Twitter as a marketing channel, and that's what we do with <a href="http://www.xtext.org">Xtext</a>, too. We get the word out on Xtext, e.g. by announcing cool new features or talks we're giving at upcoming conferences.</p></li>
+<li><p>I also use Twitter to get / keep in touch with co-workers, friend and also clients. More often than not when meeting new clients, I hear people say "nice to meet you in person after we have been talking on Twitter". Sometimes, I use Twitter instead of my phone to ping people ("give me a call when you are available") - works great!</p></li>
+<li><p>By using Twitter, you will actually feel much closer to your peers ("<a href="http://www.urbandictionary.com/define.php?term=tweep">tweeps</a>") than you did before. This holds true especially for the Eclipse crowd. Many of us follow each other on Twitter and thus know what we do in our day to day job (and in our spare time, too) better than before.</p></li>
+</ul>
+
+
+<h3>Some recommendations</h3>
+
+<p>Whether you're new to Twitter or have been using it for years, here is my list of recommendations for Twitter. May it be inspirational for you:</p>
+
+<ul>
+<li><p>Find a decent client. The web interface is O.K., but in order to use all the power of Twitter, you need to use a real client. My main work horse is <a href="http://www.atebits.com/tweetie-mac/">Tweetie</a> (on the Mac), mostly because it allows me to view conversations in a really neat manner. <a href="http://www.tweetdeck.com/iphone/">On the iPhone I recommend TweetDeck</a> - you can easily define additional columns to display custom searches, DMs, tweets nearby and so on. <a href="http://www.nambu.com/">Nambu</a> also is very nice - and native! <a href="http://www.tweetdeck.com/">TweetDeck on the Mac</a> is also great, but eats a lot of resources, which is why I rarely use it any more. If you want to issue tweets without losing context, give <a href="http://code.google.com/p/qsb-mac/">Google Quick Search Bar</a> a try - <a href="http://code.google.com/p/qsb-mac/wiki/GettingStarted#How_do_I_tweet_with_Twitter">there's a plug-in that allows you</a> to tweet from QSB.</p></li>
+<li><p>Do NOT protect your updates. After all, you want to get in touch with other people. So there really is no point in protecting your updates.</p></li>
+<li><p>If you're new to Twitter, make sure to post some tweets before starting to follow other people. You want to make sure other people are following you too, but why should they follow you if you've got nothing to say?</p></li>
+<li><p>We're not interested in disgusting details about you, your family or your friends, <a href="http://theoatmeal.com/comics/facebook_suck">so keep them for you</a>.</p></li>
+<li><p>I follow people mostly for professional reasons. Tweeting personal stuff is perfectly OK and can add that grain of salt which makes you human, but you should try to keep a balance.</p></li>
+</ul>
+
+
+<h3>Summing up</h3>
+
+<p>Summing up all things, using Twitter has helped me to get in touch with a huge amount of people I wouldn't have interacted with if I hadn't been using Twitter.</p>
+
+<p>If you read all this, let me lift the secret about the obviously wrong mathematical equation in the title of this post: it's the number of characters you may use for one tweet (140), the number of days since I started using Twitter and the total number of tweets I sent out (2659). Actually, as I am using <a href="http://alexking.org/projects/wordpress">Twitter Tools for Wordpress</a>, this blog post will automatically be announced on Twitter and thus be <a href="http://twitter.com/peterfriese/status/8465879177">tweet number 2660</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mac in Black: Taking Screenshots with Skitch]]></title>
+    <link href="http://peterfriese.github.io/mac-in-black-skitch/"/>
+    <updated>2009-05-25T02:16:11+02:00</updated>
+    <id>http://peterfriese.github.io/mac-in-black-skitch</id>
+    <content type="html"><![CDATA[<p>Last week, <a href="http://www.1160pm.net/">Heiko</a>, <a href="http://koehnlein.blogspot.com/">Jan</a> and I were talking about blogging about the tools that make our lifes easier on the Mac. "Isn't the Mac supposed to be making your life easier anyway?" you might ask. Well, most things really are easy with a Mac. However, there are some things that cannot be done easily with a Mac. More often than not, this is due to the fact that Apple tries to hide the complexity of computers from nosy users. Which is fine for beginners - but makes life harder for the pros. Thankfully, there is a vast array of tools out there that fill the gap and make life on a Mac easier.</p>
+
+<p>I am going to try to post one tool recommendation per week - unless I am on vacation or speaking at a conference.</p>
+
+<p>So without further ado, here is the first tool: <a href="http://www.skitch.com/">Skitch</a>!</p>
+
+<p>Skitch is a tool that helps you to create screenshots. I need to create lots of screenshots: for documentation, to explain things to people by mail, and to annotate my bug reports. Of course, Mac OSX has several shortcuts to create screenshots, so what's the deal about Skitch?</p>
+
+<p>First of all, Skitch allows you to view and edit your screenshot: press CMD+SHIFT+5, select the capture area and voilà - Skitch opens a window showing the screenshot just taken:
+[</p>
+
+<p><img src="http://farm3.static.flickr.com/2469/3560151513_31ff0b4529.jpg" alt="Skitch itself" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3560151513)</p>
+
+<p>You can now use the tools at the left hand side of the Skitch window to highlight certain areas of the screenshot, which comes on handy if you're filing a bug report for your favorite open source tool.</p>
+
+<p>When you're done with editing, you can either drag the image to another application (using the "drag me" tab at the bottom of the window) or you can post the image to the web. I have set up Skitch to use my Flickr account, so I can use the images in other tools right away (I am writing my blog posts in Mars Edit, which has a great Flickr integration, so I've got a complete tool chain here). Skitch supports a number of file formats (JPG, SVG, PDF, TIF, GIF, BMP and native Skitch), so you can select the desired file format before sending the image to the web or dragging it to another application.</p>
+
+<p>All images are also stored in a local history, so if you need to go back to one of the screenshots you took a while ago, no problem with Skitch.</p>
+
+<p>Skitch really has made my life on my Mac easier because it integrates with other tools (both online and offline) so well and because it eliminates many steps that made dealign with screenshots so cumbersome before.</p>
+
+<p>You can download Skitch beta from <a href="http://www.skitch.com">http://www.skitch.com</a>. You will be asked to sign up, however, both the download and the software will work without registering.</p>
+
+<p>Happy screen shooting :-)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Formatting your code using the Eclipse Code Formatter]]></title>
+    <link href="http://peterfriese.github.io/formatting-your-code-using-the-eclipse-code-formatter/"/>
+    <updated>2007-05-28T23:14:23+02:00</updated>
+    <id>http://peterfriese.github.io/formatting-your-code-using-the-eclipse-code-formatter</id>
+    <content type="html"><![CDATA[<p>In case you needed to format a batch of code using a command line utility, you probably went for <a href="http://jalopy.sourceforge.net/">Jalopy</a> or <a href="http://www.jindent.com/">JIndent</a>. Thanks to Ben Konrath of Red Hat, you no longer need to do so: since Eclipse 3.2, you can use the built-in code formatter to format your Java code using the command line.</p>
+
+<p>Here's how:</p>
+
+<p>The hardest part of it all is to create the config file for the formatter. To create it, select one of your existing projects, and activate project specific formatter settings (<em>Properties</em> -><em> Java Code Style</em> -> <em>Formatter</em> -> <em>Enable project specific settings</em>):</p>
+
+<p><img src="http://www.peterfriese.de/wp-content/downloads/images/formatter_project_specific_settings.jpg" alt="" />
+Configure the code formatter as desired. Click <em>OK</em> when you're done.</p>
+
+<p>Using a file explorer, navigate to <strong><path to your workspace>/<yourproject>/.settings</strong> and copy <strong>org.eclipse.jdt.core.prefs</strong> to a new location. This file contains all your formatting settings.</p>
+
+<p>To invoke the code formatter using the command line issue the following command:
+<code>
+&lt;path-to-eclipse&gt;\eclipse.exe -vm &lt;path-to-vm&gt;\java.exe -application **org.eclipse.jdt.core.JavaCodeFormatter** -verbose -config &lt;path-to-config-file&gt;\org.eclipse.jdt.core.prefs &lt;path-to-your-source-files&gt;\*.java
+</code>
+In case the formatter complains about your code, your code probably contains Java 5 constructs and you have to add the following lines to your config file to make everything work:</p>
+
+<p><code>org.eclipse.jdt.core.compiler.compliance=1.5
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.5
+org.eclipse.jdt.core.compiler.source=1.5
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

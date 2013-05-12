@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="Together with Matthias Bohlen, I&#8217;ll be giving a talk on MDA transformation at the JAX conference in May 2005. Matthias and I will explain what &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://peterfriese.github.io/blog/page/14/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+  
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Software Architect / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:peterfriese.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/mda-transformations-in-practice/">MDA Transformations in Practice</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-05-02T23:21:26+02:00" pubdate data-updated="true">May 2<span>nd</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Together with <a href="http://www.mbohlen.de/">Matthias Bohlen</a>, I&#8217;ll be giving a talk on MDA transformation at the <a href="http://www.jax.de">JAX</a> conference in May 2005.</p>
+
+<p>Matthias and I will explain what transformations are and how to use the in modern MDA frameworks. Of course, since both of us are members of the <a href="http://www.andromda.org">AndroMDA</a> <a href="http://team.andromda.org">team</a>, we will show the use of MDA model to code transformations in AndroMDA and explain why the AndroMDA team chose not to use model to model transformations. A german abstract of the talk can be found <a href="http://www.jax.de/konferenzen/psecom,id,272,nodeid,,.html#MG3">here</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/making-eclipse-look-good-under-windows-xp/">Making Eclipse Look Good Under Windows XP</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-05-02T23:09:22+02:00" pubdate data-updated="true">May 2<span>nd</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>You may have noticed that Eclipse doesn&#8217;t really look native under Windows XP. This can easily be fixed by creating a manifest file for the Java VM used to start Eclipse, see <a href="http://wiki.schubart.net/How_to_Make_Eclipse_Use_the_Windows_XP_Skin">here</a>. The author mentions that it might not be easy to find out which JVM is used to start Eclipse. This, too, can easily be fixed by copying an entire <strong>JRE</strong> into the <em>eclipse</em> directory. Eclipse will automatically use this JRE to start up.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/opera-8-is-here/">Opera 8 Is Here</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-04-20T18:18:25+02:00" pubdate data-updated="true">Apr 20<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>After 3 official beta versions, Opera has relased version 8 of the <a href="http://www.opera.com/products/desktop/">Opera browser</a>. You can get it in <a href="ftp://ftp.opera.com/pub/opera/win/800/">Windows</a> and <a href="ftp://ftp.opera.com/pub/opera/linux/800/final/">Linux</a> flavors.</p>
+
+<p>The free version display ad banners at the top of the window. To make them go away, you can <a href="http://www.opera.com/buy/">buy</a> a license at 34 EUR. If you happen to have issue <a href="http://www.heise.de/ct/05/08/006/">8 of the german c&#8217;t magazine</a>, you are eligible to buy the browser for only 8 EUR - a great deal!</p>
+
+<p>Oh, and here are the new features and changes: <a href="http://www.opera.com/docs/changelogs/index.dml">Opera changelog</a></p>
+
+<p>I have been using Opera since version 7.x and never want to use any other browser. The most useful features in my eyes are:
+Tabbed browsing
+Support for sessions (opens a set of sites you browse regularly)
+Mouse gestures
+Quick Preferences (now, you can enable / disable you proxy with just 2 (!) keystrokes)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/is-mda-a-german-phenomenon/">Is MDA a German Phenomenon?</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-04-20T18:03:13+02:00" pubdate data-updated="true">Apr 20<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>It appears to me that <a href="http://www.omg.org/mda/specs.htm">Model Driven Architecture</a> is a german phenomenon:</p>
+
+<p>Today, I was looking for some links concerning MDA and found a <a href="http://en.wikipedia.org/wiki/Model-driven_architecture">Wikipedia article</a> that is rather short. But then I realized the &#8220;other languages&#8221; box at the lower left screen and had a look at the <a href="http://de.wikipedia.org/wiki/Model-driven_architecture">german translation</a> of the article, which is much more detailed.</p>
+
+<p>Another interesting observation is that most MDA tools originate from Europe:</p>
+
+<ul>
+<li><p>ArcStyler</p></li>
+<li><p>OptimalJ</p></li>
+<li><p>AndroMDA</p></li>
+<li><p>InnoQ</p></li>
+<li><p>openArchitectureWare</p></li>
+<li><p>BITPlan</p></li>
+</ul>
+
+
+<p>So what do you think? Is MDA a german / european phenomenon? If so, why?</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/curiosumorg-create-words-from-book-covers/">Curiosum.org - Create Words From Book Covers</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-04-19T10:39:29+02:00" pubdate data-updated="true">Apr 19<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>The (german) site <a href="http://www.curiosum.org/archiv/2005/03/22/wortbild/">Curiosum.org</a> points to <a href="http://amaztype.tha.jp/">AmazType</a>, a service that creates words from books covers. The result is displayed using Flash. I have created some samples, check them out:
+<a href="http://amaztype.tha.jp/US/Books/Title?q=Java">Java</a>
+<a href="http://amaztype.tha.jp/US/Books/Title?q=MDA">MDA</a>
+<a href="http://amaztype.tha.jp/US/Books/Title?q=Jesus">Jesus</a>
+<a href="http://amaztype.tha.jp/US/Books/Title?q=Bible">Bible</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/generating-computer-science-research-papers/">Generating Computer Science Research Papers</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-04-18T14:37:43+02:00" pubdate data-updated="true">Apr 18<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Ever wanted to write your own Computer Science research paper, but didn&#8217;t find the time? <a href="http://www.pdos.csail.mit.edu/scigen/">SCIgen - An Automatic CS Paper Generator</a> can generate a random paper for you - check it out!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/serial-version-uids/">Serial Version UIDs</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-04-14T15:36:22+02:00" pubdate data-updated="true">Apr 14<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>In my current project, we&#8217;re struggling with <a href="http://java.sun.com/j2se/1.4.2/docs/guide/serialization/spec/version.html">serial version UIDs</a>. Here are some links that shed a little light on the whole topic.
+<a href="http://c2.com/cgi/wiki?AlwaysDeclareSerialVersionUid">Portland Pattern Repository&#8217;s Wiki</a> states that all serializable classes should have a serial version UID assigned by the developer. An interesting observation ist that different compilers produce differnt UIDs for the same class.</p>
+
+<p><a href="http://serialver.sourceforge.net/">SerialVer</a> is a <a href="http://sourceforge.net/">Sourceforge</a> hosted project that provides <a href="http://ant.apache.org/">ANT</a> tasks for generating serial version UIDs.</p>
+
+<p>The <a href="http://www.andromda.org/andromda-spring-cartridge/">AndroMDA Hibernate Cartridge</a> is currently lacking support for serial version UIDs, but <a href="http://galaxy.andromda.org:8080/jira/browse/HIB-87">I have filed an issue</a> and hope it will be fixed soon.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/ms-project-the-most-enpensive-tool-for-creating-gantt-charts/">MS Project - the Most Enpensive Tool for Creating Gantt Charts?</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-03-31T22:27:18+02:00" pubdate data-updated="true">Mar 31<span>st</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Today, a former colleague of mine called to ask me which tool I&#8217;d recommend for managing a software development project. He then told me that his project manager just started using MS Project, or should I rather say, he tried to use it. From what he told me, it appeared to me that they tried to use the resource planning feature: define the timeline and the tasks, then assign people to the tasks and have Project calculate when they should work on which task. When he started telling me about this, I already knew what their problem was: it just doesn&#8217;t work in a sensible way.</p>
+
+<p>So, all I could tell him was to stop using MS Project for managing the project and use some custom made Excel table or a tool like eGroupware that has a built-in project management module that is not trying to be smart.</p>
+
+<p>My project manager was in the room when I was talking to my former colleague on the phone and when I said &#8220;all project managers that I know of use Excel tables and only use Project for drawing Gannt charts&#8221;, she put two thumbs up.</p>
+
+<p>I just don&#8217;t understand why this tool is so expensive and why people still try using it&#8230;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/i-joined-the-andromda-team/">I Joined the AndroMDA Team</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-03-23T20:56:14+01:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Have you ever read stories about machines building other machines and computer programs writing other computer programs? Science-fiction, you say? Reality today, I say!</p>
+
+<p>Take a look at AndroMDA. It is a tool that lets you build software from a model (designed in UML) and reduce the amount of hand-written code by great lengths.</p>
+
+<p>I have been using AndroMDA since mid-2003 in several projects (a large one is currently running) and have started to submit patches for the AndroMDA Spring Cartridge. After having submitted patches for <a href="http://galaxy.andromda.org:8080/jira/browse/SPRING-34">SPRING-34</a> (Spring remoting), <a href="http://galaxy.andromda.org:8080/jira/browse/SPRING-44">SPRING-44</a> (support for rich clients), <a href="http://galaxy.andromda.org:8080/jira/browse/SPRING-38">SPRING-38</a> (hibernate criteria search support, together with Stefan Reichert) and <a href="http://galaxy.andromda.org:8080/jira/browse/SPRING-47">SPRING-47</a> (criteria search support for null parameters), the team invited me to join them and promoted me to be an AndroMDA commiter.</p>
+
+<p>My next tasks will be to enhance the criteria search facility, enable finders to return <code>java.util.Map</code>s instead of <code>java.util.Collection</code>s (<a href="http://galaxy.andromda.org:8080/jira/browse/SPRING-48">SPRING-48</a>) and adding a feature for limiting the size of the result set of a finder (<a href="http://galaxy.andromda.org:8080/jira/browse/SPRING-50">SPRING-50</a>).</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/wordpress-rocks/">WordPress Rocks!</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-03-22T18:23:35+01:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>During the last days, I had some time to play around with WordPress, a quite impressive blogging software. I had seen it on Ed Burnette&#8217;s eclipsepowered blog some time ago, but never found the time to install it. I should have tried it earlier! It&#8217;s so cool and usable that I will drop my typo3 installation and replace it with WordPress.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/15/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/13/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
+      </li>
+    
+      <li class="post">
+        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tired-of-typing-speak-to-your-computer/">Tired of Typing? Speak to Your Computer!</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recommended reading&#8230;</h1>
+  <ul id="recommended_reading">
+  	
+      
+  	
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'peterfriese',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'peterfriese';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

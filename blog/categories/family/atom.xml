@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Family | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/family/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Jonas Aaron is here!]]></title>
+    <link href="http://peterfriese.github.io/jonas-aaron-is-here/"/>
+    <updated>2006-07-26T22:58:40+02:00</updated>
+    <id>http://peterfriese.github.io/jonas-aaron-is-here</id>
+    <content type="html"><![CDATA[<p><img src="/wp-content/downloads/family/jonas/jonas.jpg" alt="Jonas" /></p>
+
+<p>Today at 3:26 in the morning, Anne gave birth to Jonas Aaron Friese, our third son. Both are well (and a little bit tired).</p>
+
+<p>You, LORD, brought me safely through birth,  and you protected me when I was a baby at my mother's breast.
+From the day I was born, I have been in your care, and from the time of my birth, you have been my God.
+(Psalm 22, 9+10)</p>
+]]></content>
+  </entry>
+  
+</feed>

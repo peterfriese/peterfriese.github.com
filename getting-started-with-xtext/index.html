@@ -1,0 +1,551 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Getting Started with Xtext - Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="Xtext has been released as a part of the Eclipse Galileo release train on June 24th, 2009. Xtext is a framework for building DLSs (domain specific &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://peterfriese.github.io/getting-started-with-xtext/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+  
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Software Architect / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:peterfriese.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Getting Started With Xtext</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-30T02:17:56+02:00" pubdate data-updated="true">Jun 30<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+  
+  <p><a href="http://www.xtext.org">Xtext</a> has been released as a part of the Eclipse Galileo release train on June 24th, 2009. Xtext is a framework for building DLSs (<strong>d</strong>omain <strong>s</strong>pecific <strong>l</strong>anguages). In fact, it can be seen as a DSL for defining DSLs.</p>
+
+<p>In this article, we will develop a small DSL for defining entities.</p>
+
+<h2>Download and Install</h2>
+
+<p>Hop over to <a href="http://xtext.itemis.com">http://xtext.itemis.com</a> and download an Xtext distribution matching your platform. We&#8217;ve got all major platforms: Windows, Mac OSX Carbon, Mac OSX Cocoa 64, Mac OSX Cocoa 32, Linux Gtk 64, Linux Gtk 32.</p>
+
+<p>To install, unzip the distribution file to a directory of your liking.</p>
+
+<p><strong>Windows users, please make sure you unzip to a directory near to your filesystem root! Eclipse contains files and folders with long names that might be hard to handle for Windows.</strong></p>
+
+<!-- more -->
+
+
+<h2>Create a new project</h2>
+
+<p>After launching Eclipse and creating a new workspace (or using an existing one), create a new Xtext project by selecting <em>File -> New&#8230; Project&#8230; -> Xtext Project</em>. In this article, we&#8217;re creating a DSL for describing entities, so let&#8217;s go with the following settings:</p>
+
+<ul>
+<li><p>Main project name: <em>org.xtext.example.entity</em></p></li>
+<li><p>Language name: <em>org.xtext.example.Entity</em></p></li>
+<li><p>DSL-File extension: <em>entity</em></p></li>
+<li><p>Create generator project: <em>yes</em></p></li>
+</ul>
+
+
+<p>Click <em>Finish</em> to let Xtext create the three projects that make up your DSL:</p>
+
+<ul>
+<li><p>org.xtext.example.entity - this project contains the DSL itself, including all back end infrastructure like the parser and the meta model.</p></li>
+<li><p>org.xtext.example.entity.ui - as the name implies, this project contains all UI centric code of the DSL: the editor, the outline, content assist and so forth</p></li>
+<li><p>org.xtext.example.entity.generator - this project contains a code generator which will transform the DSL scripts (aka models) you write in your DSL into something useful. In our example, we will create some POJOs and DAOs from our models.</p></li>
+</ul>
+
+
+<p>Upon finishing creating these three projects, Xtext opens a file <em>Entity.xtext</em>, which contains a sample grammar, which we will change in a second.</p>
+
+<h2>Define the grammar for your DSL</h2>
+
+<p>Next up, we need to define the grammar for our DSL. To make things easier for us, let&#8217;s first write down a sample model. Please open <em>org.xtext.example.entity.generator/src/model/MyModel.entity</em> and key in the following text:</p>
+
+<pre><code>typedef String
+typedef Integer
+typedef Date mapsto java.util.Date
+
+entity Person {
+  String name
+  String surName
+  Date birthDay
+  Address home
+  Address work
+}
+
+entity Boss extends Person {
+  Person* employees
+}
+
+entity Address {
+  String street
+  String number
+  String city
+  String ZIP
+}
+</code></pre>
+
+<p>Most of this model should be pretty obvious, but there are two things worth noting:</p>
+
+<ul>
+<li><p>We define our own list of data types to gain a certain degree of flexibilty, i.e. to map them to different types in the host language, as can be seen for the <em>Date</em> data type, which gets mapped to <em>java.util.Date</em> (we might also decide to map it to <em>java.sql.Date</em>)</p></li>
+<li><p>The star (*) denotes multiplicity. We might also have chosen square brackets (<em>Person[] employees</em>) or something completely different - it&#8217;s largely a matter of taste.</p></li>
+</ul>
+
+
+<p>Let&#8217;s derive the grammar for this model. Open <em>org.xtext.example.entity/src/org/xtext/example/Entity.xtext</em>, erase its entire contents and enter the following:</p>
+
+<pre><code>grammar org.xtext.example.Entity with org.eclipse.xtext.common.Terminals
+generate entity "http://www.xtext.org/example/Entity"
+</code></pre>
+
+<p>The first line indicates we want the new grammar to be derived from the (built-in) grammar <em>Terminals</em>, which defines some basic terminal rules (like STRING, ID and so forth). If you&#8217;re interested, <em>CTRL+Click</em> on the language name to navigate to its definition.</p>
+
+<p>The second line defines the name and namespace URI for our own grammar.</p>
+
+<p>Let&#8217;s now define that our DSL supports types. Add the following lines:</p>
+
+<pre><code>Model:
+  (types+=Type)*;
+
+Type:
+  TypeDef | Entity;
+</code></pre>
+
+<p>This tells Xtext that our <em>Model</em> contains any number (i.e. <em>0..N</em>, as declared by the <em>*</em>) of <em>Type_s. What exactly a </em>Type<em> is needs to be specified. Apparently, a </em>Type<em> can be either a </em>TypeDef<em> or an </em>Entity_:</p>
+
+<pre><code>TypeDef:
+  "typedef" name=ID ("mapsto" mappedType=JAVAID)?;  
+</code></pre>
+
+<p>A <em>TypeDef</em> starts with the keyword <em>typedef</em>, followed by an <em>ID</em> making up its name. Following the name, we can optionally (hence the question mark at the end) add a <em>mapsto</em> clause. The fragment <em>mappedType=JAVAID</em> specifies that the <em>TypeDef</em> will later have an attribute named <em>mappedType</em> of type JAVAID. As JAVAID is not yet defined, we need to do so:</p>
+
+<pre><code>JAVAID:
+  name=ID("." ID)*;
+</code></pre>
+
+<p>So, a <em>JAVAID</em> is a sequence of <em>ID_s and dots, making up a qualified Java type name, such as </em>java.util.Date_.</p>
+
+<p>Next, let&#8217;s define how to model entities:</p>
+
+<pre><code>Entity:
+  "entity" name=ID ("extends" superEntity=[Entity])?
+  "{"
+    (attributes+=Attribute)*
+  "}";
+</code></pre>
+
+<p>As you might have guessed, <em>Entity_s start with the keyword </em>entity<em>, followed by an </em>ID_ as their name. They may optionally extends another entity. Surrounding a rule call with square brackets means &#8220;this is a cross reference&#8221;, i.e. a reference to an already existing element.</p>
+
+<p><em>Entity_s do have </em>Attribute_s (any number, to be precise), thus we have to define how _Attribute_s look like:</p>
+
+<pre><code>Attribute:
+  type=[Type] (many?="*")? name=ID;
+</code></pre>
+
+<p>By now, you should be able to read this rule: an <em>Attribute</em> has a <em>type</em> which is a cross reference to a <em>Type</em> (which is either a <em>TypeDef</em> or an <em>Entity</em>), it has an optional multiplicity indicator (the star) and - of course - if has a name.</p>
+
+<p>Your grammar should look like this by now:</p>
+
+<pre><code>grammar org.xtext.example.Entity with org.eclipse.xtext.common.Terminals
+
+generate entity "http://www.xtext.org/example/Entity"
+
+Model:
+  (types+=Type)*;
+
+Type:
+  TypeDef | Entity;
+
+TypeDef:
+  "typedef" name=ID ("mapsto" mappedType=JAVAID)?;
+
+JAVAID:
+  name=ID("." ID)*;
+
+Entity:
+  "entity" name=ID ("extends" superEntity=[Entity])?
+  "{"
+    (attributes+=Attribute)*
+  "}";
+
+Attribute:
+  type=[Type] (many?="*")? name=ID;
+</code></pre>
+
+<h2>Compiling the DSL</h2>
+
+<p>Now it is time to see the fruits of our labor. But first, we need to compile our grammar. Xtext will create:</p>
+
+<ul>
+<li><p>a parser</p></li>
+<li><p>a serializer_</p></li>
+<li><p>an Ecore meta model</p></li>
+<li><p>a full blown Eclipse editor</p></li>
+</ul>
+
+
+<p>from this grammar. To make this happen, please select <em>org.xtext.example.entity/src/org/xtext/example/GenerateEntity.mwe</em> and select <em>Run As -> MWE Workflow</em> from the context menu. Xtext will now generate the entire infrastructure for your DSL and after a few seconds you should have a shiny new DSL including a great editor.</p>
+
+<h2>Taking it for a spin</h2>
+
+<p>Seeing is believing, so let&#8217;s take the DSL editor for a test drive. Select the DSL project <em>org.xtext.example.entity</em> and, from the context menu, select <em>Run As -> Eclipse Application</em>. A second instance of Eclipse will be started.</p>
+
+<p>In this new instance, create a new, empty project (<em>File -> New -> Project&#8230; -> General -> Project</em>. Create a new file <em>Sample.entity</em> in the new project.</p>
+
+<p>You can now insert the model we designed above or enter a new model:
+[</p>
+
+<p><img src="http://farm3.static.flickr.com/2574/3673405506_09fed234e1.jpg" alt="Getting Started With Xtext" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3673405506)</p>
+
+<h2>Leveraging the model</h2>
+
+<p>Now that we&#8217;ve got a fancy editor for our DSL, we want to transform the models we can create with this editor into something meaningful. This, however, will be the topic of the next installment.</p>
+
+<h2>More info</h2>
+
+<p>Feel free to discuss this article in the comments section of <a href="http://www.peterfriese.de">my blog</a>. Should you have any technical questions regarding Xtext, we&#8217;ve got an <a href="http://www.eclipse.org/newsportal/thread.php?group=eclipse.modeling.tmf">excellent newsgroup</a> where the committers answer your questions. We (itemis) also offer <a href="http://xtext.itemis.com/xtext/language=en/23946/professional-services">professional (commercial) support</a>, i.e. customized trainings to get your team up to speed. Just <a href="mailto:peter.friese@itemis.de">drop us a note</a>, we&#8217;re happy to discuss the details with you.</p>
+
+<h2>Download the code</h2>
+
+<p>You can check out the code from <a href="http://code.google.com/p/peterfriese/source/browse/xtext_getting_started/tags/xtext_getting_started_1/">this SVN repository location</a>.</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Peter</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-30T02:17:56+02:00" pubdate data-updated="true">Jun 30<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dsls/'>DSLs</a>, <a class='category' href='/blog/categories/eclipse/'>Eclipse</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://peterfriese.github.io/getting-started-with-xtext/" data-via="peterfriese" data-counturl="http://peterfriese.github.io/getting-started-with-xtext/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/xtext-does-london/" title="Previous Post: Xtext does London">&laquo; Xtext does London</a>
+      
+      
+        <a class="basic-alignment right articlenav" href="/getting-started-with-xtext-part-2/" title="Next Post: Getting started with Xtext, part 2">Getting started with Xtext, part 2 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
+      </li>
+    
+      <li class="post">
+        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tired-of-typing-speak-to-your-computer/">Tired of Typing? Speak to Your Computer!</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recommended reading...</h1>
+  <ul id="recommended_reading">
+  	
+      
+  	
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'peterfriese',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'peterfriese';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://peterfriese.github.io/getting-started-with-xtext/';
+        var disqus_url = 'http://peterfriese.github.io/getting-started-with-xtext/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

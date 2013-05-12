@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Why you should be careful when using early startup. - Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="Since version 2.0, Eclipse comes with a feature called early startup. Plug-ins using this mechanism will be loaded and activated when the workbench &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://peterfriese.github.io/why-you-should-be-careful-when-using-early-startup/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+  
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Software Architect / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:peterfriese.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Why You Should Be Careful When Using Early Startup.</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-10-25T11:47:15+02:00" pubdate data-updated="true">Oct 25<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+  
+  <p>Since version 2.0, Eclipse comes with a feature called <em>early startup</em>. Plug-ins using this mechanism will be loaded and activated when the workbench is starting up. One of the major design goals of Eclipse was to minimize startup time, which is why plugins are divided into  a declarative (i.e. the plugin.xml) and a dynamic part (the Java classes making up the plug-in). Using early startup is strongly discouraged, mainly due to performance reasons: if everybody wants to startup early, the whole idea of separating plug-ins into a declarative and a dynamic part gets perverted.</p>
+
+<p>But there is another reason why using early startup is discouraged: if you are not careful, your plug-in might get instantiated twice! &#8220;What?&#8221;, I hear you saying, &#8220;Plug-ins are singletons, how can they possibly be instantiated twice?&#8221; Well, that&#8217;s what I thought as well. But have a look at <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=91603">bug #91603</a> and you&#8217;ll find that it is true: if you specify your plug-in class to be the early startup class, your plug-in class will be instantiated twice. As the original reporter states, this will produce strange effects when you try to refer to the plug-in&#8217;s bundle or other fields that get initialized during normal startup.</p>
+
+<p>So, what can we do about it? I suggest the following best practice:</p>
+
+<p><strong>Using early startup the safe way</strong></p>
+
+<ul>
+<li><p>Do not use early startup.</p></li>
+<li><p>Only use it if you absolutely have to.</p></li>
+<li><p>If you use it, do not specify a class in the <code>class</code> element.</p></li>
+</ul>
+
+
+<p><strong>Rationale</strong>
+Why shouldn&#8217;t you specifiy a startup class? The <a href="http://help.eclipse.org/help31/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_startup.html">online help</a> says that <em>If the startup element has a class attribute, the class will be instantiated and earlyStartup() will be called on the result. Otherwise, this method will be called on the plug-in class.</em>. To understand what the documentation writers want to tell us, review  this <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=91603#c2">comment by Nick Edgar</a>. Now it becomes clear: if you specify a class, that class will be instantiated, regardless of whether it is the plug-in class itself or any other class. If you do not specify a class, then the singleton instance of your plug-in will be used instead, which is what we want.</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Peter</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-10-25T11:47:15+02:00" pubdate data-updated="true">Oct 25<span>th</span>, 2005</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/eclipse/'>Eclipse</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://peterfriese.github.io/why-you-should-be-careful-when-using-early-startup/" data-via="peterfriese" data-counturl="http://peterfriese.github.io/why-you-should-be-careful-when-using-early-startup/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/eclipse-color-decorators-rock/" title="Previous Post: Eclipse color decorators rock!">&laquo; Eclipse color decorators rock!</a>
+      
+      
+        <a class="basic-alignment right articlenav" href="/code-is-meant-for-reading/" title="Next Post: Code is meant for reading!">Code is meant for reading! &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
+      </li>
+    
+      <li class="post">
+        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tired-of-typing-speak-to-your-computer/">Tired of Typing? Speak to Your Computer!</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recommended reading...</h1>
+  <ul id="recommended_reading">
+  	
+      
+  	
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'peterfriese',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

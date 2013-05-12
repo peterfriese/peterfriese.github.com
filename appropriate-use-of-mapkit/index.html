@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Appropriate Use of MapKit - Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://peterfriese.github.io/appropriate-use-of-mapkit/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+  
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Software Architect / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:peterfriese.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Appropriate Use of MapKit</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-16T11:48:38+01:00" pubdate data-updated="true">Feb 16<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+  
+  <p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&#8217;re violating Google&#8217;s terms of service, I was wondering what in particular was wrong. <!-- more -->At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google&#8217;s terms of service for Maps</a>, but can you spot what is wrong?</p>
+
+<p>[caption id=&#8221;attachment_687&#8221; align=&#8221;aligncenter&#8221; width=&#8221;172&#8221; caption=&#8221;What&#8217;s wrong with this map?&#8221;]<a href="http://www.peterfriese.de/wp-content/maps_without_google_logo.png"><img src="http://www.peterfriese.de/wp-content/maps_without_google_logo-172x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a>[/caption]</p>
+
+<p>Maybe you can better see what&#8217;s wrong when I show you another screenshot, this time obeying the TOS:</p>
+
+<p>[caption id=&#8221;attachment_688&#8221; align=&#8221;aligncenter&#8221; width=&#8221;169&#8221; caption=&#8221;With logo: well done!&#8221;]<a href="http://www.peterfriese.de/wp-content/maps_with_google_logo.png"><img src="http://www.peterfriese.de/wp-content/maps_with_google_logo-169x300.png" alt="Google Maps with logo: well done!" /></a>[/caption]</p>
+
+<p>Can you spot the difference? It&#8217;s the Google logo!</p>
+
+<p>The reason why it is not shown in the first screenshot is that the bounds for the map are not set correctly. In the offending version of my app, I used a piece of code similar to this one:</p>
+
+<pre><code>- (void)viewDidLoad {
+  [super viewDidLoad];
+  mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+
+  mapView.showsUserLocation=TRUE;
+  mapView.mapType=MKMapTypeStandard;
+  [self.view addSubview:mapView];       
+}
+</code></pre>
+
+<p>Nothing wrong with it, but it lacks one essential line:</p>
+
+<pre><code>- (void)viewDidLoad {
+  [super viewDidLoad];
+  mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+
+  mapView.autoresizingMask = 
+    (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);   
+
+  mapView.showsUserLocation=TRUE;
+  mapView.mapType=MKMapTypeStandard;
+  [self.view addSubview:mapView];       
+}
+</code></pre>
+
+<p>So, next time you write an app that contains Google Maps, make sure the Google logo is visible. You can get the full source code for this example <a href="http://github.com/peterfriese/MapKitSample">on my GitHub page</a>.</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Peter</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-16T11:48:38+01:00" pubdate data-updated="true">Feb 16<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/apple/'>Apple</a>, <a class='category' href='/blog/categories/mapkit/'>MapKit</a>, <a class='category' href='/blog/categories/iphone/'>iPhone</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://peterfriese.github.io/appropriate-use-of-mapkit/" data-via="peterfriese" data-counturl="http://peterfriese.github.io/appropriate-use-of-mapkit/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/" title="Previous Post: Three reasons why I think the HP TouchPad will rock the tablet market">&laquo; Three reasons why I think the HP TouchPad will rock the tablet market</a>
+      
+      
+        <a class="basic-alignment right articlenav" href="/save-a-tree-put-eclipsecon-2011-in-your-pocket/" title="Next Post: Save a Tree, Put EclipseCon 2011 in Your Pocket">Save a Tree, Put EclipseCon 2011 in Your Pocket &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
+      </li>
+    
+      <li class="post">
+        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tired-of-typing-speak-to-your-computer/">Tired of Typing? Speak to Your Computer!</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recommended reading...</h1>
+  <ul id="recommended_reading">
+  	
+      
+  	
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'peterfriese',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'peterfriese';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://peterfriese.github.io/appropriate-use-of-mapkit/';
+        var disqus_url = 'http://peterfriese.github.io/appropriate-use-of-mapkit/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: MapKit | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/mapkit/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Appropriate Use of MapKit]]></title>
+    <link href="http://peterfriese.github.io/appropriate-use-of-mapkit/"/>
+    <updated>2011-02-16T11:48:38+01:00</updated>
+    <id>http://peterfriese.github.io/appropriate-use-of-mapkit</id>
+    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you're violating Google's terms of service, I was wondering what in particular was wrong. <!-- more -->At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google's terms of service for Maps</a>, but can you spot what is wrong?</p>
+
+<p>[caption id="attachment_687" align="aligncenter" width="172" caption="What's wrong with this map?"]<a href="http://www.peterfriese.de/wp-content/maps_without_google_logo.png"><img src="http://www.peterfriese.de/wp-content/maps_without_google_logo-172x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a>[/caption]</p>
+
+<p>Maybe you can better see what's wrong when I show you another screenshot, this time obeying the TOS:</p>
+
+<p>[caption id="attachment_688" align="aligncenter" width="169" caption="With logo: well done!"]<a href="http://www.peterfriese.de/wp-content/maps_with_google_logo.png"><img src="http://www.peterfriese.de/wp-content/maps_with_google_logo-169x300.png" alt="Google Maps with logo: well done!" /></a>[/caption]</p>
+
+<p>Can you spot the difference? It's the Google logo!</p>
+
+<p>The reason why it is not shown in the first screenshot is that the bounds for the map are not set correctly. In the offending version of my app, I used a piece of code similar to this one:</p>
+
+<pre><code>- (void)viewDidLoad {
+  [super viewDidLoad];
+  mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+
+  mapView.showsUserLocation=TRUE;
+  mapView.mapType=MKMapTypeStandard;
+  [self.view addSubview:mapView];       
+}
+</code></pre>
+
+<p>Nothing wrong with it, but it lacks one essential line:</p>
+
+<pre><code>- (void)viewDidLoad {
+  [super viewDidLoad];
+  mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+
+  mapView.autoresizingMask = 
+    (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);   
+
+  mapView.showsUserLocation=TRUE;
+  mapView.mapType=MKMapTypeStandard;
+  [self.view addSubview:mapView];       
+}
+</code></pre>
+
+<p>So, next time you write an app that contains Google Maps, make sure the Google logo is visible. You can get the full source code for this example <a href="http://github.com/peterfriese/MapKitSample">on my GitHub page</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

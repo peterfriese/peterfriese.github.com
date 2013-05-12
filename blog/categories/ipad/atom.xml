@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: iPad | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/ipad/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[What's your number?]]></title>
+    <link href="http://peterfriese.github.io/whats-your-number/"/>
+    <updated>2011-01-27T02:00:47+01:00</updated>
+    <id>http://peterfriese.github.io/whats-your-number</id>
+    <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you've been asking yourself "what's this number, and where do I find it?", read on!</p>
+
+<!-- more -->
+
+
+<p>The Unique Device IDentifier is a 40-digit number that uniquely identifies your iPhone or iPad. It's tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.</p>
+
+<p>Here's how you can find this number and send it to your developer:</p>
+
+<ol>
+<li><p>Connect your iPhone / iPad to your computer using the white USB connection cable.</p></li>
+<li><p>Wait for iTunes to start up. If it doesn't start automatically, start it manually (Windows users will find it in the depths of the Start Menu, Mac users can use Spotlight to search for it).</p></li>
+<li><p>Click on the name of your iPhone / iPad on the left-hand side of the iTunes Window: <a href="http://www.flickr.com/photos/81029262@N00/5391569342"><img src="http://farm6.static.flickr.com/5180/5391569342_79b2d97180.jpg" alt="Finding your iPhone's UDID, step 1" /></a></p></li>
+<li><p>Details about your device will be displayed in the main area of the iTunes window.</p></li>
+<li><p>Find the label titled <strong>Serial Number</strong>. The serial number IS NOT the UDID!</p></li>
+<li><p>Holding down the CMD (on the Mac) or the CTRL (on Windows) key, click on the label <strong>Serial Number</strong></p></li>
+<li><p>The label's title will change to <strong>Identifier (UDID</strong>:<a href="http://www.flickr.com/photos/81029262@N00/5391652500"><img src="http://farm6.static.flickr.com/5291/5391652500_1c2dbaf918.jpg" alt="Finding your iPhone's UDID, step 2" /></a></p></li>
+<li><p>Press CMD+C (on Mac) or CTRL+C (on Windows) to copy the UDID to your clipboard</p></li>
+<li><p>Open a new mail, insert the UDID and a friendly message and send it to your developer.</p></li>
+</ol>
+
+
+<p>Easy, isn't it?</p>
+
+<p>Oh, and please do NOT send a screenshot of the UDID. You should know better now.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Watching DVDs on your iPad]]></title>
+    <link href="http://peterfriese.github.io/watching-dvds-on-your-ipad/"/>
+    <updated>2010-08-07T00:22:10+02:00</updated>
+    <id>http://peterfriese.github.io/watching-dvds-on-your-ipad</id>
+    <content type="html"><![CDATA[<p>I've been wanting to watch DVDs on my iPad since I had it. As the iPad doesn't have an optical drive, you need to jump through several loopholes to get the trick done, but in the very moment you watch your first DVD on your iPad, something magical happens...</p>
+
+<!-- more -->
+
+
+<p>At first, I came up with a solution that would allow me to watch DVDs without re-encoding them - I just streamed them from my Mac. Actually, this is very easy with the help of some great open source tools, some of which are already installed on your Mac. But I guess this is a story for another blog post.</p>
+
+<p>If you want to take your DVDs with you on your iPad, streaming them from your Mac isn't an option. So I browsed the web to see if I could find an affordable ripper. If you google for "<a href="http://www.google.com/search?q=dvd+ipad">dvd ipad</a>", you'll be given an enormous list of hits linking to commercial tools - obviously encoding DVDs for the iPad isn't that simple, so companies can make a good business with selling tools. But I didn't want to buy any of those tools, so I looked for a solution involving freely available open source tools.</p>
+
+<p>So, if you want to encode your DVDs for your iPad, here are the steps you need to take. It's very simple and doesn't cost you a single dime:</p>
+
+<ol>
+<li><p><a href="http://handbrake.fr/downloads.php">Download</a> and install Handbrake.</p></li>
+<li><p>In order to encode for the iPad, you need to use an adjusted profile: <a href="http://www.peterfriese.de/wp-content/downloads/handbrake/iPad.plist">iPad.plist</a>.</p></li>
+<li><p>Install this profile into Handbrake (<em>Preset -> Import...</em> on the main menu)</p></li>
+<li><p>Insert a DVD into your optical drive</p></li>
+<li><p>Click the <em>Source</em> button in Handbrake and select your DVD</p></li>
+<li><p>Handbrake will now scan the DVD for what it thinks is the main feature - you might need to verif this.</p></li>
+<li><p>Select one of the profiles in the profile selection dialog (on the Mac, press the <em>Toggle Presets</em> button on the toolbar). <em>iPad full</em> worked fine for me.</p></li>
+<li><p>You can now fine-tune the settings. For example, the <em>audio</em> tab allows you to add multiple audio tracks to your video</p></li>
+<li><p>Once you're done, press <em>Start</em></p></li>
+<li><p>Now it's time to go for a walk or having a chat with your friends - ripping the DVD will take some time, depending on your computer</p></li>
+<li><p>When Handbrake is done encoding the video, just double-click the resulting <em>.m4v</em> file to import it to iTunes.</p></li>
+<li><p>As soon as the video shows up in iTunes, you can sync it to your iPad (the iPhone plays the video fine, too)</p></li>
+</ol>
+
+
+<p>Most DVDs do not take up more than 1GB after encoding for the iPad, so you can load quite a number of films even onto small iPads.</p>
+
+<p>Enjoy! Oh, and should I have made your life easier, feel free to <a href="http://flattr.com/thing/2943/Peter-Frieses-Blog">flattr</a> me!</p>
+]]></content>
+  </entry>
+  
+</feed>

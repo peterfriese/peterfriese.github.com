@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Advanced WikiText - Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="In my recent posting, I showed you how to use Mylyn WikiText to easily create documentation for your project. In this installment, we&#8217;re going &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://peterfriese.github.io/advanced-wikitext/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+  
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Software Architect / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:peterfriese.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Advanced WikiText</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-05T21:18:47+02:00" pubdate data-updated="true">May 5<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+  
+  <p>In my <a href="http://www.peterfriese.de/getting-started-with-wikitext/">recent posting</a>, I showed you how to use <a href="http://wiki.eclipse.org/Mylyn/Incubator/WikiText">Mylyn WikiText</a> to easily create documentation for your project.</p>
+
+<p>In this installment, we&#8217;re going to look at four things:</p>
+
+<ol>
+<li><p>How to create PDFs</p></li>
+<li><p>How to automate your publishing process</p></li>
+<li><p>How to split your documents to facilitate team work</p></li>
+<li><p>How to use DocBook as an intermediary format to add even more flexibility to your publishing process</p></li>
+</ol>
+
+
+<p>Lots of stuff, so let&#8217;s get started!</p>
+
+<h2>How to create PDFs</h2>
+
+<p>The WikiText documentation states you can create DocBook, HTML and Eclipse Help from Wiki markup. So, how to create PDFs? Well, there are many ways to create PDFs. If you just want to create PDFs inside the IDE, you can download the <a href="https://textile-j.dev.java.net/builds/wikitext/index.html">Textile-J PDF add-on</a> for WikiText. Textile-J is the predecessor of WikiText. The reason why the PDF output is not included in WikiText is that some of the required frameworks need to transform to PDF are not yet IP-approved (see bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=258349">258349</a> for more information).</p>
+
+<p>To install the Textile-J PDF add-on, proceed as follows:</p>
+
+<ol>
+<li><p>Make sure you have WikiText 1.1.0 or better installed</p></li>
+<li><p>Add the Textile-J update site to your Update Manager: <em>https://textile-j.dev.java.net/builds/wikitext/site</em></p></li>
+<li><p>Refresh the Update Manager. You should now see <em>Textile-J WikiText PDF</em> in the list of available features.</p></li>
+<li><p>Select <em>Textile-J WikiText PDF</em> and click <em>Install</em></p></li>
+<li><p>Restart Eclipse as requested</p></li>
+</ol>
+
+
+<p>You can now right-click on any wiki file (<em>*.textile</em>, <em>*.mediawiki</em>, <em>*.confluence</em>, <em>*.twiki</em>, <em>*.tracwiki</em> and select <em>Textile-J -> Generate PDF</em> from the context menu.</p>
+
+<h2>How to automate the process</h2>
+
+<p>If you want to create PDFs outside the IDE (e.g. on your CI server using ANT), you need to create a build file:</p>
+
+<pre><code>&lt;project name="how-to-use-wikitext" default="wikitext2pdf" basedir="."&gt;
+&lt;property name="wikitext.standalone" value="lib"/&gt;&lt;!-- path to wikitext standalone package --&gt;
+&lt;path id="wikitext.classpath"&gt;
+&lt;fileset dir="${wikitext.standalone}"&gt;
+&lt;include name="org.eclipse.mylyn.wikitext.*core*.jar"/&gt;
+&lt;include name="net.java.dev.textilej.wikitext.*core*.jar"/&gt;
+&lt;include name="net.java.dev.textilej.wikitext.*lib*.jar"/&gt;
+&lt;/fileset&gt;
+&lt;/path&gt;
+&lt;taskdef classpathref="wikitext.classpath"
+        resource="org/eclipse/mylyn/wikitext/core/util/anttask/tasks.properties" /&gt;
+&lt;taskdef classpathref="wikitext.classpath"
+        resource="net/java/dev/textilej/wikitext/pdf/core/util/anttask/tasks.properties" /&gt;
+&lt;target name="wikitext2pdf" description="Generate PDF from textile"&gt;
+&lt;wikitext-to-pdf markupLanguage="Textile"&gt;
+&lt;fileset dir="${basedir}"&gt;
+&lt;include name="documentation.textile"/&gt;
+&lt;/fileset&gt;
+&lt;/wikitext-to-pdf&gt;
+&lt;/target&gt;
+&lt;/project&gt;
+</code></pre>
+
+<p>By the way, there are ANT tasks for all other output formats as well, so you can automate the creation of Eclipse Help, HTML and DocBook, too:</p>
+
+<pre><code>&lt;wikitext-to-docbook markupLanguage="Textile"&gt;
+&lt;fileset dir="${basedir}"&gt;
+&lt;include name="documentation.textile"/&gt;
+&lt;/fileset&gt;
+&lt;/wikitext-to-docbook&gt;
+</code></pre>
+
+<h2>How to split your documents to facilitate team work</h2>
+
+<p>Now that you know how to transform Wiki markup to various output formats, you might wonder how to split your Wiki files into smaller chunks so the members of your team can work on them separately. This is something which is very easy with, say, LaTeX or DocBook because they both have the concept of importing other documents. In Wikis, there usually is no such thing as importing another Wiki page - you rather <em>link</em> to that other page. If you&#8217;re writing a documentation, this isn&#8217;t sufficient, however. You really need to be able to import document fragments.</p>
+
+<p>Instead of adding the notion of imports to WikiText, I decided to control the assembling of the master document by using a little bit of ANT wizardry and a text file.</p>
+
+<p>The text file (named <em>index.txt</em> controls the order in which the document fragments ned to be glued together:</p>
+
+<pre><code>introduction.textile
+grammar_language.textile
+newnoteworthy.textile
+</code></pre>
+
+<p>The <em>build.xml</em> now needs to be enhanced so that it reads the control file and use this information to assemble the Wiki files in the order requested:</p>
+
+<pre><code>&lt;target name="assemble"&gt;
+&lt;loadfile srcfile="doc/index.txt" property="inputfiles"&gt;
+&lt;filterchain&gt;
+&lt;tokenfilter&gt;
+&lt;replacestring from="\n" to=","/&gt;
+&lt;/tokenfilter&gt;
+&lt;/filterchain&gt;
+&lt;/loadfile&gt;
+&lt;concat destfile="documentation.textile" append="false" fixlastline="yes"&gt;
+&lt;filelist dir="doc" files="${inputfiles}"/&gt;
+&lt;/concat&gt;
+&lt;/target&gt;
+</code></pre>
+
+<p>So what happens here is that we read in the contents of the <em>index.txt</em> file, concatenate all file names, separated with a comma to one large line and feed that large line into the <em>concatenate</em> task that will then concatenate the contents of all those files in the given order so we get one big file.</p>
+
+<p>After that, the big file can now be processed as usual:</p>
+
+<pre><code>&lt;target name="generate-pdf" depends="assemble" description="Generate PDF from textile"&gt;
+&lt;wikitext-to-pdf markupLanguage="Textile"&gt;
+&lt;fileset dir="${basedir}"&gt;
+&lt;include name="documentation.textile"/&gt;
+&lt;/fileset&gt;
+&lt;/wikitext-to-pdf&gt;
+&lt;/target&gt;
+</code></pre>
+
+<h2>How to use DocBook to gain more flexibility</h2>
+
+<p>DocBook has been around for quite some years now and together with LaTeX still will give you the most flexibility when it comes to documentation engineering. I have been using both LaTeX and DocBook to write all sorts of documentation, ranging from my diploma thesis to open source project documentation and have found both the be versatile and reliable, but also quite verbose. Regarding flexibility, both give you the possibility to choose a document template / style of your liking. If none of the existing document styles match your needs, you can more or less easily create you own.</p>
+
+<p>As WikiText supports creating DocBook from your Wiki files, we&#8217;ll have a look at how to use this DocBook output to further process it. Here is what we need to do:</p>
+
+<ol>
+<li><p>Enhance our build script so it downloads the relevant DocBook files (libraries, basic styles and XSL transformations)</p></li>
+<li><p>Add targets to our build script that allow you to choose the output to be created: PDF, HTML or Eclipse Help</p></li>
+</ol>
+
+
+<p>The whole process will look like this:
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3599/3494324023_c4cf66ba24_o.png" alt="WikiTextDocBook ToolChain" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3494324023)</p>
+
+<p>Let&#8217;s have a look at some crucial parts of the script.</p>
+
+<p>We already saw how to assemble multiple Wiki files into one big Wiki file. The next step is to convert this file to DocBook:</p>
+
+<pre><code>&lt;target name="wikitext2docbook" depends="assemble" description="Generate DocBook from textile"&gt;
+&lt;wikitext-to-docbook markupLanguage="Textile"&gt;
+&lt;fileset dir="${basedir}"&gt;
+&lt;include name="documentation.textile"/&gt;
+&lt;/fileset&gt;
+&lt;/wikitext-to-docbook&gt;
+&lt;/target&gt;
+</code></pre>
+
+<p>After that, we need to convert the DocBook file to PDF:</p>
+
+<pre><code>&lt;target name="docbook2pdf"&gt;
+&lt;echo&gt;Converting article to PDF...&lt;/echo&gt;
+&lt;delete file="${dest.dir}${file.separator}${documenat.name}.pdf"/&gt;
+&lt;delete file="${dest.dir}${file.separator}${documenat.name}.fo"/&gt;
+&lt;xslt in="${documenat.name}.xml"
+        extension="xml"
+        out="${dest.dir}${file.separator}${documenat.name}.fo"
+        style="${document.stylesheet}"&gt;
+&lt;factory name="org.apache.xalan.processor.TransformerFactoryImpl"&gt;
+&lt;attribute name="http://xml.apache.org/xalan/features/optimize" value="true"/&gt;
+&lt;/factory&gt;
+&lt;xmlcatalog&gt;
+&lt;entity
+                publicId="docbook.xsl"
+                location="${docbook.dir}${file.separator}fo${file.separator}docbook.xsl"/&gt;
+&lt;/xmlcatalog&gt;
+&lt;param name="generate.toc" expression="book toc" /&gt;
+&lt;param name="show.comments" expression="0" /&gt;
+&lt;param name="header.rule" expression="1" /&gt;
+&lt;param name="admon.graphics.extension" expression=".gif"/&gt;
+&lt;param name="admon.textlabel" expression="0"/&gt;
+&lt;param name="admon.graphics" expression="1"/&gt;
+&lt;/xslt&gt;
+&lt;docbook2pdf
+        source="${dest.dir}${file.separator}${documenat.name}.fo"
+        target="${dest.dir}${file.separator}${documenat.name}.pdf"/&gt;
+&lt;delete file="${dest.dir}${file.separator}${documenat.name}.fo" /&gt;
+&lt;/target&gt;
+</code></pre>
+
+<p>You can now control the output by supplying different stylesheets. DocBook XSLT comes with a variety of stylesheets for articles, books and online help systems. You can now easily create printed documentation AND online help from one source. DocBook XSLT supports EclipseHelp, JavaHelp, HTMLHelp (the Windows Help System) and even man pages!</p>
+
+<p>So, next time you need to write documentation for a project you&#8217;re working on, don&#8217;t let it get you down. Instead, set up a trusty WikiText / DocBook toolchain and write down that documentation in Wiki markup in no time!</p>
+
+<p>The whole build script and the sample document are available for [drain file 17 url download] for free. If you need help setting up a tool chain or want to book me for consulting, drop me a line (peter dot friese at itemis dot com).</p>
+
+<p>Many thanks to <a href="http://greensopinion.blogspot.com/">David Green</a> and <a href="http://steffenpingel.de/">Steffen Pingel</a> of WikiText and Mylyn who tirelessly fixed bugs I found, applied patches and created EA builds!</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Peter</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-05T21:18:47+02:00" pubdate data-updated="true">May 5<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/eclipse/'>Eclipse</a>, <a class='category' href='/blog/categories/eclipse-faq/'>Eclipse FAQ</a>, <a class='category' href='/blog/categories/publishing/'>Publishing</a>, <a class='category' href='/blog/categories/stuff-that-rocks/'>Stuff that rocks</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://peterfriese.github.io/advanced-wikitext/" data-via="peterfriese" data-counturl="http://peterfriese.github.io/advanced-wikitext/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/getting-started-with-wikitext/" title="Previous Post: Getting started with WikiText">&laquo; Getting started with WikiText</a>
+      
+      
+        <a class="basic-alignment right articlenav" href="/mac-in-black-skitch/" title="Next Post: Mac in Black: Taking Screenshots with Skitch">Mac in Black: Taking Screenshots with Skitch &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
+      </li>
+    
+      <li class="post">
+        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tired-of-typing-speak-to-your-computer/">Tired of Typing? Speak to Your Computer!</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recommended reading...</h1>
+  <ul id="recommended_reading">
+  	
+      
+  	
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'peterfriese',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'peterfriese';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://peterfriese.github.io/advanced-wikitext/';
+        var disqus_url = 'http://peterfriese.github.io/advanced-wikitext/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

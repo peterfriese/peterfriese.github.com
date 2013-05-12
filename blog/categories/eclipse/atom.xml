@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Eclipse | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/eclipse/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
+    <link href="http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
+    <updated>2011-02-25T23:15:57+01:00</updated>
+    <id>http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
+    <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are! <!-- more -->This year, we're providing a rather impressive lineup of mobile apps for iPhone, iPod Touch, iPad (thanks to <a href="http://www.compeople.eu/blog/?p=786">Christian Campo who created a stand-alone iPad app</a>), BlackBerry (<a href="http://ekkes-apps.org/">Ekke is working on a updated version, AFAIK</a>), and all other smart phones that feature a browser.</p>
+
+<p>All apps allow you to browse the program, select your favorite talks and get to know the speakers (with headshots so you recognise them in the hallways). We also have included maps of the convention center as well as Santa Clara.</p>
+
+<p>For a first glimpse, watch our video:</p>
+
+<p>As of today, both iPhone and Android users can download the apps from the Apple App Store respectively the Android Marketplace. Here are the links:</p>
+
+<ol>
+<li><p><a href="http://bit.ly/econ2011iphone">EclipseCon 2011 iPhone App</a></p></li>
+<li><p><a href="http://bit.ly/econ2011android">EclipseCon 2011 Android App</a></p></li>
+</ol>
+
+
+<p>If you don't own an iPhone or Android, you can always use the HTML-only version of the conference program available at <a href="http://bit.ly/econ2011html">http://bit.ly/econ2011html</a>.</p>
+
+<p>The iPad and BlackBerry apps will be available soon, so stay tuned!</p>
+
+<p>By the way, if <strong>you</strong> run a conference and are interested in having an app like this, <a href="http://mobile.itemis.com">get in touch with us</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Use the Gyroscope of Your iPhone in a Mobile Web App]]></title>
+    <link href="http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
+    <updated>2010-11-25T13:00:43+01:00</updated>
+    <id>http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
+    <content type="html"><![CDATA[<p>This week's release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they're neither directly visible in the iOS UI nor are they mentioned in Apple's official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone's gyroscope. Read on to see it in action and learn how to use it.<!-- more -->Your iPhone has a number of sensors, some of which are rather essential for the phone's operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they're certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
+
+<p>Until now, web developers didn't have access to the accelerometer sensor and the gyroscope sensor. With this week's release of iOS 4.2, this has changed and we can now use <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceMotionEventClassRef/DeviceMotionEvent/DeviceMotionEvent.html">DeviceMotionEvent</a> and <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">DeviceOrientationEvent</a> to determine the acceleration and orientation data of the phone.</p>
+
+<p>Let's first determine whether the current browser supports device orientation sensing:</p>
+
+<pre><code>if (window.DeviceMotionEvent==undefined) {
+}
+</code></pre>
+
+<p>We can then read the sensor data by registering the respective callbacks. Here's how you read the accelerometer's data:</p>
+
+<pre><code>window.ondevicemotion = function(event) {
+  ax = event.accelerationIncludingGravity.x
+  ay = event.accelerationIncludingGravity.y
+  az = event.accelerationIncludingGravity.z
+  rotation = event.rotationRate;
+  if (rotation != null) {
+    arAlpha = Math.round(rotation.alpha);
+    arBeta = Math.round(rotation.beta);
+    arGamma = Math.round(rotation.gamma);
+  }
+}
+</code></pre>
+
+<p>The gyroscope's data can be read like this:</p>
+
+<pre><code>window.ondeviceorientation = function(event) {
+  alpha = Math.round(event.alpha);
+  beta = Math.round(event.beta);
+  gamma = Math.round(event.gamma);
+}               
+</code></pre>
+
+<p>I've put together a little demo that uses the sensor data to color some boxes on the phone's screen. Here's a short video showing it in action:</p>
+
+<p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
+
+<p>(image of Gyroscope by stop that pigeon! taken from http://www.flickr.com/photos/25312309@N05/2651042796/)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Eclipse DemoCamp Hamburg November 2010]]></title>
+    <link href="http://peterfriese.github.io/eclipse-democamp-hamburg-november-2010/"/>
+    <updated>2010-11-15T08:28:17+01:00</updated>
+    <id>http://peterfriese.github.io/eclipse-democamp-hamburg-november-2010</id>
+    <content type="html"><![CDATA[<p>Last Friday was a happy day for Java developers in Hamburg: not only did Apple and Oracle announce their plan to continue development of Java on the Mac OSX platform, but we also had the pleasure to host this fall's instance of Eclipse DemoCamp Hamburg in a bookstore!</p>
+
+<!-- more -->
+
+
+<p>We had a nice lineup of four speakers - unfortunately not all of them were able to attend due to a cold, but we were lucky enough to find one additional speaker - thanks Jan!</p>
+
+<p>After a casual meet-and-greet with <a href="http://www.fritz-kola.de/">Fritz Kola</a> and Pretzels, <a href="http://twitter.com/#!/robilad">Dalibor Topic</a> opened the official part of the evening with an overview of what's coming up in JDK7 and JDK8. Here's a list of things that sound quite interesting:</p>
+
+<ul>
+<li><p>Support for dynamically-typed languages (InvokeDynamic) (<a href="http://openjdk.java.net/projects/mlvm">project page</a>)</p></li>
+<li><p>Small language enhancements (Project Coin) (<a href="http://openjdk.java.net/projects/coin/">project page</a>)</p></li>
+<li><p>An even newer NIO (<a href="http://openjdk.java.net/projects/nio/">project page</a>)</p></li>
+</ul>
+
+
+<p>The good news of the day of course was a <a href="http://blogs.oracle.com/henrik/2010/11/oracle_and_apple_announce_openjdk_project_for_osx.html">press release announcing OpenJDK for Mac OSX</a>. Nevertheless, <a href="http://twitter.com/#!/robilad/status/3129373515321344">Dalibor demoed a freshly built OpenJDK 7 BSD port</a> on his MacBook.</p>
+
+<p><a href="http://www.peterfriese.de/wp-content/IMG_0792.jpg"><img src="http://www.peterfriese.de/wp-content/IMG_0792.jpg" alt="" /></a></p>
+
+<p>After a short break, it was <a href="http://eclipsesource.com/blogs/author/rsternberg/">Ralf Sternberg's turn</a> to give an overview of <a href="http://www.eclipse.org/rap/">RAP</a> and explain what Single Sourcing is. With the help of RAP, it is rather easy to bring Eclipse RCP applications to the web. Of course, you'll have to pay attention to a few things, as Ralf pointed out: usually, RCP applications are single-user apps, whereas web applications are inherently multi-user enabled. Fortunately, RAP comes with a few utilities that cater for this fact.</p>
+
+<p>One thing I was delighted to learn: not only do RAP applications run on the iPad, but also do they support drawing using the SWT API, as you can see in the following video:</p>
+
+<p>In the last sessions, <a href="http://www.eclipse.org/Xtext/">Xtext</a> committer <a href="http://koehnlein.blogspot.com/">Jan Köhnlein</a> showed us some of the things coming up in Xtext 2.0. Being text-addicted, Jan refrained from using slides and used the IDE instead to deliver his talk:</p>
+
+<p><img src="http://www.peterfriese.de/wp-content/IMG_0804.jpg" alt="Jan Köhnlein talking about Xbase and Xtext" /></p>
+
+<p>Jan showed us how Xbase (no, not <a href="http://en.wikipedia.org/wiki/Xbase">xBase</a>) can be used to develop DSLs (and even GPLs) that not only describe structural features but also behavior. He also demoed Xdoc, a newly invented documentation language, and the fancy new Xtext syntax view (featuring <a href="http://en.wikipedia.org/wiki/Syntax_diagram">railroad diagrams</a>).</p>
+
+<p>After the demoes, we had some time for chats and impromptu hack sessions. Given the event took place in a book store (many thanks to Lehmanns for having us!), you could also browse and buy books.</p>
+
+<p>Thanks to the fact we only had about 40 attendees, there were plenty of chances for networking which people really seemed to enjoy.</p>
+
+<p>I'd like to thank everybody who attended the DemoCamp or gave a demo! <a href="http://twitter.com/#!/peterfriese">Follow me on twitter</a> to be informed ahead of time for the next DemoCamp!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[Updated] Use your iPhone, Android, or BlackBerry to build Your Eclipse Summit Europe 2010]]></title>
+    <link href="http://peterfriese.github.io/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/"/>
+    <updated>2010-11-01T12:45:02+01:00</updated>
+    <id>http://peterfriese.github.io/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010</id>
+    <content type="html"><![CDATA[<p>As I'm writing this, Eclipse Summit Europe 2010 is merely hours away and everyone is getting excited to get there and meet Eclipse family.</p>
+
+<p>I think the program committee have done a great job at putting together an exciting conference program with lots of technical sessions, interactive tutorials and inspiring keynotes.</p>
+
+<p>As a special treat for smart phone users, we're offering a conference schedule app for iPhone, Android and all other smart phones that come with a browser. <!-- more -->Besides reviewing the <strong>conference schedule</strong> and getting to know the <strong>speakers</strong> you can use the apps to create your very <strong>own personal conference schedule</strong>. Usually, conference attendees will use the printed conference program to mark their favorite talks - and then leave their personalized copy of the program in their hotel room or elsewhere in the conference halls!</p>
+
+<p>This will probably not happen with the smart phone app, although I can recall somebody lost their iPhone at this year's EclipseCon...</p>
+
+<p>Without further ado, here's a preview of the iPhone app in action:</p>
+
+<p>You can download the <strong>iPhone app</strong> from the App Store. It is available world-wide and we already have a few downloads from Singapore, Korea and India! For your convenience, <a href="http://bit.ly/ese_app_intl">here's the link to the app</a>.</p>
+
+<p>We also prepared a version for <strong>Android</strong> users. Here's how it will look like on your Android device:
+<img src="http://www.peterfriese.de/wp-content/ESE_Android.png" alt="ESE_Android.png" /></p>
+
+<p>Head over to the Android Marketplace and search for "eclipse summit", or use your barcode scanner:</p>
+
+<p><img src="http://fs01.androidpit.info/aqr/x16/1078516-1288452914800.png" alt="" /></p>
+
+<p>The <strong>mobile web app</strong> <del>will be available from the Wifi landing page at the conference venue</del> is available via the following URL: <a href="http://bit.ly/ese_app_mobile2">http://bit.ly/ese_app_mobile2/</a>.</p>
+
+<p><img src="http://www.peterfriese.de/wp-content/mobileweb3.png" alt="mobileweb.png" /></p>
+
+<p><del>Rumor has it even BlackBerry users will get a native app.</del> <a href="http://ekkescorner.wordpress.com/2010/11/02/ese-app-for-blackberry/">Ekke</a> has created a native app for BlackBerry.</p>
+
+<p>Using these applications, you'll be able to put together <strong>your Eclipse Summit Europe 2010</strong> in no time. Enjoy!</p>
+
+<p>The iPhone, Android and mobile web apps have been built by a dedicated team of software engineers at itemis I have the pleasure to work with. If you want to learn how we build applications like these, attend our sessions:</p>
+
+<ul>
+<li><p>Tuesday, 14:00 - <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1940">Mobile Development Symposium</a></p></li>
+<li><p>Thursday 10:30 - <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1733">Models To Go: How We Built a DSL for Mobile Apps With Tools From the Eclipse</a></p></li>
+</ul>
+
+
+<p>Also, be sure to drop by the new website for our mobile business: <a href="http://mobile.itemis.com">http://mobile.itemis.com</a> and follow us on Twitter: <a href="http://twitter.com/itemismobile">@itemismobile</a>.</p>
+
+<p>Enjoy <del>the</del> your conference!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
+    <link href="http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again/"/>
+    <updated>2010-09-19T22:15:30+02:00</updated>
+    <id>http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again</id>
+    <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
+
+<!-- more -->
+
+
+<p>In April 2010, together with the release of iOS 4, Apple changed the terms of the iOS Developer Program License in a way which basically prohibited creating software for iOS using languages other than Objective-C, C, C++ or JavaScript:</p>
+
+<blockquote><p>3.3.1 — Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs. Applications must be originally written in Objective-C, C, C++, or JavaScript as executed by the iPhone OS WebKit engine, and only code written in C, C++, and Objective-C may compile and directly link against the Documented APIs (e.g., Applications that link to Documented APIs through an intermediary translation or compatibility layer or tool are prohibited).</p></blockquote>
+
+<p>Back then, pretty much everyone was sure this update to section 3.3.1 of the license really was just one strike in <a href="http://www.apple.com/hotnews/thoughts-on-flash/">Apple's crusade against Flash</a>. Adobe had been working on a tool called <a href="http://labs.adobe.com/technologies/packagerforiphone/">Flash Packager</a>, which allows Flash designers to cross-compile their applications for the iPhone. While this must have been bad news for Adobe (they effectively needed to write off development costs for the entire development team working on Flash Packager), it posed a serious threat to companies whose business model relied upon creating iPhone apps using tools and languages other than Xcode and Objective-C. The future for Novell's <a href="http://monotouch.net/">Mono Touch</a>, <a href="http://www.appcelerator.com/">Appcelerator Titanium</a>, <a href="http://www.phonegap.com/">PhoneGap</a> and <a href="http://www.xmlvm.org/iphone/">XMLVM/iPhone</a> didn't look very bright.</p>
+
+<p>No need to say there was quite an uproar and people came up with all sorts of creative interpretations of the terms stated in section 3.3.1 to avoid being rejected from the App Store.</p>
+
+<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn't come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a> does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
+
+<blockquote><p>3.3.1 Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs.</p></blockquote>
+
+<p>You might think that a small paragraph in a license agreement doesn't mean that much, but I think the new section will fundamentally change the way we write software for the iPhone in the next few years. Let me explain:</p>
+
+<p>The new section 3.3.1 means you may write iOS software using any language you like. Yes, ANY language - there is no if and when. This means you will not only be able to write iOS software in Objective-C (which is a great language as soon as you come to grips with it), but you will be able to use language like Java, Scala, Haskell, Ruby, etc. Some people are <a href="http://twitter.com/mattgemmell/status/24014145904">even dreaming of using REALBasic</a> for iOS apps.</p>
+
+<p>Vendors of tools such as Mono Touch, Titanium and PhoneGap will be glad, as their business models now have a solid foundation (well, Apple may of course change the license again but I doubt they'll ever restrict the usage of other languages again). Given the <a href="http://labs.adobe.com/technologies/packagerforiphone/">announcement on Adobe Labs</a>, I guess we will very soon see Adobe release their highly acclaimed Flash Packager for iPhone (I don't think people will seriously use this tool to create data-driven applications, but it's probably a great tool to develop games. If you're a Flash designer / developer, that is).</p>
+
+<p>For the development community at large, this is great news: freedom to choose the language that fits your needs best has always been a cornerstone of successfully creating great software. People have expressed their desire to use languages such as Haskell and Ruby to build iPhone apps. Rumor has it Apple engineers have even been working on a version of MacRuby for iPhone - there you go.</p>
+
+<p>At <a href="http://www.itemis.com">itemis</a>, we're very much into programming languages. We're even building our own language development toolkit to support development of programming languages - <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we've mainly been using it to create languages for enterprise and web applications. We're also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself - isn't that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We're not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we're focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
+
+<p>If you're interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
+
+<p>In a few years, I guess, Objective-C will be just one language among many others you can choose from if you want to build iOS applications.</p>
+
+<p>But why would you want to write iOS applications in languages other than Objective-C? There are many reasons:</p>
+
+<ul>
+<li><p>Use the language you feel most comfortable with. Maybe Objective-C's square brackets look scary to you?</p></li>
+<li><p>Use the language you have most experience with. Maybe you're a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator "because we've got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C"!</p></li>
+<li><p>use the language you use for developing your backend system. So you've got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</p></li>
+<li><p>Maybe you're a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</p></li>
+</ul>
+
+
+<p>It all boils down to being more productive and ensuring better sustainability. Using the right tool for the job helps you to achieve a faster time to market. If you're able to use the same language on the frontend and the backend, this will help you to secure your investment in this technology.</p>
+
+<p>Please note that I'm not saying you should by all means write your frontend and your backend using the same technology and language. The first and foremost question you need to answer is, "what's the right tool for this job". Being able to make a real choice will help you to give a better answer to this question.</p>
+]]></content>
+  </entry>
+  
+</feed>

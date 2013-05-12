@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Do Androids Dream of Electric Sheep? - Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://peterfriese.github.io/do-androids-dream-of-electric-sheep/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+  
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Software Architect / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:peterfriese.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Do Androids Dream of Electric Sheep?</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-22T01:33:48+01:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+    
+  <p>
+    <img class="left" src="/images/2013-03-22-do-androids-dream-of-electric-sheep/DoAndroidsTeaser_150x150">
+  </p>
+  
+  <p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
+
+<!-- more -->
+
+
+<p>In all of these movies, humans can directly communicate with computers using voice commands (“Tea. Earl Grey, hot”) or more elaborate sentences and the computers will talk back to humans as a result. In some of the movies, the computer is a non-bodily entity (like the ship’s main computer in Star Trek), but sometimes it even is humanoid (like Cmdr. Data in <em>Star Trek</em> or the Replicants in <em>Blade Runner</em>).</p>
+
+<p>In a Pecha Kucha presentation I recently delivered at the OOP conference in Munich, I took on this theme and started my talk with a imaginative conversation between two computer programs that most of you might know very well: Eliza and Siri.</p>
+
+<div class="embed-video-container"><iframe src="http://player.vimeo.com/video/61467056 "></iframe></div>
+
+
+<p>In this Pecha Kucha session, Siri and Eliza join me live on stage to explain why we do not (yet) use the potential of our smart phones.</p>
+
+<p>Much has been said about Siri, so let’s focus on Eliza.</p>
+
+<p>Eliza started as an experiment in 1964, when Joseph Weizenbaum, then professor of computer sciences at the MIT, wrote it as an early attempt to research natural language communication between man and computer (see his ACM paper “ELIZA - A Computer Program For the Study of Natural Language Communication Between Man And Machine”). At its heart, Eliza is program that reacts to specific key words in sentences entered by a human user and will then respond to those keywords according to a predefined script. It’s the script that basically makes up the “personality” of Eliza, the most famous one being <em>Doctor</em>, simulating a rogerian psychoanalyst.</p>
+
+<p>(Weizenbaum was rather surprised to see how people thought that Eliza had a real personality and a capacity for empathy. In reaction, he started to raise uncomfortable questions about our dependence on computers.)</p>
+
+<p>In my Pecha Kucha, I went on to tell my audience to make better use of the capabilities of our smart phones. Most people have stopped thinking about it, but after all, we’re carrying a super computer in our pockets.</p>
+
+<p>So to set a good example, I decided to create <a href="http://elizaapp.com">ElizaApp</a> - an app that can listen to what you say and answer in spoken language. This is going to be a great project, because I’ll show several very interesting things:</p>
+
+<ol>
+<li><p>How to analyse spoken language on a mobile device</p></li>
+<li><p>How to synthesize speech on mobile devices</p></li>
+<li><p>How to integrate a JavaScript engine in your mobile app</p></li>
+<li><p>How to create a Siri-look-alike chat UI</p></li>
+</ol>
+
+
+<p>Over the course of the next few weeks, I will write several posts covering these topics. If there is anything that interests you in particular, feel free to add a comment.</p>
+
+<p>Of course, in the end Eliza will be available on the App Store. In the mean time, be sure to check out <a href="http://elizaapp.com">ElizaApp</a> and register for early access!</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Peter</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-22T01:33:48+01:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/talks/'>Talks</a>, <a class='category' href='/blog/categories/ios/'>iOS</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://peterfriese.github.io/do-androids-dream-of-electric-sheep/" data-via="peterfriese" data-counturl="http://peterfriese.github.io/do-androids-dream-of-electric-sheep/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/writing-xtext-scope-providers-with-xtend/" title="Previous Post: Writing Xtext Scope Providers with Xtend">&laquo; Writing Xtext Scope Providers with Xtend</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
+      </li>
+    
+      <li class="post">
+        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tired-of-typing-speak-to-your-computer/">Tired of Typing? Speak to Your Computer!</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recommended reading...</h1>
+  <ul id="recommended_reading">
+  	
+  		
+    
+    
+      <li class="recommended_reading">
+      <p> 
+        <a href="http://www.amazon.com/The-Ultimate-Hitchhikers-Guide-Galaxy/dp/0345453743?SubscriptionId=AKIAINKDNB2I7Q5VOZUA&tag=peterfriese-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0345453743"><img src="http://ecx.images-amazon.com/images/I/51d5tk7z3qL._SL160_.jpg" /></a>
+      </p>
+      <p>
+        <a href="http://www.amazon.com/The-Ultimate-Hitchhikers-Guide-Galaxy/dp/0345453743?SubscriptionId=AKIAINKDNB2I7Q5VOZUA&tag=peterfriese-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0345453743">The Ultimate Hitchhiker's Guide to the Galaxy</a>
+        by Douglas Adams
+      </p>
+      </li>
+    
+      <li class="recommended_reading">
+      <p> 
+        <a href="http://www.amazon.com/Computer-Power-Human-Reason-Calculation/dp/0716704633?SubscriptionId=AKIAINKDNB2I7Q5VOZUA&tag=peterfriese-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0716704633"><img src="http://ecx.images-amazon.com/images/I/71J44E50C8L._SL160_.gif" /></a>
+      </p>
+      <p>
+        <a href="http://www.amazon.com/Computer-Power-Human-Reason-Calculation/dp/0716704633?SubscriptionId=AKIAINKDNB2I7Q5VOZUA&tag=peterfriese-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0716704633">Computer Power and Human Reason: From Judgement to Calculation</a>
+        by Joseph Weizenbaum
+      </p>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'peterfriese',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'peterfriese';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://peterfriese.github.io/do-androids-dream-of-electric-sheep/';
+        var disqus_url = 'http://peterfriese.github.io/do-androids-dream-of-electric-sheep/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

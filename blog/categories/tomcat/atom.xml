@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tomcat | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/tomcat/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Installing Tomcat]]></title>
+    <link href="http://peterfriese.github.io/installing-tomcat/"/>
+    <updated>2006-04-19T10:53:07+02:00</updated>
+    <id>http://peterfriese.github.io/installing-tomcat</id>
+    <content type="html"><![CDATA[<p><a href="http://www.meritonlinesystems.com/docs/apache_tomcat_redhat.html">Here is</a> a nice how-to on how to install Tomcat on Linux. Includes instructions on how to run Tomcat in the context of a special user and how to write shell scripts for (re)starting Tomcat.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Installing Tomcat 5.5.12 (and enabling the Admin console)]]></title>
+    <link href="http://peterfriese.github.io/installing-tomcat-5512-and-enabling-the-admin-console/"/>
+    <updated>2005-10-17T16:18:30+02:00</updated>
+    <id>http://peterfriese.github.io/installing-tomcat-5512-and-enabling-the-admin-console</id>
+    <content type="html"><![CDATA[<p>Setting up <a href="http://tomcat.apache.org/">Tomcat</a> seems to be quite easy: just unpack the core ZIP file, and off you go! But as soon as you want to manage the server, you realize that Tomcat 5.5.x is missing the admin console. Setting up the admin console is easy as well, but is not well documented. So here we go:</p>
+
+<ul>
+<li><p>Get the <a href="http://tomcat.apache.org/download-55.cgi">latest binary builds</a> (apache-tomcat-5.5.12.zip, apache-tomcat-5.5.12-admin.zip and (if you're running on JDK 1.4) apache-tomcat-5.5.12-compat.zip)</p></li>
+<li><pre><code>Unzip the files into the same directory, making sure you obey this order:
+</code></pre>
+
+<ol>
+<li><p>apache-tomcat-5.5.12.zip</p></li>
+<li><p>apache-tomcat-5.5.12-compat.zip</p></li>
+<li><p>apache-tomcat-5.5.12-admin.zip</p></li>
+</ol>
+</li>
+<li><pre><code>Edit the file _$catalina_home/conf/tomcat-users.xml_, making sure it looks like this:
+</code></pre>
+
+<p><code>
+&lt; ?xml version='1.0' encoding='utf-8'?&gt;
+&lt;tomcat -users&gt;
+&lt;role rolename="tomcat"/&gt;
+&lt;role rolename="role1"/&gt;
+&lt;role rolename="admin"/&gt;
+&lt;role rolename="manager" /&gt;
+&lt;user username="tomcat" password="tomcat" roles="tomcat"/&gt;
+&lt;user rusername="admin" password="admin" roles="tomcat,manager,admin" /&gt;
+&lt;user username="both" password="tomcat" roles="tomcat,role1"/&gt;
+&lt;user username="role1" password="tomcat" roles="role1"/&gt;
+&lt;/tomcat&gt;
+</code></p></li>
+</ul>
+
+
+<p>This should do the trick.</p>
+]]></content>
+  </entry>
+  
+</feed>

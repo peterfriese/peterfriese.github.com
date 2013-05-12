@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Computer | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/computer/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Safari to view the Eclipse Help System (when Safari is not your system default browser)]]></title>
+    <link href="http://peterfriese.github.io/using-safari-to-view-the-eclipse-help-system-when-safari-is-not-your-system-default-browser/"/>
+    <updated>2008-12-18T03:29:15+01:00</updated>
+    <id>http://peterfriese.github.io/using-safari-to-view-the-eclipse-help-system-when-safari-is-not-your-system-default-browser</id>
+    <content type="html"><![CDATA[<p>I belong to the minority of people who love the <a href="http://www.opera.com">Opera Browser</a>. You've got to try it, it has got all sorts of<a href="http://www.opera.com/browser/"> nice features</a> - e.g. you can easily create keyword-driven search shortcuts or browse the web using mouse gestures. But I digress...</p>
+
+<p>Of course, I configured Opera to be the default browser on my Mac. Which is nice for surfing the web. However, I do not want the Eclipse Help system to appear in Opera - mostly because I tend to have way too many tabs open anyway. So, I'd like to open Eclipse Help in Safari. Here's what you need to do to achieve this:</p>
+
+<ol>
+<li><p>In Eclipse, open the preference dialog</p></li>
+<li><p>Select General -> Web Browser</p></li>
+<li><p>Click New... to add a new external web browser</p></li>
+<li><p>In the dialog box Edit External Web Browser, fill in the following details:
+[</p></li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3213/3117177400_bc500aeb6e.jpg" alt="Edit External Web Browser" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3117177400)</p>
+
+<ol>
+<li>Click Ok, then Finish</li>
+</ol>
+
+
+<p>Obviously, this only works on Mac OS.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Software Engineering Radio: Eelco Visser on Parsing]]></title>
+    <link href="http://peterfriese.github.io/software-engineering-radio-eelco-visser-on-parsing/"/>
+    <updated>2008-12-02T14:57:15+01:00</updated>
+    <id>http://peterfriese.github.io/software-engineering-radio-eelco-visser-on-parsing</id>
+    <content type="html"><![CDATA[<p>In the <a href="http://www.se-radio.net/podcast/2008-11/episode-118-eelco-visser-parsers">current SE-Radio episode</a>, <a href="http://tratt.net/laurie/">Laurence Tratt</a> interviews <a href="http://eelcovisser.org/">Eelco Visser</a> on <a href="http://en.wikipedia.org/wiki/Parsing">Parsing</a>.</p>
+
+<p>If you're interested in <a href="http://en.wikipedia.org/wiki/Domain-specific_language">Domain Specific Languages (DSLs)</a>, you should take some time to listen to this episode. Especially the part on <a href="http://en.wikipedia.org/wiki/Scannerless_parsing">scanner-less parsing</a> is very interesting, as it allows to mingle code from different languages in one single file.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The iPhone has an innovative user interface. The iPhone has an innovative user interface?!]]></title>
+    <link href="http://peterfriese.github.io/the-iphone-has-an-innovative-user-interface-the-iphone-has-an-innovatve-user-interface/"/>
+    <updated>2008-02-23T01:02:25+01:00</updated>
+    <id>http://peterfriese.github.io/the-iphone-has-an-innovative-user-interface-the-iphone-has-an-innovatve-user-interface</id>
+    <content type="html"><![CDATA[<p>My colleague <a href="https://www.xing.com/profile/Wolfgang_Frank2">Wolfgang Frank</a> <a href="http://apps.itemis.de/roller/wfrank/entry/early_days_of_the_iphone">recently blogged about  innovation</a> at Apple. His post contained a link to a video of <a href="http://blogs.sun.com/jag/">James Gosling</a> demonstrating the Star7 PDA:</p>
+
+<p>The concepts of the GUI seem to be quite familiar to those who know the iPhone, don't they? Have a look at this:</p>
+
+<blockquote><p>"This is the day I've been looking for for two and half years"</p></blockquote>
+
+<p>If you come to think of it, the Star7 PDA prototype development took place in the early 90's. Steve Jobs' introduced the iPhone in his keynote speech in 2007. "Two and a half years..." Did they really invent the iPhone from scratch? If so, Apple seiously suffers from the <a href="http://en.wikipedia.org/wiki/Not_invented_here">Not Invented Here Syndrome</a>...</p>
+
+<p>There is an <a href="http://blogs.sun.com/jag/entry/the_green_ui">interesting discussion regarding whether Apple invented all those concepts</a> on their own. One commenter writes:</p>
+
+<blockquote><p>Do anybody think Sun is able to come up with anything like iPhone? I don't think so look at the Swing UI. after many years and many new L&amp;F wots the difference? There is not a UI that can rival the default UI of the OS X nor Windows. Face it.....Sun is not know for designing.</p></blockquote>
+
+<p>Oh, and we must not forget Google Android:</p>
+
+<p>Funny how all those things resemble each other so much...The bottom line is that among the three devices, the Star7 is the only really innovative one. It had been way ahead of it's time. What a pity Sun didn't make more of it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Joining itemis]]></title>
+    <link href="http://peterfriese.github.io/joining-itemis/"/>
+    <updated>2008-02-19T12:33:20+01:00</updated>
+    <id>http://peterfriese.github.io/joining-itemis</id>
+    <content type="html"><![CDATA[<p>Effective February 1st, 2008, I left my <a href="http://www.gentleware.com/">former employer</a> and <a href="https://www.xing.com/profile/Peter_Friese">joined</a> <a href="http://www.itemis.de/">itemis</a>.</p>
+
+<p>There are many reasons for this step, and I don't want to go into too much detail, so here are the two most important ones:</p>
+
+<p>First of all, I had to do a lot of travel in my recent position at Gentleware. Actually, I like traveling quite much - as you get around interesting places and meet  a lot of interesting people - especially if you are a software architect (which is a synonym for "information hub" :-) ). However, with three small children, this meant a lot of hassle and tears. Wrong timing, one might argue. Maybe I'll hit the road again when the kids are older. The new position does not require that much traveling, so I'll be at home most evenings which is great for my family (and also for me).</p>
+
+<p>As you may know, <a href="http://www.itemis.de">itemis</a> is quite committed to Model Driven Software Development (MDSD). The majority of projects they work on rely on MDA/MDSD technology. Not only is itemis a user of model driven technology, but also do they heavily contribute to open source projects in this area. Itemis employees are committers on projects like <a href="http://ww.openarchitectureware.org">openArchitectureWare</a>, <a href="http://www.eclipse.org/modeling/">Eclipse Modeling Project</a> and Fornax. Since the company management has identified "innovation management" as one of their top duties, they consequently launched a <a href="http://www.itemis.de/presse/5287/neue-niederlassung-in-kiel.html">new branch office in Kiel</a> with a group of employees who are dedicated to working on open source modeling tools.  As working on open source projects is something I really enjoy and since I believe model driven development is a very hot topic, I decided to switch companies and join this team.</p>
+
+<p>I learned a lot at Gentleware and am very grateful for the experiences I was able to make there.</p>
+
+<p>Now, I am looking forward to creating the upcoming version 5.0 of <a href="http://ww.openarchitectureware.org">openArchitectureWare</a> together with my colleagues (<a href="https://www.xing.com/profile/Sven_Efftinge">Sven Efftinge</a>, <a href="https://www.xing.com/profile/Jan_Koehnlein">Jan Köhnlein</a>, <a href="https://www.xing.com/profile/Dennis_Huebner2">Dennis Hübner</a>, <a href="https://www.xing.com/profile/Torsten_Krohn">Torsten Krohn</a>) here in <a href="http://www.kitz-kiel.de/">Kiel</a>. Expect to hear exciting things in the following weeks and months. We started a team blog you might want to subscribe to: <a href="http://apps.itemis.de/roller/itemislabkiel">http://apps.itemis.de/roller/itemislabkiel </a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OOP 2007]]></title>
+    <link href="http://peterfriese.github.io/oop-2007/"/>
+    <updated>2007-01-23T06:11:14+01:00</updated>
+    <id>http://peterfriese.github.io/oop-2007</id>
+    <content type="html"><![CDATA[<p>I am on my way to <a href="http://www.oopconference.com">OOP 2007 conference in Munich</a>. Today at 14:00, I'll be giving <a href="http://www.sigs-datacom.de/sd/kongresse/oop_2007/program.php?cat=session&amp;ID=13">a talk on Open Source MDA</a> together with Stefan Reichert of  <a href="http://www.lhsystems.com">Lufthansa Systems</a>. If you happen to be there, drop by and say hello. You can also meet me at the <a href="http://www.gentleware.com">Gentleware</a> booth in the exhibition area.</p>
+]]></content>
+  </entry>
+  
+</feed>

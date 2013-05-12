@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Eclipse FAQ | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/eclipse-faq/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Following Eclipse Milestones]]></title>
+    <link href="http://peterfriese.github.io/following-eclipse-milestones/"/>
+    <updated>2009-06-09T01:46:24+02:00</updated>
+    <id>http://peterfriese.github.io/following-eclipse-milestones</id>
+    <content type="html"><![CDATA[<p>With the Galileo Release coming up, you might find yourself having a hard time updating to the latest milestones AND keeping your favorite plug-ins up-to-date.</p>
+
+<p>Did you know that you can migrate your additional plug-ins from one Eclipse install to another one? This can be a huge time-saver, especially for people who like to live on the bleeding edge.</p>
+
+<p>Here's how:</p>
+
+<ol>
+<li><p>Install a fresh copy of Eclipse. Let's assume you install Eclipse 3.5 RC4 Cocoa 64bit (you're feeling lucky)</p></li>
+<li><p>Let's further assume you've got an existing install of Eclipse 3.5 RC3 Cocoa 32bit with some additional plug-ins, like <a href="http://findbugs.sourceforge.net/">FindBugs</a>, <a href="http://www.windowbuilderpro.com/">WindowBuilder Pro</a>, etc.</p></li>
+<li><p>After installing, start your newly installed instance of Eclipse</p></li>
+<li><p>Select <em>Help -> Install New Software...</em></p></li>
+<li><p>In the <em>Install</em> dialog, click the <em>Add...</em> button to add a new update site: [</p></li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3343/3608873664_f25891cb7f.jpg" alt="Eclipse Install Dialog" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3608873664)</p>
+
+<ol>
+<li>In the next dialog, click on <em>Local...</em> to add a local update site:[</li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3409/3608070929_32df5d32cd.jpg" alt="Eclipse: Add Site" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3608070929)</p>
+
+<ol>
+<li><p>using the file chooser, browse to <em><path_to_your_OLD_eclipse_instance>/eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/SDKProfile.profile/</em> and click <em>Choose</em> to select that directory.</p></li>
+<li><p>Click <em>OK</em> to add the update site:[</p></li>
+</ol>
+
+
+<p><img src="http://farm3.static.flickr.com/2434/3608904194_5b6c4de3be.jpg" alt="Eclipse: Add Local Update Site" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3608904194)</p>
+
+<ol>
+<li>The <em>Install</em> dialog will now list all plug-ins installed in the old location (i.e. your old Eclipse instance), clearly highlighting the ones that are not already installed in the new instance:[</li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3562/3608920684_9fc82065a9.jpg" alt="Eclipse: Install from existing Eclipse install" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3608920684)</p>
+
+<ol>
+<li><p>Check all features that you want to transport to the new location and continue the installation by clicking <em>Next></em>.</p></li>
+<li><p>After confirming the license terms and clicking <em>Finish</em>, Eclipse will install the selected features from the old location into the new location. After the obligatory workbench restart you're good to go._</p></li>
+</ol>
+
+
+<p>The only thing that I am wondering about is: why is there no first-class UI action (e.g. an import wizard) to do this?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Advanced WikiText]]></title>
+    <link href="http://peterfriese.github.io/advanced-wikitext/"/>
+    <updated>2009-05-05T21:18:47+02:00</updated>
+    <id>http://peterfriese.github.io/advanced-wikitext</id>
+    <content type="html"><![CDATA[<p>In my <a href="http://www.peterfriese.de/getting-started-with-wikitext/">recent posting</a>, I showed you how to use <a href="http://wiki.eclipse.org/Mylyn/Incubator/WikiText">Mylyn WikiText</a> to easily create documentation for your project.</p>
+
+<p>In this installment, we're going to look at four things:</p>
+
+<ol>
+<li><p>How to create PDFs</p></li>
+<li><p>How to automate your publishing process</p></li>
+<li><p>How to split your documents to facilitate team work</p></li>
+<li><p>How to use DocBook as an intermediary format to add even more flexibility to your publishing process</p></li>
+</ol>
+
+
+<p>Lots of stuff, so let's get started!</p>
+
+<h2>How to create PDFs</h2>
+
+<p>The WikiText documentation states you can create DocBook, HTML and Eclipse Help from Wiki markup. So, how to create PDFs? Well, there are many ways to create PDFs. If you just want to create PDFs inside the IDE, you can download the <a href="https://textile-j.dev.java.net/builds/wikitext/index.html">Textile-J PDF add-on</a> for WikiText. Textile-J is the predecessor of WikiText. The reason why the PDF output is not included in WikiText is that some of the required frameworks need to transform to PDF are not yet IP-approved (see bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=258349">258349</a> for more information).</p>
+
+<p>To install the Textile-J PDF add-on, proceed as follows:</p>
+
+<ol>
+<li><p>Make sure you have WikiText 1.1.0 or better installed</p></li>
+<li><p>Add the Textile-J update site to your Update Manager: <em>https://textile-j.dev.java.net/builds/wikitext/site</em></p></li>
+<li><p>Refresh the Update Manager. You should now see <em>Textile-J WikiText PDF</em> in the list of available features.</p></li>
+<li><p>Select <em>Textile-J WikiText PDF</em> and click <em>Install</em></p></li>
+<li><p>Restart Eclipse as requested</p></li>
+</ol>
+
+
+<p>You can now right-click on any wiki file (<em>*.textile</em>, <em>*.mediawiki</em>, <em>*.confluence</em>, <em>*.twiki</em>, <em>*.tracwiki</em> and select <em>Textile-J -> Generate PDF</em> from the context menu.</p>
+
+<h2>How to automate the process</h2>
+
+<p>If you want to create PDFs outside the IDE (e.g. on your CI server using ANT), you need to create a build file:</p>
+
+<pre><code>&lt;project name="how-to-use-wikitext" default="wikitext2pdf" basedir="."&gt;
+&lt;property name="wikitext.standalone" value="lib"/&gt;&lt;!-- path to wikitext standalone package --&gt;
+&lt;path id="wikitext.classpath"&gt;
+&lt;fileset dir="${wikitext.standalone}"&gt;
+&lt;include name="org.eclipse.mylyn.wikitext.*core*.jar"/&gt;
+&lt;include name="net.java.dev.textilej.wikitext.*core*.jar"/&gt;
+&lt;include name="net.java.dev.textilej.wikitext.*lib*.jar"/&gt;
+&lt;/fileset&gt;
+&lt;/path&gt;
+&lt;taskdef classpathref="wikitext.classpath"
+        resource="org/eclipse/mylyn/wikitext/core/util/anttask/tasks.properties" /&gt;
+&lt;taskdef classpathref="wikitext.classpath"
+        resource="net/java/dev/textilej/wikitext/pdf/core/util/anttask/tasks.properties" /&gt;
+&lt;target name="wikitext2pdf" description="Generate PDF from textile"&gt;
+&lt;wikitext-to-pdf markupLanguage="Textile"&gt;
+&lt;fileset dir="${basedir}"&gt;
+&lt;include name="documentation.textile"/&gt;
+&lt;/fileset&gt;
+&lt;/wikitext-to-pdf&gt;
+&lt;/target&gt;
+&lt;/project&gt;
+</code></pre>
+
+<p>By the way, there are ANT tasks for all other output formats as well, so you can automate the creation of Eclipse Help, HTML and DocBook, too:</p>
+
+<pre><code>&lt;wikitext-to-docbook markupLanguage="Textile"&gt;
+&lt;fileset dir="${basedir}"&gt;
+&lt;include name="documentation.textile"/&gt;
+&lt;/fileset&gt;
+&lt;/wikitext-to-docbook&gt;
+</code></pre>
+
+<h2>How to split your documents to facilitate team work</h2>
+
+<p>Now that you know how to transform Wiki markup to various output formats, you might wonder how to split your Wiki files into smaller chunks so the members of your team can work on them separately. This is something which is very easy with, say, LaTeX or DocBook because they both have the concept of importing other documents. In Wikis, there usually is no such thing as importing another Wiki page - you rather <em>link</em> to that other page. If you're writing a documentation, this isn't sufficient, however. You really need to be able to import document fragments.</p>
+
+<p>Instead of adding the notion of imports to WikiText, I decided to control the assembling of the master document by using a little bit of ANT wizardry and a text file.</p>
+
+<p>The text file (named <em>index.txt</em> controls the order in which the document fragments ned to be glued together:</p>
+
+<pre><code>introduction.textile
+grammar_language.textile
+newnoteworthy.textile
+</code></pre>
+
+<p>The <em>build.xml</em> now needs to be enhanced so that it reads the control file and use this information to assemble the Wiki files in the order requested:</p>
+
+<pre><code>&lt;target name="assemble"&gt;
+&lt;loadfile srcfile="doc/index.txt" property="inputfiles"&gt;
+&lt;filterchain&gt;
+&lt;tokenfilter&gt;
+&lt;replacestring from="\n" to=","/&gt;
+&lt;/tokenfilter&gt;
+&lt;/filterchain&gt;
+&lt;/loadfile&gt;
+&lt;concat destfile="documentation.textile" append="false" fixlastline="yes"&gt;
+&lt;filelist dir="doc" files="${inputfiles}"/&gt;
+&lt;/concat&gt;
+&lt;/target&gt;
+</code></pre>
+
+<p>So what happens here is that we read in the contents of the <em>index.txt</em> file, concatenate all file names, separated with a comma to one large line and feed that large line into the <em>concatenate</em> task that will then concatenate the contents of all those files in the given order so we get one big file.</p>
+
+<p>After that, the big file can now be processed as usual:</p>
+
+<pre><code>&lt;target name="generate-pdf" depends="assemble" description="Generate PDF from textile"&gt;
+&lt;wikitext-to-pdf markupLanguage="Textile"&gt;
+&lt;fileset dir="${basedir}"&gt;
+&lt;include name="documentation.textile"/&gt;
+&lt;/fileset&gt;
+&lt;/wikitext-to-pdf&gt;
+&lt;/target&gt;
+</code></pre>
+
+<h2>How to use DocBook to gain more flexibility</h2>
+
+<p>DocBook has been around for quite some years now and together with LaTeX still will give you the most flexibility when it comes to documentation engineering. I have been using both LaTeX and DocBook to write all sorts of documentation, ranging from my diploma thesis to open source project documentation and have found both the be versatile and reliable, but also quite verbose. Regarding flexibility, both give you the possibility to choose a document template / style of your liking. If none of the existing document styles match your needs, you can more or less easily create you own.</p>
+
+<p>As WikiText supports creating DocBook from your Wiki files, we'll have a look at how to use this DocBook output to further process it. Here is what we need to do:</p>
+
+<ol>
+<li><p>Enhance our build script so it downloads the relevant DocBook files (libraries, basic styles and XSL transformations)</p></li>
+<li><p>Add targets to our build script that allow you to choose the output to be created: PDF, HTML or Eclipse Help</p></li>
+</ol>
+
+
+<p>The whole process will look like this:
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3599/3494324023_c4cf66ba24_o.png" alt="WikiTextDocBook ToolChain" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3494324023)</p>
+
+<p>Let's have a look at some crucial parts of the script.</p>
+
+<p>We already saw how to assemble multiple Wiki files into one big Wiki file. The next step is to convert this file to DocBook:</p>
+
+<pre><code>&lt;target name="wikitext2docbook" depends="assemble" description="Generate DocBook from textile"&gt;
+&lt;wikitext-to-docbook markupLanguage="Textile"&gt;
+&lt;fileset dir="${basedir}"&gt;
+&lt;include name="documentation.textile"/&gt;
+&lt;/fileset&gt;
+&lt;/wikitext-to-docbook&gt;
+&lt;/target&gt;
+</code></pre>
+
+<p>After that, we need to convert the DocBook file to PDF:</p>
+
+<pre><code>&lt;target name="docbook2pdf"&gt;
+&lt;echo&gt;Converting article to PDF...&lt;/echo&gt;
+&lt;delete file="${dest.dir}${file.separator}${documenat.name}.pdf"/&gt;
+&lt;delete file="${dest.dir}${file.separator}${documenat.name}.fo"/&gt;
+&lt;xslt in="${documenat.name}.xml"
+        extension="xml"
+        out="${dest.dir}${file.separator}${documenat.name}.fo"
+        style="${document.stylesheet}"&gt;
+&lt;factory name="org.apache.xalan.processor.TransformerFactoryImpl"&gt;
+&lt;attribute name="http://xml.apache.org/xalan/features/optimize" value="true"/&gt;
+&lt;/factory&gt;
+&lt;xmlcatalog&gt;
+&lt;entity
+                publicId="docbook.xsl"
+                location="${docbook.dir}${file.separator}fo${file.separator}docbook.xsl"/&gt;
+&lt;/xmlcatalog&gt;
+&lt;param name="generate.toc" expression="book toc" /&gt;
+&lt;param name="show.comments" expression="0" /&gt;
+&lt;param name="header.rule" expression="1" /&gt;
+&lt;param name="admon.graphics.extension" expression=".gif"/&gt;
+&lt;param name="admon.textlabel" expression="0"/&gt;
+&lt;param name="admon.graphics" expression="1"/&gt;
+&lt;/xslt&gt;
+&lt;docbook2pdf
+        source="${dest.dir}${file.separator}${documenat.name}.fo"
+        target="${dest.dir}${file.separator}${documenat.name}.pdf"/&gt;
+&lt;delete file="${dest.dir}${file.separator}${documenat.name}.fo" /&gt;
+&lt;/target&gt;
+</code></pre>
+
+<p>You can now control the output by supplying different stylesheets. DocBook XSLT comes with a variety of stylesheets for articles, books and online help systems. You can now easily create printed documentation AND online help from one source. DocBook XSLT supports EclipseHelp, JavaHelp, HTMLHelp (the Windows Help System) and even man pages!</p>
+
+<p>So, next time you need to write documentation for a project you're working on, don't let it get you down. Instead, set up a trusty WikiText / DocBook toolchain and write down that documentation in Wiki markup in no time!</p>
+
+<p>The whole build script and the sample document are available for [drain file 17 url download] for free. If you need help setting up a tool chain or want to book me for consulting, drop me a line (peter dot friese at itemis dot com).</p>
+
+<p>Many thanks to <a href="http://greensopinion.blogspot.com/">David Green</a> and <a href="http://steffenpingel.de/">Steffen Pingel</a> of WikiText and Mylyn who tirelessly fixed bugs I found, applied patches and created EA builds!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Getting started with WikiText]]></title>
+    <link href="http://peterfriese.github.io/getting-started-with-wikitext/"/>
+    <updated>2009-04-24T01:34:54+02:00</updated>
+    <id>http://peterfriese.github.io/getting-started-with-wikitext</id>
+    <content type="html"><![CDATA[<p>Documentation is the bane of all developers. Nobody likes to write documentation, but most people know we need it. Even more so in Open Source projects. If you don't have a decent documentation, it will be hard to find contributors which will eventually stall the projects ability to acquire new committers.</p>
+
+<p>While documenting code is discussed quite controversial (see <a href="http://twitter.com/peterfriese/status/1573456711">here</a>, <a href="http://twitter.com/EelcoVisser/status/1573534530">here</a>, <a href="http://twitter.com/peterfriese/status/1574872897">here</a> and <a href="http://twitter.com/EelcoVisser/status/1575307114">here</a>), most people seem at least to agree that a high level documentation outlining the concepts of the software in question <strong>is</strong> appropriate.</p>
+
+<p>The options to write high-level documentation are:</p>
+
+<ol>
+<li><p>Word processors like Word, OpenOffice, Pages and the like</p></li>
+<li><p>LaTeX</p></li>
+<li><p>DocBook</p></li>
+<li><p>Wikis</p></li>
+</ol>
+
+
+<p>Using word processors for writing high-level documentation has serious drawbacks, especially when a whole team needs to contribute to the documentation. Do you remember <a href="http://word.mvps.org/fAQs/General/RecoverMasterDocs.htm">master documents</a>?</p>
+
+<p>LaTeX is a great alternative, as it allows us to split documentation across several text files - this allows for efficient team work. Moreover, text files just cannot break and can be versioned / merged / diffed quite easily. However, LaTeX syntax is not for the faint of heart.</p>
+
+<p>DocBook is great, too: it uses XML to describe documents and has a great number of transformations to about every output format you could think of (<a href="http://www.sagehill.net/docbookxsl/PrintOutput.html">PDF</a>, <a href="http://www.sagehill.net/docbookxsl/HtmlCustomEx.html">HTML</a>, <a href="http://www.sagehill.net/docbookxsl/EclipseHelp.html">EclipseHelp</a>, <a href="http://www.sagehill.net/docbookxsl/HtmlHelp.html">HTML Help</a>, <a href="http://www.sagehill.net/docbookxsl/JavaHelp.html">JavaHelp</a> and even <a href="http://www.sagehill.net/docbookxsl/RefentryToMan.html">man pages</a>! However, not everybody likes XML and in fact DocBook tends to be a little noisy.</p>
+
+<p>So this leaves us with Wikis. They are great in many regards: you can write your documentation online, most wikis support versioning and diffing to a certain degree and most wikis have a decent collision detection that helps to work on documentation collaboratively. Thanks to offline Wiki editors for IDEs, we can even store wiki documents in local files.</p>
+
+<h2>Enter WikiText</h2>
+
+<p><a href="http://wiki.eclipse.org/Mylyn/FAQ#WikiText">WikiText</a> is such a tool. It actually is very flexible, as it allows you to use a multitude of wiki dialects to write your documentation. It also supports a number of output formats (HTML, Eclipse Help, DITA, DocBook and FOP). What's more, it features a really nice text editor that can display Wiki markup almost in a WYSIWYG fashion. WikiText is developed and maintained by <a href="http://greensopinion.blogspot.com/">David Green</a>.</p>
+
+<p>So, without further ado, here is a quick introduction on how to install WikiText, writing your first document and transforming it to HTML.</p>
+
+<h2>Installing</h2>
+
+<p>Make sure you have a recent version of Eclipse installed. Then:</p>
+
+<ol>
+<li><p>Point your update manager (<em>Help -> Install new software</em>) to the Mylyn Update Site (http://download.eclipse.org/tools/mylyn/update/weekly/e3.4)</p></li>
+<li><p>Select the most recent version of Mylyn WikiText (as of this writing, this is WikiText 1.1.0.I20090423-1700-e3x) and install</p></li>
+</ol>
+
+
+<p>After the obligatory Eclipse restart, you can start using the WikiText editor.</p>
+
+<h2>Writing your first document</h2>
+
+<ol>
+<li><p>Create a new project (<em>File -> Project... -> General -> Project</em></p></li>
+<li><p>Create a new file. We will be using the <a href="http://textile.thresholdstate.com/">Textile</a> wiki syntax, so let's name it <em>HelloWorld.textile</em></p></li>
+<li><p>Enter some text:</p></li>
+</ol>
+
+
+<pre><code>h1(#id). An HTML first-level heading
+
+Textile syntax is really simple. You can _emphasize_ text or *emphasize it even more*.
+
+Scaled images:
+!{width: 50%}images/eiffelturm.jpg!
+
+Enumerations also are very easy:
+
+* An item in a bulleted (unordered) list
+* Another item in a bulleted list
+** Second Level
+** Second Level Items
+*** Third level
+
+# An item in an enumerated (ordered) list 
+# Another item in an enumerated list 
+## Another level in an enumerated list 
+
+Let's have more headings:
+
+h2. An HTML second-level heading
+
+Here is a table:
+
+|_. Header |_. Header |_. Header |
+| Cell 1 | Cell 2 | Cell 3 |
+| Cell 1 | Cell 2 | Cell 3 |
+
+h2. An HTML third-level heading
+
+Here is some code:
+
+bc.. 
+package org.eclipse.workflow;
+
+public class Workflow {
+
+}
+
+p. Here is a plain old paragraph. It needs to start with "p." to mark the end of the code block above.
+
+
+h4. An HTML fourth-level heading
+
+Of course, we can also have hyperlinks: "Peter's homepage":http://www.peterfriese.de 
+
+h5. An HTML fifth-level heading
+
+h6. An HTML sixth-level heading
+</code></pre>
+
+<ol>
+<li>Create a new subfolder <em>images</em> and place an image in his folder. I used <a href="http://www.wiemann.eu/1/eiffelturm.jpg">this</a> one.</li>
+</ol>
+
+
+<p>You can always switch over to the <em>preview</em> pane, but you will notice that the source editor already does a decent job at rendering the text in a kind of WYSIWYG manner:
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3587/3469612438_469c476d6a.jpg" alt="WikiText markup and preview" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3469612438)</p>
+
+<h2>Transforming your document to HTML</h2>
+
+<p>In order to convert your document to a nicely rendered HTML document, just right-click on <em>HelloWorld.textile</em> in the package explorer and select <em>WikiText -> Generate HTML</em>. This will create anew file <em>HelloWorld.html</em> in the same directory. Double-click it to open it with a browser:
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3541/3469615654_a3fe0a9016.jpg" alt="HelloWorld.html" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3469615654)</p>
+
+<h2>Automating, PDF, splitting documents,...</h2>
+
+<p>I hope I could whet your appetite. In the next installment, I am going to show you how to automate the process of transforming WikiText documents into output documents, how to create PDF (by way of exploiting DocBook) and how to split your documents into smaller chunks so you can work on them as a team. Stay tuned!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How Twitter solved my P2 problems during my lunch break]]></title>
+    <link href="http://peterfriese.github.io/how-twitter-solved-my-p2-problems-during-my-lunch-break/"/>
+    <updated>2009-04-02T17:21:50+02:00</updated>
+    <id>http://peterfriese.github.io/how-twitter-solved-my-p2-problems-during-my-lunch-break</id>
+    <content type="html"><![CDATA[<p>Today, I wanted to migrate from Eclipse 3.5M5 to Eclipse 3.6M6 (I know, it's a bit late for that already - but then, I had been busy with <a href="http://www.eclipsecon.org/">#eclipsecon</a> and preparing the <a href="http://www.eclipsecon.org/2009/sessions?id=358">Stupid Modeling Talk</a> during the past weeks).</p>
+
+<p>As of course I've got quite a number of additional bundles installed (e.g., EMF, Window Builder, Mylyn, Xpand and Xtend), I wanted to re-use them. I recalled that a while back someone (probably Chris?) blogged that it basically is possible to use an existing Eclipse installation as a local update site. However, I couldn't find the blog posting describing how to do that.</p>
+
+<p>Given the fact it was about lunch time, I decided to let the #wisecrowd figure out how to solve my problem. So I twittered "<a href="http://twitter.com/peterfriese/statuses/1437609552">desperately looking for a hint how to use an existing Eclipse install as a P2 repo. Goal:transport features from my M5 install to a fresh M6</a>".</p>
+
+<p>So, during my lunch break, the wise crowd (<a href="http://twitter.com/kaitoedter">Kai</a>, <a href="http://twitter.com/ekkescorner">Ekke</a>, <a href="http://twitter.com/bokowski">Boris</a> and <a href="http://twitter.com/paulweb515">Paul</a>) sent me their opinions on the matter:</p>
+
+<p>[</p>
+
+<p><img src="http://farm4.static.flickr.com/3650/3407041702_4b788ff887.jpg" alt="How Twitter solved my P2 problem during my lunch break" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3407041702)</p>
+
+<p>At first, it seemed like there is no solution, but in the end Paul's <a href="http://twitter.com/paulweb515/status/1437925330">tweet</a> reveals the solution I was looking for:</p>
+
+<p>Add eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/SDKProfile.profile/ as a local update site.</p>
+
+<p>All of you out there who still doubt the practical use of Twitter: you really should give it another try.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Teneo, EMF and Hibernate to update and query your data]]></title>
+    <link href="http://peterfriese.github.io/using-teneo-emf-and-hibernate-to-update-and-query-your-data/"/>
+    <updated>2009-03-14T23:55:49+01:00</updated>
+    <id>http://peterfriese.github.io/using-teneo-emf-and-hibernate-to-update-and-query-your-data</id>
+    <content type="html"><![CDATA[<p><a href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/">Last week I showed you</a> how to use Teneo, EMF and Hibernate to store your data in a database.</p>
+
+<p>This week, we're going to have a look at how to update the data, add more records and how to query the database for information using HQL, the Hibernate Query Language.</p>
+
+<p>If you haven't done so, you might consider <a href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/">taking last week's tutorial</a> in order to get your environment set up and understand the basic concepts. If you're lazy, you can as well download the code of the tutorial to get started more quickly. It is available [drain file 16 url here].</p>
+
+<p>As it turns out, in order to change anything in the library database, we must first fetch the to-be-changed data, so we need to have a look at querying first.</p>
+
+<p><strong>Retrieving and updating data</strong>
+Let's assume we'd want to the update the number of pages in a book, because the new edition has an additional chapter.</p>
+
+<ol>
+<li><p>So, first of all we need to open a session and begin a transaction:</p>
+
+<p>   {</p>
+
+<pre><code>   Session session = sessionFactory.openSession();
+   session.beginTransaction();
+</code></pre></li>
+<li><p>Next, let's create an HQL query. We want to find any books that are written by an author by the name "A. K. Dewdney" that contain "Omnibus" in their title.</p>
+
+<pre><code>   Query query = session.createQuery(
+       "SELECT book from " +
+       "    Book book, " +
+       "    Writer writer " +
+       "WHERE " +
+       "    book.title like '%Turing Omnibus%' " +
+       "AND " +
+       "    writer.name = 'A. K. Dewdney'");
+</code></pre></li>
+<li><p>We can now execute the query and display the results:</p>
+
+<pre><code>   List&lt;book&gt; books = query.list();
+   Book book = books.get(0);
+   System.out.println(book.getTitle());
+</code></pre></li>
+<li><p>Updating the page count is pretty obvious:</p>
+
+<pre><code>   book.setPages(520);
+</code></pre></li>
+<li><p>Finally, don't forget to commit the transaction and close the session:</p>
+
+<pre><code>   session.getTransaction().commit();
+   session.close();
+</code></pre>
+
+<p>   }</p></li>
+</ol>
+
+
+<p><strong>Adding data</strong>
+Let's now assume we want to add more books (and authors) to the library.</p>
+
+<ol>
+<li><p>By now, you should be pretty familiar with the pattern of opening a new session:</p>
+
+<p>   {</p>
+
+<pre><code>   Session session = sessionFactory.openSession();
+   session.beginTransaction();
+</code></pre></li>
+<li><p>As we want to add new items to the library, we need to retrieve the library instance first of all:</p>
+
+<pre><code>   Query query = session.createQuery("from Library");
+   List&lt;library&gt; libraries = query.list();
+   Library library = libraries.get(0);
+</code></pre></li>
+<li><p>Creating a new book and its author is easy, as we just have to use the API EMF so kindly generated for us:</p>
+
+<pre><code>   Writer writer = LibraryFactory.eINSTANCE.createWriter();
+   writer.setName("J.R.R. Tolkien");
+   Book book = LibraryFactory.eINSTANCE.createBook();
+   book.setTitle("The Hobbit");
+   book.setPages(320);
+   book.setAuthor(writer);
+   book.setCategory(BookCategory.MYSTERY);     
+   library.getBooks().add(book);
+   library.getWriters().add(writer);
+</code></pre></li>
+<li><p>Finally, commit the transaction and close the session:</p>
+
+<pre><code>   session.getTransaction().commit();
+   session.close();
+</code></pre>
+
+<p>   }</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

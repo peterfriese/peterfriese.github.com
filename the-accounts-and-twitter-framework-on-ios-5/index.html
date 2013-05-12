@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The Accounts and Twitter Framework on iOS 5 - Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&#8217;re in a news reader application you &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+  
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Software Architect / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:peterfriese.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">The Accounts and Twitter Framework on iOS 5</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-10T00:30:46+01:00" pubdate data-updated="true">Nov 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+    
+  <p>
+    <img class="left" src="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_150x150.png">
+  </p>
+  
+  <p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&#8217;re in a news reader application you might want to let your followers know about an interesting article you just read. If you&#8217;re in a conference schedule app, you not only want to let your followers know about the awesome talks you&#8217;re listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you&#8217;re stuck in&#8230;</p>
+
+<!-- more -->
+
+
+<p>Starting with iOS 5, Apple has introduced an <a href="http://developer.apple.com/library/ios/#documentation/Twitter/Reference/TwitterFrameworkReference/_index.html">official API for accessing Twitter from your iOS</a> applications. Before iOS 5, integrating Twitter in your apps was a rather cumbersome experience which required us developers to jump through many hoops.</p>
+
+<p>In this post I want to outline the most important features of the iOS Twitter and Accounts APIs and explain how to use them to write a decent Twitter client for your next app in very few lines of code. The <a href="http://github.com/peterfriese/TwitterClient">full source code</a> is available on Github for your convenience.</p>
+
+<p>The Accounts and Twitter frameworks perform much of the heavy lifting required when talking to Twitter, such as</p>
+
+<ul>
+<li>Providing a secure local storage for user accounts, including their credentials</li>
+<li>Providing an easy way to sign API requests you send to Twitter. You no longer have to include code to handle <a href="https://dev.twitter.com/docs/auth/oauth/faq">OAuth</a> or <a href="https://dev.twitter.com/docs/oauth/xauth">xAuth</a> in your app - this has all been done by Apple for you</li>
+<li>Providing a basic UI for composing tweets, including switching the user account you tweet from, uploading images in a tweet and including your current location</li>
+</ul>
+
+
+<p>Lots of free stuff, so let&#8217;s have a look at how much (or little) code we actually need to write to tap this source of awesomeness.</p>
+
+<h2>Using the Accounts Framework to fetch the list of accounts</h2>
+
+<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you&#8217;ll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will easy access to Google+ and Facebook accounts -  we&#8217;ll see.</p>
+
+<p>To use the Accounts and Twitter frameworks, we need to add them to the project:</p>
+
+<p><img class="center" src="../images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/add_twitter_accounts.png" title="Add Accounts and Twitter frameworks to the project" ></p>
+
+<p>Once that&#8217;s done, we can use the Accounts framework to fetch the list of Twitter accounts on the device.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchData</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">_accounts</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="n">_accountStore</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="n">self</span><span class="p">.</span><span class="n">accountStore</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ACAccountStore</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="n">ACAccountType</span> <span class="o">*</span><span class="n">accountTypeTwitter</span> <span class="o">=</span>
+</span><span class='line'>          <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">accountStore</span>
+</span><span class='line'>              <span class="nl">accountTypeWithAccountTypeIdentifier:</span><span class="n">ACAccountTypeIdentifierTwitter</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">accountStore</span> <span class="nl">requestAccessToAccountsWithType:</span><span class="n">accountTypeTwitter</span>
+</span><span class='line'>          <span class="nl">withCompletionHandler:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">granted</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="k">if</span><span class="p">(</span><span class="n">granted</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>              <span class="n">dispatch_sync</span><span class="p">(</span><span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+</span><span class='line'>                  <span class="n">self</span><span class="p">.</span><span class="n">accounts</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">accountStore</span>
+</span><span class='line'>                  <span class="nl">accountsWithAccountType:</span><span class="n">accountTypeTwitter</span><span class="p">];</span>
+</span><span class='line'>                  <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">tableView</span> <span class="n">reloadData</span><span class="p">];</span>
+</span><span class='line'>              <span class="p">});</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>      <span class="p">}];</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we&#8217;re interested in - <code>ACAccountTypeIdentifierTwitter</code> in our case. If we&#8217;re granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we&#8217;ve got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we&#8217;re on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
+
+<p>Displaying the accounts in a <code>UITableViewController</code> is straightforward:</p>
+
+<pre><code>- (UITableViewCell *)tableView:(UITableView *)tableView
+        cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdent = @"Cell";
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdent];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] 
+        initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdent];
+    }
+
+    // Configure the cell...
+    ACAccount *account = [self.accounts objectAtIndex:[indexPath row]];
+    cell.textLabel.text = account.username;
+    cell.detailTextLabel.text = account.accountDescription;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    return cell;
+}
+</code></pre>
+
+<h2>Displaying the public timeline of the selected user</h2>
+
+<p>When the user selects one of the accounts, we want to display a list of recent tweets for this selected account. We&#8217;ll use <code>TWRequest</code> to fetch the list of recent tweets.</p>
+
+<p><code>TWRequest</code> is the centerpiece of the iOS Twitter Framework and relieves us of the burden of having to perform OAuth authentication and request signing on our own. In order for it to do this, we need to provide a reference to the account whose timeline we want to read. We also need to provide the URL of the Twitter API endpoint we want to access. While this might seem a little bit cumbersome at first, this allows us to access not only current API calls but also any new APIs Twitter might come up with in the future without requiring Apple to update the API. Pretty nifty.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchData</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">TWRequest</span> <span class="o">*</span><span class="n">postRequest</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TWRequest</span> <span class="n">alloc</span><span class="p">]</span>
+</span><span class='line'>      <span class="nl">initWithURL:</span>
+</span><span class='line'>          <span class="p">[</span><span class="n">NSURL</span> <span class="nl">URLWithString:</span><span class="s">@&quot;https://api.twitter.com/1/statuses/home_timeline.json&quot;</span><span class="p">]</span>
+</span><span class='line'>      <span class="nl">parameters:</span><span class="nb">nil</span>
+</span><span class='line'>      <span class="nl">requestMethod:</span><span class="n">TWRequestMethodGET</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="p">[</span><span class="n">postRequest</span> <span class="nl">setAccount:</span><span class="n">self</span><span class="p">.</span><span class="n">account</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">postRequest</span> <span class="nl">performRequestWithHandler:</span><span class="o">^</span><span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="n">responseData</span><span class="p">,</span>
+</span><span class='line'>          <span class="n">NSHTTPURLResponse</span> <span class="o">*</span><span class="n">urlResponse</span><span class="p">,</span>
+</span><span class='line'>          <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">([</span><span class="n">urlResponse</span> <span class="n">statusCode</span><span class="p">]</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="n">NSError</span> <span class="o">*</span><span class="n">jsonError</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+</span><span class='line'>          <span class="n">self</span><span class="p">.</span><span class="n">timeline</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSJSONSerialization</span> <span class="nl">JSONObjectWithData:</span><span class="n">responseData</span>
+</span><span class='line'>              <span class="nl">options:</span><span class="mi">0</span>
+</span><span class='line'>              <span class="nl">error:</span><span class="o">&amp;</span><span class="n">jsonError</span><span class="p">;];</span>
+</span><span class='line'>          <span class="n">dispatch_sync</span><span class="p">(</span><span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+</span><span class='line'>              <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">tableView</span> <span class="n">reloadData</span><span class="p">];</span>
+</span><span class='line'>          <span class="p">});</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>  <span class="p">}];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Again, we need to provide a completion handler which will be invoked as soon as the call to Twitter returns. As you can also see, we&#8217;re using the same approach as before to make sure we update the UI from the UI thread. It&#8217;s also interesting to see Apple provides us with their own JSON parsing framework - no longer do we need to integrate third party libraries to serialize / deserialize JSON data.</p>
+
+<h2>Sending Tweets</h2>
+
+<p>So far, we can choose a Twitter account from the list of Twitter accounts on our iPhone and display the home timeline of this particular user. But how about sending a tweet?</p>
+
+<p>Sending tweets is really easy: you just have to instantiate a new <code>TWTweetComposeViewController</code> and display it - iOS will take care of the rest:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">composeTweet</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">TWTweetComposeViewController</span> <span class="o">*</span><span class="n">tweetComposeViewController</span> <span class="o">=</span>
+</span><span class='line'>      <span class="p">[[</span><span class="n">TWTweetComposeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">tweetComposeViewController</span> <span class="nl">setCompletionHandler:</span>
+</span><span class='line'>          <span class="o">^</span><span class="p">(</span><span class="n">TWTweetComposeViewControllerResult</span> <span class="n">result</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">self</span> <span class="nl">dismissModalViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">}];</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">self</span> <span class="nl">presentModalViewController:</span><span class="n">tweetComposeViewController</span> <span class="nl">animated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The completion handler is merely needed to dismiss the tweet composition view after the tweet has been sent.</p>
+
+<h2>Conclusion</h2>
+
+<p>Integrating Twitter in your own apps has never been easier. With just a few lines of code, we implemented a basic version of a Twitter client that you can use to display a user&#8217;s home timeline and send tweets. Elaborating this code base is left as an exercise to you - feel free to <a href="http://github.com/peterfriese/TwitterClient">fork the code on Github</a> and send me pull requests as you add interesting features!</p>
+
+<p>Here&#8217;s an impression of the current state of the application:</p>
+
+<ul class="gallery">
+<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_1.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - List of local accounts"><img src="/thumbs/twitter_client_1_120x150.png" alt="Twitter Client - List of local accounts" /></a></li>
+<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_2.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Home timeline for a user"><img src="/thumbs/twitter_client_2_120x150.png" alt="Twitter Client - Home timeline for a user" /></a></li>
+<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_3.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Composing a tweet"><img src="/thumbs/twitter_client_3_120x150.png" alt="Twitter Client - Composing a tweet" /></a></li>
+</ul>
+
+
+
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Peter</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-10T00:30:46+01:00" pubdate data-updated="true">Nov 10<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/api/'>API</a>, <a class='category' href='/blog/categories/twitter/'>Twitter</a>, <a class='category' href='/blog/categories/ios/'>iOS</a>, <a class='category' href='/blog/categories/ios5/'>iOS5</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5/" data-via="peterfriese" data-counturl="http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/tired-of-typing-speak-to-your-computer/" title="Previous Post: Tired of Typing? Speak to Your Computer!">&laquo; Tired of Typing? Speak to Your Computer!</a>
+      
+      
+        <a class="basic-alignment right articlenav" href="/using-cocoapods-to-manage-your-dependencies/" title="Next Post: Using CocoaPods to manage your dependencies">Using CocoaPods to manage your dependencies &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
+      </li>
+    
+      <li class="post">
+        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tired-of-typing-speak-to-your-computer/">Tired of Typing? Speak to Your Computer!</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recommended reading...</h1>
+  <ul id="recommended_reading">
+  	
+      
+  	
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'peterfriese',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'peterfriese';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5/';
+        var disqus_url = 'http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

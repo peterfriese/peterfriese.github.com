@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Getting started with Xtext, part 2 - Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="Last week, I showed you how easy it is to create a DSL with Xtext. In this installment, we will have a look at how to leverage the models created &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://peterfriese.github.io/getting-started-with-xtext-part-2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+  
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Software Architect / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:peterfriese.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Getting Started With Xtext, Part 2</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-12T00:48:56+02:00" pubdate data-updated="true">Jul 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+  
+  <p>Last week, <a href="http://www.peterfriese.de/getting-started-with-xtext/">I showed you how easy</a> it is to create a DSL with <a href="http://www.xtext.org">Xtext</a>. In this installment, we will have a look at how to leverage the models created with the DSL.</p>
+
+<h3>Goal</h3>
+
+<p>Let&#8217;s imagine we want to create an application for orders. People can sign in to the system, place orders for various items, check out and have them sent to their address. Very simple, but we can show a lot of things here.</p>
+
+<p>As we expect to be writing more than one application of this type and as we also would like to be able to express the structure of the application on a business level (one of the major drivers for DSLs and MDSD for that matter), we come up with the idea of using a DSL to describe what the application does. Defining the DSL is what we did last week. This week, we need to map the concepts of the DSL to some code and some APIs we&#8217;re going to program against.</p>
+
+<!-- more -->
+
+
+<p>So, we&#8217;re going to create a set of code templates for a code generator that can then read our DSL models and create persistence code for us.</p>
+
+<h3>Prepare</h3>
+
+<p>In order to draw any benefit from this post, you need to have a running version of the DSL we created last time round. If you&#8217;re new to this series, please go back one week and follow along the steps outlined in last week&#8217;s article. It shouldn&#8217;t take you longer than 30 minutes, and I promise we&#8217;ll wait here for you.</p>
+
+<h3>Create a main template</h3>
+
+<p>As we&#8217;re probably going to create more than one kind of class (we&#8217;ll have Entity beans, DAOs and maybe some interfaces), it is a wise idea to separate all those templates into separate files. The code generator then needs to invoke all those template files in order to generate our application. To make things more maintainable, every code generator should have a main entry point, so let&#8217;s create a main template file which serves as this main entry point.</p>
+
+<p>First, please <em>delete</em> everything in <em>org.xtext.example.entity.generator/templates</em>. Then, create a new <em>Xpand</em> template in this directory by selecting <em>File -> New -> Other &#8230; -> Xpand Template</em>. This is going to be our main template, so let&#8217;s call it <em>Main.xpt</em>. An empty editor will open.</p>
+
+<p>Insert the following line:</p>
+
+<pre><code>«IMPORT entity»
+</code></pre>
+
+<p>In case you wonder how to insert the special quotation marks, use code completion (press <em>CTRL + Space</em>, or <em>CMD + Space</em> on a Mac) to insert them. Upon activating code completion, a dialog will appear, asking you whether to add the <em>Xpand</em> nature to the project. Please confirm this dialog.</p>
+
+<p>The <em>IMPORT</em> statement imports the metamodel of your DSL, thereby making it known to Xpand, which will enable us to use the metamodel in our templates.</p>
+
+<p>Next, add the following lines:</p>
+
+<pre><code>«DEFINE main FOR Model»
+  «EXPAND Entity::entity FOREACH this.types.typeSelect(Entity)»
+«ENDDEFINE»
+</code></pre>
+
+<p>This will add a new template called <em>main</em> to your template file. By specifying <em>FOR Model</em>, we specify that this template will later be bound to a variable representing your model. The <em>EXPAND&#8230;FOREACH</em> statement will invoke a template called <em>entity</em> in a template file called <em>Entity</em> for all elements of the collection <em>types</em> in your model. Remember, your model contains a number of entities and type definitions. These are stored in the collection <em>types</em>. The <em>typeSelect(Entity)</em> statement makes sure the generator only considers elements which are of type <em>Entity</em> (we do not want to create Java beans for the plain data types).</p>
+
+<h3>Create a template for Java beans</h3>
+
+<p>Every data-oriented application needs a bunch of classes to hold the data. Usually referred to as <em>entities</em>, these classes are POJOs in our case. So, let&#8217;s now create a template which helps us to create POJOs from our model.</p>
+
+<p>Please add another <em>Xpand template</em> to your project by selecting <em>File -> New -> Other &#8230; -> Xpand Template</em>. Name the new file <em>Entity.xpt</em>, making sure to save it to the same folder as <em>Main.xpt</em>.</p>
+
+<p>Again, start the file by importing the meta model:</p>
+
+<pre><code>«IMPORT entity»
+</code></pre>
+
+<p>Next, add the following lines:</p>
+
+<pre><code>«DEFINE entity FOR entity::Entity»
+  «FILE this.name + ".java"»
+    public class «this.name» {
+      «EXPAND attribute FOREACH this.attributes»
+    }
+  «ENDFILE»
+«ENDDEFINE»
+</code></pre>
+
+<p>This template will create a new Java file for each entity instance it is invoked for. This is achieved by the <em>FILE</em> statement, which takes the name of the output file as it&#8217;s first parameter.</p>
+
+<p>As you can guess, we also need a template to create the attributes, so please add the following lines:</p>
+
+<pre><code>«DEFINE attribute FOR Attribute»
+  private «this.type.name» «this.name»;
+
+  public void set«this.name.toFirstUpper()»(«this.type.name» «this.name») {
+    this.«this.name» = «this.name»;
+  }
+
+  public «this.type.name» get«this.name.toFirstUpper()»() {
+    return this.«this.name»;
+  }
+«ENDDEFINE»
+</code></pre>
+
+<p>This template will create a private field, a setter and a getter for each attribute it is invoked for.</p>
+
+<h3>Create a template for a DAO</h3>
+
+<p>To load entities from a database and save them back, we will need to write some entities, but again, this is something the generator can do for us, so let&#8217;s write a template:</p>
+
+<p>Create a template <em>DAO.xpt</em> and insert this text:</p>
+
+<pre><code>«IMPORT entity»
+
+«DEFINE dao FOR entity::Entity»
+  «FILE this.name + "DAO.java"»
+    import java.util.Collection;
+    import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+    public class «this.name»DAO 
+      extends HibernateDaoSupport {
+      «EXPAND crud FOR this»
+    }
+  «ENDFILE»
+«ENDDEFINE»
+
+«DEFINE crud FOR Entity»
+  public «this.name» load(Long id) {
+    return («this.name»)getHibernateTemplate().get(«this.name».class, id);
+  }
+
+  @SuppressWarnings("unchecked")
+  public Collection&lt;«this.name»&gt; loadAll() {
+    return getHibernateTemplate().loadAll(«this.name».class);
+  }  
+
+  public «this.name» create(«this.name» entity) {
+    return («this.name») getHibernateTemplate().save(entity);
+  }
+
+  public void update(«this.name» entity) {
+    getHibernateTemplate().update(entity);
+  }
+
+  public void remove(«this.name» entity) {
+    getHibernateTemplate().delete(entity);
+  }
+«ENDDEFINE»
+</code></pre>
+
+<p>Do not forget to invoke this template from the master template file <em>Main.xpt</em>:</p>
+
+<pre><code>«IMPORT entity»
+
+«DEFINE main FOR Model»
+    «EXPAND Entity::entity FOREACH this.types.typeSelect(Entity)»
+    «EXPAND DAO::dao FOREACH this.types.typeSelect(Entity)»
+«ENDDEFINE»
+</code></pre>
+
+<h3>Create a model</h3>
+
+<p>In your workspace, open <em>org.xtext.example.entity.generator/src/model/MyModel.entity</em>, making sure it contains the following model:</p>
+
+<pre><code>typedef String
+typedef Integer
+typedef Double
+typedef Date mapsto java.util.Date
+
+entity Customer {
+  String firstName
+  String lastName
+  String email
+  Address shippingAddress
+  Order* orders
+}
+
+entity Address {
+  String line1
+  String line2
+  String city
+  String postcode
+  String state
+  String country
+}
+
+entity Product {
+  String description
+  Double price
+}
+
+entity Book extends Product {
+  String ISBN
+  String author
+}
+
+entity Order {
+  Date orderDate
+  OrderLine* orderLines 
+}
+
+entity OrderLine {
+  Product item
+  Integer amount
+}
+</code></pre>
+
+<h3>Setting up the generator</h3>
+
+<p>Before we can actually start the generator and transform our model, we need to adjust some aspects of the generator project.</p>
+
+<p>First, please open the generator workflow in <em>/org.xtext.example.entity.generator/src/workflow/EntityGenerator.mwe</em>. We need to change the name of the root template so it matches the name of the root template we chose. We also would like the generator to format the output properly, so we&#8217;re going to add an output beautifier.</p>
+
+<p>Change the generator component in the workflow file to match the following:</p>
+
+<pre><code>  &lt;component class="org.eclipse.xpand2.Generator"&gt;
+    &lt;metaModel class="org.eclipse.xtend.typesystem.emf.EmfRegistryMetaModel"/&gt;
+    &lt;fileEncoding value="MacRoman"/&gt;
+    &lt;expand value="templates::Main::main FOR model"/&gt;
+    &lt;genPath value="src-gen"/&gt;
+    &lt;beautifier class="org.eclipse.xpand2.output.JavaBeautifier"/&gt;
+  &lt;/component&gt;
+</code></pre>
+
+<p><strong>Note:</strong> you need to leave the <em>fileEncoding</em> attribute as-is. The above fragment is valid only on a Mac.</p>
+
+<p>As the formatter is based on the Eclipse java formatter (see also <a href="http://www.peterfriese.de/formatting-your-code-using-the-eclipse-code-formatter/">this post on the Eclipse code formatter</a> which I wrote some years ago and which still drives 200 reader/day to my blog), we have to add some bundle dependencies to the generator project.</p>
+
+<p>Do to so, please open <em>/org.xtext.example.entity.generator/META-INF/MANIFEST.MF</em>, go to the <em>Dependencies</em> and add the following bundles:</p>
+
+<ul>
+<li><p>org.eclipse.jface.text</p></li>
+<li><p>org.eclipse.core.runtime</p></li>
+<li><p>org.eclipse.jdt.core</p></li>
+<li><p>org.eclipse.xtext.log4j</p></li>
+<li><p>com.ibm.icu</p></li>
+</ul>
+
+
+<h3>Running the generator</h3>
+
+<p>To run the generator, simply select the workflow file <em>/org.xtext.example.entity.generator/src/workflow/EntityGenerator.mwe</em> and choose <em>Run as&#8230; -> MWE Workflow</em> from the context menu. You&#8217;ll see a bunch of log messages in the console view, and after a few seconds, you&#8217;ll find a bunch of just generated files in <em>/org.xtext.example.entity.generator/src-gen</em>.</p>
+
+<h3>Using the DSL to drive the generator</h3>
+
+<p>In the above sample, we wrote the DSL model by hand (well, you probably just copied it from this post), but this certainly is not the normal usage pattern. So, how can you use the DSL editor to create models that are then being read by the generator?</p>
+
+<p>Actually, it is very easy if you follow these steps:</p>
+
+<ol>
+<li><p>Start the DSL in a runtime workbench (refer to the last installment to see how)</p></li>
+<li><p>In the runtime workspace, create a new <em>Eclipse Plug-in Project</em>. Choose any name you like, e.g. <em>org.xtext.example.entity.mymodel</em>. Make sure you deselect <em>Generate an activator&#8230;</em> on the second page of the wizard - we don&#8217;t need one.</p></li>
+<li><p>Add all of the following dependencies to the newly created project&#8217;s manifest file:</p></li>
+</ol>
+
+
+<pre><code>* org.xtext.example.entity
+
+
+* org.eclipse.xpand
+
+
+* org.eclipse.xtend
+
+
+* org.eclipse.xtext
+
+
+* org.eclipse.emf.mwe.core
+
+
+* org.eclipse.emf.mwe.utils
+
+
+* org.eclipse.xtend.typesystem.emf
+
+* org.eclipse.jface.text
+
+
+* org.eclipse.core.runtime
+
+
+* org.eclipse.jdt.core
+
+
+* org.eclipse.xtext.log4j
+
+
+* com.ibm.icu
+
+
+* org.xtext.example.entity.generator
+</code></pre>
+
+<ol>
+<li>Create a new workflow file in <em>/org.xtext.example.entity.mymodel/src/workflow/EntityGenerator.mwe</em> and insert the following text:</li>
+</ol>
+
+
+<pre><code>&lt;workflow&gt;
+  &lt;cartridge file="workflow/EntityGenerator.mwe" model="classpath:/model/MyModel.entity"/&gt;
+&lt;/workflow&gt;
+</code></pre>
+
+<ol>
+<li><p>Patch the workflow file in the generator: Go back to the original workspace and change the line containing <em><component class="org.eclipse.xtext.MweReader" uri="..._ to _<component class="org.eclipse.xtext.MweReader" uri="${model}"></em></p></li>
+<li><p>Go back to the runtime workspace and create a new file <em>MyModel.entity</em> in <em>/org.xtext.example.entity.mymodel/src/model/MyModel.entity</em>.</p></li>
+</ol>
+
+
+<p>You can now use the DSL editor to create your model. The generator can be started by running the generator workflow file <em>EntityGenerator.mwe</em> in your newly created model project <em>/org.xtext.example.entity.mymodel</em> in the runtime workspace.</p>
+
+<h3>Conclusion</h3>
+
+<p>I hope the last section didn&#8217;t bother you too much. The good news is that we&#8217;re going to provide a wizard which will help you setting up DSL model projects - see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=281214">bug 281214</a>.</p>
+
+<p>Due to space limitations, this example is not complete in a sense that you can generate a fully functional CRUD application from it. You should, however be able to see what&#8217;s possible with textual DSLs and code generation.</p>
+
+<p>If you&#8217;re interested in seeing the whole generator, drop me a line (peter dot friese [at] itemis dot de) or DM me on Twitter (my Twitter ID is @peterfriese).</p>
+
+<h3>Download the code</h3>
+
+<p><a href="http://code.google.com/p/peterfriese/source/browse/xtext_getting_started/tags/xtext_getting_started_2/">Download the code</a> from my SVN repository.</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Peter</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-12T00:48:56+02:00" pubdate data-updated="true">Jul 12<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dsls/'>DSLs</a>, <a class='category' href='/blog/categories/eclipse/'>Eclipse</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://peterfriese.github.io/getting-started-with-xtext-part-2/" data-via="peterfriese" data-counturl="http://peterfriese.github.io/getting-started-with-xtext-part-2/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/getting-started-with-xtext/" title="Previous Post: Getting Started with Xtext">&laquo; Getting Started with Xtext</a>
+      
+      
+        <a class="basic-alignment right articlenav" href="/eclipse-modeling-day-in-north-america/" title="Next Post: Eclipse Modeling Day in North America">Eclipse Modeling Day in North America &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
+      </li>
+    
+      <li class="post">
+        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tired-of-typing-speak-to-your-computer/">Tired of Typing? Speak to Your Computer!</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recommended reading...</h1>
+  <ul id="recommended_reading">
+  	
+      
+  	
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'peterfriese',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'peterfriese';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://peterfriese.github.io/getting-started-with-xtext-part-2/';
+        var disqus_url = 'http://peterfriese.github.io/getting-started-with-xtext-part-2/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

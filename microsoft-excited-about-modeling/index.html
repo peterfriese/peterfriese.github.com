@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Microsoft excited about modeling - Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="Microsoft seem to be quite excited about modeling these days. Just recently, they announced that they have joined the OMG. OMG does NOT stand for &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://peterfriese.github.io/microsoft-excited-about-modeling/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+  
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Software Architect / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:peterfriese.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Microsoft Excited About Modeling</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-09-19T16:04:59+02:00" pubdate data-updated="true">Sep 19<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+  
+  <p>Microsoft <a href="http://clemensreijnen.nl/post/2008/09/Microsoft-joins-the-OMGhellip%3b.aspx">seem to be</a> <a href="http://www.pluralsight.com/community/blogs/dbox/archive/2008/09/06/oslo.aspx">quite excited</a> about modeling these days. Just recently, <a href="http://www.microsoft.com/presspass/press/2008/sep08/09-10OMGModelingPR.mspx">they announced that</a> <a href="http://blogs.msdn.com/stevecook/archive/2008/09/11/microsoft-joins-the-omg.aspx">they have joined the OMG</a>. OMG does NOT stand for Old Modeling Guys, but for <a href="http://www.omg.org/">Object Management Group</a>. This is the standards body that brought you specifications like <a href="http://www.corba.org/">CORBA</a>, <a href="http://www.uml.org/">UML</a>, <a href="http://www.omg.org/mda/">MDA</a> and <a href="http://www.omg.org/bpmn-logo/">BPMN</a>, to name just a few.</p>
+
+<p>But Microsoft does not just talk about modeling, they also put their money where their mouth is: during the last few years, a number of people including <a href="http://blogs.msdn.com/stevecook/">Steve</a> <a href="http://www.domainspecificdevelopment.com/Bios/SteveCook.aspx">Cook</a> and <a href="http://blogs.msdn.com/stuart_kent/">Stuart</a> <a href="http://www.domainspecificdevelopment.com/Bios/StuartKent.aspx">Kent</a> have been working on a toolchain which first has seen the light of day under the somewhat cryptic name <a href="http://msdn.microsoft.com/en-us/vsx/cc677256.aspx">VSX DSL Tools</a>.</p>
+
+<p>VSXDSL Tools are really good at rapidly creating (simple) graphical modeling tools. However, when it came to model transformations and code generation, you were stuck with a somewhat dated technology called <a href="http://msdn.microsoft.com/en-us/library/bb126445.aspx">T4 (Text Templating Transformation Toolkit)</a> - a template language quite similar to JSP and ASP. <a href="http://www.olegsych.com/2007/12/text-template-transformation-toolkit/">T4</a> seriously lacks some important features, like polymorphic dispatch, support for multiple file output and - believe it or not - a decent editor. Well, you can get one from <a href="http://www.t4editor.net/">http://www.t4editor.net/</a>, but who likes to shell out 99 dollars for just an editor?</p>
+
+<p>Now, Microsoft seem to have listened to their users and are coming up with an updated and extended version of the DSL Tools, code-named Oslo.</p>
+
+<p>So what is Oslo? <a href="http://douglaspurdy.com/2008/09/06/what-is-oslo/">Douglas Purdy states that Oslo is</a>:</p>
+
+<ul>
+<li><p>_A tool that helps people define and interact with models in a rich and visual manner _</p></li>
+<li><p>_A language that helps people create and use textual domain-specific languages and data models _</p></li>
+<li><p><em>A relational repository that makes models available to both tools and platform components  Looks to me like they are addressing all the issues MS DSL tools had.</em></p></li>
+</ul>
+
+
+<p>At <a href="http://www.microsoftpdc.com/">PDC 2008</a>, the team will reveal Oslo and all its nice features.</p>
+
+<p>Although I am an <a href="http://www.eclipse.org/pde/pde-ui/committers/committers.php#contributors">Eclipse fan</a> and an <a href="http://www.openarchitectureware.org/">openArchitectureWare</a> committer, I am quite thrilled so see Microsoft make this move to embrace modeling. In my opinion, this will advance MDSD and DSLs quite a deal. A lot of people who may have never heard of DSLs and MDSD will now get in touch with those techniques due to the sheer marketing power of Microsoft. This will also bring some nice competition to the market, which always is a Good Thing (tm).</p>
+
+<p>The <a href="http://www.microsoft.com/presspass/press/2008/sep08/09-10OMGModelingPR.mspx">press release</a> <a href="http://blogs.msdn.com/architectsrule/archive/2008/09/10/microsoft-joins-omg.aspx">states that</a> &#8220;to make model-driven development a reality, Microsoft is focused on providing a model-driven platform and visual modeling tools [&#8230;]&#8221;  - So, welcome to the modeling world, Microsoft!</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Peter</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-09-19T16:04:59+02:00" pubdate data-updated="true">Sep 19<span>th</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/eclipse/'>Eclipse</a>, <a class='category' href='/blog/categories/mda/'>MDA</a>, <a class='category' href='/blog/categories/mdsd/'>MDSD</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://peterfriese.github.io/microsoft-excited-about-modeling/" data-via="peterfriese" data-counturl="http://peterfriese.github.io/microsoft-excited-about-modeling/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/osgi-tutorial-in-hamburg-with-peter-kriens-and-matthias-lubken/" title="Previous Post: OSGi tutorial in Hamburg with Peter Kriens and Matthias Lübken">&laquo; OSGi tutorial in Hamburg with Peter Kriens and Matthias Lübken</a>
+      
+      
+        <a class="basic-alignment right articlenav" href="/eclipse-on-macos/" title="Next Post: Eclipse on MacOS">Eclipse on MacOS &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
+      </li>
+    
+      <li class="post">
+        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tired-of-typing-speak-to-your-computer/">Tired of Typing? Speak to Your Computer!</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recommended reading...</h1>
+  <ul id="recommended_reading">
+  	
+      
+  	
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'peterfriese',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'peterfriese';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://peterfriese.github.io/microsoft-excited-about-modeling/';
+        var disqus_url = 'http://peterfriese.github.io/microsoft-excited-about-modeling/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

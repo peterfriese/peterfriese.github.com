@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: HTML5 | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/html5/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tired of Typing? Speak to Your Computer!]]></title>
+    <link href="http://peterfriese.github.io/tired-of-typing-speak-to-your-computer/"/>
+    <updated>2011-06-03T18:54:39+02:00</updated>
+    <id>http://peterfriese.github.io/tired-of-typing-speak-to-your-computer</id>
+    <content type="html"><![CDATA[<p>For some reason, humans have always dreamt of using natural language to communicate with computers. Quite a number of movies have been made that revolve around this theme, <a href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey">2001: A Space Odyssey</a> and <a href="http://en.wikipedia.org/wiki/I,_Robot_(film">I, Robot</a>) (named after the <a href="http://en.wikipedia.org/wiki/I_robot">great collection of SF stories</a> by <a href="http://en.wikipedia.org/wiki/Isaac_Asimov">Isaac Asimov</a>) just being two of them.</p>
+
+<!-- more -->
+
+
+<p>Well, we've come a long way since then and computers are more powerful than ever before. I remember using one of the first versions of <a href="http://www.research.ibm.com/hlt/html/body_history.html">IBM ViaVoice</a> which would quite literally bog down my computer when I tried using it. The quality of speech recognition software has vastly improved and using a clever stack of technology, you can even use speech recognition on your iPhone (the <a href="http://www.tuaw.com/2009/12/08/dragon-dictation-comes-to-the-iphone-wow/">actual recognition is performed on a server</a>, but the effect is stunning nevertheless).</p>
+
+<p>With all the hoopla around HTML 5, it would be quite a surprise if modern browsers didn't have something in store with regard to voice recognition. And sure enough, there is a W3C specification for a <a href="http://lists.w3.org/Archives/Public/public-xg-htmlspeech/2011Feb/att-0020/api-draft.html">Speech Input API</a>. Looking at the list of authors might give us a hint as to which browser might support this API...</p>
+
+<p>Using the speech input API is rather easy. All you have to do is to add the <code>x-webkit-speech</code> attribute to any <code>input</code> tag and you're done. If you're on a speech-enabled browsers (as of this writing, <a href="http://chrome.blogspot.com/2011/04/everybodys-talking-and-translating-with.html">only Chrome 11</a> supports this out of the box), you can check it out in the input field below. Just click on the microphone icon and start speaking:</p>
+
+<p>So, the other day I thought, "wouldn't it be cool if I could use voice recognition to look up my contacts on the social networks I am on?". Adding voice recognition support to a website you own is rather easy, as you only have to add the <code>x-webkit-speech</code> attribute to the respective input fields. Enhancing foreign sites, however, turns out to be a little bit more involved. Fortunately, Chrome can augment existing websites by way of so-called <a href="http://code.google.com/chrome/extensions/content_scripts.html">Content Scripts</a>, which are a part of the <a href="http://code.google.com/chrome/extensions/getstarted.html">Chrome Extensions API</a>.</p>
+
+<p>Writing a Chrome Extension for speech-enabling existing text input fields on just about any website <a href="http://github.com/peterfriese/Speak2Search">was a matter of minutes</a>, thanks to the good documentation and some <a href="http://jquery.com/">jQuery</a> to walk the DOM. Putting on the finishing touches took me some more time, and I am proud to present you <a href="http://chrome.google.com/webstore/detail/peldinpdedgdcbdehomnpfndejpoibeb">Speak to Search</a> - a Chrome Extension that lets you talk with your browser. It works with virtually every website that uses regular HTML input fields. By making some smart assumptions, the extension will automatically submit the current form if the input field is a search field. If it is not, the focus will remain in the field and the form will not be submitted. That way, you can fill out e.g. an address form.</p>
+
+<p>Here is a short video of me using Speak to Search to search for some people on Xing and LinkedIn. Please note that the extension is making sure the speech recognition engine is configured to recognize German names on Xing.</p>
+
+<p>Language makes us human - this is a quote from a <a href="http://www.pbs.org/wnet/humanspark/video/spark-blog-video-dr-steven-pinker-language-makes-us-human/212/">video</a> I found during the research for this blog post. I don't necessarily think voice recognition and speech synthesis will make computers more human, but both technologies certainly can help to create a more immersive experience. I am looking forward to seeing a broader use of the new audio capabilities of modern browsers. Feel free to <a href="http://github.com/peterfriese/Speak2Search">grab my code from Github</a> and create something new and exciting!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Use the Gyroscope of Your iPhone in a Mobile Web App]]></title>
+    <link href="http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
+    <updated>2010-11-25T13:00:43+01:00</updated>
+    <id>http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
+    <content type="html"><![CDATA[<p>This week's release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they're neither directly visible in the iOS UI nor are they mentioned in Apple's official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone's gyroscope. Read on to see it in action and learn how to use it.<!-- more -->Your iPhone has a number of sensors, some of which are rather essential for the phone's operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they're certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
+
+<p>Until now, web developers didn't have access to the accelerometer sensor and the gyroscope sensor. With this week's release of iOS 4.2, this has changed and we can now use <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceMotionEventClassRef/DeviceMotionEvent/DeviceMotionEvent.html">DeviceMotionEvent</a> and <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">DeviceOrientationEvent</a> to determine the acceleration and orientation data of the phone.</p>
+
+<p>Let's first determine whether the current browser supports device orientation sensing:</p>
+
+<pre><code>if (window.DeviceMotionEvent==undefined) {
+}
+</code></pre>
+
+<p>We can then read the sensor data by registering the respective callbacks. Here's how you read the accelerometer's data:</p>
+
+<pre><code>window.ondevicemotion = function(event) {
+  ax = event.accelerationIncludingGravity.x
+  ay = event.accelerationIncludingGravity.y
+  az = event.accelerationIncludingGravity.z
+  rotation = event.rotationRate;
+  if (rotation != null) {
+    arAlpha = Math.round(rotation.alpha);
+    arBeta = Math.round(rotation.beta);
+    arGamma = Math.round(rotation.gamma);
+  }
+}
+</code></pre>
+
+<p>The gyroscope's data can be read like this:</p>
+
+<pre><code>window.ondeviceorientation = function(event) {
+  alpha = Math.round(event.alpha);
+  beta = Math.round(event.beta);
+  gamma = Math.round(event.gamma);
+}               
+</code></pre>
+
+<p>I've put together a little demo that uses the sensor data to color some boxes on the phone's screen. Here's a short video showing it in action:</p>
+
+<p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
+
+<p>(image of Gyroscope by stop that pigeon! taken from http://www.flickr.com/photos/25312309@N05/2651042796/)</p>
+]]></content>
+  </entry>
+  
+</feed>

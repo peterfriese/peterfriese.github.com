@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mac | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/mac/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Your Windows IDE sucks? Replace it with Your Favorite Editor on the Mac!]]></title>
+    <link href="http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/"/>
+    <updated>2011-01-05T01:11:11+01:00</updated>
+    <id>http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac</id>
+    <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.<!-- more -->The IDE in question is Samsung's TV App SDK. Basically, it's just a Windows-based Visual-Studio look-alike IDE with editor support for CSS, JavaScript and HTML and an Emulator for Samsung TV kits. Nothing too complicated, really. In fact, the editor is quite OK.</p>
+
+<p>[caption id="attachment_647" align="alignleft" width="300" caption="Samsung TV App SDK"]<a href="http://www.peterfriese.de/wp-content/Samsung-TV-App-SDK.png"><img src="http://www.peterfriese.de/wp-content/Samsung-TV-App-SDK-300x208.png" alt="Samsung TV App SDK" /></a>[/caption]</p>
+
+<p>The part about it that really sucks is the project management. How come tool vendors still think it's good style in 2010 to place the projects under <em>Program Files\Samsung TV Apps SDK\Apps</em>? There's no way to store your project files in a different location. The project open dialog just won't let you navigate to some other place:</p>
+
+<p>[caption id="attachment_642" align="alignleft" width="300" caption="Samsung TV App SDK Project Management Dialog"]<a href="http://www.peterfriese.de/wp-content/Samsung_TV_App_SDK_ProjectManagement.png"><img src="http://www.peterfriese.de/wp-content/Samsung_TV_App_SDK_ProjectManagement-300x219.png" alt="Samsung TV App SDK Project Management Dialog" /></a>[/caption]</p>
+
+<p>So I wanted to be able to edit my files on the Mac (using <a href="http://macromates.com/">TextMate</a>) while still using the good parts of the Samsung TV SDK (i.e., the Emulator).</p>
+
+<p>I'm using VMware Fusion to run Windows 7 and the Samsung SDK (no, there is no version for the Mac). Most virtualization solutions offer a mechanism to share folders between the host and the guest OS. So I quickly set up folder sharing between my Mac and the guest OS, in this case Windows 7.</p>
+
+<p>Now that I can see the project files both on the Mac and on the Windows machine, how can I make sure I can open the project in the Samsung TV SDK IDE? As I mentioned before, there's no way to tell the IDE to open projects form other locations than <em>Program Files\Samsung TV Apps SDK\Apps</em>!</p>
+
+<p>After playing around with some more or less usable folder synchronization utilities, I came up with something most MacOS / Linux users should be familiar with: <a href="http://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a>! While symlinks have been around in Unix-like OSes for ages, they have been rarely known to Windows users for most of the time. However, <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">starting with Windows NT</a>, you can create symbolic links, hard links and junctions using a nifty little tool called <em><a href="http://www.howtogeek.com/howto/windows-vista/using-symlinks-in-windows-vista/">mklink</a></em>. Unfortunately, you're not allowed to run <em>mklink</em> if you're not an administrator. Using <em>runas</em> (which is Windows' equivalent of <em>sudo</em>), didn't help as the shared folders weren't visible to the admin user.</p>
+
+<p>To cut a long story short, I found <a href="http://code.google.com/p/symlinker">Symlinker</a>, a UI tool that helps in creating symlinks on Windows. As it is a UI tool, you can run it with administrator privileges (by selecting Run as Admin from the context menu). Using a <a href="http://en.wikipedia.org/wiki/Path_(computing">UNC</a>) path, you can create a <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">symlink</a> to a VMware shared folder and place this symlink in the location the Samsung IDE expects it to be.</p>
+
+<p>Finally, I can edit my files on the Mac and run the app in Samsung's Emulator on my hosted Windows machine. And as the files on my Mac are mapped to the hosted Windows machine via a symlink, I do not suffer a synchronization lag - all files are updated instantaneously :-)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Running AppleScript from Java]]></title>
+    <link href="http://peterfriese.github.io/running-applescript-from-java/"/>
+    <updated>2010-03-08T22:42:38+01:00</updated>
+    <id>http://peterfriese.github.io/running-applescript-from-java</id>
+    <content type="html"><![CDATA[<p>In my current project, I need to launch an external application and maybe execute some additional commands on this external application. Due to the very nature of the project, the whole system will always be run on Mac OS X. So I thought, "why not use AppleScript"?<!-- more -->
+Turns out using AppleScript to launch applications is fairly easy, all you have to do is</p>
+
+<pre><code>tell application "name of your app" to launch
+</code></pre>
+
+<p>If you want to try this from the command line, <em>osascript</em> comes in handy:</p>
+
+<pre><code>osascript -e 'tell app "iTunes" to launch'
+</code></pre>
+
+<p>So far so good. Should be easy to do this from Java, shouldn't it? Turns out it's not so easy at all. Let's try this:</p>
+
+<pre><code>  String launchCmd = "osascript -e 'tell application \"iTunes\" to play'";
+  process = Runtime.getRuntime().exec(launchCmd);
+
+  BufferedReader bufferedReader = new BufferedReader(
+    new InputStreamReader(process.getErrorStream()));
+  while ((lsString = bufferedReader.readLine()) != null) {
+    System.out.println(lsString);
+  }
+</code></pre>
+
+<p>I'm not sure why, but it results in a nasty "<em>0:1: syntax error: A unknown token can't go here. (-2740)</em>" error message.</p>
+
+<p>But there is another signature for Runtime.exec:</p>
+
+<pre><code>  String[] cmd = { "osascript", "-e",   "tell app \"iPhone Simulator\" to launch" };
+  process = Runtime.getRuntime().exec(cmd);
+
+  BufferedReader bufferedReader = new BufferedReader(
+    new InputStreamReader(process.getErrorStream()));
+  while ((lsString = bufferedReader.readLine()) != null) {
+    System.out.println(lsString);
+  }
+</code></pre>
+
+<p>... and this works out just fine!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mac in Black: Taking Screenshots with Skitch]]></title>
+    <link href="http://peterfriese.github.io/mac-in-black-skitch/"/>
+    <updated>2009-05-25T02:16:11+02:00</updated>
+    <id>http://peterfriese.github.io/mac-in-black-skitch</id>
+    <content type="html"><![CDATA[<p>Last week, <a href="http://www.1160pm.net/">Heiko</a>, <a href="http://koehnlein.blogspot.com/">Jan</a> and I were talking about blogging about the tools that make our lifes easier on the Mac. "Isn't the Mac supposed to be making your life easier anyway?" you might ask. Well, most things really are easy with a Mac. However, there are some things that cannot be done easily with a Mac. More often than not, this is due to the fact that Apple tries to hide the complexity of computers from nosy users. Which is fine for beginners - but makes life harder for the pros. Thankfully, there is a vast array of tools out there that fill the gap and make life on a Mac easier.</p>
+
+<p>I am going to try to post one tool recommendation per week - unless I am on vacation or speaking at a conference.</p>
+
+<p>So without further ado, here is the first tool: <a href="http://www.skitch.com/">Skitch</a>!</p>
+
+<p>Skitch is a tool that helps you to create screenshots. I need to create lots of screenshots: for documentation, to explain things to people by mail, and to annotate my bug reports. Of course, Mac OSX has several shortcuts to create screenshots, so what's the deal about Skitch?</p>
+
+<p>First of all, Skitch allows you to view and edit your screenshot: press CMD+SHIFT+5, select the capture area and voilà - Skitch opens a window showing the screenshot just taken:
+[</p>
+
+<p><img src="http://farm3.static.flickr.com/2469/3560151513_31ff0b4529.jpg" alt="Skitch itself" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3560151513)</p>
+
+<p>You can now use the tools at the left hand side of the Skitch window to highlight certain areas of the screenshot, which comes on handy if you're filing a bug report for your favorite open source tool.</p>
+
+<p>When you're done with editing, you can either drag the image to another application (using the "drag me" tab at the bottom of the window) or you can post the image to the web. I have set up Skitch to use my Flickr account, so I can use the images in other tools right away (I am writing my blog posts in Mars Edit, which has a great Flickr integration, so I've got a complete tool chain here). Skitch supports a number of file formats (JPG, SVG, PDF, TIF, GIF, BMP and native Skitch), so you can select the desired file format before sending the image to the web or dragging it to another application.</p>
+
+<p>All images are also stored in a local history, so if you need to go back to one of the screenshots you took a while ago, no problem with Skitch.</p>
+
+<p>Skitch really has made my life on my Mac easier because it integrates with other tools (both online and offline) so well and because it eliminates many steps that made dealign with screenshots so cumbersome before.</p>
+
+<p>You can download Skitch beta from <a href="http://www.skitch.com">http://www.skitch.com</a>. You will be asked to sign up, however, both the download and the software will work without registering.</p>
+
+<p>Happy screen shooting :-)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Keyboard shortcuts for Apple Mail]]></title>
+    <link href="http://peterfriese.github.io/keyboard-shortcuts-for-apple-mail/"/>
+    <updated>2009-03-05T02:41:33+01:00</updated>
+    <id>http://peterfriese.github.io/keyboard-shortcuts-for-apple-mail</id>
+    <content type="html"><![CDATA[<p>I use Apple Mail on my MacBook Pro, mainly because it has a better integration with Spotlight than Thunderbird. It also has a nicer UI and is easier to configure.</p>
+
+<p>However, the keyboard shortcuts are really strange. In case you didn't find out yourself, here are the most important ones:</p>
+
+<ul>
+<li><p>Send message - <em>CMD+SHIFT+D</em> (what does the D stand for? <strong>D</strong>eliver?)</p></li>
+<li><p>Apply rules to selected mails - <em>CMD+ALT+L</em> (L for ru<strong>L</strong>e ???)</p></li>
+<li><p>Select all messages in a thread - <em>CMD+SHIFT+K</em> (K for sele<strong>K</strong>t ???)</p></li>
+<li><p>Erase junk mail - <em>CMD+ALT+J</em> (now, this is obvious - J for <strong>J</strong>unk)</p></li>
+</ul>
+
+
+<p>Apple developers, if you read this, please comment on the deeper meaning behind the shortcuts.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[CVS on a Mac]]></title>
+    <link href="http://peterfriese.github.io/cvs-on-a-mac/"/>
+    <updated>2009-02-12T21:52:04+01:00</updated>
+    <id>http://peterfriese.github.io/cvs-on-a-mac</id>
+    <content type="html"><![CDATA[<p>In order to be able to work on some of our <a href="http://www.xtext.org">Xtext</a> / <a href="http://www.eclipse.org">Eclipse</a> related build scripts, I needed to install a <a href="http://www.nongnu.org/cvs/">CVS</a> command line client on my Mac. Now if you google for "<a href="http://www.google.com/search?hl=en&amp;q=cvs+mac">cvs mac</a>", you'll get a large list of result, basically telling you to get the <a href="http://developer.apple.com/technology/xcode.html">Apple Xcode SDK</a>. While the Xcode SDK is for free, and usually you don't even need to download it from the <a href="http://developer.apple.com/">Apple Developer Connection's website</a> (as you already have it on your Mac install disks as <a href="http://www.lullabot.com/videocast/install_cvs_mac_osx">Lullabot</a> points out), it occurred to me that installing a 1+GB space hog seems to be a bit of an overkill for getting a tiny application.</p>
+
+<p>So I decided to give <a href="http://www.finkproject.org/">Fink</a> a try. Here is what you need to do to get a CVS commandline client on your Mac:</p>
+
+<ol>
+<li><p><a href="http://www.finkproject.org/download/index.php?phpLang=en">Download Fink</a></p></li>
+<li><p>Install Fink</p></li>
+<li><p>Copy FinkCommander to your Applications folder</p></li>
+<li><p>Start FinkCommander</p></li>
+<li><p>In the search box, type "cvs"
+[</p></li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3513/3274121893_93b22306c0.jpg" alt="Fink Commander" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3274121893)</p>
+
+<ol>
+<li><p>Click on the "install binary package" button (it's the leftmost, with the blue plus sign)</p></li>
+<li><p>In the lower pane, you can now watch Fink downloading and installing the CVS package.
+[</p></li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3391/3274949728_0fbd4612b3.jpg" alt="Fink Commander, CVS installed" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3274949728)</p>
+
+<ol>
+<li>Let's see if it works. Open a command line window and type "cvs":
+[</li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3397/3274132941_36c13ac586.jpg" alt="CVS command line" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3274132941)</p>
+
+<p>Perfect!</p>
+]]></content>
+  </entry>
+  
+</feed>

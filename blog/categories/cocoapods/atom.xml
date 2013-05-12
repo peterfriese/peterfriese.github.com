@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: CocoaPods | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/cocoapods/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using CocoaPods to manage your dependencies]]></title>
+    <link href="http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies/"/>
+    <updated>2012-06-30T00:42:22+02:00</updated>
+    <id>http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies</id>
+    <content type="html"><![CDATA[<p>One of the few things that I find really annoying about developing apps for the iOS platform is how cumbersome it is to include third party libraries in your projects. Depending on the complexity of the library (e.g. its respective dependencies and transitive dependencies) and the effort the authors put into the consumability of their library, the steps required to add a library to your project range from just copying a few files into your source folder to a whopping two-page description of drag'n'drop wizardry.</p>
+
+<!--more-->
+
+
+<p>Wouldn't it be awesome if you could just specify a list of dependencies and be done? You might have heard of RubyGems, Maven, Ivy, NuGet or npm that bring dependency management to the worlds of Ruby, Java, .NET and JavaScript developers.</p>
+
+<p>Well, it turns out there finally is a solution for us Cocoa developers - CocoaPods. Getting started with CocoaPods is really easy and once you started using it, you won't look back again.</p>
+
+<h2>Installation</h2>
+
+<p>CocoaPods itself is distributed as a Ruby gem, so installing it is as simple as:</p>
+
+<p><code>bash
+[sudo] gem install cocoapods
+pod setup
+</code></p>
+
+<h2>Usage</h2>
+
+<p>Using CocoaPods to manage your project's dependencies is a two-step process:</p>
+
+<ol>
+<li>Specify the dependency in you project's dependency specification file, <code>Podfile</code></li>
+<li>Run <code>pod install</code></li>
+</ol>
+
+
+<p>Let me illustrate this by way of a simple example. Let's assume you want to build an application with the awesome <a href="http://www.restkit.org">RestKit</a> library. If you have used RestKit before, you know that adding it to your project is a rather involved process. Over the years, it has become significantly easier, but it still needs a very detailed installation instruction with lots of screenshots - check out their <a href="https://github.com/RestKit/RestKit/wiki/Installing-RestKit-in-Xcode-4.x">wiki page</a>.</p>
+
+<p>With CocoaPods, all you need to do is this:</p>
+
+<ul>
+<li>Create a new empty project, naming it <code>RestEasyWithCocoaPods</code></li>
+<li>In your project folder, create a new file, <code>Podfile</code></li>
+<li>Fill in the following information:</li>
+</ul>
+
+
+<p>``` ruby Podfile</p>
+
+<pre><code>platform :ios
+dependency 'RestKit'
+dependency 'RestKit/UI'
+dependency 'RestKit/Network'
+dependency 'RestKit/ObjectMapping'
+dependency 'RestKit/ObjectMapping/CoreData'
+dependency 'RestKit/ObjectMapping/XML'
+dependency 'RestKit/ObjectMapping/JSON'
+</code></pre>
+
+<p>```</p>
+
+<ul>
+<li>Run <code>pod install RestEasyWithCocoaPods.xcodeproj</code></li>
+<li>Open the newly created workspace, <code>RestEasyWithCocoaPods.xcworkspace</code></li>
+<li>Add the RestKit headers to <code>RestEasyWithCocoaPods-Prefix.pch</code>:</li>
+</ul>
+
+
+<p>``` objc RestEasyWithCocoaPods-Prefix.pch</p>
+
+<pre><code>#ifdef __OBJC__
+#import &lt;UIKit/UIKit.h&gt;
+#import &lt;Foundation/Foundation.h&gt;
+#import &lt;RestKit/RestKit.h&gt;
+#endif
+</code></pre>
+
+<p>```</p>
+
+<ul>
+<li>Done. Go and build awesome stuff with RestKit (more on this in another post).</li>
+</ul>
+
+
+<h2>Where to go from here</h2>
+
+<p>Wasn't that a lot easier than all the other ways to install third party libraries?</p>
+
+<p>If you are curious which libraries are supported by CocoaPods, go to <a href="http://cocoapods.org">CocoaPods.org</a> - they have a nice little UI for searching their pod specification repository. If you are more include to using the command line, you are welcome to use <code>pod search &lt;yoursearchterm&gt;</code> to search for a specific library.</p>
+
+<p>If your preferred library is not yet supported, why not help them out and build a pod spec? <a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a> itself and the <a href="https://github.com/CocoaPods/Specs">pod spec repository</a> are hosted on Github, so adding new pod specifications is really easy. The CocoaPods wiki has a section on <a href="https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format">creating</a> and <a href="https://github.com/CocoaPods/CocoaPods/wiki/Sharing-pod-specifications">publishing</a> new podspec files.</p>
+
+<p>Now go and create awesome stuff!</p>
+]]></content>
+  </entry>
+  
+</feed>

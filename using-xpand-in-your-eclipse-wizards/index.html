@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Using Xpand in your Eclipse Wizards - Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="At ESE, I had a nice chat with Chris (actually, I had a lot of nice chats with a lot of nice people - it was quite a challenge to attend any of the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://peterfriese.github.io/using-xpand-in-your-eclipse-wizards/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+  
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Software Architect / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:peterfriese.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Using Xpand in Your Eclipse Wizards</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-28T13:42:26+01:00" pubdate data-updated="true">Nov 28<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+  
+  <p>At <a href="http://www.eclipsecon.org/summiteurope2008/">ESE</a>, I had a nice chat with <a href="http://mea-bloga.blogspot.com/">Chris</a> (actually, I had a lot of nice chats with a lot of nice people - it was quite a challenge to attend any of the sessions), who told me that he was looking into template engines. I leave it up to you to make any assumptions on why he&#8217;s interested in template engines. I happen to know at least three template engines: Velocity (which I had the joy of using in my active days at AndroMDA.org), the template, erhm, &#8230; mechanism being used in PDE (I <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=241074">once fixed a bug</a> which had been caused by this engine) and - you might have guessed it - Xpand (which I am a committer on).</p>
+
+<p>So, I gave a short demo of Xtext and Xpand to show Chris how easy it is to create (model-aware) code generation templates. Xpand comes with a nice editor which makes template editing a joy - it features code highlighting, hyperlink navigation, model-awareness and other editor goodness.</p>
+
+<p>Instead of letting only Chris know how that works, here&#8217;s a short guide on how to write your own Xpand template and use it in a wizard. To make the example more realistic, I chose to implement a wizard that creates an Ant build.xml file for a simple project (something which is missing in Eclipse, AFAIK). So, here we go.</p>
+
+<h2>Prerequisites:</h2>
+
+<ul>
+<li><p>Eclipse 3.5M3 (3.4 might also do)</p></li>
+<li><p><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/emf/emf/downloads/drops/2.5.0/S200811032126/emf-sdo-xsd-SDK-2.5.0M3.zip">EMF 2.5.0M3</a></p></li>
+<li><p><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/emft/compare/downloads/drops/0.8.1/R200809170822/emft-compare-SDK-incubation-0.8.1.zip">EMF Compare 0.8.1</a></p></li>
+<li><p><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/emft/mwe/downloads/drops/0.7.0/S200811120303/emft-mwe-SDK-incubation-0.7.0M3.zip">MWE 0.7.0M3</a></p></li>
+<li><p><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/m2t/xpand/downloads/drops/0.7.0/S200811120513/m2t-xpand-SDK-incubation-0.7.0M3.zip">Xpand 0.7.0M3</a></p></li>
+</ul>
+
+
+<h2>How to do it</h2>
+
+<ol>
+<li><p>Download and install the prerequisites.</p></li>
+<li><p>Create a new plug-in project named &#8220;de.peterfriese.antwizard&#8221;</p></li>
+<li><p>Add a New File Wizard to the project. I used the Custom plug-in Wizard to get me started.</p></li>
+<li><p>Brush up the wizard page and add some fields for project name, source folder and binary folder.</p></li>
+<li><p>We want to transfer the values entered in this wizard into our template, so we need to create an Ecore model that describes our data model.[</p></li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3047/3065637332_0f345eaf86_o.jpg" alt="antwizard_metamodel" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3065637332)</p>
+
+<ol>
+<li><p>Add <em>org.eclipse.emf</em> and <em>org.eclipse.emf.edit</em> to the dependencies of you plug-in.</p></li>
+<li><p>Create a genmodel and let EMF generate the model code for you.</p></li>
+<li><p>Add code to your wizard that transfers the values from the input fields to your model. One might consider using databinding for doing this, I used a straight forward read&#8217;n&#8217;write approach for the time being:</p></li>
+</ol>
+
+
+<pre><code>public boolean performFinish() {
+    final String containerName = page.getContainerName();
+    final String srcDirName = page.getSrcDirName();
+    final String binDirName = page.getBinDirName();
+    // ...
+}
+private BuildSpecification createModel(IProject project, String srcDirName,
+    String binDirName) {
+    BuildSpecification buildSpecification = BuildspecificationFactory.eINSTANCE.createBuildSpecification();
+    Project projectSpecification = BuildspecificationFactory.eINSTANCE.createProject();
+    projectSpecification.setName(project.getName());
+    projectSpecification.setBinaryFolder(binDirName);
+    projectSpecification.setSourceFolder(srcDirName);
+    buildSpecification.setProject(projectSpecification);
+    return buildSpecification;
+}
+</code></pre>
+
+<ol>
+<li>Create an Xpand template <em>de.peterfriese.antwizard/src/template/BuildTemplate.xpt</em>:
+[</li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3008/3064840225_f3f3b2e799_o.jpg" alt="Ant file template" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3064840225)
+In case you wonder how to get those funky characters: make sure us create this file using the Xpand editor - it has code assist (CTRL + space) for those characters.</p>
+
+<ol>
+<li>Create an Xtend file <em>de.peterfriese.antwizard/src/template/GeneratorExtensions.ext</em>:
+[</li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3045/3065691432_b59ba29444_o.jpg" alt="Ant file extensions" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3065691432)</p>
+
+<ol>
+<li><p>Add <em>org.eclipse.xpand</em>, <em>org.eclipse.xtend</em> and <em>org.eclipse.xtend.typesystem.emf</em> to the depencies of your plug-in.</p></li>
+<li><p>Finally, we need to provide some code to invoke the generator:</p></li>
+</ol>
+
+
+<pre><code>private void generate(BuildSpecification buildSpec, IProgressMonitor monitor) throws CoreException {
+
+    // get project root folder as absolute file system path
+    IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+    IResource resource = root.findMember(new Path(buildSpec.getProject().getName()));
+    String containerName = resource.getLocation().toPortableString();
+
+    // configure outlets
+    OutputImpl output = new OutputImpl();
+    Outlet outlet = new Outlet(containerName);
+    outlet.setOverwrite(true);
+    output.addOutlet(outlet);
+
+    // create execution context
+    Map globalVarsMap = new HashMap();
+    XpandExecutionContextImpl execCtx = new XpandExecutionContextImpl(output, null, globalVarsMap, null, null);
+    EmfRegistryMetaModel metamodel = new EmfRegistryMetaModel() {
+        @Override
+        protected EPackage[] allPackages() {
+            return new EPackage[] { BuildspecificationPackage.eINSTANCE, EcorePackage.eINSTANCE };
+        }
+    };
+    execCtx.registerMetaModel(metamodel);
+
+    // generate
+    XpandFacade facade = XpandFacade.create(execCtx);
+    String templatePath = "template::BuildTemplate::main";
+    facade.evaluate(templatePath, buildSpec);
+
+    // refresh the project to get external updates:
+    resource.refreshLocal(IResource.DEPTH_INFINITE, monitor);
+}
+</code></pre>
+
+<p>That&#8217;s it!</p>
+
+<h2>Taking it for a spin</h2>
+
+<ol>
+<li><p>Launch a runtime workbench by selecting <em>de.peterfriese.antwizard/META-INF/MANIFEST.MF</em> and invoking <em>Run As -> Eclipse Application</em></p></li>
+<li><p>Create a new Java project in the runtime workspace.</p></li>
+<li><p>Invoke your wizard by selecting <em>File -> New -> Other&#8230; -> Ant -> Ant build file from existing project</em></p></li>
+<li><p>Enter the required information (project name, source folder, binariy folder)</p></li>
+<li><p>After clicking on <em>finish</em>, you should get a fresh Ant file for your project:
+[</p></li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3215/3064865073_3415a7b0c3_o.jpg" alt="Ant file" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3064865073)</p>
+
+<ol>
+<li>Enjoy!</li>
+</ol>
+
+
+<p>You can download the project <a href="http://www.peterfriese.de/wp-content/downloads/plugins/model_driven_ant_wizard.zip">here</a>. Feedback and comments are welcome!</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Peter</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-28T13:42:26+01:00" pubdate data-updated="true">Nov 28<span>th</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/conferences/'>Conferences</a>, <a class='category' href='/blog/categories/eclipse/'>Eclipse</a>, <a class='category' href='/blog/categories/mdsd/'>MDSD</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://peterfriese.github.io/using-xpand-in-your-eclipse-wizards/" data-via="peterfriese" data-counturl="http://peterfriese.github.io/using-xpand-in-your-eclipse-wizards/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/ese-building-refactoring-tools-with-ltk-and-ludwig/" title="Previous Post: ESE: Building Refactoring Tools with LTK and Ludwig">&laquo; ESE: Building Refactoring Tools with LTK and Ludwig</a>
+      
+      
+        <a class="basic-alignment right articlenav" href="/software-engineering-radio-eelco-visser-on-parsing/" title="Next Post: Software Engineering Radio: Eelco Visser on Parsing">Software Engineering Radio: Eelco Visser on Parsing &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
+      </li>
+    
+      <li class="post">
+        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tired-of-typing-speak-to-your-computer/">Tired of Typing? Speak to Your Computer!</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recommended reading...</h1>
+  <ul id="recommended_reading">
+  	
+      
+  	
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'peterfriese',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'peterfriese';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://peterfriese.github.io/using-xpand-in-your-eclipse-wizards/';
+        var disqus_url = 'http://peterfriese.github.io/using-xpand-in-your-eclipse-wizards/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

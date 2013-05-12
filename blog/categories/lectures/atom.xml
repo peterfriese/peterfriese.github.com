@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Lectures | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/lectures/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Lecture material: Eclipse RCP]]></title>
+    <link href="http://peterfriese.github.io/lecture-material-eclipse-rcp/"/>
+    <updated>2006-08-30T20:45:21+02:00</updated>
+    <id>http://peterfriese.github.io/lecture-material-eclipse-rcp</id>
+    <content type="html"><![CDATA[<p>The material for the lecture "Developing Eclipse RCP applications", held by me and Stefan Reichert of <a href="http://wickedshell.sourceforge.net/">Wicked Shell fame</a> at <a href="http://www.nordakademie.de">Nordakademie</a>, Elmshorn, Germany is now online and <a href="http://f3.tobject.de/wp-content/downloads/vorlesungen/rcp/NordakademieRCPVorlesung.zip">can be downloaded here</a>. Thanks to all students who attended the lecture!</p>
+]]></content>
+  </entry>
+  
+</feed>

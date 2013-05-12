@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Do Androids Dream of Electric Sheep?]]></title>
+    <link href="http://peterfriese.github.io/do-androids-dream-of-electric-sheep/"/>
+    <updated>2013-03-22T01:33:48+01:00</updated>
+    <id>http://peterfriese.github.io/do-androids-dream-of-electric-sheep</id>
+    <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
+
+<!-- more -->
+
+
+<p>In all of these movies, humans can directly communicate with computers using voice commands (“Tea. Earl Grey, hot”) or more elaborate sentences and the computers will talk back to humans as a result. In some of the movies, the computer is a non-bodily entity (like the ship’s main computer in Star Trek), but sometimes it even is humanoid (like Cmdr. Data in <em>Star Trek</em> or the Replicants in <em>Blade Runner</em>).</p>
+
+<p>In a Pecha Kucha presentation I recently delivered at the OOP conference in Munich, I took on this theme and started my talk with a imaginative conversation between two computer programs that most of you might know very well: Eliza and Siri.</p>
+
+<div class="embed-video-container"><iframe src="http://player.vimeo.com/video/61467056 "></iframe></div>
+
+
+<p>In this Pecha Kucha session, Siri and Eliza join me live on stage to explain why we do not (yet) use the potential of our smart phones.</p>
+
+<p>Much has been said about Siri, so let’s focus on Eliza.</p>
+
+<p>Eliza started as an experiment in 1964, when Joseph Weizenbaum, then professor of computer sciences at the MIT, wrote it as an early attempt to research natural language communication between man and computer (see his ACM paper “ELIZA - A Computer Program For the Study of Natural Language Communication Between Man And Machine”). At its heart, Eliza is program that reacts to specific key words in sentences entered by a human user and will then respond to those keywords according to a predefined script. It’s the script that basically makes up the “personality” of Eliza, the most famous one being <em>Doctor</em>, simulating a rogerian psychoanalyst.</p>
+
+<p>(Weizenbaum was rather surprised to see how people thought that Eliza had a real personality and a capacity for empathy. In reaction, he started to raise uncomfortable questions about our dependence on computers.)</p>
+
+<p>In my Pecha Kucha, I went on to tell my audience to make better use of the capabilities of our smart phones. Most people have stopped thinking about it, but after all, we’re carrying a super computer in our pockets.</p>
+
+<p>So to set a good example, I decided to create <a href="http://elizaapp.com">ElizaApp</a> - an app that can listen to what you say and answer in spoken language. This is going to be a great project, because I’ll show several very interesting things:</p>
+
+<ol>
+<li><p>How to analyse spoken language on a mobile device</p></li>
+<li><p>How to synthesize speech on mobile devices</p></li>
+<li><p>How to integrate a JavaScript engine in your mobile app</p></li>
+<li><p>How to create a Siri-look-alike chat UI</p></li>
+</ol>
+
+
+<p>Over the course of the next few weeks, I will write several posts covering these topics. If there is anything that interests you in particular, feel free to add a comment.</p>
+
+<p>Of course, in the end Eliza will be available on the App Store. In the mean time, be sure to check out <a href="http://elizaapp.com">ElizaApp</a> and register for early access!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Writing Xtext Scope Providers with Xtend]]></title>
+    <link href="http://peterfriese.github.io/writing-xtext-scope-providers-with-xtend/"/>
+    <updated>2012-08-15T00:04:55+02:00</updated>
+    <id>http://peterfriese.github.io/writing-xtext-scope-providers-with-xtend</id>
+    <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is an <a href="http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html">important concept</a> in the design of programming languages. In Xtext, scoping is used <a href="http://zarnekow.blogspot.de/2009/01/xtext-corner-2-linking-and-scoping.html">to drive two major parts</a> of your DSL: <a href="http://www.eclipse.org/Xtext/documentation.html#linking">linking</a> and <a href="http://www.eclipse.org/Xtext/documentation.html#contentAssist">content assist</a>. While Xtext applies the <a href="http://en.wikiquote.org/wiki/Alan_Kay">80/20 rule</a> very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you&#8217;ll have to roll up your sleeves and write your own scope provider.</p>
+
+<!-- more -->
+
+
+<p>Over the years, implementing scope providers has become significantly easier, much thanks to the tiny internal scoping DSL provided by <code>org.eclipse.xtext.scoping.Scopes</code> (<a href="https://github.com/eclipse/xtext/blob/v2.3.0/plugins/org.eclipse.xtext/src/org/eclipse/xtext/scoping/Scopes.java">src</a>). However, collecting the elements that make up a scope can be a very cumbersome task if you have to use Java. Let’s face it - <a href="http://www.cafeaulait.org/slides/hope/02.html">Java has not been built for traversing models.</a></p>
+
+<p>A language much better suited to traversing models is <a href="http://www.eclipse.org/xtend/">Xtend</a>, the newest kid on the X block. If you didn’t yet give it a try, you should do so now - even if you’re not writing an Xtext DSL. Xtend directly translates to Java code and allows you to write very concise code by eliminating much of Java’s ceremony. You can use it to write everything you’d write in Java - from <a href="http://blog.efftinge.de/2011/12/writing-android-uis-with-xtend.html">Android UIs</a> to <a href="http://www.eclipse.org/Xtext/7languagesDoc.html#httpRouting">web applications</a> - so why not write Eclipse plug-ins with Xtend?</p>
+
+<p>To write the scope provider for your language using Xtend, you need to follow a few very simple steps:</p>
+
+<ol>
+<li><p>Disable generating the scope provider stub. Open <code>Generate&lt;YourDSL&gt;.mwe2</code> in the DSL project and find the line</p>
+
+<pre><code> fragment = scoping.ImportNamespacesScopingFragment { }
+</code></pre></li>
+<li><p>Change this line to</p>
+
+<pre><code> fragment = scoping.ImportNamespacesScopingFragment {
+     generateStub = false
+ }
+</code></pre></li>
+<li><p>If you already have a Java-based scope provider, copy the implementation to a safe place and delete the Java file to make room for the new Xtend-based scope provider.</p></li>
+<li><p>Create a new Xtend class <code>&lt;YourDSLPackage&gt;.&lt;YourDSL&gt;ScopeProvider.xtend</code> in the DSL project. Make sure this class inherits from <code>org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider</code>.</p></li>
+<li><p>Start writing your scope provider using Xtend.</p></li>
+<li><p>Don’t forget to smile :-)</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using CocoaPods to manage your dependencies]]></title>
+    <link href="http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies/"/>
+    <updated>2012-06-30T00:42:22+02:00</updated>
+    <id>http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies</id>
+    <content type="html"><![CDATA[<p>One of the few things that I find really annoying about developing apps for the iOS platform is how cumbersome it is to include third party libraries in your projects. Depending on the complexity of the library (e.g. its respective dependencies and transitive dependencies) and the effort the authors put into the consumability of their library, the steps required to add a library to your project range from just copying a few files into your source folder to a whopping two-page description of drag&#8217;n&#8217;drop wizardry.</p>
+
+<!--more-->
+
+
+<p>Wouldn&#8217;t it be awesome if you could just specify a list of dependencies and be done? You might have heard of RubyGems, Maven, Ivy, NuGet or npm that bring dependency management to the worlds of Ruby, Java, .NET and JavaScript developers.</p>
+
+<p>Well, it turns out there finally is a solution for us Cocoa developers - CocoaPods. Getting started with CocoaPods is really easy and once you started using it, you won&#8217;t look back again.</p>
+
+<h2>Installation</h2>
+
+<p>CocoaPods itself is distributed as a Ruby gem, so installing it is as simple as:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[</span>sudo<span class="o">]</span> gem install cocoapods
+</span><span class='line'>pod setup
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Usage</h2>
+
+<p>Using CocoaPods to manage your project&#8217;s dependencies is a two-step process:</p>
+
+<ol>
+<li>Specify the dependency in you project&#8217;s dependency specification file, <code>Podfile</code></li>
+<li>Run <code>pod install</code></li>
+</ol>
+
+
+<p>Let me illustrate this by way of a simple example. Let&#8217;s assume you want to build an application with the awesome <a href="http://www.restkit.org">RestKit</a> library. If you have used RestKit before, you know that adding it to your project is a rather involved process. Over the years, it has become significantly easier, but it still needs a very detailed installation instruction with lots of screenshots - check out their <a href="https://github.com/RestKit/RestKit/wiki/Installing-RestKit-in-Xcode-4.x">wiki page</a>.</p>
+
+<p>With CocoaPods, all you need to do is this:</p>
+
+<ul>
+<li>Create a new empty project, naming it <code>RestEasyWithCocoaPods</code></li>
+<li>In your project folder, create a new file, <code>Podfile</code></li>
+<li>Fill in the following information:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>Podfile</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">platform</span> <span class="ss">:ios</span>
+</span><span class='line'><span class="n">dependency</span> <span class="s1">&#39;RestKit&#39;</span>
+</span><span class='line'><span class="n">dependency</span> <span class="s1">&#39;RestKit/UI&#39;</span>
+</span><span class='line'><span class="n">dependency</span> <span class="s1">&#39;RestKit/Network&#39;</span>
+</span><span class='line'><span class="n">dependency</span> <span class="s1">&#39;RestKit/ObjectMapping&#39;</span>
+</span><span class='line'><span class="n">dependency</span> <span class="s1">&#39;RestKit/ObjectMapping/CoreData&#39;</span>
+</span><span class='line'><span class="n">dependency</span> <span class="s1">&#39;RestKit/ObjectMapping/XML&#39;</span>
+</span><span class='line'><span class="n">dependency</span> <span class="s1">&#39;RestKit/ObjectMapping/JSON&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Run <code>pod install RestEasyWithCocoaPods.xcodeproj</code></li>
+<li>Open the newly created workspace, <code>RestEasyWithCocoaPods.xcworkspace</code></li>
+<li>Add the RestKit headers to <code>RestEasyWithCocoaPods-Prefix.pch</code>:</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>RestEasyWithCocoaPods-Prefix.pch</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="cp">#ifdef __OBJC__</span>
+</span><span class='line'><span class="cp">#import &lt;UIKit/UIKit.h&gt;</span>
+</span><span class='line'><span class="cp">#import &lt;Foundation/Foundation.h&gt;</span>
+</span><span class='line'><span class="cp">#import &lt;RestKit/RestKit.h&gt;</span>
+</span><span class='line'><span class="cp">#endif</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Done. Go and build awesome stuff with RestKit (more on this in another post).</li>
+</ul>
+
+
+<h2>Where to go from here</h2>
+
+<p>Wasn&#8217;t that a lot easier than all the other ways to install third party libraries?</p>
+
+<p>If you are curious which libraries are supported by CocoaPods, go to <a href="http://cocoapods.org">CocoaPods.org</a> - they have a nice little UI for searching their pod specification repository. If you are more include to using the command line, you are welcome to use <code>pod search &lt;yoursearchterm&gt;</code> to search for a specific library.</p>
+
+<p>If your preferred library is not yet supported, why not help them out and build a pod spec? <a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a> itself and the <a href="https://github.com/CocoaPods/Specs">pod spec repository</a> are hosted on Github, so adding new pod specifications is really easy. The CocoaPods wiki has a section on <a href="https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format">creating</a> and <a href="https://github.com/CocoaPods/CocoaPods/wiki/Sharing-pod-specifications">publishing</a> new podspec files.</p>
+
+<p>Now go and create awesome stuff!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Accounts and Twitter Framework on iOS 5]]></title>
+    <link href="http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5/"/>
+    <updated>2011-11-10T00:30:46+01:00</updated>
+    <id>http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5</id>
+    <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&#8217;re in a news reader application you might want to let your followers know about an interesting article you just read. If you&#8217;re in a conference schedule app, you not only want to let your followers know about the awesome talks you&#8217;re listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you&#8217;re stuck in&#8230;</p>
+
+<!-- more -->
+
+
+<p>Starting with iOS 5, Apple has introduced an <a href="http://developer.apple.com/library/ios/#documentation/Twitter/Reference/TwitterFrameworkReference/_index.html">official API for accessing Twitter from your iOS</a> applications. Before iOS 5, integrating Twitter in your apps was a rather cumbersome experience which required us developers to jump through many hoops.</p>
+
+<p>In this post I want to outline the most important features of the iOS Twitter and Accounts APIs and explain how to use them to write a decent Twitter client for your next app in very few lines of code. The <a href="http://github.com/peterfriese/TwitterClient">full source code</a> is available on Github for your convenience.</p>
+
+<p>The Accounts and Twitter frameworks perform much of the heavy lifting required when talking to Twitter, such as</p>
+
+<ul>
+<li>Providing a secure local storage for user accounts, including their credentials</li>
+<li>Providing an easy way to sign API requests you send to Twitter. You no longer have to include code to handle <a href="https://dev.twitter.com/docs/auth/oauth/faq">OAuth</a> or <a href="https://dev.twitter.com/docs/oauth/xauth">xAuth</a> in your app - this has all been done by Apple for you</li>
+<li>Providing a basic UI for composing tweets, including switching the user account you tweet from, uploading images in a tweet and including your current location</li>
+</ul>
+
+
+<p>Lots of free stuff, so let&#8217;s have a look at how much (or little) code we actually need to write to tap this source of awesomeness.</p>
+
+<h2>Using the Accounts Framework to fetch the list of accounts</h2>
+
+<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you&#8217;ll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will easy access to Google+ and Facebook accounts -  we&#8217;ll see.</p>
+
+<p>To use the Accounts and Twitter frameworks, we need to add them to the project:</p>
+
+<p><img class="center" src="../images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/add_twitter_accounts.png" title="Add Accounts and Twitter frameworks to the project" ></p>
+
+<p>Once that&#8217;s done, we can use the Accounts framework to fetch the list of Twitter accounts on the device.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchData</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">_accounts</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="n">_accountStore</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="n">self</span><span class="p">.</span><span class="n">accountStore</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ACAccountStore</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="n">ACAccountType</span> <span class="o">*</span><span class="n">accountTypeTwitter</span> <span class="o">=</span>
+</span><span class='line'>          <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">accountStore</span>
+</span><span class='line'>              <span class="nl">accountTypeWithAccountTypeIdentifier:</span><span class="n">ACAccountTypeIdentifierTwitter</span><span class="p">];</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">accountStore</span> <span class="nl">requestAccessToAccountsWithType:</span><span class="n">accountTypeTwitter</span>
+</span><span class='line'>          <span class="nl">withCompletionHandler:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">granted</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="k">if</span><span class="p">(</span><span class="n">granted</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>              <span class="n">dispatch_sync</span><span class="p">(</span><span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+</span><span class='line'>                  <span class="n">self</span><span class="p">.</span><span class="n">accounts</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">accountStore</span>
+</span><span class='line'>                  <span class="nl">accountsWithAccountType:</span><span class="n">accountTypeTwitter</span><span class="p">];</span>
+</span><span class='line'>                  <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">tableView</span> <span class="n">reloadData</span><span class="p">];</span>
+</span><span class='line'>              <span class="p">});</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>      <span class="p">}];</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we&#8217;re interested in - <code>ACAccountTypeIdentifierTwitter</code> in our case. If we&#8217;re granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we&#8217;ve got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we&#8217;re on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
+
+<p>Displaying the accounts in a <code>UITableViewController</code> is straightforward:</p>
+
+<pre><code>- (UITableViewCell *)tableView:(UITableView *)tableView
+        cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdent = @"Cell";
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdent];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] 
+        initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdent];
+    }
+
+    // Configure the cell...
+    ACAccount *account = [self.accounts objectAtIndex:[indexPath row]];
+    cell.textLabel.text = account.username;
+    cell.detailTextLabel.text = account.accountDescription;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    return cell;
+}
+</code></pre>
+
+<h2>Displaying the public timeline of the selected user</h2>
+
+<p>When the user selects one of the accounts, we want to display a list of recent tweets for this selected account. We&#8217;ll use <code>TWRequest</code> to fetch the list of recent tweets.</p>
+
+<p><code>TWRequest</code> is the centerpiece of the iOS Twitter Framework and relieves us of the burden of having to perform OAuth authentication and request signing on our own. In order for it to do this, we need to provide a reference to the account whose timeline we want to read. We also need to provide the URL of the Twitter API endpoint we want to access. While this might seem a little bit cumbersome at first, this allows us to access not only current API calls but also any new APIs Twitter might come up with in the future without requiring Apple to update the API. Pretty nifty.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchData</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">TWRequest</span> <span class="o">*</span><span class="n">postRequest</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TWRequest</span> <span class="n">alloc</span><span class="p">]</span>
+</span><span class='line'>      <span class="nl">initWithURL:</span>
+</span><span class='line'>          <span class="p">[</span><span class="n">NSURL</span> <span class="nl">URLWithString:</span><span class="s">@&quot;https://api.twitter.com/1/statuses/home_timeline.json&quot;</span><span class="p">]</span>
+</span><span class='line'>      <span class="nl">parameters:</span><span class="nb">nil</span>
+</span><span class='line'>      <span class="nl">requestMethod:</span><span class="n">TWRequestMethodGET</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="p">[</span><span class="n">postRequest</span> <span class="nl">setAccount:</span><span class="n">self</span><span class="p">.</span><span class="n">account</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">postRequest</span> <span class="nl">performRequestWithHandler:</span><span class="o">^</span><span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="n">responseData</span><span class="p">,</span>
+</span><span class='line'>          <span class="n">NSHTTPURLResponse</span> <span class="o">*</span><span class="n">urlResponse</span><span class="p">,</span>
+</span><span class='line'>          <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">([</span><span class="n">urlResponse</span> <span class="n">statusCode</span><span class="p">]</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="n">NSError</span> <span class="o">*</span><span class="n">jsonError</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+</span><span class='line'>          <span class="n">self</span><span class="p">.</span><span class="n">timeline</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSJSONSerialization</span> <span class="nl">JSONObjectWithData:</span><span class="n">responseData</span>
+</span><span class='line'>              <span class="nl">options:</span><span class="mi">0</span>
+</span><span class='line'>              <span class="nl">error:</span><span class="o">&amp;</span><span class="n">jsonError</span><span class="p">;];</span>
+</span><span class='line'>          <span class="n">dispatch_sync</span><span class="p">(</span><span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+</span><span class='line'>              <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">tableView</span> <span class="n">reloadData</span><span class="p">];</span>
+</span><span class='line'>          <span class="p">});</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>  <span class="p">}];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Again, we need to provide a completion handler which will be invoked as soon as the call to Twitter returns. As you can also see, we&#8217;re using the same approach as before to make sure we update the UI from the UI thread. It&#8217;s also interesting to see Apple provides us with their own JSON parsing framework - no longer do we need to integrate third party libraries to serialize / deserialize JSON data.</p>
+
+<h2>Sending Tweets</h2>
+
+<p>So far, we can choose a Twitter account from the list of Twitter accounts on our iPhone and display the home timeline of this particular user. But how about sending a tweet?</p>
+
+<p>Sending tweets is really easy: you just have to instantiate a new <code>TWTweetComposeViewController</code> and display it - iOS will take care of the rest:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">composeTweet</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">TWTweetComposeViewController</span> <span class="o">*</span><span class="n">tweetComposeViewController</span> <span class="o">=</span>
+</span><span class='line'>      <span class="p">[[</span><span class="n">TWTweetComposeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">tweetComposeViewController</span> <span class="nl">setCompletionHandler:</span>
+</span><span class='line'>          <span class="o">^</span><span class="p">(</span><span class="n">TWTweetComposeViewControllerResult</span> <span class="n">result</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="p">[</span><span class="n">self</span> <span class="nl">dismissModalViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">}];</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">self</span> <span class="nl">presentModalViewController:</span><span class="n">tweetComposeViewController</span> <span class="nl">animated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The completion handler is merely needed to dismiss the tweet composition view after the tweet has been sent.</p>
+
+<h2>Conclusion</h2>
+
+<p>Integrating Twitter in your own apps has never been easier. With just a few lines of code, we implemented a basic version of a Twitter client that you can use to display a user&#8217;s home timeline and send tweets. Elaborating this code base is left as an exercise to you - feel free to <a href="http://github.com/peterfriese/TwitterClient">fork the code on Github</a> and send me pull requests as you add interesting features!</p>
+
+<p>Here&#8217;s an impression of the current state of the application:</p>
+
+<ul class="gallery">
+<li><a href="http://peterfriese.github.io/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_1.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - List of local accounts"><img src="http://peterfriese.github.io/thumbs/twitter_client_1_120x150.png" alt="Twitter Client - List of local accounts" /></a></li>
+<li><a href="http://peterfriese.github.io/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_2.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Home timeline for a user"><img src="http://peterfriese.github.io/thumbs/twitter_client_2_120x150.png" alt="Twitter Client - Home timeline for a user" /></a></li>
+<li><a href="http://peterfriese.github.io/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_3.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Composing a tweet"><img src="http://peterfriese.github.io/thumbs/twitter_client_3_120x150.png" alt="Twitter Client - Composing a tweet" /></a></li>
+</ul>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tired of Typing? Speak to Your Computer!]]></title>
+    <link href="http://peterfriese.github.io/tired-of-typing-speak-to-your-computer/"/>
+    <updated>2011-06-03T18:54:39+02:00</updated>
+    <id>http://peterfriese.github.io/tired-of-typing-speak-to-your-computer</id>
+    <content type="html"><![CDATA[<p>For some reason, humans have always dreamt of using natural language to communicate with computers. Quite a number of movies have been made that revolve around this theme, <a href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey">2001: A Space Odyssey</a> and <a href="http://en.wikipedia.org/wiki/I,_Robot_(film">I, Robot</a>) (named after the <a href="http://en.wikipedia.org/wiki/I_robot">great collection of SF stories</a> by <a href="http://en.wikipedia.org/wiki/Isaac_Asimov">Isaac Asimov</a>) just being two of them.</p>
+
+<!-- more -->
+
+
+<p>Well, we&#8217;ve come a long way since then and computers are more powerful than ever before. I remember using one of the first versions of <a href="http://www.research.ibm.com/hlt/html/body_history.html">IBM ViaVoice</a> which would quite literally bog down my computer when I tried using it. The quality of speech recognition software has vastly improved and using a clever stack of technology, you can even use speech recognition on your iPhone (the <a href="http://www.tuaw.com/2009/12/08/dragon-dictation-comes-to-the-iphone-wow/">actual recognition is performed on a server</a>, but the effect is stunning nevertheless).</p>
+
+<p>With all the hoopla around HTML 5, it would be quite a surprise if modern browsers didn&#8217;t have something in store with regard to voice recognition. And sure enough, there is a W3C specification for a <a href="http://lists.w3.org/Archives/Public/public-xg-htmlspeech/2011Feb/att-0020/api-draft.html">Speech Input API</a>. Looking at the list of authors might give us a hint as to which browser might support this API&#8230;</p>
+
+<p>Using the speech input API is rather easy. All you have to do is to add the <code>x-webkit-speech</code> attribute to any <code>input</code> tag and you&#8217;re done. If you&#8217;re on a speech-enabled browsers (as of this writing, <a href="http://chrome.blogspot.com/2011/04/everybodys-talking-and-translating-with.html">only Chrome 11</a> supports this out of the box), you can check it out in the input field below. Just click on the microphone icon and start speaking:</p>
+
+<p>So, the other day I thought, &#8220;wouldn&#8217;t it be cool if I could use voice recognition to look up my contacts on the social networks I am on?&#8221;. Adding voice recognition support to a website you own is rather easy, as you only have to add the <code>x-webkit-speech</code> attribute to the respective input fields. Enhancing foreign sites, however, turns out to be a little bit more involved. Fortunately, Chrome can augment existing websites by way of so-called <a href="http://code.google.com/chrome/extensions/content_scripts.html">Content Scripts</a>, which are a part of the <a href="http://code.google.com/chrome/extensions/getstarted.html">Chrome Extensions API</a>.</p>
+
+<p>Writing a Chrome Extension for speech-enabling existing text input fields on just about any website <a href="http://github.com/peterfriese/Speak2Search">was a matter of minutes</a>, thanks to the good documentation and some <a href="http://jquery.com/">jQuery</a> to walk the DOM. Putting on the finishing touches took me some more time, and I am proud to present you <a href="http://chrome.google.com/webstore/detail/peldinpdedgdcbdehomnpfndejpoibeb">Speak to Search</a> - a Chrome Extension that lets you talk with your browser. It works with virtually every website that uses regular HTML input fields. By making some smart assumptions, the extension will automatically submit the current form if the input field is a search field. If it is not, the focus will remain in the field and the form will not be submitted. That way, you can fill out e.g. an address form.</p>
+
+<p>Here is a short video of me using Speak to Search to search for some people on Xing and LinkedIn. Please note that the extension is making sure the speech recognition engine is configured to recognize German names on Xing.</p>
+
+<p>Language makes us human - this is a quote from a <a href="http://www.pbs.org/wnet/humanspark/video/spark-blog-video-dr-steven-pinker-language-makes-us-human/212/">video</a> I found during the research for this blog post. I don&#8217;t necessarily think voice recognition and speech synthesis will make computers more human, but both technologies certainly can help to create a more immersive experience. I am looking forward to seeing a broader use of the new audio capabilities of modern browsers. Feel free to <a href="http://github.com/peterfriese/Speak2Search">grab my code from Github</a> and create something new and exciting!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Code Generation 2011 - Don't miss out!]]></title>
+    <link href="http://peterfriese.github.io/code-generation-2011-dont-miss-out/"/>
+    <updated>2011-05-21T12:09:11+02:00</updated>
+    <id>http://peterfriese.github.io/code-generation-2011-dont-miss-out</id>
+    <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven&#8217;t booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
+
+<p>Quite a number of my colleagues at itemis have been busy preparing for this conference in the past few weeks. Besides working hard to hit the <a href="http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan">Eclipse Release Train milestone for Indigo on June 22nd</a>, the Xtext team brushed up their hands-on sessions &#8221;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=17">Xtext Take I: Creating Code Generators with Xtend2</a>&#8221; and &#8221;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=16">Xtext Take II: Crafting Domain Specific Languages with Xtext and Xbase</a>&#8221;. If you&#8217;ve been using Xtext, you&#8217;re well aware of the power you have at your disposal with this tool. Xbase and Xtend2, however, take this experience to a whole new level. So make sure to mark your calendar for these two sessions!</p>
+
+<!-- more -->
+
+
+<p>But not only the Xtext team will share their expertise at CG2011 - Markus and Karsten will be also be in town to give hands-on tutorials and report from their experience:</p>
+
+<ul>
+<li><p><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=22">Type Systems for DSLs (Markus Völter)</a></p></li>
+<li><p><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=8">Graphiti + Xtext: mixing graphical and textual DSLs for sprayers/designers (Karsten Thoms / Bernhard Merkle)</a></p></li>
+<li><p><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=5">Introduction to JetBrains Meta Programming System (MPS) (Markus Völter)</a></p></li>
+</ul>
+
+
+<p>The finale of the conference will be a panel discussion hosted by Markus on the topic of &#8221;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=20">Models, DSLs, Transformations: The Next 5 years</a>&#8221; - this should be a very interesting and lively discussion!</p>
+
+<p><a href="http://lanyrd.com/people/hbehrens/">Heiko</a> <a href="http://lanyrd.com/people/peterfriese/">and I</a> will present &#8221;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">Cross-Platform Mobile Development with DSLs</a>&#8221; - a <a href="http://lanyrd.com/2011/cg2011/sdpgm/">fast-paced and fun mixture of slides, live coding (or modeling, if you will), videos and audience interaction</a>. Yes, that&#8217;s right - the audience will be part of the show. Make sure to bring your web-enabled mobile phone and get the chance to win a price!</p>
+
+<p>To keep track of the conference program(me), we at <a href="http://mobile.itemis.com">itemis mobile</a> have been busy to create a conference planner for your iOS and Android powered mobile phones. Here are the download links:</p>
+
+<ul>
+<li><p>Apple App Store: <a href="http://itunes.apple.com/us/app/code-generation-2011/id436689925?mt=8">Code Generation 2011</a></p></li>
+<li><p>Android Market Place: <a href="https://market.android.com/details?id=de.itemis.mobile.android.cg2011&amp;feature=search_result">Code Generation 2011</a></p></li>
+</ul>
+
+
+<p>[caption id=&#8221;attachment_764&#8221; align=&#8221;aligncenter&#8221; width=&#8221;500&#8221; caption=&#8221;Code Generation 2011 Apps for iPhone and Android&#8221;]<a href="http://www.peterfriese.de/wp-content/cg2011.png"><img src="http://www.peterfriese.de/wp-content/cg2011-e1305966137679.png" alt="Code Generation 2011 Apps for iPhone and Android" /></a>[/caption]</p>
+
+<p>If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? <a href="mailto:mobile@itemis.de">Drop us a note</a> or track us down at the conference (best chance to see us: <a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">come to our talk</a> ;-) ).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using NSPredicate to Filter Data]]></title>
+    <link href="http://peterfriese.github.io/using-nspredicate-to-filter-data/"/>
+    <updated>2011-04-23T00:15:36+02:00</updated>
+    <id>http://peterfriese.github.io/using-nspredicate-to-filter-data</id>
+    <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you&#8217;re applying a filter to the huge set of data we call the internet.</p>
+
+<!-- more -->
+
+
+<p>Even on your local computer, you use services like Spotlight or the search field in your mail application all the time. Apps that lack decent searching and filtering capabilities sometimes are really hard to use, so as developers we should spend some time on thinking how to allow users to filter the data they&#8217;re dealing with.</p>
+
+<p>In this post, I am going to focus on ways to filter data. We won&#8217;t be looking at the UI side of things - this is something I&#8217;ll do in a subsequent blog post.</p>
+
+<h2>Old-skool filtering</h2>
+
+<p>If you look at an arbitrary code base, chances are you&#8217;ll sooner or later run into a piece of code similar to this one:</p>
+
+<pre><code>NSMutableArray *oldSkoolFiltered = [[NSMutableArray alloc] init];
+for (Book *book in bookshelf) {
+    if ([book.publisher isEqualToString:@"Apress"]) {
+        [oldSkoolFiltered addObject:book];
+    }
+}
+</code></pre>
+
+<p>It&#8217;s a straight-forward approach to filtering an array of items (in this case, we&#8217;re talking about books) using a rather simple <code>if</code>-statement. Nothing wrong with this, but despite the fact we&#8217;re using a fairly simple expression here, the code is rather verbose. We can easily imagine what will happen in case we need to use more complicated selection criteria or a combination of filtering criteria.</p>
+
+<h2>Simple filtering with NSPredicate</h2>
+
+<p>Thanks to Cocoa, we can simplify the code by using <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSPredicate_Class/Reference/NSPredicate.html">NSPredicate</a>. <code>NSPredicate</code> is the object representation of an if-statement, or, more formally, a predicate.</p>
+
+<p>Predicates are <a href="http://en.wikipedia.org/wiki/Predicate_(mathematical_logic">expressions that evaluate to a truth value</a>), i.e. <code>true</code> or <code>false</code>. We can use them to perform validation and filtering. In Cocoa, we can use <code>NSPredicate</code> to evaluate single objects, filter arrays and perform queries against Core Data data sets.</p>
+
+<p>Let&#8217;s have a look at how our example looks like when using <code>NSPredicate</code>:</p>
+
+<pre><code>NSPredicate *predicate = 
+  [NSPredicate predicateWithFormat:@"publisher == %@", @"Apress" ];
+NSArray *filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
+</code></pre>
+
+<p>Much shorter and better readable!</p>
+
+<h2>Filtering with Regular Expressions</h2>
+
+<p>Regular Expressions can be used to <a href="http://xkcd.com/208/">solve almost any problem ;-)</a> so it&#8217;s good to know you can use them in <code>NSPredicate</code>s as well. To use regular expressions in your <code>NSPredicate</code>, you need to use the <code>MATCHES</code> operator.</p>
+
+<p>Let&#8217;s filter all books that are about iPad or iPhone programming:</p>
+
+<pre><code>predicate = [NSPredicate predicateWithFormat:@"title MATCHES '.*(iPhone|iPad).*'"];
+filtered = [bookshelf filteredArrayUsingPredicate:predicate];
+dumpBookshelf(@"Books that contain 'iPad' or 'iPhone' in their title", filtered);
+</code></pre>
+
+<p>You need to obey some rules when using regular expressions in <code>NSPredicate</code>: most importantly, <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/Articles/pUsing.html#//apple_ref/doc/uid/TP40001794-SW9">you cannot use regular expression metacharacters inside a pattern set</a>.</p>
+
+<h2>Filtering using set operations</h2>
+
+<p>Let&#8217;s for a moment assume you want to filter all books that have been published by your favorite publishers. Using the <code>IN</code> operator, this is rather simple: first, we need to set up a set containing the publishers we&#8217;re interested in. Then, we can create the predicate and finally perform the filtering operation:</p>
+
+<pre><code>NSArray *favoritePublishers = [NSArray arrayWithObjects:@"Apress", @"O'Reilly", nil];
+predicate = [NSPredicate predicateWithFormat:@"publisher IN %@", favoritePublishers];
+filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
+dumpBookshelf(@"Books published by my favorite publishers", filtered);
+</code></pre>
+
+<h2>Advanced filtering thanks to KVC goodness</h2>
+
+<p><code>NSPredicate</code> relies on <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/KeyValueCoding.html">key-value coding</a> to achieve its magic. On one hand this means your classes need to be <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/Compliant.html#//apple_ref/doc/uid/20002172-BAJEAIEE">KVC compliant</a> in order to be queried using <code>NSPredicate</code> (at least the attributes you want to query). On the other hand, this allows us to perform some very interesting things with very little lines of code.</p>
+
+<p>Let&#8217;s for example retrieve a list of books written by authors with the name &#8220;Mark&#8221;:</p>
+
+<pre><code>predicate = 
+  [NSPredicate predicateWithFormat:@"authors.lastName CONTAINS %@", @"Mark" ];
+filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
+</code></pre>
+
+<p>In case we&#8217;d want to return the value of one of the aggregate functions, we don&#8217;t need to use NSPredicate itself, but instead use KVC directly. Let&#8217;s retrieve the average price of all books on our shelf:</p>
+
+<pre><code>NSNumber *average = [bookshelf valueForKeyPath:@"@avg.price"];
+</code></pre>
+
+<h2>Conclusion</h2>
+
+<p>The Cocoa libraries provide some very powerful abstractions which can make your life and that of the people reading your code much easier. It pays off to know about them, so go ahead and browse the Cocoa documentation and hunt for those gems!</p>
+
+<p>Apple&#8217;s <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html">NSPredicate programming guide</a> provides an in-depth documentation for <code>NSPredicate</code> containing all the things I didn&#8217;t cover in this post.</p>
+
+<p><code>NSPredicate</code> also plays an important role when querying data in Core Data, something we will need to have a look at in one of the next blog posts. Stay tuned!</p>
+
+<h2>Code</h2>
+
+<p>The code for this post is available on my github page: <a href="http://github.com/peterfriese/NSPredicateDemo">get forking</a>!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
+    <link href="http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
+    <updated>2011-02-25T23:15:57+01:00</updated>
+    <id>http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
+    <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are! <!-- more -->This year, we&#8217;re providing a rather impressive lineup of mobile apps for iPhone, iPod Touch, iPad (thanks to <a href="http://www.compeople.eu/blog/?p=786">Christian Campo who created a stand-alone iPad app</a>), BlackBerry (<a href="http://ekkes-apps.org/">Ekke is working on a updated version, AFAIK</a>), and all other smart phones that feature a browser.</p>
+
+<p>All apps allow you to browse the program, select your favorite talks and get to know the speakers (with headshots so you recognise them in the hallways). We also have included maps of the convention center as well as Santa Clara.</p>
+
+<p>For a first glimpse, watch our video:</p>
+
+<p>As of today, both iPhone and Android users can download the apps from the Apple App Store respectively the Android Marketplace. Here are the links:</p>
+
+<ol>
+<li><p><a href="http://bit.ly/econ2011iphone">EclipseCon 2011 iPhone App</a></p></li>
+<li><p><a href="http://bit.ly/econ2011android">EclipseCon 2011 Android App</a></p></li>
+</ol>
+
+
+<p>If you don&#8217;t own an iPhone or Android, you can always use the HTML-only version of the conference program available at <a href="http://bit.ly/econ2011html">http://bit.ly/econ2011html</a>.</p>
+
+<p>The iPad and BlackBerry apps will be available soon, so stay tuned!</p>
+
+<p>By the way, if <strong>you</strong> run a conference and are interested in having an app like this, <a href="http://mobile.itemis.com">get in touch with us</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Appropriate Use of MapKit]]></title>
+    <link href="http://peterfriese.github.io/appropriate-use-of-mapkit/"/>
+    <updated>2011-02-16T11:48:38+01:00</updated>
+    <id>http://peterfriese.github.io/appropriate-use-of-mapkit</id>
+    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&#8217;re violating Google&#8217;s terms of service, I was wondering what in particular was wrong. <!-- more -->At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google&#8217;s terms of service for Maps</a>, but can you spot what is wrong?</p>
+
+<p>[caption id=&#8221;attachment_687&#8221; align=&#8221;aligncenter&#8221; width=&#8221;172&#8221; caption=&#8221;What&#8217;s wrong with this map?&#8221;]<a href="http://www.peterfriese.de/wp-content/maps_without_google_logo.png"><img src="http://www.peterfriese.de/wp-content/maps_without_google_logo-172x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a>[/caption]</p>
+
+<p>Maybe you can better see what&#8217;s wrong when I show you another screenshot, this time obeying the TOS:</p>
+
+<p>[caption id=&#8221;attachment_688&#8221; align=&#8221;aligncenter&#8221; width=&#8221;169&#8221; caption=&#8221;With logo: well done!&#8221;]<a href="http://www.peterfriese.de/wp-content/maps_with_google_logo.png"><img src="http://www.peterfriese.de/wp-content/maps_with_google_logo-169x300.png" alt="Google Maps with logo: well done!" /></a>[/caption]</p>
+
+<p>Can you spot the difference? It&#8217;s the Google logo!</p>
+
+<p>The reason why it is not shown in the first screenshot is that the bounds for the map are not set correctly. In the offending version of my app, I used a piece of code similar to this one:</p>
+
+<pre><code>- (void)viewDidLoad {
+  [super viewDidLoad];
+  mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+
+  mapView.showsUserLocation=TRUE;
+  mapView.mapType=MKMapTypeStandard;
+  [self.view addSubview:mapView];       
+}
+</code></pre>
+
+<p>Nothing wrong with it, but it lacks one essential line:</p>
+
+<pre><code>- (void)viewDidLoad {
+  [super viewDidLoad];
+  mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+
+  mapView.autoresizingMask = 
+    (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);   
+
+  mapView.showsUserLocation=TRUE;
+  mapView.mapType=MKMapTypeStandard;
+  [self.view addSubview:mapView];       
+}
+</code></pre>
+
+<p>So, next time you write an app that contains Google Maps, make sure the Google logo is visible. You can get the full source code for this example <a href="http://github.com/peterfriese/MapKitSample">on my GitHub page</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Three reasons why I think the HP TouchPad will rock the tablet market]]></title>
+    <link href="http://peterfriese.github.io/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
+    <updated>2011-02-10T11:38:26+01:00</updated>
+    <id>http://peterfriese.github.io/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
+    <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn&#8217;t the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security. <!-- more -->HP is definitely doing something right. Never before has one single Tablet thrilled the interwebs as much as the TouchPad - except for the iPad, of course. Even <a href="http://scobleizer.com/2011/02/09/hp-makes-google-look-even-more-creaky/">die-hard Apple</a> fans are thrilled.</p>
+
+<p>Here&#8217;s why I think HP&#8217;s TouchPad will score a considerable market share:</p>
+
+<ol>
+<li><p>It&#8217;s programmed with web technologies like HTML, CSS and JavaScript. Don&#8217;t get me wrong - the iPad can also be programmed with web technologies: when the iPhone was first released and no one but Apple was allowed to write native apps, Steve himself told everyone that &#8220;mobile web applications are the future&#8221;. And despite the fact Apple has opened it&#8217;s SDK and we can now program the iPad / iPhone in Objective-C, many developers are more interested in writing apps with web technologies. Tools like PhoneGap and Appcelerator try to alleviate this situation, basically allowing you to wrap web code in more or less tiny wrapper apps so your web apps can be submitted to the App Store. However, most apps written using web technologies do not feel the same as real native apps on the iOS platform. So why do I think the situation will be better on the TouchPad? Well, because the TouchPad has been built for running web-based apps! It has been optimized for it. Web apps look stunningly great on the TouchPad. Now, every web developer can download the webOS SDK and get started writing apps for the TouchPad. It&#8217;s a safe bet to assume there are more web developers out there than Objective-C developers, so it shouldn&#8217;t take long until we&#8217;ve got a similar amount of apps for the TouchPad as we&#8217;ve got for the iPad.</p></li>
+<li><p>The manufacturing process. HP has a very powerful production pipeline, capable of pumping out high volumes of devices. In <a href="http://www.itchannelplanet.com/trends/article.php/3920936/Gartner-Global-PC-Shipments-Total-351-Million-Units-in-2010-Gain-138-Percent-US-Q4-PC-Market-Slides-Nearly-7-Percent.htm">Q4/2010, they shipped 17.6</a> million PCs (<a href="http://www.apple.com/pr/library/2011/01/18results.html">Apple sold 7.33 million iPads</a> in the same quarter). So if they are serious about it, it should be easy for HP to both produce and distribute high volumes of TouchPads._</p></li>
+<li><p>Security. When it comes to enterprise computing, security becomes a vital feature of your product. CIOs need to make sure to not compromise their company&#8217;s security by introducing products and devices that have no proper support for security mechanisms. There have always been <a href="http://www.wired.com/gadgetlab/2009/07/iphone-encryption/">security concerns</a> with respect to the iOS platform: for a long time, there hasn&#8217;t been a way to nuke a lost iOS device remotely. <a href="http://support.apple.com/kb/HT4175">It wasn&#8217;t before iOS 4</a> that Apple introduced data protection APIs to secure data that apps store on the device. <a href="">WebOS has several security features built in</a> (not bolted on later) which make it rather attractive for enterprise computing right from the start.</p></li>
+</ol>
+
+
+<p>It&#8217;s my firm belief that the release of the HP TouchPad is a milestone for the perception of personal computing in the long run. It looks great, we&#8217;ll see tons of great apps for it in no time and HP as a major computer vendor has the power to push it to the market.</p>
+
+<p>Good-bye, PC.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What's your number?]]></title>
+    <link href="http://peterfriese.github.io/whats-your-number/"/>
+    <updated>2011-01-27T02:00:47+01:00</updated>
+    <id>http://peterfriese.github.io/whats-your-number</id>
+    <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you&#8217;ve been asking yourself &#8220;what&#8217;s this number, and where do I find it?&#8221;, read on!</p>
+
+<!-- more -->
+
+
+<p>The Unique Device IDentifier is a 40-digit number that uniquely identifies your iPhone or iPad. It&#8217;s tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.</p>
+
+<p>Here&#8217;s how you can find this number and send it to your developer:</p>
+
+<ol>
+<li><p>Connect your iPhone / iPad to your computer using the white USB connection cable.</p></li>
+<li><p>Wait for iTunes to start up. If it doesn&#8217;t start automatically, start it manually (Windows users will find it in the depths of the Start Menu, Mac users can use Spotlight to search for it).</p></li>
+<li><p>Click on the name of your iPhone / iPad on the left-hand side of the iTunes Window: <a href="http://www.flickr.com/photos/81029262@N00/5391569342"><img src="http://farm6.static.flickr.com/5180/5391569342_79b2d97180.jpg" alt="Finding your iPhone's UDID, step 1" /></a></p></li>
+<li><p>Details about your device will be displayed in the main area of the iTunes window.</p></li>
+<li><p>Find the label titled <strong>Serial Number</strong>. The serial number IS NOT the UDID!</p></li>
+<li><p>Holding down the CMD (on the Mac) or the CTRL (on Windows) key, click on the label <strong>Serial Number</strong></p></li>
+<li><p>The label&#8217;s title will change to <strong>Identifier (UDID</strong>:<a href="http://www.flickr.com/photos/81029262@N00/5391652500"><img src="http://farm6.static.flickr.com/5291/5391652500_1c2dbaf918.jpg" alt="Finding your iPhone's UDID, step 2" /></a></p></li>
+<li><p>Press CMD+C (on Mac) or CTRL+C (on Windows) to copy the UDID to your clipboard</p></li>
+<li><p>Open a new mail, insert the UDID and a friendly message and send it to your developer.</p></li>
+</ol>
+
+
+<p>Easy, isn&#8217;t it?</p>
+
+<p>Oh, and please do NOT send a screenshot of the UDID. You should know better now.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Your Windows IDE sucks? Replace it with Your Favorite Editor on the Mac!]]></title>
+    <link href="http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/"/>
+    <updated>2011-01-05T01:11:11+01:00</updated>
+    <id>http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac</id>
+    <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.<!-- more -->The IDE in question is Samsung&#8217;s TV App SDK. Basically, it&#8217;s just a Windows-based Visual-Studio look-alike IDE with editor support for CSS, JavaScript and HTML and an Emulator for Samsung TV kits. Nothing too complicated, really. In fact, the editor is quite OK.</p>
+
+<p>[caption id=&#8221;attachment_647&#8221; align=&#8221;alignleft&#8221; width=&#8221;300&#8221; caption=&#8221;Samsung TV App SDK&#8221;]<a href="http://www.peterfriese.de/wp-content/Samsung-TV-App-SDK.png"><img src="http://www.peterfriese.de/wp-content/Samsung-TV-App-SDK-300x208.png" alt="Samsung TV App SDK" /></a>[/caption]</p>
+
+<p>The part about it that really sucks is the project management. How come tool vendors still think it&#8217;s good style in 2010 to place the projects under <em>Program Files\Samsung TV Apps SDK\Apps</em>? There&#8217;s no way to store your project files in a different location. The project open dialog just won&#8217;t let you navigate to some other place:</p>
+
+<p>[caption id=&#8221;attachment_642&#8221; align=&#8221;alignleft&#8221; width=&#8221;300&#8221; caption=&#8221;Samsung TV App SDK Project Management Dialog&#8221;]<a href="http://www.peterfriese.de/wp-content/Samsung_TV_App_SDK_ProjectManagement.png"><img src="http://www.peterfriese.de/wp-content/Samsung_TV_App_SDK_ProjectManagement-300x219.png" alt="Samsung TV App SDK Project Management Dialog" /></a>[/caption]</p>
+
+<p>So I wanted to be able to edit my files on the Mac (using <a href="http://macromates.com/">TextMate</a>) while still using the good parts of the Samsung TV SDK (i.e., the Emulator).</p>
+
+<p>I&#8217;m using VMware Fusion to run Windows 7 and the Samsung SDK (no, there is no version for the Mac). Most virtualization solutions offer a mechanism to share folders between the host and the guest OS. So I quickly set up folder sharing between my Mac and the guest OS, in this case Windows 7.</p>
+
+<p>Now that I can see the project files both on the Mac and on the Windows machine, how can I make sure I can open the project in the Samsung TV SDK IDE? As I mentioned before, there&#8217;s no way to tell the IDE to open projects form other locations than <em>Program Files\Samsung TV Apps SDK\Apps</em>!</p>
+
+<p>After playing around with some more or less usable folder synchronization utilities, I came up with something most MacOS / Linux users should be familiar with: <a href="http://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a>! While symlinks have been around in Unix-like OSes for ages, they have been rarely known to Windows users for most of the time. However, <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">starting with Windows NT</a>, you can create symbolic links, hard links and junctions using a nifty little tool called <em><a href="http://www.howtogeek.com/howto/windows-vista/using-symlinks-in-windows-vista/">mklink</a></em>. Unfortunately, you&#8217;re not allowed to run <em>mklink</em> if you&#8217;re not an administrator. Using <em>runas</em> (which is Windows&#8217; equivalent of <em>sudo</em>), didn&#8217;t help as the shared folders weren&#8217;t visible to the admin user.</p>
+
+<p>To cut a long story short, I found <a href="http://code.google.com/p/symlinker">Symlinker</a>, a UI tool that helps in creating symlinks on Windows. As it is a UI tool, you can run it with administrator privileges (by selecting Run as Admin from the context menu). Using a <a href="http://en.wikipedia.org/wiki/Path_(computing">UNC</a>) path, you can create a <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">symlink</a> to a VMware shared folder and place this symlink in the location the Samsung IDE expects it to be.</p>
+
+<p>Finally, I can edit my files on the Mac and run the app in Samsung&#8217;s Emulator on my hosted Windows machine. And as the files on my Mac are mapped to the hosted Windows machine via a symlink, I do not suffer a synchronization lag - all files are updated instantaneously :-)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Use the Gyroscope of Your iPhone in a Mobile Web App]]></title>
+    <link href="http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
+    <updated>2010-11-25T13:00:43+01:00</updated>
+    <id>http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
+    <content type="html"><![CDATA[<p>This week&#8217;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they&#8217;re neither directly visible in the iOS UI nor are they mentioned in Apple&#8217;s official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone&#8217;s gyroscope. Read on to see it in action and learn how to use it.<!-- more -->Your iPhone has a number of sensors, some of which are rather essential for the phone&#8217;s operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they&#8217;re certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
+
+<p>Until now, web developers didn&#8217;t have access to the accelerometer sensor and the gyroscope sensor. With this week&#8217;s release of iOS 4.2, this has changed and we can now use <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceMotionEventClassRef/DeviceMotionEvent/DeviceMotionEvent.html">DeviceMotionEvent</a> and <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">DeviceOrientationEvent</a> to determine the acceleration and orientation data of the phone.</p>
+
+<p>Let&#8217;s first determine whether the current browser supports device orientation sensing:</p>
+
+<pre><code>if (window.DeviceMotionEvent==undefined) {
+}
+</code></pre>
+
+<p>We can then read the sensor data by registering the respective callbacks. Here&#8217;s how you read the accelerometer&#8217;s data:</p>
+
+<pre><code>window.ondevicemotion = function(event) {
+  ax = event.accelerationIncludingGravity.x
+  ay = event.accelerationIncludingGravity.y
+  az = event.accelerationIncludingGravity.z
+  rotation = event.rotationRate;
+  if (rotation != null) {
+    arAlpha = Math.round(rotation.alpha);
+    arBeta = Math.round(rotation.beta);
+    arGamma = Math.round(rotation.gamma);
+  }
+}
+</code></pre>
+
+<p>The gyroscope&#8217;s data can be read like this:</p>
+
+<pre><code>window.ondeviceorientation = function(event) {
+  alpha = Math.round(event.alpha);
+  beta = Math.round(event.beta);
+  gamma = Math.round(event.gamma);
+}               
+</code></pre>
+
+<p>I&#8217;ve put together a little demo that uses the sensor data to color some boxes on the phone&#8217;s screen. Here&#8217;s a short video showing it in action:</p>
+
+<p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
+
+<p>(image of Gyroscope by stop that pigeon! taken from http://www.flickr.com/photos/25312309@N05/2651042796/)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Eclipse DemoCamp Hamburg November 2010]]></title>
+    <link href="http://peterfriese.github.io/eclipse-democamp-hamburg-november-2010/"/>
+    <updated>2010-11-15T08:28:17+01:00</updated>
+    <id>http://peterfriese.github.io/eclipse-democamp-hamburg-november-2010</id>
+    <content type="html"><![CDATA[<p>Last Friday was a happy day for Java developers in Hamburg: not only did Apple and Oracle announce their plan to continue development of Java on the Mac OSX platform, but we also had the pleasure to host this fall&#8217;s instance of Eclipse DemoCamp Hamburg in a bookstore!</p>
+
+<!-- more -->
+
+
+<p>We had a nice lineup of four speakers - unfortunately not all of them were able to attend due to a cold, but we were lucky enough to find one additional speaker - thanks Jan!</p>
+
+<p>After a casual meet-and-greet with <a href="http://www.fritz-kola.de/">Fritz Kola</a> and Pretzels, <a href="http://twitter.com/#!/robilad">Dalibor Topic</a> opened the official part of the evening with an overview of what&#8217;s coming up in JDK7 and JDK8. Here&#8217;s a list of things that sound quite interesting:</p>
+
+<ul>
+<li><p>Support for dynamically-typed languages (InvokeDynamic) (<a href="http://openjdk.java.net/projects/mlvm">project page</a>)</p></li>
+<li><p>Small language enhancements (Project Coin) (<a href="http://openjdk.java.net/projects/coin/">project page</a>)</p></li>
+<li><p>An even newer NIO (<a href="http://openjdk.java.net/projects/nio/">project page</a>)</p></li>
+</ul>
+
+
+<p>The good news of the day of course was a <a href="http://blogs.oracle.com/henrik/2010/11/oracle_and_apple_announce_openjdk_project_for_osx.html">press release announcing OpenJDK for Mac OSX</a>. Nevertheless, <a href="http://twitter.com/#!/robilad/status/3129373515321344">Dalibor demoed a freshly built OpenJDK 7 BSD port</a> on his MacBook.</p>
+
+<p><a href="http://www.peterfriese.de/wp-content/IMG_0792.jpg"><img src="http://www.peterfriese.de/wp-content/IMG_0792.jpg" alt="" /></a></p>
+
+<p>After a short break, it was <a href="http://eclipsesource.com/blogs/author/rsternberg/">Ralf Sternberg&#8217;s turn</a> to give an overview of <a href="http://www.eclipse.org/rap/">RAP</a> and explain what Single Sourcing is. With the help of RAP, it is rather easy to bring Eclipse RCP applications to the web. Of course, you&#8217;ll have to pay attention to a few things, as Ralf pointed out: usually, RCP applications are single-user apps, whereas web applications are inherently multi-user enabled. Fortunately, RAP comes with a few utilities that cater for this fact.</p>
+
+<p>One thing I was delighted to learn: not only do RAP applications run on the iPad, but also do they support drawing using the SWT API, as you can see in the following video:</p>
+
+<p>In the last sessions, <a href="http://www.eclipse.org/Xtext/">Xtext</a> committer <a href="http://koehnlein.blogspot.com/">Jan Köhnlein</a> showed us some of the things coming up in Xtext 2.0. Being text-addicted, Jan refrained from using slides and used the IDE instead to deliver his talk:</p>
+
+<p><img src="http://www.peterfriese.de/wp-content/IMG_0804.jpg" alt="Jan Köhnlein talking about Xbase and Xtext" /></p>
+
+<p>Jan showed us how Xbase (no, not <a href="http://en.wikipedia.org/wiki/Xbase">xBase</a>) can be used to develop DSLs (and even GPLs) that not only describe structural features but also behavior. He also demoed Xdoc, a newly invented documentation language, and the fancy new Xtext syntax view (featuring <a href="http://en.wikipedia.org/wiki/Syntax_diagram">railroad diagrams</a>).</p>
+
+<p>After the demoes, we had some time for chats and impromptu hack sessions. Given the event took place in a book store (many thanks to Lehmanns for having us!), you could also browse and buy books.</p>
+
+<p>Thanks to the fact we only had about 40 attendees, there were plenty of chances for networking which people really seemed to enjoy.</p>
+
+<p>I&#8217;d like to thank everybody who attended the DemoCamp or gave a demo! <a href="http://twitter.com/#!/peterfriese">Follow me on twitter</a> to be informed ahead of time for the next DemoCamp!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[Updated] Use your iPhone, Android, or BlackBerry to build Your Eclipse Summit Europe 2010]]></title>
+    <link href="http://peterfriese.github.io/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/"/>
+    <updated>2010-11-01T12:45:02+01:00</updated>
+    <id>http://peterfriese.github.io/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010</id>
+    <content type="html"><![CDATA[<p>As I&#8217;m writing this, Eclipse Summit Europe 2010 is merely hours away and everyone is getting excited to get there and meet Eclipse family.</p>
+
+<p>I think the program committee have done a great job at putting together an exciting conference program with lots of technical sessions, interactive tutorials and inspiring keynotes.</p>
+
+<p>As a special treat for smart phone users, we&#8217;re offering a conference schedule app for iPhone, Android and all other smart phones that come with a browser. <!-- more -->Besides reviewing the <strong>conference schedule</strong> and getting to know the <strong>speakers</strong> you can use the apps to create your very <strong>own personal conference schedule</strong>. Usually, conference attendees will use the printed conference program to mark their favorite talks - and then leave their personalized copy of the program in their hotel room or elsewhere in the conference halls!</p>
+
+<p>This will probably not happen with the smart phone app, although I can recall somebody lost their iPhone at this year&#8217;s EclipseCon&#8230;</p>
+
+<p>Without further ado, here&#8217;s a preview of the iPhone app in action:</p>
+
+<p>You can download the <strong>iPhone app</strong> from the App Store. It is available world-wide and we already have a few downloads from Singapore, Korea and India! For your convenience, <a href="http://bit.ly/ese_app_intl">here&#8217;s the link to the app</a>.</p>
+
+<p>We also prepared a version for <strong>Android</strong> users. Here&#8217;s how it will look like on your Android device:
+<img src="http://www.peterfriese.de/wp-content/ESE_Android.png" alt="ESE_Android.png" /></p>
+
+<p>Head over to the Android Marketplace and search for &#8220;eclipse summit&#8221;, or use your barcode scanner:</p>
+
+<p><img src="http://fs01.androidpit.info/aqr/x16/1078516-1288452914800.png" alt="" /></p>
+
+<p>The <strong>mobile web app</strong> <del>will be available from the Wifi landing page at the conference venue</del> is available via the following URL: <a href="http://bit.ly/ese_app_mobile2">http://bit.ly/ese_app_mobile2/</a>.</p>
+
+<p><img src="http://www.peterfriese.de/wp-content/mobileweb3.png" alt="mobileweb.png" /></p>
+
+<p><del>Rumor has it even BlackBerry users will get a native app.</del> <a href="http://ekkescorner.wordpress.com/2010/11/02/ese-app-for-blackberry/">Ekke</a> has created a native app for BlackBerry.</p>
+
+<p>Using these applications, you&#8217;ll be able to put together <strong>your Eclipse Summit Europe 2010</strong> in no time. Enjoy!</p>
+
+<p>The iPhone, Android and mobile web apps have been built by a dedicated team of software engineers at itemis I have the pleasure to work with. If you want to learn how we build applications like these, attend our sessions:</p>
+
+<ul>
+<li><p>Tuesday, 14:00 - <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1940">Mobile Development Symposium</a></p></li>
+<li><p>Thursday 10:30 - <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1733">Models To Go: How We Built a DSL for Mobile Apps With Tools From the Eclipse</a></p></li>
+</ul>
+
+
+<p>Also, be sure to drop by the new website for our mobile business: <a href="http://mobile.itemis.com">http://mobile.itemis.com</a> and follow us on Twitter: <a href="http://twitter.com/itemismobile">@itemismobile</a>.</p>
+
+<p>Enjoy <del>the</del> your conference!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
+    <link href="http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again/"/>
+    <updated>2010-09-19T22:15:30+02:00</updated>
+    <id>http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again</id>
+    <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
+
+<!-- more -->
+
+
+<p>In April 2010, together with the release of iOS 4, Apple changed the terms of the iOS Developer Program License in a way which basically prohibited creating software for iOS using languages other than Objective-C, C, C++ or JavaScript:</p>
+
+<blockquote><p>3.3.1 — Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs. Applications must be originally written in Objective-C, C, C++, or JavaScript as executed by the iPhone OS WebKit engine, and only code written in C, C++, and Objective-C may compile and directly link against the Documented APIs (e.g., Applications that link to Documented APIs through an intermediary translation or compatibility layer or tool are prohibited).</p></blockquote>
+
+<p>Back then, pretty much everyone was sure this update to section 3.3.1 of the license really was just one strike in <a href="http://www.apple.com/hotnews/thoughts-on-flash/">Apple&#8217;s crusade against Flash</a>. Adobe had been working on a tool called <a href="http://labs.adobe.com/technologies/packagerforiphone/">Flash Packager</a>, which allows Flash designers to cross-compile their applications for the iPhone. While this must have been bad news for Adobe (they effectively needed to write off development costs for the entire development team working on Flash Packager), it posed a serious threat to companies whose business model relied upon creating iPhone apps using tools and languages other than Xcode and Objective-C. The future for Novell&#8217;s <a href="http://monotouch.net/">Mono Touch</a>, <a href="http://www.appcelerator.com/">Appcelerator Titanium</a>, <a href="http://www.phonegap.com/">PhoneGap</a> and <a href="http://www.xmlvm.org/iphone/">XMLVM/iPhone</a> didn&#8217;t look very bright.</p>
+
+<p>No need to say there was quite an uproar and people came up with all sorts of creative interpretations of the terms stated in section 3.3.1 to avoid being rejected from the App Store.</p>
+
+<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn&#8217;t come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a> does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
+
+<blockquote><p>3.3.1 Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs.</p></blockquote>
+
+<p>You might think that a small paragraph in a license agreement doesn&#8217;t mean that much, but I think the new section will fundamentally change the way we write software for the iPhone in the next few years. Let me explain:</p>
+
+<p>The new section 3.3.1 means you may write iOS software using any language you like. Yes, ANY language - there is no if and when. This means you will not only be able to write iOS software in Objective-C (which is a great language as soon as you come to grips with it), but you will be able to use language like Java, Scala, Haskell, Ruby, etc. Some people are <a href="http://twitter.com/mattgemmell/status/24014145904">even dreaming of using REALBasic</a> for iOS apps.</p>
+
+<p>Vendors of tools such as Mono Touch, Titanium and PhoneGap will be glad, as their business models now have a solid foundation (well, Apple may of course change the license again but I doubt they&#8217;ll ever restrict the usage of other languages again). Given the <a href="http://labs.adobe.com/technologies/packagerforiphone/">announcement on Adobe Labs</a>, I guess we will very soon see Adobe release their highly acclaimed Flash Packager for iPhone (I don&#8217;t think people will seriously use this tool to create data-driven applications, but it&#8217;s probably a great tool to develop games. If you&#8217;re a Flash designer / developer, that is).</p>
+
+<p>For the development community at large, this is great news: freedom to choose the language that fits your needs best has always been a cornerstone of successfully creating great software. People have expressed their desire to use languages such as Haskell and Ruby to build iPhone apps. Rumor has it Apple engineers have even been working on a version of MacRuby for iPhone - there you go.</p>
+
+<p>At <a href="http://www.itemis.com">itemis</a>, we&#8217;re very much into programming languages. We&#8217;re even building our own language development toolkit to support development of programming languages - <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we&#8217;ve mainly been using it to create languages for enterprise and web applications. We&#8217;re also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself - isn&#8217;t that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We&#8217;re not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we&#8217;re focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
+
+<p>If you&#8217;re interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
+
+<p>In a few years, I guess, Objective-C will be just one language among many others you can choose from if you want to build iOS applications.</p>
+
+<p>But why would you want to write iOS applications in languages other than Objective-C? There are many reasons:</p>
+
+<ul>
+<li><p>Use the language you feel most comfortable with. Maybe Objective-C&#8217;s square brackets look scary to you?</p></li>
+<li><p>Use the language you have most experience with. Maybe you&#8217;re a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator &#8220;because we&#8217;ve got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C&#8221;!</p></li>
+<li><p>use the language you use for developing your backend system. So you&#8217;ve got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</p></li>
+<li><p>Maybe you&#8217;re a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</p></li>
+</ul>
+
+
+<p>It all boils down to being more productive and ensuring better sustainability. Using the right tool for the job helps you to achieve a faster time to market. If you&#8217;re able to use the same language on the frontend and the backend, this will help you to secure your investment in this technology.</p>
+
+<p>Please note that I&#8217;m not saying you should by all means write your frontend and your backend using the same technology and language. The first and foremost question you need to answer is, &#8220;what&#8217;s the right tool for this job&#8221;. Being able to make a real choice will help you to give a better answer to this question.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Why Your Next App Should be Open Sourced]]></title>
+    <link href="http://peterfriese.github.io/why-your-next-app-should-be-open-sourced/"/>
+    <updated>2010-09-06T15:15:17+02:00</updated>
+    <id>http://peterfriese.github.io/why-your-next-app-should-be-open-sourced</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Watching DVDs on your iPad]]></title>
+    <link href="http://peterfriese.github.io/watching-dvds-on-your-ipad/"/>
+    <updated>2010-08-07T00:22:10+02:00</updated>
+    <id>http://peterfriese.github.io/watching-dvds-on-your-ipad</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve been wanting to watch DVDs on my iPad since I had it. As the iPad doesn&#8217;t have an optical drive, you need to jump through several loopholes to get the trick done, but in the very moment you watch your first DVD on your iPad, something magical happens&#8230;</p>
+
+<!-- more -->
+
+
+<p>At first, I came up with a solution that would allow me to watch DVDs without re-encoding them - I just streamed them from my Mac. Actually, this is very easy with the help of some great open source tools, some of which are already installed on your Mac. But I guess this is a story for another blog post.</p>
+
+<p>If you want to take your DVDs with you on your iPad, streaming them from your Mac isn&#8217;t an option. So I browsed the web to see if I could find an affordable ripper. If you google for &#8221;<a href="http://www.google.com/search?q=dvd+ipad">dvd ipad</a>&#8221;, you&#8217;ll be given an enormous list of hits linking to commercial tools - obviously encoding DVDs for the iPad isn&#8217;t that simple, so companies can make a good business with selling tools. But I didn&#8217;t want to buy any of those tools, so I looked for a solution involving freely available open source tools.</p>
+
+<p>So, if you want to encode your DVDs for your iPad, here are the steps you need to take. It&#8217;s very simple and doesn&#8217;t cost you a single dime:</p>
+
+<ol>
+<li><p><a href="http://handbrake.fr/downloads.php">Download</a> and install Handbrake.</p></li>
+<li><p>In order to encode for the iPad, you need to use an adjusted profile: <a href="http://www.peterfriese.de/wp-content/downloads/handbrake/iPad.plist">iPad.plist</a>.</p></li>
+<li><p>Install this profile into Handbrake (<em>Preset -> Import&#8230;</em> on the main menu)</p></li>
+<li><p>Insert a DVD into your optical drive</p></li>
+<li><p>Click the <em>Source</em> button in Handbrake and select your DVD</p></li>
+<li><p>Handbrake will now scan the DVD for what it thinks is the main feature - you might need to verif this.</p></li>
+<li><p>Select one of the profiles in the profile selection dialog (on the Mac, press the <em>Toggle Presets</em> button on the toolbar). <em>iPad full</em> worked fine for me.</p></li>
+<li><p>You can now fine-tune the settings. For example, the <em>audio</em> tab allows you to add multiple audio tracks to your video</p></li>
+<li><p>Once you&#8217;re done, press <em>Start</em></p></li>
+<li><p>Now it&#8217;s time to go for a walk or having a chat with your friends - ripping the DVD will take some time, depending on your computer</p></li>
+<li><p>When Handbrake is done encoding the video, just double-click the resulting <em>.m4v</em> file to import it to iTunes.</p></li>
+<li><p>As soon as the video shows up in iTunes, you can sync it to your iPad (the iPhone plays the video fine, too)</p></li>
+</ol>
+
+
+<p>Most DVDs do not take up more than 1GB after encoding for the iPad, so you can load quite a number of films even onto small iPads.</p>
+
+<p>Enjoy! Oh, and should I have made your life easier, feel free to <a href="http://flattr.com/thing/2943/Peter-Frieses-Blog">flattr</a> me!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Don't attend the Eclipse DemoCamp in Hamburg this Friday...]]></title>
+    <link href="http://peterfriese.github.io/dont-attend-the-eclipse-democamp-in-hamburg-this-friday/"/>
+    <updated>2010-07-07T02:36:08+02:00</updated>
+    <id>http://peterfriese.github.io/dont-attend-the-eclipse-democamp-in-hamburg-this-friday</id>
+    <content type="html"><![CDATA[<p>&#8230; if you&#8217;re not interested in meeting local (and non-local) Eclipse enthusiasts and committers, learning something about Eclipse, Git, SWT, Qt, e4 and the iPhone, watching some nice Pixar short films in a cosy cinema, and frosty beverages.</p>
+
+<!-- more -->
+
+
+<p>On the other hand, if you <strong>are</strong> interested in at least one of those things, I encourage you to sign up for the DemoCamp <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_Helios_2010/Hamburg">here</a> or <a href="http://www.twitter.com/peterfriese">ping me on Twitter</a> or just send me a mail so I can add you to the list.</p>
+
+<p>Here&#8217;s the detailed program:</p>
+
+<ul>
+<li><p>18:00 - 18:40 Welcome / Short films</p></li>
+<li><p>18:45 - 19:15 <a href="http://twitter.com/vogella">Lars Vogel</a>, Developing with e4</p></li>
+<li><p>19:20 - 19:50 <a href="http://twitter.com/szarnekow">Sebastian Zarnekow</a>, Xtext - A Language Development Framework, Live demo of new and noteworthy features in Xtext</p></li>
+<li><p>19:50 - 20:20 Break + Surprise</p></li>
+<li><p>20:20 - 20:35 <a href="http://www.xing.com/profile/Juergen_Becker">Jürgen Becker</a>, UI with style - a new SWT platform that is based on Qt</p></li>
+<li><p>20:40 - 21:10 <a href="http://twitter.com/ralfebert">Ralf Ebert</a>, Introduction to distributed version control with Git</p></li>
+<li><p>21:15 - 21:45 <a href="http://twitter.com/HBehrens">Heiko Behrens</a>, Build your own iPhone app within minutes - thanks to Eclipse</p></li>
+<li><p>21:45 - open end Closing remarks / Frosty beverages</p></li>
+</ul>
+
+
+<p>The DemoCamp will take place in the <a href="http://www.magazinfilmkunst.de">MAGAZIN Cinema</a> in Hamburg (<a href="http://www.magazinfilmkunst.de/anfahrt.html">directions</a>) and yes, we will show some short films at the beginning of the camp for your entertainment.</p>
+
+<p><a href="http://twitter.com/martinlippert">Martin Lippert</a> and I are happy to be able to present a great lineup of speakers and demos, so do yourself a favor and join us this Friday from 18:00 (6pm).</p>
+
+<p>As always, the event if <strong>free of charge</strong> thanks to the generous support of <a href="http://www.it-agile.de/">it-agile</a>, <a href="http://www.itemis.com">itemis</a> and the <a href="http://www.eclipse.org">Eclipse Foundation</a>.</p>
+
+<p>Looking forward to seeing you on Friday!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The iPad – A Truly Inspiring Device, Thanks to the Lack of Multitasking!?]]></title>
+    <link href="http://peterfriese.github.io/the-ipad-a-truly-inspiring-device-thanks-to-the-lack-of-multitasking/"/>
+    <updated>2010-06-22T18:10:12+02:00</updated>
+    <id>http://peterfriese.github.io/the-ipad-a-truly-inspiring-device-thanks-to-the-lack-of-multitasking</id>
+    <content type="html"><![CDATA[<p>I received my iPad just a few days ago, and despite this short period of time, it already changed the way I work drastically.</p>
+
+<!-- more -->
+
+
+<p>One of the first apps I installed on the iPad was iWork. As on the Mac, iWork is made up of Keynote, Numbers, and Pages. Actually, on the iPad you have to buy them all separately, which  hides the fact the whole suite will cost you 29,97 EUR (which might make many customers shy away from this investment).</p>
+
+<p>You might think that the relatively small screen of the iPad and the fiddly on-screen keyboard would make apps like Pages really hard to use. Strange enough, I found out that my writing productivity is a lot better on the iPad than on the Mac (or any other full-blown computer). Of course, the on-screen keyboard actually is harder to use than a regular computer keyboard. But as soon as you get used to it, your typing speed will get up to 90% of your typing speed on a regular keyboard. But this isn&#8217;t the point. The key advantage is you can start writing anywhere you are: at your desk, on the sofa, even in bed! Basically every time you&#8217;ve got an idea. Ok, you can&#8217;t use it in the shower, which is where I get most ideas. There&#8217;s room for improvement - waterproof iPad, anyone?</p>
+
+<p>The iPad is small enough to be comfortably used on the subway and even in economy class. Try writing an article on an 15.4&#8221; computer on a plane! It&#8217;s virtually impossible, especially as you need to handle all the service interrupts (&#8220;what would you like to drink, Sir?&#8221;) without spilling hot coffee over your keyboard. With the iPad, just slide it in the seat pocket in front of you and you&#8217;re done!</p>
+
+<p>So the form factor of the iPad is a huge benefit.</p>
+
+<p>Another benefit is the lack of multitasking, as strange as this might sound. The fact that the active application consumes the entire screen without any dock icons or status bar items begging for your attention allows you to really focus on the act of writing.</p>
+
+<p>So every time I really want to get some serious writing done, such as an article or a blog post, I&#8217;ll grab my iPad, snug myself on a comfy chair or the sofa and start hacking away at the iPad screen.</p>
+
+<p>The only thing that could use some of Apple&#8217;s UX love is how you can exchange files between your computer and the iPad. The built-in exchange mechanism relies on tethering the device with your computer and synching the files in question using iTunes. Not very state-of-the art, if you ask me. Of course, you can export Pages documents to MobileMe, but even Apple should realize many of their users are fans of DropBox by now. Using DropBox for synching the files only works in one direction, however. Maybe Apple will add support for DropBox in the next release of iWork - this would improve the overall usability of the iPad even more.</p>
+
+<p>Despite all those UX drawbacks, using the iPad for writing has been a truly inspiring experience for me so far.</p>
+]]></content>
+  </entry>
+  
+</feed>

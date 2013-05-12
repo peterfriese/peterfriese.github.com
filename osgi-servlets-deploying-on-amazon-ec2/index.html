@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>OSGi & Servlets: Deploying on Amazon EC2 - Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="Last week, I showed you how to create a very simple OSGi-based servlet and run it locally on Jetty. Today, I will show you how to deploy this &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://peterfriese.github.io/osgi-servlets-deploying-on-amazon-ec2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+  
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Software Architect / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:peterfriese.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">OSGi & Servlets: Deploying on Amazon EC2</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-16T03:04:09+02:00" pubdate data-updated="true">Apr 16<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+  
+  <p>Last week, <a href="http://www.peterfriese.de/osgi-servlets-a-happy-marriage/">I showed you how to create a very simple OSGi-based servlet</a> and run it locally on Jetty. Today, I will show you how to deploy this servlet to an Amazon EC2 instance.</p>
+
+<!-- more -->
+
+
+<p>We will first set up an Amazon EC2 instance and then export the servlet and install it in this instance.</p>
+
+<h2>Setting up an Amazon EC2 instance</h2>
+
+<p>Scott Lewis <a href="http://eclipseecf.blogspot.com/2010/03/osgieclipsert-in-amazon-cloud.html">was kind enough to prepare an Amazon EC2 Machine Image (AMI)</a> that already contains Jetty, Equinox and p2 - everything we need to get our servlet running. So let&#8217;s use this AMI to provision our instance:</p>
+
+<ol>
+<li><p>Sign in to the <a href="https://console.aws.amazon.com/ec2/home">AWS web console</a></p></li>
+<li><p>Click on <em>Launch instance</em> to create a new instance</p></li>
+<li><p>In the <em>Request Instances Wizard</em>, jump over to the <em>Community AMIs</em> tab</p></li>
+<li><p>Type <em>OSGi</em> in the search field to search for <strong><em>ami-69d93600</em></strong></p></li>
+<li><p>Select the AMI</p></li>
+<li><p>In the next step, you get to configure the instance. A small instance will do for now.</p></li>
+<li><p>Leave the <em>Advanced Instance</em> options as-is</p></li>
+<li><p>Next, you need to create a key pair (this will allow you to sign in to the instance using SSH). If you haven&#8217;t created an EC2 instance before, select <em>Create a new Key Pair</em> and follow the instructions. Otherwise, select an existing key pair</p></li>
+<li><p>To access the instance from outside using HTTP and SSH, you need to create and assign a <em>security group</em>. Make sure to add SSH and HTTP port configurations to this security group. Unfortunately, it is not possible to freely choose the port ranges, so we need to edit the security group after we&#8217;re finished with the wizard.</p></li>
+<li><p>On the summary page, review the configuration and click on <em>Launch</em> to actually start your instance.</p></li>
+</ol>
+
+
+<p>After a little while, the newly created instance will show up in the list of AMIs. You can test your instance by opening a terminal window and SSH&#8217;ing to your instance:</p>
+
+<pre><code>ssh -i path/to/your/privatekey.pem root@ec2-xxx-xx-xx-xx.compute-1.amazonaws.com
+</code></pre>
+
+<p>You should be greeted with a prompt like this:</p>
+
+<pre><code>        __|  __|_  )  Fedora 8
+        _|  (     /    32-bit
+       ___|\___|___|
+
+Welcome to an EC2 Public Image
+                      :- )
+   Base
+</code></pre>
+
+<p>Start the EclipseRT server as follows:</p>
+
+<pre><code>cd /env/osgi_eclipsert36_sb_p2_jetty_7_0_1_linux_x86/jetty-distribution-7.0.1.v20091125/
+./eclipsert36.sh
+</code></pre>
+
+<p>Your Eclipse RT Equinox server is now up and running. Time to export the servlet!</p>
+
+<h2>Exporting the servlet</h2>
+
+<p>We will export our simple servlet using a feature based update site, so it can be installed using p2.</p>
+
+<p><strong>First,</strong> create a new feature project, naming it <em>simple.servlet.feature</em>. Provide the following details to the wizard:</p>
+
+<ol>
+<li><p><em>ID:</em> simple.servlet.feature</p></li>
+<li><p><em>Version:</em> 1.0.0.qualifier</p></li>
+<li><p><em>Name:</em> Simple Servlet Feature</p></li>
+<li><p><em>Provider:</em> Your name</p></li>
+</ol>
+
+
+<p>Open the <em>Plug-ins</em> page and add <em>simple.servlet</em> to the list of packages plug-ins.</p>
+
+<p><strong>Now,</strong> we can create the update site. It will only contain the feature we just created. Using the <em>New Update Site</em> wizard, create a new update site project, naming it <em>simple.servlet.updatesite</em>. Add the feature we just created to the list of features on the first page of the <em>site.xml</em> Update Site Map.</p>
+
+<p><strong>When you&#8217;re done with that, </strong>, you can build the update site by pressing the <em>Build All</em> button. This will build the servlet plug-in, the feature and finally the update site. After that, we&#8217;re ready to deploy.</p>
+
+<h2>Installing the servlet</h2>
+
+<p>Installing the servlet into our Amazon EC2 instance is quite easy, as we can leverage p2:</p>
+
+<p><strong>Using your favourite SFTP client,</strong> copy the entire update into the <em>/tmp</em> directory of your Amazon EC2 instance. When that&#8217;s done, hop over to your terminal window that&#8217;s connected to the OSGi console of your Eclipse RT server (remember, we started this server when setting up the Amazon EC2 instance). Issue the following commands:</p>
+
+<pre><code>provaddrepo file:/tmp/simple.servlet.updatesite
+provliu
+provinstall simple.servlet  1.0.0.201004091446
+confapply
+</code></pre>
+
+<p><strong>Make sure you use the correct version identifier, it is likely to be different from the one I used here!</strong></p>
+
+<p>You can now list the installed bundles by invoking <em>ss</em>:</p>
+
+<pre><code>ss
+...
+38      ACTIVE      org.eclipse.equinox.preferences_3.3.0.v20100208
+39      ACTIVE      org.eclipse.equinox.registry_3.5.0.v20100301
+40      ACTIVE      org.eclipse.equinox.security_1.0.200.v20100301
+41      ACTIVE      org.eclipse.equinox.server.examples.hello_1.0.0.201003111015
+42      ACTIVE      org.eclipse.equinox.simpleconfigurator.manipulator_2.0.0.v20100304
+43      ACTIVE      org.eclipse.equinox.util_1.0.100.v20090520-1800
+44      RESOLVED    org.eclipse.osgi.services_3.2.100.v20100108
+45      RESOLVED    org.sat4j.core_2.2.0.v20100225
+46      RESOLVED    org.sat4j.pb_2.2.0.v20100225
+47      RESOLVED    simple.servlet_1.0.0.201004081743
+</code></pre>
+
+<p><strong>Start</strong> the servlet by typing <em>start 47</em> (again, please use the bundle ID issued by <em>ss</em>).</p>
+
+<p><strong>Open a webbrowser</strong> and navigate to ec2-xxx-xx-xx-xx.compute-1.amazonaws.com:8080/simple (the DNS address is the same you used to SSH to your instance) and you should see the servlet output:</p>
+
+<pre><code>Hello from the cloud!
+</code></pre>
+
+<h2>Conclusion</h2>
+
+<p>In this post, you saw how easy it is to create an Amazon EC2 instance and deploy an OSGi-based servlet on it. With this knowledge, you can now start sky-diving into the joys of cloud computing. Have fun!</p>
+
+<p>Most of this information has been taken from the <a href="http://wiki.eclipse.org/EclipseRT_for_Amazon_EC2">Eclipse Wiki</a>. You are encouraged to add your own tips &amp; tricks to this <a href="http://wiki.eclipse.org/EclipseRT_for_Amazon_EC2">wiki page</a>. All you need is an Eclipse Bugzilla account. Setting one up is easy, start <a href="https://bugs.eclipse.org/bugs/createaccount.cgi">here</a>.</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Peter</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-16T03:04:09+02:00" pubdate data-updated="true">Apr 16<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/eclipse/'>Eclipse</a>, <a class='category' href='/blog/categories/osgi/'>OSGi</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://peterfriese.github.io/osgi-servlets-deploying-on-amazon-ec2/" data-via="peterfriese" data-counturl="http://peterfriese.github.io/osgi-servlets-deploying-on-amazon-ec2/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/osgi-servlets-a-happy-marriage/" title="Previous Post: OSGi & Servlets: A Happy Marriage">&laquo; OSGi & Servlets: A Happy Marriage</a>
+      
+      
+        <a class="basic-alignment right articlenav" href="/osgi-servlets-flexibility-by-simplicity/" title="Next Post: OSGi & Servlets: Flexibility by Simplicity">OSGi & Servlets: Flexibility by Simplicity &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
+      </li>
+    
+      <li class="post">
+        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tired-of-typing-speak-to-your-computer/">Tired of Typing? Speak to Your Computer!</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Recommended reading...</h1>
+  <ul id="recommended_reading">
+  	
+      
+  	
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'peterfriese',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'peterfriese';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://peterfriese.github.io/osgi-servlets-deploying-on-amazon-ec2/';
+        var disqus_url = 'http://peterfriese.github.io/osgi-servlets-deploying-on-amazon-ec2/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

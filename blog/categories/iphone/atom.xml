@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: iPhone | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/iphone/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Code Generation 2011 - Don't miss out!]]></title>
+    <link href="http://peterfriese.github.io/code-generation-2011-dont-miss-out/"/>
+    <updated>2011-05-21T12:09:11+02:00</updated>
+    <id>http://peterfriese.github.io/code-generation-2011-dont-miss-out</id>
+    <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven't booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
+
+<p>Quite a number of my colleagues at itemis have been busy preparing for this conference in the past few weeks. Besides working hard to hit the <a href="http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan">Eclipse Release Train milestone for Indigo on June 22nd</a>, the Xtext team brushed up their hands-on sessions "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=17">Xtext Take I: Creating Code Generators with Xtend2</a>" and "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=16">Xtext Take II: Crafting Domain Specific Languages with Xtext and Xbase</a>". If you've been using Xtext, you're well aware of the power you have at your disposal with this tool. Xbase and Xtend2, however, take this experience to a whole new level. So make sure to mark your calendar for these two sessions!</p>
+
+<!-- more -->
+
+
+<p>But not only the Xtext team will share their expertise at CG2011 - Markus and Karsten will be also be in town to give hands-on tutorials and report from their experience:</p>
+
+<ul>
+<li><p><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=22">Type Systems for DSLs (Markus Völter)</a></p></li>
+<li><p><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=8">Graphiti + Xtext: mixing graphical and textual DSLs for sprayers/designers (Karsten Thoms / Bernhard Merkle)</a></p></li>
+<li><p><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=5">Introduction to JetBrains Meta Programming System (MPS) (Markus Völter)</a></p></li>
+</ul>
+
+
+<p>The finale of the conference will be a panel discussion hosted by Markus on the topic of "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=20">Models, DSLs, Transformations: The Next 5 years</a>" - this should be a very interesting and lively discussion!</p>
+
+<p><a href="http://lanyrd.com/people/hbehrens/">Heiko</a> <a href="http://lanyrd.com/people/peterfriese/">and I</a> will present "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">Cross-Platform Mobile Development with DSLs</a>" - a <a href="http://lanyrd.com/2011/cg2011/sdpgm/">fast-paced and fun mixture of slides, live coding (or modeling, if you will), videos and audience interaction</a>. Yes, that's right - the audience will be part of the show. Make sure to bring your web-enabled mobile phone and get the chance to win a price!</p>
+
+<p>To keep track of the conference program(me), we at <a href="http://mobile.itemis.com">itemis mobile</a> have been busy to create a conference planner for your iOS and Android powered mobile phones. Here are the download links:</p>
+
+<ul>
+<li><p>Apple App Store: <a href="http://itunes.apple.com/us/app/code-generation-2011/id436689925?mt=8">Code Generation 2011</a></p></li>
+<li><p>Android Market Place: <a href="https://market.android.com/details?id=de.itemis.mobile.android.cg2011&amp;feature=search_result">Code Generation 2011</a></p></li>
+</ul>
+
+
+<p>[caption id="attachment_764" align="aligncenter" width="500" caption="Code Generation 2011 Apps for iPhone and Android"]<a href="http://www.peterfriese.de/wp-content/cg2011.png"><img src="http://www.peterfriese.de/wp-content/cg2011-e1305966137679.png" alt="Code Generation 2011 Apps for iPhone and Android" /></a>[/caption]</p>
+
+<p>If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? <a href="mailto:mobile@itemis.de">Drop us a note</a> or track us down at the conference (best chance to see us: <a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">come to our talk</a> ;-) ).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
+    <link href="http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
+    <updated>2011-02-25T23:15:57+01:00</updated>
+    <id>http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
+    <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are! <!-- more -->This year, we're providing a rather impressive lineup of mobile apps for iPhone, iPod Touch, iPad (thanks to <a href="http://www.compeople.eu/blog/?p=786">Christian Campo who created a stand-alone iPad app</a>), BlackBerry (<a href="http://ekkes-apps.org/">Ekke is working on a updated version, AFAIK</a>), and all other smart phones that feature a browser.</p>
+
+<p>All apps allow you to browse the program, select your favorite talks and get to know the speakers (with headshots so you recognise them in the hallways). We also have included maps of the convention center as well as Santa Clara.</p>
+
+<p>For a first glimpse, watch our video:</p>
+
+<p>As of today, both iPhone and Android users can download the apps from the Apple App Store respectively the Android Marketplace. Here are the links:</p>
+
+<ol>
+<li><p><a href="http://bit.ly/econ2011iphone">EclipseCon 2011 iPhone App</a></p></li>
+<li><p><a href="http://bit.ly/econ2011android">EclipseCon 2011 Android App</a></p></li>
+</ol>
+
+
+<p>If you don't own an iPhone or Android, you can always use the HTML-only version of the conference program available at <a href="http://bit.ly/econ2011html">http://bit.ly/econ2011html</a>.</p>
+
+<p>The iPad and BlackBerry apps will be available soon, so stay tuned!</p>
+
+<p>By the way, if <strong>you</strong> run a conference and are interested in having an app like this, <a href="http://mobile.itemis.com">get in touch with us</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Appropriate Use of MapKit]]></title>
+    <link href="http://peterfriese.github.io/appropriate-use-of-mapkit/"/>
+    <updated>2011-02-16T11:48:38+01:00</updated>
+    <id>http://peterfriese.github.io/appropriate-use-of-mapkit</id>
+    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you're violating Google's terms of service, I was wondering what in particular was wrong. <!-- more -->At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google's terms of service for Maps</a>, but can you spot what is wrong?</p>
+
+<p>[caption id="attachment_687" align="aligncenter" width="172" caption="What's wrong with this map?"]<a href="http://www.peterfriese.de/wp-content/maps_without_google_logo.png"><img src="http://www.peterfriese.de/wp-content/maps_without_google_logo-172x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a>[/caption]</p>
+
+<p>Maybe you can better see what's wrong when I show you another screenshot, this time obeying the TOS:</p>
+
+<p>[caption id="attachment_688" align="aligncenter" width="169" caption="With logo: well done!"]<a href="http://www.peterfriese.de/wp-content/maps_with_google_logo.png"><img src="http://www.peterfriese.de/wp-content/maps_with_google_logo-169x300.png" alt="Google Maps with logo: well done!" /></a>[/caption]</p>
+
+<p>Can you spot the difference? It's the Google logo!</p>
+
+<p>The reason why it is not shown in the first screenshot is that the bounds for the map are not set correctly. In the offending version of my app, I used a piece of code similar to this one:</p>
+
+<pre><code>- (void)viewDidLoad {
+  [super viewDidLoad];
+  mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+
+  mapView.showsUserLocation=TRUE;
+  mapView.mapType=MKMapTypeStandard;
+  [self.view addSubview:mapView];       
+}
+</code></pre>
+
+<p>Nothing wrong with it, but it lacks one essential line:</p>
+
+<pre><code>- (void)viewDidLoad {
+  [super viewDidLoad];
+  mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+
+  mapView.autoresizingMask = 
+    (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);   
+
+  mapView.showsUserLocation=TRUE;
+  mapView.mapType=MKMapTypeStandard;
+  [self.view addSubview:mapView];       
+}
+</code></pre>
+
+<p>So, next time you write an app that contains Google Maps, make sure the Google logo is visible. You can get the full source code for this example <a href="http://github.com/peterfriese/MapKitSample">on my GitHub page</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What's your number?]]></title>
+    <link href="http://peterfriese.github.io/whats-your-number/"/>
+    <updated>2011-01-27T02:00:47+01:00</updated>
+    <id>http://peterfriese.github.io/whats-your-number</id>
+    <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you've been asking yourself "what's this number, and where do I find it?", read on!</p>
+
+<!-- more -->
+
+
+<p>The Unique Device IDentifier is a 40-digit number that uniquely identifies your iPhone or iPad. It's tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.</p>
+
+<p>Here's how you can find this number and send it to your developer:</p>
+
+<ol>
+<li><p>Connect your iPhone / iPad to your computer using the white USB connection cable.</p></li>
+<li><p>Wait for iTunes to start up. If it doesn't start automatically, start it manually (Windows users will find it in the depths of the Start Menu, Mac users can use Spotlight to search for it).</p></li>
+<li><p>Click on the name of your iPhone / iPad on the left-hand side of the iTunes Window: <a href="http://www.flickr.com/photos/81029262@N00/5391569342"><img src="http://farm6.static.flickr.com/5180/5391569342_79b2d97180.jpg" alt="Finding your iPhone's UDID, step 1" /></a></p></li>
+<li><p>Details about your device will be displayed in the main area of the iTunes window.</p></li>
+<li><p>Find the label titled <strong>Serial Number</strong>. The serial number IS NOT the UDID!</p></li>
+<li><p>Holding down the CMD (on the Mac) or the CTRL (on Windows) key, click on the label <strong>Serial Number</strong></p></li>
+<li><p>The label's title will change to <strong>Identifier (UDID</strong>:<a href="http://www.flickr.com/photos/81029262@N00/5391652500"><img src="http://farm6.static.flickr.com/5291/5391652500_1c2dbaf918.jpg" alt="Finding your iPhone's UDID, step 2" /></a></p></li>
+<li><p>Press CMD+C (on Mac) or CTRL+C (on Windows) to copy the UDID to your clipboard</p></li>
+<li><p>Open a new mail, insert the UDID and a friendly message and send it to your developer.</p></li>
+</ol>
+
+
+<p>Easy, isn't it?</p>
+
+<p>Oh, and please do NOT send a screenshot of the UDID. You should know better now.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Use the Gyroscope of Your iPhone in a Mobile Web App]]></title>
+    <link href="http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
+    <updated>2010-11-25T13:00:43+01:00</updated>
+    <id>http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
+    <content type="html"><![CDATA[<p>This week's release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they're neither directly visible in the iOS UI nor are they mentioned in Apple's official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone's gyroscope. Read on to see it in action and learn how to use it.<!-- more -->Your iPhone has a number of sensors, some of which are rather essential for the phone's operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they're certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
+
+<p>Until now, web developers didn't have access to the accelerometer sensor and the gyroscope sensor. With this week's release of iOS 4.2, this has changed and we can now use <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceMotionEventClassRef/DeviceMotionEvent/DeviceMotionEvent.html">DeviceMotionEvent</a> and <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">DeviceOrientationEvent</a> to determine the acceleration and orientation data of the phone.</p>
+
+<p>Let's first determine whether the current browser supports device orientation sensing:</p>
+
+<pre><code>if (window.DeviceMotionEvent==undefined) {
+}
+</code></pre>
+
+<p>We can then read the sensor data by registering the respective callbacks. Here's how you read the accelerometer's data:</p>
+
+<pre><code>window.ondevicemotion = function(event) {
+  ax = event.accelerationIncludingGravity.x
+  ay = event.accelerationIncludingGravity.y
+  az = event.accelerationIncludingGravity.z
+  rotation = event.rotationRate;
+  if (rotation != null) {
+    arAlpha = Math.round(rotation.alpha);
+    arBeta = Math.round(rotation.beta);
+    arGamma = Math.round(rotation.gamma);
+  }
+}
+</code></pre>
+
+<p>The gyroscope's data can be read like this:</p>
+
+<pre><code>window.ondeviceorientation = function(event) {
+  alpha = Math.round(event.alpha);
+  beta = Math.round(event.beta);
+  gamma = Math.round(event.gamma);
+}               
+</code></pre>
+
+<p>I've put together a little demo that uses the sensor data to color some boxes on the phone's screen. Here's a short video showing it in action:</p>
+
+<p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
+
+<p>(image of Gyroscope by stop that pigeon! taken from http://www.flickr.com/photos/25312309@N05/2651042796/)</p>
+]]></content>
+  </entry>
+  
+</feed>

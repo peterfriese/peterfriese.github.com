@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: MDA | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/mda/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Microsoft excited about modeling]]></title>
+    <link href="http://peterfriese.github.io/microsoft-excited-about-modeling/"/>
+    <updated>2008-09-19T16:04:59+02:00</updated>
+    <id>http://peterfriese.github.io/microsoft-excited-about-modeling</id>
+    <content type="html"><![CDATA[<p>Microsoft <a href="http://clemensreijnen.nl/post/2008/09/Microsoft-joins-the-OMGhellip%3b.aspx">seem to be</a> <a href="http://www.pluralsight.com/community/blogs/dbox/archive/2008/09/06/oslo.aspx">quite excited</a> about modeling these days. Just recently, <a href="http://www.microsoft.com/presspass/press/2008/sep08/09-10OMGModelingPR.mspx">they announced that</a> <a href="http://blogs.msdn.com/stevecook/archive/2008/09/11/microsoft-joins-the-omg.aspx">they have joined the OMG</a>. OMG does NOT stand for Old Modeling Guys, but for <a href="http://www.omg.org/">Object Management Group</a>. This is the standards body that brought you specifications like <a href="http://www.corba.org/">CORBA</a>, <a href="http://www.uml.org/">UML</a>, <a href="http://www.omg.org/mda/">MDA</a> and <a href="http://www.omg.org/bpmn-logo/">BPMN</a>, to name just a few.</p>
+
+<p>But Microsoft does not just talk about modeling, they also put their money where their mouth is: during the last few years, a number of people including <a href="http://blogs.msdn.com/stevecook/">Steve</a> <a href="http://www.domainspecificdevelopment.com/Bios/SteveCook.aspx">Cook</a> and <a href="http://blogs.msdn.com/stuart_kent/">Stuart</a> <a href="http://www.domainspecificdevelopment.com/Bios/StuartKent.aspx">Kent</a> have been working on a toolchain which first has seen the light of day under the somewhat cryptic name <a href="http://msdn.microsoft.com/en-us/vsx/cc677256.aspx">VSX DSL Tools</a>.</p>
+
+<p>VSXDSL Tools are really good at rapidly creating (simple) graphical modeling tools. However, when it came to model transformations and code generation, you were stuck with a somewhat dated technology called <a href="http://msdn.microsoft.com/en-us/library/bb126445.aspx">T4 (Text Templating Transformation Toolkit)</a> - a template language quite similar to JSP and ASP. <a href="http://www.olegsych.com/2007/12/text-template-transformation-toolkit/">T4</a> seriously lacks some important features, like polymorphic dispatch, support for multiple file output and - believe it or not - a decent editor. Well, you can get one from <a href="http://www.t4editor.net/">http://www.t4editor.net/</a>, but who likes to shell out 99 dollars for just an editor?</p>
+
+<p>Now, Microsoft seem to have listened to their users and are coming up with an updated and extended version of the DSL Tools, code-named Oslo.</p>
+
+<p>So what is Oslo? <a href="http://douglaspurdy.com/2008/09/06/what-is-oslo/">Douglas Purdy states that Oslo is</a>:</p>
+
+<ul>
+<li><p>_A tool that helps people define and interact with models in a rich and visual manner _</p></li>
+<li><p>_A language that helps people create and use textual domain-specific languages and data models _</p></li>
+<li><p><em>A relational repository that makes models available to both tools and platform components  Looks to me like they are addressing all the issues MS DSL tools had.</em></p></li>
+</ul>
+
+
+<p>At <a href="http://www.microsoftpdc.com/">PDC 2008</a>, the team will reveal Oslo and all its nice features.</p>
+
+<p>Although I am an <a href="http://www.eclipse.org/pde/pde-ui/committers/committers.php#contributors">Eclipse fan</a> and an <a href="http://www.openarchitectureware.org/">openArchitectureWare</a> committer, I am quite thrilled so see Microsoft make this move to embrace modeling. In my opinion, this will advance MDSD and DSLs quite a deal. A lot of people who may have never heard of DSLs and MDSD will now get in touch with those techniques due to the sheer marketing power of Microsoft. This will also bring some nice competition to the market, which always is a Good Thing (tm).</p>
+
+<p>The <a href="http://www.microsoft.com/presspass/press/2008/sep08/09-10OMGModelingPR.mspx">press release</a> <a href="http://blogs.msdn.com/architectsrule/archive/2008/09/10/microsoft-joins-omg.aspx">states that</a> "to make model-driven development a reality, Microsoft is focused on providing a model-driven platform and visual modeling tools [...]"  - So, welcome to the modeling world, Microsoft!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Some thoughts on the merits of model driven software development]]></title>
+    <link href="http://peterfriese.github.io/some-thoughts-on-the-merits-of-model-driven-software-development/"/>
+    <updated>2008-08-05T15:13:21+02:00</updated>
+    <id>http://peterfriese.github.io/some-thoughts-on-the-merits-of-model-driven-software-development</id>
+    <content type="html"><![CDATA[<p>Scanning my RSS feeds today, I came across <a href="http://katastrophos.net/magnus/blog/2008/08/03/is-model-driven-development-faster/">this</a> post by Magnus Jungsbluth in which he deals with the question "Is Model Driven Development Faster?".  As Magnus points out, the question whether you can be faster by using model driven development points in a wrong direction. Just being faster is not a major goal of model driven development. It's the quality that counts. Model driven development helps you to concentrate on the relevant parts of your software (i.e. the business logic) instead of having to care too much about the architectural plumbing around the business logic. Yes, using a code generator saves you some time. Precious time you will be able to invest into other parts of the software you build. This will amount to a higher quality of your software.  Magnus mentions some more prejudices people have towards model driven software development. Here are a few:</p>
+
+<h4>"Higher level of abstraction = more complicated"</h4>
+
+<p>Now, this is plain wrong. Model driven approaches do not aim at making things more complicated. They aim at making things simpler and easier to achieve. This is what we mean by "raising the level of abstraction". I guess it's the word "abstract" which makes most people think things become more complicated.  <a href="http://en.wikipedia.org/wiki/Abstraction">Wikipedia states that</a> "<em><strong>Abstraction</strong> is the process or result of generalization by <strong>reducing the information content</strong> of a concept or an observable phenomenon, typically in order to <strong>retain only information which is relevant</strong> for a particular purpose.</em>" This definition makes clear that abstraction helps to <em>simplify</em> things in order to concentrate on only the relevant parts.</p>
+
+<p>Consider a subway map: it is an abstraction of a geographical map, leaving out all the superfluous information, just retaining what is needed to find your way in the underground. The subway map is a <strong>domain specific</strong> map, explicitly aimed at a special purpose. If you need to find your way by car, you'd need a different kind of map.</p>
+
+<p><a href="http://www.peterfriese.de/wp-content/subway.png"><img src="http://www.peterfriese.de/wp-content/subway.png" alt="Subway map" /></a></p>
+
+<p>Abstraction in the context of model driven software development means to leave out the superfluous details and concentrate on the relevant parts. Let me give you an example: If you are writing  a software for your HR department, you really shouldn't need to care about writing getters and setters and how exactly to write that m:n relationship mapping in hibernate. Instead, you should concentrate on the names and types of the attributes and the fact that a certain relationship indeed is an m:n relationship.</p>
+
+<h4>"MDSD / DSLs enable business users to write software"</h4>
+
+<p>... do business users (i.e. the people who are going to be using your software) want to write software on their own at all? I don't think so. Modern business live is organized by division of labour, which is a good thing because it allows us to do the things we're good at and specialize ourselves.</p>
+
+<p>Although I don't think business users should programm their own software using MDSD or DSLs, I believe that using MDSD and DSLs will help to bridge the gap between developers and business users. Much is gained if a developer and a business user can look at a graphical or textual model and discuss the business requirements in  language both understand. It is the task of software architects to ensure that the models being used can be written in this very domain specific language.</p>
+
+<p>Oh, and please resist the temptation to provide a graphical language that tries to mirror a textual DSL one-to-one. Graphical syntaxes and textual syntaxes are very different. Things that can very easily be expressed in a graphical language  might look very awkward when mapped to a textual language and vice versa. Don't get me wrong - there's nothing evil about using different concrete syntaxes to provide views on one common / shared model. However, graphical languages are better suited to provide an overview of a system or module, whereas textual languages are better suited to flesh out the details.</p>
+
+<h4>"Versioning is tough, DSLs do not support versioning"</h4>
+
+<p>While it certainly is true that traditional UML tools are not that well suited for collaborative work (much due to the fact that most tools store their models either in a proprietary format or in monster XMI files), this is not true for external textual DSLs.</p>
+
+<p>When using a textual external DSL, your model is plain text. Thus, your models can now be very easily stored in a version control system such as Subversion or CVS. And of course they can be diffed and merged. Using textual DSLs feels very "natural" to programmers after all.</p>
+
+<h4>Conclusion</h4>
+
+<p>So, to sum up: model driven development is neither some kind of obscure art which takes you years to learn and understand. Nor does it make things more complicated. It aims at aking your life easier. It does not neccesarily <em>save</em> you time, but it will help you to better <em>use</em> your time to build better software. One of the reasons your software will be better than before is that your business users will be able to discuss with you using a language you both understand.</p>
+
+<p>That's what model driven software development is about.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Call for Papers / Participation: MDSD Today 08]]></title>
+    <link href="http://peterfriese.github.io/call-for-papers-participation-mdsd-today-08/"/>
+    <updated>2008-07-22T13:48:23+02:00</updated>
+    <id>http://peterfriese.github.io/call-for-papers-participation-mdsd-today-08</id>
+    <content type="html"><![CDATA[<p>From October 15th - 17th, the second workshop on model driven software development "MDSD Today" will take place in Elmshorn near Hamburg, Germany.</p>
+
+<p>The goal of this conference is to provide a platform for professionals (managers, architects and engineers alike) in the field of model driven software development to meet and exchange ideas.</p>
+
+<p>The three day will be organized into the following major blocks:</p>
+
+<ol>
+<li><p>Management Day</p></li>
+<li><p>Research Papers and Industrial Reports</p></li>
+<li><p>MDSD Tutorials</p></li>
+</ol>
+
+
+<p>The management day will feature keynotes by Dr. Axel Uhl (Chief Development Architect with SAP) and Ed Merks (of Eclipse Modeling fame).</p>
+
+<p>Tutorials on various MDSD-related topics (such as model-to-model transformations, model-to-text transformations, external textual DSLs) will be delivered by members of the Eclipse Modeling Project on day 2 and day 3 of the conference.</p>
+
+<p>If you use model driven software development in your daily work, please consider giving a presentation.</p>
+
+<p>If you do not use MDSD and would like to hear about other's experiences, you should consider participating in the conference and take the chance to attend the MDSD tutorials. At EUR 350 for three days, that's a real bargain.</p>
+
+<p>The CfPs and more information on the conference can be found <a href="http://mdsd08.techjava.de/index.php?lang=en">here</a> (english) and <a href="http://mdsd08.techjava.de/index.php?lang=de">here</a> (german).</p>
+
+<p>Hope to see you there!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to distinguish generated code from non-generated code]]></title>
+    <link href="http://peterfriese.github.io/how-to-distinguish-generated-code-from-non-generated-code/"/>
+    <updated>2008-06-28T01:18:55+02:00</updated>
+    <id>http://peterfriese.github.io/how-to-distinguish-generated-code-from-non-generated-code</id>
+    <content type="html"><![CDATA[<p>It is a well-known fact that for most real-life applications, you canot use full code generation - some bits have to implemented in the source, not in the model. I sometimes find it funny to hear us software developers talk about business <em>logic</em>. If the business logic really would be logical in a mathematical sense, we'd be able to do full code generation. Alas, it is not, thus we are required to write some source code.</p>
+
+<p>Over the last years, quite a number of patterns have evolved for integrating generated and non-generated code. Some of them are protected regions, generation gap, recipe frameworks, particial classes and annotated models.</p>
+
+<p>In this post, I want to concentrate on protected regions and the generation gap pattern, as these two have turned out to be used most often in model driven software development.</p>
+
+<p>The question is, how do you distinguish generated code from non-generated code. Looking at average enterprise / JEE applications, one can see that the amount of generated code is much larger than the amount of manually crafted code. The developers working on your projects need to quickly be able to navigate to the places in the source code where they may insert hand crafted code.</p>
+
+<p>Here are two things you can do.</p>
+
+<p><strong>Use Eclipse Color Decorators</strong>
+If you use the generation gap pattern (illustrated below), you should set aside a source directory for all generated code, e.g. <em>src-gen</em>. Hand-crafted code (particularly the classes derived from the generated base classes) go to the <em>src</em> directory as usual.</p>
+
+<p><a href="http://www.peterfriese.de/wp-content/generation_gap.png"><img src="http://www.peterfriese.de/wp-content/generation_gap-300x176.png" alt="The Generation Gap Pattern" /></a></p>
+
+<p>Since all generated code is generated by your code generator, there is no need to check in generated code. You only have to version your model and the manually crafted code. To ensure developers do not accidentally check in generated code, you should add the src-gen directory to your <em>.cvsignore</em> (or <em>.svnignore</em>) file. Having the ignore file, you can now turn on Eclipse color decorators, which is the corner stone of this tip. Here's how:</p>
+
+<ol>
+<li><p>Open the preference dialog (<em>Window > Preferences</em>)</p></li>
+<li><p>Navigate to <em>Team > CVS > Label Decorations</em></p></li>
+<li><p>Tick the <em>Enable font and color decorations</em> checkmark</p></li>
+<li><p>Navigate to <em>General > Appearance > Colors and Fonts</em> by clicking on the <em>Colors and Fonts</em> hyperlink below the check box</p></li>
+<li><p>In this dialog, change the color for <em>Ignored Resource (Foreground)</em> to silver or light gray</p></li>
+</ol>
+
+
+<p>As a result, all ignored resource will appear in light gray (or any other color you might have chosen):
+<a href="http://www.peterfriese.de/wp-content/generated_code_decorated.png"><img src="http://www.peterfriese.de/wp-content/generated_code_decorated-300x173.png" alt="Decorating generated code files" /></a></p>
+
+<p><strong>Use MINT</strong>
+If you use protected regions, you need a way to decorate the parts in your code that won't be touched by the generator. The Eclipse Modeling Framework Technology project (EMFT) has a subcomponent which was written with this in mind - <a href="http://wiki.eclipse.org/Mint">MINT</a>.
+Using MINT, you can highlight the parts of the source code which have been changed by you:
+<a href="http://www.peterfriese.de/wp-content/emf-jdt-outline.png"><img src="http://www.peterfriese.de/wp-content/emf-jdt-outline-300x225.png" alt="Highlighting handcrafted code with MINT" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[openArchitectureWare 4.2 released]]></title>
+    <link href="http://peterfriese.github.io/openarchitectureware-42-released/"/>
+    <updated>2007-09-19T01:04:00+02:00</updated>
+    <id>http://peterfriese.github.io/openarchitectureware-42-released</id>
+    <content type="html"><![CDATA[<p>The <a href="http://www.openarchitectureware.org/">openArchitectureWare</a> <a href="http://www.openarchitectureware.org/staticpages/index.php/team?menu=About_Team">team</a> has released version 4.2 of the well-known <a href="http://de.wikipedia.org/wiki/MDSD">MDSD</a> toolkit.</p>
+
+<p>The new version comes with several major improvements (see below) and is now also fully compatible with the <a href="http://www.eclipse.org/europa/">Eclipse 3.3 Europa release</a> and the corresponding <a href="http://www.eclipse.org/modeling/emf/">EMF 2.3</a>, <a href="http://www.eclipse.org/modeling/mdt/?project=uml2#uml2">UML 2.1</a> and <a href="http://www.eclipse.org/modeling/gmf/">GMF 2.0</a>.</p>
+
+<p>Major new features are:</p>
+
+<ul>
+<li><p> A Debugger for Xpand and Xtend</p></li>
+<li><p>Product Line Engineering (using XWeave and Xvar)</p></li>
+<li><p>Textual DSLs with Xtext</p></li>
+<li><p>Hyperlink navigation in many editors</p></li>
+<li><p>Refactoring for Xpand templates</p></li>
+<li><p>A totally reworked documentation, available as PDF and Eclipse online help</p></li>
+<li><p>3hrs of videos available demonstrating the use of simple to complex features</p></li>
+<li><p>Many <a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&amp;short_desc=&amp;product=GMT&amp;component=OAW&amp;component=oAW-check&amp;component=oAW-classic&amp;component=oAW-default&amp;component=oAW-docs&amp;component=oAW-emf&amp;component=oAW-expressions&amp;component=oAW-extend&amp;component=oAW-gmf&amp;component=oaw-plugins&amp;component=oAW-recipe&amp;component=oAW-samples&amp;component=oAW-uml2&amp;component=oAW-utilities&amp;component=oAW-workflow&amp;component=oAW-xtext&amp;version=4.2&amp;long_desc_type=allwordssubstr&amp;long_desc=&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;order=Importance">bugfixes</a></p></li>
+<li><p>Improved overall performance</p></li>
+</ul>
+
+
+<p>See the <a href="http://www.eclipse.org/gmt/oaw/doc/4.2/nAndN/contents/whatsnew.html">New And Noteworthy</a> for details.</p>
+
+<p>openArchitectureWare can be <a href="http://www.eclipse.org/gmt/oaw/download/">downloaded from the Eclipse website</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

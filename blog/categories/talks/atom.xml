@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Talks | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/talks/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Do Androids Dream of Electric Sheep?]]></title>
+    <link href="http://peterfriese.github.io/do-androids-dream-of-electric-sheep/"/>
+    <updated>2013-03-22T01:33:48+01:00</updated>
+    <id>http://peterfriese.github.io/do-androids-dream-of-electric-sheep</id>
+    <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
+
+<!-- more -->
+
+
+<p>In all of these movies, humans can directly communicate with computers using voice commands (“Tea. Earl Grey, hot”) or more elaborate sentences and the computers will talk back to humans as a result. In some of the movies, the computer is a non-bodily entity (like the ship’s main computer in Star Trek), but sometimes it even is humanoid (like Cmdr. Data in <em>Star Trek</em> or the Replicants in <em>Blade Runner</em>).</p>
+
+<p>In a Pecha Kucha presentation I recently delivered at the OOP conference in Munich, I took on this theme and started my talk with a imaginative conversation between two computer programs that most of you might know very well: Eliza and Siri.</p>
+
+<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/61467056 "></iframe></div></p>
+
+<p>In this Pecha Kucha session, Siri and Eliza join me live on stage to explain why we do not (yet) use the potential of our smart phones.</p>
+
+<p>Much has been said about Siri, so let’s focus on Eliza.</p>
+
+<p>Eliza started as an experiment in 1964, when Joseph Weizenbaum, then professor of computer sciences at the MIT, wrote it as an early attempt to research natural language communication between man and computer (see his ACM paper “ELIZA - A Computer Program For the Study of Natural Language Communication Between Man And Machine”). At its heart, Eliza is program that reacts to specific key words in sentences entered by a human user and will then respond to those keywords according to a predefined script. It’s the script that basically makes up the “personality” of Eliza, the most famous one being <em>Doctor</em>, simulating a rogerian psychoanalyst.</p>
+
+<p>(Weizenbaum was rather surprised to see how people thought that Eliza had a real personality and a capacity for empathy. In reaction, he started to raise uncomfortable questions about our dependence on computers.)</p>
+
+<p>In my Pecha Kucha, I went on to tell my audience to make better use of the capabilities of our smart phones. Most people have stopped thinking about it, but after all, we’re carrying a super computer in our pockets.</p>
+
+<p>So to set a good example, I decided to create <a href="http://elizaapp.com">ElizaApp</a> - an app that can listen to what you say and answer in spoken language. This is going to be a great project, because I’ll show several very interesting things:</p>
+
+<ol>
+<li><p>How to analyse spoken language on a mobile device</p></li>
+<li><p>How to synthesize speech on mobile devices</p></li>
+<li><p>How to integrate a JavaScript engine in your mobile app</p></li>
+<li><p>How to create a Siri-look-alike chat UI</p></li>
+</ol>
+
+
+<p>Over the course of the next few weeks, I will write several posts covering these topics. If there is anything that interests you in particular, feel free to add a comment.</p>
+
+<p>Of course, in the end Eliza will be available on the App Store. In the mean time, be sure to check out <a href="http://elizaapp.com">ElizaApp</a> and register for early access!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A vision of Eclipse]]></title>
+    <link href="http://peterfriese.github.io/a-vision-of-eclipse/"/>
+    <updated>2005-05-10T18:57:55+02:00</updated>
+    <id>http://peterfriese.github.io/a-vision-of-eclipse</id>
+    <content type="html"><![CDATA[<p>Here are some thoughts from <a href="http://www.jax.de/konferenzen/psecom,id,250,nodeid,.html#815">Mike Milinkovich's</a> keynote on Eclipse titled "<a href="http://www.jax.de/konferenzen/jax05/sessions_popup.php?id=1543">A Vision of Eclipse</a>":</p>
+
+<ol>
+<li><p>Primary goal of Eclipse is to build a general purpose tool platform.</p></li>
+<li><p>Writing software is hard - mostly because of all the people you have to talk to.</p></li>
+<li><p>One of the biggest problem in developing software is integrating all the tools you have to use. Eclipse is trying to provide a universal tooling platform to enable all of the tools to talk to each other.</p></li>
+<li><p>Eclipse is never done: there is always a new language to integrate, there is always a new platform to run on.</p></li>
+<li><p>There are around 415 committers on various projects around Eclipse</p></li>
+<li><p>The RCP platform was almost entirely community-driven.</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MDA Transformations in practice]]></title>
+    <link href="http://peterfriese.github.io/mda-transformations-in-practice/"/>
+    <updated>2005-05-02T23:21:26+02:00</updated>
+    <id>http://peterfriese.github.io/mda-transformations-in-practice</id>
+    <content type="html"><![CDATA[<p>Together with <a href="http://www.mbohlen.de/">Matthias Bohlen</a>, I'll be giving a talk on MDA transformation at the <a href="http://www.jax.de">JAX</a> conference in May 2005.</p>
+
+<p>Matthias and I will explain what transformations are and how to use the in modern MDA frameworks. Of course, since both of us are members of the <a href="http://www.andromda.org">AndroMDA</a> <a href="http://team.andromda.org">team</a>, we will show the use of MDA model to code transformations in AndroMDA and explain why the AndroMDA team chose not to use model to model transformations. A german abstract of the talk can be found <a href="http://www.jax.de/konferenzen/psecom,id,272,nodeid,,.html#MG3">here</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

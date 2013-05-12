@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: OSS | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/oss/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Why Your Next App Should be Open Sourced]]></title>
+    <link href="http://peterfriese.github.io/why-your-next-app-should-be-open-sourced/"/>
+    <updated>2010-09-06T15:15:17+02:00</updated>
+    <id>http://peterfriese.github.io/why-your-next-app-should-be-open-sourced</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>

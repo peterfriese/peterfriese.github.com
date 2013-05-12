@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: DSLs | Peter Friese]]></title>
+  <link href="http://peterfriese.github.io/blog/categories/dsls/atom.xml" rel="self"/>
+  <link href="http://peterfriese.github.io/"/>
+  <updated>2013-05-12T16:11:47+02:00</updated>
+  <id>http://peterfriese.github.io/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Writing Xtext Scope Providers with Xtend]]></title>
+    <link href="http://peterfriese.github.io/writing-xtext-scope-providers-with-xtend/"/>
+    <updated>2012-08-15T00:04:55+02:00</updated>
+    <id>http://peterfriese.github.io/writing-xtext-scope-providers-with-xtend</id>
+    <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is an <a href="http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html">important concept</a> in the design of programming languages. In Xtext, scoping is used <a href="http://zarnekow.blogspot.de/2009/01/xtext-corner-2-linking-and-scoping.html">to drive two major parts</a> of your DSL: <a href="http://www.eclipse.org/Xtext/documentation.html#linking">linking</a> and <a href="http://www.eclipse.org/Xtext/documentation.html#contentAssist">content assist</a>. While Xtext applies the <a href="http://en.wikiquote.org/wiki/Alan_Kay">80/20 rule</a> very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you'll have to roll up your sleeves and write your own scope provider.</p>
+
+<!-- more -->
+
+
+<p>Over the years, implementing scope providers has become significantly easier, much thanks to the tiny internal scoping DSL provided by <code>org.eclipse.xtext.scoping.Scopes</code> (<a href="https://github.com/eclipse/xtext/blob/v2.3.0/plugins/org.eclipse.xtext/src/org/eclipse/xtext/scoping/Scopes.java">src</a>). However, collecting the elements that make up a scope can be a very cumbersome task if you have to use Java. Let’s face it - <a href="http://www.cafeaulait.org/slides/hope/02.html">Java has not been built for traversing models.</a></p>
+
+<p>A language much better suited to traversing models is <a href="http://www.eclipse.org/xtend/">Xtend</a>, the newest kid on the X block. If you didn’t yet give it a try, you should do so now - even if you’re not writing an Xtext DSL. Xtend directly translates to Java code and allows you to write very concise code by eliminating much of Java’s ceremony. You can use it to write everything you’d write in Java - from <a href="http://blog.efftinge.de/2011/12/writing-android-uis-with-xtend.html">Android UIs</a> to <a href="http://www.eclipse.org/Xtext/7languagesDoc.html#httpRouting">web applications</a> - so why not write Eclipse plug-ins with Xtend?</p>
+
+<p>To write the scope provider for your language using Xtend, you need to follow a few very simple steps:</p>
+
+<ol>
+<li><p>Disable generating the scope provider stub. Open <code>Generate&lt;YourDSL&gt;.mwe2</code> in the DSL project and find the line</p>
+
+<pre><code> fragment = scoping.ImportNamespacesScopingFragment { }
+</code></pre></li>
+<li><p>Change this line to</p>
+
+<pre><code> fragment = scoping.ImportNamespacesScopingFragment {
+     generateStub = false
+ }
+</code></pre></li>
+<li><p>If you already have a Java-based scope provider, copy the implementation to a safe place and delete the Java file to make room for the new Xtend-based scope provider.</p></li>
+<li><p>Create a new Xtend class <code>&lt;YourDSLPackage&gt;.&lt;YourDSL&gt;ScopeProvider.xtend</code> in the DSL project. Make sure this class inherits from <code>org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider</code>.</p></li>
+<li><p>Start writing your scope provider using Xtend.</p></li>
+<li><p>Don’t forget to smile :-)</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
+    <link href="http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again/"/>
+    <updated>2010-09-19T22:15:30+02:00</updated>
+    <id>http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again</id>
+    <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
+
+<!-- more -->
+
+
+<p>In April 2010, together with the release of iOS 4, Apple changed the terms of the iOS Developer Program License in a way which basically prohibited creating software for iOS using languages other than Objective-C, C, C++ or JavaScript:</p>
+
+<blockquote><p>3.3.1 — Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs. Applications must be originally written in Objective-C, C, C++, or JavaScript as executed by the iPhone OS WebKit engine, and only code written in C, C++, and Objective-C may compile and directly link against the Documented APIs (e.g., Applications that link to Documented APIs through an intermediary translation or compatibility layer or tool are prohibited).</p></blockquote>
+
+<p>Back then, pretty much everyone was sure this update to section 3.3.1 of the license really was just one strike in <a href="http://www.apple.com/hotnews/thoughts-on-flash/">Apple's crusade against Flash</a>. Adobe had been working on a tool called <a href="http://labs.adobe.com/technologies/packagerforiphone/">Flash Packager</a>, which allows Flash designers to cross-compile their applications for the iPhone. While this must have been bad news for Adobe (they effectively needed to write off development costs for the entire development team working on Flash Packager), it posed a serious threat to companies whose business model relied upon creating iPhone apps using tools and languages other than Xcode and Objective-C. The future for Novell's <a href="http://monotouch.net/">Mono Touch</a>, <a href="http://www.appcelerator.com/">Appcelerator Titanium</a>, <a href="http://www.phonegap.com/">PhoneGap</a> and <a href="http://www.xmlvm.org/iphone/">XMLVM/iPhone</a> didn't look very bright.</p>
+
+<p>No need to say there was quite an uproar and people came up with all sorts of creative interpretations of the terms stated in section 3.3.1 to avoid being rejected from the App Store.</p>
+
+<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn't come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a> does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
+
+<blockquote><p>3.3.1 Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs.</p></blockquote>
+
+<p>You might think that a small paragraph in a license agreement doesn't mean that much, but I think the new section will fundamentally change the way we write software for the iPhone in the next few years. Let me explain:</p>
+
+<p>The new section 3.3.1 means you may write iOS software using any language you like. Yes, ANY language - there is no if and when. This means you will not only be able to write iOS software in Objective-C (which is a great language as soon as you come to grips with it), but you will be able to use language like Java, Scala, Haskell, Ruby, etc. Some people are <a href="http://twitter.com/mattgemmell/status/24014145904">even dreaming of using REALBasic</a> for iOS apps.</p>
+
+<p>Vendors of tools such as Mono Touch, Titanium and PhoneGap will be glad, as their business models now have a solid foundation (well, Apple may of course change the license again but I doubt they'll ever restrict the usage of other languages again). Given the <a href="http://labs.adobe.com/technologies/packagerforiphone/">announcement on Adobe Labs</a>, I guess we will very soon see Adobe release their highly acclaimed Flash Packager for iPhone (I don't think people will seriously use this tool to create data-driven applications, but it's probably a great tool to develop games. If you're a Flash designer / developer, that is).</p>
+
+<p>For the development community at large, this is great news: freedom to choose the language that fits your needs best has always been a cornerstone of successfully creating great software. People have expressed their desire to use languages such as Haskell and Ruby to build iPhone apps. Rumor has it Apple engineers have even been working on a version of MacRuby for iPhone - there you go.</p>
+
+<p>At <a href="http://www.itemis.com">itemis</a>, we're very much into programming languages. We're even building our own language development toolkit to support development of programming languages - <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we've mainly been using it to create languages for enterprise and web applications. We're also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself - isn't that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We're not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we're focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
+
+<p>If you're interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
+
+<p>In a few years, I guess, Objective-C will be just one language among many others you can choose from if you want to build iOS applications.</p>
+
+<p>But why would you want to write iOS applications in languages other than Objective-C? There are many reasons:</p>
+
+<ul>
+<li><p>Use the language you feel most comfortable with. Maybe Objective-C's square brackets look scary to you?</p></li>
+<li><p>Use the language you have most experience with. Maybe you're a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator "because we've got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C"!</p></li>
+<li><p>use the language you use for developing your backend system. So you've got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</p></li>
+<li><p>Maybe you're a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</p></li>
+</ul>
+
+
+<p>It all boils down to being more productive and ensuring better sustainability. Using the right tool for the job helps you to achieve a faster time to market. If you're able to use the same language on the frontend and the backend, this will help you to secure your investment in this technology.</p>
+
+<p>Please note that I'm not saying you should by all means write your frontend and your backend using the same technology and language. The first and foremost question you need to answer is, "what's the right tool for this job". Being able to make a real choice will help you to give a better answer to this question.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Xtext Tricks #1: Enhancing Completion Proposals]]></title>
+    <link href="http://peterfriese.github.io/xtext-tricks-1-enhancing-completion-proposals/"/>
+    <updated>2009-10-27T17:55:43+01:00</updated>
+    <id>http://peterfriese.github.io/xtext-tricks-1-enhancing-completion-proposals</id>
+    <content type="html"><![CDATA[<p>Those of you who <a href="htp://twitter.com/peterfriese">follow me on Twitter</a> might have noticed <a href="http://twitter.com/peterfriese/status/4889552469">I am working on an Xtext based DSL</a> for <a href="http://en.wikipedia.org/wiki/Behavior_driven_development">Behaviour Driven Development</a>. Part of the DSL allows the DSL user to define actors and the verbs these actors can execute. Actors can have a hierarchy (much like a class hierarchy), meaning an actor will inherit all verbs of it's super actors. As the list of verbs can grow quite a bit, the content assist drop down menu becomes a bit overwhelming.</p>
+
+<p>[</p>
+
+<p><img src="http://farm3.static.flickr.com/2581/4029808851_22fd514946.jpg" alt="XtextProposalProviderBefore" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/4029808851)</p>
+
+<p>To alleviate  this situation, I decided to display the "owner" of a verb along with the name of the verb in the content assist drop down box. Here is my first try:</p>
+
+<!-- more -->
+
+
+<pre><code>public class StoryDslProposalProvider extends AbstractStoryDslProposalProvider {
+  @Override
+  protected ICompletionProposal createCompletionProposal(EObject element, String proposal, String displayString, ContentAssistContext contentAssistContext) 
+  {
+    if (element instanceof Verb) {
+      Verb verb = (Verb) element;
+      Subject owner = ((Subject)verb.eContainer());
+      String myDisplayString = verb.getName() + ": " + owner.getName();
+      return super.createCompletionProposal(element, proposal, myDisplayString, contentAssistContext);
+    }
+    return super.createCompletionProposal(element, proposal,  displayString, contentAssistContext);
+  }
+}
+</code></pre>
+
+<p>With this piece of code in place, the content assist proposals for verbs will now display the name of the "owner" to the right of the replacement text:</p>
+
+<p>[</p>
+
+<p><img src="http://farm4.static.flickr.com/3526/4030575068_2358208f22.jpg" alt="XtextContentAssistAfter" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/4030575068)</p>
+
+<p><a href="http://zarnekow.blogspot.com/">Sebastian</a> pointed out that there is a <code>getDisplayString()</code> in <code>AbstractContentProposalProvider</code> that you should override in order to create a custom display string. It turned out, however, that this method will not be called as expected. I <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=293380">filed a bug</a>, so expect to see a fix in one of the next milestones of the Xtext 0.8.0 stream.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Everything You Always Wanted To Know About Modeling (But Were Afraid To Ask)]]></title>
+    <link href="http://peterfriese.github.io/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask/"/>
+    <updated>2009-10-14T00:18:52+02:00</updated>
+    <id>http://peterfriese.github.io/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
+    <content type="html"><![CDATA[<ol>
+<li><p>Does Model Driven Software Development actually work?</p></li>
+<li><p>Are some developers more productive than others?</p></li>
+<li><p>What happens during code generation?</p></li>
+<li><p>Do diagrams and text go together well?</p></li>
+<li><p>What happens during model transformation?</p></li>
+<li><p>What are DSLs? And can I create them with Eclipse?</p></li>
+<li><p>Does modeling scale in the enterprise?</p></li>
+</ol>
+
+
+<p>You guessed it, these are not the questions from a <a href="http://en.wikipedia.org/wiki/Everything_You_Always_Wanted_to_Know_About_Sex*_(*But_Were_Afraid_to_Ask">well-know Woody Allen movie</a>), but questions that will be answered at the <a href="http://wiki.eclipse.org/Eclipse_Modeling_Day">Eclipse Modeling Days</a> which will be held in <a href="http://wiki.eclipse.org/Eclipse_Modeling_Day#New_York_City">New York</a> and <a href="http://wiki.eclipse.org/Eclipse_Modeling_Day#Toronto">Toronto</a> in November.</p>
+
+<!-- more -->
+
+
+<p>So if you are wondering why everybody in Europe is so thrilled about Modeling, attend to one of these events - you'll get the answers there.</p>
+
+<p>For your convenience, here is a list of some of the talks:</p>
+
+<ul>
+<li><p>Case Study: Model Transformations - Richard Woods, Credit Suisse</p></li>
+<li><p>Building DSLs with Xtext - Heiko Behrens, itemis</p></li>
+<li><p>Modeling on an enterprise scale - Eike Stepper, Eclipse Modeling Project</p></li>
+<li><p>Query, Transaction and Validation - Bernd Kolb &amp; Boris Gruschko, both SAP</p></li>
+<li><p>Agent-Based Computer Simulation for Operational Risk Analysis - Ed MacKerrow, Los Alamos Labs</p></li>
+<li><p>Papyrus: Advent of an Open Source IME - Kenn Hussey, Zeligsoft</p></li>
+<li><p>B3: A Model for Unbreakable Builds</p></li>
+<li><p>There's a Modeling Solution for That - Bruce Trask, MDE Systems &amp; Angel Roman, MDE Systems</p></li>
+</ul>
+
+
+<p>If you ask me, this is a pretty decent line-up, both content-wise and people-wise. Not being one of the big conferences, the Modeling Days will actually give you the chance to talk to the experts and other end-users. Remember, networking is key.</p>
+
+<p>So go ahead and register by adding your name to <a href="http://wiki.eclipse.org/Eclipse_Modeling_Day">this wiki page</a>. Registration is free, but you need to register in order to help the organizers to plan the catering. If you don't have an account for editing the wiki page or don't want to create one, just send mail to <a href="mailto:eclipse_modeling_nyc@eclipse.org">eclipse_modeling_nyc@eclipse.org</a> or <a href="mailto:eclipse_modeling_toronto@eclipse.org">eclipse_modeling_toronto@eclipse.org</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Xtext @ Google]]></title>
+    <link href="http://peterfriese.github.io/xtext-google/"/>
+    <updated>2009-09-04T16:46:02+02:00</updated>
+    <id>http://peterfriese.github.io/xtext-google</id>
+    <content type="html"><![CDATA[<p>Last week I had the chance to speak at the <a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009">EclipseDay at the GooglePlex</a> in <a href="http://maps.google.com/?q=Google+Inc.%4037.423156,-122.084917&amp;hl=en&amp;ie=UTF8&amp;ll=37.42216,-122.085764&amp;spn=0.005283,0.011362&amp;t=h&amp;z=17">Mountain View, CA</a>, an event organized by the <a href="http://www.eclipse.org">Eclipse Foundation</a> and hosted by <a href="http://code.google.com/opensource/">Google's Open Source Programs Office</a>.  Google is a truly amazing company and the GooglePlex is a very exciting place to be at. As I was one day early and needed a creative place to put finishing touches on my slides, I took the chance to visit <a href="http://konigsberg.blogspot.com/">Robert Konigsberg</a> who was kind enough to host me for that day.  The organizers put together a great agenda with lots of interesting talks. <a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts">Looking at the agenda</a>, you will see that there actually are three major topics, <strong>Eclipse in the Enterprise</strong>, <strong>Modeling</strong> and <strong>Runtime</strong>:  The talks</p>
+
+<ul>
+<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Eclipse_in_the_Enterprise:_Lessons_from_Google">Eclipse in the Enterprise: Lessons from Google</a></p></li>
+<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Distributed_OSGi_in_the_Eclipse_Runtime_Project">Distributed OSGi</a></p></li>
+<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Deploying_Successful_Enterprise_Tools">Deploying Successful Enterprise Tools</a></p></li>
+<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Build_and_Provision:_Two_Sides_of_the_Coin_We_Love_to_Hate">Build and Provision</a></p></li>
+</ul>
+
+
+<p>all dealt with how Eclipse can be used in the Enterprise or which challenges you will face if you start using Eclipse in large-scale scenarios.</p>
+
+<!-- more -->
+
+
+<p>The talks</p>
+
+<ul>
+<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Developing_DSLs_with_Eclipse">Developing DSLs with Eclipse</a></p></li>
+<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Eclipse_in_NASA_Mission_Control">Eclipse in NASA Mission Control</a></p></li>
+<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Build_and_Provision:_Two_Sides_of_the_Coin_We_Love_to_Hate">Build and Provision</a></p></li>
+</ul>
+
+
+<p>either directly had modeling as their topic or used modeling technology to solve their problems. I especially liked the NASA talk which featured a number of computer animated videos of recent or future missions. The NASA mission control software is heavily based on Eclipse and technology form the Eclipse Modeling Project.  Finally, there were some talk on runtime technology:</p>
+
+<ul>
+<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#OSGi_for_Eclipse_Developers">OSGi for Eclipse Developers</a></p></li>
+<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Developing_for_Android_with_Eclipse">Developing for Android with Eclipse</a></p></li>
+<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Google_Plugin_for_Eclipse:_Not_Just_for_Newbies_Any_More">Google Plugin for Eclipse: Not Just for Newbies Any More</a></p></li>
+</ul>
+
+
+<p>Attending great talks of course is one of the major benefits of going to a conference like this. To me, meeting other people and connecting has become even more important than attending great talks. Of course, this is nothing new to event organizers and so there were many chances to grab a drink and chat with the other attendees. With more than 170 people attending, it was hard to have a chat with everyone, but nevertheless I managed to talk to a number of people, many of which already are Xtext users or are now planing to have a detailed look at it. Even Google is using Xtext, but ssshh!  Overall, I really enjoyed my two days at Google and look forward to more events like this. Speaking of which, <a href="http://www.eclipsecon.org/summiteurope2009/">Eclipse Summit Europe is approaching fast</a>, so make sure you register on time. Also, if you're interested in Modeling and DSLs, we're organizing a Modeling / DSL Day in North America this coming fall - see <a href="http://www.peterfriese.de/eclipse-modeling-day-in-north-america/">my previous post</a> for more info.  And finally, here are the slides and the video of my talk:</p>
+]]></content>
+  </entry>
+  
+</feed>
