@@ -10,29 +10,28 @@ categories:
 - Android
 - Conferences
 - Eclipse
-- iPhone
+- iOS
 - Mobile
+teaserimage: /images/2011-02-25-save-a-tree-put-eclipsecon-2011-in-your-pocket/EclipseCon_150x150.png
+
 ---
 
-After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are! <!-- more -->This year, we're providing a rather impressive lineup of mobile apps for iPhone, iPod Touch, iPad (thanks to [Christian Campo who created a stand-alone iPad app](http://www.compeople.eu/blog/?p=786)), BlackBerry ([Ekke is working on a updated version, AFAIK](http://ekkes-apps.org/)), and all other smart phones that feature a browser.
+After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are! 
+
+<!-- more -->
+
+This year, we're providing a rather impressive lineup of mobile apps for iPhone, iPod Touch, iPad (thanks to [Christian Campo who created a stand-alone iPad app](http://www.compeople.eu/blog/?p=786)), BlackBerry ([Ekke is working on a updated version, AFAIK](http://ekkes-apps.org/)), and all other smart phones that feature a browser.
 
 All apps allow you to browse the program, select your favorite talks and get to know the speakers (with headshots so you recognise them in the hallways). We also have included maps of the convention center as well as Santa Clara.
 
 For a first glimpse, watch our video:
 
-
+{% vimeo 20377509 %}
 
 As of today, both iPhone and Android users can download the apps from the Apple App Store respectively the Android Marketplace. Here are the links:
-
-
-
 	
   1. [EclipseCon 2011 iPhone App](http://bit.ly/econ2011iphone)
-
-	
   2. [EclipseCon 2011 Android App](http://bit.ly/econ2011android)
-
-
 
 If you don't own an iPhone or Android, you can always use the HTML-only version of the conference program available at [http://bit.ly/econ2011html](http://bit.ly/econ2011html).
 
