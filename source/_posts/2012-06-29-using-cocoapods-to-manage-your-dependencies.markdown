@@ -81,6 +81,6 @@ Wasn't that a lot easier than all the other ways to install third party librarie
 
 If you are curious which libraries are supported by CocoaPods, go to [CocoaPods.org](http://cocoapods.org) - they have a nice little UI for searching their pod specification repository. If you are more include to using the command line, you are welcome to use `pod search <yoursearchterm>` to search for a specific library.
 
-If your preferred library is not yet supported, why not help them out and build a pod spec? [CocoaPods](https://github.com/CocoaPods/CocoaPods) itself and the [pod spec repository](https://github.com/CocoaPods/Specs) are hosted on Github, so adding new pod specifications is really easy. The CocoaPods wiki has a section on [creating](https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format) and [publishing](https://github.com/CocoaPods/CocoaPods/wiki/Sharing-pod-specifications) new podspec files.
+If your preferred library is not yet supported, why not help them out and build a pod spec? [CocoaPods](https://github.com/CocoaPods/CocoaPods) itself and the [pod spec repository](https://github.com/CocoaPods/Specs) are hosted on Github, so adding new pod specifications is really easy. The CocoaPods wiki has a section on [creating](https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format) and [publishing](https://github.com/CocoaPods/CocoaPods/wiki/Sharing-pod-specifications-with-yourself-and-the-world) new podspec files.
 
 Now go and create awesome stuff!

@@ -38,9 +38,13 @@ It's a straight-forward approach to filtering an array of items (in this case, w
 
 ## Simple filtering with NSPredicate
 
-Thanks to Cocoa, we can simplify the code by using [NSPredicate](http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSPredicate_Class/Reference/NSPredicate.html). `NSPredicate` is the object representation of an if-statement, or, more formally, a predicate.
+Thanks to Cocoa, we can simplify the code by using [NSPredicate][1]. `NSPredicate` is the object representation of an if-statement, or, more formally, a predicate.
 
-Predicates are [expressions that evaluate to a truth value](http://en.wikipedia.org/wiki/Predicate_(mathematical_logic)), i.e. `true` or `false`. We can use them to perform validation and filtering. In Cocoa, we can use `NSPredicate` to evaluate single objects, filter arrays and perform queries against Core Data data sets.
+  [1]: http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSPredicate_Class/Reference/NSPredicate.html
+
+Predicates are [expressions that evaluate to a truth value][1], i.e. `true` or `false`. We can use them to perform validation and filtering. In Cocoa, we can use `NSPredicate` to evaluate single objects, filter arrays and perform queries against Core Data data sets.
+
+  [2]: http://en.wikipedia.org/wiki/Predicate_(mathematical_logic)
 
 Let's have a look at how our example looks like when using `NSPredicate`:
 
@@ -55,7 +59,9 @@ Much shorter and better readable!
 
 ## Filtering with Regular Expressions
 
-Regular Expressions can be used to [solve almost any problem ;-)](http://xkcd.com/208/) so it's good to know you can use them in `NSPredicate`s as well. To use regular expressions in your `NSPredicate`, you need to use the `MATCHES` operator.
+Regular Expressions can be used to [solve almost any problem ;-)][3] so it's good to know you can use them in `NSPredicate`s as well. To use regular expressions in your `NSPredicate`, you need to use the `MATCHES` operator.
+
+  [3]: http://xkcd.com/208/
 
 Let's filter all books that are about iPad or iPhone programming:
 
@@ -66,7 +72,9 @@ Let's filter all books that are about iPad or iPhone programming:
     dumpBookshelf(@"Books that contain 'iPad' or 'iPhone' in their title", filtered);
 ```
 
-You need to obey some rules when using regular expressions in `NSPredicate`: most importantly, [you cannot use regular expression metacharacters inside a pattern set](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/Articles/pUsing.html#//apple_ref/doc/uid/TP40001794-SW9).
+You need to obey some rules when using regular expressions in `NSPredicate`: most importantly, [you cannot use regular expression metacharacters inside a pattern set][4].
+
+  [4]: http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/Articles/pUsing.html#//apple_ref/doc/uid/TP40001794-SW9
 
 ## Filtering using set operations
 
@@ -82,7 +90,10 @@ Let's for a moment assume you want to filter all books that have been published 
 
 ## Advanced filtering thanks to KVC goodness
 
-`NSPredicate` relies on [key-value coding](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/KeyValueCoding.html) to achieve its magic. On one hand this means your classes need to be [KVC compliant](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/Compliant.html#//apple_ref/doc/uid/20002172-BAJEAIEE) in order to be queried using `NSPredicate` (at least the attributes you want to query). On the other hand, this allows us to perform some very interesting things with very little lines of code.
+`NSPredicate` relies on [key-value coding][5] to achieve its magic. On one hand this means your classes need to be [KVC compliant][6] in order to be queried using `NSPredicate` (at least the attributes you want to query). On the other hand, this allows us to perform some very interesting things with very little lines of code.
+
+  [5]: http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/KeyValueCoding.html
+  [6]: http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/Compliant.html#//apple_ref/doc/uid/20002172-BAJEAIEE
 
 Let's for example retrieve a list of books written by authors with the name "Mark":
 
@@ -103,11 +114,16 @@ In case we'd want to return the value of one of the aggregate functions, we don'
 
 The Cocoa libraries provide some very powerful abstractions which can make your life and that of the people reading your code much easier. It pays off to know about them, so go ahead and browse the Cocoa documentation and hunt for those gems!
 
-Apple's [NSPredicate programming guide](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html) provides an in-depth documentation for `NSPredicate` containing all the things I didn't cover in this post.
+Apple's [NSPredicate programming guide][7] provides an in-depth documentation for `NSPredicate` containing all the things I didn't cover in this post.
+
+  [7]: http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html
 
 `NSPredicate` also plays an important role when querying data in Core Data, something we will need to have a look at in one of the next blog posts. Stay tuned!
 
 
 ## Code
 
-The code for this post is available on my github page: [get forking](http://github.com/peterfriese/NSPredicateDemo)!
+The code for this post is available on my github page: [get forking][8]!
+
+  [8]: http://github.com/peterfriese/NSPredicateDemo
+

@@ -27,20 +27,12 @@ Code Generation 2011 is [just around the corner](http://www.codegeneration.net/c
 
 Quite a number of my colleagues at itemis have been busy preparing for this conference in the past few weeks. Besides working hard to hit the [Eclipse Release Train milestone for Indigo on June 22nd](http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan), the Xtext team brushed up their hands-on sessions "[Xtext Take I: Creating Code Generators with Xtend2](http://www.codegeneration.net/cg2011/sessioninfo.php?session=17)" and "[Xtext Take II: Crafting Domain Specific Languages with Xtext and Xbase](http://www.codegeneration.net/cg2011/sessioninfo.php?session=16)". If you've been using Xtext, you're well aware of the power you have at your disposal with this tool. Xbase and Xtend2, however, take this experience to a whole new level. So make sure to mark your calendar for these two sessions!
 <!-- more -->
+
 But not only the Xtext team will share their expertise at CG2011 - Markus and Karsten will be also be in town to give hands-on tutorials and report from their experience:
-
-
-
 	
-  * [Type Systems for DSLs (Markus Völter)](http://www.codegeneration.net/cg2011/sessioninfo.php?session=22)
-
-	
-  * [Graphiti + Xtext: mixing graphical and textual DSLs for sprayers/designers (Karsten Thoms / Bernhard Merkle)](http://www.codegeneration.net/cg2011/sessioninfo.php?session=8)
-
-	
-  * [Introduction to JetBrains Meta Programming System (MPS) (Markus Völter)](http://www.codegeneration.net/cg2011/sessioninfo.php?session=5)
-
-
+* [Type Systems for DSLs (Markus Völter)](http://www.codegeneration.net/cg2011/sessioninfo.php?session=22)
+* [Graphiti + Xtext: mixing graphical and textual DSLs for sprayers/designers (Karsten Thoms / Bernhard Merkle)](http://www.codegeneration.net/cg2011/sessioninfo.php?session=8)
+* [Introduction to JetBrains Meta Programming System (MPS) (Markus Völter)](http://www.codegeneration.net/cg2011/sessioninfo.php?session=5)
 
 The finale of the conference will be a panel discussion hosted by Markus on the topic of "[Models, DSLs, Transformations: The Next 5 years](http://www.codegeneration.net/cg2011/sessioninfo.php?session=20)" - this should be a very interesting and lively discussion!
 
@@ -48,15 +40,11 @@ The finale of the conference will be a panel discussion hosted by Markus on the 
 
 To keep track of the conference program(me), we at [itemis mobile](http://mobile.itemis.com) have been busy to create a conference planner for your iOS and Android powered mobile phones. Here are the download links:
 
+* Apple App Store: [Code Generation 2011](http://itunes.apple.com/us/app/code-generation-2011/id436689925?mt=8)
+* Android Market Place: [Code Generation 2011](https://market.android.com/details?id=de.itemis.mobile.android.cg2011&feature=search_result)
 
-
-	
-  * Apple App Store: [Code Generation 2011](http://itunes.apple.com/us/app/code-generation-2011/id436689925?mt=8)
-
-	
-  * Android Market Place: [Code Generation 2011](https://market.android.com/details?id=de.itemis.mobile.android.cg2011&feature=search_result)
-
-
-[caption id="attachment_764" align="aligncenter" width="500" caption="Code Generation 2011 Apps for iPhone and Android"][![Code Generation 2011 Apps for iPhone and Android](http://www.peterfriese.de/wp-content/cg2011-e1305966137679.png)](http://www.peterfriese.de/wp-content/cg2011.png)[/caption]
+{% fancyalbum 300x300 %}
+/images/2011-05-21-code-generation-2011-dont-miss-out/cg2011.png: Code Generation 2011 Apps for iPhone and Android
+{% endfancyalbum %}
 
 If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? [Drop us a note](mailto:mobile@itemis.de) or track us down at the conference (best chance to see us: [come to our talk](http://www.codegeneration.net/cg2011/sessioninfo.php?session=28) ;-) ).
