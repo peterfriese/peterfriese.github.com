@@ -1,13 +1,15 @@
+{% if post.asins %}
+	{% assign asins = post.asins %}
+{% elsif page.asins %}
+	{% assign asins = page.asins %}
+{% else %}
+  {% assign asins = site.asins %}
+{% endif %}
+
+{% if asins %}
 <section>
-  <h1>Recommended reading...</h1>
-  <ul id="recommended_reading">
-  	{% if post.asins %}  	
-  		{% assign asins = post.asins %}
-  	{% elsif page.asins %}
-  		{% assign asins = page.asins %}
-    {% else %}
-      {% assign asins = site.asins %}
-  	{% endif %}
+  <h1>Recommended reading</h1>
+  <ul id="recommended_reading">    
     {% for asin in asins limit: site.recommended_reading %}
       <li class="recommended_reading">
       <p> 
@@ -21,3 +23,4 @@
     {% endfor %}
   </ul>
 </section>
+{% endif %}
