@@ -4,7 +4,7 @@
   <title><![CDATA[Category: NSArray | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/nsarray/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-05-12T22:26:47+02:00</updated>
+  <updated>2013-06-13T09:53:59+02:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -49,7 +49,7 @@ for (Book *book in bookshelf) {
 
 <p>Thanks to Cocoa, we can simplify the code by using <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSPredicate_Class/Reference/NSPredicate.html">NSPredicate</a>. <code>NSPredicate</code> is the object representation of an if-statement, or, more formally, a predicate.</p>
 
-<p>Predicates are <a href="http://en.wikipedia.org/wiki/Predicate_(mathematical_logic">expressions that evaluate to a truth value</a>), i.e. <code>true</code> or <code>false</code>. We can use them to perform validation and filtering. In Cocoa, we can use <code>NSPredicate</code> to evaluate single objects, filter arrays and perform queries against Core Data data sets.</p>
+<p>Predicates are <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSPredicate_Class/Reference/NSPredicate.html">expressions that evaluate to a truth value</a>, i.e. <code>true</code> or <code>false</code>. We can use them to perform validation and filtering. In Cocoa, we can use <code>NSPredicate</code> to evaluate single objects, filter arrays and perform queries against Core Data data sets.</p>
 
 <p>Let's have a look at how our example looks like when using <code>NSPredicate</code>:</p>
 

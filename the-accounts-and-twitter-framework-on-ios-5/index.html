@@ -140,7 +140,7 @@
 
 <h2>Using the Accounts Framework to fetch the list of accounts</h2>
 
-<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you&#8217;ll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will easy access to Google+ and Facebook accounts -  we&#8217;ll see.</p>
+<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you&#8217;ll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will provide easy access to Google+ and Facebook accounts -  we&#8217;ll see.</p>
 
 <p>To use the Accounts and Twitter frameworks, we need to add them to the project:</p>
 
@@ -193,29 +193,48 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>As many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we&#8217;re interested in - <code>ACAccountTypeIdentifierTwitter</code> in our case. If we&#8217;re granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we&#8217;ve got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we&#8217;re on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
+<p>Just like many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we&#8217;re interested in - <code>ACAccountTypeIdentifierTwitter</code> in our case. If we&#8217;re granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we&#8217;ve got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we&#8217;re on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
 
 <p>Displaying the accounts in a <code>UITableViewController</code> is straightforward:</p>
 
-<pre><code>- (UITableViewCell *)tableView:(UITableView *)tableView
-        cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdent = @"Cell";
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">UITableViewCell</span> <span class="o">*</span><span class="p">)</span><span class="nf">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span>
+</span><span class='line'>      <span class="nf">cellForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">static</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">CellIdent</span> <span class="o">=</span> <span class="s">@&quot;Cell&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">UITableViewCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">[</span><span class="n">tableView</span> <span class="nl">dequeueReusableCellWithIdentifier:</span><span class="n">CellIdent</span><span class="p">];</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">cell</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">cell</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITableViewCell</span> <span class="n">alloc</span><span class="p">]</span>
+</span><span class='line'>      <span class="nl">initWithStyle:</span><span class="n">UITableViewCellStyleSubtitle</span> <span class="nl">reuseIdentifier:</span><span class="n">CellIdent</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Configure the cell...</span>
+</span><span class='line'>  <span class="n">ACAccount</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">accounts</span> <span class="nl">objectAtIndex:</span><span class="p">[</span><span class="n">indexPath</span> <span class="n">row</span><span class="p">]];</span>
+</span><span class='line'>  <span class="n">cell</span><span class="p">.</span><span class="n">textLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">account</span><span class="p">.</span><span class="n">username</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">cell</span><span class="p">.</span><span class="n">detailTextLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">account</span><span class="p">.</span><span class="n">accountDescription</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">cell</span><span class="p">.</span><span class="n">accessoryType</span> <span class="o">=</span> <span class="n">UITableViewCellAccessoryDisclosureIndicator</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">cell</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdent];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] 
-        initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdent];
-    }
-
-    // Configure the cell...
-    ACAccount *account = [self.accounts objectAtIndex:[indexPath row]];
-    cell.textLabel.text = account.username;
-    cell.detailTextLabel.text = account.accountDescription;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    return cell;
-}
-</code></pre>
 
 <h2>Displaying the public timeline of the selected user</h2>
 
@@ -419,15 +438,10 @@
     
   </ul>
 </section>
-<section>
-  <h1>Recommended reading...</h1>
-  <ul id="recommended_reading">
-  	
-      
-  	
-    
-  </ul>
-</section>
+
+  
+
+
 
 <section>
   <h1>GitHub Repos</h1>

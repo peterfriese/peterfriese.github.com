@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Twitter | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/twitter/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-05-12T22:26:47+02:00</updated>
+  <updated>2013-06-13T09:53:59+02:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -40,7 +40,7 @@
 
 <h2>Using the Accounts Framework to fetch the list of accounts</h2>
 
-<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you'll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will easy access to Google+ and Facebook accounts -  we'll see.</p>
+<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you'll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will provide easy access to Google+ and Facebook accounts -  we'll see.</p>
 
 <p>To use the Accounts and Twitter frameworks, we need to add them to the project:</p>
 
@@ -75,29 +75,36 @@
 <p>}
 ```</p>
 
-<p>As many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we're interested in - <code>ACAccountTypeIdentifierTwitter</code> in our case. If we're granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we've got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we're on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
+<p>Just like many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we're interested in - <code>ACAccountTypeIdentifierTwitter</code> in our case. If we're granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we've got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we're on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
 
 <p>Displaying the accounts in a <code>UITableViewController</code> is straightforward:</p>
 
-<pre><code>- (UITableViewCell *)tableView:(UITableView *)tableView
-        cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdent = @"Cell";
+<p>```objc
+- (UITableViewCell <em>)tableView:(UITableView </em>)tableView</p>
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdent];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] 
-        initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdent];
-    }
-
-    // Configure the cell...
-    ACAccount *account = [self.accounts objectAtIndex:[indexPath row]];
-    cell.textLabel.text = account.username;
-    cell.detailTextLabel.text = account.accountDescription;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    return cell;
-}
+<pre><code>    cellForRowAtIndexPath:(NSIndexPath *)indexPath
 </code></pre>
+
+<p>{</p>
+
+<pre><code>static NSString *CellIdent = @"Cell";
+
+UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdent];
+if (cell == nil) {
+    cell = [[UITableViewCell alloc] 
+    initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdent];
+}
+
+// Configure the cell...
+ACAccount *account = [self.accounts objectAtIndex:[indexPath row]];
+cell.textLabel.text = account.username;
+cell.detailTextLabel.text = account.accountDescription;
+cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+return cell;
+</code></pre>
+
+<p>}
+```</p>
 
 <h2>Displaying the public timeline of the selected user</h2>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://peterfriese.github.io/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-05-12T22:26:47+02:00</updated>
+  <updated>2013-06-13T09:53:59+02:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -188,7 +188,7 @@
 
 <p>If you are curious which libraries are supported by CocoaPods, go to <a href="http://cocoapods.org">CocoaPods.org</a> - they have a nice little UI for searching their pod specification repository. If you are more include to using the command line, you are welcome to use <code>pod search &lt;yoursearchterm&gt;</code> to search for a specific library.</p>
 
-<p>If your preferred library is not yet supported, why not help them out and build a pod spec? <a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a> itself and the <a href="https://github.com/CocoaPods/Specs">pod spec repository</a> are hosted on Github, so adding new pod specifications is really easy. The CocoaPods wiki has a section on <a href="https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format">creating</a> and <a href="https://github.com/CocoaPods/CocoaPods/wiki/Sharing-pod-specifications">publishing</a> new podspec files.</p>
+<p>If your preferred library is not yet supported, why not help them out and build a pod spec? <a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a> itself and the <a href="https://github.com/CocoaPods/Specs">pod spec repository</a> are hosted on Github, so adding new pod specifications is really easy. The CocoaPods wiki has a section on <a href="https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format">creating</a> and <a href="https://github.com/CocoaPods/CocoaPods/wiki/Sharing-pod-specifications-with-yourself-and-the-world">publishing</a> new podspec files.</p>
 
 <p>Now go and create awesome stuff!</p>
 ]]></content>
@@ -221,7 +221,7 @@
 
 <h2>Using the Accounts Framework to fetch the list of accounts</h2>
 
-<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you&#8217;ll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will easy access to Google+ and Facebook accounts -  we&#8217;ll see.</p>
+<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you&#8217;ll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will provide easy access to Google+ and Facebook accounts -  we&#8217;ll see.</p>
 
 <p>To use the Accounts and Twitter frameworks, we need to add them to the project:</p>
 
@@ -274,29 +274,48 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>As many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we&#8217;re interested in - <code>ACAccountTypeIdentifierTwitter</code> in our case. If we&#8217;re granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we&#8217;ve got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we&#8217;re on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
+<p>Just like many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we&#8217;re interested in - <code>ACAccountTypeIdentifierTwitter</code> in our case. If we&#8217;re granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we&#8217;ve got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we&#8217;re on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
 
 <p>Displaying the accounts in a <code>UITableViewController</code> is straightforward:</p>
 
-<pre><code>- (UITableViewCell *)tableView:(UITableView *)tableView
-        cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdent = @"Cell";
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">UITableViewCell</span> <span class="o">*</span><span class="p">)</span><span class="nf">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span>
+</span><span class='line'>      <span class="nf">cellForRowAtIndexPath:</span><span class="p">(</span><span class="n">NSIndexPath</span> <span class="o">*</span><span class="p">)</span><span class="nv">indexPath</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">static</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">CellIdent</span> <span class="o">=</span> <span class="s">@&quot;Cell&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">UITableViewCell</span> <span class="o">*</span><span class="n">cell</span> <span class="o">=</span> <span class="p">[</span><span class="n">tableView</span> <span class="nl">dequeueReusableCellWithIdentifier:</span><span class="n">CellIdent</span><span class="p">];</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">cell</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">cell</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITableViewCell</span> <span class="n">alloc</span><span class="p">]</span>
+</span><span class='line'>      <span class="nl">initWithStyle:</span><span class="n">UITableViewCellStyleSubtitle</span> <span class="nl">reuseIdentifier:</span><span class="n">CellIdent</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Configure the cell...</span>
+</span><span class='line'>  <span class="n">ACAccount</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">accounts</span> <span class="nl">objectAtIndex:</span><span class="p">[</span><span class="n">indexPath</span> <span class="n">row</span><span class="p">]];</span>
+</span><span class='line'>  <span class="n">cell</span><span class="p">.</span><span class="n">textLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">account</span><span class="p">.</span><span class="n">username</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">cell</span><span class="p">.</span><span class="n">detailTextLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">account</span><span class="p">.</span><span class="n">accountDescription</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">cell</span><span class="p">.</span><span class="n">accessoryType</span> <span class="o">=</span> <span class="n">UITableViewCellAccessoryDisclosureIndicator</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">cell</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdent];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] 
-        initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdent];
-    }
-
-    // Configure the cell...
-    ACAccount *account = [self.accounts objectAtIndex:[indexPath row]];
-    cell.textLabel.text = account.username;
-    cell.detailTextLabel.text = account.accountDescription;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    return cell;
-}
-</code></pre>
 
 <h2>Displaying the public timeline of the selected user</h2>
 
@@ -408,7 +427,7 @@
     <link href="http://peterfriese.github.io/tired-of-typing-speak-to-your-computer/"/>
     <updated>2011-06-03T18:54:39+02:00</updated>
     <id>http://peterfriese.github.io/tired-of-typing-speak-to-your-computer</id>
-    <content type="html"><![CDATA[<p>For some reason, humans have always dreamt of using natural language to communicate with computers. Quite a number of movies have been made that revolve around this theme, <a href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey">2001: A Space Odyssey</a> and <a href="http://en.wikipedia.org/wiki/I,_Robot_(film">I, Robot</a>) (named after the <a href="http://en.wikipedia.org/wiki/I_robot">great collection of SF stories</a> by <a href="http://en.wikipedia.org/wiki/Isaac_Asimov">Isaac Asimov</a>) just being two of them.</p>
+    <content type="html"><![CDATA[<p>For some reason, humans have always dreamt of using natural language to communicate with computers. Quite a number of movies have been made that revolve around this theme, <a href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)">2001: A Space Odyssey</a> and <a href="http://en.wikipedia.org/wiki/I,_Robot_(film)">I, Robot</a> (named after the <a href="http://en.wikipedia.org/wiki/I_robot">great collection of SF stories</a> by <a href="http://en.wikipedia.org/wiki/Isaac_Asimov">Isaac Asimov</a> just being two of them.</p>
 
 <!-- more -->
 
@@ -419,11 +438,16 @@
 
 <p>Using the speech input API is rather easy. All you have to do is to add the <code>x-webkit-speech</code> attribute to any <code>input</code> tag and you&#8217;re done. If you&#8217;re on a speech-enabled browsers (as of this writing, <a href="http://chrome.blogspot.com/2011/04/everybodys-talking-and-translating-with.html">only Chrome 11</a> supports this out of the box), you can check it out in the input field below. Just click on the microphone icon and start speaking:</p>
 
+<p><input name="speechinput" size="40" placeholder="click the mic and start speaking" x-webkit-speech=""></p>
+
 <p>So, the other day I thought, &#8220;wouldn&#8217;t it be cool if I could use voice recognition to look up my contacts on the social networks I am on?&#8221;. Adding voice recognition support to a website you own is rather easy, as you only have to add the <code>x-webkit-speech</code> attribute to the respective input fields. Enhancing foreign sites, however, turns out to be a little bit more involved. Fortunately, Chrome can augment existing websites by way of so-called <a href="http://code.google.com/chrome/extensions/content_scripts.html">Content Scripts</a>, which are a part of the <a href="http://code.google.com/chrome/extensions/getstarted.html">Chrome Extensions API</a>.</p>
 
 <p>Writing a Chrome Extension for speech-enabling existing text input fields on just about any website <a href="http://github.com/peterfriese/Speak2Search">was a matter of minutes</a>, thanks to the good documentation and some <a href="http://jquery.com/">jQuery</a> to walk the DOM. Putting on the finishing touches took me some more time, and I am proud to present you <a href="http://chrome.google.com/webstore/detail/peldinpdedgdcbdehomnpfndejpoibeb">Speak to Search</a> - a Chrome Extension that lets you talk with your browser. It works with virtually every website that uses regular HTML input fields. By making some smart assumptions, the extension will automatically submit the current form if the input field is a search field. If it is not, the focus will remain in the field and the form will not be submitted. That way, you can fill out e.g. an address form.</p>
 
 <p>Here is a short video of me using Speak to Search to search for some people on Xing and LinkedIn. Please note that the extension is making sure the speech recognition engine is configured to recognize German names on Xing.</p>
+
+<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/syMpQqMJcKU "></iframe></div>
+
 
 <p>Language makes us human - this is a quote from a <a href="http://www.pbs.org/wnet/humanspark/video/spark-blog-video-dr-steven-pinker-language-makes-us-human/212/">video</a> I found during the research for this blog post. I don&#8217;t necessarily think voice recognition and speech synthesis will make computers more human, but both technologies certainly can help to create a more immersive experience. I am looking forward to seeing a broader use of the new audio capabilities of modern browsers. Feel free to <a href="http://github.com/peterfriese/Speak2Search">grab my code from Github</a> and create something new and exciting!</p>
 ]]></content>
@@ -444,9 +468,9 @@
 <p>But not only the Xtext team will share their expertise at CG2011 - Markus and Karsten will be also be in town to give hands-on tutorials and report from their experience:</p>
 
 <ul>
-<li><p><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=22">Type Systems for DSLs (Markus Völter)</a></p></li>
-<li><p><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=8">Graphiti + Xtext: mixing graphical and textual DSLs for sprayers/designers (Karsten Thoms / Bernhard Merkle)</a></p></li>
-<li><p><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=5">Introduction to JetBrains Meta Programming System (MPS) (Markus Völter)</a></p></li>
+<li><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=22">Type Systems for DSLs (Markus Völter)</a></li>
+<li><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=8">Graphiti + Xtext: mixing graphical and textual DSLs for sprayers/designers (Karsten Thoms / Bernhard Merkle)</a></li>
+<li><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=5">Introduction to JetBrains Meta Programming System (MPS) (Markus Völter)</a></li>
 </ul>
 
 
@@ -457,12 +481,15 @@
 <p>To keep track of the conference program(me), we at <a href="http://mobile.itemis.com">itemis mobile</a> have been busy to create a conference planner for your iOS and Android powered mobile phones. Here are the download links:</p>
 
 <ul>
-<li><p>Apple App Store: <a href="http://itunes.apple.com/us/app/code-generation-2011/id436689925?mt=8">Code Generation 2011</a></p></li>
-<li><p>Android Market Place: <a href="https://market.android.com/details?id=de.itemis.mobile.android.cg2011&amp;feature=search_result">Code Generation 2011</a></p></li>
+<li>Apple App Store: <a href="http://itunes.apple.com/us/app/code-generation-2011/id436689925?mt=8">Code Generation 2011</a></li>
+<li>Android Market Place: <a href="https://market.android.com/details?id=de.itemis.mobile.android.cg2011&amp;feature=search_result">Code Generation 2011</a></li>
 </ul>
 
 
-<p>[caption id=&#8221;attachment_764&#8221; align=&#8221;aligncenter&#8221; width=&#8221;500&#8221; caption=&#8221;Code Generation 2011 Apps for iPhone and Android&#8221;]<a href="http://www.peterfriese.de/wp-content/cg2011.png"><img src="http://www.peterfriese.de/wp-content/cg2011-e1305966137679.png" alt="Code Generation 2011 Apps for iPhone and Android" /></a>[/caption]</p>
+<ul class="gallery">
+<li><a href="http://peterfriese.github.io/images/2011-05-21-code-generation-2011-dont-miss-out/cg2011.png" class="fancybox" rel="gallery-f9049cdceaffaf2ba66743d40d991d29" title="Code Generation 2011 Apps for iPhone and Android"><img src="http://peterfriese.github.io/thumbs/cg2011_300x300.png" alt="Code Generation 2011 Apps for iPhone and Android" /></a></li>
+</ul>
+
 
 <p>If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? <a href="mailto:mobile@itemis.de">Drop us a note</a> or track us down at the conference (best chance to see us: <a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">come to our talk</a> ;-) ).</p>
 ]]></content>
@@ -507,7 +534,7 @@
 
 <p>Thanks to Cocoa, we can simplify the code by using <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSPredicate_Class/Reference/NSPredicate.html">NSPredicate</a>. <code>NSPredicate</code> is the object representation of an if-statement, or, more formally, a predicate.</p>
 
-<p>Predicates are <a href="http://en.wikipedia.org/wiki/Predicate_(mathematical_logic">expressions that evaluate to a truth value</a>), i.e. <code>true</code> or <code>false</code>. We can use them to perform validation and filtering. In Cocoa, we can use <code>NSPredicate</code> to evaluate single objects, filter arrays and perform queries against Core Data data sets.</p>
+<p>Predicates are <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSPredicate_Class/Reference/NSPredicate.html">expressions that evaluate to a truth value</a>, i.e. <code>true</code> or <code>false</code>. We can use them to perform validation and filtering. In Cocoa, we can use <code>NSPredicate</code> to evaluate single objects, filter arrays and perform queries against Core Data data sets.</p>
 
 <p>Let&#8217;s have a look at how our example looks like when using <code>NSPredicate</code>:</p>
 
@@ -747,11 +774,13 @@
 <ol>
 <li>Connect your iPhone / iPad to your computer using the white USB connection cable.</li>
 <li>Wait for iTunes to start up. If it doesn&#8217;t start automatically, start it manually (Windows users will find it in the depths of the Start Menu, Mac users can use Spotlight to search for it).</li>
-<li>Click on the name of your iPhone / iPad on the left-hand side of the iTunes Window: <a href="http://www.flickr.com/photos/81029262@N00/5391569342"><img src="http://farm6.static.flickr.com/5180/5391569342_79b2d97180.jpg" alt="Finding your iPhone's UDID, step 1" /></a></li>
+<li>Click on the name of your iPhone / iPad on the left-hand side of the iTunes Window:
+ <a href="http://peterfriese.github.io/images/2011-01-27-whats-your-number/whatsyournumber_screenshot_1.jpg" class="fancybox" title="Finding your iPhone's UDID, step 1"><img class="right" src="http://peterfriese.github.io/thumbs/whatsyournumber_screenshot_1_927x348.jpg" alt="Finding your iPhone's UDID, step 1" /></a></li>
 <li>Details about your device will be displayed in the main area of the iTunes window.</li>
 <li>Find the label titled <strong>Serial Number</strong>. The serial number IS NOT the UDID!</li>
 <li>Holding down the CMD (on the Mac) or the CTRL (on Windows) key, click on the label <strong>Serial Number</strong></li>
-<li>The label&#8217;s title will change to <strong>Identifier (UDID</strong>:<a href="http://www.flickr.com/photos/81029262@N00/5391652500"><img src="http://farm6.static.flickr.com/5291/5391652500_1c2dbaf918.jpg" alt="Finding your iPhone's UDID, step 2" /></a></li>
+<li>The label&#8217;s title will change to <strong>Identifier (UDID)</strong>:
+ <a href="http://peterfriese.github.io/images/2011-01-27-whats-your-number/whatsyournumber_screenshot_2.jpg" class="fancybox" title="Finding your iPhone's UDID, step 2"><img class="right" src="http://peterfriese.github.io/thumbs/whatsyournumber_screenshot_2_927x348.jpg" alt="Finding your iPhone's UDID, step 2" /></a></li>
 <li>Press CMD+C (on Mac) or CTRL+C (on Windows) to copy the UDID to your clipboard</li>
 <li>Open a new mail, insert the UDID and a friendly message and send it to your developer.</li>
 </ol>
