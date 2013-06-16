@@ -24,7 +24,7 @@ If you take part in a beta test for an iPhone app, the app developer will likely
 
 <!-- more -->
 
-The Unique Device IDentifier is a 40-digit number that uniquely identifies your iPhone or iPad. It's tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.
+The **U**nique **D**evice **ID**entifier (UDID) is a 40-digit number that uniquely identifies your iPhone or iPad. It's tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.
 
 Here's how you can find this number and send it to your developer:
 	
