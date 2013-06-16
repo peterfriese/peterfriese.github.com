@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Eclipse | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/eclipse/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-06-13T09:53:59+02:00</updated>
+  <updated>2013-06-17T00:39:44+02:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -52,41 +52,54 @@
     <link href="http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
     <updated>2010-11-25T13:00:43+01:00</updated>
     <id>http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
-    <content type="html"><![CDATA[<p>This week's release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they're neither directly visible in the iOS UI nor are they mentioned in Apple's official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone's gyroscope. Read on to see it in action and learn how to use it.<!-- more -->Your iPhone has a number of sensors, some of which are rather essential for the phone's operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they're certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
+    <content type="html"><![CDATA[<p>This week's release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they're neither directly visible in the iOS UI nor are they mentioned in Apple's official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone's gyroscope. Read on to see it in action and learn how to use it.</p>
+
+<!-- more -->
+
+
+<p>Your iPhone has a number of sensors, some of which are rather essential for the phone's operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they're certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
 
 <p>Until now, web developers didn't have access to the accelerometer sensor and the gyroscope sensor. With this week's release of iOS 4.2, this has changed and we can now use <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceMotionEventClassRef/DeviceMotionEvent/DeviceMotionEvent.html">DeviceMotionEvent</a> and <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">DeviceOrientationEvent</a> to determine the acceleration and orientation data of the phone.</p>
 
 <p>Let's first determine whether the current browser supports device orientation sensing:</p>
 
-<pre><code>if (window.DeviceMotionEvent==undefined) {
+<p><code>javascript
+if (window.DeviceMotionEvent==undefined) {
 }
-</code></pre>
+</code></p>
 
 <p>We can then read the sensor data by registering the respective callbacks. Here's how you read the accelerometer's data:</p>
 
-<pre><code>window.ondevicemotion = function(event) {
+<p>``` javascript
+window.ondevicemotion = function(event) {
   ax = event.accelerationIncludingGravity.x
   ay = event.accelerationIncludingGravity.y
   az = event.accelerationIncludingGravity.z
   rotation = event.rotationRate;
-  if (rotation != null) {
-    arAlpha = Math.round(rotation.alpha);
-    arBeta = Math.round(rotation.beta);
-    arGamma = Math.round(rotation.gamma);
-  }
-}
+  if (rotation != null) {</p>
+
+<pre><code>arAlpha = Math.round(rotation.alpha);
+arBeta = Math.round(rotation.beta);
+arGamma = Math.round(rotation.gamma);
 </code></pre>
+
+<p>  }
+}
+```</p>
 
 <p>The gyroscope's data can be read like this:</p>
 
-<pre><code>window.ondeviceorientation = function(event) {
+<p><code>javascript    
+window.ondeviceorientation = function(event) {
   alpha = Math.round(event.alpha);
   beta = Math.round(event.beta);
   gamma = Math.round(event.gamma);
-}               
-</code></pre>
+}
+</code></p>
 
 <p>I've put together a little demo that uses the sensor data to color some boxes on the phone's screen. Here's a short video showing it in action:</p>
+
+<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/17182364 "></iframe></div></p>
 
 <p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
 

@@ -113,42 +113,75 @@
 
 
 <div class="entry-content">
+    
+  <p>
+    <img class="left" src="/images/2010-11-25-how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/gyroscope_150x150.png">
+  </p>
   
-  <p>This week&#8217;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they&#8217;re neither directly visible in the iOS UI nor are they mentioned in Apple&#8217;s official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone&#8217;s gyroscope. Read on to see it in action and learn how to use it.<!-- more -->Your iPhone has a number of sensors, some of which are rather essential for the phone&#8217;s operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they&#8217;re certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
+  <p>This week&#8217;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they&#8217;re neither directly visible in the iOS UI nor are they mentioned in Apple&#8217;s official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone&#8217;s gyroscope. Read on to see it in action and learn how to use it.</p>
+
+<!-- more -->
+
+
+<p>Your iPhone has a number of sensors, some of which are rather essential for the phone&#8217;s operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they&#8217;re certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
 
 <p>Until now, web developers didn&#8217;t have access to the accelerometer sensor and the gyroscope sensor. With this week&#8217;s release of iOS 4.2, this has changed and we can now use <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceMotionEventClassRef/DeviceMotionEvent/DeviceMotionEvent.html">DeviceMotionEvent</a> and <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">DeviceOrientationEvent</a> to determine the acceleration and orientation data of the phone.</p>
 
 <p>Let&#8217;s first determine whether the current browser supports device orientation sensing:</p>
 
-<pre><code>if (window.DeviceMotionEvent==undefined) {
-}
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">DeviceMotionEvent</span><span class="o">==</span><span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>We can then read the sensor data by registering the respective callbacks. Here&#8217;s how you read the accelerometer&#8217;s data:</p>
 
-<pre><code>window.ondevicemotion = function(event) {
-  ax = event.accelerationIncludingGravity.x
-  ay = event.accelerationIncludingGravity.y
-  az = event.accelerationIncludingGravity.z
-  rotation = event.rotationRate;
-  if (rotation != null) {
-    arAlpha = Math.round(rotation.alpha);
-    arBeta = Math.round(rotation.beta);
-    arGamma = Math.round(rotation.gamma);
-  }
-}
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">ondevicemotion</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">ax</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">accelerationIncludingGravity</span><span class="p">.</span><span class="nx">x</span>
+</span><span class='line'>  <span class="nx">ay</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">accelerationIncludingGravity</span><span class="p">.</span><span class="nx">y</span>
+</span><span class='line'>  <span class="nx">az</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">accelerationIncludingGravity</span><span class="p">.</span><span class="nx">z</span>
+</span><span class='line'>  <span class="nx">rotation</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">rotationRate</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">rotation</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">arAlpha</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">rotation</span><span class="p">.</span><span class="nx">alpha</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">arBeta</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">rotation</span><span class="p">.</span><span class="nx">beta</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">arGamma</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">rotation</span><span class="p">.</span><span class="nx">gamma</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>The gyroscope&#8217;s data can be read like this:</p>
 
-<pre><code>window.ondeviceorientation = function(event) {
-  alpha = Math.round(event.alpha);
-  beta = Math.round(event.beta);
-  gamma = Math.round(event.gamma);
-}               
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">ondeviceorientation</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alpha</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">alpha</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">beta</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">beta</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">gamma</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">gamma</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>I&#8217;ve put together a little demo that uses the sensor data to color some boxes on the phone&#8217;s screen. Here&#8217;s a short video showing it in action:</p>
+
+<div class="embed-video-container"><iframe src="http://player.vimeo.com/video/17182364 "></iframe></div>
+
 
 <p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
 
@@ -224,7 +257,7 @@
   
     <section>
   <h1>About me</h1>
-  <img src="http://www.peterfriese.de/wp-content/Peter_Sylt-001-300x200.jpg" alt="Peter Friese"  width="100%"/>
+  <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
   I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
 </section>
 <section>
@@ -253,10 +286,6 @@
     
   </ul>
 </section>
-
-  
-
-
 
 <section>
   <h1>GitHub Repos</h1>

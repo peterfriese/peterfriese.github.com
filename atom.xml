@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://peterfriese.github.io/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-06-13T09:53:59+02:00</updated>
+  <updated>2013-06-17T00:39:44+02:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -767,7 +767,7 @@
 <!-- more -->
 
 
-<p>The Unique Device IDentifier is a 40-digit number that uniquely identifies your iPhone or iPad. It&#8217;s tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.</p>
+<p>The <strong>U</strong>nique <strong>D</strong>evice <strong>ID</strong>entifier (UDID) is a 40-digit number that uniquely identifies your iPhone or iPad. It&#8217;s tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.</p>
 
 <p>Here&#8217;s how you can find this number and send it to your developer:</p>
 
@@ -797,13 +797,18 @@
     <link href="http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/"/>
     <updated>2011-01-05T01:11:11+01:00</updated>
     <id>http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac</id>
-    <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.<!-- more -->The IDE in question is Samsung&#8217;s TV App SDK. Basically, it&#8217;s just a Windows-based Visual-Studio look-alike IDE with editor support for CSS, JavaScript and HTML and an Emulator for Samsung TV kits. Nothing too complicated, really. In fact, the editor is quite OK.</p>
+    <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.</p>
 
-<p>[caption id=&#8221;attachment_647&#8221; align=&#8221;alignleft&#8221; width=&#8221;300&#8221; caption=&#8221;Samsung TV App SDK&#8221;]<a href="http://www.peterfriese.de/wp-content/Samsung-TV-App-SDK.png"><img src="http://www.peterfriese.de/wp-content/Samsung-TV-App-SDK-300x208.png" alt="Samsung TV App SDK" /></a>[/caption]</p>
+<!-- more -->
+
+
+<p>The IDE in question is Samsung&#8217;s TV App SDK. Basically, it&#8217;s just a Windows-based Visual-Studio look-alike IDE with editor support for CSS, JavaScript and HTML and an Emulator for Samsung TV kits. Nothing too complicated, really. In fact, the editor is quite OK.</p>
+
+<p><a href="http://peterfriese.github.io/images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung-TV-App-SDK.png" class="fancybox" title="Samsung TV App SDK"><img class="right" src="http://peterfriese.github.io/thumbs/Samsung-TV-App-SDK_1040x722.png" alt="Samsung TV App SDK" /></a></p>
 
 <p>The part about it that really sucks is the project management. How come tool vendors still think it&#8217;s good style in 2010 to place the projects under <em>Program Files\Samsung TV Apps SDK\Apps</em>? There&#8217;s no way to store your project files in a different location. The project open dialog just won&#8217;t let you navigate to some other place:</p>
 
-<p>[caption id=&#8221;attachment_642&#8221; align=&#8221;alignleft&#8221; width=&#8221;300&#8221; caption=&#8221;Samsung TV App SDK Project Management Dialog&#8221;]<a href="http://www.peterfriese.de/wp-content/Samsung_TV_App_SDK_ProjectManagement.png"><img src="http://www.peterfriese.de/wp-content/Samsung_TV_App_SDK_ProjectManagement-300x219.png" alt="Samsung TV App SDK Project Management Dialog" /></a>[/caption]</p>
+<p><a href="http://peterfriese.github.io/images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung_TV_App_SDK_ProjectManagement.png" class="fancybox" title="Samsung TV App SDK Project Management Dialog"><img class="right" src="http://peterfriese.github.io/thumbs/Samsung_TV_App_SDK_ProjectManagement_482x352.png" alt="Samsung TV App SDK Project Management Dialog" /></a></p>
 
 <p>So I wanted to be able to edit my files on the Mac (using <a href="http://macromates.com/">TextMate</a>) while still using the good parts of the Samsung TV SDK (i.e., the Emulator).</p>
 
@@ -813,7 +818,7 @@
 
 <p>After playing around with some more or less usable folder synchronization utilities, I came up with something most MacOS / Linux users should be familiar with: <a href="http://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a>! While symlinks have been around in Unix-like OSes for ages, they have been rarely known to Windows users for most of the time. However, <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">starting with Windows NT</a>, you can create symbolic links, hard links and junctions using a nifty little tool called <em><a href="http://www.howtogeek.com/howto/windows-vista/using-symlinks-in-windows-vista/">mklink</a></em>. Unfortunately, you&#8217;re not allowed to run <em>mklink</em> if you&#8217;re not an administrator. Using <em>runas</em> (which is Windows&#8217; equivalent of <em>sudo</em>), didn&#8217;t help as the shared folders weren&#8217;t visible to the admin user.</p>
 
-<p>To cut a long story short, I found <a href="http://code.google.com/p/symlinker">Symlinker</a>, a UI tool that helps in creating symlinks on Windows. As it is a UI tool, you can run it with administrator privileges (by selecting Run as Admin from the context menu). Using a <a href="http://en.wikipedia.org/wiki/Path_(computing">UNC</a>) path, you can create a <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">symlink</a> to a VMware shared folder and place this symlink in the location the Samsung IDE expects it to be.</p>
+<p>To cut a long story short, I found <a href="http://code.google.com/p/symlinker">Symlinker</a>, a UI tool that helps in creating symlinks on Windows. As it is a UI tool, you can run it with administrator privileges (by selecting Run as Admin from the context menu). Using a <a href="http://en.wikipedia.org/wiki/Path_(computing)">UNC</a> path, you can create a <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">symlink</a> to a VMware shared folder and place this symlink in the location the Samsung IDE expects it to be.</p>
 
 <p>Finally, I can edit my files on the Mac and run the app in Samsung&#8217;s Emulator on my hosted Windows machine. And as the files on my Mac are mapped to the hosted Windows machine via a symlink, I do not suffer a synchronization lag - all files are updated instantaneously :-)</p>
 ]]></content>
@@ -824,41 +829,70 @@
     <link href="http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
     <updated>2010-11-25T13:00:43+01:00</updated>
     <id>http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
-    <content type="html"><![CDATA[<p>This week&#8217;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they&#8217;re neither directly visible in the iOS UI nor are they mentioned in Apple&#8217;s official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone&#8217;s gyroscope. Read on to see it in action and learn how to use it.<!-- more -->Your iPhone has a number of sensors, some of which are rather essential for the phone&#8217;s operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they&#8217;re certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
+    <content type="html"><![CDATA[<p>This week&#8217;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they&#8217;re neither directly visible in the iOS UI nor are they mentioned in Apple&#8217;s official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone&#8217;s gyroscope. Read on to see it in action and learn how to use it.</p>
+
+<!-- more -->
+
+
+<p>Your iPhone has a number of sensors, some of which are rather essential for the phone&#8217;s operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they&#8217;re certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
 
 <p>Until now, web developers didn&#8217;t have access to the accelerometer sensor and the gyroscope sensor. With this week&#8217;s release of iOS 4.2, this has changed and we can now use <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceMotionEventClassRef/DeviceMotionEvent/DeviceMotionEvent.html">DeviceMotionEvent</a> and <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">DeviceOrientationEvent</a> to determine the acceleration and orientation data of the phone.</p>
 
 <p>Let&#8217;s first determine whether the current browser supports device orientation sensing:</p>
 
-<pre><code>if (window.DeviceMotionEvent==undefined) {
-}
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">DeviceMotionEvent</span><span class="o">==</span><span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>We can then read the sensor data by registering the respective callbacks. Here&#8217;s how you read the accelerometer&#8217;s data:</p>
 
-<pre><code>window.ondevicemotion = function(event) {
-  ax = event.accelerationIncludingGravity.x
-  ay = event.accelerationIncludingGravity.y
-  az = event.accelerationIncludingGravity.z
-  rotation = event.rotationRate;
-  if (rotation != null) {
-    arAlpha = Math.round(rotation.alpha);
-    arBeta = Math.round(rotation.beta);
-    arGamma = Math.round(rotation.gamma);
-  }
-}
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">ondevicemotion</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">ax</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">accelerationIncludingGravity</span><span class="p">.</span><span class="nx">x</span>
+</span><span class='line'>  <span class="nx">ay</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">accelerationIncludingGravity</span><span class="p">.</span><span class="nx">y</span>
+</span><span class='line'>  <span class="nx">az</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">accelerationIncludingGravity</span><span class="p">.</span><span class="nx">z</span>
+</span><span class='line'>  <span class="nx">rotation</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">rotationRate</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">rotation</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">arAlpha</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">rotation</span><span class="p">.</span><span class="nx">alpha</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">arBeta</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">rotation</span><span class="p">.</span><span class="nx">beta</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">arGamma</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">rotation</span><span class="p">.</span><span class="nx">gamma</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>The gyroscope&#8217;s data can be read like this:</p>
 
-<pre><code>window.ondeviceorientation = function(event) {
-  alpha = Math.round(event.alpha);
-  beta = Math.round(event.beta);
-  gamma = Math.round(event.gamma);
-}               
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">ondeviceorientation</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alpha</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">alpha</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">beta</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">beta</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">gamma</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">gamma</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>I&#8217;ve put together a little demo that uses the sensor data to color some boxes on the phone&#8217;s screen. Here&#8217;s a short video showing it in action:</p>
+
+<div class="embed-video-container"><iframe src="http://player.vimeo.com/video/17182364 "></iframe></div>
+
 
 <p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
 

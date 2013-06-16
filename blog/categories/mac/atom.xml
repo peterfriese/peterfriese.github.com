@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mac | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/mac/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-06-13T09:53:59+02:00</updated>
+  <updated>2013-06-17T00:39:44+02:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,13 +18,18 @@
     <link href="http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/"/>
     <updated>2011-01-05T01:11:11+01:00</updated>
     <id>http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac</id>
-    <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.<!-- more -->The IDE in question is Samsung's TV App SDK. Basically, it's just a Windows-based Visual-Studio look-alike IDE with editor support for CSS, JavaScript and HTML and an Emulator for Samsung TV kits. Nothing too complicated, really. In fact, the editor is quite OK.</p>
+    <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.</p>
 
-<p>[caption id="attachment_647" align="alignleft" width="300" caption="Samsung TV App SDK"]<a href="http://www.peterfriese.de/wp-content/Samsung-TV-App-SDK.png"><img src="http://www.peterfriese.de/wp-content/Samsung-TV-App-SDK-300x208.png" alt="Samsung TV App SDK" /></a>[/caption]</p>
+<!-- more -->
+
+
+<p>The IDE in question is Samsung's TV App SDK. Basically, it's just a Windows-based Visual-Studio look-alike IDE with editor support for CSS, JavaScript and HTML and an Emulator for Samsung TV kits. Nothing too complicated, really. In fact, the editor is quite OK.</p>
+
+<p><a href="/images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung-TV-App-SDK.png" class="fancybox" title="Samsung TV App SDK"><img class="right" src="/thumbs/Samsung-TV-App-SDK_1040x722.png" alt="Samsung TV App SDK" /></a></p>
 
 <p>The part about it that really sucks is the project management. How come tool vendors still think it's good style in 2010 to place the projects under <em>Program Files\Samsung TV Apps SDK\Apps</em>? There's no way to store your project files in a different location. The project open dialog just won't let you navigate to some other place:</p>
 
-<p>[caption id="attachment_642" align="alignleft" width="300" caption="Samsung TV App SDK Project Management Dialog"]<a href="http://www.peterfriese.de/wp-content/Samsung_TV_App_SDK_ProjectManagement.png"><img src="http://www.peterfriese.de/wp-content/Samsung_TV_App_SDK_ProjectManagement-300x219.png" alt="Samsung TV App SDK Project Management Dialog" /></a>[/caption]</p>
+<p><a href="/images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung_TV_App_SDK_ProjectManagement.png" class="fancybox" title="Samsung TV App SDK Project Management Dialog"><img class="right" src="/thumbs/Samsung_TV_App_SDK_ProjectManagement_482x352.png" alt="Samsung TV App SDK Project Management Dialog" /></a></p>
 
 <p>So I wanted to be able to edit my files on the Mac (using <a href="http://macromates.com/">TextMate</a>) while still using the good parts of the Samsung TV SDK (i.e., the Emulator).</p>
 
@@ -34,7 +39,7 @@
 
 <p>After playing around with some more or less usable folder synchronization utilities, I came up with something most MacOS / Linux users should be familiar with: <a href="http://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a>! While symlinks have been around in Unix-like OSes for ages, they have been rarely known to Windows users for most of the time. However, <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">starting with Windows NT</a>, you can create symbolic links, hard links and junctions using a nifty little tool called <em><a href="http://www.howtogeek.com/howto/windows-vista/using-symlinks-in-windows-vista/">mklink</a></em>. Unfortunately, you're not allowed to run <em>mklink</em> if you're not an administrator. Using <em>runas</em> (which is Windows' equivalent of <em>sudo</em>), didn't help as the shared folders weren't visible to the admin user.</p>
 
-<p>To cut a long story short, I found <a href="http://code.google.com/p/symlinker">Symlinker</a>, a UI tool that helps in creating symlinks on Windows. As it is a UI tool, you can run it with administrator privileges (by selecting Run as Admin from the context menu). Using a <a href="http://en.wikipedia.org/wiki/Path_(computing">UNC</a>) path, you can create a <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">symlink</a> to a VMware shared folder and place this symlink in the location the Samsung IDE expects it to be.</p>
+<p>To cut a long story short, I found <a href="http://code.google.com/p/symlinker">Symlinker</a>, a UI tool that helps in creating symlinks on Windows. As it is a UI tool, you can run it with administrator privileges (by selecting Run as Admin from the context menu). Using a <a href="http://en.wikipedia.org/wiki/Path_(computing)">UNC</a> path, you can create a <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">symlink</a> to a VMware shared folder and place this symlink in the location the Samsung IDE expects it to be.</p>
 
 <p>Finally, I can edit my files on the Mac and run the app in Samsung's Emulator on my hosted Windows machine. And as the files on my Mac are mapped to the hosted Windows machine via a symlink, I do not suffer a synchronization lag - all files are updated instantaneously :-)</p>
 ]]></content>

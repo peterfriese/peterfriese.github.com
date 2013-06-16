@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Provisioning Portal | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/provisioning-portal/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-06-13T09:53:59+02:00</updated>
+  <updated>2013-06-17T00:39:44+02:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -23,7 +23,7 @@
 <!-- more -->
 
 
-<p>The Unique Device IDentifier is a 40-digit number that uniquely identifies your iPhone or iPad. It's tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.</p>
+<p>The <strong>U</strong>nique <strong>D</strong>evice <strong>ID</strong>entifier (UDID) is a 40-digit number that uniquely identifies your iPhone or iPad. It's tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.</p>
 
 <p>Here's how you can find this number and send it to your developer:</p>
 
