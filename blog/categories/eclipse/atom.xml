@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Eclipse | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/eclipse/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-06-17T00:39:44+02:00</updated>
+  <updated>2013-06-17T09:16:13+02:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -122,27 +122,29 @@ window.ondeviceorientation = function(event) {
 <p>After a casual meet-and-greet with <a href="http://www.fritz-kola.de/">Fritz Kola</a> and Pretzels, <a href="http://twitter.com/#!/robilad">Dalibor Topic</a> opened the official part of the evening with an overview of what's coming up in JDK7 and JDK8. Here's a list of things that sound quite interesting:</p>
 
 <ul>
-<li><p>Support for dynamically-typed languages (InvokeDynamic) (<a href="http://openjdk.java.net/projects/mlvm">project page</a>)</p></li>
-<li><p>Small language enhancements (Project Coin) (<a href="http://openjdk.java.net/projects/coin/">project page</a>)</p></li>
-<li><p>An even newer NIO (<a href="http://openjdk.java.net/projects/nio/">project page</a>)</p></li>
+<li>Support for dynamically-typed languages (InvokeDynamic) (<a href="http://openjdk.java.net/projects/mlvm">project page</a>)</li>
+<li>Small language enhancements (Project Coin) (<a href="http://openjdk.java.net/projects/coin/">project page</a>)</li>
+<li>An even newer NIO (<a href="http://openjdk.java.net/projects/nio/">project page</a>)</li>
 </ul>
 
 
 <p>The good news of the day of course was a <a href="http://blogs.oracle.com/henrik/2010/11/oracle_and_apple_announce_openjdk_project_for_osx.html">press release announcing OpenJDK for Mac OSX</a>. Nevertheless, <a href="http://twitter.com/#!/robilad/status/3129373515321344">Dalibor demoed a freshly built OpenJDK 7 BSD port</a> on his MacBook.</p>
 
-<p><a href="http://www.peterfriese.de/wp-content/IMG_0792.jpg"><img src="http://www.peterfriese.de/wp-content/IMG_0792.jpg" alt="" /></a></p>
+<p><a href="/images/2010-11-15-eclipse-democamp-hamburg-november-2010/democamp01.png" class="fancybox" title="Dalibor Topic"><img class="right" src="/thumbs/democamp01_300x224.png" alt="Dalibor Topic" /></a></p>
 
 <p>After a short break, it was <a href="http://eclipsesource.com/blogs/author/rsternberg/">Ralf Sternberg's turn</a> to give an overview of <a href="http://www.eclipse.org/rap/">RAP</a> and explain what Single Sourcing is. With the help of RAP, it is rather easy to bring Eclipse RCP applications to the web. Of course, you'll have to pay attention to a few things, as Ralf pointed out: usually, RCP applications are single-user apps, whereas web applications are inherently multi-user enabled. Fortunately, RAP comes with a few utilities that cater for this fact.</p>
 
 <p>One thing I was delighted to learn: not only do RAP applications run on the iPad, but also do they support drawing using the SWT API, as you can see in the following video:</p>
 
+<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/16829527 "></iframe></div></p>
+
 <p>In the last sessions, <a href="http://www.eclipse.org/Xtext/">Xtext</a> committer <a href="http://koehnlein.blogspot.com/">Jan Köhnlein</a> showed us some of the things coming up in Xtext 2.0. Being text-addicted, Jan refrained from using slides and used the IDE instead to deliver his talk:</p>
 
-<p><img src="http://www.peterfriese.de/wp-content/IMG_0804.jpg" alt="Jan Köhnlein talking about Xbase and Xtext" /></p>
+<p><a href="/images/2010-11-15-eclipse-democamp-hamburg-november-2010/democamp02.png" class="fancybox" title="Jan Köhnlein talking about Xbase and Xtext"><img class="right" src="/thumbs/democamp02_300x224.png" alt="Jan Köhnlein talking about Xbase and Xtext" /></a></p>
 
 <p>Jan showed us how Xbase (no, not <a href="http://en.wikipedia.org/wiki/Xbase">xBase</a>) can be used to develop DSLs (and even GPLs) that not only describe structural features but also behavior. He also demoed Xdoc, a newly invented documentation language, and the fancy new Xtext syntax view (featuring <a href="http://en.wikipedia.org/wiki/Syntax_diagram">railroad diagrams</a>).</p>
 
-<p>After the demoes, we had some time for chats and impromptu hack sessions. Given the event took place in a book store (many thanks to Lehmanns for having us!), you could also browse and buy books.</p>
+<p>After the demos, we had some time for chats and impromptu hack sessions. Given the event took place in a book store (many thanks to Lehmanns for having us!), you could also browse and buy books.</p>
 
 <p>Thanks to the fact we only had about 40 attendees, there were plenty of chances for networking which people really seemed to enjoy.</p>
 
@@ -159,24 +161,31 @@ window.ondeviceorientation = function(event) {
 
 <p>I think the program committee have done a great job at putting together an exciting conference program with lots of technical sessions, interactive tutorials and inspiring keynotes.</p>
 
-<p>As a special treat for smart phone users, we're offering a conference schedule app for iPhone, Android and all other smart phones that come with a browser. <!-- more -->Besides reviewing the <strong>conference schedule</strong> and getting to know the <strong>speakers</strong> you can use the apps to create your very <strong>own personal conference schedule</strong>. Usually, conference attendees will use the printed conference program to mark their favorite talks - and then leave their personalized copy of the program in their hotel room or elsewhere in the conference halls!</p>
+<p>As a special treat for smart phone users, we're offering a conference schedule app for iPhone, Android and all other smart phones that come with a browser.</p>
+
+<!-- more -->
+
+
+<p>Besides reviewing the <strong>conference schedule</strong> and getting to know the <strong>speakers</strong> you can use the apps to create your very <strong>own personal conference schedule</strong>. Usually, conference attendees will use the printed conference program to mark their favorite talks - and then leave their personalized copy of the program in their hotel room or elsewhere in the conference halls!</p>
 
 <p>This will probably not happen with the smart phone app, although I can recall somebody lost their iPhone at this year's EclipseCon...</p>
 
 <p>Without further ado, here's a preview of the iPhone app in action:</p>
 
+<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/16367311 "></iframe></div></p>
+
 <p>You can download the <strong>iPhone app</strong> from the App Store. It is available world-wide and we already have a few downloads from Singapore, Korea and India! For your convenience, <a href="http://bit.ly/ese_app_intl">here's the link to the app</a>.</p>
 
 <p>We also prepared a version for <strong>Android</strong> users. Here's how it will look like on your Android device:
-<img src="http://www.peterfriese.de/wp-content/ESE_Android.png" alt="ESE_Android.png" /></p>
+<a href="/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/ESE_Android.png" class="fancybox" title="ESE Android app"><img class="center" src="/thumbs/ESE_Android_151x300.png" alt="ESE Android app" /></a></p>
 
 <p>Head over to the Android Marketplace and search for "eclipse summit", or use your barcode scanner:</p>
 
-<p><img src="http://fs01.androidpit.info/aqr/x16/1078516-1288452914800.png" alt="" /></p>
+<p><a href="/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/1078516-1288452914800.png" class="fancybox" title="Android app barcode"><img class="center" src="/thumbs/1078516-1288452914800_164x164.png" alt="Android app barcode" /></a></p>
 
 <p>The <strong>mobile web app</strong> <del>will be available from the Wifi landing page at the conference venue</del> is available via the following URL: <a href="http://bit.ly/ese_app_mobile2">http://bit.ly/ese_app_mobile2/</a>.</p>
 
-<p><img src="http://www.peterfriese.de/wp-content/mobileweb3.png" alt="mobileweb.png" /></p>
+<p><a href="/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/mobileweb3.png" class="fancybox" title="Mobile Web App"><img class="center" src="/thumbs/mobileweb3_150x192.png" alt="Mobile Web App" /></a></p>
 
 <p><del>Rumor has it even BlackBerry users will get a native app.</del> <a href="http://ekkescorner.wordpress.com/2010/11/02/ese-app-for-blackberry/">Ekke</a> has created a native app for BlackBerry.</p>
 
@@ -185,8 +194,8 @@ window.ondeviceorientation = function(event) {
 <p>The iPhone, Android and mobile web apps have been built by a dedicated team of software engineers at itemis I have the pleasure to work with. If you want to learn how we build applications like these, attend our sessions:</p>
 
 <ul>
-<li><p>Tuesday, 14:00 - <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1940">Mobile Development Symposium</a></p></li>
-<li><p>Thursday 10:30 - <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1733">Models To Go: How We Built a DSL for Mobile Apps With Tools From the Eclipse</a></p></li>
+<li>Tuesday, 14:00 - <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1940">Mobile Development Symposium</a></li>
+<li>Thursday 10:30 - <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1733">Models To Go: How We Built a DSL for Mobile Apps With Tools From the Eclipse</a></li>
 </ul>
 
 
