@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Eclipse | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/eclipse/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-06-17T09:16:13+02:00</updated>
+  <updated>2013-08-03T03:20:47+01:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
     <link href="http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
-    <updated>2011-02-25T23:15:57+01:00</updated>
+    <updated>2011-02-25T22:15:57+00:00</updated>
     <id>http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
     <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
 
@@ -50,7 +50,7 @@
   <entry>
     <title type="html"><![CDATA[How to Use the Gyroscope of Your iPhone in a Mobile Web App]]></title>
     <link href="http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
-    <updated>2010-11-25T13:00:43+01:00</updated>
+    <updated>2010-11-25T12:00:43+00:00</updated>
     <id>http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
     <content type="html"><![CDATA[<p>This week's release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they're neither directly visible in the iOS UI nor are they mentioned in Apple's official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone's gyroscope. Read on to see it in action and learn how to use it.</p>
 
@@ -110,7 +110,7 @@ window.ondeviceorientation = function(event) {
   <entry>
     <title type="html"><![CDATA[Eclipse DemoCamp Hamburg November 2010]]></title>
     <link href="http://peterfriese.github.io/eclipse-democamp-hamburg-november-2010/"/>
-    <updated>2010-11-15T08:28:17+01:00</updated>
+    <updated>2010-11-15T07:28:17+00:00</updated>
     <id>http://peterfriese.github.io/eclipse-democamp-hamburg-november-2010</id>
     <content type="html"><![CDATA[<p>Last Friday was a happy day for Java developers in Hamburg: not only did Apple and Oracle announce their plan to continue development of Java on the Mac OSX platform, but we also had the pleasure to host this fall's instance of Eclipse DemoCamp Hamburg in a bookstore!</p>
 
@@ -155,7 +155,7 @@ window.ondeviceorientation = function(event) {
   <entry>
     <title type="html"><![CDATA[[Updated] Use your iPhone, Android, or BlackBerry to build Your Eclipse Summit Europe 2010]]></title>
     <link href="http://peterfriese.github.io/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/"/>
-    <updated>2010-11-01T12:45:02+01:00</updated>
+    <updated>2010-11-01T11:45:02+00:00</updated>
     <id>http://peterfriese.github.io/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010</id>
     <content type="html"><![CDATA[<p>As I'm writing this, Eclipse Summit Europe 2010 is merely hours away and everyone is getting excited to get there and meet Eclipse family.</p>
 
@@ -208,7 +208,7 @@ window.ondeviceorientation = function(event) {
   <entry>
     <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
     <link href="http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again/"/>
-    <updated>2010-09-19T22:15:30+02:00</updated>
+    <updated>2010-09-19T21:15:30+01:00</updated>
     <id>http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again</id>
     <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
 
@@ -223,7 +223,7 @@ window.ondeviceorientation = function(event) {
 
 <p>No need to say there was quite an uproar and people came up with all sorts of creative interpretations of the terms stated in section 3.3.1 to avoid being rejected from the App Store.</p>
 
-<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn't come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a> does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
+<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn't come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a>) does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
 
 <blockquote><p>3.3.1 Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs.</p></blockquote>
 
@@ -237,6 +237,8 @@ window.ondeviceorientation = function(event) {
 
 <p>At <a href="http://www.itemis.com">itemis</a>, we're very much into programming languages. We're even building our own language development toolkit to support development of programming languages - <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we've mainly been using it to create languages for enterprise and web applications. We're also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself - isn't that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We're not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we're focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
 
+<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/15018235 "></iframe></div></p>
+
 <p>If you're interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
 
 <p>In a few years, I guess, Objective-C will be just one language among many others you can choose from if you want to build iOS applications.</p>
@@ -244,10 +246,10 @@ window.ondeviceorientation = function(event) {
 <p>But why would you want to write iOS applications in languages other than Objective-C? There are many reasons:</p>
 
 <ul>
-<li><p>Use the language you feel most comfortable with. Maybe Objective-C's square brackets look scary to you?</p></li>
-<li><p>Use the language you have most experience with. Maybe you're a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator "because we've got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C"!</p></li>
-<li><p>use the language you use for developing your backend system. So you've got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</p></li>
-<li><p>Maybe you're a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</p></li>
+<li>Use the language you feel most comfortable with. Maybe Objective-C's square brackets look scary to you?</li>
+<li>Use the language you have most experience with. Maybe you're a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator "because we've got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C"!</li>
+<li>use the language you use for developing your backend system. So you've got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</li>
+<li>Maybe you're a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</li>
 </ul>
 
 

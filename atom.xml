@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://peterfriese.github.io/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-06-17T09:16:13+02:00</updated>
+  <updated>2013-08-03T03:20:47+01:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -14,9 +14,84 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Hacked.io 2013]]></title>
+    <link href="http://peterfriese.github.io/hacked-dot-io-2013/"/>
+    <updated>2013-08-03T00:18:00+01:00</updated>
+    <id>http://peterfriese.github.io/hacked-dot-io-2013</id>
+    <content type="html"><![CDATA[<p>On the weekend of July 21st, I had the chance to attend the Hacked.io hackathon. The dimensions of this event matched the size of London: 500 attendees of all age groups (there were entire teams made up of kids) gathered in the O2 arena (more precisely: in the IndigO2) poised to spend a sleepless night full of hacking and working on creative projects. Those who didn&#8217;t already have an idea for project could let themselves be inspired by the numerous challenges set up by the event sponsors.</p>
+
+<!-- more -->
+
+
+<p>Despite some initial issues with the wifi, the organizers did a great job: from drinks and snacks to the sponsored vouchers for selected restaurants in the O2 arena, you couldn&#8217;t wish for better catering for hackers. Those who stayed for the sleep over even got the treat of a late-night pizza delivery - hacker&#8217;s delight! Power strips were available at every desk and - after some initial hick-ups - the WiFi was available throughout the venue. Best conditions for productive work!</p>
+
+<p>The sponsors had not only made sure to equip everyone with a branded T-Shirt, but also had brought a generous supply of gadgets and other toys to hack on, such as Makey-Makey kits (provided by MailJet), Windows 8 Licenses (Nokia / Microsoft), numerous Hue kits (courtesy of Philips, who later told us this had been their first ever sponsored hackathon - well done, guys!). Plenty of toys to spark some creative ideas!</p>
+
+<p>Official hack time went from Saturday noon to Sunday noon, which should be enough time to build something awesome.</p>
+
+<p>Unfortunately, there was no team-building phase, so you either had to come with your team, find some team mates by chance or run on your own. I decided for the latter.</p>
+
+<p>Inspired by Microsoft&#8217;s challenge (&#8220;build something awesome with Windows Phone 8, Windows 8 or Windows Azure services&#8221;), my initial idea was to build a translation app for Windows Phone 8. Unfortunately, two things put a spoke in my wheel: the evening before the hackathon, I installed Windows 8.1 Preview in a VMware Fusion instance, but it just wouldn&#8217;t connect to my Lumia 920 test device via USB. What&#8217;s more, the Windows Phone 8 emulator refused to start - the reason being it needs Hyper-V support which isn&#8217;t activated by default for virtual machines on VMware Fusion. Later that day, I found out how to configure VMWare Fusion and Windows 8 so that the Emulator does run, however I had made up my mind and had started implementing the app on iOS.</p>
+
+<p>In contrast to Windows Phone 8, iOS doesn&#8217;t feature a speech SDK (which is kind of funny, given Siri has been a part of iOS for a number of releases now), so you have to use a third party SDK for voice recognition and speech synthesis. As I  had evaluated a number of speech SDKs when I started work on ElizaApp, I knew already which of the current speech SDKs would fit the bill and decided to use Nuance Speech SDK. For translating the recognized text fragments, I decided to use Google Translate (which is a paid service now, by the way). In order to make things more challenging, I decided to use not only one phone for the whole translation process, but two.</p>
+
+<p>The flow of events for a simple dialog is outlined in the figure below: first, both users need to choose their preferred language on their phones, while their phones register with the BabelPhone backend server. Then, the first dialog partner taps the &#8220;speak now&#8221; button to initiate speech recognition and starts speaking. As soon as he stops speaking or taps the &#8220;speak now&#8221; button again, the speech recognition engine analyses his utterance (as we&#8217;re interested in detecting natural language as opposed to simple commands, voice recognition will actually take place on a server, in our case provided by Nuance) and tries to detect what the user said. The recognized text will now be sent to the BabelPhone server.</p>
+
+<ul class="gallery">
+<li><a href="http://peterfriese.github.io/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Process.png" class="fancybox" rel="gallery-24fb3058138182be5f2be2aae5648aae" title="BabelPhone Translation Process"><img src="http://peterfriese.github.io/thumbs/BabelPhone-Process_600x250.png" alt="BabelPhone Translation Process" /></a></li>
+</ul>
+
+
+<p>As both communication partners registered with the server when the conversation started, the server knows them, as well as their language preference. Thus, the server can now send the recognized text to Google Translate and have it translated to the target language. As soon as Google Translate returns the translated text, the server can send it to the second user&#8217;s phone, where it will be converted to spoken text using the Nuance Speech SDK.</p>
+
+<p>As communication between the server side part of the application and the smartphones receiving the translation needs to take place in an asynchronous manner, we need a suitable communication channel. Web sockets lend themselves perfectly for this purpose: they offer a permanently open communication channel between server and client while at the same time being rather lightweight and ensuring a low-latency delivery of messages.</p>
+
+<ul class="gallery">
+<li><a href="http://peterfriese.github.io/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Architecture.png" class="fancybox" rel="gallery-960d2902b022d7c679b404aa2cc30ad5" title="BabelPhone Architecture"><img src="http://peterfriese.github.io/thumbs/BabelPhone-Architecture_600x250.png" alt="BabelPhone Architecture" /></a></li>
+</ul>
+
+
+<p>The whole process of recognizing the users utterance over sending it to the backend server, having it translated, sending it back down to the second phone and converting the translation back to spoken language usually takes less than a second under good circumstances, allowing for a more or less fluent conversation.</p>
+
+<p>Apart from a low at around 3 o&#8217;clock in the morning and a power nap at 6 am, I had quite a productive stride with implementing my ideas, and I finished almost on time shortly past 12:00 on Sunday.</p>
+
+<p>After everybody left the room who wasn&#8217;t going to present a hack (for space reasons, only one member of each team was allowed to present) and everybody had grabbed a quick lunch, presentation of the hacks began. The organizers had redecorated the stage so that 6 teams could set up their demo simultaneously and wait until it was their turn to present. This way, transitions between the individual presentations were cut to a minimum.</p>
+
+<p>More than 60 teams presented their work, with results being really impressive throughout. A list of all hacks presented can be found on Hackerleague.org. My favorite hacks were:</p>
+
+<ul>
+<li><a href="https://www.hackerleague.org/hackathons/hacked/hacks/robot-laser-pong">Robot Laser Pong</a> (involving Kinect, AR Drones, Makey Makey and two bananas as well as the well-known Pong game)</li>
+<li><a href="https://twitter.com/HACKEDio/status/358946426115473408">Heath Robinson&#8217;s Megatron</a></li>
+<li><a href="http://www.robmiles.com/difficultifier/">The Difficultifier</a></li>
+</ul>
+
+
+<p>Live demos have their special challenges, which is why most speakers tend to avoid them - nothing is more boring for the audience (and at the same time more nerve-racking for the presenter) if a demo just stops working and the presenter starts looking for the cause live on stage. A Hacked.io, every presenter <em>had</em> to present a live demo - slideware was strictly prohibited. I was quite surprised to see the vast majority of demos worked flawlessly without apparent issues. More stuff, less fluff - that&#8217;s what makes it even more interesting and engaging for the audience!</p>
+
+<p>My demo went very well, too. I was lucky enough to have done a test run just a few minutes before the live demo, as I found out I had run out of Nuance credits, resulting in my app neither recognizing any speech nor uttering anything. Fortunately, I could buy additional credits on the spot and make the demo work literally minutes before going on stage!</p>
+
+<p>After all teams had presented their demos, the jury gathered for finding their verdict and decide on who should receive one of the numerous prizes. The sponsors did it in style and had brought a range of attractive prizes, among them several LEGO Star Wars Death Star models, Philips Hues kits, vouchers for services like Heroku or Github, tickets for events at the O2 arena and more.</p>
+
+<p>Apparently, the name of my hack (&#8221;<a href="https://www.hackerleague.org/hackathons/hacked/hacks/babelphone">BabelPhone</a>&#8221;) evoked sweet memories with the jury - at least I was awarded a Yahoo-sponsored gift voucher for Amazon. Later, the Yahoo jury members told me my hack reminded them of the <a href="http://en.wikipedia.org/wiki/Yahoo!_Babel_Fish">legendary Babelfish service</a> - one of the first ever publicly available translation services on the internet.</p>
+
+<p>After having been awake for roughly 36 hours, I immediately fell asleep as soon as I collapsed in my bed. Hacked.io certainly was an exhausting, but also very rewarding experience. A huge thanks to all the organizers, volunteers, sponsors and all the other attendees - it was a blast!</p>
+
+<p>Finally, here is a list with upcoming hackathons and other hack events:</p>
+
+<ul>
+<li><a href="http://bremen.stadthack.de/">Stadthack Bremen</a></li>
+<li><a href="http://overtheair.org/blog/">Over the Air</a></li>
+</ul>
+
+
+<p>BTW, if you plan attending a hackathon and need a team member wo is skilled in iOS / Windows Phone / Android / Node.js development, give me a shout (<a href="https://twitter.com/peterfriese">@peterfriese</a>) - if I am available and your idea sounds cool, I&#8217;ll join you!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Do Androids Dream of Electric Sheep?]]></title>
     <link href="http://peterfriese.github.io/do-androids-dream-of-electric-sheep/"/>
-    <updated>2013-03-22T01:33:48+01:00</updated>
+    <updated>2013-03-22T00:33:48+00:00</updated>
     <id>http://peterfriese.github.io/do-androids-dream-of-electric-sheep</id>
     <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
 
@@ -59,7 +134,7 @@
   <entry>
     <title type="html"><![CDATA[Writing Xtext Scope Providers with Xtend]]></title>
     <link href="http://peterfriese.github.io/writing-xtext-scope-providers-with-xtend/"/>
-    <updated>2012-08-15T00:04:55+02:00</updated>
+    <updated>2012-08-14T23:04:55+01:00</updated>
     <id>http://peterfriese.github.io/writing-xtext-scope-providers-with-xtend</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is an <a href="http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html">important concept</a> in the design of programming languages. In Xtext, scoping is used <a href="http://zarnekow.blogspot.de/2009/01/xtext-corner-2-linking-and-scoping.html">to drive two major parts</a> of your DSL: <a href="http://www.eclipse.org/Xtext/documentation.html#linking">linking</a> and <a href="http://www.eclipse.org/Xtext/documentation.html#contentAssist">content assist</a>. While Xtext applies the <a href="http://en.wikiquote.org/wiki/Alan_Kay">80/20 rule</a> very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you&#8217;ll have to roll up your sleeves and write your own scope provider.</p>
 
@@ -95,7 +170,7 @@
   <entry>
     <title type="html"><![CDATA[Using CocoaPods to manage your dependencies]]></title>
     <link href="http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies/"/>
-    <updated>2012-06-30T00:42:22+02:00</updated>
+    <updated>2012-06-29T23:42:22+01:00</updated>
     <id>http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies</id>
     <content type="html"><![CDATA[<p>One of the few things that I find really annoying about developing apps for the iOS platform is how cumbersome it is to include third party libraries in your projects. Depending on the complexity of the library (e.g. its respective dependencies and transitive dependencies) and the effort the authors put into the consumability of their library, the steps required to add a library to your project range from just copying a few files into your source folder to a whopping two-page description of drag&#8217;n&#8217;drop wizardry.</p>
 
@@ -197,7 +272,7 @@
   <entry>
     <title type="html"><![CDATA[The Accounts and Twitter Framework on iOS 5]]></title>
     <link href="http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5/"/>
-    <updated>2011-11-10T00:30:46+01:00</updated>
+    <updated>2011-11-09T23:30:46+00:00</updated>
     <id>http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5</id>
     <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&#8217;re in a news reader application you might want to let your followers know about an interesting article you just read. If you&#8217;re in a conference schedule app, you not only want to let your followers know about the awesome talks you&#8217;re listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you&#8217;re stuck in&#8230;</p>
 
@@ -425,7 +500,7 @@
   <entry>
     <title type="html"><![CDATA[Tired of Typing? Speak to Your Computer!]]></title>
     <link href="http://peterfriese.github.io/tired-of-typing-speak-to-your-computer/"/>
-    <updated>2011-06-03T18:54:39+02:00</updated>
+    <updated>2011-06-03T17:54:39+01:00</updated>
     <id>http://peterfriese.github.io/tired-of-typing-speak-to-your-computer</id>
     <content type="html"><![CDATA[<p>For some reason, humans have always dreamt of using natural language to communicate with computers. Quite a number of movies have been made that revolve around this theme, <a href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)">2001: A Space Odyssey</a> and <a href="http://en.wikipedia.org/wiki/I,_Robot_(film)">I, Robot</a> (named after the <a href="http://en.wikipedia.org/wiki/I_robot">great collection of SF stories</a> by <a href="http://en.wikipedia.org/wiki/Isaac_Asimov">Isaac Asimov</a> just being two of them.</p>
 
@@ -456,7 +531,7 @@
   <entry>
     <title type="html"><![CDATA[Code Generation 2011 - Don't miss out!]]></title>
     <link href="http://peterfriese.github.io/code-generation-2011-dont-miss-out/"/>
-    <updated>2011-05-21T12:09:11+02:00</updated>
+    <updated>2011-05-21T11:09:11+01:00</updated>
     <id>http://peterfriese.github.io/code-generation-2011-dont-miss-out</id>
     <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven&#8217;t booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
 
@@ -498,7 +573,7 @@
   <entry>
     <title type="html"><![CDATA[Using NSPredicate to Filter Data]]></title>
     <link href="http://peterfriese.github.io/using-nspredicate-to-filter-data/"/>
-    <updated>2011-04-23T00:15:36+02:00</updated>
+    <updated>2011-04-22T23:15:36+01:00</updated>
     <id>http://peterfriese.github.io/using-nspredicate-to-filter-data</id>
     <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you&#8217;re applying a filter to the huge set of data we call the internet.</p>
 
@@ -620,7 +695,7 @@
   <entry>
     <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
     <link href="http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
-    <updated>2011-02-25T23:15:57+01:00</updated>
+    <updated>2011-02-25T22:15:57+00:00</updated>
     <id>http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
     <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
 
@@ -655,7 +730,7 @@
   <entry>
     <title type="html"><![CDATA[Appropriate Use of MapKit]]></title>
     <link href="http://peterfriese.github.io/appropriate-use-of-mapkit/"/>
-    <updated>2011-02-16T11:48:38+01:00</updated>
+    <updated>2011-02-16T10:48:38+00:00</updated>
     <id>http://peterfriese.github.io/appropriate-use-of-mapkit</id>
     <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&#8217;re violating Google&#8217;s terms of service, I was wondering what in particular was wrong.</p>
 
@@ -733,7 +808,7 @@
   <entry>
     <title type="html"><![CDATA[Three reasons why I think the HP TouchPad will rock the tablet market]]></title>
     <link href="http://peterfriese.github.io/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
-    <updated>2011-02-10T11:38:26+01:00</updated>
+    <updated>2011-02-10T10:38:26+00:00</updated>
     <id>http://peterfriese.github.io/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
     <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn&#8217;t the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
 
@@ -760,7 +835,7 @@
   <entry>
     <title type="html"><![CDATA[What's your number?]]></title>
     <link href="http://peterfriese.github.io/whats-your-number/"/>
-    <updated>2011-01-27T02:00:47+01:00</updated>
+    <updated>2011-01-27T01:00:47+00:00</updated>
     <id>http://peterfriese.github.io/whats-your-number</id>
     <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you&#8217;ve been asking yourself &#8220;what&#8217;s this number, and where do I find it?&#8221;, read on!</p>
 
@@ -795,7 +870,7 @@
   <entry>
     <title type="html"><![CDATA[Your Windows IDE sucks? Replace it with Your Favorite Editor on the Mac!]]></title>
     <link href="http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/"/>
-    <updated>2011-01-05T01:11:11+01:00</updated>
+    <updated>2011-01-05T00:11:11+00:00</updated>
     <id>http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac</id>
     <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.</p>
 
@@ -827,7 +902,7 @@
   <entry>
     <title type="html"><![CDATA[How to Use the Gyroscope of Your iPhone in a Mobile Web App]]></title>
     <link href="http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
-    <updated>2010-11-25T13:00:43+01:00</updated>
+    <updated>2010-11-25T12:00:43+00:00</updated>
     <id>http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
     <content type="html"><![CDATA[<p>This week&#8217;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they&#8217;re neither directly visible in the iOS UI nor are they mentioned in Apple&#8217;s official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone&#8217;s gyroscope. Read on to see it in action and learn how to use it.</p>
 
@@ -903,7 +978,7 @@
   <entry>
     <title type="html"><![CDATA[Eclipse DemoCamp Hamburg November 2010]]></title>
     <link href="http://peterfriese.github.io/eclipse-democamp-hamburg-november-2010/"/>
-    <updated>2010-11-15T08:28:17+01:00</updated>
+    <updated>2010-11-15T07:28:17+00:00</updated>
     <id>http://peterfriese.github.io/eclipse-democamp-hamburg-november-2010</id>
     <content type="html"><![CDATA[<p>Last Friday was a happy day for Java developers in Hamburg: not only did Apple and Oracle announce their plan to continue development of Java on the Mac OSX platform, but we also had the pleasure to host this fall&#8217;s instance of Eclipse DemoCamp Hamburg in a bookstore!</p>
 
@@ -949,7 +1024,7 @@
   <entry>
     <title type="html"><![CDATA[[Updated] Use your iPhone, Android, or BlackBerry to build Your Eclipse Summit Europe 2010]]></title>
     <link href="http://peterfriese.github.io/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/"/>
-    <updated>2010-11-01T12:45:02+01:00</updated>
+    <updated>2010-11-01T11:45:02+00:00</updated>
     <id>http://peterfriese.github.io/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010</id>
     <content type="html"><![CDATA[<p>As I&#8217;m writing this, Eclipse Summit Europe 2010 is merely hours away and everyone is getting excited to get there and meet Eclipse family.</p>
 
@@ -1003,7 +1078,7 @@
   <entry>
     <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
     <link href="http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again/"/>
-    <updated>2010-09-19T22:15:30+02:00</updated>
+    <updated>2010-09-19T21:15:30+01:00</updated>
     <id>http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again</id>
     <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
 
@@ -1018,7 +1093,7 @@
 
 <p>No need to say there was quite an uproar and people came up with all sorts of creative interpretations of the terms stated in section 3.3.1 to avoid being rejected from the App Store.</p>
 
-<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn&#8217;t come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a> does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
+<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn&#8217;t come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a>) does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
 
 <blockquote><p>3.3.1 Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs.</p></blockquote>
 
@@ -1032,6 +1107,9 @@
 
 <p>At <a href="http://www.itemis.com">itemis</a>, we&#8217;re very much into programming languages. We&#8217;re even building our own language development toolkit to support development of programming languages - <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we&#8217;ve mainly been using it to create languages for enterprise and web applications. We&#8217;re also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself - isn&#8217;t that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We&#8217;re not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we&#8217;re focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
 
+<div class="embed-video-container"><iframe src="http://player.vimeo.com/video/15018235 "></iframe></div>
+
+
 <p>If you&#8217;re interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
 
 <p>In a few years, I guess, Objective-C will be just one language among many others you can choose from if you want to build iOS applications.</p>
@@ -1039,10 +1117,10 @@
 <p>But why would you want to write iOS applications in languages other than Objective-C? There are many reasons:</p>
 
 <ul>
-<li><p>Use the language you feel most comfortable with. Maybe Objective-C&#8217;s square brackets look scary to you?</p></li>
-<li><p>Use the language you have most experience with. Maybe you&#8217;re a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator &#8220;because we&#8217;ve got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C&#8221;!</p></li>
-<li><p>use the language you use for developing your backend system. So you&#8217;ve got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</p></li>
-<li><p>Maybe you&#8217;re a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</p></li>
+<li>Use the language you feel most comfortable with. Maybe Objective-C&#8217;s square brackets look scary to you?</li>
+<li>Use the language you have most experience with. Maybe you&#8217;re a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator &#8220;because we&#8217;ve got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C&#8221;!</li>
+<li>use the language you use for developing your backend system. So you&#8217;ve got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</li>
+<li>Maybe you&#8217;re a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</li>
 </ul>
 
 
@@ -1055,16 +1133,57 @@
   <entry>
     <title type="html"><![CDATA[Why Your Next App Should be Open Sourced]]></title>
     <link href="http://peterfriese.github.io/why-your-next-app-should-be-open-sourced/"/>
-    <updated>2010-09-06T15:15:17+02:00</updated>
+    <updated>2010-09-06T14:15:17+01:00</updated>
     <id>http://peterfriese.github.io/why-your-next-app-should-be-open-sourced</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>I&#8217;ve been doing all sorts of software development over the past few years, from closed-source in-house software for companies to closed-source product development to open-source frameworks and tools development to closed-source app development.</p>
+
+<p>Looking back on my experience with the various drawbacks and benefits of each of those development modes, I hereby recommend your next app be open sourced.</p>
+
+<!--more-->
+
+
+<p>Here is why:</p>
+
+<h3>Reasons pro Open Source</h3>
+
+<p>We all heard it before, &#8220;Open Source will make the world a better place&#8221; - but why? Well, let me give you a few reasons:</p>
+
+<p><strong>First</strong>, by open sourcing your code, your code will become better. If everybody can see what your code looks like, you will do your best to make sure it&#8217;s clean code. Jeff LaMarche calls this &#8221;<a href="http://iphonedevelopment.blogspot.com/2010/06/code-as-if.html">coding as if everybody is watching</a>&#8221;. Clean code has less errors than quick-and-dirty code, so that&#8217;s a good thing.</p>
+
+<p><strong>Enabling others to contribute</strong> will further improve your code. Should you decide to invite other developers to your project, you&#8217;ll want to add some documentation to make it easier for them to get a jump start. Writing documentation will force you to think through your code and its overall structure. You might find you want to perform some refactorings before you actually let other developers work on your code. This will improve the quality of your code even more.</p>
+
+<p><strong>Enabling others to participate will make your app more attractive</strong>. Didn&#8217;t you experience this before: the app you just downloaded is almost perfect - if it only had this one missing feature. For example, I really love <a href="http://www.tweetdeck.com/iphone/">TweetDeck for iPhone</a>, but I&#8217;m dearly missing an <a href="http://www.instapaper.com/">Instapaper</a> integration. If TweetDeck was open source, I would&#8217;ve added Instapaper integration to the code and submitted a patch to the creators of TweetDeck for the benefit of the entire user base. But unfortunately, TweetDeck is not open source - what a pity.</p>
+
+<p>By <strong>building a team of skilled people</strong>, you&#8217;ll be able to deliver more features in a shorter amount of time than you can ever hope to achieve if you work alone. Successful open source projects are made up of a bunch of gifted individuals with diverse skills. This is even more important for mobile applications, as you not only have to develop the code that makes your app work. You also have to create a great looking UI, so might need a great designer. If you want to promote your app on a website, you might also consider teaming up with a web designer.</p>
+
+<p><strong>Speaking of contributions</strong>, you might be a bit hesitant to let other people work on your code. That&#8217;s alright. Usually, contributors do not get commit rights right away. Instead, you ask them to contribute to the project by submitting patches via your bug tracker (you do use a bug tracker, don&#8217;t you?). This enables you to review their code before actually committing it to the code base. If you&#8217;re not satisfied, let them know (in a friendly way) what you would like them to improve. If a contributor delivers a number of great patches in a row, you can consider to promote him/her to be a committer.</p>
+
+<h3>Reasons against Open Source</h3>
+
+<p>There are a few reasons why your next app maybe should not be open sourced:</p>
+
+<p><strong>Others might steal your ideas!</strong> I keep hearing this argument over and over again. Yes, if you open source your app, other developers might check out the code, re-brand it and sell it on the app store as their invention. Well, they can steal your ideas anyway - just by looking at your app and building an app that looks and feels the same. Granted, re-writing an app consumes considerably more time than re-branding an existing code base. But I doubt anybody dares to submit a blatant 1:1 copy of an app to the app store. At the very least, you should choose a suitable license for your code. There are a number of great open source licenses you might consider check out the <a href="http://www.opensource.org/licenses">OSI website for a list of open source licenses</a>. <a href="http://blog.robrhyne.com/">Rob Rhyne</a> even had his <a href="http://jdrhyne.tumblr.com/">brother</a> (who is a lawyer) create a <a href="http://github.com/capttaco/Briefs/blob/master/LICENSE">new app-store compatible license</a> for his app, <a href="http://giveabrief.com/">Briefs</a>. Read his blog post &#8221;<a href="http://blog.robrhyne.com/post/1043407467/selling-open-source">Selling Open Source</a>&#8221; for the rationale behind this step.</p>
+
+<p>Even if other people don&#8217;t copy your entire app, <strong>they still might copy some cool UI tricks</strong> you do. Maybe you&#8217;ve gone to great lengths to create some really cool frameworks that make your life easier or make your app behave in a very cool and new way. You might not want other apps to look as cool as your app does. Well, it&#8217;s your right. In my opinion, the app store contains way too many badly designed apps. You would do the world a favour by releasing your great library to the public. Really.</p>
+
+<p>And finally, you might not be able to open source your next app because your client or the <strong>company you&#8217;re working for is against open source</strong>. Maybe they have good reasons for it, maybe they just don&#8217;t know enough about open source. If the latter is the case, let them read this blog post or drop me a line - I&#8217;m available for consulting.</p>
+
+<h3>Business Models for Open Source Apps</h3>
+
+<p>You might have a different point of view (and if you do, please leave a comment - I&#8217;m eager to hear your thoughts), but in my opinion open source is not a threat but a chance for your app. If we take this for granted, the question remains, how can you make money with an open sourced app? Here are some suggestions:</p>
+
+<p><strong>Sell it on the App Store</strong>. Yes, this might sound a little strange after all my raving about open source. If something is open source, how can you sell it? Well, it turns out selling apps on the App Store is a great idea, especially for open source apps. The app store is the only way how your clients can get hold of your application. Of course - they might check out your code, compile it and upload it to their iPhone. But to do so, they&#8217;d need to be registered iPhone developers, meaning they&#8217;d need to buy an iPhone developer certificate. Don&#8217;t you think it is cheaper to just buy your app than shelling out 99 USD for the developer certificate?</p>
+
+<p>If you&#8217;re developing a library or framework, you might consider getting <strong>funding on <a href="http://www.kickstarter.com/">Kickstarter</a></strong>. Kickstarter is a great way to get funding for your project: you define the deliverable and how much funds you want to raise and people can back your project by pledging a variable amount of money. This way, <a href="http://www.penandthink.com/">John Wain</a> of <a href="http://glyphish.com/">Glyphish</a> fame <a href="http://www.kickstarter.com/projects/jpwain/great-icons-for-iphone-4-apps">managed to raise more than 27.000 USD</a>  for developing an iPhone 4 compatible version of his great Glyphish icon set. His original goal was to raise 2.000 USD, by the way.</p>
+
+<p>I hope I could encourage you to try open source as a strategy for your next application or framework. If I did, let me know! Chances are I might want to submit a patch to add that tiny little feature I think your app is lacking ;-)</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Watching DVDs on your iPad]]></title>
     <link href="http://peterfriese.github.io/watching-dvds-on-your-ipad/"/>
-    <updated>2010-08-07T00:22:10+02:00</updated>
+    <updated>2010-08-06T23:22:10+01:00</updated>
     <id>http://peterfriese.github.io/watching-dvds-on-your-ipad</id>
     <content type="html"><![CDATA[<p>I&#8217;ve been wanting to watch DVDs on my iPad since I had it. As the iPad doesn&#8217;t have an optical drive, you need to jump through several loopholes to get the trick done, but in the very moment you watch your first DVD on your iPad, something magical happens&#8230;</p>
 
@@ -1078,18 +1197,18 @@
 <p>So, if you want to encode your DVDs for your iPad, here are the steps you need to take. It&#8217;s very simple and doesn&#8217;t cost you a single dime:</p>
 
 <ol>
-<li><p><a href="http://handbrake.fr/downloads.php">Download</a> and install Handbrake.</p></li>
-<li><p>In order to encode for the iPad, you need to use an adjusted profile: <a href="http://www.peterfriese.de/wp-content/downloads/handbrake/iPad.plist">iPad.plist</a>.</p></li>
-<li><p>Install this profile into Handbrake (<em>Preset -> Import&#8230;</em> on the main menu)</p></li>
-<li><p>Insert a DVD into your optical drive</p></li>
-<li><p>Click the <em>Source</em> button in Handbrake and select your DVD</p></li>
-<li><p>Handbrake will now scan the DVD for what it thinks is the main feature - you might need to verif this.</p></li>
-<li><p>Select one of the profiles in the profile selection dialog (on the Mac, press the <em>Toggle Presets</em> button on the toolbar). <em>iPad full</em> worked fine for me.</p></li>
-<li><p>You can now fine-tune the settings. For example, the <em>audio</em> tab allows you to add multiple audio tracks to your video</p></li>
-<li><p>Once you&#8217;re done, press <em>Start</em></p></li>
-<li><p>Now it&#8217;s time to go for a walk or having a chat with your friends - ripping the DVD will take some time, depending on your computer</p></li>
-<li><p>When Handbrake is done encoding the video, just double-click the resulting <em>.m4v</em> file to import it to iTunes.</p></li>
-<li><p>As soon as the video shows up in iTunes, you can sync it to your iPad (the iPhone plays the video fine, too)</p></li>
+<li><a href="http://handbrake.fr/downloads.php">Download</a> and install Handbrake.</li>
+<li>In order to encode for the iPad, you need to use an adjusted profile: <a href="http://www.peterfriese.de/wp-content/downloads/handbrake/iPad.plist">iPad.plist</a>.</li>
+<li>Install this profile into Handbrake (<em>Preset -> Import&#8230;</em> on the main menu)</li>
+<li>Insert a DVD into your optical drive</li>
+<li>Click the <em>Source</em> button in Handbrake and select your DVD</li>
+<li>Handbrake will now scan the DVD for what it thinks is the main feature - you might need to verif this.</li>
+<li>Select one of the profiles in the profile selection dialog (on the Mac, press the <em>Toggle Presets</em> button on the toolbar). <em>iPad full</em> worked fine for me.</li>
+<li>You can now fine-tune the settings. For example, the <em>audio</em> tab allows you to add multiple audio tracks to your video</li>
+<li>Once you&#8217;re done, press <em>Start</em></li>
+<li>Now it&#8217;s time to go for a walk or having a chat with your friends - ripping the DVD will take some time, depending on your computer</li>
+<li>When Handbrake is done encoding the video, just double-click the resulting <em>.m4v</em> file to import it to iTunes.</li>
+<li>As soon as the video shows up in iTunes, you can sync it to your iPad (the iPhone plays the video fine, too)</li>
 </ol>
 
 
@@ -1102,7 +1221,7 @@
   <entry>
     <title type="html"><![CDATA[Don't attend the Eclipse DemoCamp in Hamburg this Friday...]]></title>
     <link href="http://peterfriese.github.io/dont-attend-the-eclipse-democamp-in-hamburg-this-friday/"/>
-    <updated>2010-07-07T02:36:08+02:00</updated>
+    <updated>2010-07-07T01:36:08+01:00</updated>
     <id>http://peterfriese.github.io/dont-attend-the-eclipse-democamp-in-hamburg-this-friday</id>
     <content type="html"><![CDATA[<p>&#8230; if you&#8217;re not interested in meeting local (and non-local) Eclipse enthusiasts and committers, learning something about Eclipse, Git, SWT, Qt, e4 and the iPhone, watching some nice Pixar short films in a cosy cinema, and frosty beverages.</p>
 
@@ -1132,34 +1251,6 @@
 <p>As always, the event if <strong>free of charge</strong> thanks to the generous support of <a href="http://www.it-agile.de/">it-agile</a>, <a href="http://www.itemis.com">itemis</a> and the <a href="http://www.eclipse.org">Eclipse Foundation</a>.</p>
 
 <p>Looking forward to seeing you on Friday!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The iPad – A Truly Inspiring Device, Thanks to the Lack of Multitasking!?]]></title>
-    <link href="http://peterfriese.github.io/the-ipad-a-truly-inspiring-device-thanks-to-the-lack-of-multitasking/"/>
-    <updated>2010-06-22T18:10:12+02:00</updated>
-    <id>http://peterfriese.github.io/the-ipad-a-truly-inspiring-device-thanks-to-the-lack-of-multitasking</id>
-    <content type="html"><![CDATA[<p>I received my iPad just a few days ago, and despite this short period of time, it already changed the way I work drastically.</p>
-
-<!-- more -->
-
-
-<p>One of the first apps I installed on the iPad was iWork. As on the Mac, iWork is made up of Keynote, Numbers, and Pages. Actually, on the iPad you have to buy them all separately, which  hides the fact the whole suite will cost you 29,97 EUR (which might make many customers shy away from this investment).</p>
-
-<p>You might think that the relatively small screen of the iPad and the fiddly on-screen keyboard would make apps like Pages really hard to use. Strange enough, I found out that my writing productivity is a lot better on the iPad than on the Mac (or any other full-blown computer). Of course, the on-screen keyboard actually is harder to use than a regular computer keyboard. But as soon as you get used to it, your typing speed will get up to 90% of your typing speed on a regular keyboard. But this isn&#8217;t the point. The key advantage is you can start writing anywhere you are: at your desk, on the sofa, even in bed! Basically every time you&#8217;ve got an idea. Ok, you can&#8217;t use it in the shower, which is where I get most ideas. There&#8217;s room for improvement - waterproof iPad, anyone?</p>
-
-<p>The iPad is small enough to be comfortably used on the subway and even in economy class. Try writing an article on an 15.4&#8221; computer on a plane! It&#8217;s virtually impossible, especially as you need to handle all the service interrupts (&#8220;what would you like to drink, Sir?&#8221;) without spilling hot coffee over your keyboard. With the iPad, just slide it in the seat pocket in front of you and you&#8217;re done!</p>
-
-<p>So the form factor of the iPad is a huge benefit.</p>
-
-<p>Another benefit is the lack of multitasking, as strange as this might sound. The fact that the active application consumes the entire screen without any dock icons or status bar items begging for your attention allows you to really focus on the act of writing.</p>
-
-<p>So every time I really want to get some serious writing done, such as an article or a blog post, I&#8217;ll grab my iPad, snug myself on a comfy chair or the sofa and start hacking away at the iPad screen.</p>
-
-<p>The only thing that could use some of Apple&#8217;s UX love is how you can exchange files between your computer and the iPad. The built-in exchange mechanism relies on tethering the device with your computer and synching the files in question using iTunes. Not very state-of-the art, if you ask me. Of course, you can export Pages documents to MobileMe, but even Apple should realize many of their users are fans of DropBox by now. Using DropBox for synching the files only works in one direction, however. Maybe Apple will add support for DropBox in the next release of iWork - this would improve the overall usability of the iPad even more.</p>
-
-<p>Despite all those UX drawbacks, using the iPad for writing has been a truly inspiring experience for me so far.</p>
 ]]></content>
   </entry>
   

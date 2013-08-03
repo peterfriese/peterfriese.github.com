@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Speech | Peter Friese]]></title>
+  <title><![CDATA[Category: speech | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/speech/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-06-17T09:16:13+02:00</updated>
+  <updated>2013-08-03T03:20:47+01:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -14,32 +14,75 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Tired of Typing? Speak to Your Computer!]]></title>
-    <link href="http://peterfriese.github.io/tired-of-typing-speak-to-your-computer/"/>
-    <updated>2011-06-03T18:54:39+02:00</updated>
-    <id>http://peterfriese.github.io/tired-of-typing-speak-to-your-computer</id>
-    <content type="html"><![CDATA[<p>For some reason, humans have always dreamt of using natural language to communicate with computers. Quite a number of movies have been made that revolve around this theme, <a href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)">2001: A Space Odyssey</a> and <a href="http://en.wikipedia.org/wiki/I,_Robot_(film)">I, Robot</a> (named after the <a href="http://en.wikipedia.org/wiki/I_robot">great collection of SF stories</a> by <a href="http://en.wikipedia.org/wiki/Isaac_Asimov">Isaac Asimov</a> just being two of them.</p>
+    <title type="html"><![CDATA[Hacked.io 2013]]></title>
+    <link href="http://peterfriese.github.io/hacked-dot-io-2013/"/>
+    <updated>2013-08-03T00:18:00+01:00</updated>
+    <id>http://peterfriese.github.io/hacked-dot-io-2013</id>
+    <content type="html"><![CDATA[<p>On the weekend of July 21st, I had the chance to attend the Hacked.io hackathon. The dimensions of this event matched the size of London: 500 attendees of all age groups (there were entire teams made up of kids) gathered in the O2 arena (more precisely: in the IndigO2) poised to spend a sleepless night full of hacking and working on creative projects. Those who didn't already have an idea for project could let themselves be inspired by the numerous challenges set up by the event sponsors.</p>
 
 <!-- more -->
 
 
-<p>Well, we've come a long way since then and computers are more powerful than ever before. I remember using one of the first versions of <a href="http://www.research.ibm.com/hlt/html/body_history.html">IBM ViaVoice</a> which would quite literally bog down my computer when I tried using it. The quality of speech recognition software has vastly improved and using a clever stack of technology, you can even use speech recognition on your iPhone (the <a href="http://www.tuaw.com/2009/12/08/dragon-dictation-comes-to-the-iphone-wow/">actual recognition is performed on a server</a>, but the effect is stunning nevertheless).</p>
+<p>Despite some initial issues with the wifi, the organizers did a great job: from drinks and snacks to the sponsored vouchers for selected restaurants in the O2 arena, you couldn't wish for better catering for hackers. Those who stayed for the sleep over even got the treat of a late-night pizza delivery - hacker's delight! Power strips were available at every desk and - after some initial hick-ups - the WiFi was available throughout the venue. Best conditions for productive work!</p>
 
-<p>With all the hoopla around HTML 5, it would be quite a surprise if modern browsers didn't have something in store with regard to voice recognition. And sure enough, there is a W3C specification for a <a href="http://lists.w3.org/Archives/Public/public-xg-htmlspeech/2011Feb/att-0020/api-draft.html">Speech Input API</a>. Looking at the list of authors might give us a hint as to which browser might support this API...</p>
+<p>The sponsors had not only made sure to equip everyone with a branded T-Shirt, but also had brought a generous supply of gadgets and other toys to hack on, such as Makey-Makey kits (provided by MailJet), Windows 8 Licenses (Nokia / Microsoft), numerous Hue kits (courtesy of Philips, who later told us this had been their first ever sponsored hackathon - well done, guys!). Plenty of toys to spark some creative ideas!</p>
 
-<p>Using the speech input API is rather easy. All you have to do is to add the <code>x-webkit-speech</code> attribute to any <code>input</code> tag and you're done. If you're on a speech-enabled browsers (as of this writing, <a href="http://chrome.blogspot.com/2011/04/everybodys-talking-and-translating-with.html">only Chrome 11</a> supports this out of the box), you can check it out in the input field below. Just click on the microphone icon and start speaking:</p>
+<p>Official hack time went from Saturday noon to Sunday noon, which should be enough time to build something awesome.</p>
 
-<p><input name="speechinput" size="40" placeholder="click the mic and start speaking" x-webkit-speech=""></p>
+<p>Unfortunately, there was no team-building phase, so you either had to come with your team, find some team mates by chance or run on your own. I decided for the latter.</p>
 
-<p>So, the other day I thought, "wouldn't it be cool if I could use voice recognition to look up my contacts on the social networks I am on?". Adding voice recognition support to a website you own is rather easy, as you only have to add the <code>x-webkit-speech</code> attribute to the respective input fields. Enhancing foreign sites, however, turns out to be a little bit more involved. Fortunately, Chrome can augment existing websites by way of so-called <a href="http://code.google.com/chrome/extensions/content_scripts.html">Content Scripts</a>, which are a part of the <a href="http://code.google.com/chrome/extensions/getstarted.html">Chrome Extensions API</a>.</p>
+<p>Inspired by Microsoft's challenge ("build something awesome with Windows Phone 8, Windows 8 or Windows Azure services"), my initial idea was to build a translation app for Windows Phone 8. Unfortunately, two things put a spoke in my wheel: the evening before the hackathon, I installed Windows 8.1 Preview in a VMware Fusion instance, but it just wouldn't connect to my Lumia 920 test device via USB. What's more, the Windows Phone 8 emulator refused to start - the reason being it needs Hyper-V support which isn't activated by default for virtual machines on VMware Fusion. Later that day, I found out how to configure VMWare Fusion and Windows 8 so that the Emulator does run, however I had made up my mind and had started implementing the app on iOS.</p>
 
-<p>Writing a Chrome Extension for speech-enabling existing text input fields on just about any website <a href="http://github.com/peterfriese/Speak2Search">was a matter of minutes</a>, thanks to the good documentation and some <a href="http://jquery.com/">jQuery</a> to walk the DOM. Putting on the finishing touches took me some more time, and I am proud to present you <a href="http://chrome.google.com/webstore/detail/peldinpdedgdcbdehomnpfndejpoibeb">Speak to Search</a> - a Chrome Extension that lets you talk with your browser. It works with virtually every website that uses regular HTML input fields. By making some smart assumptions, the extension will automatically submit the current form if the input field is a search field. If it is not, the focus will remain in the field and the form will not be submitted. That way, you can fill out e.g. an address form.</p>
+<p>In contrast to Windows Phone 8, iOS doesn't feature a speech SDK (which is kind of funny, given Siri has been a part of iOS for a number of releases now), so you have to use a third party SDK for voice recognition and speech synthesis. As I  had evaluated a number of speech SDKs when I started work on ElizaApp, I knew already which of the current speech SDKs would fit the bill and decided to use Nuance Speech SDK. For translating the recognized text fragments, I decided to use Google Translate (which is a paid service now, by the way). In order to make things more challenging, I decided to use not only one phone for the whole translation process, but two.</p>
 
-<p>Here is a short video of me using Speak to Search to search for some people on Xing and LinkedIn. Please note that the extension is making sure the speech recognition engine is configured to recognize German names on Xing.</p>
+<p>The flow of events for a simple dialog is outlined in the figure below: first, both users need to choose their preferred language on their phones, while their phones register with the BabelPhone backend server. Then, the first dialog partner taps the "speak now" button to initiate speech recognition and starts speaking. As soon as he stops speaking or taps the "speak now" button again, the speech recognition engine analyses his utterance (as we're interested in detecting natural language as opposed to simple commands, voice recognition will actually take place on a server, in our case provided by Nuance) and tries to detect what the user said. The recognized text will now be sent to the BabelPhone server.</p>
 
-<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/syMpQqMJcKU "></iframe></div></p>
+<p><ul class="gallery">
+<li><a href="/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Process.png" class="fancybox" rel="gallery-24fb3058138182be5f2be2aae5648aae" title="BabelPhone Translation Process"><img src="/thumbs/BabelPhone-Process_600x250.png" alt="BabelPhone Translation Process" /></a></li>
+</ul></p>
 
-<p>Language makes us human - this is a quote from a <a href="http://www.pbs.org/wnet/humanspark/video/spark-blog-video-dr-steven-pinker-language-makes-us-human/212/">video</a> I found during the research for this blog post. I don't necessarily think voice recognition and speech synthesis will make computers more human, but both technologies certainly can help to create a more immersive experience. I am looking forward to seeing a broader use of the new audio capabilities of modern browsers. Feel free to <a href="http://github.com/peterfriese/Speak2Search">grab my code from Github</a> and create something new and exciting!</p>
+<p>As both communication partners registered with the server when the conversation started, the server knows them, as well as their language preference. Thus, the server can now send the recognized text to Google Translate and have it translated to the target language. As soon as Google Translate returns the translated text, the server can send it to the second user's phone, where it will be converted to spoken text using the Nuance Speech SDK.</p>
+
+<p>As communication between the server side part of the application and the smartphones receiving the translation needs to take place in an asynchronous manner, we need a suitable communication channel. Web sockets lend themselves perfectly for this purpose: they offer a permanently open communication channel between server and client while at the same time being rather lightweight and ensuring a low-latency delivery of messages.</p>
+
+<p><ul class="gallery">
+<li><a href="/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Architecture.png" class="fancybox" rel="gallery-960d2902b022d7c679b404aa2cc30ad5" title="BabelPhone Architecture"><img src="/thumbs/BabelPhone-Architecture_600x250.png" alt="BabelPhone Architecture" /></a></li>
+</ul></p>
+
+<p>The whole process of recognizing the users utterance over sending it to the backend server, having it translated, sending it back down to the second phone and converting the translation back to spoken language usually takes less than a second under good circumstances, allowing for a more or less fluent conversation.</p>
+
+<p>Apart from a low at around 3 o'clock in the morning and a power nap at 6 am, I had quite a productive stride with implementing my ideas, and I finished almost on time shortly past 12:00 on Sunday.</p>
+
+<p>After everybody left the room who wasn't going to present a hack (for space reasons, only one member of each team was allowed to present) and everybody had grabbed a quick lunch, presentation of the hacks began. The organizers had redecorated the stage so that 6 teams could set up their demo simultaneously and wait until it was their turn to present. This way, transitions between the individual presentations were cut to a minimum.</p>
+
+<p>More than 60 teams presented their work, with results being really impressive throughout. A list of all hacks presented can be found on Hackerleague.org. My favorite hacks were:</p>
+
+<ul>
+<li><a href="https://www.hackerleague.org/hackathons/hacked/hacks/robot-laser-pong">Robot Laser Pong</a> (involving Kinect, AR Drones, Makey Makey and two bananas as well as the well-known Pong game)</li>
+<li><a href="https://twitter.com/HACKEDio/status/358946426115473408">Heath Robinson's Megatron</a></li>
+<li><a href="http://www.robmiles.com/difficultifier/">The Difficultifier</a></li>
+</ul>
+
+
+<p>Live demos have their special challenges, which is why most speakers tend to avoid them - nothing is more boring for the audience (and at the same time more nerve-racking for the presenter) if a demo just stops working and the presenter starts looking for the cause live on stage. A Hacked.io, every presenter <em>had</em> to present a live demo - slideware was strictly prohibited. I was quite surprised to see the vast majority of demos worked flawlessly without apparent issues. More stuff, less fluff - that's what makes it even more interesting and engaging for the audience!</p>
+
+<p>My demo went very well, too. I was lucky enough to have done a test run just a few minutes before the live demo, as I found out I had run out of Nuance credits, resulting in my app neither recognizing any speech nor uttering anything. Fortunately, I could buy additional credits on the spot and make the demo work literally minutes before going on stage!</p>
+
+<p>After all teams had presented their demos, the jury gathered for finding their verdict and decide on who should receive one of the numerous prizes. The sponsors did it in style and had brought a range of attractive prizes, among them several LEGO Star Wars Death Star models, Philips Hues kits, vouchers for services like Heroku or Github, tickets for events at the O2 arena and more.</p>
+
+<p>Apparently, the name of my hack ("<a href="https://www.hackerleague.org/hackathons/hacked/hacks/babelphone">BabelPhone</a>") evoked sweet memories with the jury - at least I was awarded a Yahoo-sponsored gift voucher for Amazon. Later, the Yahoo jury members told me my hack reminded them of the <a href="http://en.wikipedia.org/wiki/Yahoo!_Babel_Fish">legendary Babelfish service</a> - one of the first ever publicly available translation services on the internet.</p>
+
+<p>After having been awake for roughly 36 hours, I immediately fell asleep as soon as I collapsed in my bed. Hacked.io certainly was an exhausting, but also very rewarding experience. A huge thanks to all the organizers, volunteers, sponsors and all the other attendees - it was a blast!</p>
+
+<p>Finally, here is a list with upcoming hackathons and other hack events:</p>
+
+<ul>
+<li><a href="http://bremen.stadthack.de/">Stadthack Bremen</a></li>
+<li><a href="http://overtheair.org/blog/">Over the Air</a></li>
+</ul>
+
+
+<p>BTW, if you plan attending a hackathon and need a team member wo is skilled in iOS / Windows Phone / Android / Node.js development, give me a shout (<a href="https://twitter.com/peterfriese">@peterfriese</a>) - if I am available and your idea sounds cool, I'll join you!</p>
 ]]></content>
   </entry>
   

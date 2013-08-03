@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iPad | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/ipad/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-06-17T09:16:13+02:00</updated>
+  <updated>2013-08-03T03:20:47+01:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Watching DVDs on your iPad]]></title>
     <link href="http://peterfriese.github.io/watching-dvds-on-your-ipad/"/>
-    <updated>2010-08-07T00:22:10+02:00</updated>
+    <updated>2010-08-06T23:22:10+01:00</updated>
     <id>http://peterfriese.github.io/watching-dvds-on-your-ipad</id>
     <content type="html"><![CDATA[<p>I've been wanting to watch DVDs on my iPad since I had it. As the iPad doesn't have an optical drive, you need to jump through several loopholes to get the trick done, but in the very moment you watch your first DVD on your iPad, something magical happens...</p>
 
@@ -30,18 +30,18 @@
 <p>So, if you want to encode your DVDs for your iPad, here are the steps you need to take. It's very simple and doesn't cost you a single dime:</p>
 
 <ol>
-<li><p><a href="http://handbrake.fr/downloads.php">Download</a> and install Handbrake.</p></li>
-<li><p>In order to encode for the iPad, you need to use an adjusted profile: <a href="http://www.peterfriese.de/wp-content/downloads/handbrake/iPad.plist">iPad.plist</a>.</p></li>
-<li><p>Install this profile into Handbrake (<em>Preset -> Import...</em> on the main menu)</p></li>
-<li><p>Insert a DVD into your optical drive</p></li>
-<li><p>Click the <em>Source</em> button in Handbrake and select your DVD</p></li>
-<li><p>Handbrake will now scan the DVD for what it thinks is the main feature - you might need to verif this.</p></li>
-<li><p>Select one of the profiles in the profile selection dialog (on the Mac, press the <em>Toggle Presets</em> button on the toolbar). <em>iPad full</em> worked fine for me.</p></li>
-<li><p>You can now fine-tune the settings. For example, the <em>audio</em> tab allows you to add multiple audio tracks to your video</p></li>
-<li><p>Once you're done, press <em>Start</em></p></li>
-<li><p>Now it's time to go for a walk or having a chat with your friends - ripping the DVD will take some time, depending on your computer</p></li>
-<li><p>When Handbrake is done encoding the video, just double-click the resulting <em>.m4v</em> file to import it to iTunes.</p></li>
-<li><p>As soon as the video shows up in iTunes, you can sync it to your iPad (the iPhone plays the video fine, too)</p></li>
+<li><a href="http://handbrake.fr/downloads.php">Download</a> and install Handbrake.</li>
+<li>In order to encode for the iPad, you need to use an adjusted profile: <a href="http://www.peterfriese.de/wp-content/downloads/handbrake/iPad.plist">iPad.plist</a>.</li>
+<li>Install this profile into Handbrake (<em>Preset -> Import...</em> on the main menu)</li>
+<li>Insert a DVD into your optical drive</li>
+<li>Click the <em>Source</em> button in Handbrake and select your DVD</li>
+<li>Handbrake will now scan the DVD for what it thinks is the main feature - you might need to verif this.</li>
+<li>Select one of the profiles in the profile selection dialog (on the Mac, press the <em>Toggle Presets</em> button on the toolbar). <em>iPad full</em> worked fine for me.</li>
+<li>You can now fine-tune the settings. For example, the <em>audio</em> tab allows you to add multiple audio tracks to your video</li>
+<li>Once you're done, press <em>Start</em></li>
+<li>Now it's time to go for a walk or having a chat with your friends - ripping the DVD will take some time, depending on your computer</li>
+<li>When Handbrake is done encoding the video, just double-click the resulting <em>.m4v</em> file to import it to iTunes.</li>
+<li>As soon as the video shows up in iTunes, you can sync it to your iPad (the iPhone plays the video fine, too)</li>
 </ol>
 
 

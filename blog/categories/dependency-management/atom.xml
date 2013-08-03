@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dependency Management | Peter Friese]]></title>
   <link href="http://peterfriese.github.io/blog/categories/dependency-management/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-06-17T09:16:13+02:00</updated>
+  <updated>2013-08-03T03:20:47+01:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Using CocoaPods to manage your dependencies]]></title>
     <link href="http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies/"/>
-    <updated>2012-06-30T00:42:22+02:00</updated>
+    <updated>2012-06-29T23:42:22+01:00</updated>
     <id>http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies</id>
     <content type="html"><![CDATA[<p>One of the few things that I find really annoying about developing apps for the iOS platform is how cumbersome it is to include third party libraries in your projects. Depending on the complexity of the library (e.g. its respective dependencies and transitive dependencies) and the effort the authors put into the consumability of their library, the steps required to add a library to your project range from just copying a few files into your source folder to a whopping two-page description of drag'n'drop wizardry.</p>
 
