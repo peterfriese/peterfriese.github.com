@@ -1,0 +1,78 @@
+---
+layout: post
+title: "Hacked.io 2013"
+date: 2013-08-03 00:18
+comments: true
+categories: 
+- hackathon
+- conferences
+- speech
+teaserimage: /images/2013-08-03-hacked-dot-io-2013/hacked_logo_150x150.png
+
+---
+
+On the weekend of July 21st, I had the chance to attend the Hacked.io hackathon. The dimensions of this event matched the size of London: 500 attendees of all age groups (there were entire teams made up of kids) gathered in the O2 arena (more precisely: in the IndigO2) poised to spend a sleepless night full of hacking and working on creative projects. Those who didn't already have an idea for project could let themselves be inspired by the numerous challenges set up by the event sponsors.
+
+<!-- more -->
+
+Despite some initial issues with the wifi, the organizers did a great job: from drinks and snacks to the sponsored vouchers for selected restaurants in the O2 arena, you couldn't wish for better catering for hackers. Those who stayed for the sleep over even got the treat of a late-night pizza delivery - hacker's delight! Power strips were available at every desk and - after some initial hick-ups - the WiFi was available throughout the venue. Best conditions for productive work!
+
+The sponsors had not only made sure to equip everyone with a branded T-Shirt, but also had brought a generous supply of gadgets and other toys to hack on, such as Makey-Makey kits (provided by MailJet), Windows 8 Licenses (Nokia / Microsoft), numerous Hue kits (courtesy of Philips, who later told us this had been their first ever sponsored hackathon - well done, guys!). Plenty of toys to spark some creative ideas!
+
+Official hack time went from Saturday noon to Sunday noon, which should be enough time to build something awesome.
+
+Unfortunately, there was no team-building phase, so you either had to come with your team, find some team mates by chance or run on your own. I decided for the latter.
+
+Inspired by Microsoft's challenge ("build something awesome with Windows Phone 8, Windows 8 or Windows Azure services"), my initial idea was to build a translation app for Windows Phone 8. Unfortunately, two things put a spoke in my wheel: the evening before the hackathon, I installed Windows 8.1 Preview in a VMware Fusion instance, but it just wouldn't connect to my Lumia 920 test device via USB. What's more, the Windows Phone 8 emulator refused to start - the reason being it needs Hyper-V support which isn't activated by default for virtual machines on VMware Fusion. Later that day, I found out how to configure VMWare Fusion and Windows 8 so that the Emulator does run, however I had made up my mind and had started implementing the app on iOS.
+
+In contrast to Windows Phone 8, iOS doesn't feature a speech SDK (which is kind of funny, given Siri has been a part of iOS for a number of releases now), so you have to use a third party SDK for voice recognition and speech synthesis. As I  had evaluated a number of speech SDKs when I started work on ElizaApp, I knew already which of the current speech SDKs would fit the bill and decided to use Nuance Speech SDK. For translating the recognized text fragments, I decided to use Google Translate (which is a paid service now, by the way). In order to make things more challenging, I decided to use not only one phone for the whole translation process, but two.
+
+The flow of events for a simple dialog is outlined in the figure below: first, both users need to choose their preferred language on their phones, while their phones register with the BabelPhone backend server. Then, the first dialog partner taps the "speak now" button to initiate speech recognition and starts speaking. As soon as he stops speaking or taps the "speak now" button again, the speech recognition engine analyses his utterance (as we're interested in detecting natural language as opposed to simple commands, voice recognition will actually take place on a server, in our case provided by Nuance) and tries to detect what the user said. The recognized text will now be sent to the BabelPhone server. 
+
+{% fancyalbum 600x250 %}
+/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Process.png: BabelPhone Translation Process
+{% endfancyalbum %}
+
+As both communication partners registered with the server when the conversation started, the server knows them, as well as their language preference. Thus, the server can now send the recognized text to Google Translate and have it translated to the target language. As soon as Google Translate returns the translated text, the server can send it to the second user's phone, where it will be converted to spoken text using the Nuance Speech SDK.
+
+As communication between the server side part of the application and the smartphones receiving the translation needs to take place in an asynchronous manner, we need a suitable communication channel. Web sockets lend themselves perfectly for this purpose: they offer a permanently open communication channel between server and client while at the same time being rather lightweight and ensuring a low-latency delivery of messages.
+
+{% fancyalbum 600x250 %}
+/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Architecture.png: BabelPhone Architecture
+{% endfancyalbum %}
+
+The whole process of recognizing the users utterance over sending it to the backend server, having it translated, sending it back down to the second phone and converting the translation back to spoken language usually takes less than a second under good circumstances, allowing for a more or less fluent conversation.
+
+Apart from a low at around 3 o'clock in the morning and a power nap at 6 am, I had quite a productive stride with implementing my ideas, and I finished almost on time shortly past 12:00 on Sunday.
+
+After everybody left the room who wasn't going to present a hack (for space reasons, only one member of each team was allowed to present) and everybody had grabbed a quick lunch, presentation of the hacks began. The organizers had redecorated the stage so that 6 teams could set up their demo simultaneously and wait until it was their turn to present. This way, transitions between the individual presentations were cut to a minimum.
+
+More than 60 teams presented their work, with results being really impressive throughout. A list of all hacks presented can be found on Hackerleague.org. My favorite hacks were:
+
+* [Robot Laser Pong](https://www.hackerleague.org/hackathons/hacked/hacks/robot-laser-pong) (involving Kinect, AR Drones, Makey Makey and two bananas as well as the well-known Pong game)
+* [Heath Robinson's Megatron](https://twitter.com/HACKEDio/status/358946426115473408)
+* [The Difficultifier](http://www.robmiles.com/difficultifier/)
+
+Live demos have their special challenges, which is why most speakers tend to avoid them - nothing is more boring for the audience (and at the same time more nerve-racking for the presenter) if a demo just stops working and the presenter starts looking for the cause live on stage. A Hacked.io, every presenter *had* to present a live demo - slideware was strictly prohibited. I was quite surprised to see the vast majority of demos worked flawlessly without apparent issues. More stuff, less fluff - that's what makes it even more interesting and engaging for the audience!
+
+My demo went very well, too. I was lucky enough to have done a test run just a few minutes before the live demo, as I found out I had run out of Nuance credits, resulting in my app neither recognizing any speech nor uttering anything. Fortunately, I could buy additional credits on the spot and make the demo work literally minutes before going on stage!
+
+After all teams had presented their demos, the jury gathered for finding their verdict and decide on who should receive one of the numerous prizes. The sponsors did it in style and had brought a range of attractive prizes, among them several LEGO Star Wars Death Star models, Philips Hues kits, vouchers for services like Heroku or Github, tickets for events at the O2 arena and more.
+
+Apparently, the name of my hack ("[BabelPhone](https://www.hackerleague.org/hackathons/hacked/hacks/babelphone)") evoked sweet memories with the jury - at least I was awarded a Yahoo-sponsored gift voucher for Amazon. Later, the Yahoo jury members told me my hack reminded them of the [legendary Babelfish service](http://en.wikipedia.org/wiki/Yahoo!_Babel_Fish) - one of the first ever publicly available translation services on the internet.
+
+After having been awake for roughly 36 hours, I immediately fell asleep as soon as I collapsed in my bed. Hacked.io certainly was an exhausting, but also very rewarding experience. A huge thanks to all the organizers, volunteers, sponsors and all the other attendees - it was a blast!
+
+Finally, here is a list with upcoming hackathons and other hack events:
+
+* [Stadthack Bremen](http://bremen.stadthack.de/)
+* [Over the Air](http://overtheair.org/blog/)
+
+BTW, if you plan attending a hackathon and need a team member wo is skilled in iOS / Windows Phone / Android / Node.js development, give me a shout ([@peterfriese](https://twitter.com/peterfriese)) - if I am available and your idea sounds cool, I'll join you!
+
+
+
+
+
+
+
