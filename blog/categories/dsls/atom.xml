@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: DSLs | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/dsls/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/dsls/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Writing Xtext Scope Providers with Xtend]]></title>
-    <link href="http://peterfriese.github.io/writing-xtext-scope-providers-with-xtend/"/>
+    <link href="http://www.peterfriese.de/writing-xtext-scope-providers-with-xtend/"/>
     <updated>2012-08-14T23:04:55+01:00</updated>
-    <id>http://peterfriese.github.io/writing-xtext-scope-providers-with-xtend</id>
+    <id>http://www.peterfriese.de/writing-xtext-scope-providers-with-xtend</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is an <a href="http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html">important concept</a> in the design of programming languages. In Xtext, scoping is used <a href="http://zarnekow.blogspot.de/2009/01/xtext-corner-2-linking-and-scoping.html">to drive two major parts</a> of your DSL: <a href="http://www.eclipse.org/Xtext/documentation.html#linking">linking</a> and <a href="http://www.eclipse.org/Xtext/documentation.html#contentAssist">content assist</a>. While Xtext applies the <a href="http://en.wikiquote.org/wiki/Alan_Kay">80/20 rule</a> very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you'll have to roll up your sleeves and write your own scope provider.</p>
 
 <!-- more -->
@@ -51,9 +51,9 @@
   
   <entry>
     <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
-    <link href="http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again/"/>
+    <link href="http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again/"/>
     <updated>2010-09-19T21:15:30+01:00</updated>
-    <id>http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again</id>
+    <id>http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again</id>
     <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
 
 <!-- more -->
@@ -105,9 +105,9 @@
   
   <entry>
     <title type="html"><![CDATA[Xtext Tricks #1: Enhancing Completion Proposals]]></title>
-    <link href="http://peterfriese.github.io/xtext-tricks-1-enhancing-completion-proposals/"/>
+    <link href="http://www.peterfriese.de/xtext-tricks-1-enhancing-completion-proposals/"/>
     <updated>2009-10-27T16:55:43+00:00</updated>
-    <id>http://peterfriese.github.io/xtext-tricks-1-enhancing-completion-proposals</id>
+    <id>http://www.peterfriese.de/xtext-tricks-1-enhancing-completion-proposals</id>
     <content type="html"><![CDATA[<p>Those of you who <a href="htp://twitter.com/peterfriese">follow me on Twitter</a> might have noticed <a href="http://twitter.com/peterfriese/status/4889552469">I am working on an Xtext based DSL</a> for <a href="http://en.wikipedia.org/wiki/Behavior_driven_development">Behaviour Driven Development</a>. Part of the DSL allows the DSL user to define actors and the verbs these actors can execute. Actors can have a hierarchy (much like a class hierarchy), meaning an actor will inherit all verbs of it's super actors. As the list of verbs can grow quite a bit, the content assist drop down menu becomes a bit overwhelming.</p>
 
 <p>[</p>
@@ -150,9 +150,9 @@
   
   <entry>
     <title type="html"><![CDATA[Everything You Always Wanted To Know About Modeling (But Were Afraid To Ask)]]></title>
-    <link href="http://peterfriese.github.io/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask/"/>
+    <link href="http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask/"/>
     <updated>2009-10-13T23:18:52+01:00</updated>
-    <id>http://peterfriese.github.io/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
+    <id>http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
     <content type="html"><![CDATA[<ol>
 <li><p>Does Model Driven Software Development actually work?</p></li>
 <li><p>Are some developers more productive than others?</p></li>
@@ -193,9 +193,9 @@
   
   <entry>
     <title type="html"><![CDATA[Xtext @ Google]]></title>
-    <link href="http://peterfriese.github.io/xtext-google/"/>
+    <link href="http://www.peterfriese.de/xtext-google/"/>
     <updated>2009-09-04T15:46:02+01:00</updated>
-    <id>http://peterfriese.github.io/xtext-google</id>
+    <id>http://www.peterfriese.de/xtext-google</id>
     <content type="html"><![CDATA[<p>Last week I had the chance to speak at the <a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009">EclipseDay at the GooglePlex</a> in <a href="http://maps.google.com/?q=Google+Inc.%4037.423156,-122.084917&amp;hl=en&amp;ie=UTF8&amp;ll=37.42216,-122.085764&amp;spn=0.005283,0.011362&amp;t=h&amp;z=17">Mountain View, CA</a>, an event organized by the <a href="http://www.eclipse.org">Eclipse Foundation</a> and hosted by <a href="http://code.google.com/opensource/">Google's Open Source Programs Office</a>.  Google is a truly amazing company and the GooglePlex is a very exciting place to be at. As I was one day early and needed a creative place to put finishing touches on my slides, I took the chance to visit <a href="http://konigsberg.blogspot.com/">Robert Konigsberg</a> who was kind enough to host me for that day.  The organizers put together a great agenda with lots of interesting talks. <a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts">Looking at the agenda</a>, you will see that there actually are three major topics, <strong>Eclipse in the Enterprise</strong>, <strong>Modeling</strong> and <strong>Runtime</strong>:  The talks</p>
 
 <ul>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: terms of service | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/terms-of-service/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/terms-of-service/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Appropriate Use of MapKit]]></title>
-    <link href="http://peterfriese.github.io/appropriate-use-of-mapkit/"/>
+    <link href="http://www.peterfriese.de/appropriate-use-of-mapkit/"/>
     <updated>2011-02-16T10:48:38+00:00</updated>
-    <id>http://peterfriese.github.io/appropriate-use-of-mapkit</id>
+    <id>http://www.peterfriese.de/appropriate-use-of-mapkit</id>
     <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you're violating Google's terms of service, I was wondering what in particular was wrong.</p>
 
 <!-- more -->

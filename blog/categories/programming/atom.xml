@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Programming | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/programming/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Annotated Links for Week 32]]></title>
-    <link href="http://peterfriese.github.io/annotated-links-for-week-32/"/>
+    <link href="http://www.peterfriese.de/annotated-links-for-week-32/"/>
     <updated>2013-08-10T01:33:00+01:00</updated>
-    <id>http://peterfriese.github.io/annotated-links-for-week-32</id>
+    <id>http://www.peterfriese.de/annotated-links-for-week-32</id>
     <content type="html"><![CDATA[<p>This week, we'll have a look at Apple's new system status page and another, more serious issue in a rather well-known computer-driven system. Other topics in this post: a very high-level view on programming (and why we failed so far) as well as a very detailed look at programming (and what you can do to excel at it). Finally, some spying.</p>
 
 <!-- more -->

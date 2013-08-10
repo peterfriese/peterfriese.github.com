@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: MDSD | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/mdsd/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/mdsd/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Code Generation 2011 - Don't miss out!]]></title>
-    <link href="http://peterfriese.github.io/code-generation-2011-dont-miss-out/"/>
+    <link href="http://www.peterfriese.de/code-generation-2011-dont-miss-out/"/>
     <updated>2011-05-21T11:09:11+01:00</updated>
-    <id>http://peterfriese.github.io/code-generation-2011-dont-miss-out</id>
+    <id>http://www.peterfriese.de/code-generation-2011-dont-miss-out</id>
     <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven't booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
 
 <p>Quite a number of my colleagues at itemis have been busy preparing for this conference in the past few weeks. Besides working hard to hit the <a href="http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan">Eclipse Release Train milestone for Indigo on June 22nd</a>, the Xtext team brushed up their hands-on sessions "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=17">Xtext Take I: Creating Code Generators with Xtend2</a>" and "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=16">Xtext Take II: Crafting Domain Specific Languages with Xtext and Xbase</a>". If you've been using Xtext, you're well aware of the power you have at your disposal with this tool. Xbase and Xtend2, however, take this experience to a whole new level. So make sure to mark your calendar for these two sessions!</p>
@@ -56,9 +56,9 @@
   
   <entry>
     <title type="html"><![CDATA[Getting started with Code Generation with Xpand]]></title>
-    <link href="http://peterfriese.github.io/getting-started-with-code-generation-with-xpand/"/>
+    <link href="http://www.peterfriese.de/getting-started-with-code-generation-with-xpand/"/>
     <updated>2010-03-17T16:05:05+00:00</updated>
-    <id>http://peterfriese.github.io/getting-started-with-code-generation-with-xpand</id>
+    <id>http://www.peterfriese.de/getting-started-with-code-generation-with-xpand</id>
     <content type="html"><![CDATA[<p>Have you heard about model driven software development (MDD / MDSD) and are thinking "what's all this fuzz about models"? "Why should models help me to be more productive," might be another thought you have.</p>
 
 <p>People have been asking how to leverage models on and off on the web and in meetings I attended, so I thought I might share this little tutorial with you. In this tutorial, we will develop a little code generator that helps you to create (HTML) forms from models.</p>
@@ -413,9 +413,9 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
   
   <entry>
     <title type="html"><![CDATA[Xtext Tricks #1: Enhancing Completion Proposals]]></title>
-    <link href="http://peterfriese.github.io/xtext-tricks-1-enhancing-completion-proposals/"/>
+    <link href="http://www.peterfriese.de/xtext-tricks-1-enhancing-completion-proposals/"/>
     <updated>2009-10-27T16:55:43+00:00</updated>
-    <id>http://peterfriese.github.io/xtext-tricks-1-enhancing-completion-proposals</id>
+    <id>http://www.peterfriese.de/xtext-tricks-1-enhancing-completion-proposals</id>
     <content type="html"><![CDATA[<p>Those of you who <a href="htp://twitter.com/peterfriese">follow me on Twitter</a> might have noticed <a href="http://twitter.com/peterfriese/status/4889552469">I am working on an Xtext based DSL</a> for <a href="http://en.wikipedia.org/wiki/Behavior_driven_development">Behaviour Driven Development</a>. Part of the DSL allows the DSL user to define actors and the verbs these actors can execute. Actors can have a hierarchy (much like a class hierarchy), meaning an actor will inherit all verbs of it's super actors. As the list of verbs can grow quite a bit, the content assist drop down menu becomes a bit overwhelming.</p>
 
 <p>[</p>
@@ -458,9 +458,9 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
   
   <entry>
     <title type="html"><![CDATA[Everything You Always Wanted To Know About Modeling (But Were Afraid To Ask)]]></title>
-    <link href="http://peterfriese.github.io/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask/"/>
+    <link href="http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask/"/>
     <updated>2009-10-13T23:18:52+01:00</updated>
-    <id>http://peterfriese.github.io/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
+    <id>http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
     <content type="html"><![CDATA[<ol>
 <li><p>Does Model Driven Software Development actually work?</p></li>
 <li><p>Are some developers more productive than others?</p></li>
@@ -501,9 +501,9 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
   
   <entry>
     <title type="html"><![CDATA[Xtext @ Google]]></title>
-    <link href="http://peterfriese.github.io/xtext-google/"/>
+    <link href="http://www.peterfriese.de/xtext-google/"/>
     <updated>2009-09-04T15:46:02+01:00</updated>
-    <id>http://peterfriese.github.io/xtext-google</id>
+    <id>http://www.peterfriese.de/xtext-google</id>
     <content type="html"><![CDATA[<p>Last week I had the chance to speak at the <a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009">EclipseDay at the GooglePlex</a> in <a href="http://maps.google.com/?q=Google+Inc.%4037.423156,-122.084917&amp;hl=en&amp;ie=UTF8&amp;ll=37.42216,-122.085764&amp;spn=0.005283,0.011362&amp;t=h&amp;z=17">Mountain View, CA</a>, an event organized by the <a href="http://www.eclipse.org">Eclipse Foundation</a> and hosted by <a href="http://code.google.com/opensource/">Google's Open Source Programs Office</a>.  Google is a truly amazing company and the GooglePlex is a very exciting place to be at. As I was one day early and needed a creative place to put finishing touches on my slides, I took the chance to visit <a href="http://konigsberg.blogspot.com/">Robert Konigsberg</a> who was kind enough to host me for that day.  The organizers put together a great agenda with lots of interesting talks. <a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts">Looking at the agenda</a>, you will see that there actually are three major topics, <strong>Eclipse in the Enterprise</strong>, <strong>Modeling</strong> and <strong>Runtime</strong>:  The talks</p>
 
 <ul>

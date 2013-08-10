@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: OSGi | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/osgi/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/osgi/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[OSGi & Servlets: Flexibility by Simplicity]]></title>
-    <link href="http://peterfriese.github.io/osgi-servlets-flexibility-by-simplicity/"/>
+    <link href="http://www.peterfriese.de/osgi-servlets-flexibility-by-simplicity/"/>
     <updated>2010-04-26T11:24:03+01:00</updated>
-    <id>http://peterfriese.github.io/osgi-servlets-flexibility-by-simplicity</id>
+    <id>http://www.peterfriese.de/osgi-servlets-flexibility-by-simplicity</id>
     <content type="html"><![CDATA[<p><strong>Strangely enough</strong>, simple things tend to be more flexible than complex things. I bet you too have seen people go to great lengths to ensure a certain solution provides utmost flexibility. <!-- more -->Often, this flexibility isn't needed, so you're introducing accidental complexity.</p>
 
 <p>In <a href="http://www.peterfriese.de/osgi-servlets-a-happy-marriage/">a recent post</a>, I showed you how to create a plain servlet and register it in an OSGi environment. As both <a href="http://eclipsesource.com/blogs/author/jeff/">Jeff</a> and <a href="http://www.composent.com/">Scott</a> pointed out, my using a <em>ServiceTracker</em> to register and unregister the servlet is a little bit clumsy and can be improved by using Declarative Services.</p>
@@ -88,9 +88,9 @@
   
   <entry>
     <title type="html"><![CDATA[OSGi & Servlets: Deploying on Amazon EC2]]></title>
-    <link href="http://peterfriese.github.io/osgi-servlets-deploying-on-amazon-ec2/"/>
+    <link href="http://www.peterfriese.de/osgi-servlets-deploying-on-amazon-ec2/"/>
     <updated>2010-04-16T02:04:09+01:00</updated>
-    <id>http://peterfriese.github.io/osgi-servlets-deploying-on-amazon-ec2</id>
+    <id>http://www.peterfriese.de/osgi-servlets-deploying-on-amazon-ec2</id>
     <content type="html"><![CDATA[<p>Last week, <a href="http://www.peterfriese.de/osgi-servlets-a-happy-marriage/">I showed you how to create a very simple OSGi-based servlet</a> and run it locally on Jetty. Today, I will show you how to deploy this servlet to an Amazon EC2 instance.</p>
 
 <!-- more -->
@@ -207,9 +207,9 @@ confapply
   
   <entry>
     <title type="html"><![CDATA[OSGi & Servlets: A Happy Marriage]]></title>
-    <link href="http://peterfriese.github.io/osgi-servlets-a-happy-marriage/"/>
+    <link href="http://www.peterfriese.de/osgi-servlets-a-happy-marriage/"/>
     <updated>2010-04-07T13:40:41+01:00</updated>
-    <id>http://peterfriese.github.io/osgi-servlets-a-happy-marriage</id>
+    <id>http://www.peterfriese.de/osgi-servlets-a-happy-marriage</id>
     <content type="html"><![CDATA[<p>In this post, I'll show you how to create a simple OSGI-based servlet. Later, we will deploy this servlet to an Amazon EC 2 instance - this should be fun!</p>
 
 <!-- more -->

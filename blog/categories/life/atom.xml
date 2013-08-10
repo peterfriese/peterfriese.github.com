@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Life | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/life/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/life/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Joining itemis]]></title>
-    <link href="http://peterfriese.github.io/joining-itemis/"/>
+    <link href="http://www.peterfriese.de/joining-itemis/"/>
     <updated>2008-02-19T11:33:20+00:00</updated>
-    <id>http://peterfriese.github.io/joining-itemis</id>
+    <id>http://www.peterfriese.de/joining-itemis</id>
     <content type="html"><![CDATA[<p>Effective February 1st, 2008, I left my <a href="http://www.gentleware.com/">former employer</a> and <a href="https://www.xing.com/profile/Peter_Friese">joined</a> <a href="http://www.itemis.de/">itemis</a>.</p>
 
 <p>There are many reasons for this step, and I don't want to go into too much detail, so here are the two most important ones:</p>
@@ -34,9 +34,9 @@
   
   <entry>
     <title type="html"><![CDATA[Three things about me you might be surprised to hear about...]]></title>
-    <link href="http://peterfriese.github.io/three-things-about-me-you-might-be-surprised-to-hear-about/"/>
+    <link href="http://www.peterfriese.de/three-things-about-me-you-might-be-surprised-to-hear-about/"/>
     <updated>2007-01-07T23:13:08+00:00</updated>
-    <id>http://peterfriese.github.io/three-things-about-me-you-might-be-surprised-to-hear-about</id>
+    <id>http://www.peterfriese.de/three-things-about-me-you-might-be-surprised-to-hear-about</id>
     <content type="html"><![CDATA[<p>Thanks to <a href="http://www.mwiesner.com/index.php/2007/01/02/3-dinge-uber-mich/">Michael</a>, it's about time to let you know that...</p>
 
 <ol>
@@ -52,9 +52,9 @@
   
   <entry>
     <title type="html"><![CDATA[Leaving Lufthansa Systems]]></title>
-    <link href="http://peterfriese.github.io/leaving-lufthansa-systems/"/>
+    <link href="http://www.peterfriese.de/leaving-lufthansa-systems/"/>
     <updated>2007-01-04T01:19:02+00:00</updated>
-    <id>http://peterfriese.github.io/leaving-lufthansa-systems</id>
+    <id>http://www.peterfriese.de/leaving-lufthansa-systems</id>
     <content type="html"><![CDATA[<p>I am leaving <a href="http://www.lhsystems.com">Lufthansa Systems</a> to join <a href="http://www.gentleware.com">Gentleware</a>.</p>
 
 <p>I joined <a href="http://www.lufthansa.com">Lufthansa</a> in August 1996, when I started my studies in computer sciences at <a href="http://www.nordakademie.de">Nordakademie,</a> Elmshorn. After finishing my studies in early 2000, I started my career as a software engineer with <a href="http://www.lhsystems.com">Lufthansa Systems</a>. My first team developed a tool that helped administrators to install Windows PCs unattended. Most of the code was written in Delphi and DOS Batch. After 1 year, I had the opportunity to join another team who were writing enterprise applications in Java. Although I had never written a single line of Java code before, I was given the chance to join the team (mostly because I had some experience with distributed systems and CORBA). The team was rather small when I joined (only three developers, including me, and one boss), but grew up to 15 developers in about 2 years. We had some good fun writing J2EE applications (and frameworks).</p>
@@ -71,9 +71,9 @@
   
   <entry>
     <title type="html"><![CDATA[Jonas Aaron is here!]]></title>
-    <link href="http://peterfriese.github.io/jonas-aaron-is-here/"/>
+    <link href="http://www.peterfriese.de/jonas-aaron-is-here/"/>
     <updated>2006-07-26T21:58:40+01:00</updated>
-    <id>http://peterfriese.github.io/jonas-aaron-is-here</id>
+    <id>http://www.peterfriese.de/jonas-aaron-is-here</id>
     <content type="html"><![CDATA[<p><img src="/wp-content/downloads/family/jonas/jonas.jpg" alt="Jonas" /></p>
 
 <p>Today at 3:26 in the morning, Anne gave birth to Jonas Aaron Friese, our third son. Both are well (and a little bit tired).</p>
@@ -86,9 +86,9 @@ From the day I was born, I have been in your care, and from the time of my birth
   
   <entry>
     <title type="html"><![CDATA[Google Earth rocks!]]></title>
-    <link href="http://peterfriese.github.io/google-earth-rocks/"/>
+    <link href="http://www.peterfriese.de/google-earth-rocks/"/>
     <updated>2005-08-09T00:04:13+01:00</updated>
-    <id>http://peterfriese.github.io/google-earth-rocks</id>
+    <id>http://www.peterfriese.de/google-earth-rocks</id>
     <content type="html"><![CDATA[<p>In the german news magazine "<a href="http://www.spiegel.de/">Der SPIEGEL</a>", I read a quite promising article about <a href="http://earth.google.com/">Google Earth</a>. Today, I gave it a try and was impressed by the smoothness of the tool right away.  <a href="http://f3.tobject.de/wp-content/downloads/googleearth/Homes.kmz">Here is a file</a> that shows you where I have lived so far.</p>
 ]]></content>
   </entry>

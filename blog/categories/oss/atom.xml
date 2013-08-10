@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: OSS | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/oss/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/oss/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Why Your Next App Should be Open Sourced]]></title>
-    <link href="http://peterfriese.github.io/why-your-next-app-should-be-open-sourced/"/>
+    <link href="http://www.peterfriese.de/why-your-next-app-should-be-open-sourced/"/>
     <updated>2010-09-06T14:15:17+01:00</updated>
-    <id>http://peterfriese.github.io/why-your-next-app-should-be-open-sourced</id>
+    <id>http://www.peterfriese.de/why-your-next-app-should-be-open-sourced</id>
     <content type="html"><![CDATA[<p>I've been doing all sorts of software development over the past few years, from closed-source in-house software for companies to closed-source product development to open-source frameworks and tools development to closed-source app development.</p>
 
 <p>Looking back on my experience with the various drawbacks and benefits of each of those development modes, I hereby recommend your next app be open sourced.</p>

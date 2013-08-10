@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Canada | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/canada/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/canada/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Everything You Always Wanted To Know About Modeling (But Were Afraid To Ask)]]></title>
-    <link href="http://peterfriese.github.io/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask/"/>
+    <link href="http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask/"/>
     <updated>2009-10-13T23:18:52+01:00</updated>
-    <id>http://peterfriese.github.io/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
+    <id>http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
     <content type="html"><![CDATA[<ol>
 <li><p>Does Model Driven Software Development actually work?</p></li>
 <li><p>Are some developers more productive than others?</p></li>
@@ -58,9 +58,9 @@
   
   <entry>
     <title type="html"><![CDATA[Canada, eh!]]></title>
-    <link href="http://peterfriese.github.io/canada-eh/"/>
+    <link href="http://www.peterfriese.de/canada-eh/"/>
     <updated>2009-04-01T04:35:53+01:00</updated>
-    <id>http://peterfriese.github.io/canada-eh</id>
+    <id>http://www.peterfriese.de/canada-eh</id>
     <content type="html"><![CDATA[<p>So this is the last post I am writing in Canada for quite some time. I shall be heading back to Germany tonight on AC 876 - let's see if they've got <a href="http://www.peterfriese.de/o-canada/">disco lights</a> again :-)</p>
 
 <p>It has been a packed time and I guess I met more people in these two months than I ever met before in a comparable period of time. Oh, did I tell you that I used to be a shy person? Well, at least I seem to have found ways to cope with that trait.</p>
@@ -119,9 +119,9 @@
   
   <entry>
     <title type="html"><![CDATA[O Canada]]></title>
-    <link href="http://peterfriese.github.io/o-canada/"/>
+    <link href="http://www.peterfriese.de/o-canada/"/>
     <updated>2009-02-02T22:03:56+00:00</updated>
-    <id>http://peterfriese.github.io/o-canada</id>
+    <id>http://www.peterfriese.de/o-canada</id>
     <content type="html"><![CDATA[<p>So I arrived in Canada on Friday night aboard Air Canada 877 from Frankfurt to Toronto. I was very pleased to see that the flight wasn't fully booked, so I had the luxury of using two seats for the price of one. They have a fancy lighting system aboard these air crafts which might be supposed to simulate the diurnal rhythm, but if that's actually true, I lived through several days and nights on that flight!</p>
 
 <p>[</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: iOS | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/ios/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Do Androids Dream of Electric Sheep?]]></title>
-    <link href="http://peterfriese.github.io/do-androids-dream-of-electric-sheep/"/>
+    <link href="http://www.peterfriese.de/do-androids-dream-of-electric-sheep/"/>
     <updated>2013-03-22T00:33:48+00:00</updated>
-    <id>http://peterfriese.github.io/do-androids-dream-of-electric-sheep</id>
+    <id>http://www.peterfriese.de/do-androids-dream-of-electric-sheep</id>
     <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
 
 <!-- more -->
@@ -57,9 +57,9 @@
   
   <entry>
     <title type="html"><![CDATA[Using CocoaPods to manage your dependencies]]></title>
-    <link href="http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies/"/>
+    <link href="http://www.peterfriese.de/using-cocoapods-to-manage-your-dependencies/"/>
     <updated>2012-06-29T23:42:22+01:00</updated>
-    <id>http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies</id>
+    <id>http://www.peterfriese.de/using-cocoapods-to-manage-your-dependencies</id>
     <content type="html"><![CDATA[<p>One of the few things that I find really annoying about developing apps for the iOS platform is how cumbersome it is to include third party libraries in your projects. Depending on the complexity of the library (e.g. its respective dependencies and transitive dependencies) and the effort the authors put into the consumability of their library, the steps required to add a library to your project range from just copying a few files into your source folder to a whopping two-page description of drag'n'drop wizardry.</p>
 
 <!--more-->
@@ -150,9 +150,9 @@ dependency 'RestKit/ObjectMapping/JSON'
   
   <entry>
     <title type="html"><![CDATA[The Accounts and Twitter Framework on iOS 5]]></title>
-    <link href="http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5/"/>
+    <link href="http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5/"/>
     <updated>2011-11-09T23:30:46+00:00</updated>
-    <id>http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5</id>
+    <id>http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5</id>
     <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you're in a news reader application you might want to let your followers know about an interesting article you just read. If you're in a conference schedule app, you not only want to let your followers know about the awesome talks you're listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you're stuck in...</p>
 
 <!-- more -->
@@ -318,9 +318,9 @@ return cell;
   
   <entry>
     <title type="html"><![CDATA[Using NSPredicate to Filter Data]]></title>
-    <link href="http://peterfriese.github.io/using-nspredicate-to-filter-data/"/>
+    <link href="http://www.peterfriese.de/using-nspredicate-to-filter-data/"/>
     <updated>2011-04-22T23:15:36+01:00</updated>
-    <id>http://peterfriese.github.io/using-nspredicate-to-filter-data</id>
+    <id>http://www.peterfriese.de/using-nspredicate-to-filter-data</id>
     <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you're applying a filter to the huge set of data we call the internet.</p>
 
 <!-- more -->
@@ -438,9 +438,9 @@ filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
   
   <entry>
     <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
-    <link href="http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
+    <link href="http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
     <updated>2011-02-25T22:15:57+00:00</updated>
-    <id>http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
+    <id>http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
     <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
 
 <!-- more -->

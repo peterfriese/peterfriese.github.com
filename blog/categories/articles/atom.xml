@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Articles | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/articles/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/articles/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[Sucessful adoption of AndroMDA in a large project]]></title>
-    <link href="http://peterfriese.github.io/sucessful-adoption-of-andromda-in-a-large-project/"/>
+    <link href="http://www.peterfriese.de/sucessful-adoption-of-andromda-in-a-large-project/"/>
     <updated>2006-05-03T22:35:03+01:00</updated>
-    <id>http://peterfriese.github.io/sucessful-adoption-of-andromda-in-a-large-project</id>
+    <id>http://www.peterfriese.de/sucessful-adoption-of-andromda-in-a-large-project</id>
     <content type="html"><![CDATA[<p><a href="http://www.sigs-datacom.de/sd/publications/os/2006/03/index.htm">Issue 03/2006</a> of the german <a href="http://www.sigs-datacom.de/sd/publications/os/index.htm">OBJEKTspektrum</a> contains an article by me and <a href="http://www.mbohlen.de">Matthias Bohlen</a> titled <a href="http://www.sigs-datacom.de/sd/publications/pub_article_show.htm?&amp;AID=1846&amp;TABLE=sd_article">Erfolgreicher Einsatz von AndroMDA bei Lufthansa Systems</a> (Sucessful adoption of AndroMDA at Lufthansa Systems). In this article, we discuss how AndroMDA has been used in a large Java based project for a german logistics service provider. You can <a href="http://f3.tobject.de/wp-content/downloads/articles/bohlen_friese_OS_03_06.pdf">read the article online</a>.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Eclipse RCP in the Enterprise]]></title>
-    <link href="http://peterfriese.github.io/eclipse-rcp-in-the-enterprise/"/>
+    <link href="http://www.peterfriese.de/eclipse-rcp-in-the-enterprise/"/>
     <updated>2005-12-16T22:29:44+00:00</updated>
-    <id>http://peterfriese.github.io/eclipse-rcp-in-the-enterprise</id>
+    <id>http://www.peterfriese.de/eclipse-rcp-in-the-enterprise</id>
     <content type="html"><![CDATA[<p><a href="http://www.sigs-datacom.de/sd/publications/os/2006/01/index.htm">Issue 01/2006</a> of the german <a href="http://www.sigs-datacom.de/sd/publications/os/index.htm">OBJEKTspektrum</a> contains an article by me titled <a href="http://www.sigs-datacom.de/sd/publications/pub_article_show.htm?&amp;AID=1758&amp;TABLE=sd_article">Eclipse RCP als Plattform für Unternehmensanwendungen</a> (Eclipse RCP as a platform for enterprise applications). In this article, I compare RCP applications to traditional web applications with respect to their suitability for enterprise usage.
 The aspects being compared are:</p>
 
@@ -44,18 +44,18 @@ The aspects being compared are:</p>
   
   <entry>
     <title type="html"><![CDATA[Model Driven Architecture and Spring -  friend or foe?]]></title>
-    <link href="http://peterfriese.github.io/model-driven-architecture-and-spring-friend-or-foe/"/>
+    <link href="http://www.peterfriese.de/model-driven-architecture-and-spring-friend-or-foe/"/>
     <updated>2005-09-20T01:14:00+01:00</updated>
-    <id>http://peterfriese.github.io/model-driven-architecture-and-spring-friend-or-foe</id>
+    <id>http://www.peterfriese.de/model-driven-architecture-and-spring-friend-or-foe</id>
     <content type="html"><![CDATA[<p><a href="http://www.javamagazin.de/itr/ausgaben/psecom,id,285,nodeid,20.html">Issue 10.2005</a> of the german Java Magazin contains an article by <a href="http://www.voelter.de/">Markus Völter</a>, <a href="http://jandiandme.blogspot.com/">Eberhard Wolff</a> and <a href="http://f3.tobject.de/about/">me</a> about how the <a href="http://www.springframework.org/">Spring framework</a> and model driven concepts fit together. You can <a href="http://f3.tobject.de/wp-content/downloads/articles/spring_und_generierung.pdf">read the article online</a>.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Eclipse Job API, My Personal Eclipse]]></title>
-    <link href="http://peterfriese.github.io/eclipse-job-api-my-personal-eclipse/"/>
+    <link href="http://www.peterfriese.de/eclipse-job-api-my-personal-eclipse/"/>
     <updated>2005-08-23T01:21:21+01:00</updated>
-    <id>http://peterfriese.github.io/eclipse-job-api-my-personal-eclipse</id>
+    <id>http://www.peterfriese.de/eclipse-job-api-my-personal-eclipse</id>
     <content type="html"><![CDATA[<p><a href="http://www.eclipsemagazin.de/itr/ausgaben/psecom,id,282,nodeid,228.html">Issue 4.2005</a> of the german Eclipse Magazin contains three articles written by me: a review of  <a href="http://www.eclipse-magazin.de/itr/buchtipps/psecom,id,438,nodeid,249.html">The Java Developer's Guide to Eclipse</a>, a technical article on the Eclipse Job API and a quite fun article about why I love Eclipse.</p>
 
 <p>You can read the articles online:</p>
@@ -71,9 +71,9 @@ The aspects being compared are:</p>
   
   <entry>
     <title type="html"><![CDATA[Reviews: FindBugs, Quantum DB]]></title>
-    <link href="http://peterfriese.github.io/48/"/>
+    <link href="http://www.peterfriese.de/48/"/>
     <updated>2005-05-02T23:10:19+01:00</updated>
-    <id>http://peterfriese.github.io/48</id>
+    <id>http://www.peterfriese.de/48</id>
     <content type="html"><![CDATA[<p><a href="http://www.eclipsemagazin.de/itr/ausgaben/psecom,id,263,nodeid,228.html">Issue 3.2005</a> of the german Eclipse Magazin contains two short reviews written by me:</p>
 
 <ul>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Stuff that rocks | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/stuff-that-rocks/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/stuff-that-rocks/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Following Eclipse Milestones]]></title>
-    <link href="http://peterfriese.github.io/following-eclipse-milestones/"/>
+    <link href="http://www.peterfriese.de/following-eclipse-milestones/"/>
     <updated>2009-06-09T00:46:24+01:00</updated>
-    <id>http://peterfriese.github.io/following-eclipse-milestones</id>
+    <id>http://www.peterfriese.de/following-eclipse-milestones</id>
     <content type="html"><![CDATA[<p>With the Galileo Release coming up, you might find yourself having a hard time updating to the latest milestones AND keeping your favorite plug-ins up-to-date.</p>
 
 <p>Did you know that you can migrate your additional plug-ins from one Eclipse install to another one? This can be a huge time-saver, especially for people who like to live on the bleeding edge.</p>
@@ -77,9 +77,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mac in Black: Taking Screenshots with Skitch]]></title>
-    <link href="http://peterfriese.github.io/mac-in-black-skitch/"/>
+    <link href="http://www.peterfriese.de/mac-in-black-skitch/"/>
     <updated>2009-05-25T01:16:11+01:00</updated>
-    <id>http://peterfriese.github.io/mac-in-black-skitch</id>
+    <id>http://www.peterfriese.de/mac-in-black-skitch</id>
     <content type="html"><![CDATA[<p>Last week, <a href="http://www.1160pm.net/">Heiko</a>, <a href="http://koehnlein.blogspot.com/">Jan</a> and I were talking about blogging about the tools that make our lifes easier on the Mac. "Isn't the Mac supposed to be making your life easier anyway?" you might ask. Well, most things really are easy with a Mac. However, there are some things that cannot be done easily with a Mac. More often than not, this is due to the fact that Apple tries to hide the complexity of computers from nosy users. Which is fine for beginners - but makes life harder for the pros. Thankfully, there is a vast array of tools out there that fill the gap and make life on a Mac easier.</p>
 
 <p>I am going to try to post one tool recommendation per week - unless I am on vacation or speaking at a conference.</p>
@@ -111,9 +111,9 @@
   
   <entry>
     <title type="html"><![CDATA[Advanced WikiText]]></title>
-    <link href="http://peterfriese.github.io/advanced-wikitext/"/>
+    <link href="http://www.peterfriese.de/advanced-wikitext/"/>
     <updated>2009-05-05T20:18:47+01:00</updated>
-    <id>http://peterfriese.github.io/advanced-wikitext</id>
+    <id>http://www.peterfriese.de/advanced-wikitext</id>
     <content type="html"><![CDATA[<p>In my <a href="http://www.peterfriese.de/getting-started-with-wikitext/">recent posting</a>, I showed you how to use <a href="http://wiki.eclipse.org/Mylyn/Incubator/WikiText">Mylyn WikiText</a> to easily create documentation for your project.</p>
 
 <p>In this installment, we're going to look at four things:</p>
@@ -299,9 +299,9 @@ newnoteworthy.textile
   
   <entry>
     <title type="html"><![CDATA[Getting started with WikiText]]></title>
-    <link href="http://peterfriese.github.io/getting-started-with-wikitext/"/>
+    <link href="http://www.peterfriese.de/getting-started-with-wikitext/"/>
     <updated>2009-04-24T00:34:54+01:00</updated>
-    <id>http://peterfriese.github.io/getting-started-with-wikitext</id>
+    <id>http://www.peterfriese.de/getting-started-with-wikitext</id>
     <content type="html"><![CDATA[<p>Documentation is the bane of all developers. Nobody likes to write documentation, but most people know we need it. Even more so in Open Source projects. If you don't have a decent documentation, it will be hard to find contributors which will eventually stall the projects ability to acquire new committers.</p>
 
 <p>While documenting code is discussed quite controversial (see <a href="http://twitter.com/peterfriese/status/1573456711">here</a>, <a href="http://twitter.com/EelcoVisser/status/1573534530">here</a>, <a href="http://twitter.com/peterfriese/status/1574872897">here</a> and <a href="http://twitter.com/EelcoVisser/status/1575307114">here</a>), most people seem at least to agree that a high level documentation outlining the concepts of the software in question <strong>is</strong> appropriate.</p>
@@ -432,9 +432,9 @@ h6. An HTML sixth-level heading
   
   <entry>
     <title type="html"><![CDATA[How Twitter solved my P2 problems during my lunch break]]></title>
-    <link href="http://peterfriese.github.io/how-twitter-solved-my-p2-problems-during-my-lunch-break/"/>
+    <link href="http://www.peterfriese.de/how-twitter-solved-my-p2-problems-during-my-lunch-break/"/>
     <updated>2009-04-02T16:21:50+01:00</updated>
-    <id>http://peterfriese.github.io/how-twitter-solved-my-p2-problems-during-my-lunch-break</id>
+    <id>http://www.peterfriese.de/how-twitter-solved-my-p2-problems-during-my-lunch-break</id>
     <content type="html"><![CDATA[<p>Today, I wanted to migrate from Eclipse 3.5M5 to Eclipse 3.6M6 (I know, it's a bit late for that already - but then, I had been busy with <a href="http://www.eclipsecon.org/">#eclipsecon</a> and preparing the <a href="http://www.eclipsecon.org/2009/sessions?id=358">Stupid Modeling Talk</a> during the past weeks).</p>
 
 <p>As of course I've got quite a number of additional bundles installed (e.g., EMF, Window Builder, Mylyn, Xpand and Xtend), I wanted to re-use them. I recalled that a while back someone (probably Chris?) blogged that it basically is possible to use an existing Eclipse installation as a local update site. However, I couldn't find the blog posting describing how to do that.</p>

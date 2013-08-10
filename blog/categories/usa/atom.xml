@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: USA | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/usa/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/usa/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[iPhones on Mars]]></title>
-    <link href="http://peterfriese.github.io/iphones-on-mars/"/>
+    <link href="http://www.peterfriese.de/iphones-on-mars/"/>
     <updated>2010-03-31T13:42:06+01:00</updated>
-    <id>http://peterfriese.github.io/iphones-on-mars</id>
+    <id>http://www.peterfriese.de/iphones-on-mars</id>
     <content type="html"><![CDATA[<p><a href="http://www.eclipsecon.org/2010/">EclipseCon 2010</a> is over and as always has been a great chance to meet up with fellow committers and users of the software we build. <a href="http://www.xtext.org">Xtext</a> has received a tremendous amount of attention: not only did we deliver several talks and tutorials on Xtext, but also did Xtext get mentioned in a number of talks we were not involved in. Xtext even received the <a href="http://www.eclipse.org/org/press-release/20100322_awardswinners.php">Eclipse Community Award</a> in the category "Most Innovative New Feature of Eclipse Project".</p>
 
 <!-- more -->
@@ -62,9 +62,9 @@
   
   <entry>
     <title type="html"><![CDATA[Everything You Always Wanted To Know About Modeling (But Were Afraid To Ask)]]></title>
-    <link href="http://peterfriese.github.io/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask/"/>
+    <link href="http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask/"/>
     <updated>2009-10-13T23:18:52+01:00</updated>
-    <id>http://peterfriese.github.io/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
+    <id>http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
     <content type="html"><![CDATA[<ol>
 <li><p>Does Model Driven Software Development actually work?</p></li>
 <li><p>Are some developers more productive than others?</p></li>

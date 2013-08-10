@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: UDID | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/udid/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/udid/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[What's your number?]]></title>
-    <link href="http://peterfriese.github.io/whats-your-number/"/>
+    <link href="http://www.peterfriese.de/whats-your-number/"/>
     <updated>2011-01-27T01:00:47+00:00</updated>
-    <id>http://peterfriese.github.io/whats-your-number</id>
+    <id>http://www.peterfriese.de/whats-your-number</id>
     <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you've been asking yourself "what's this number, and where do I find it?", read on!</p>
 
 <!-- more -->

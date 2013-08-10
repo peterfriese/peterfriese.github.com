@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: hackathon | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/hackathon/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/hackathon/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Hacked.io 2013]]></title>
-    <link href="http://peterfriese.github.io/hacked-dot-io-2013/"/>
+    <link href="http://www.peterfriese.de/hacked-dot-io-2013/"/>
     <updated>2013-08-03T00:18:00+01:00</updated>
-    <id>http://peterfriese.github.io/hacked-dot-io-2013</id>
+    <id>http://www.peterfriese.de/hacked-dot-io-2013</id>
     <content type="html"><![CDATA[<p>On the weekend of July 21st, I had the chance to attend the Hacked.io hackathon. The dimensions of this event matched the size of London: 500 attendees of all age groups (there were entire teams made up of kids) gathered in the O2 arena (more precisely: in the IndigO2) poised to spend a sleepless night full of hacking and working on creative projects. Those who didn't already have an idea for project could let themselves be inspired by the numerous challenges set up by the event sponsors.</p>
 
 <!-- more -->

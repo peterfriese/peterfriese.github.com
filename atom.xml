@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Annotated Links for Week 32]]></title>
-    <link href="http://peterfriese.github.io/annotated-links-for-week-32/"/>
+    <link href="http://www.peterfriese.de/annotated-links-for-week-32/"/>
     <updated>2013-08-10T01:33:00+01:00</updated>
-    <id>http://peterfriese.github.io/annotated-links-for-week-32</id>
+    <id>http://www.peterfriese.de/annotated-links-for-week-32</id>
     <content type="html"><![CDATA[<p>This week, we&#8217;ll have a look at Apple&#8217;s new system status page and another, more serious issue in a rather well-known computer-driven system. Other topics in this post: a very high-level view on programming (and why we failed so far) as well as a very detailed look at programming (and what you can do to excel at it). Finally, some spying.</p>
 
 <!-- more -->
@@ -51,9 +51,9 @@
   
   <entry>
     <title type="html"><![CDATA[Hacked.io 2013]]></title>
-    <link href="http://peterfriese.github.io/hacked-dot-io-2013/"/>
+    <link href="http://www.peterfriese.de/hacked-dot-io-2013/"/>
     <updated>2013-08-03T00:18:00+01:00</updated>
-    <id>http://peterfriese.github.io/hacked-dot-io-2013</id>
+    <id>http://www.peterfriese.de/hacked-dot-io-2013</id>
     <content type="html"><![CDATA[<p>On the weekend of July 21st, I had the chance to attend the Hacked.io hackathon. The dimensions of this event matched the size of London: 500 attendees of all age groups (there were entire teams made up of kids) gathered in the O2 arena (more precisely: in the IndigO2) poised to spend a sleepless night full of hacking and working on creative projects. Those who didn&#8217;t already have an idea for project could let themselves be inspired by the numerous challenges set up by the event sponsors.</p>
 
 <!-- more -->
@@ -78,7 +78,7 @@
 <p>The flow of events for a simple dialog is outlined in the figure below: first, both users need to choose their preferred language on their phones, while their phones register with the BabelPhone backend server. Then, the first dialog partner taps the &#8220;speak now&#8221; button to initiate speech recognition and starts speaking. As soon as he stops speaking or taps the &#8220;speak now&#8221; button again, the speech recognition engine analyses his utterance (as we&#8217;re interested in detecting natural language as opposed to simple commands, voice recognition will actually take place on a server, in our case provided by Nuance) and tries to detect what the user said. The recognized text will now be sent to the BabelPhone server.</p>
 
 <ul class="gallery">
-<li><a href="http://peterfriese.github.io/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Process.png" class="fancybox" rel="gallery-24fb3058138182be5f2be2aae5648aae" title="BabelPhone Translation Process"><img src="http://peterfriese.github.io/thumbs/BabelPhone-Process_600x250.png" alt="BabelPhone Translation Process" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Process.png" class="fancybox" rel="gallery-24fb3058138182be5f2be2aae5648aae" title="BabelPhone Translation Process"><img src="http://www.peterfriese.de/thumbs/BabelPhone-Process_600x250.png" alt="BabelPhone Translation Process" /></a></li>
 </ul>
 
 
@@ -87,7 +87,7 @@
 <p>As communication between the server side part of the application and the smartphones receiving the translation needs to take place in an asynchronous manner, we need a suitable communication channel. Web sockets lend themselves perfectly for this purpose: they offer a permanently open communication channel between server and client while at the same time being rather lightweight and ensuring a low-latency delivery of messages.</p>
 
 <ul class="gallery">
-<li><a href="http://peterfriese.github.io/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Architecture.png" class="fancybox" rel="gallery-960d2902b022d7c679b404aa2cc30ad5" title="BabelPhone Architecture"><img src="http://peterfriese.github.io/thumbs/BabelPhone-Architecture_600x250.png" alt="BabelPhone Architecture" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Architecture.png" class="fancybox" rel="gallery-960d2902b022d7c679b404aa2cc30ad5" title="BabelPhone Architecture"><img src="http://www.peterfriese.de/thumbs/BabelPhone-Architecture_600x250.png" alt="BabelPhone Architecture" /></a></li>
 </ul>
 
 
@@ -132,9 +132,9 @@
   
   <entry>
     <title type="html"><![CDATA[Do Androids Dream of Electric Sheep?]]></title>
-    <link href="http://peterfriese.github.io/do-androids-dream-of-electric-sheep/"/>
+    <link href="http://www.peterfriese.de/do-androids-dream-of-electric-sheep/"/>
     <updated>2013-03-22T00:33:48+00:00</updated>
-    <id>http://peterfriese.github.io/do-androids-dream-of-electric-sheep</id>
+    <id>http://www.peterfriese.de/do-androids-dream-of-electric-sheep</id>
     <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
 
 <!-- more -->
@@ -175,9 +175,9 @@
   
   <entry>
     <title type="html"><![CDATA[Writing Xtext Scope Providers with Xtend]]></title>
-    <link href="http://peterfriese.github.io/writing-xtext-scope-providers-with-xtend/"/>
+    <link href="http://www.peterfriese.de/writing-xtext-scope-providers-with-xtend/"/>
     <updated>2012-08-14T23:04:55+01:00</updated>
-    <id>http://peterfriese.github.io/writing-xtext-scope-providers-with-xtend</id>
+    <id>http://www.peterfriese.de/writing-xtext-scope-providers-with-xtend</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is an <a href="http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html">important concept</a> in the design of programming languages. In Xtext, scoping is used <a href="http://zarnekow.blogspot.de/2009/01/xtext-corner-2-linking-and-scoping.html">to drive two major parts</a> of your DSL: <a href="http://www.eclipse.org/Xtext/documentation.html#linking">linking</a> and <a href="http://www.eclipse.org/Xtext/documentation.html#contentAssist">content assist</a>. While Xtext applies the <a href="http://en.wikiquote.org/wiki/Alan_Kay">80/20 rule</a> very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you&#8217;ll have to roll up your sleeves and write your own scope provider.</p>
 
 <!-- more -->
@@ -211,9 +211,9 @@
   
   <entry>
     <title type="html"><![CDATA[Using CocoaPods to manage your dependencies]]></title>
-    <link href="http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies/"/>
+    <link href="http://www.peterfriese.de/using-cocoapods-to-manage-your-dependencies/"/>
     <updated>2012-06-29T23:42:22+01:00</updated>
-    <id>http://peterfriese.github.io/using-cocoapods-to-manage-your-dependencies</id>
+    <id>http://www.peterfriese.de/using-cocoapods-to-manage-your-dependencies</id>
     <content type="html"><![CDATA[<p>One of the few things that I find really annoying about developing apps for the iOS platform is how cumbersome it is to include third party libraries in your projects. Depending on the complexity of the library (e.g. its respective dependencies and transitive dependencies) and the effort the authors put into the consumability of their library, the steps required to add a library to your project range from just copying a few files into your source folder to a whopping two-page description of drag&#8217;n&#8217;drop wizardry.</p>
 
 <!--more-->
@@ -313,9 +313,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Accounts and Twitter Framework on iOS 5]]></title>
-    <link href="http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5/"/>
+    <link href="http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5/"/>
     <updated>2011-11-09T23:30:46+00:00</updated>
-    <id>http://peterfriese.github.io/the-accounts-and-twitter-framework-on-ios-5</id>
+    <id>http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5</id>
     <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&#8217;re in a news reader application you might want to let your followers know about an interesting article you just read. If you&#8217;re in a conference schedule app, you not only want to let your followers know about the awesome talks you&#8217;re listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you&#8217;re stuck in&#8230;</p>
 
 <!-- more -->
@@ -529,9 +529,9 @@
 <p>Here&#8217;s an impression of the current state of the application:</p>
 
 <ul class="gallery">
-<li><a href="http://peterfriese.github.io/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_1.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - List of local accounts"><img src="http://peterfriese.github.io/thumbs/twitter_client_1_120x150.png" alt="Twitter Client - List of local accounts" /></a></li>
-<li><a href="http://peterfriese.github.io/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_2.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Home timeline for a user"><img src="http://peterfriese.github.io/thumbs/twitter_client_2_120x150.png" alt="Twitter Client - Home timeline for a user" /></a></li>
-<li><a href="http://peterfriese.github.io/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_3.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Composing a tweet"><img src="http://peterfriese.github.io/thumbs/twitter_client_3_120x150.png" alt="Twitter Client - Composing a tweet" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_1.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - List of local accounts"><img src="http://www.peterfriese.de/thumbs/twitter_client_1_120x150.png" alt="Twitter Client - List of local accounts" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_2.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Home timeline for a user"><img src="http://www.peterfriese.de/thumbs/twitter_client_2_120x150.png" alt="Twitter Client - Home timeline for a user" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_3.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Composing a tweet"><img src="http://www.peterfriese.de/thumbs/twitter_client_3_120x150.png" alt="Twitter Client - Composing a tweet" /></a></li>
 </ul>
 
 
@@ -541,9 +541,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tired of Typing? Speak to Your Computer!]]></title>
-    <link href="http://peterfriese.github.io/tired-of-typing-speak-to-your-computer/"/>
+    <link href="http://www.peterfriese.de/tired-of-typing-speak-to-your-computer/"/>
     <updated>2011-06-03T17:54:39+01:00</updated>
-    <id>http://peterfriese.github.io/tired-of-typing-speak-to-your-computer</id>
+    <id>http://www.peterfriese.de/tired-of-typing-speak-to-your-computer</id>
     <content type="html"><![CDATA[<p>For some reason, humans have always dreamt of using natural language to communicate with computers. Quite a number of movies have been made that revolve around this theme, <a href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)">2001: A Space Odyssey</a> and <a href="http://en.wikipedia.org/wiki/I,_Robot_(film)">I, Robot</a> (named after the <a href="http://en.wikipedia.org/wiki/I_robot">great collection of SF stories</a> by <a href="http://en.wikipedia.org/wiki/Isaac_Asimov">Isaac Asimov</a> just being two of them.</p>
 
 <!-- more -->
@@ -572,9 +572,9 @@
   
   <entry>
     <title type="html"><![CDATA[Code Generation 2011 - Don't miss out!]]></title>
-    <link href="http://peterfriese.github.io/code-generation-2011-dont-miss-out/"/>
+    <link href="http://www.peterfriese.de/code-generation-2011-dont-miss-out/"/>
     <updated>2011-05-21T11:09:11+01:00</updated>
-    <id>http://peterfriese.github.io/code-generation-2011-dont-miss-out</id>
+    <id>http://www.peterfriese.de/code-generation-2011-dont-miss-out</id>
     <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven&#8217;t booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
 
 <p>Quite a number of my colleagues at itemis have been busy preparing for this conference in the past few weeks. Besides working hard to hit the <a href="http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan">Eclipse Release Train milestone for Indigo on June 22nd</a>, the Xtext team brushed up their hands-on sessions &#8221;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=17">Xtext Take I: Creating Code Generators with Xtend2</a>&#8221; and &#8221;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=16">Xtext Take II: Crafting Domain Specific Languages with Xtext and Xbase</a>&#8221;. If you&#8217;ve been using Xtext, you&#8217;re well aware of the power you have at your disposal with this tool. Xbase and Xtend2, however, take this experience to a whole new level. So make sure to mark your calendar for these two sessions!</p>
@@ -604,7 +604,7 @@
 
 
 <ul class="gallery">
-<li><a href="http://peterfriese.github.io/images/2011-05-21-code-generation-2011-dont-miss-out/cg2011.png" class="fancybox" rel="gallery-f9049cdceaffaf2ba66743d40d991d29" title="Code Generation 2011 Apps for iPhone and Android"><img src="http://peterfriese.github.io/thumbs/cg2011_300x300.png" alt="Code Generation 2011 Apps for iPhone and Android" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2011-05-21-code-generation-2011-dont-miss-out/cg2011.png" class="fancybox" rel="gallery-f9049cdceaffaf2ba66743d40d991d29" title="Code Generation 2011 Apps for iPhone and Android"><img src="http://www.peterfriese.de/thumbs/cg2011_300x300.png" alt="Code Generation 2011 Apps for iPhone and Android" /></a></li>
 </ul>
 
 
@@ -614,9 +614,9 @@
   
   <entry>
     <title type="html"><![CDATA[Using NSPredicate to Filter Data]]></title>
-    <link href="http://peterfriese.github.io/using-nspredicate-to-filter-data/"/>
+    <link href="http://www.peterfriese.de/using-nspredicate-to-filter-data/"/>
     <updated>2011-04-22T23:15:36+01:00</updated>
-    <id>http://peterfriese.github.io/using-nspredicate-to-filter-data</id>
+    <id>http://www.peterfriese.de/using-nspredicate-to-filter-data</id>
     <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you&#8217;re applying a filter to the huge set of data we call the internet.</p>
 
 <!-- more -->
@@ -736,9 +736,9 @@
   
   <entry>
     <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
-    <link href="http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
+    <link href="http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
     <updated>2011-02-25T22:15:57+00:00</updated>
-    <id>http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
+    <id>http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
     <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
 
 <!-- more -->
@@ -771,9 +771,9 @@
   
   <entry>
     <title type="html"><![CDATA[Appropriate Use of MapKit]]></title>
-    <link href="http://peterfriese.github.io/appropriate-use-of-mapkit/"/>
+    <link href="http://www.peterfriese.de/appropriate-use-of-mapkit/"/>
     <updated>2011-02-16T10:48:38+00:00</updated>
-    <id>http://peterfriese.github.io/appropriate-use-of-mapkit</id>
+    <id>http://www.peterfriese.de/appropriate-use-of-mapkit</id>
     <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&#8217;re violating Google&#8217;s terms of service, I was wondering what in particular was wrong.</p>
 
 <!-- more -->
@@ -782,14 +782,14 @@
 <p>At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google&#8217;s terms of service for Maps</a>, but can you spot what is wrong?</p>
 
 <ul class="gallery">
-<li><a href="http://peterfriese.github.io/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png" class="fancybox" rel="gallery-b85ba1d38e1c89eca83ecb8ce17b14bc" title="Google Maps in your app - without Google Logo: you're doing it wrong!"><img src="http://peterfriese.github.io/thumbs/maps_without_google_logo_240x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png" class="fancybox" rel="gallery-b85ba1d38e1c89eca83ecb8ce17b14bc" title="Google Maps in your app - without Google Logo: you're doing it wrong!"><img src="http://www.peterfriese.de/thumbs/maps_without_google_logo_240x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a></li>
 </ul>
 
 
 <p>Maybe you can better see what&#8217;s wrong when I show you another screenshot, this time obeying the TOS:</p>
 
 <ul class="gallery">
-<li><a href="http://peterfriese.github.io/images/2011-02-16-appropriate-use-of-mapkit/maps_with_google_logo.png" class="fancybox" rel="gallery-8590c5cd892556ccc1df97f31d1c3e84" title="Google Maps with logo: well done!"><img src="http://peterfriese.github.io/thumbs/maps_with_google_logo_240x300.png" alt="Google Maps with logo: well done!" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2011-02-16-appropriate-use-of-mapkit/maps_with_google_logo.png" class="fancybox" rel="gallery-8590c5cd892556ccc1df97f31d1c3e84" title="Google Maps with logo: well done!"><img src="http://www.peterfriese.de/thumbs/maps_with_google_logo_240x300.png" alt="Google Maps with logo: well done!" /></a></li>
 </ul>
 
 
@@ -849,9 +849,9 @@
   
   <entry>
     <title type="html"><![CDATA[Three reasons why I think the HP TouchPad will rock the tablet market]]></title>
-    <link href="http://peterfriese.github.io/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
+    <link href="http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
     <updated>2011-02-10T10:38:26+00:00</updated>
-    <id>http://peterfriese.github.io/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
+    <id>http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
     <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn&#8217;t the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
 
 <!-- more -->
@@ -876,9 +876,9 @@
   
   <entry>
     <title type="html"><![CDATA[What's your number?]]></title>
-    <link href="http://peterfriese.github.io/whats-your-number/"/>
+    <link href="http://www.peterfriese.de/whats-your-number/"/>
     <updated>2011-01-27T01:00:47+00:00</updated>
-    <id>http://peterfriese.github.io/whats-your-number</id>
+    <id>http://www.peterfriese.de/whats-your-number</id>
     <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you&#8217;ve been asking yourself &#8220;what&#8217;s this number, and where do I find it?&#8221;, read on!</p>
 
 <!-- more -->
@@ -892,12 +892,12 @@
 <li>Connect your iPhone / iPad to your computer using the white USB connection cable.</li>
 <li>Wait for iTunes to start up. If it doesn&#8217;t start automatically, start it manually (Windows users will find it in the depths of the Start Menu, Mac users can use Spotlight to search for it).</li>
 <li>Click on the name of your iPhone / iPad on the left-hand side of the iTunes Window:
- <a href="http://peterfriese.github.io/images/2011-01-27-whats-your-number/whatsyournumber_screenshot_1.jpg" class="fancybox" title="Finding your iPhone's UDID, step 1"><img class="right" src="http://peterfriese.github.io/thumbs/whatsyournumber_screenshot_1_927x348.jpg" alt="Finding your iPhone's UDID, step 1" /></a></li>
+ <a href="http://www.peterfriese.de/images/2011-01-27-whats-your-number/whatsyournumber_screenshot_1.jpg" class="fancybox" title="Finding your iPhone's UDID, step 1"><img class="right" src="http://www.peterfriese.de/thumbs/whatsyournumber_screenshot_1_927x348.jpg" alt="Finding your iPhone's UDID, step 1" /></a></li>
 <li>Details about your device will be displayed in the main area of the iTunes window.</li>
 <li>Find the label titled <strong>Serial Number</strong>. The serial number IS NOT the UDID!</li>
 <li>Holding down the CMD (on the Mac) or the CTRL (on Windows) key, click on the label <strong>Serial Number</strong></li>
 <li>The label&#8217;s title will change to <strong>Identifier (UDID)</strong>:
- <a href="http://peterfriese.github.io/images/2011-01-27-whats-your-number/whatsyournumber_screenshot_2.jpg" class="fancybox" title="Finding your iPhone's UDID, step 2"><img class="right" src="http://peterfriese.github.io/thumbs/whatsyournumber_screenshot_2_927x348.jpg" alt="Finding your iPhone's UDID, step 2" /></a></li>
+ <a href="http://www.peterfriese.de/images/2011-01-27-whats-your-number/whatsyournumber_screenshot_2.jpg" class="fancybox" title="Finding your iPhone's UDID, step 2"><img class="right" src="http://www.peterfriese.de/thumbs/whatsyournumber_screenshot_2_927x348.jpg" alt="Finding your iPhone's UDID, step 2" /></a></li>
 <li>Press CMD+C (on Mac) or CTRL+C (on Windows) to copy the UDID to your clipboard</li>
 <li>Open a new mail, insert the UDID and a friendly message and send it to your developer.</li>
 </ol>
@@ -911,9 +911,9 @@
   
   <entry>
     <title type="html"><![CDATA[Your Windows IDE sucks? Replace it with Your Favorite Editor on the Mac!]]></title>
-    <link href="http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/"/>
+    <link href="http://www.peterfriese.de/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/"/>
     <updated>2011-01-05T00:11:11+00:00</updated>
-    <id>http://peterfriese.github.io/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac</id>
+    <id>http://www.peterfriese.de/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac</id>
     <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.</p>
 
 <!-- more -->
@@ -921,11 +921,11 @@
 
 <p>The IDE in question is Samsung&#8217;s TV App SDK. Basically, it&#8217;s just a Windows-based Visual-Studio look-alike IDE with editor support for CSS, JavaScript and HTML and an Emulator for Samsung TV kits. Nothing too complicated, really. In fact, the editor is quite OK.</p>
 
-<p><a href="http://peterfriese.github.io/images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung-TV-App-SDK.png" class="fancybox" title="Samsung TV App SDK"><img class="right" src="http://peterfriese.github.io/thumbs/Samsung-TV-App-SDK_1040x722.png" alt="Samsung TV App SDK" /></a></p>
+<p><a href="http://www.peterfriese.de/images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung-TV-App-SDK.png" class="fancybox" title="Samsung TV App SDK"><img class="right" src="http://www.peterfriese.de/thumbs/Samsung-TV-App-SDK_1040x722.png" alt="Samsung TV App SDK" /></a></p>
 
 <p>The part about it that really sucks is the project management. How come tool vendors still think it&#8217;s good style in 2010 to place the projects under <em>Program Files\Samsung TV Apps SDK\Apps</em>? There&#8217;s no way to store your project files in a different location. The project open dialog just won&#8217;t let you navigate to some other place:</p>
 
-<p><a href="http://peterfriese.github.io/images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung_TV_App_SDK_ProjectManagement.png" class="fancybox" title="Samsung TV App SDK Project Management Dialog"><img class="right" src="http://peterfriese.github.io/thumbs/Samsung_TV_App_SDK_ProjectManagement_482x352.png" alt="Samsung TV App SDK Project Management Dialog" /></a></p>
+<p><a href="http://www.peterfriese.de/images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung_TV_App_SDK_ProjectManagement.png" class="fancybox" title="Samsung TV App SDK Project Management Dialog"><img class="right" src="http://www.peterfriese.de/thumbs/Samsung_TV_App_SDK_ProjectManagement_482x352.png" alt="Samsung TV App SDK Project Management Dialog" /></a></p>
 
 <p>So I wanted to be able to edit my files on the Mac (using <a href="http://macromates.com/">TextMate</a>) while still using the good parts of the Samsung TV SDK (i.e., the Emulator).</p>
 
@@ -943,9 +943,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to Use the Gyroscope of Your iPhone in a Mobile Web App]]></title>
-    <link href="http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
+    <link href="http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
     <updated>2010-11-25T12:00:43+00:00</updated>
-    <id>http://peterfriese.github.io/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
+    <id>http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
     <content type="html"><![CDATA[<p>This week&#8217;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they&#8217;re neither directly visible in the iOS UI nor are they mentioned in Apple&#8217;s official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone&#8217;s gyroscope. Read on to see it in action and learn how to use it.</p>
 
 <!-- more -->
@@ -1019,9 +1019,9 @@
   
   <entry>
     <title type="html"><![CDATA[Eclipse DemoCamp Hamburg November 2010]]></title>
-    <link href="http://peterfriese.github.io/eclipse-democamp-hamburg-november-2010/"/>
+    <link href="http://www.peterfriese.de/eclipse-democamp-hamburg-november-2010/"/>
     <updated>2010-11-15T07:28:17+00:00</updated>
-    <id>http://peterfriese.github.io/eclipse-democamp-hamburg-november-2010</id>
+    <id>http://www.peterfriese.de/eclipse-democamp-hamburg-november-2010</id>
     <content type="html"><![CDATA[<p>Last Friday was a happy day for Java developers in Hamburg: not only did Apple and Oracle announce their plan to continue development of Java on the Mac OSX platform, but we also had the pleasure to host this fall&#8217;s instance of Eclipse DemoCamp Hamburg in a bookstore!</p>
 
 <!-- more -->
@@ -1040,7 +1040,7 @@
 
 <p>The good news of the day of course was a <a href="http://blogs.oracle.com/henrik/2010/11/oracle_and_apple_announce_openjdk_project_for_osx.html">press release announcing OpenJDK for Mac OSX</a>. Nevertheless, <a href="http://twitter.com/#!/robilad/status/3129373515321344">Dalibor demoed a freshly built OpenJDK 7 BSD port</a> on his MacBook.</p>
 
-<p><a href="http://peterfriese.github.io/images/2010-11-15-eclipse-democamp-hamburg-november-2010/democamp01.png" class="fancybox" title="Dalibor Topic"><img class="right" src="http://peterfriese.github.io/thumbs/democamp01_300x224.png" alt="Dalibor Topic" /></a></p>
+<p><a href="http://www.peterfriese.de/images/2010-11-15-eclipse-democamp-hamburg-november-2010/democamp01.png" class="fancybox" title="Dalibor Topic"><img class="right" src="http://www.peterfriese.de/thumbs/democamp01_300x224.png" alt="Dalibor Topic" /></a></p>
 
 <p>After a short break, it was <a href="http://eclipsesource.com/blogs/author/rsternberg/">Ralf Sternberg&#8217;s turn</a> to give an overview of <a href="http://www.eclipse.org/rap/">RAP</a> and explain what Single Sourcing is. With the help of RAP, it is rather easy to bring Eclipse RCP applications to the web. Of course, you&#8217;ll have to pay attention to a few things, as Ralf pointed out: usually, RCP applications are single-user apps, whereas web applications are inherently multi-user enabled. Fortunately, RAP comes with a few utilities that cater for this fact.</p>
 
@@ -1051,7 +1051,7 @@
 
 <p>In the last sessions, <a href="http://www.eclipse.org/Xtext/">Xtext</a> committer <a href="http://koehnlein.blogspot.com/">Jan Köhnlein</a> showed us some of the things coming up in Xtext 2.0. Being text-addicted, Jan refrained from using slides and used the IDE instead to deliver his talk:</p>
 
-<p><a href="http://peterfriese.github.io/images/2010-11-15-eclipse-democamp-hamburg-november-2010/democamp02.png" class="fancybox" title="Jan Köhnlein talking about Xbase and Xtext"><img class="right" src="http://peterfriese.github.io/thumbs/democamp02_300x224.png" alt="Jan Köhnlein talking about Xbase and Xtext" /></a></p>
+<p><a href="http://www.peterfriese.de/images/2010-11-15-eclipse-democamp-hamburg-november-2010/democamp02.png" class="fancybox" title="Jan Köhnlein talking about Xbase and Xtext"><img class="right" src="http://www.peterfriese.de/thumbs/democamp02_300x224.png" alt="Jan Köhnlein talking about Xbase and Xtext" /></a></p>
 
 <p>Jan showed us how Xbase (no, not <a href="http://en.wikipedia.org/wiki/Xbase">xBase</a>) can be used to develop DSLs (and even GPLs) that not only describe structural features but also behavior. He also demoed Xdoc, a newly invented documentation language, and the fancy new Xtext syntax view (featuring <a href="http://en.wikipedia.org/wiki/Syntax_diagram">railroad diagrams</a>).</p>
 
@@ -1065,9 +1065,9 @@
   
   <entry>
     <title type="html"><![CDATA[[Updated] Use your iPhone, Android, or BlackBerry to build Your Eclipse Summit Europe 2010]]></title>
-    <link href="http://peterfriese.github.io/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/"/>
+    <link href="http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/"/>
     <updated>2010-11-01T11:45:02+00:00</updated>
-    <id>http://peterfriese.github.io/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010</id>
+    <id>http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010</id>
     <content type="html"><![CDATA[<p>As I&#8217;m writing this, Eclipse Summit Europe 2010 is merely hours away and everyone is getting excited to get there and meet Eclipse family.</p>
 
 <p>I think the program committee have done a great job at putting together an exciting conference program with lots of technical sessions, interactive tutorials and inspiring keynotes.</p>
@@ -1089,15 +1089,15 @@
 <p>You can download the <strong>iPhone app</strong> from the App Store. It is available world-wide and we already have a few downloads from Singapore, Korea and India! For your convenience, <a href="http://bit.ly/ese_app_intl">here&#8217;s the link to the app</a>.</p>
 
 <p>We also prepared a version for <strong>Android</strong> users. Here&#8217;s how it will look like on your Android device:
-<a href="http://peterfriese.github.io/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/ESE_Android.png" class="fancybox" title="ESE Android app"><img class="center" src="http://peterfriese.github.io/thumbs/ESE_Android_151x300.png" alt="ESE Android app" /></a></p>
+<a href="http://www.peterfriese.de/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/ESE_Android.png" class="fancybox" title="ESE Android app"><img class="center" src="http://www.peterfriese.de/thumbs/ESE_Android_151x300.png" alt="ESE Android app" /></a></p>
 
 <p>Head over to the Android Marketplace and search for &#8220;eclipse summit&#8221;, or use your barcode scanner:</p>
 
-<p><a href="http://peterfriese.github.io/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/1078516-1288452914800.png" class="fancybox" title="Android app barcode"><img class="center" src="http://peterfriese.github.io/thumbs/1078516-1288452914800_164x164.png" alt="Android app barcode" /></a></p>
+<p><a href="http://www.peterfriese.de/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/1078516-1288452914800.png" class="fancybox" title="Android app barcode"><img class="center" src="http://www.peterfriese.de/thumbs/1078516-1288452914800_164x164.png" alt="Android app barcode" /></a></p>
 
 <p>The <strong>mobile web app</strong> <del>will be available from the Wifi landing page at the conference venue</del> is available via the following URL: <a href="http://bit.ly/ese_app_mobile2">http://bit.ly/ese_app_mobile2/</a>.</p>
 
-<p><a href="http://peterfriese.github.io/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/mobileweb3.png" class="fancybox" title="Mobile Web App"><img class="center" src="http://peterfriese.github.io/thumbs/mobileweb3_150x192.png" alt="Mobile Web App" /></a></p>
+<p><a href="http://www.peterfriese.de/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/mobileweb3.png" class="fancybox" title="Mobile Web App"><img class="center" src="http://www.peterfriese.de/thumbs/mobileweb3_150x192.png" alt="Mobile Web App" /></a></p>
 
 <p><del>Rumor has it even BlackBerry users will get a native app.</del> <a href="http://ekkescorner.wordpress.com/2010/11/02/ese-app-for-blackberry/">Ekke</a> has created a native app for BlackBerry.</p>
 
@@ -1119,9 +1119,9 @@
   
   <entry>
     <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
-    <link href="http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again/"/>
+    <link href="http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again/"/>
     <updated>2010-09-19T21:15:30+01:00</updated>
-    <id>http://peterfriese.github.io/apples-updated-developer-license-this-changes-everything-again</id>
+    <id>http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again</id>
     <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
 
 <!-- more -->
@@ -1174,9 +1174,9 @@
   
   <entry>
     <title type="html"><![CDATA[Why Your Next App Should be Open Sourced]]></title>
-    <link href="http://peterfriese.github.io/why-your-next-app-should-be-open-sourced/"/>
+    <link href="http://www.peterfriese.de/why-your-next-app-should-be-open-sourced/"/>
     <updated>2010-09-06T14:15:17+01:00</updated>
-    <id>http://peterfriese.github.io/why-your-next-app-should-be-open-sourced</id>
+    <id>http://www.peterfriese.de/why-your-next-app-should-be-open-sourced</id>
     <content type="html"><![CDATA[<p>I&#8217;ve been doing all sorts of software development over the past few years, from closed-source in-house software for companies to closed-source product development to open-source frameworks and tools development to closed-source app development.</p>
 
 <p>Looking back on my experience with the various drawbacks and benefits of each of those development modes, I hereby recommend your next app be open sourced.</p>
@@ -1224,9 +1224,9 @@
   
   <entry>
     <title type="html"><![CDATA[Watching DVDs on your iPad]]></title>
-    <link href="http://peterfriese.github.io/watching-dvds-on-your-ipad/"/>
+    <link href="http://www.peterfriese.de/watching-dvds-on-your-ipad/"/>
     <updated>2010-08-06T23:22:10+01:00</updated>
-    <id>http://peterfriese.github.io/watching-dvds-on-your-ipad</id>
+    <id>http://www.peterfriese.de/watching-dvds-on-your-ipad</id>
     <content type="html"><![CDATA[<p>I&#8217;ve been wanting to watch DVDs on my iPad since I had it. As the iPad doesn&#8217;t have an optical drive, you need to jump through several loopholes to get the trick done, but in the very moment you watch your first DVD on your iPad, something magical happens&#8230;</p>
 
 <!-- more -->

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Mobile | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/mobile/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/mobile/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Code Generation 2011 - Don't miss out!]]></title>
-    <link href="http://peterfriese.github.io/code-generation-2011-dont-miss-out/"/>
+    <link href="http://www.peterfriese.de/code-generation-2011-dont-miss-out/"/>
     <updated>2011-05-21T11:09:11+01:00</updated>
-    <id>http://peterfriese.github.io/code-generation-2011-dont-miss-out</id>
+    <id>http://www.peterfriese.de/code-generation-2011-dont-miss-out</id>
     <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven't booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
 
 <p>Quite a number of my colleagues at itemis have been busy preparing for this conference in the past few weeks. Besides working hard to hit the <a href="http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan">Eclipse Release Train milestone for Indigo on June 22nd</a>, the Xtext team brushed up their hands-on sessions "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=17">Xtext Take I: Creating Code Generators with Xtend2</a>" and "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=16">Xtext Take II: Crafting Domain Specific Languages with Xtext and Xbase</a>". If you've been using Xtext, you're well aware of the power you have at your disposal with this tool. Xbase and Xtend2, however, take this experience to a whole new level. So make sure to mark your calendar for these two sessions!</p>
@@ -56,9 +56,9 @@
   
   <entry>
     <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
-    <link href="http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
+    <link href="http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
     <updated>2011-02-25T22:15:57+00:00</updated>
-    <id>http://peterfriese.github.io/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
+    <id>http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
     <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
 
 <!-- more -->
@@ -90,9 +90,9 @@
   
   <entry>
     <title type="html"><![CDATA[Three reasons why I think the HP TouchPad will rock the tablet market]]></title>
-    <link href="http://peterfriese.github.io/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
+    <link href="http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
     <updated>2011-02-10T10:38:26+00:00</updated>
-    <id>http://peterfriese.github.io/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
+    <id>http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
     <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn't the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
 
 <!-- more -->

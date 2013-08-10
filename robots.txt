@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://peterfriese.github.io/sitemap.xml 
+Sitemap: http://www.peterfriese.de/sitemap.xml 

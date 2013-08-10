@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: MDA | Peter Friese]]></title>
-  <link href="http://peterfriese.github.io/blog/categories/mda/atom.xml" rel="self"/>
-  <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-10T03:34:49+01:00</updated>
-  <id>http://peterfriese.github.io/</id>
+  <link href="http://www.peterfriese.de/blog/categories/mda/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-08-10T03:40:52+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Microsoft excited about modeling]]></title>
-    <link href="http://peterfriese.github.io/microsoft-excited-about-modeling/"/>
+    <link href="http://www.peterfriese.de/microsoft-excited-about-modeling/"/>
     <updated>2008-09-19T15:04:59+01:00</updated>
-    <id>http://peterfriese.github.io/microsoft-excited-about-modeling</id>
+    <id>http://www.peterfriese.de/microsoft-excited-about-modeling</id>
     <content type="html"><![CDATA[<p>Microsoft <a href="http://clemensreijnen.nl/post/2008/09/Microsoft-joins-the-OMGhellip%3b.aspx">seem to be</a> <a href="http://www.pluralsight.com/community/blogs/dbox/archive/2008/09/06/oslo.aspx">quite excited</a> about modeling these days. Just recently, <a href="http://www.microsoft.com/presspass/press/2008/sep08/09-10OMGModelingPR.mspx">they announced that</a> <a href="http://blogs.msdn.com/stevecook/archive/2008/09/11/microsoft-joins-the-omg.aspx">they have joined the OMG</a>. OMG does NOT stand for Old Modeling Guys, but for <a href="http://www.omg.org/">Object Management Group</a>. This is the standards body that brought you specifications like <a href="http://www.corba.org/">CORBA</a>, <a href="http://www.uml.org/">UML</a>, <a href="http://www.omg.org/mda/">MDA</a> and <a href="http://www.omg.org/bpmn-logo/">BPMN</a>, to name just a few.</p>
 
 <p>But Microsoft does not just talk about modeling, they also put their money where their mouth is: during the last few years, a number of people including <a href="http://blogs.msdn.com/stevecook/">Steve</a> <a href="http://www.domainspecificdevelopment.com/Bios/SteveCook.aspx">Cook</a> and <a href="http://blogs.msdn.com/stuart_kent/">Stuart</a> <a href="http://www.domainspecificdevelopment.com/Bios/StuartKent.aspx">Kent</a> have been working on a toolchain which first has seen the light of day under the somewhat cryptic name <a href="http://msdn.microsoft.com/en-us/vsx/cc677256.aspx">VSX DSL Tools</a>.</p>
@@ -45,9 +45,9 @@
   
   <entry>
     <title type="html"><![CDATA[Some thoughts on the merits of model driven software development]]></title>
-    <link href="http://peterfriese.github.io/some-thoughts-on-the-merits-of-model-driven-software-development/"/>
+    <link href="http://www.peterfriese.de/some-thoughts-on-the-merits-of-model-driven-software-development/"/>
     <updated>2008-08-05T14:13:21+01:00</updated>
-    <id>http://peterfriese.github.io/some-thoughts-on-the-merits-of-model-driven-software-development</id>
+    <id>http://www.peterfriese.de/some-thoughts-on-the-merits-of-model-driven-software-development</id>
     <content type="html"><![CDATA[<p>Scanning my RSS feeds today, I came across <a href="http://katastrophos.net/magnus/blog/2008/08/03/is-model-driven-development-faster/">this</a> post by Magnus Jungsbluth in which he deals with the question "Is Model Driven Development Faster?".  As Magnus points out, the question whether you can be faster by using model driven development points in a wrong direction. Just being faster is not a major goal of model driven development. It's the quality that counts. Model driven development helps you to concentrate on the relevant parts of your software (i.e. the business logic) instead of having to care too much about the architectural plumbing around the business logic. Yes, using a code generator saves you some time. Precious time you will be able to invest into other parts of the software you build. This will amount to a higher quality of your software.  Magnus mentions some more prejudices people have towards model driven software development. Here are a few:</p>
 
 <h4>"Higher level of abstraction = more complicated"</h4>
@@ -84,9 +84,9 @@
   
   <entry>
     <title type="html"><![CDATA[Call for Papers / Participation: MDSD Today 08]]></title>
-    <link href="http://peterfriese.github.io/call-for-papers-participation-mdsd-today-08/"/>
+    <link href="http://www.peterfriese.de/call-for-papers-participation-mdsd-today-08/"/>
     <updated>2008-07-22T12:48:23+01:00</updated>
-    <id>http://peterfriese.github.io/call-for-papers-participation-mdsd-today-08</id>
+    <id>http://www.peterfriese.de/call-for-papers-participation-mdsd-today-08</id>
     <content type="html"><![CDATA[<p>From October 15th - 17th, the second workshop on model driven software development "MDSD Today" will take place in Elmshorn near Hamburg, Germany.</p>
 
 <p>The goal of this conference is to provide a platform for professionals (managers, architects and engineers alike) in the field of model driven software development to meet and exchange ideas.</p>
@@ -116,9 +116,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to distinguish generated code from non-generated code]]></title>
-    <link href="http://peterfriese.github.io/how-to-distinguish-generated-code-from-non-generated-code/"/>
+    <link href="http://www.peterfriese.de/how-to-distinguish-generated-code-from-non-generated-code/"/>
     <updated>2008-06-28T00:18:55+01:00</updated>
-    <id>http://peterfriese.github.io/how-to-distinguish-generated-code-from-non-generated-code</id>
+    <id>http://www.peterfriese.de/how-to-distinguish-generated-code-from-non-generated-code</id>
     <content type="html"><![CDATA[<p>It is a well-known fact that for most real-life applications, you canot use full code generation - some bits have to implemented in the source, not in the model. I sometimes find it funny to hear us software developers talk about business <em>logic</em>. If the business logic really would be logical in a mathematical sense, we'd be able to do full code generation. Alas, it is not, thus we are required to write some source code.</p>
 
 <p>Over the last years, quite a number of patterns have evolved for integrating generated and non-generated code. Some of them are protected regions, generation gap, recipe frameworks, particial classes and annotated models.</p>
@@ -157,9 +157,9 @@ Using MINT, you can highlight the parts of the source code which have been chang
   
   <entry>
     <title type="html"><![CDATA[openArchitectureWare 4.2 released]]></title>
-    <link href="http://peterfriese.github.io/openarchitectureware-42-released/"/>
+    <link href="http://www.peterfriese.de/openarchitectureware-42-released/"/>
     <updated>2007-09-19T00:04:00+01:00</updated>
-    <id>http://peterfriese.github.io/openarchitectureware-42-released</id>
+    <id>http://www.peterfriese.de/openarchitectureware-42-released</id>
     <content type="html"><![CDATA[<p>The <a href="http://www.openarchitectureware.org/">openArchitectureWare</a> <a href="http://www.openarchitectureware.org/staticpages/index.php/team?menu=About_Team">team</a> has released version 4.2 of the well-known <a href="http://de.wikipedia.org/wiki/MDSD">MDSD</a> toolkit.</p>
 
 <p>The new version comes with several major improvements (see below) and is now also fully compatible with the <a href="http://www.eclipse.org/europa/">Eclipse 3.3 Europa release</a> and the corresponding <a href="http://www.eclipse.org/modeling/emf/">EMF 2.3</a>, <a href="http://www.eclipse.org/modeling/mdt/?project=uml2#uml2">UML 2.1</a> and <a href="http://www.eclipse.org/modeling/gmf/">GMF 2.0</a>.</p>
