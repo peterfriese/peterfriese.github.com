@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://peterfriese.github.io
+url: http://www.peterfriese.de
 title: Peter Friese
 subtitle: Software Architect / Mobile Developer / Public Speaker
 author: Peter Friese
@@ -98,7 +98,7 @@ disqus_short_name: peterfriese
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-3683476-1
 
 # Facebook Like
 facebook_like: true
