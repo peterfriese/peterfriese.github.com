@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Microsoft seem to be quite excited about modeling these days. Just recently, they announced that they have joined the OMG. OMG does NOT stand for &hellip;">
+  <meta name="description" content="By default, runtime instances of Eclipse will start with large fonts. To get rid of this behaviour, just add -Dorg.eclipse.swt.internal.carbon. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +84,48 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/eclipse-on-macos/">Eclipse on MacOS</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-09-30T22:27:45+01:00" pubdate data-updated="true">Sep 30<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>By default, runtime instances of Eclipse will start with large fonts. To get rid of this behaviour, just add <code>-Dorg.eclipse.swt.internal.carbon.smallFonts</code> to the VM arguments of the respective launch configuration.</p>
+
+<p>I guess it might be a good idea if PDE UI could transparently add this parameter to Eclipse launch configurations - I <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249179">opened a bug</a> to get this fixed.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -663,56 +705,6 @@ Using MINT, you can highlight the parts of the source code which have been chang
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/today-1800-eclipse-democamp-soccer-in-hamburg/">Today @ 18:00: Eclipse DemoCamp + Soccer in Hamburg</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-06-16T09:56:38+01:00" pubdate data-updated="true">Jun 16<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>A friendly reminder to everybody <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_2008_-_Ganymede_Edition/Hamburg#Who_Is_Attending">who signed up</a> for the <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_2008_-_Ganymede_Edition/Hamburg">Eclipse DemoCamp in Hamburg</a>: the DemoCamp will start today at <strong>18:00 - one hour earlier than originally announced!</strong></p>
-
-<p>The reason for starting at 18:00 is&#8230;. soccer! At 20:45, the German and Austrian soccer teams will meet in a critical play. Both Martin and I didn&#8217;t think of this, until <a href="http://www.xing.com/profile/Matthias_Luebken">Matthias Lübken</a> reminded us of the fact. Since we couldn&#8217;t rearrange dates and / or rooms, we decided to just start earlier and finish early enough to <strong>watch the game together</strong>.</p>
-
-<p>So, if you like socer, this is the perfect chance to combine Eclipse and soccer.</p>
-
-<p>If you haven&#8217;t heard of the DemoCamp before and would like to join - do not hesitate to add yourself to the <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_2008_-_Ganymede_Edition/Hamburg">list of attendees</a> (you need a bugzilla account to do so), or drop me short mail so I can add you to the list.</p>
-
-<p>So far, we&#8217;ve got 48 registrations, so this will be a nice crowd :-)</p>
-
-<p>We&#8217;re looking forward to seeing you tonight!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -735,6 +727,10 @@ Using MINT, you can highlight the parts of the source code which have been chang
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-for-week-32/">Annotated Links for Week 32</a>
+      </li>
+    
+      <li class="post">
         <a href="/hacked-dot-io-2013/">Hacked.io 2013</a>
       </li>
     
@@ -750,12 +746,12 @@ Using MINT, you can highlight the parts of the source code which have been chang
         <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
       </li>
     
-      <li class="post">
-        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
-      </li>
-    
   </ul>
 </section>
+
+  
+
+
 
 <section>
   <h1>GitHub Repos</h1>

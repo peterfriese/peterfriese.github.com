@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://peterfriese.github.io/atom.xml" rel="self"/>
   <link href="http://peterfriese.github.io/"/>
-  <updated>2013-08-03T03:20:47+01:00</updated>
+  <updated>2013-08-10T03:06:19+01:00</updated>
   <id>http://peterfriese.github.io/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Annotated Links for Week 32]]></title>
+    <link href="http://peterfriese.github.io/annotated-links-for-week-32/"/>
+    <updated>2013-08-10T01:33:00+01:00</updated>
+    <id>http://peterfriese.github.io/annotated-links-for-week-32</id>
+    <content type="html"><![CDATA[<p>This week, we&#8217;ll have a look at Apple&#8217;s new system status page and another, more serious issue in a rather well-known computer-driven system. Other topics in this post: a very high-level view on programming (and why we failed so far) as well as a very detailed look at programming (and what you can do to excel at it). Finally, some spying.</p>
+
+<!-- more -->
+
+
+<h3><a href="https://developer.apple.com/support/system-status/">Apple System Status Page</a></h3>
+
+<p>As an iOS developer, you rely on a surprisingly high number of Apple systems. Until recently, there wasn&#8217;t a way to find out if a system was offline or if it was just you, &#8221;<a href="http://www.engadget.com/2010/06/24/apple-responds-over-iphone-4-reception-issues-youre-holding-th/">holding it wrong</a>&#8221;. As an immediate response to the (<a href="http://www.theguardian.com/technology/2013/jul/26/apple-developer-site-hack">alleged</a>) hack of their developer support systems, Apple shut down pretty much all of their developer support systems and set up this system status page. As of now, all systems are back to normal, but this page might come in handy for future outages.</p>
+
+<h3><a href="http://www.ima.umn.edu/~arnold/disasters/ariane.html">The Explosion of Ariane 5</a></h3>
+
+<p>Due to popular belief, Ariane 5 exploded because a programmer mixed up a comma with a period, but it&#8217;s not that easy<strong>,</strong></p>
+
+<p>In fact, the problem was someone used a 16 bit unsigned integer variable to hold the result of converting a 64 bit floating point value. I guess this is strong point for using type safe languages in safety-critical systems as well as clearly stating the pre- and post conditions of library functions. Some unit tests might also be in good order.</p>
+
+<h3><a href="http://worrydream.com/dbx/">The Future of Programming</a></h3>
+
+<p>A talk Bret Victor gave at the DropBox conference in <del>1973</del> 2013 on how he thinks the future of programming could have looked like if developers had been more courageous in embracing new ideas instead. Instead, we often see people rejecting new ideas, stating &#8220;that&#8217;s not real programming&#8221;. Thankfully, every now and then new ideas are strong enough to gain enough traction. Otherwise, we&#8217;d still be writing code in binary. Recently, we&#8217;ve seen a growing interest in programming languages and programming paradigms other than the well-known object-oriented / procedural approaches. I think this is a good sign, however, we need to be more open minded and think more about other, new ways of programming. If you haven&#8217;t done so in this year, you should set aside some time to learn a new programming language. Why not try <a href="http://www.eclipse.org/xtend/">Xtend</a>?</p>
+
+<h3><a href="http://open.blogs.nytimes.com/2013/08/01/objectively-stylish/?_r=0">The NYTimes Objective-C Styleguide</a></h3>
+
+<p>If you develop software for a living, you know that following a coding style guide makes sense. Sometimes, people do get religious about how to format their code - try to steer clear of this by using a widely-regarded style guide. The NYTimes Objective-C Styleguide is well-written, has the right amount of concise examples and can be <a href="https://github.com/NYTimes/objective-c-style-guide">forked</a> in case you feel you need to adjust something to your liking. The fact that the New York Times mobile team <a href="https://github.com/NYTimes/objective-c-style-guide/graphs/contributors">welcomes contributions</a> will probably make this styleguide one of the more popular ones.</p>
+
+<h3><a href="https://github.com/ttscoff/selfspy">SelfSpy</a></h3>
+
+<p>Whether you just want to <a href="http://en.wikipedia.org/wiki/Quantified_Self">quantify yourself</a>, something which <a href="http://blog.stephenwolfram.com/2012/03/the-personal-analytics-of-my-life/">Stephen Wolfram seems to be doing to quite some extent</a> or you&#8217;re curious what secret services might know about you if they installed a keylogger on your system: SelfSpy is a good tool to get started: it runs on Linux, Windows and Mac OSX. Besides, it&#8217;s open source - so you can see what it does and you can extend it if needed.</p>
+
+<p><a href="http://www.flickr.com/photos/h20tubig/9376203024/">Chains image</a> by <a href="http://www.flickr.com/photos/h20tubig/">Haya Bernitez</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hacked.io 2013]]></title>
@@ -23,6 +59,8 @@
 <!-- more -->
 
 
+<h3>The venue</h3>
+
 <p>Despite some initial issues with the wifi, the organizers did a great job: from drinks and snacks to the sponsored vouchers for selected restaurants in the O2 arena, you couldn&#8217;t wish for better catering for hackers. Those who stayed for the sleep over even got the treat of a late-night pizza delivery - hacker&#8217;s delight! Power strips were available at every desk and - after some initial hick-ups - the WiFi was available throughout the venue. Best conditions for productive work!</p>
 
 <p>The sponsors had not only made sure to equip everyone with a branded T-Shirt, but also had brought a generous supply of gadgets and other toys to hack on, such as Makey-Makey kits (provided by MailJet), Windows 8 Licenses (Nokia / Microsoft), numerous Hue kits (courtesy of Philips, who later told us this had been their first ever sponsored hackathon - well done, guys!). Plenty of toys to spark some creative ideas!</p>
@@ -30,6 +68,8 @@
 <p>Official hack time went from Saturday noon to Sunday noon, which should be enough time to build something awesome.</p>
 
 <p>Unfortunately, there was no team-building phase, so you either had to come with your team, find some team mates by chance or run on your own. I decided for the latter.</p>
+
+<h3>BabelPhone - a translation app for geeks</h3>
 
 <p>Inspired by Microsoft&#8217;s challenge (&#8220;build something awesome with Windows Phone 8, Windows 8 or Windows Azure services&#8221;), my initial idea was to build a translation app for Windows Phone 8. Unfortunately, two things put a spoke in my wheel: the evening before the hackathon, I installed Windows 8.1 Preview in a VMware Fusion instance, but it just wouldn&#8217;t connect to my Lumia 920 test device via USB. What&#8217;s more, the Windows Phone 8 emulator refused to start - the reason being it needs Hyper-V support which isn&#8217;t activated by default for virtual machines on VMware Fusion. Later that day, I found out how to configure VMWare Fusion and Windows 8 so that the Emulator does run, however I had made up my mind and had started implementing the app on iOS.</p>
 
@@ -54,6 +94,8 @@
 <p>The whole process of recognizing the users utterance over sending it to the backend server, having it translated, sending it back down to the second phone and converting the translation back to spoken language usually takes less than a second under good circumstances, allowing for a more or less fluent conversation.</p>
 
 <p>Apart from a low at around 3 o&#8217;clock in the morning and a power nap at 6 am, I had quite a productive stride with implementing my ideas, and I finished almost on time shortly past 12:00 on Sunday.</p>
+
+<h3>The outcome</h3>
 
 <p>After everybody left the room who wasn&#8217;t going to present a hack (for space reasons, only one member of each team was allowed to present) and everybody had grabbed a quick lunch, presentation of the hacks began. The organizers had redecorated the stage so that 6 teams could set up their demo simultaneously and wait until it was their turn to present. This way, transitions between the individual presentations were cut to a minimum.</p>
 
@@ -1215,42 +1257,6 @@
 <p>Most DVDs do not take up more than 1GB after encoding for the iPad, so you can load quite a number of films even onto small iPads.</p>
 
 <p>Enjoy! Oh, and should I have made your life easier, feel free to <a href="http://flattr.com/thing/2943/Peter-Frieses-Blog">flattr</a> me!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Don't attend the Eclipse DemoCamp in Hamburg this Friday...]]></title>
-    <link href="http://peterfriese.github.io/dont-attend-the-eclipse-democamp-in-hamburg-this-friday/"/>
-    <updated>2010-07-07T01:36:08+01:00</updated>
-    <id>http://peterfriese.github.io/dont-attend-the-eclipse-democamp-in-hamburg-this-friday</id>
-    <content type="html"><![CDATA[<p>&#8230; if you&#8217;re not interested in meeting local (and non-local) Eclipse enthusiasts and committers, learning something about Eclipse, Git, SWT, Qt, e4 and the iPhone, watching some nice Pixar short films in a cosy cinema, and frosty beverages.</p>
-
-<!-- more -->
-
-
-<p>On the other hand, if you <strong>are</strong> interested in at least one of those things, I encourage you to sign up for the DemoCamp <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_Helios_2010/Hamburg">here</a> or <a href="http://www.twitter.com/peterfriese">ping me on Twitter</a> or just send me a mail so I can add you to the list.</p>
-
-<p>Here&#8217;s the detailed program:</p>
-
-<ul>
-<li><p>18:00 - 18:40 Welcome / Short films</p></li>
-<li><p>18:45 - 19:15 <a href="http://twitter.com/vogella">Lars Vogel</a>, Developing with e4</p></li>
-<li><p>19:20 - 19:50 <a href="http://twitter.com/szarnekow">Sebastian Zarnekow</a>, Xtext - A Language Development Framework, Live demo of new and noteworthy features in Xtext</p></li>
-<li><p>19:50 - 20:20 Break + Surprise</p></li>
-<li><p>20:20 - 20:35 <a href="http://www.xing.com/profile/Juergen_Becker">Jürgen Becker</a>, UI with style - a new SWT platform that is based on Qt</p></li>
-<li><p>20:40 - 21:10 <a href="http://twitter.com/ralfebert">Ralf Ebert</a>, Introduction to distributed version control with Git</p></li>
-<li><p>21:15 - 21:45 <a href="http://twitter.com/HBehrens">Heiko Behrens</a>, Build your own iPhone app within minutes - thanks to Eclipse</p></li>
-<li><p>21:45 - open end Closing remarks / Frosty beverages</p></li>
-</ul>
-
-
-<p>The DemoCamp will take place in the <a href="http://www.magazinfilmkunst.de">MAGAZIN Cinema</a> in Hamburg (<a href="http://www.magazinfilmkunst.de/anfahrt.html">directions</a>) and yes, we will show some short films at the beginning of the camp for your entertainment.</p>
-
-<p><a href="http://twitter.com/martinlippert">Martin Lippert</a> and I are happy to be able to present a great lineup of speakers and demos, so do yourself a favor and join us this Friday from 18:00 (6pm).</p>
-
-<p>As always, the event if <strong>free of charge</strong> thanks to the generous support of <a href="http://www.it-agile.de/">it-agile</a>, <a href="http://www.itemis.com">itemis</a> and the <a href="http://www.eclipse.org">Eclipse Foundation</a>.</p>
-
-<p>Looking forward to seeing you on Friday!</p>
 ]]></content>
   </entry>
   

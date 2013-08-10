@@ -9,10 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Does Model Driven Software Development actually work?
-Are some developers more productive than others?
-What happens during code generation?
-Do &hellip;">
+  <meta name="description" content="Those of you who follow me on Twitter might have noticed I am working on an Xtext based DSL for Behaviour Driven Development. Part of the DSL allows &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +84,59 @@ Do &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/xtext-tricks-1-enhancing-completion-proposals/">Xtext Tricks #1: Enhancing Completion Proposals</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-27T16:55:43+00:00" pubdate data-updated="true">Oct 27<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Those of you who <a href="htp://twitter.com/peterfriese">follow me on Twitter</a> might have noticed <a href="http://twitter.com/peterfriese/status/4889552469">I am working on an Xtext based DSL</a> for <a href="http://en.wikipedia.org/wiki/Behavior_driven_development">Behaviour Driven Development</a>. Part of the DSL allows the DSL user to define actors and the verbs these actors can execute. Actors can have a hierarchy (much like a class hierarchy), meaning an actor will inherit all verbs of it&#8217;s super actors. As the list of verbs can grow quite a bit, the content assist drop down menu becomes a bit overwhelming.</p>
+
+<p>[</p>
+
+<p><img src="http://farm3.static.flickr.com/2581/4029808851_22fd514946.jpg" alt="XtextProposalProviderBefore" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/4029808851)</p>
+
+<p>To alleviate  this situation, I decided to display the &#8220;owner&#8221; of a verb along with the name of the verb in the content assist drop down box. Here is my first try:</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/xtext-tricks-1-enhancing-completion-proposals/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -597,108 +647,6 @@ Do &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/towels-models-and-bundles-eclipse-democamp-in-hamburg/">Towels, Models and Bundles: Eclipse DemoCamp in Hamburg</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-05-27T02:13:11+01:00" pubdate data-updated="true">May 27<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>Whether it was just pure coincidence or destiny - yesterdays <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_Galileo_2009/Hamburg">DemoCamp</a> in Hamburg happened to fall on the same day as <a href="http://en.wikipedia.org/wiki/Towel_day">Towel Day</a>.</p>
-
-<p>Although we had quite a bunch of <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_Galileo_2009/Hamburg#Who_Is_Attending">attendees (I counted 40)</a>, only one brought his Towel.</p>
-
-<p>[</p>
-
-<p><img src="http://farm4.static.flickr.com/3637/3568313106_060ee9ff19.jpg" alt="Heiko Behrens - Xtext" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3568313106)</p>
-
-<p>Thanks to our speakers, Martin and I were able to put together a really exciting program:</p>
-
-<ol>
-<li><p>Moritz Eysholdt, Patching Models and Evolving Meta Models</p></li>
-<li><p>Heiko Behrens, TMF Xtext</p></li>
-<li><p>Simon Zambrovski, Common Navigator Framework</p></li>
-<li><p>Marco Mosconi, Modular EMF/GMF customization with ObjectTeams/Java</p></li>
-<li><p>Markus Alexander Kuppe, Distributed OSGi (RFC 119) - The ECF way</p></li>
-</ol>
-
-
-<p>Moritz presented the result of his master&#8217;s thesis on the topic of metamodel evolution and explained how models can evolve together with their metamodels. This might also be of interest for data modeling.</p>
-
-<p>[</p>
-
-<p><img src="http://farm4.static.flickr.com/3380/3568306510_deaab05a74.jpg" alt="Moritz Eysholdt - Metamodel Evolution" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3568306510)</p>
-
-<p>Heiko delivered a great presentation on the upcoming version of Xtext. He used a <a href="http://www.slideshare.net/HeikoB/xtext-und-was-man-damit-anstellen-kann">well-known example</a> that everybody could relate to (no, not entities and services!) so it was really easy to understand how domain specific languages work and how Xtext can help to implement a domain specific tool chain.</p>
-
-<p>[</p>
-
-<p><img src="http://farm4.static.flickr.com/3329/3568309918_6eb0eed6f4.jpg" alt="Heiko Behrens - Xtext" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3568309918)</p>
-
-<p>Simon presented on the Common Navigator Framework - a powerful framework which helps you to assemble tree views in a mostly declarative manner. Simon was bold enough to do a live coding session, but the <a href="http://www.rdrop.com/users/paulmck/DemoGods/">demo gods</a> didn&#8217;t smile on him, so he showed us the prepared solution, which was still very convincing. Simon prepared an article about the CNF on his blog, so if you&#8217;re interested, <a href="http://www.techjava.de/topics/2009/04/eclipse-common-navigator-framework/">drop by</a> - it&#8217;s worth a read.
-[</p>
-
-<p><img src="http://farm4.static.flickr.com/3632/3568319930_a2c97d90af.jpg" alt="Simon Zambrovski - CNF" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3568319930)</p>
-
-<p>After the break, Marco Mosconi showed how <a href="http://www.objectteams.org/">ObjectTeams/Java</a> can be used to non-invasively customize generated code. As a real-world example he used the UML diagrams from the Eclipse <a href="http://www.eclipse.org/modeling/mdt/?project=uml2tools">UML2Tools</a> project. The <a href="http://wiki.eclipse.org/MDT-UML2Tools">UML2Tools</a> project uses <a href="http://www.eclipse.org/modeling/gmf/">GMF</a> to generate the diagram code based on the UML2 metamodel (implemented as an ECore model). A rather large number of generated artifacts have to be customized to make sure the diagrams behave correctly. Marco showed how this is especially required for associations (I find it kind of funny how everybody uses associations to explain how complicated the UML metamodel is). The UML2Tools class diagram has been customized in at least 200 different locations, so you get a big maintenance problem (generated and non-generated code are mingled). With ObjectTeams, it is possible to extract all customization code into so called teams which then are able to enhance the generated code in an aspect oriented way. In a way, ObjectTeams is like AOP on steroids.
-[</p>
-
-<p><img src="http://farm4.static.flickr.com/3644/3568322828_677d4a889a.jpg" alt="Marco Mosconi - ObjectTeams" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3568322828)</p>
-
-<p>The official part of the DemoCamp was concluded by a talk held by <a href="http://www.ohloh.net/accounts/lemmy">Markus</a> <a href="http://www.lemmster.de/blog/">Kuppe</a> on Distributed OSGi. Markus briefly explained the architecture behind Distributed OSGi and gave a demo of an Eclipse RCP application that communicated with an iPhone (which ran an Equinox server). Markus used the <a href="http://www.eclipse.org/ecf/">Eclipse Communication Framework (ECF)</a> to achieve this - ECF contains a provider for Distributed OSGi.
-[</p>
-
-<p><img src="http://farm3.static.flickr.com/2483/3568326016_0e6b01375e.jpg" alt="Markus Kuppe - Remote OSGi" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3568326016)</p>
-
-<p>Eclipse DemoCamps are social events and aim at creating room for discussion and interaction. So, after the official part of the DemoCamp, we headed down to the EAST Bar to have some nice chats over some frosty beverages (I definitely recommend &#8220;Cool Mango&#8221;).</p>
-
-<p>Feedback has been very positive so far and I surely hope everybody enjoyed the DemoCamp as much as I did. Thanks to the <a href="http://www.eclipse.org/">Eclipse Foundation</a>, <a href="http://www.it-agile.de/">it-agile</a> and <a href="http://www.itemis.com/">itemis</a> for making this event possible by sponsoring the location and the drinks!</p>
-
-<p>If you feel you missed out, drop <a href="http://twitter.com/peterfriese">me</a> or <a href="http://twitter.com/martinlippert">Martin</a> a mail so we can invite you the next time around.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -721,6 +669,10 @@ Do &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-for-week-32/">Annotated Links for Week 32</a>
+      </li>
+    
+      <li class="post">
         <a href="/hacked-dot-io-2013/">Hacked.io 2013</a>
       </li>
     
@@ -736,12 +688,12 @@ Do &hellip;">
         <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
       </li>
     
-      <li class="post">
-        <a href="/the-accounts-and-twitter-framework-on-ios-5/">The Accounts and Twitter Framework on iOS 5</a>
-      </li>
-    
   </ul>
 </section>
+
+  
+
+
 
 <section>
   <h1>GitHub Repos</h1>
