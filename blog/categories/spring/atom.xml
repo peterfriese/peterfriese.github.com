@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Spring | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/spring/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-10T04:38:10+01:00</updated>
+  <updated>2013-08-19T23:48:59+02:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Model Driven Architecture and Spring -  friend or foe?]]></title>
     <link href="http://www.peterfriese.de/model-driven-architecture-and-spring-friend-or-foe/"/>
-    <updated>2005-09-20T01:14:00+01:00</updated>
+    <updated>2005-09-20T02:14:00+02:00</updated>
     <id>http://www.peterfriese.de/model-driven-architecture-and-spring-friend-or-foe</id>
     <content type="html"><![CDATA[<p><a href="http://www.javamagazin.de/itr/ausgaben/psecom,id,285,nodeid,20.html">Issue 10.2005</a> of the german Java Magazin contains an article by <a href="http://www.voelter.de/">Markus Völter</a>, <a href="http://jandiandme.blogspot.com/">Eberhard Wolff</a> and <a href="http://f3.tobject.de/about/">me</a> about how the <a href="http://www.springframework.org/">Spring framework</a> and model driven concepts fit together. You can <a href="http://f3.tobject.de/wp-content/downloads/articles/spring_und_generierung.pdf">read the article online</a>.</p>
 ]]></content>
@@ -25,7 +25,7 @@
   <entry>
     <title type="html"><![CDATA[Loading more than one applicationContext XML file into a Spring context]]></title>
     <link href="http://www.peterfriese.de/loading-more-than-one-applicationcontext-xml-file-into-a-spring-context/"/>
-    <updated>2005-01-26T15:32:42+00:00</updated>
+    <updated>2005-01-26T16:32:42+01:00</updated>
     <id>http://www.peterfriese.de/loading-more-than-one-applicationcontext-xml-file-into-a-spring-context</id>
     <content type="html"><![CDATA[<p>You can use this command to load more than one application context file into a spring context:</p>
 

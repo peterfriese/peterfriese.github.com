@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-10T04:38:10+01:00</updated>
+  <updated>2013-08-19T23:48:59+02:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -14,9 +14,53 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Annotated Links for Week 33]]></title>
+    <link href="http://www.peterfriese.de/annotated-links-for-week-33/"/>
+    <updated>2013-08-19T09:30:00+02:00</updated>
+    <id>http://www.peterfriese.de/annotated-links-for-week-33</id>
+    <content type="html"><![CDATA[<p>This week's annotated links are more coding- and code-related than last week. We'll have a look at some data mapping frameworks for Objective-C, a way to set up your projects in a faster, more reproducible way and - as iOS 7 is around the corner, a feature comparison of iOS 7 on the various devices out there.</p>
+
+<!-- more -->
+
+
+<h3><a href="http://www.cultofmac.com/231632/the-ultimate-ios-7-compatibility-chart/">iOS 7 Compatibility Chart</a></h3>
+
+<p>With the release of iOS 7 just around the corner, you might be wondering which devices you should test your apps on in order to make sure you cover all required combinations of services that might or might not be available to your app (yes, iOS 7 is one of those releases that won't make all features available on all devices). Cult of Mac has a nice overview chart, worth checking out.</p>
+
+<h3><a href="http://www.merowing.info/2013/05/crafter-setup-your-cocoa-projects-with-ease/">Crafter - Easily Setup Xcode Projects</a></h3>
+
+<p>Github has made it really easy to check out new libraries or demos: just clone the repo and off you go. But what about creating new projects? If you find yourself constantly creating new projects, adjusting the build configuration to suit your needs, adding a Podfile for <a href="http://www.cocoapods.org">CocoaPods</a>, then <a href="https://github.com/krzysztofzablocki/crafter">Crafter</a> might be for you. You can configure it with your defaults, while at the same time staying flexible by adding options. Definitely worth a try.</p>
+
+<h3><a href="https://github.com/krzysztofzablocki/KZPropertyMapper">Object</a> <a href="https://github.com/uacaps/NSObject-ObjectMap">Mapping</a> <a href="https://github.com/dchohfi/KeyValueObjectMapping">in</a> <a href="https://github.com/mattiaslevin/ObjectMapper">Objective-C</a></h3>
+
+<p>Most apps require you to map data from a text-based presentation (mostly JSON or XML) to  Objective-C objects. Chances are you've written mapping code by hand in at least one of your projects. "Its's just one or two classes, how hard can it be?", was probably what you thought when you set out to implement you home-grown mapping. YOu might have ended up with either pulling your hair out while maintianing your code whenever the API team decided to implement some "minor changes" or using a full-blown framework like <a href="http://www.restkit.org">RestKit</a> that gave you more than you needed. If you just need to map data without the need for all the fancy add-ons like automatic CoreData persistence, in-memory and persistent caching and so on, you should have a look at the following frameworks. The all follow different approaches, some apply automagic mapping by matching field names, others by using an internal DSL to help you express your mapping. Take a look yourself and decide based on what you need for your current project.</p>
+
+<ul>
+<li><a href="https://github.com/krzysztofzablocki/KZPropertyMapper">KZPropertyMapper</a> - uses an internal DSL to express data mappings</li>
+<li><a href="https://github.com/uacaps/NSObject-ObjectMap">NSObject-ObjectMap</a> - uses introspection to map properties directly unto properties.</li>
+<li><a href="https://github.com/dchohfi/KeyValueObjectMapping">KeyValueObjectMapping</a> - Uses a combination of both introspection and configuration to map data unto objects,</li>
+<li><a href="https://github.com/mattiaslevin/ObjectMapper">ObjectMapper</a> - Uses introspection and a callback method to map data.</li>
+</ul>
+
+
+<h3><a href="http://instacod.es">And finally... Instacodes</a></h3>
+
+<p>Did you ever wonder how to create those geeky looking source code screenshots that look like you used a camera to take a picture of your screen from an angle? Well, here's a tool that let's you create those screenshots without the need to take out your camera: <a href="http://instacod.es">Instacodes</a></p>
+
+<p><ul class="gallery">
+<li><a href="/images/2013-08-17-annotated-links-for-week-33/instacodes.png" class="fancybox" rel="gallery-58957bab7ae3483cd792adcee872db68" title="Istancodes sample"><img src="/thumbs/instacodes_600x250.png" alt="Istancodes sample" /></a></li>
+</ul></p>
+
+<p>That's it for this week, I hope you liked it. Feel free to send suggestions for next week!</p>
+
+<p><a href="http://www.flickr.com/photos/h20tubig/9376203024/">Chains image</a> by <a href="http://www.flickr.com/photos/h20tubig/">Haya Bernitez</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Annotated Links for Week 32]]></title>
     <link href="http://www.peterfriese.de/annotated-links-for-week-32/"/>
-    <updated>2013-08-10T01:33:00+01:00</updated>
+    <updated>2013-08-10T01:33:00+02:00</updated>
     <id>http://www.peterfriese.de/annotated-links-for-week-32</id>
     <content type="html"><![CDATA[<p>This week, we'll have a look at Apple's new system status page and another, more serious issue in a rather well-known computer-driven system. Other topics in this post: a very high-level view on programming (and why we failed so far) as well as a very detailed look at programming (and what you can do to excel at it). Finally, some spying.</p>
 

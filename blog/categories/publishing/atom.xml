@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Publishing | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/publishing/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-10T04:38:10+01:00</updated>
+  <updated>2013-08-19T23:48:59+02:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Advanced WikiText]]></title>
     <link href="http://www.peterfriese.de/advanced-wikitext/"/>
-    <updated>2009-05-05T20:18:47+01:00</updated>
+    <updated>2009-05-05T21:18:47+02:00</updated>
     <id>http://www.peterfriese.de/advanced-wikitext</id>
     <content type="html"><![CDATA[<p>In my <a href="http://www.peterfriese.de/getting-started-with-wikitext/">recent posting</a>, I showed you how to use <a href="http://wiki.eclipse.org/Mylyn/Incubator/WikiText">Mylyn WikiText</a> to easily create documentation for your project.</p>
 
@@ -204,7 +204,7 @@ newnoteworthy.textile
   <entry>
     <title type="html"><![CDATA[DocBook rocks!]]></title>
     <link href="http://www.peterfriese.de/docbook-rocks/"/>
-    <updated>2005-01-24T22:17:42+00:00</updated>
+    <updated>2005-01-24T23:17:42+01:00</updated>
     <id>http://www.peterfriese.de/docbook-rocks</id>
     <content type="html"><![CDATA[<p>I decided to write the documentation for my current project using <a href="http://www.docbook.org/">DocBook</a>. After using it for a few days, I must admit that I really love it: using <a href="http://docbook.sourceforge.net/projects/xsl/">DocBook XSL</a>, you can transform it to PDF, HTML (one single large file or many small files, one for each chapter), HTML Help or even Eclipse Help! Much to my pleasure, I found a really amazing Eclipse plug-in that helps me edit my DocBook files (in fact, you could any XML editor to edit those files). The plug-in I am talking of is called <a href="http://vex.sourceforge.net/">Vex-A Visual Editor for XML</a>. Although originally intended to edit XML files in general, it has been written with enough flexibility in mind. The editor uses a stylesheet to render the XML files into a visual representation (see the <a href="http://vex.sourceforge.net/screenshots.html">Screenshots</a>). Now I can edit my DocBook files in WYSIWYG - great!</p>
 ]]></content>

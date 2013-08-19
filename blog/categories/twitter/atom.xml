@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Twitter | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/twitter/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-10T04:38:10+01:00</updated>
+  <updated>2013-08-19T23:48:59+02:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[The Accounts and Twitter Framework on iOS 5]]></title>
     <link href="http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5/"/>
-    <updated>2011-11-09T23:30:46+00:00</updated>
+    <updated>2011-11-10T00:30:46+01:00</updated>
     <id>http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5</id>
     <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you're in a news reader application you might want to let your followers know about an interesting article you just read. If you're in a conference schedule app, you not only want to let your followers know about the awesome talks you're listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you're stuck in...</p>
 

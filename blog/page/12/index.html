@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Looking for some cools sounds to spice up your Windows? Have a look at The20Daily20.WAV, they&#8217;ve got plenty of cool sounds mainly from movies &hellip;">
+  <meta name="description" content="Had to do some system integration this week. It&#8217;s not what I really like. System integration should better be called &#8220;taming wild pieces &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -103,6 +103,96 @@
   <header>
     
       <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/system-integration/">System Integration</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-03-09T14:09:30+01:00" pubdate data-updated="true">Mar 9<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Had to do some system integration this week. It&#8217;s not what I really like. System integration should better be called &#8220;taming wild pieces of bits and bytes&#8221;. However, here are some Linux commands I needed that I will likely forget if I do not write them down:</p>
+
+<ul>
+<li><p>Log in to a remote system, specifying a user name:</p>
+
+<pre><code>`ssh hostname -l username`
+</code></pre></li>
+<li><p>Unpack a .tar.gz file:</p>
+
+<pre><code>`tar xvfz filename.tar.gz`
+</code></pre></li>
+<li><p>Restart sshd:</p>
+
+<pre><code>`/etc/init.d/sshd restart`
+</code></pre></li>
+<li><p>Restart Tomcat:</p>
+
+<pre><code>`/etc/init.d/tomcat restart`
+</code></pre></li>
+<li><p>Text based web browsers:</p>
+
+<ol>
+<li><p>w3m</p></li>
+<li><p>lynx</p></li>
+</ol>
+</li>
+<li><p>find out which process is listening on which ports:</p>
+
+<pre><code>`netstat -p`
+</code></pre></li>
+<li><p>(really) kill a process:</p>
+
+<pre><code>`kill -9 `
+</code></pre></li>
+<li><p>find out the process id of a java process:</p>
+
+<pre><code>`ps aux | grep java`
+</code></pre></li>
+</ul>
+
+
+<p>Likewise, here are some Windows commands that might come in handy:</p>
+
+<ul>
+<li>Need to start a number of PuTTY sessions from one batch file? Use the <em>start</em> command:
+
+<pre><code>`start putty -load session_name
+start putty -load another_session_name`
+</code></pre></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
         <h1 class="entry-title"><a href="/the-daily-wav/">The Daily .WAV</a></h1>
       
     
@@ -120,7 +210,7 @@
   
 
 
-<time datetime="2006-01-17T11:32:50+00:00" pubdate data-updated="true">Jan 17<span>th</span>, 2006</time>
+<time datetime="2006-01-17T12:32:50+01:00" pubdate data-updated="true">Jan 17<span>th</span>, 2006</time>
         
       </p>
     
@@ -160,7 +250,7 @@
   
 
 
-<time datetime="2005-12-24T13:50:06+00:00" pubdate data-updated="true">Dec 24<span>th</span>, 2005</time>
+<time datetime="2005-12-24T14:50:06+01:00" pubdate data-updated="true">Dec 24<span>th</span>, 2005</time>
         
       </p>
     
@@ -206,7 +296,7 @@
   
 
 
-<time datetime="2005-12-22T00:09:10+00:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2005</time>
+<time datetime="2005-12-22T01:09:10+01:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2005</time>
         
       </p>
     
@@ -260,7 +350,7 @@
   
 
 
-<time datetime="2005-12-16T22:29:44+00:00" pubdate data-updated="true">Dec 16<span>th</span>, 2005</time>
+<time datetime="2005-12-16T23:29:44+01:00" pubdate data-updated="true">Dec 16<span>th</span>, 2005</time>
         
       </p>
     
@@ -311,7 +401,7 @@ The aspects being compared are:</p>
   
 
 
-<time datetime="2005-11-25T14:22:15+00:00" pubdate data-updated="true">Nov 25<span>th</span>, 2005</time>
+<time datetime="2005-11-25T15:22:15+01:00" pubdate data-updated="true">Nov 25<span>th</span>, 2005</time>
         
       </p>
     
@@ -355,7 +445,7 @@ The aspects being compared are:</p>
   
 
 
-<time datetime="2005-10-31T22:26:08+00:00" pubdate data-updated="true">Oct 31<span>st</span>, 2005</time>
+<time datetime="2005-10-31T23:26:08+01:00" pubdate data-updated="true">Oct 31<span>st</span>, 2005</time>
         
       </p>
     
@@ -395,7 +485,7 @@ The aspects being compared are:</p>
   
 
 
-<time datetime="2005-10-25T10:47:15+01:00" pubdate data-updated="true">Oct 25<span>th</span>, 2005</time>
+<time datetime="2005-10-25T11:47:15+02:00" pubdate data-updated="true">Oct 25<span>th</span>, 2005</time>
         
       </p>
     
@@ -451,7 +541,7 @@ Why shouldn&#8217;t you specifiy a startup class? The <a href="http://help.eclip
   
 
 
-<time datetime="2005-10-21T16:09:38+01:00" pubdate data-updated="true">Oct 21<span>st</span>, 2005</time>
+<time datetime="2005-10-21T17:09:38+02:00" pubdate data-updated="true">Oct 21<span>st</span>, 2005</time>
         
       </p>
     
@@ -503,7 +593,7 @@ Why shouldn&#8217;t you specifiy a startup class? The <a href="http://help.eclip
   
 
 
-<time datetime="2005-10-17T15:18:30+01:00" pubdate data-updated="true">Oct 17<span>th</span>, 2005</time>
+<time datetime="2005-10-17T16:18:30+02:00" pubdate data-updated="true">Oct 17<span>th</span>, 2005</time>
         
       </p>
     
@@ -552,46 +642,6 @@ Why shouldn&#8217;t you specifiy a startup class? The <a href="http://help.eclip
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/blogging-about-mda/">Blogging About MDA&#8230;</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-10-10T01:47:56+01:00" pubdate data-updated="true">Oct 10<span>th</span>, 2005</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>&#8230; doesn&#8217;t seem to be very popular. Just by coincidence, I dropped by the Technorati page for MDA (<a href="http://technorati.com/tag/mda">http://technorati.com/tag/mda</a>), and discovered that most of the posts there originate from this very blog of mine. Funny. Come on, MDA adepts, there is more to blog about MDA! Don&#8217;t let me be the only one talking about it!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/13/">&larr; Older</a>
@@ -614,6 +664,10 @@ Why shouldn&#8217;t you specifiy a startup class? The <a href="http://help.eclip
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-for-week-33/">Annotated Links for Week 33</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-for-week-32/">Annotated Links for Week 32</a>
       </li>
     
@@ -627,10 +681,6 @@ Why shouldn&#8217;t you specifiy a startup class? The <a href="http://help.eclip
     
       <li class="post">
         <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
-      </li>
-    
-      <li class="post">
-        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
       </li>
     
   </ul>

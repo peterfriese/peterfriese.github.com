@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="I am on my way to OOP 2007 conference in Munich. Today at 14:00, I&#8217;ll be giving a talk on Open Source MDA together with Stefan Reichert of &hellip;">
+  <meta name="description" content="It seems to be a little known fact that the Eclipse CVS integration supports CVS change sets. Now, what is this? Have a look at the following figure &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -103,6 +103,68 @@
   <header>
     
       <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/using-cvs-change-sets/">Using CVS Change Sets</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-02-17T02:30:25+01:00" pubdate data-updated="true">Feb 17<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>It seems to be a little known fact that the Eclipse CVS integration supports CVS change sets. Now, what is this? Have a look at the following figure:</p>
+
+<p><img src="/wp-content/downloads/images/cvs_synch_without_change_sets_small.PNG" alt="CVS synchronisation without change sets" />
+What we see here is a typical situation: you have been working on a new feature in your local workspace while your teammates weren&#8217;t lazy either and have been hacking away some code. The synchronize view gives you an impression of which changes are outgoing ones and which ones are incoming ones.</p>
+
+<p>However, there are several problems with this view. First, you cannot see which changes belong to each other. You also cannot see <em>who</em> has been performing the changes. And last, you cannot see <em>why</em> the changes have been made.</p>
+
+<p>All these shortcomings can be overcome by using CVS change sets. The same situation with change sets activated looks like this:</p>
+
+<p><img src="/wp-content/downloads/images/cvs_synch_with_change_sets_small.PNG" alt="CVS synchronisation with change sets" />.</p>
+
+<p>Now you can easily see who has been changing what for which reason.</p>
+
+<p>Here&#8217;s how to use change sets:</p>
+
+<ol>
+<li><p>Make sure that change set models are activated in the synchronisation preference dialog:<img src="/wp-content/downloads/images/cvs_changesets_preferences_small.PNG" alt="CVS change set preferences" /></p></li>
+<li><p>Activate the changeset model in the sychronize view models dropdown menu:<img src="/wp-content/downloads/images/cvs_changesets_activate_small.PNG" alt="Activate CVS change set model" /></p></li>
+<li><p>Last, but not least: make sure you and your teammates use commit comments! It is a good habit to comment each and every commit. For CVS change sets to be useful, you should NOT use a different commit comment for each single file, but rather use one comment for all files that belong to a logical change (e.g. a bug fix).</p></li>
+</ol>
+
+
+<p>Give it a try. I am sure you won&#8217;t look back.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
         <h1 class="entry-title"><a href="/oop-2007/">OOP 2007</a></h1>
       
     
@@ -120,7 +182,7 @@
   
 
 
-<time datetime="2007-01-23T05:11:14+00:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2007</time>
+<time datetime="2007-01-23T06:11:14+01:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2007</time>
         
       </p>
     
@@ -160,7 +222,7 @@
   
 
 
-<time datetime="2007-01-21T01:37:05+00:00" pubdate data-updated="true">Jan 21<span>st</span>, 2007</time>
+<time datetime="2007-01-21T02:37:05+01:00" pubdate data-updated="true">Jan 21<span>st</span>, 2007</time>
         
       </p>
     
@@ -204,7 +266,7 @@
   
 
 
-<time datetime="2007-01-21T01:11:31+00:00" pubdate data-updated="true">Jan 21<span>st</span>, 2007</time>
+<time datetime="2007-01-21T02:11:31+01:00" pubdate data-updated="true">Jan 21<span>st</span>, 2007</time>
         
       </p>
     
@@ -250,7 +312,7 @@
   
 
 
-<time datetime="2007-01-07T23:13:08+00:00" pubdate data-updated="true">Jan 7<span>th</span>, 2007</time>
+<time datetime="2007-01-08T00:13:08+01:00" pubdate data-updated="true">Jan 8<span>th</span>, 2007</time>
         
       </p>
     
@@ -299,7 +361,7 @@
   
 
 
-<time datetime="2007-01-04T01:19:02+00:00" pubdate data-updated="true">Jan 4<span>th</span>, 2007</time>
+<time datetime="2007-01-04T02:19:02+01:00" pubdate data-updated="true">Jan 4<span>th</span>, 2007</time>
         
       </p>
     
@@ -349,7 +411,7 @@
   
 
 
-<time datetime="2006-11-16T09:38:52+00:00" pubdate data-updated="true">Nov 16<span>th</span>, 2006</time>
+<time datetime="2006-11-16T10:38:52+01:00" pubdate data-updated="true">Nov 16<span>th</span>, 2006</time>
         
       </p>
     
@@ -390,7 +452,7 @@
   
 
 
-<time datetime="2006-08-30T19:45:21+01:00" pubdate data-updated="true">Aug 30<span>th</span>, 2006</time>
+<time datetime="2006-08-30T20:45:21+02:00" pubdate data-updated="true">Aug 30<span>th</span>, 2006</time>
         
       </p>
     
@@ -430,7 +492,7 @@
   
 
 
-<time datetime="2006-08-23T00:37:42+01:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2006</time>
+<time datetime="2006-08-23T01:37:42+02:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2006</time>
         
       </p>
     
@@ -470,7 +532,7 @@
   
 
 
-<time datetime="2006-08-10T14:13:01+01:00" pubdate data-updated="true">Aug 10<span>th</span>, 2006</time>
+<time datetime="2006-08-10T15:13:01+02:00" pubdate data-updated="true">Aug 10<span>th</span>, 2006</time>
         
       </p>
     
@@ -484,46 +546,6 @@
 
 <p>Copying files from one machine to another one:
 <code>scp sourcefile username@targetmachine:targetfile</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/more-linux-shell-hacking/">More Linux Shell Hacking</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2006-08-09T10:27:32+01:00" pubdate data-updated="true">Aug 9<span>th</span>, 2006</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>Steve Litt has written a nice article: <a href="http://www.troubleshooters.com/linux/quickhacks.htm">http://www.troubleshooters.com/linux/quickhacks.htm</a></p>
 </div>
   
   
@@ -553,6 +575,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-for-week-33/">Annotated Links for Week 33</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-for-week-32/">Annotated Links for Week 32</a>
       </li>
     
@@ -566,10 +592,6 @@
     
       <li class="post">
         <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
-      </li>
-    
-      <li class="post">
-        <a href="/using-cocoapods-to-manage-your-dependencies/">Using CocoaPods to manage your dependencies</a>
       </li>
     
   </ul>

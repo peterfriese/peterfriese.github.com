@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-10T04:38:10+01:00</updated>
+  <updated>2013-08-19T23:48:59+02:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Don't attend the Eclipse DemoCamp in Hamburg this Friday...]]></title>
     <link href="http://www.peterfriese.de/dont-attend-the-eclipse-democamp-in-hamburg-this-friday/"/>
-    <updated>2010-07-07T01:36:08+01:00</updated>
+    <updated>2010-07-07T02:36:08+02:00</updated>
     <id>http://www.peterfriese.de/dont-attend-the-eclipse-democamp-in-hamburg-this-friday</id>
     <content type="html"><![CDATA[<p>... if you're not interested in meeting local (and non-local) Eclipse enthusiasts and committers, learning something about Eclipse, Git, SWT, Qt, e4 and the iPhone, watching some nice Pixar short films in a cosy cinema, and frosty beverages.</p>
 
@@ -52,7 +52,7 @@
   <entry>
     <title type="html"><![CDATA[Running AppleScript from Java]]></title>
     <link href="http://www.peterfriese.de/running-applescript-from-java/"/>
-    <updated>2010-03-08T21:42:38+00:00</updated>
+    <updated>2010-03-08T22:42:38+01:00</updated>
     <id>http://www.peterfriese.de/running-applescript-from-java</id>
     <content type="html"><![CDATA[<p>In my current project, I need to launch an external application and maybe execute some additional commands on this external application. Due to the very nature of the project, the whole system will always be run on Mac OS X. So I thought, "why not use AppleScript"?<!-- more -->
 Turns out using AppleScript to launch applications is fairly easy, all you have to do is</p>
@@ -98,7 +98,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
   <entry>
     <title type="html"><![CDATA[Fun with Regular Expressions: ANT-style variable replacing in strings]]></title>
     <link href="http://www.peterfriese.de/fun-with-regular-expressions-ant-style-variable-replacing-in-strings/"/>
-    <updated>2009-09-11T12:19:02+01:00</updated>
+    <updated>2009-09-11T13:19:02+02:00</updated>
     <id>http://www.peterfriese.de/fun-with-regular-expressions-ant-style-variable-replacing-in-strings</id>
     <content type="html"><![CDATA[
 ]]></content>
@@ -107,7 +107,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
   <entry>
     <title type="html"><![CDATA[Mind-boggling #1: Ant patternset]]></title>
     <link href="http://www.peterfriese.de/mind-boggling-1-ant-patternset/"/>
-    <updated>2006-08-08T14:14:46+01:00</updated>
+    <updated>2006-08-08T15:14:46+02:00</updated>
     <id>http://www.peterfriese.de/mind-boggling-1-ant-patternset</id>
     <content type="html"><![CDATA[<p>If you're a Windows user like me, you are used to the idea that a filename consist of a first (the name) and a second part (the extension). Recently, I had to write a little <a href="http://ant.apache.org/">Ant</a> file that copies an entire JRE to another directory. In order to do this, I used the following snippet:
 `</p>
@@ -143,7 +143,7 @@ Now, there is something wrong with this snippet. Can you spot the mistake? I did
   <entry>
     <title type="html"><![CDATA[AndroMDA 3.1 has been released]]></title>
     <link href="http://www.peterfriese.de/andromda-31-has-been-released/"/>
-    <updated>2005-11-25T14:22:15+00:00</updated>
+    <updated>2005-11-25T15:22:15+01:00</updated>
     <id>http://www.peterfriese.de/andromda-31-has-been-released</id>
     <content type="html"><![CDATA[<p>AndroMDA (pronounced "Andromeda") is an extensible generator framework that adheres to the Model Driven Architecture (MDA) paradigm. Models from UML tools will be transformed into deployable components for your favorite platform (J2EE, Spring, .NET). Unlike other MDA toolkits, AndroMDA comes with a host of ready-made cartridges that target today's development toolkits like Axis, jBPM, Struts, JSF, Spring and Hibernate. AndroMDA also contains a toolkit for building your own cartridges or customize existing ones - the meta cartridge. Using it, you can build a custom code generator using your favorite UML tool.</p>
 

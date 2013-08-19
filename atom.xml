@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://www.peterfriese.de/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-10T04:38:10+01:00</updated>
+  <updated>2013-08-19T23:48:59+02:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -14,9 +14,54 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Annotated Links for Week 33]]></title>
+    <link href="http://www.peterfriese.de/annotated-links-for-week-33/"/>
+    <updated>2013-08-19T09:30:00+02:00</updated>
+    <id>http://www.peterfriese.de/annotated-links-for-week-33</id>
+    <content type="html"><![CDATA[<p>This week&#8217;s annotated links are more coding- and code-related than last week. We&#8217;ll have a look at some data mapping frameworks for Objective-C, a way to set up your projects in a faster, more reproducible way and - as iOS 7 is around the corner, a feature comparison of iOS 7 on the various devices out there.</p>
+
+<!-- more -->
+
+
+<h3><a href="http://www.cultofmac.com/231632/the-ultimate-ios-7-compatibility-chart/">iOS 7 Compatibility Chart</a></h3>
+
+<p>With the release of iOS 7 just around the corner, you might be wondering which devices you should test your apps on in order to make sure you cover all required combinations of services that might or might not be available to your app (yes, iOS 7 is one of those releases that won&#8217;t make all features available on all devices). Cult of Mac has a nice overview chart, worth checking out.</p>
+
+<h3><a href="http://www.merowing.info/2013/05/crafter-setup-your-cocoa-projects-with-ease/">Crafter - Easily Setup Xcode Projects</a></h3>
+
+<p>Github has made it really easy to check out new libraries or demos: just clone the repo and off you go. But what about creating new projects? If you find yourself constantly creating new projects, adjusting the build configuration to suit your needs, adding a Podfile for <a href="http://www.cocoapods.org">CocoaPods</a>, then <a href="https://github.com/krzysztofzablocki/crafter">Crafter</a> might be for you. You can configure it with your defaults, while at the same time staying flexible by adding options. Definitely worth a try.</p>
+
+<h3><a href="https://github.com/krzysztofzablocki/KZPropertyMapper">Object</a> <a href="https://github.com/uacaps/NSObject-ObjectMap">Mapping</a> <a href="https://github.com/dchohfi/KeyValueObjectMapping">in</a> <a href="https://github.com/mattiaslevin/ObjectMapper">Objective-C</a></h3>
+
+<p>Most apps require you to map data from a text-based presentation (mostly JSON or XML) to  Objective-C objects. Chances are you&#8217;ve written mapping code by hand in at least one of your projects. &#8220;Its&#8217;s just one or two classes, how hard can it be?&#8221;, was probably what you thought when you set out to implement you home-grown mapping. YOu might have ended up with either pulling your hair out while maintianing your code whenever the API team decided to implement some &#8220;minor changes&#8221; or using a full-blown framework like <a href="http://www.restkit.org">RestKit</a> that gave you more than you needed. If you just need to map data without the need for all the fancy add-ons like automatic CoreData persistence, in-memory and persistent caching and so on, you should have a look at the following frameworks. The all follow different approaches, some apply automagic mapping by matching field names, others by using an internal DSL to help you express your mapping. Take a look yourself and decide based on what you need for your current project.</p>
+
+<ul>
+<li><a href="https://github.com/krzysztofzablocki/KZPropertyMapper">KZPropertyMapper</a> - uses an internal DSL to express data mappings</li>
+<li><a href="https://github.com/uacaps/NSObject-ObjectMap">NSObject-ObjectMap</a> - uses introspection to map properties directly unto properties.</li>
+<li><a href="https://github.com/dchohfi/KeyValueObjectMapping">KeyValueObjectMapping</a> - Uses a combination of both introspection and configuration to map data unto objects,</li>
+<li><a href="https://github.com/mattiaslevin/ObjectMapper">ObjectMapper</a> - Uses introspection and a callback method to map data.</li>
+</ul>
+
+
+<h3><a href="http://instacod.es">And finally&#8230; Instacodes</a></h3>
+
+<p>Did you ever wonder how to create those geeky looking source code screenshots that look like you used a camera to take a picture of your screen from an angle? Well, here&#8217;s a tool that let&#8217;s you create those screenshots without the need to take out your camera: <a href="http://instacod.es">Instacodes</a></p>
+
+<ul class="gallery">
+<li><a href="http://www.peterfriese.de/images/2013-08-17-annotated-links-for-week-33/instacodes.png" class="fancybox" rel="gallery-58957bab7ae3483cd792adcee872db68" title="Istancodes sample"><img src="http://www.peterfriese.de/thumbs/instacodes_600x250.png" alt="Istancodes sample" /></a></li>
+</ul>
+
+
+<p>That&#8217;s it for this week, I hope you liked it. Feel free to send suggestions for next week!</p>
+
+<p><a href="http://www.flickr.com/photos/h20tubig/9376203024/">Chains image</a> by <a href="http://www.flickr.com/photos/h20tubig/">Haya Bernitez</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Annotated Links for Week 32]]></title>
     <link href="http://www.peterfriese.de/annotated-links-for-week-32/"/>
-    <updated>2013-08-10T01:33:00+01:00</updated>
+    <updated>2013-08-10T01:33:00+02:00</updated>
     <id>http://www.peterfriese.de/annotated-links-for-week-32</id>
     <content type="html"><![CDATA[<p>This week, we&#8217;ll have a look at Apple&#8217;s new system status page and another, more serious issue in a rather well-known computer-driven system. Other topics in this post: a very high-level view on programming (and why we failed so far) as well as a very detailed look at programming (and what you can do to excel at it). Finally, some spying.</p>
 
@@ -52,7 +97,7 @@
   <entry>
     <title type="html"><![CDATA[Hacked.io 2013]]></title>
     <link href="http://www.peterfriese.de/hacked-dot-io-2013/"/>
-    <updated>2013-08-03T00:18:00+01:00</updated>
+    <updated>2013-08-03T00:18:00+02:00</updated>
     <id>http://www.peterfriese.de/hacked-dot-io-2013</id>
     <content type="html"><![CDATA[<p>On the weekend of July 21st, I had the chance to attend the Hacked.io hackathon. The dimensions of this event matched the size of London: 500 attendees of all age groups (there were entire teams made up of kids) gathered in the O2 arena (more precisely: in the IndigO2) poised to spend a sleepless night full of hacking and working on creative projects. Those who didn&#8217;t already have an idea for project could let themselves be inspired by the numerous challenges set up by the event sponsors.</p>
 
@@ -133,7 +178,7 @@
   <entry>
     <title type="html"><![CDATA[Do Androids Dream of Electric Sheep?]]></title>
     <link href="http://www.peterfriese.de/do-androids-dream-of-electric-sheep/"/>
-    <updated>2013-03-22T00:33:48+00:00</updated>
+    <updated>2013-03-22T01:33:48+01:00</updated>
     <id>http://www.peterfriese.de/do-androids-dream-of-electric-sheep</id>
     <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
 
@@ -176,7 +221,7 @@
   <entry>
     <title type="html"><![CDATA[Writing Xtext Scope Providers with Xtend]]></title>
     <link href="http://www.peterfriese.de/writing-xtext-scope-providers-with-xtend/"/>
-    <updated>2012-08-14T23:04:55+01:00</updated>
+    <updated>2012-08-15T00:04:55+02:00</updated>
     <id>http://www.peterfriese.de/writing-xtext-scope-providers-with-xtend</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is an <a href="http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html">important concept</a> in the design of programming languages. In Xtext, scoping is used <a href="http://zarnekow.blogspot.de/2009/01/xtext-corner-2-linking-and-scoping.html">to drive two major parts</a> of your DSL: <a href="http://www.eclipse.org/Xtext/documentation.html#linking">linking</a> and <a href="http://www.eclipse.org/Xtext/documentation.html#contentAssist">content assist</a>. While Xtext applies the <a href="http://en.wikiquote.org/wiki/Alan_Kay">80/20 rule</a> very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you&#8217;ll have to roll up your sleeves and write your own scope provider.</p>
 
@@ -212,7 +257,7 @@
   <entry>
     <title type="html"><![CDATA[Using CocoaPods to manage your dependencies]]></title>
     <link href="http://www.peterfriese.de/using-cocoapods-to-manage-your-dependencies/"/>
-    <updated>2012-06-29T23:42:22+01:00</updated>
+    <updated>2012-06-30T00:42:22+02:00</updated>
     <id>http://www.peterfriese.de/using-cocoapods-to-manage-your-dependencies</id>
     <content type="html"><![CDATA[<p>One of the few things that I find really annoying about developing apps for the iOS platform is how cumbersome it is to include third party libraries in your projects. Depending on the complexity of the library (e.g. its respective dependencies and transitive dependencies) and the effort the authors put into the consumability of their library, the steps required to add a library to your project range from just copying a few files into your source folder to a whopping two-page description of drag&#8217;n&#8217;drop wizardry.</p>
 
@@ -314,7 +359,7 @@
   <entry>
     <title type="html"><![CDATA[The Accounts and Twitter Framework on iOS 5]]></title>
     <link href="http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5/"/>
-    <updated>2011-11-09T23:30:46+00:00</updated>
+    <updated>2011-11-10T00:30:46+01:00</updated>
     <id>http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5</id>
     <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&#8217;re in a news reader application you might want to let your followers know about an interesting article you just read. If you&#8217;re in a conference schedule app, you not only want to let your followers know about the awesome talks you&#8217;re listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you&#8217;re stuck in&#8230;</p>
 
@@ -542,7 +587,7 @@
   <entry>
     <title type="html"><![CDATA[Tired of Typing? Speak to Your Computer!]]></title>
     <link href="http://www.peterfriese.de/tired-of-typing-speak-to-your-computer/"/>
-    <updated>2011-06-03T17:54:39+01:00</updated>
+    <updated>2011-06-03T18:54:39+02:00</updated>
     <id>http://www.peterfriese.de/tired-of-typing-speak-to-your-computer</id>
     <content type="html"><![CDATA[<p>For some reason, humans have always dreamt of using natural language to communicate with computers. Quite a number of movies have been made that revolve around this theme, <a href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)">2001: A Space Odyssey</a> and <a href="http://en.wikipedia.org/wiki/I,_Robot_(film)">I, Robot</a> (named after the <a href="http://en.wikipedia.org/wiki/I_robot">great collection of SF stories</a> by <a href="http://en.wikipedia.org/wiki/Isaac_Asimov">Isaac Asimov</a> just being two of them.</p>
 
@@ -573,7 +618,7 @@
   <entry>
     <title type="html"><![CDATA[Code Generation 2011 - Don't miss out!]]></title>
     <link href="http://www.peterfriese.de/code-generation-2011-dont-miss-out/"/>
-    <updated>2011-05-21T11:09:11+01:00</updated>
+    <updated>2011-05-21T12:09:11+02:00</updated>
     <id>http://www.peterfriese.de/code-generation-2011-dont-miss-out</id>
     <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven&#8217;t booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
 
@@ -615,7 +660,7 @@
   <entry>
     <title type="html"><![CDATA[Using NSPredicate to Filter Data]]></title>
     <link href="http://www.peterfriese.de/using-nspredicate-to-filter-data/"/>
-    <updated>2011-04-22T23:15:36+01:00</updated>
+    <updated>2011-04-23T00:15:36+02:00</updated>
     <id>http://www.peterfriese.de/using-nspredicate-to-filter-data</id>
     <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you&#8217;re applying a filter to the huge set of data we call the internet.</p>
 
@@ -737,7 +782,7 @@
   <entry>
     <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
     <link href="http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
-    <updated>2011-02-25T22:15:57+00:00</updated>
+    <updated>2011-02-25T23:15:57+01:00</updated>
     <id>http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
     <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
 
@@ -772,7 +817,7 @@
   <entry>
     <title type="html"><![CDATA[Appropriate Use of MapKit]]></title>
     <link href="http://www.peterfriese.de/appropriate-use-of-mapkit/"/>
-    <updated>2011-02-16T10:48:38+00:00</updated>
+    <updated>2011-02-16T11:48:38+01:00</updated>
     <id>http://www.peterfriese.de/appropriate-use-of-mapkit</id>
     <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&#8217;re violating Google&#8217;s terms of service, I was wondering what in particular was wrong.</p>
 
@@ -850,7 +895,7 @@
   <entry>
     <title type="html"><![CDATA[Three reasons why I think the HP TouchPad will rock the tablet market]]></title>
     <link href="http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
-    <updated>2011-02-10T10:38:26+00:00</updated>
+    <updated>2011-02-10T11:38:26+01:00</updated>
     <id>http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
     <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn&#8217;t the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
 
@@ -877,7 +922,7 @@
   <entry>
     <title type="html"><![CDATA[What's your number?]]></title>
     <link href="http://www.peterfriese.de/whats-your-number/"/>
-    <updated>2011-01-27T01:00:47+00:00</updated>
+    <updated>2011-01-27T02:00:47+01:00</updated>
     <id>http://www.peterfriese.de/whats-your-number</id>
     <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you&#8217;ve been asking yourself &#8220;what&#8217;s this number, and where do I find it?&#8221;, read on!</p>
 
@@ -912,7 +957,7 @@
   <entry>
     <title type="html"><![CDATA[Your Windows IDE sucks? Replace it with Your Favorite Editor on the Mac!]]></title>
     <link href="http://www.peterfriese.de/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/"/>
-    <updated>2011-01-05T00:11:11+00:00</updated>
+    <updated>2011-01-05T01:11:11+01:00</updated>
     <id>http://www.peterfriese.de/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac</id>
     <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.</p>
 
@@ -944,7 +989,7 @@
   <entry>
     <title type="html"><![CDATA[How to Use the Gyroscope of Your iPhone in a Mobile Web App]]></title>
     <link href="http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
-    <updated>2010-11-25T12:00:43+00:00</updated>
+    <updated>2010-11-25T13:00:43+01:00</updated>
     <id>http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
     <content type="html"><![CDATA[<p>This week&#8217;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they&#8217;re neither directly visible in the iOS UI nor are they mentioned in Apple&#8217;s official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone&#8217;s gyroscope. Read on to see it in action and learn how to use it.</p>
 
@@ -1020,7 +1065,7 @@
   <entry>
     <title type="html"><![CDATA[Eclipse DemoCamp Hamburg November 2010]]></title>
     <link href="http://www.peterfriese.de/eclipse-democamp-hamburg-november-2010/"/>
-    <updated>2010-11-15T07:28:17+00:00</updated>
+    <updated>2010-11-15T08:28:17+01:00</updated>
     <id>http://www.peterfriese.de/eclipse-democamp-hamburg-november-2010</id>
     <content type="html"><![CDATA[<p>Last Friday was a happy day for Java developers in Hamburg: not only did Apple and Oracle announce their plan to continue development of Java on the Mac OSX platform, but we also had the pleasure to host this fall&#8217;s instance of Eclipse DemoCamp Hamburg in a bookstore!</p>
 
@@ -1066,7 +1111,7 @@
   <entry>
     <title type="html"><![CDATA[[Updated] Use your iPhone, Android, or BlackBerry to build Your Eclipse Summit Europe 2010]]></title>
     <link href="http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/"/>
-    <updated>2010-11-01T11:45:02+00:00</updated>
+    <updated>2010-11-01T12:45:02+01:00</updated>
     <id>http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010</id>
     <content type="html"><![CDATA[<p>As I&#8217;m writing this, Eclipse Summit Europe 2010 is merely hours away and everyone is getting excited to get there and meet Eclipse family.</p>
 
@@ -1120,7 +1165,7 @@
   <entry>
     <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
     <link href="http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again/"/>
-    <updated>2010-09-19T21:15:30+01:00</updated>
+    <updated>2010-09-19T22:15:30+02:00</updated>
     <id>http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again</id>
     <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
 
@@ -1175,7 +1220,7 @@
   <entry>
     <title type="html"><![CDATA[Why Your Next App Should be Open Sourced]]></title>
     <link href="http://www.peterfriese.de/why-your-next-app-should-be-open-sourced/"/>
-    <updated>2010-09-06T14:15:17+01:00</updated>
+    <updated>2010-09-06T15:15:17+02:00</updated>
     <id>http://www.peterfriese.de/why-your-next-app-should-be-open-sourced</id>
     <content type="html"><![CDATA[<p>I&#8217;ve been doing all sorts of software development over the past few years, from closed-source in-house software for companies to closed-source product development to open-source frameworks and tools development to closed-source app development.</p>
 
@@ -1219,44 +1264,6 @@
 <p>If you&#8217;re developing a library or framework, you might consider getting <strong>funding on <a href="http://www.kickstarter.com/">Kickstarter</a></strong>. Kickstarter is a great way to get funding for your project: you define the deliverable and how much funds you want to raise and people can back your project by pledging a variable amount of money. This way, <a href="http://www.penandthink.com/">John Wain</a> of <a href="http://glyphish.com/">Glyphish</a> fame <a href="http://www.kickstarter.com/projects/jpwain/great-icons-for-iphone-4-apps">managed to raise more than 27.000 USD</a>  for developing an iPhone 4 compatible version of his great Glyphish icon set. His original goal was to raise 2.000 USD, by the way.</p>
 
 <p>I hope I could encourage you to try open source as a strategy for your next application or framework. If I did, let me know! Chances are I might want to submit a patch to add that tiny little feature I think your app is lacking ;-)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Watching DVDs on your iPad]]></title>
-    <link href="http://www.peterfriese.de/watching-dvds-on-your-ipad/"/>
-    <updated>2010-08-06T23:22:10+01:00</updated>
-    <id>http://www.peterfriese.de/watching-dvds-on-your-ipad</id>
-    <content type="html"><![CDATA[<p>I&#8217;ve been wanting to watch DVDs on my iPad since I had it. As the iPad doesn&#8217;t have an optical drive, you need to jump through several loopholes to get the trick done, but in the very moment you watch your first DVD on your iPad, something magical happens&#8230;</p>
-
-<!-- more -->
-
-
-<p>At first, I came up with a solution that would allow me to watch DVDs without re-encoding them - I just streamed them from my Mac. Actually, this is very easy with the help of some great open source tools, some of which are already installed on your Mac. But I guess this is a story for another blog post.</p>
-
-<p>If you want to take your DVDs with you on your iPad, streaming them from your Mac isn&#8217;t an option. So I browsed the web to see if I could find an affordable ripper. If you google for &#8221;<a href="http://www.google.com/search?q=dvd+ipad">dvd ipad</a>&#8221;, you&#8217;ll be given an enormous list of hits linking to commercial tools - obviously encoding DVDs for the iPad isn&#8217;t that simple, so companies can make a good business with selling tools. But I didn&#8217;t want to buy any of those tools, so I looked for a solution involving freely available open source tools.</p>
-
-<p>So, if you want to encode your DVDs for your iPad, here are the steps you need to take. It&#8217;s very simple and doesn&#8217;t cost you a single dime:</p>
-
-<ol>
-<li><a href="http://handbrake.fr/downloads.php">Download</a> and install Handbrake.</li>
-<li>In order to encode for the iPad, you need to use an adjusted profile: <a href="http://www.peterfriese.de/wp-content/downloads/handbrake/iPad.plist">iPad.plist</a>.</li>
-<li>Install this profile into Handbrake (<em>Preset -> Import&#8230;</em> on the main menu)</li>
-<li>Insert a DVD into your optical drive</li>
-<li>Click the <em>Source</em> button in Handbrake and select your DVD</li>
-<li>Handbrake will now scan the DVD for what it thinks is the main feature - you might need to verif this.</li>
-<li>Select one of the profiles in the profile selection dialog (on the Mac, press the <em>Toggle Presets</em> button on the toolbar). <em>iPad full</em> worked fine for me.</li>
-<li>You can now fine-tune the settings. For example, the <em>audio</em> tab allows you to add multiple audio tracks to your video</li>
-<li>Once you&#8217;re done, press <em>Start</em></li>
-<li>Now it&#8217;s time to go for a walk or having a chat with your friends - ripping the DVD will take some time, depending on your computer</li>
-<li>When Handbrake is done encoding the video, just double-click the resulting <em>.m4v</em> file to import it to iTunes.</li>
-<li>As soon as the video shows up in iTunes, you can sync it to your iPad (the iPhone plays the video fine, too)</li>
-</ol>
-
-
-<p>Most DVDs do not take up more than 1GB after encoding for the iPad, so you can load quite a number of films even onto small iPads.</p>
-
-<p>Enjoy! Oh, and should I have made your life easier, feel free to <a href="http://flattr.com/thing/2943/Peter-Frieses-Blog">flattr</a> me!</p>
 ]]></content>
   </entry>
   
