@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="With the Galileo Release coming up, you might find yourself having a hard time updating to the latest milestones AND keeping your favorite plug-ins &hellip;">
+  <meta name="description" content="I recently came across some DSLs which had some defects. Let&#8217;s look at a sample I quickly hacked together with Xtext:[ ](http://www.flickr.com &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -103,6 +103,70 @@
   <header>
     
       <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/noisy-dsls/">Noisy DSLs</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-12T17:57:46+01:00" pubdate data-updated="true">Jun 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>I recently came across some DSLs which had some defects. Let&#8217;s look at a sample I quickly hacked together with <a href="http://www.xtext.org">Xtext</a>:[</p>
+
+<p><img src="http://farm4.static.flickr.com/3379/3618888297_f3a946f641.jpg" alt="Resource - Demo/demo.mydsl - Eclipse SDK" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3618888297)</p>
+
+<p>Here are two recommendations I&#8217;d like to give when designing a textual DSL:</p>
+
+<ol>
+<li><p><strong>Don&#8217;t use uppercase</strong> letters in the keywords of your DSL, unless you either really like them. In the sample DSL, the keywords (<em>Element</em>, <em>EndElement</em>, <em>Child</em>, <em>Endchild</em> all start with an uppercase letter, which makes it cumbersome to edit the DSL script (you need to press the shift key a lot). Back in the days when we didn&#8217;t have syntax highlighting, UPPERCASE keywords made a lot of sense as they helped to draw a better distinction between the keywords, the variables and the constants (strings and numbers) of a program. Nowadays, it is hard to find an IDE which does not offer syntax highlighting, so this argument does not hold any more.</p></li>
+<li><p><strong>Do not use noisy <em>begin</em>&#8230;<em>end</em> syntax constructions.</strong> They do not increase readability of your DSL script and they add to the amount of code to be typed.</p></li>
+</ol>
+
+
+<p>Here is an improved version of the DSL script:  [</p>
+
+<p><img src="http://farm4.static.flickr.com/3647/3618914029_fdbe7d064c.jpg" alt="Resource - Demo/demo.mydsl1 - Eclipse SDK" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3618914029)</p>
+
+<p>By removing the <em>Endelement</em> and <em>Endchild</em> keywords, we have improved readability a lot. Using lowercase keywords has lowered the effort you need to invest to key in the DSL script. And - honestly - don&#8217;t we all like to be lazy at times? After all, one of the goals of DSLs is to make your work easier and more efficient.</p>
+
+<p>That being said, have a great weekend!</p>
+
+<p>By the way, if you need help designing a DSL with <a href="http://www.xtext.org">Xtext</a> - I and the entire Xtext team are happy to assist you. Just drop me a line (peter at itemis dot com) or hop on to <a href="http://xtext.itemis.com/xtext/language=en/23946/professional-services">our professional support site</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
         <h1 class="entry-title"><a href="/following-eclipse-milestones/">Following Eclipse Milestones</a></h1>
       
     
@@ -120,7 +184,7 @@
   
 
 
-<time datetime="2009-06-09T01:46:24+02:00" pubdate data-updated="true">Jun 9<span>th</span>, 2009</time>
+<time datetime="2009-06-09T00:46:24+01:00" pubdate data-updated="true">Jun 9<span>th</span>, 2009</time>
         
       </p>
     
@@ -213,7 +277,7 @@
   
 
 
-<time datetime="2009-05-27T03:13:11+02:00" pubdate data-updated="true">May 27<span>th</span>, 2009</time>
+<time datetime="2009-05-27T02:13:11+01:00" pubdate data-updated="true">May 27<span>th</span>, 2009</time>
         
       </p>
     
@@ -315,7 +379,7 @@
   
 
 
-<time datetime="2009-05-25T02:16:11+02:00" pubdate data-updated="true">May 25<span>th</span>, 2009</time>
+<time datetime="2009-05-25T01:16:11+01:00" pubdate data-updated="true">May 25<span>th</span>, 2009</time>
         
       </p>
     
@@ -380,7 +444,7 @@
   
 
 
-<time datetime="2009-05-05T21:18:47+02:00" pubdate data-updated="true">May 5<span>th</span>, 2009</time>
+<time datetime="2009-05-05T20:18:47+01:00" pubdate data-updated="true">May 5<span>th</span>, 2009</time>
         
       </p>
     
@@ -599,7 +663,7 @@ newnoteworthy.textile
   
 
 
-<time datetime="2009-04-24T01:34:54+02:00" pubdate data-updated="true">Apr 24<span>th</span>, 2009</time>
+<time datetime="2009-04-24T00:34:54+01:00" pubdate data-updated="true">Apr 24<span>th</span>, 2009</time>
         
       </p>
     
@@ -763,7 +827,7 @@ h6. An HTML sixth-level heading
   
 
 
-<time datetime="2009-04-02T17:21:50+02:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2009</time>
+<time datetime="2009-04-02T16:21:50+01:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2009</time>
         
       </p>
     
@@ -821,7 +885,7 @@ h6. An HTML sixth-level heading
   
 
 
-<time datetime="2009-04-01T05:35:53+02:00" pubdate data-updated="true">Apr 1<span>st</span>, 2009</time>
+<time datetime="2009-04-01T04:35:53+01:00" pubdate data-updated="true">Apr 1<span>st</span>, 2009</time>
         
       </p>
     
@@ -913,7 +977,7 @@ h6. An HTML sixth-level heading
   
 
 
-<time datetime="2009-03-31T17:44:18+02:00" pubdate data-updated="true">Mar 31<span>st</span>, 2009</time>
+<time datetime="2009-03-31T16:44:18+01:00" pubdate data-updated="true">Mar 31<span>st</span>, 2009</time>
         
       </p>
     
@@ -992,7 +1056,7 @@ The topics discussed were focussing on consumability and long-term sustainabilit
   
 
 
-<time datetime="2009-03-14T23:55:49+01:00" pubdate data-updated="true">Mar 14<span>th</span>, 2009</time>
+<time datetime="2009-03-14T22:55:49+00:00" pubdate data-updated="true">Mar 14<span>th</span>, 2009</time>
         
       </p>
     
@@ -1096,317 +1160,6 @@ Let&#8217;s now assume we want to add more books (and authors) to the library.</
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/using-teneo-and-emf-to-store-your-data/">Using Teneo and EMF to Store Your Data</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-07T00:22:42+01:00" pubdate data-updated="true">Mar 7<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>Most of you know that I am working as a committer for various Eclipse-related projects (such as <a href="http://www.xtext.org">Xtext</a>, <a href="http://www.eclipse.org/modeling/m2t/?project=xpand">Xpand</a> and the <a href="http://www.eclipse.org/modeling/emft/?project=mwe#mwe">Modeling Workflow Engine</a>). You might not know, however, that I also work as a consultant for <a href="http://www.itemis.com">itemis</a>. On one of my <a href="http://www.itemis.com/itemis-ag/language=en/2621/portfolio">recent consulting assignments</a> in Ottawa, Canada, I was asked &#8220;How can we use EMF to store our data in a database?&#8221;</p>
-
-<p>Well, it turns out EMF can help a long way to store data in a database. Here is how.
-<strong>Prepare your development environment</strong></p>
-
-<ol>
-<li><p>Get Eclipse 3.5 M5 (<a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M5-200902021535/index.php">click here to download</a>)</p></li>
-<li><p>Unpack and start Eclipse</p></li>
-<li><p>Bring up the &#8220;Install New Software&#8221; dialog (Help -> Install New Software)</p></li>
-<li><p>Select <em>Teneo EMF Hibernate Runtime</em> and <em>Teneo EMF Hibernate SDK</em>, version 1.0.3</p></li>
-<li><p>Cick <em>Finish</em></p></li>
-<li><p>You most probably will be asked to restart Eclipse.</p></li>
-</ol>
-
-
-<p><strong>Create a target definition that includes Hibernate and HSQLDB</strong>
-In order to keep things simple, we will store the data in an <a href="http://hsqldb.org/">HSQLDB</a> database. We will use the <a href="http://www.hibernate.org/">Hibernate</a> OR Mapper to perform the mapping between your data objects and the database. As you might guess, quite a number of libraries will be involved to get the task accomplished. Instead of creating a bunch of plug-in projects containing the respective libraries, or - even worse - copying all libraries into our project, we&#8217;ll set up a target definition. Target definitions help to maintain a common set of dependencies for all developers on a team, which is a Good Thing.</p>
-
-<ol>
-<li><p>Create a new project <em>library.target</em> (File -> New -> Project&#8230; -> General -> Project)</p></li>
-<li><p>Create three folders in this project: <em>hibernate</em>, <em>dependencies</em>, <em>hsqldb</em></p></li>
-<li><p>Go to the <a href="http://www.springsource.com/repository/app/">SpringSource Bundle Repository</a> and download the following OSGi bundles:</p></li>
-</ol>
-
-
-<p>file
-save in folder</p>
-
-<p>com.springsource.org.hibernate-3.2.6.ga.jar</p>
-
-<p>library.target/hibernate</p>
-
-<p>com.springsource.org.apache.commons.logging-1.1.1.jar</p>
-
-<p>library.target/dependencies</p>
-
-<p>com.springsource.org.dom4j-1.6.1.jar</p>
-
-<p>library.target/dependencies</p>
-
-<p>com.springsource.org.apache.commons.collections-3.2.0.jar</p>
-
-<p>library.target/dependencies</p>
-
-<p>com.springsource.javax.transaction-1.1.0.jar</p>
-
-<p>library.target/dependencies</p>
-
-<p>com.springsource.antlr-2.7.7.jar</p>
-
-<p>library.target/dependencies</p>
-
-<p>com.springsource.org.hsqldb-1.8.0.9.jar</p>
-
-<p>library.target/hsqldb</p>
-
-<ol>
-<li><p>Create a new target definition library.target in this project (File -> New -> Other&#8230; -> Plug-in Development -> Target Definition)</p></li>
-<li><p>Open the target definition and add the three directories to it&#8217;s contents. As the GUI does not allow you to work with relative paths, you might consider to use a text editor to paste the following text:</p></li>
-</ol>
-
-
-<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;?pde version="3.5"?&gt;
-&lt;target description="Teneo-related stuff, mostly Hibernate" name="Library Target Definition"&gt;
-    &lt;locations&gt;
-        &lt;location path="${eclipse_home}" type="Profile"/&gt;
-        &lt;location path="${workspace_loc}/library.target/hibernate" type="Directory"/&gt;
-        &lt;location path="${workspace_loc}/library.target/dependencies" type="Directory"/&gt;
-        &lt;location path="${workspace_loc}/library.target/hsqldb" type="Directory"/&gt;
-    &lt;/locations&gt;
-&lt;/target&gt;
-</code></pre>
-
-<ol>
-<li>Open the target definition in the Target Definition Editor and click on the <em>Set as Target Platform</em> hyperlink in the upper right area. This will activate the target definition. All contained bundles are now available and can be referenced as dependencies.</li>
-</ol>
-
-
-<p><strong>Create a model for your data</strong>
-The data model will be based on the <a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/references/overview/EMF.html">well-known library tutorial</a> that ships with EMF. If you are interested in a more in-depth look, I recommend taking this tutorial. However, to shortcut things, here is the ultra-slim version of the EMF-Tutorial:</p>
-
-<ol>
-<li><p>Download the Rose class model and save it on your computer</p></li>
-<li><p>Create a new EMF project (File -> New -> Other&#8230; -> Eclipse Modeling Framework -> EMF Project)</p></li>
-</ol>
-
-
-<pre><code>* Project name: library
-
-
-* Model importer: Rose class model
-
-
-* Browse to the Rose class model _library.mdl_ mentioned before
-
-
-* Click on Load to load the model
-
-
-* Click Next, then Finish
-</code></pre>
-
-<ol>
-<li>In the library.genmodel editor, right-click on the Library node and select Generate Model Code</li>
-</ol>
-
-
-<p><strong>Create the library main application</strong>
-In order to demonstrate how to use the data model and how to perform CRUD operations with your data, we will create a simple Java class. In the good spirit of encapsulation and components, we will create a new plug-in project to host this class:</p>
-
-<ol>
-<li><p>Create a new Plug-in project library.main (File -> New -> Project&#8230; -> Plug-in Project)</p></li>
-<li><p>Open the manifest and add the following dependencies:</p></li>
-</ol>
-
-
-<pre><code>* _library_ (this is the bundle which contains our data model)
-
-
-* _org.eclipse.emf.teneo.hibernate_
-
-
-* _org.eclipse.emf.ecore.xmi_
-
-
-* _com.springsource.org.hibernate_
-
-
-* _com.springsource.org.apache.commons.logging_
-
-
-* _com.springsource.org.dom4j_
-
-
-* _com.springsource.org.apache.commons.collections_
-
-
-* _com.springsource.javax.transaction_
-
-
-* _com.springsource.antlr_
-
-
-* _com.springsource.org.hsqldb_
-</code></pre>
-
-<ol>
-<li>Create a new Hibernate configuration file <em>hibernate.properties</em> in <em>library.main/src</em> and paste the following lines:</li>
-</ol>
-
-
-<pre><code>hibernate.connection.driver_class=org.hsqldb.jdbcDriver
-# use the following line to run the embedded db:
-# hibernate.connection.url=jdbc:hsqldb:file:/some/path/on/your/computer/dbname
-# the following line will connect to a standalone (local) DB server:
-hibernate.connection.url=jdbc:hsqldb:hsql://127.0.0.1/library
-hibernate.connection.username=sa
-hibernate.connection.password=
-hibernate.dialect=org.hibernate.dialect.HSQLDialect
-hibernate.hbm2ddl.auto=true
-</code></pre>
-
-<p><strong>Implement the library main application</strong>
-With all the boilerplate in place, we&#8217;re finally ready to write some code. We will create a new class and add some code to create an author and his book and store both in a library.</p>
-
-<ol>
-<li><p>Create a new class LibraryDemo, making sure it has a main method</p></li>
-<li><p>In order to use Teneo to persist our data, we first need to create a datastore and register our model package with it:</p>
-
-<p>   // create the data store
-   String dataStoreName = &#8220;LibraryDataStore&#8221;;
-   HbDataStore dataStore = HbHelper.INSTANCE.createRegisterDataStore(dataStoreName);</p>
-
-<p>   // register the model package with the data store
-   dataStore.setEPackages(new EPackage[] { LibraryPackage.eINSTANCE });</p>
-
-<p>   // initialize the data store, which creates the tables
-   dataStore.initialize();</p></li>
-<li><p>Next, we need to get hold of a session factory and request a new session form it:</p>
-
-<p>   SessionFactory sessionFactory = dataStore.getSessionFactory();
-   {</p>
-
-<pre><code>   Session session = sessionFactory.openSession();
-   session.beginTransaction();
-</code></pre></li>
-<li><p>Now, let&#8217;s create a new library and save it to the session:</p>
-
-<pre><code>   // create a library
-   Library library = LibraryFactory.eINSTANCE.createLibrary();
-   library.setName("Developer's bookshelf");
-
-   // store the library
-   session.save(library);
-</code></pre></li>
-<li><p>In the following part, we will create an author and his book, link them to each other and add them to the library. There is no specific Teneo aspect to this part of the code, it is just straightforward usage of the API EMF generated for your datamodel:</p>
-
-<pre><code>   // create an author
-   Writer writer = LibraryFactory.eINSTANCE.createWriter();
-   writer.setName("A. K. Dewdney");
-
-   // create a book
-   Book book = LibraryFactory.eINSTANCE.createBook();
-   book.setTitle("The New Turing Omnibus");
-   book.setPages(480);
-   book.setCategory(BookCategory.MYSTERY); // oh well, let's hope it's not mystery to most readers!
-   book.setAuthor(writer);
-
-   // add book and writer to library
-   library.getBooks().add(book);
-   library.getWriters().add(writer);
-</code></pre></li>
-<li><p>Finally, we need to commit our changes to the database and close the session:</p>
-
-<pre><code>   // commit changes to the database and close the session
-   session.getTransaction().commit();
-   session.close();
-</code></pre>
-
-<p>   }</p></li>
-</ol>
-
-
-<p><strong>Start the DB server and run the application</strong></p>
-
-<ol>
-<li><p>Open a command line and navigate to the directory that contains <em>hsqldb.jar</em></p></li>
-<li><p>Start the HSQLDB server using this command line:</p></li>
-</ol>
-
-
-<pre><code>java -cp com.springsource.org.hsqldb-1.8.0.9.jar org.hsqldb.Server -database.0 file:library -dbname.0 library
-</code></pre>
-
-<ol>
-<li>Finally (!) go back to Eclipse and start <em>LibraryDemo</em>. You should get an output similar to this one:</li>
-</ol>
-
-
-<pre><code>Mar 6, 2009 1:50:26 PM org.eclipse.emf.teneo.hibernate.HbHelper createRegisterDataStore
-INFO: Creating emf data store and registering it under name: LibraryDataStore
-...
-Mar 6, 2009 1:50:28 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
-INFO: schema update complete
-</code></pre>
-
-<ol>
-<li>To actually see the data stored in the database, navigate to the directory containing the database and open <em>library.log</em>:</li>
-</ol>
-
-
-<pre><code>CREATE USER SA PASSWORD "" ADMIN
-/*C1*/SET SCHEMA PUBLIC
-CONNECT USER SA
-...
-INSERT INTO "library" VALUES(1,'Library',0,'Developer''s bookshelf')
-INSERT INTO "writer" VALUES(1,'Writer',0,'A. K. Dewdney',NULL,NULL,'Library','1',-2)
-INSERT INTO "book" VALUES(1,'Book',0,'The New Turing Omnibus',480,'Mystery',1,NULL,NULL,'Library','1',-3)
-DELETE FROM "writer" WHERE E_ID=1
-INSERT INTO "writer" VALUES(1,'Writer',0,'A. K. Dewdney',1,0,'Library','1',-2)
-DELETE FROM "book" WHERE E_ID=1
-INSERT INTO "book" VALUES(1,'Book',0,'The New Turing Omnibus',480,'Mystery',1,1,0,'Library','1',-3)
-INSERT INTO "writer_books" VALUES(1,1,0)
-COMMIT
-DISCONNECT
-</code></pre>
-
-<p>In the next installment, I will show you how to retrieve objects from the database and query the database using Hibernate Query Language (HQL).</p>
-
-<p><strong>Download the source</strong>
-If you are interested in the source for the solution so far, you can [drain file 16 url download] it here: [drain file 16 url (click to download)].</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -1429,6 +1182,10 @@ If you are interested in the source for the solution so far, you can [drain file
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-for-week-34/">Annotated Links for Week 34</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-for-week-33/">Annotated Links for Week 33</a>
       </li>
     
@@ -1442,10 +1199,6 @@ If you are interested in the source for the solution so far, you can [drain file
     
       <li class="post">
         <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
       </li>
     
   </ul>

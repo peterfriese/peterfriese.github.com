@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Here are some thoughts from Mike Milinkovich&#8217;s keynote on Eclipse titled &#8221;A Vision of Eclipse&#8221;: Primary goal of Eclipse is to &hellip;">
+  <meta name="description" content="I am currently writing an Eclipse wizard that helps with creating a new AndroMDA project. AndroMDA already has two wizards that help with creating a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -103,6 +103,88 @@
   <header>
     
       <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/integrating-maven-in-eclipse/">Integrating Maven in Eclipse</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-06-03T19:31:26+01:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>I am currently writing an Eclipse wizard that helps with creating a new <a href="http://www.andromda.org">AndroMDA</a> project. AndroMDA already has two  wizards that help with creating a new project - they are both commandline based: one for <a href="http://ant.apache.org/">ANT</a>, the other one for <a href="http://maven.apache.org/">Maven</a> (<a href="http://www.andromda.org/maven-andromdapp-plugin/index.html">AndroMDApp Maven Plug-in</a>).</p>
+
+<p>One of the biggest problems with integrating Maven is that there doesn&#8217;t seem to be something like a main entry class that provides some method one can call and hand in some parameters to get things going. Instead, the only way to start maven is to start a new VM and run the main class. Which turns out to be quite annyoing. Here is an extract of the code that is needed to do the trick:</p>
+
+<p>`</p>
+
+<pre><code>        // VM runner
+        VMRunnerConfiguration vmConfig = new VMRunnerConfiguration(
+                "com.werken.forehead.Forehead", foreheadClasspath);
+
+        vmConfig.setVMArguments(options);
+        vmConfig.setProgramArguments(goals);
+        vmConfig.setWorkingDirectory(projectParentDir.getAbsolutePath());
+        vmConfig.setEnvironment(environment);
+
+        String launchMode = ILaunchManager.RUN_MODE;
+        IVMRunner vmRunner = getJRE().getVMRunner(launchMode);
+
+        if (vmRunner != null)
+        {
+            // launch manager
+            ILaunchManager manager = DebugPlugin.getDefault().getLaunchManager();
+            ILaunchConfigurationType type = manager
+                    .getLaunchConfigurationType(IJavaLaunchConfigurationConstants
+                    .ID_JAVA_APPLICATION);
+
+            ILaunchConfigurationWorkingCopy launchWorkingCopy = type.newInstance(null,
+                    "Create AndroMDA project.");
+            launchWorkingCopy.setAttribute(IDebugUIConstants.ATTR_PRIVATE, true);
+
+            monitor.worked(2);
+            monitor.subTask("Starting maven.");
+
+            ILaunch newLaunch = new Launch(launchWorkingCopy, ILaunchManager.RUN_MODE, null);
+            DebugPlugin.getDefault().getLaunchManager().addLaunch(newLaunch);
+            vmRunner.run(vmConfig, newLaunch, monitor);
+            monitor.worked(8);
+        }
+</code></pre>
+
+<p>`</p>
+
+<p>Right at the start you can see something called &#8220;forehead&#8221;. This some funky launcher the Maven guys use to set up the class path and start the main class. I wonder why they are making things so complicated. One drawback of running a tool like this is that you cannot get feedback about how far processing has proceeded. I would have liked to provide a real progress monitor for the wizard, but unfortunately this is not possible. Maybe I&#8217;ll take a look at Maven 2.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
         <h1 class="entry-title"><a href="/a-vision-of-eclipse/">A Vision of Eclipse</a></h1>
       
     
@@ -120,7 +202,7 @@
   
 
 
-<time datetime="2005-05-10T18:57:55+02:00" pubdate data-updated="true">May 10<span>th</span>, 2005</time>
+<time datetime="2005-05-10T17:57:55+01:00" pubdate data-updated="true">May 10<span>th</span>, 2005</time>
         
       </p>
     
@@ -170,7 +252,7 @@
   
 
 
-<time datetime="2005-05-10T10:21:54+02:00" pubdate data-updated="true">May 10<span>th</span>, 2005</time>
+<time datetime="2005-05-10T09:21:54+01:00" pubdate data-updated="true">May 10<span>th</span>, 2005</time>
         
       </p>
     
@@ -213,7 +295,7 @@ A manager, an engineer and an architect are traveling to a fereign country. They
   
 
 
-<time datetime="2005-05-03T00:10:19+02:00" pubdate data-updated="true">May 3<span>rd</span>, 2005</time>
+<time datetime="2005-05-02T23:10:19+01:00" pubdate data-updated="true">May 2<span>nd</span>, 2005</time>
         
       </p>
     
@@ -259,7 +341,7 @@ A manager, an engineer and an architect are traveling to a fereign country. They
   
 
 
-<time datetime="2005-05-02T23:21:26+02:00" pubdate data-updated="true">May 2<span>nd</span>, 2005</time>
+<time datetime="2005-05-02T22:21:26+01:00" pubdate data-updated="true">May 2<span>nd</span>, 2005</time>
         
       </p>
     
@@ -301,7 +383,7 @@ A manager, an engineer and an architect are traveling to a fereign country. They
   
 
 
-<time datetime="2005-05-02T23:09:22+02:00" pubdate data-updated="true">May 2<span>nd</span>, 2005</time>
+<time datetime="2005-05-02T22:09:22+01:00" pubdate data-updated="true">May 2<span>nd</span>, 2005</time>
         
       </p>
     
@@ -341,7 +423,7 @@ A manager, an engineer and an architect are traveling to a fereign country. They
   
 
 
-<time datetime="2005-04-20T18:18:25+02:00" pubdate data-updated="true">Apr 20<span>th</span>, 2005</time>
+<time datetime="2005-04-20T17:18:25+01:00" pubdate data-updated="true">Apr 20<span>th</span>, 2005</time>
         
       </p>
     
@@ -391,7 +473,7 @@ Quick Preferences (now, you can enable / disable you proxy with just 2 (!) keyst
   
 
 
-<time datetime="2005-04-20T18:03:13+02:00" pubdate data-updated="true">Apr 20<span>th</span>, 2005</time>
+<time datetime="2005-04-20T17:03:13+01:00" pubdate data-updated="true">Apr 20<span>th</span>, 2005</time>
         
       </p>
     
@@ -447,7 +529,7 @@ Quick Preferences (now, you can enable / disable you proxy with just 2 (!) keyst
   
 
 
-<time datetime="2005-04-19T10:39:29+02:00" pubdate data-updated="true">Apr 19<span>th</span>, 2005</time>
+<time datetime="2005-04-19T09:39:29+01:00" pubdate data-updated="true">Apr 19<span>th</span>, 2005</time>
         
       </p>
     
@@ -491,7 +573,7 @@ Quick Preferences (now, you can enable / disable you proxy with just 2 (!) keyst
   
 
 
-<time datetime="2005-04-18T14:37:43+02:00" pubdate data-updated="true">Apr 18<span>th</span>, 2005</time>
+<time datetime="2005-04-18T13:37:43+01:00" pubdate data-updated="true">Apr 18<span>th</span>, 2005</time>
         
       </p>
     
@@ -501,51 +583,6 @@ Quick Preferences (now, you can enable / disable you proxy with just 2 (!) keyst
   <div class="entry-content">
         
     <p>Ever wanted to write your own Computer Science research paper, but didn&#8217;t find the time? <a href="http://www.pdos.csail.mit.edu/scigen/">SCIgen - An Automatic CS Paper Generator</a> can generate a random paper for you - check it out!</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/serial-version-uids/">Serial Version UIDs</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-04-14T15:36:22+02:00" pubdate data-updated="true">Apr 14<span>th</span>, 2005</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>In my current project, we&#8217;re struggling with <a href="http://java.sun.com/j2se/1.4.2/docs/guide/serialization/spec/version.html">serial version UIDs</a>. Here are some links that shed a little light on the whole topic.
-<a href="http://c2.com/cgi/wiki?AlwaysDeclareSerialVersionUid">Portland Pattern Repository&#8217;s Wiki</a> states that all serializable classes should have a serial version UID assigned by the developer. An interesting observation ist that different compilers produce differnt UIDs for the same class.</p>
-
-<p><a href="http://serialver.sourceforge.net/">SerialVer</a> is a <a href="http://sourceforge.net/">Sourceforge</a> hosted project that provides <a href="http://ant.apache.org/">ANT</a> tasks for generating serial version UIDs.</p>
-
-<p>The <a href="http://www.andromda.org/andromda-spring-cartridge/">AndroMDA Hibernate Cartridge</a> is currently lacking support for serial version UIDs, but <a href="http://galaxy.andromda.org:8080/jira/browse/HIB-87">I have filed an issue</a> and hope it will be fixed soon.</p>
 </div>
   
   
@@ -575,6 +612,10 @@ Quick Preferences (now, you can enable / disable you proxy with just 2 (!) keyst
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-for-week-34/">Annotated Links for Week 34</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-for-week-33/">Annotated Links for Week 33</a>
       </li>
     
@@ -588,10 +629,6 @@ Quick Preferences (now, you can enable / disable you proxy with just 2 (!) keyst
     
       <li class="post">
         <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
       </li>
     
   </ul>

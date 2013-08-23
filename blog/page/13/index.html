@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="&#8230; doesn&#8217;t seem to be very popular. Just by coincidence, I dropped by the Technorati page for MDA (http://technorati.com/tag/mda), and &hellip;">
+  <meta name="description" content="Setting up Tomcat seems to be quite easy: just unpack the core ZIP file, and off you go! But as soon as you want to manage the server, you realize &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -103,6 +103,78 @@
   <header>
     
       <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/installing-tomcat-5512-and-enabling-the-admin-console/">Installing Tomcat 5.5.12 (and Enabling the Admin Console)</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-10-17T15:18:30+01:00" pubdate data-updated="true">Oct 17<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Setting up <a href="http://tomcat.apache.org/">Tomcat</a> seems to be quite easy: just unpack the core ZIP file, and off you go! But as soon as you want to manage the server, you realize that Tomcat 5.5.x is missing the admin console. Setting up the admin console is easy as well, but is not well documented. So here we go:</p>
+
+<ul>
+<li><p>Get the <a href="http://tomcat.apache.org/download-55.cgi">latest binary builds</a> (apache-tomcat-5.5.12.zip, apache-tomcat-5.5.12-admin.zip and (if you&#8217;re running on JDK 1.4) apache-tomcat-5.5.12-compat.zip)</p></li>
+<li><pre><code>Unzip the files into the same directory, making sure you obey this order:
+</code></pre>
+
+<ol>
+<li><p>apache-tomcat-5.5.12.zip</p></li>
+<li><p>apache-tomcat-5.5.12-compat.zip</p></li>
+<li><p>apache-tomcat-5.5.12-admin.zip</p></li>
+</ol>
+</li>
+<li><pre><code>Edit the file _$catalina_home/conf/tomcat-users.xml_, making sure it looks like this:
+</code></pre>
+
+<p><code>
+&lt; ?xml version='1.0' encoding='utf-8'?&gt;
+&lt;tomcat -users&gt;
+&lt;role rolename="tomcat"/&gt;
+&lt;role rolename="role1"/&gt;
+&lt;role rolename="admin"/&gt;
+&lt;role rolename="manager" /&gt;
+&lt;user username="tomcat" password="tomcat" roles="tomcat"/&gt;
+&lt;user rusername="admin" password="admin" roles="tomcat,manager,admin" /&gt;
+&lt;user username="both" password="tomcat" roles="tomcat,role1"/&gt;
+&lt;user username="role1" password="tomcat" roles="role1"/&gt;
+&lt;/tomcat&gt;
+</code></p></li>
+</ul>
+
+
+<p>This should do the trick.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
         <h1 class="entry-title"><a href="/blogging-about-mda/">Blogging About MDA&#8230;</a></h1>
       
     
@@ -120,7 +192,7 @@
   
 
 
-<time datetime="2005-10-10T02:47:56+02:00" pubdate data-updated="true">Oct 10<span>th</span>, 2005</time>
+<time datetime="2005-10-10T01:47:56+01:00" pubdate data-updated="true">Oct 10<span>th</span>, 2005</time>
         
       </p>
     
@@ -160,7 +232,7 @@
   
 
 
-<time datetime="2005-10-10T02:28:52+02:00" pubdate data-updated="true">Oct 10<span>th</span>, 2005</time>
+<time datetime="2005-10-10T01:28:52+01:00" pubdate data-updated="true">Oct 10<span>th</span>, 2005</time>
         
       </p>
     
@@ -240,7 +312,7 @@
   
 
 
-<time datetime="2005-09-20T02:14:00+02:00" pubdate data-updated="true">Sep 20<span>th</span>, 2005</time>
+<time datetime="2005-09-20T01:14:00+01:00" pubdate data-updated="true">Sep 20<span>th</span>, 2005</time>
         
       </p>
     
@@ -280,7 +352,7 @@
   
 
 
-<time datetime="2005-09-20T01:49:38+02:00" pubdate data-updated="true">Sep 20<span>th</span>, 2005</time>
+<time datetime="2005-09-20T00:49:38+01:00" pubdate data-updated="true">Sep 20<span>th</span>, 2005</time>
         
       </p>
     
@@ -320,7 +392,7 @@
   
 
 
-<time datetime="2005-08-23T02:21:21+02:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2005</time>
+<time datetime="2005-08-23T01:21:21+01:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2005</time>
         
       </p>
     
@@ -369,7 +441,7 @@
   
 
 
-<time datetime="2005-08-14T23:24:24+02:00" pubdate data-updated="true">Aug 14<span>th</span>, 2005</time>
+<time datetime="2005-08-14T22:24:24+01:00" pubdate data-updated="true">Aug 14<span>th</span>, 2005</time>
         
       </p>
     
@@ -424,7 +496,7 @@
   
 
 
-<time datetime="2005-08-09T01:04:13+02:00" pubdate data-updated="true">Aug 9<span>th</span>, 2005</time>
+<time datetime="2005-08-09T00:04:13+01:00" pubdate data-updated="true">Aug 9<span>th</span>, 2005</time>
         
       </p>
     
@@ -464,7 +536,7 @@
   
 
 
-<time datetime="2005-06-28T19:41:25+02:00" pubdate data-updated="true">Jun 28<span>th</span>, 2005</time>
+<time datetime="2005-06-28T18:41:25+01:00" pubdate data-updated="true">Jun 28<span>th</span>, 2005</time>
         
       </p>
     
@@ -504,7 +576,7 @@
   
 
 
-<time datetime="2005-06-23T11:13:36+02:00" pubdate data-updated="true">Jun 23<span>rd</span>, 2005</time>
+<time datetime="2005-06-23T10:13:36+01:00" pubdate data-updated="true">Jun 23<span>rd</span>, 2005</time>
         
       </p>
     
@@ -514,88 +586,6 @@
   <div class="entry-content">
         
     <p>Starting with release 1.6, <a href="http://www.yoxos.com">Yoxos</a> <a href="http://www.yoxos.com/featuredb/3.1RC1/win32/de.tobject.findbugs/">contains</a> the <a href="http://findbugs.sourceforge.net/">FindBugs</a> Plug-in. Yoxos is an Eclipse distribution that comes packages with a whole bunch of valuable plug-ins and an installation tool that let&#8217;s you select wich plug-ins to install / uninstall.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/integrating-maven-in-eclipse/">Integrating Maven in Eclipse</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-06-03T20:31:26+02:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2005</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>I am currently writing an Eclipse wizard that helps with creating a new <a href="http://www.andromda.org">AndroMDA</a> project. AndroMDA already has two  wizards that help with creating a new project - they are both commandline based: one for <a href="http://ant.apache.org/">ANT</a>, the other one for <a href="http://maven.apache.org/">Maven</a> (<a href="http://www.andromda.org/maven-andromdapp-plugin/index.html">AndroMDApp Maven Plug-in</a>).</p>
-
-<p>One of the biggest problems with integrating Maven is that there doesn&#8217;t seem to be something like a main entry class that provides some method one can call and hand in some parameters to get things going. Instead, the only way to start maven is to start a new VM and run the main class. Which turns out to be quite annyoing. Here is an extract of the code that is needed to do the trick:</p>
-
-<p>`</p>
-
-<pre><code>        // VM runner
-        VMRunnerConfiguration vmConfig = new VMRunnerConfiguration(
-                "com.werken.forehead.Forehead", foreheadClasspath);
-
-        vmConfig.setVMArguments(options);
-        vmConfig.setProgramArguments(goals);
-        vmConfig.setWorkingDirectory(projectParentDir.getAbsolutePath());
-        vmConfig.setEnvironment(environment);
-
-        String launchMode = ILaunchManager.RUN_MODE;
-        IVMRunner vmRunner = getJRE().getVMRunner(launchMode);
-
-        if (vmRunner != null)
-        {
-            // launch manager
-            ILaunchManager manager = DebugPlugin.getDefault().getLaunchManager();
-            ILaunchConfigurationType type = manager
-                    .getLaunchConfigurationType(IJavaLaunchConfigurationConstants
-                    .ID_JAVA_APPLICATION);
-
-            ILaunchConfigurationWorkingCopy launchWorkingCopy = type.newInstance(null,
-                    "Create AndroMDA project.");
-            launchWorkingCopy.setAttribute(IDebugUIConstants.ATTR_PRIVATE, true);
-
-            monitor.worked(2);
-            monitor.subTask("Starting maven.");
-
-            ILaunch newLaunch = new Launch(launchWorkingCopy, ILaunchManager.RUN_MODE, null);
-            DebugPlugin.getDefault().getLaunchManager().addLaunch(newLaunch);
-            vmRunner.run(vmConfig, newLaunch, monitor);
-            monitor.worked(8);
-        }
-</code></pre>
-
-<p>`</p>
-
-<p>Right at the start you can see something called &#8220;forehead&#8221;. This some funky launcher the Maven guys use to set up the class path and start the main class. I wonder why they are making things so complicated. One drawback of running a tool like this is that you cannot get feedback about how far processing has proceeded. I would have liked to provide a real progress monitor for the wizard, but unfortunately this is not possible. Maybe I&#8217;ll take a look at Maven 2.</p>
 </div>
   
   
@@ -625,6 +615,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-for-week-34/">Annotated Links for Week 34</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-for-week-33/">Annotated Links for Week 33</a>
       </li>
     
@@ -638,10 +632,6 @@
     
       <li class="post">
         <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/writing-xtext-scope-providers-with-xtend/">Writing Xtext Scope Providers with Xtend</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mac | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/mac/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-19T23:48:59+02:00</updated>
+  <updated>2013-08-23T17:53:03+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Your Windows IDE sucks? Replace it with Your Favorite Editor on the Mac!]]></title>
     <link href="http://www.peterfriese.de/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/"/>
-    <updated>2011-01-05T01:11:11+01:00</updated>
+    <updated>2011-01-05T00:11:11+00:00</updated>
     <id>http://www.peterfriese.de/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac</id>
     <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.</p>
 
@@ -48,7 +48,7 @@
   <entry>
     <title type="html"><![CDATA[Running AppleScript from Java]]></title>
     <link href="http://www.peterfriese.de/running-applescript-from-java/"/>
-    <updated>2010-03-08T22:42:38+01:00</updated>
+    <updated>2010-03-08T21:42:38+00:00</updated>
     <id>http://www.peterfriese.de/running-applescript-from-java</id>
     <content type="html"><![CDATA[<p>In my current project, I need to launch an external application and maybe execute some additional commands on this external application. Due to the very nature of the project, the whole system will always be run on Mac OS X. So I thought, "why not use AppleScript"?<!-- more -->
 Turns out using AppleScript to launch applications is fairly easy, all you have to do is</p>
@@ -94,7 +94,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
   <entry>
     <title type="html"><![CDATA[Mac in Black: Taking Screenshots with Skitch]]></title>
     <link href="http://www.peterfriese.de/mac-in-black-skitch/"/>
-    <updated>2009-05-25T02:16:11+02:00</updated>
+    <updated>2009-05-25T01:16:11+01:00</updated>
     <id>http://www.peterfriese.de/mac-in-black-skitch</id>
     <content type="html"><![CDATA[<p>Last week, <a href="http://www.1160pm.net/">Heiko</a>, <a href="http://koehnlein.blogspot.com/">Jan</a> and I were talking about blogging about the tools that make our lifes easier on the Mac. "Isn't the Mac supposed to be making your life easier anyway?" you might ask. Well, most things really are easy with a Mac. However, there are some things that cannot be done easily with a Mac. More often than not, this is due to the fact that Apple tries to hide the complexity of computers from nosy users. Which is fine for beginners - but makes life harder for the pros. Thankfully, there is a vast array of tools out there that fill the gap and make life on a Mac easier.</p>
 
@@ -128,7 +128,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
   <entry>
     <title type="html"><![CDATA[Keyboard shortcuts for Apple Mail]]></title>
     <link href="http://www.peterfriese.de/keyboard-shortcuts-for-apple-mail/"/>
-    <updated>2009-03-05T02:41:33+01:00</updated>
+    <updated>2009-03-05T01:41:33+00:00</updated>
     <id>http://www.peterfriese.de/keyboard-shortcuts-for-apple-mail</id>
     <content type="html"><![CDATA[<p>I use Apple Mail on my MacBook Pro, mainly because it has a better integration with Spotlight than Thunderbird. It also has a nicer UI and is easier to configure.</p>
 
@@ -149,7 +149,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
   <entry>
     <title type="html"><![CDATA[CVS on a Mac]]></title>
     <link href="http://www.peterfriese.de/cvs-on-a-mac/"/>
-    <updated>2009-02-12T21:52:04+01:00</updated>
+    <updated>2009-02-12T20:52:04+00:00</updated>
     <id>http://www.peterfriese.de/cvs-on-a-mac</id>
     <content type="html"><![CDATA[<p>In order to be able to work on some of our <a href="http://www.xtext.org">Xtext</a> / <a href="http://www.eclipse.org">Eclipse</a> related build scripts, I needed to install a <a href="http://www.nongnu.org/cvs/">CVS</a> command line client on my Mac. Now if you google for "<a href="http://www.google.com/search?hl=en&amp;q=cvs+mac">cvs mac</a>", you'll get a large list of result, basically telling you to get the <a href="http://developer.apple.com/technology/xcode.html">Apple Xcode SDK</a>. While the Xcode SDK is for free, and usually you don't even need to download it from the <a href="http://developer.apple.com/">Apple Developer Connection's website</a> (as you already have it on your Mac install disks as <a href="http://www.lullabot.com/videocast/install_cvs_mac_osx">Lullabot</a> points out), it occurred to me that installing a 1+GB space hog seems to be a bit of an overkill for getting a tiny application.</p>
 

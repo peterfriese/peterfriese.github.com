@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-19T23:48:59+02:00</updated>
+  <updated>2013-08-23T17:53:03+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Linux shell hacking cont'd]]></title>
     <link href="http://www.peterfriese.de/linux-shell-hacking-contd/"/>
-    <updated>2006-08-10T15:13:01+02:00</updated>
+    <updated>2006-08-10T14:13:01+01:00</updated>
     <id>http://www.peterfriese.de/linux-shell-hacking-contd</id>
     <content type="html"><![CDATA[<p>Free space on your system:
 <code>df</code></p>
@@ -29,7 +29,7 @@
   <entry>
     <title type="html"><![CDATA[More Linux shell hacking]]></title>
     <link href="http://www.peterfriese.de/more-linux-shell-hacking/"/>
-    <updated>2006-08-09T11:27:32+02:00</updated>
+    <updated>2006-08-09T10:27:32+01:00</updated>
     <id>http://www.peterfriese.de/more-linux-shell-hacking</id>
     <content type="html"><![CDATA[<p>Steve Litt has written a nice article: <a href="http://www.troubleshooters.com/linux/quickhacks.htm">http://www.troubleshooters.com/linux/quickhacks.htm</a></p>
 ]]></content>
@@ -38,7 +38,7 @@
   <entry>
     <title type="html"><![CDATA[Bugzilla trouble]]></title>
     <link href="http://www.peterfriese.de/bugzilla-trouble/"/>
-    <updated>2006-07-03T13:06:01+02:00</updated>
+    <updated>2006-07-03T12:06:01+01:00</updated>
     <id>http://www.peterfriese.de/bugzilla-trouble</id>
     <content type="html"><![CDATA[<p>Back from holidays, I discovered that our customer migrated our development server to a new hardware. Without telling anybody of the devlopment team! First thing I noticed was that Bugzilla didn't work any more: I just got error messages like this: <code>data/versioncache did not return a true value at globals.pl line 628</code>. Googling around returned <a href="http://mozdev.org/pipermail/project_owners/2004-October/003149.html">this</a> mailing list entry which recommends rerunning checksetup.pl. Running <code>./checksetup.pl</code> in the installation directory (under <code>/etc/var/www/bugzilla</code>) did the trick: everything is fine again. On to the next problem!</p>
 ]]></content>
@@ -47,7 +47,7 @@
   <entry>
     <title type="html"><![CDATA[Installing Tomcat]]></title>
     <link href="http://www.peterfriese.de/installing-tomcat/"/>
-    <updated>2006-04-19T10:53:07+02:00</updated>
+    <updated>2006-04-19T09:53:07+01:00</updated>
     <id>http://www.peterfriese.de/installing-tomcat</id>
     <content type="html"><![CDATA[<p><a href="http://www.meritonlinesystems.com/docs/apache_tomcat_redhat.html">Here is</a> a nice how-to on how to install Tomcat on Linux. Includes instructions on how to run Tomcat in the context of a special user and how to write shell scripts for (re)starting Tomcat.</p>
 ]]></content>
@@ -56,7 +56,7 @@
   <entry>
     <title type="html"><![CDATA[More Linux commands that might come in handy]]></title>
     <link href="http://www.peterfriese.de/more-linux-commands-that-might-come-in-handy/"/>
-    <updated>2006-04-18T15:13:58+02:00</updated>
+    <updated>2006-04-18T14:13:58+01:00</updated>
     <id>http://www.peterfriese.de/more-linux-commands-that-might-come-in-handy</id>
     <content type="html"><![CDATA[<p>This <a href="http://www-128.ibm.com/developerworks/linux/library/l-roadmap.html">series on Linux</a> contains quite some useful tips and commands.</p>
 ]]></content>

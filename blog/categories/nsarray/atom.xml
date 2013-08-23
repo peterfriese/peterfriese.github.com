@@ -4,7 +4,7 @@
   <title><![CDATA[Category: NSArray | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/nsarray/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-19T23:48:59+02:00</updated>
+  <updated>2013-08-23T17:53:03+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Using NSPredicate to Filter Data]]></title>
     <link href="http://www.peterfriese.de/using-nspredicate-to-filter-data/"/>
-    <updated>2011-04-23T00:15:36+02:00</updated>
+    <updated>2011-04-22T23:15:36+01:00</updated>
     <id>http://www.peterfriese.de/using-nspredicate-to-filter-data</id>
     <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you're applying a filter to the huge set of data we call the internet.</p>
 

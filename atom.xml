@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://www.peterfriese.de/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-19T23:48:59+02:00</updated>
+  <updated>2013-08-23T17:53:03+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -14,9 +14,43 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Annotated Links for Week 34]]></title>
+    <link href="http://www.peterfriese.de/annotated-links-for-week-34/"/>
+    <updated>2013-08-23T16:39:00+01:00</updated>
+    <id>http://www.peterfriese.de/annotated-links-for-week-34</id>
+    <content type="html"><![CDATA[<p>This week we will have a look at some tools that will help you to make your screenshots shine, a fun approach at looking at your coding behaviours, a collection of views for iOS and Android developers and&#8230; beer!</p>
+
+<!-- more -->
+
+
+<h3><a href="http://mockuphone.com/">MockUPhone</a></h3>
+
+<p>Brought to you by <a href="http://filesq.com">FileSquare</a>, this little web site allows you to create good looking product images of your app inside a real phone frame. As of now, MockUPhone has mockup frames for most (but not all) iOS devices and some Android and Windows Phone devices. Basically, you just upload one or screenshots of your app and - after some crunching - you can download a zip archive that contains your screenshots inside the selected phone cases. You need to provide an e-mail address to download the archive.</p>
+
+<p>Currently, the site is a bit sluggish - maybe due to heavy load. Also, there is very little room for tweaking how the result looks like. Check out <a href="http://shapeitapp.com">ShapeItApp</a> by <a href="http://heikobehrens.net">Heiko Behrens</a> for a similar service that is more flexible and let&#8217;s you tweak the result before you download it. Also, it would be impossible to talk about mock-up services and not mention <a href="http://placeit.breezi.com">PlaceIt</a> by <a href="http://breezi.com">Breezi</a></p>
+
+<h3><a href="http://osrc.dfm.io">The Open Source Report Card</a></h3>
+
+<p>Some <a href="http://www.github.com">Github</a> related data mining. Enter your Github user name and the site tries to come up with some smart statements about your coding behaviour. <a href="http://dan.iel.fm">Dan</a> uses some Python scripts to extract data from <a href="http://www.githubarchive.org">the Github Archive</a>. The code is <a href="https://github.com/dfm/osrc">available on Github</a> for your enjoyment.</p>
+
+<h3><a href="http://www.androidviews.net">AndroidViews</a></h3>
+
+<p>iOS developers are a blessed bunch of people - not only do we have a <a href="http://cocoapods.org">decent dependency management tool</a>, but also do we have <a href="https://www.cocoacontrols.com">CocoaControls</a>, a never-ending inspiration for new controls, libraries and apps (ever wondered which components your favorite app uses? Head over to the <a href="https://www.cocoacontrols.com/apps">apps section</a>).</p>
+
+<p>For a long time, Android developers didn&#8217;t have outlets like these. Well, fear no longer, <a href="http://nadavfima.com">Nadav Fima</a> has you covered. <a href="http://www.androidviews.net">AndroidViews</a> offers a nicely organized view into the universe of <a href="http://www.androidviews.net/category/custom-views/holo-style/">views</a>, <a href="http://www.androidviews.net/category/animations/">animations</a>, <a href="http://www.androidviews.net/category/libraries/">libraries</a>, <a href="http://www.androidviews.net/category/dev-tools/">development tools</a> and other <a href="http://www.androidviews.net/category/resources/">resources</a>. If you have a component that is not yet listed, <a href="http://www.androidviews.net/contact-us/">drop him a mail</a>.</p>
+
+<h3><a href="https://medium.com/what-i-learned-today/f7fcb3b786b1">Coffee vs. beer: which drink makes you more creative?</a></h3>
+
+<p>Don&#8217;t just drink coffee. Also have a glas of wine every now and then to spark your creativity.</p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Annotated Links for Week 33]]></title>
     <link href="http://www.peterfriese.de/annotated-links-for-week-33/"/>
-    <updated>2013-08-19T09:30:00+02:00</updated>
+    <updated>2013-08-19T09:30:00+01:00</updated>
     <id>http://www.peterfriese.de/annotated-links-for-week-33</id>
     <content type="html"><![CDATA[<p>This week&#8217;s annotated links are more coding- and code-related than last week. We&#8217;ll have a look at some data mapping frameworks for Objective-C, a way to set up your projects in a faster, more reproducible way and - as iOS 7 is around the corner, a feature comparison of iOS 7 on the various devices out there.</p>
 
@@ -61,7 +95,7 @@
   <entry>
     <title type="html"><![CDATA[Annotated Links for Week 32]]></title>
     <link href="http://www.peterfriese.de/annotated-links-for-week-32/"/>
-    <updated>2013-08-10T01:33:00+02:00</updated>
+    <updated>2013-08-10T01:33:00+01:00</updated>
     <id>http://www.peterfriese.de/annotated-links-for-week-32</id>
     <content type="html"><![CDATA[<p>This week, we&#8217;ll have a look at Apple&#8217;s new system status page and another, more serious issue in a rather well-known computer-driven system. Other topics in this post: a very high-level view on programming (and why we failed so far) as well as a very detailed look at programming (and what you can do to excel at it). Finally, some spying.</p>
 
@@ -97,7 +131,7 @@
   <entry>
     <title type="html"><![CDATA[Hacked.io 2013]]></title>
     <link href="http://www.peterfriese.de/hacked-dot-io-2013/"/>
-    <updated>2013-08-03T00:18:00+02:00</updated>
+    <updated>2013-08-03T00:18:00+01:00</updated>
     <id>http://www.peterfriese.de/hacked-dot-io-2013</id>
     <content type="html"><![CDATA[<p>On the weekend of July 21st, I had the chance to attend the Hacked.io hackathon. The dimensions of this event matched the size of London: 500 attendees of all age groups (there were entire teams made up of kids) gathered in the O2 arena (more precisely: in the IndigO2) poised to spend a sleepless night full of hacking and working on creative projects. Those who didn&#8217;t already have an idea for project could let themselves be inspired by the numerous challenges set up by the event sponsors.</p>
 
@@ -178,7 +212,7 @@
   <entry>
     <title type="html"><![CDATA[Do Androids Dream of Electric Sheep?]]></title>
     <link href="http://www.peterfriese.de/do-androids-dream-of-electric-sheep/"/>
-    <updated>2013-03-22T01:33:48+01:00</updated>
+    <updated>2013-03-22T00:33:48+00:00</updated>
     <id>http://www.peterfriese.de/do-androids-dream-of-electric-sheep</id>
     <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
 
@@ -221,7 +255,7 @@
   <entry>
     <title type="html"><![CDATA[Writing Xtext Scope Providers with Xtend]]></title>
     <link href="http://www.peterfriese.de/writing-xtext-scope-providers-with-xtend/"/>
-    <updated>2012-08-15T00:04:55+02:00</updated>
+    <updated>2012-08-14T23:04:55+01:00</updated>
     <id>http://www.peterfriese.de/writing-xtext-scope-providers-with-xtend</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is an <a href="http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html">important concept</a> in the design of programming languages. In Xtext, scoping is used <a href="http://zarnekow.blogspot.de/2009/01/xtext-corner-2-linking-and-scoping.html">to drive two major parts</a> of your DSL: <a href="http://www.eclipse.org/Xtext/documentation.html#linking">linking</a> and <a href="http://www.eclipse.org/Xtext/documentation.html#contentAssist">content assist</a>. While Xtext applies the <a href="http://en.wikiquote.org/wiki/Alan_Kay">80/20 rule</a> very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you&#8217;ll have to roll up your sleeves and write your own scope provider.</p>
 
@@ -257,7 +291,7 @@
   <entry>
     <title type="html"><![CDATA[Using CocoaPods to manage your dependencies]]></title>
     <link href="http://www.peterfriese.de/using-cocoapods-to-manage-your-dependencies/"/>
-    <updated>2012-06-30T00:42:22+02:00</updated>
+    <updated>2012-06-29T23:42:22+01:00</updated>
     <id>http://www.peterfriese.de/using-cocoapods-to-manage-your-dependencies</id>
     <content type="html"><![CDATA[<p>One of the few things that I find really annoying about developing apps for the iOS platform is how cumbersome it is to include third party libraries in your projects. Depending on the complexity of the library (e.g. its respective dependencies and transitive dependencies) and the effort the authors put into the consumability of their library, the steps required to add a library to your project range from just copying a few files into your source folder to a whopping two-page description of drag&#8217;n&#8217;drop wizardry.</p>
 
@@ -359,7 +393,7 @@
   <entry>
     <title type="html"><![CDATA[The Accounts and Twitter Framework on iOS 5]]></title>
     <link href="http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5/"/>
-    <updated>2011-11-10T00:30:46+01:00</updated>
+    <updated>2011-11-09T23:30:46+00:00</updated>
     <id>http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5</id>
     <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&#8217;re in a news reader application you might want to let your followers know about an interesting article you just read. If you&#8217;re in a conference schedule app, you not only want to let your followers know about the awesome talks you&#8217;re listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you&#8217;re stuck in&#8230;</p>
 
@@ -587,7 +621,7 @@
   <entry>
     <title type="html"><![CDATA[Tired of Typing? Speak to Your Computer!]]></title>
     <link href="http://www.peterfriese.de/tired-of-typing-speak-to-your-computer/"/>
-    <updated>2011-06-03T18:54:39+02:00</updated>
+    <updated>2011-06-03T17:54:39+01:00</updated>
     <id>http://www.peterfriese.de/tired-of-typing-speak-to-your-computer</id>
     <content type="html"><![CDATA[<p>For some reason, humans have always dreamt of using natural language to communicate with computers. Quite a number of movies have been made that revolve around this theme, <a href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)">2001: A Space Odyssey</a> and <a href="http://en.wikipedia.org/wiki/I,_Robot_(film)">I, Robot</a> (named after the <a href="http://en.wikipedia.org/wiki/I_robot">great collection of SF stories</a> by <a href="http://en.wikipedia.org/wiki/Isaac_Asimov">Isaac Asimov</a> just being two of them.</p>
 
@@ -618,7 +652,7 @@
   <entry>
     <title type="html"><![CDATA[Code Generation 2011 - Don't miss out!]]></title>
     <link href="http://www.peterfriese.de/code-generation-2011-dont-miss-out/"/>
-    <updated>2011-05-21T12:09:11+02:00</updated>
+    <updated>2011-05-21T11:09:11+01:00</updated>
     <id>http://www.peterfriese.de/code-generation-2011-dont-miss-out</id>
     <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven&#8217;t booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
 
@@ -660,7 +694,7 @@
   <entry>
     <title type="html"><![CDATA[Using NSPredicate to Filter Data]]></title>
     <link href="http://www.peterfriese.de/using-nspredicate-to-filter-data/"/>
-    <updated>2011-04-23T00:15:36+02:00</updated>
+    <updated>2011-04-22T23:15:36+01:00</updated>
     <id>http://www.peterfriese.de/using-nspredicate-to-filter-data</id>
     <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you&#8217;re applying a filter to the huge set of data we call the internet.</p>
 
@@ -782,7 +816,7 @@
   <entry>
     <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
     <link href="http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
-    <updated>2011-02-25T23:15:57+01:00</updated>
+    <updated>2011-02-25T22:15:57+00:00</updated>
     <id>http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
     <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
 
@@ -817,7 +851,7 @@
   <entry>
     <title type="html"><![CDATA[Appropriate Use of MapKit]]></title>
     <link href="http://www.peterfriese.de/appropriate-use-of-mapkit/"/>
-    <updated>2011-02-16T11:48:38+01:00</updated>
+    <updated>2011-02-16T10:48:38+00:00</updated>
     <id>http://www.peterfriese.de/appropriate-use-of-mapkit</id>
     <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&#8217;re violating Google&#8217;s terms of service, I was wondering what in particular was wrong.</p>
 
@@ -895,7 +929,7 @@
   <entry>
     <title type="html"><![CDATA[Three reasons why I think the HP TouchPad will rock the tablet market]]></title>
     <link href="http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
-    <updated>2011-02-10T11:38:26+01:00</updated>
+    <updated>2011-02-10T10:38:26+00:00</updated>
     <id>http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
     <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn&#8217;t the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
 
@@ -922,7 +956,7 @@
   <entry>
     <title type="html"><![CDATA[What's your number?]]></title>
     <link href="http://www.peterfriese.de/whats-your-number/"/>
-    <updated>2011-01-27T02:00:47+01:00</updated>
+    <updated>2011-01-27T01:00:47+00:00</updated>
     <id>http://www.peterfriese.de/whats-your-number</id>
     <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you&#8217;ve been asking yourself &#8220;what&#8217;s this number, and where do I find it?&#8221;, read on!</p>
 
@@ -957,7 +991,7 @@
   <entry>
     <title type="html"><![CDATA[Your Windows IDE sucks? Replace it with Your Favorite Editor on the Mac!]]></title>
     <link href="http://www.peterfriese.de/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/"/>
-    <updated>2011-01-05T01:11:11+01:00</updated>
+    <updated>2011-01-05T00:11:11+00:00</updated>
     <id>http://www.peterfriese.de/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac</id>
     <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.</p>
 
@@ -989,7 +1023,7 @@
   <entry>
     <title type="html"><![CDATA[How to Use the Gyroscope of Your iPhone in a Mobile Web App]]></title>
     <link href="http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
-    <updated>2010-11-25T13:00:43+01:00</updated>
+    <updated>2010-11-25T12:00:43+00:00</updated>
     <id>http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
     <content type="html"><![CDATA[<p>This week&#8217;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they&#8217;re neither directly visible in the iOS UI nor are they mentioned in Apple&#8217;s official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone&#8217;s gyroscope. Read on to see it in action and learn how to use it.</p>
 
@@ -1065,7 +1099,7 @@
   <entry>
     <title type="html"><![CDATA[Eclipse DemoCamp Hamburg November 2010]]></title>
     <link href="http://www.peterfriese.de/eclipse-democamp-hamburg-november-2010/"/>
-    <updated>2010-11-15T08:28:17+01:00</updated>
+    <updated>2010-11-15T07:28:17+00:00</updated>
     <id>http://www.peterfriese.de/eclipse-democamp-hamburg-november-2010</id>
     <content type="html"><![CDATA[<p>Last Friday was a happy day for Java developers in Hamburg: not only did Apple and Oracle announce their plan to continue development of Java on the Mac OSX platform, but we also had the pleasure to host this fall&#8217;s instance of Eclipse DemoCamp Hamburg in a bookstore!</p>
 
@@ -1111,7 +1145,7 @@
   <entry>
     <title type="html"><![CDATA[[Updated] Use your iPhone, Android, or BlackBerry to build Your Eclipse Summit Europe 2010]]></title>
     <link href="http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/"/>
-    <updated>2010-11-01T12:45:02+01:00</updated>
+    <updated>2010-11-01T11:45:02+00:00</updated>
     <id>http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010</id>
     <content type="html"><![CDATA[<p>As I&#8217;m writing this, Eclipse Summit Europe 2010 is merely hours away and everyone is getting excited to get there and meet Eclipse family.</p>
 
@@ -1165,7 +1199,7 @@
   <entry>
     <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
     <link href="http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again/"/>
-    <updated>2010-09-19T22:15:30+02:00</updated>
+    <updated>2010-09-19T21:15:30+01:00</updated>
     <id>http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again</id>
     <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
 
@@ -1214,56 +1248,6 @@
 <p>It all boils down to being more productive and ensuring better sustainability. Using the right tool for the job helps you to achieve a faster time to market. If you&#8217;re able to use the same language on the frontend and the backend, this will help you to secure your investment in this technology.</p>
 
 <p>Please note that I&#8217;m not saying you should by all means write your frontend and your backend using the same technology and language. The first and foremost question you need to answer is, &#8220;what&#8217;s the right tool for this job&#8221;. Being able to make a real choice will help you to give a better answer to this question.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Why Your Next App Should be Open Sourced]]></title>
-    <link href="http://www.peterfriese.de/why-your-next-app-should-be-open-sourced/"/>
-    <updated>2010-09-06T15:15:17+02:00</updated>
-    <id>http://www.peterfriese.de/why-your-next-app-should-be-open-sourced</id>
-    <content type="html"><![CDATA[<p>I&#8217;ve been doing all sorts of software development over the past few years, from closed-source in-house software for companies to closed-source product development to open-source frameworks and tools development to closed-source app development.</p>
-
-<p>Looking back on my experience with the various drawbacks and benefits of each of those development modes, I hereby recommend your next app be open sourced.</p>
-
-<!--more-->
-
-
-<p>Here is why:</p>
-
-<h3>Reasons pro Open Source</h3>
-
-<p>We all heard it before, &#8220;Open Source will make the world a better place&#8221; - but why? Well, let me give you a few reasons:</p>
-
-<p><strong>First</strong>, by open sourcing your code, your code will become better. If everybody can see what your code looks like, you will do your best to make sure it&#8217;s clean code. Jeff LaMarche calls this &#8221;<a href="http://iphonedevelopment.blogspot.com/2010/06/code-as-if.html">coding as if everybody is watching</a>&#8221;. Clean code has less errors than quick-and-dirty code, so that&#8217;s a good thing.</p>
-
-<p><strong>Enabling others to contribute</strong> will further improve your code. Should you decide to invite other developers to your project, you&#8217;ll want to add some documentation to make it easier for them to get a jump start. Writing documentation will force you to think through your code and its overall structure. You might find you want to perform some refactorings before you actually let other developers work on your code. This will improve the quality of your code even more.</p>
-
-<p><strong>Enabling others to participate will make your app more attractive</strong>. Didn&#8217;t you experience this before: the app you just downloaded is almost perfect - if it only had this one missing feature. For example, I really love <a href="http://www.tweetdeck.com/iphone/">TweetDeck for iPhone</a>, but I&#8217;m dearly missing an <a href="http://www.instapaper.com/">Instapaper</a> integration. If TweetDeck was open source, I would&#8217;ve added Instapaper integration to the code and submitted a patch to the creators of TweetDeck for the benefit of the entire user base. But unfortunately, TweetDeck is not open source - what a pity.</p>
-
-<p>By <strong>building a team of skilled people</strong>, you&#8217;ll be able to deliver more features in a shorter amount of time than you can ever hope to achieve if you work alone. Successful open source projects are made up of a bunch of gifted individuals with diverse skills. This is even more important for mobile applications, as you not only have to develop the code that makes your app work. You also have to create a great looking UI, so might need a great designer. If you want to promote your app on a website, you might also consider teaming up with a web designer.</p>
-
-<p><strong>Speaking of contributions</strong>, you might be a bit hesitant to let other people work on your code. That&#8217;s alright. Usually, contributors do not get commit rights right away. Instead, you ask them to contribute to the project by submitting patches via your bug tracker (you do use a bug tracker, don&#8217;t you?). This enables you to review their code before actually committing it to the code base. If you&#8217;re not satisfied, let them know (in a friendly way) what you would like them to improve. If a contributor delivers a number of great patches in a row, you can consider to promote him/her to be a committer.</p>
-
-<h3>Reasons against Open Source</h3>
-
-<p>There are a few reasons why your next app maybe should not be open sourced:</p>
-
-<p><strong>Others might steal your ideas!</strong> I keep hearing this argument over and over again. Yes, if you open source your app, other developers might check out the code, re-brand it and sell it on the app store as their invention. Well, they can steal your ideas anyway - just by looking at your app and building an app that looks and feels the same. Granted, re-writing an app consumes considerably more time than re-branding an existing code base. But I doubt anybody dares to submit a blatant 1:1 copy of an app to the app store. At the very least, you should choose a suitable license for your code. There are a number of great open source licenses you might consider check out the <a href="http://www.opensource.org/licenses">OSI website for a list of open source licenses</a>. <a href="http://blog.robrhyne.com/">Rob Rhyne</a> even had his <a href="http://jdrhyne.tumblr.com/">brother</a> (who is a lawyer) create a <a href="http://github.com/capttaco/Briefs/blob/master/LICENSE">new app-store compatible license</a> for his app, <a href="http://giveabrief.com/">Briefs</a>. Read his blog post &#8221;<a href="http://blog.robrhyne.com/post/1043407467/selling-open-source">Selling Open Source</a>&#8221; for the rationale behind this step.</p>
-
-<p>Even if other people don&#8217;t copy your entire app, <strong>they still might copy some cool UI tricks</strong> you do. Maybe you&#8217;ve gone to great lengths to create some really cool frameworks that make your life easier or make your app behave in a very cool and new way. You might not want other apps to look as cool as your app does. Well, it&#8217;s your right. In my opinion, the app store contains way too many badly designed apps. You would do the world a favour by releasing your great library to the public. Really.</p>
-
-<p>And finally, you might not be able to open source your next app because your client or the <strong>company you&#8217;re working for is against open source</strong>. Maybe they have good reasons for it, maybe they just don&#8217;t know enough about open source. If the latter is the case, let them read this blog post or drop me a line - I&#8217;m available for consulting.</p>
-
-<h3>Business Models for Open Source Apps</h3>
-
-<p>You might have a different point of view (and if you do, please leave a comment - I&#8217;m eager to hear your thoughts), but in my opinion open source is not a threat but a chance for your app. If we take this for granted, the question remains, how can you make money with an open sourced app? Here are some suggestions:</p>
-
-<p><strong>Sell it on the App Store</strong>. Yes, this might sound a little strange after all my raving about open source. If something is open source, how can you sell it? Well, it turns out selling apps on the App Store is a great idea, especially for open source apps. The app store is the only way how your clients can get hold of your application. Of course - they might check out your code, compile it and upload it to their iPhone. But to do so, they&#8217;d need to be registered iPhone developers, meaning they&#8217;d need to buy an iPhone developer certificate. Don&#8217;t you think it is cheaper to just buy your app than shelling out 99 USD for the developer certificate?</p>
-
-<p>If you&#8217;re developing a library or framework, you might consider getting <strong>funding on <a href="http://www.kickstarter.com/">Kickstarter</a></strong>. Kickstarter is a great way to get funding for your project: you define the deliverable and how much funds you want to raise and people can back your project by pledging a variable amount of money. This way, <a href="http://www.penandthink.com/">John Wain</a> of <a href="http://glyphish.com/">Glyphish</a> fame <a href="http://www.kickstarter.com/projects/jpwain/great-icons-for-iphone-4-apps">managed to raise more than 27.000 USD</a>  for developing an iPhone 4 compatible version of his great Glyphish icon set. His original goal was to raise 2.000 USD, by the way.</p>
-
-<p>I hope I could encourage you to try open source as a strategy for your next application or framework. If I did, let me know! Chances are I might want to submit a patch to add that tiny little feature I think your app is lacking ;-)</p>
 ]]></content>
   </entry>
   

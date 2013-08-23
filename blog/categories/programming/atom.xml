@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-19T23:48:59+02:00</updated>
+  <updated>2013-08-23T17:53:03+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -14,9 +14,43 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Annotated Links for Week 34]]></title>
+    <link href="http://www.peterfriese.de/annotated-links-for-week-34/"/>
+    <updated>2013-08-23T16:39:00+01:00</updated>
+    <id>http://www.peterfriese.de/annotated-links-for-week-34</id>
+    <content type="html"><![CDATA[<p>This week we will have a look at some tools that will help you to make your screenshots shine, a fun approach at looking at your coding behaviours, a collection of views for iOS and Android developers and... beer!</p>
+
+<!-- more -->
+
+
+<h3><a href="http://mockuphone.com/">MockUPhone</a></h3>
+
+<p>Brought to you by <a href="http://filesq.com">FileSquare</a>, this little web site allows you to create good looking product images of your app inside a real phone frame. As of now, MockUPhone has mockup frames for most (but not all) iOS devices and some Android and Windows Phone devices. Basically, you just upload one or screenshots of your app and - after some crunching - you can download a zip archive that contains your screenshots inside the selected phone cases. You need to provide an e-mail address to download the archive.</p>
+
+<p>Currently, the site is a bit sluggish - maybe due to heavy load. Also, there is very little room for tweaking how the result looks like. Check out <a href="http://shapeitapp.com">ShapeItApp</a> by <a href="http://heikobehrens.net">Heiko Behrens</a> for a similar service that is more flexible and let's you tweak the result before you download it. Also, it would be impossible to talk about mock-up services and not mention <a href="http://placeit.breezi.com">PlaceIt</a> by <a href="http://breezi.com">Breezi</a></p>
+
+<h3><a href="http://osrc.dfm.io">The Open Source Report Card</a></h3>
+
+<p>Some <a href="http://www.github.com">Github</a> related data mining. Enter your Github user name and the site tries to come up with some smart statements about your coding behaviour. <a href="http://dan.iel.fm">Dan</a> uses some Python scripts to extract data from <a href="http://www.githubarchive.org">the Github Archive</a>. The code is <a href="https://github.com/dfm/osrc">available on Github</a> for your enjoyment.</p>
+
+<h3><a href="http://www.androidviews.net">AndroidViews</a></h3>
+
+<p>iOS developers are a blessed bunch of people - not only do we have a <a href="http://cocoapods.org">decent dependency management tool</a>, but also do we have <a href="https://www.cocoacontrols.com">CocoaControls</a>, a never-ending inspiration for new controls, libraries and apps (ever wondered which components your favorite app uses? Head over to the <a href="https://www.cocoacontrols.com/apps">apps section</a>).</p>
+
+<p>For a long time, Android developers didn't have outlets like these. Well, fear no longer, <a href="http://nadavfima.com">Nadav Fima</a> has you covered. <a href="http://www.androidviews.net">AndroidViews</a> offers a nicely organized view into the universe of <a href="http://www.androidviews.net/category/custom-views/holo-style/">views</a>, <a href="http://www.androidviews.net/category/animations/">animations</a>, <a href="http://www.androidviews.net/category/libraries/">libraries</a>, <a href="http://www.androidviews.net/category/dev-tools/">development tools</a> and other <a href="http://www.androidviews.net/category/resources/">resources</a>. If you have a component that is not yet listed, <a href="http://www.androidviews.net/contact-us/">drop him a mail</a>.</p>
+
+<h3><a href="https://medium.com/what-i-learned-today/f7fcb3b786b1">Coffee vs. beer: which drink makes you more creative?</a></h3>
+
+<p>Don't just drink coffee. Also have a glas of wine every now and then to spark your creativity.</p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Annotated Links for Week 33]]></title>
     <link href="http://www.peterfriese.de/annotated-links-for-week-33/"/>
-    <updated>2013-08-19T09:30:00+02:00</updated>
+    <updated>2013-08-19T09:30:00+01:00</updated>
     <id>http://www.peterfriese.de/annotated-links-for-week-33</id>
     <content type="html"><![CDATA[<p>This week's annotated links are more coding- and code-related than last week. We'll have a look at some data mapping frameworks for Objective-C, a way to set up your projects in a faster, more reproducible way and - as iOS 7 is around the corner, a feature comparison of iOS 7 on the various devices out there.</p>
 
@@ -60,7 +94,7 @@
   <entry>
     <title type="html"><![CDATA[Annotated Links for Week 32]]></title>
     <link href="http://www.peterfriese.de/annotated-links-for-week-32/"/>
-    <updated>2013-08-10T01:33:00+02:00</updated>
+    <updated>2013-08-10T01:33:00+01:00</updated>
     <id>http://www.peterfriese.de/annotated-links-for-week-32</id>
     <content type="html"><![CDATA[<p>This week, we'll have a look at Apple's new system status page and another, more serious issue in a rather well-known computer-driven system. Other topics in this post: a very high-level view on programming (and why we failed so far) as well as a very detailed look at programming (and what you can do to excel at it). Finally, some spying.</p>
 
