@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="In case you needed to format a batch of code using a command line utility, you probably went for Jalopy or JIndent. Thanks to Ben Konrath of Red Hat &hellip;">
+  <meta name="description" content="In an article in the German Eclipse Magazine, Stefan Reichert and Dirk Rademann write about Wizards and Dialogs. Amongst other things, they briefly &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,54 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/the-case-for-preferenceandpropertiespage/">The Case for PreferenceAndPropertiesPage</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-06-11T09:21:11+01:00" pubdate data-updated="true">Jun 11<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>In an article in the German <a href="http://eclipse-magazin.de/">Eclipse Magazine</a>, <a href="https://www.xing.com/profile/Stefan_Reichert5">Stefan Reichert</a> and <a href="https://www.xing.com/profile/Dirk_Rademann">Dirk Rademann</a> write about Wizards and Dialogs. Amongst other things, they briefly touch the topic of preference pages. This reminded me of a pet bug of mine: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=173414">https://bugs.eclipse.org/bugs/show_bug.cgi?id=173414</a> (Make PropertyAndPreferencePage available to other plug-ins (i.e. make it API))). You might be aware that when dealing with preferences and properties, you quickly end up writing duplicate code just because you want to support a number of settings both on a global level (aka preferences) and at the same time a project specific level (aka properties).</p>
+
+<p>The JDT team has come up with a very handy class called <code>PropertyAndPreferencePage</code> which does just what you might guess plus some very nice additional things:
+First and foremost you use the same code for preference pages and property pages. This alone is a big benefit since it relieves you from the tedious and error prone task to re-implement things. Additionally, you get some additional controls in the headline: if the page is in property mode, it will add a checkbox that allows you to enabled project specific settings. Checking this box will automatically enable the client area of the property page. Unchecking the box will disable the client area consequently, but will enable the second control in the headline: a hyperlink
+labelled <em>Configure Workspace settings</em>. Clicking this hyperlink will open the workspace preference dialog with a filter so that only your page will be visible - in preference mode!</p>
+
+<p>If you open your page in the workspace preference dialog, you&#8217;ll be able to configure settings on a global level. However, if you would like to quickly jump over in order to configure something special for just one or two projects, you can easily do so by using the <em>Configure Project Specific Settings&#8230;</em> hyperlink. Since Eclipse cannot guess which project you might want to configure, it will present you with a project selection dialog before it will open your page in the properties dialog for the project you just selected.</p>
+
+<p>As you can see, <code>PropertyAndPreferencePage</code> can save the day. If you have come to the conclusion that this nifty class is worthwhile to be included in the plattform, then do yourself a favour and vote for this bug: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=173414">https://bugs.eclipse.org/bugs/show_bug.cgi?id=173414</a>.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -529,46 +577,6 @@ What we see here is a typical situation: you have been working on a new feature 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/the-free-software-sogn/">The Free Software Song</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2006-08-23T00:37:42+01:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2006</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>Looking around on <a href="http://www.youtube.com">youtube</a> for &#8220;software&#8221;, I found this little gem:</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/11/">&larr; Older</a>
@@ -591,6 +599,10 @@ What we see here is a typical situation: you have been working on a new feature 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-issue-4/">Annotated Links, Issue 4</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-for-week-34/">Annotated Links for Week 34</a>
       </li>
     
@@ -604,10 +616,6 @@ What we see here is a typical situation: you have been working on a new feature 
     
       <li class="post">
         <a href="/hacked-dot-io-2013/">Hacked.io 2013</a>
-      </li>
-    
-      <li class="post">
-        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
       </li>
     
   </ul>

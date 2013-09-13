@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Links | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/links/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-23T17:53:03+01:00</updated>
+  <updated>2013-09-13T08:47:01+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Annotated Links, Issue 4]]></title>
+    <link href="http://www.peterfriese.de/annotated-links-issue-4/"/>
+    <updated>2013-09-13T08:11:00+01:00</updated>
+    <id>http://www.peterfriese.de/annotated-links-issue-4</id>
+    <content type="html"><![CDATA[<p>This week, I've got some great tips for traveling and finding out what's installed on your Mac. We'll also look at mobile testing, Git workflows and - cocktails!</p>
+
+<!-- more -->
+
+
+<h3><a href="http://wikitravel.org/">Wikitravel</a></h3>
+
+<p>Great source of information on everything travel-related. Whether you are considering <a href="http://wikitravel.org/en/First_and_business_class_travel">traveling in business class rather than economy</a>, need background information about <a href="http://wikitravel.org/en/Visa">visas</a> or the lowdown about cities such as <a href="http://wikitravel.org/en/London">London</a>, <a href="http://wikitravel.org/en/Berlin">Berlin</a>, <a href="http://wikitravel.org/en/Berlin">Hamburg</a>, or <a href="http://wikitravel.org/en/New_York">New York</a>, WikiTravel has you covered. I found the information on the cities to be largely up-to-date and of great value (at least for the cities I know, it seems to very accurate), so it's worth checking out before your next travel.</p>
+
+<h3><a href="http://apple.stackexchange.com/questions/71232/how-do-i-find-what-packages-ive-installed-via-terminal">Help - How do I find out what I installed on my Mac?</a></h3>
+
+<p>The Mac doesn't have a central repository that keeps track of everything you install. If you install software via the Mac App Store, it will be listed in the Mac App Store App (what a word!), but at least if you are a developer (and if you are a regular reader of this blog I assume you are), you'll install software via HomeBrew, the Mac installer and several other means. Now, how did you nstall that particular version of Gradle? Was it HomeBrew? Or did it come as an installer package? Or did you maybe just download and extract a zip file? This answer on Stack Exchange lists several ways to find it out.</p>
+
+<h3><a href="https://www.facebook.com/media/set/?set=a.557107127670270.1073741828.100686616645659&amp;type=3">Nokia's Hardware Testing Lab</a></h3>
+
+<p>A nice collection of pictures from Nokia's device testing lab. I'm tempted to call this the "Device Torture Chamber". If you're not so much interested in testing devic hardware, but rather software, you should have a look at these, too:
+* <a href="http://codeascraft.com/2013/08/09/mobile-device-lab/">Mobile Test Lab by Etsy</a>
+* <a href="http://blog.zuehlke.com/app-testing-going-physical-entwicklung-eines-mobile-teststands/">Mobile Test Rig by Zühlke</a></p>
+
+<h3><a href="https://www.atlassian.com/git/workflows">Git Workflows</a></h3>
+
+<p>If you use Git and haven't heard about <a href="http://nvie.com/posts/a-successful-git-branching-model/">Git Flow</a>, you must have been living under a rock. Atlassian, makers of the excellent Git / Hg client <a href="http://www.sourcetreeapp.com">SourceTree</a>, have been so nice to put together an overview of all the various Git workflows, such as the <a href="https://www.atlassian.com/git/workflows#!workflow-centralized">Centralized Workflow</a>, the <a href="https://www.atlassian.com/git/workflows#!workflow-feature-branch">Feature Branch Workflow</a>, the <a href="https://www.atlassian.com/git/workflows#!workflow-forking">Forking Workflow</a> and the <a href="https://www.atlassian.com/git/workflows#!workflow-gitflow">Gitflow Workflow</a>. If you're looking for a good overview or a refresher, have a look.</p>
+
+<h3><a href="https://github.com/the-teacher/cocktails_for_programmers/blob/master/cocktails_for_programers.md">Cocktails for Programmers</a></h3>
+
+<p>I haven't tried any of these, but <a href="https://github.com/the-teacher/cocktails_for_programmers/blob/master/cocktails_for_programers.md#memory-leak">Memory Leak</a> looks nice. If you missed <a href="http://en.wikipedia.org/wiki/Programmers'_Day">Programmers' Day</a> (it's on the 256th day of the year), you might want to make a note in your diary for 2014. Programmers' day will be on <a href="http://www.timeanddate.com/holidays/world/international-programmers-day">Saturday, September 13, 2014</a>.</p>
+
+<p>That's it for this week - enjoy the weekend!</p>
+
+<p><a href="http://www.flickr.com/photos/h20tubig/9376203024/">Chains image</a> by <a href="http://www.flickr.com/photos/h20tubig/">Haya Bernitez</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Annotated Links for Week 34]]></title>
@@ -44,6 +82,8 @@
 <p>Don't just drink coffee. Also have a glas of wine every now and then to spark your creativity.</p>
 
 <p>Enjoy!</p>
+
+<p><a href="http://www.flickr.com/photos/h20tubig/9376203024/">Chains image</a> by <a href="http://www.flickr.com/photos/h20tubig/">Haya Bernitez</a></p>
 ]]></content>
   </entry>
   

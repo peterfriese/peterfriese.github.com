@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Most of you know that I am working as a committer for various Eclipse-related projects (such as Xtext, Xpand and the Modeling Workflow Engine). You &hellip;">
+  <meta name="description" content="Last week I showed you how to use Teneo, EMF and Hibernate to store your data in a database. This week, we&#8217;re going to have a look at how to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,133 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/using-teneo-emf-and-hibernate-to-update-and-query-your-data/">Using Teneo, EMF and Hibernate to Update and Query Your Data</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-14T22:55:49+00:00" pubdate data-updated="true">Mar 14<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p><a href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/">Last week I showed you</a> how to use Teneo, EMF and Hibernate to store your data in a database.</p>
+
+<p>This week, we&#8217;re going to have a look at how to update the data, add more records and how to query the database for information using HQL, the Hibernate Query Language.</p>
+
+<p>If you haven&#8217;t done so, you might consider <a href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/">taking last week&#8217;s tutorial</a> in order to get your environment set up and understand the basic concepts. If you&#8217;re lazy, you can as well download the code of the tutorial to get started more quickly. It is available [drain file 16 url here].</p>
+
+<p>As it turns out, in order to change anything in the library database, we must first fetch the to-be-changed data, so we need to have a look at querying first.</p>
+
+<p><strong>Retrieving and updating data</strong>
+Let&#8217;s assume we&#8217;d want to the update the number of pages in a book, because the new edition has an additional chapter.</p>
+
+<ol>
+<li><p>So, first of all we need to open a session and begin a transaction:</p>
+
+<p>   {</p>
+
+<pre><code>   Session session = sessionFactory.openSession();
+   session.beginTransaction();
+</code></pre></li>
+<li><p>Next, let&#8217;s create an HQL query. We want to find any books that are written by an author by the name &#8220;A. K. Dewdney&#8221; that contain &#8220;Omnibus&#8221; in their title.</p>
+
+<pre><code>   Query query = session.createQuery(
+       "SELECT book from " +
+       "    Book book, " +
+       "    Writer writer " +
+       "WHERE " +
+       "    book.title like '%Turing Omnibus%' " +
+       "AND " +
+       "    writer.name = 'A. K. Dewdney'");
+</code></pre></li>
+<li><p>We can now execute the query and display the results:</p>
+
+<pre><code>   List&lt;book&gt; books = query.list();
+   Book book = books.get(0);
+   System.out.println(book.getTitle());
+</code></pre></li>
+<li><p>Updating the page count is pretty obvious:</p>
+
+<pre><code>   book.setPages(520);
+</code></pre></li>
+<li><p>Finally, don&#8217;t forget to commit the transaction and close the session:</p>
+
+<pre><code>   session.getTransaction().commit();
+   session.close();
+</code></pre>
+
+<p>   }</p></li>
+</ol>
+
+
+<p><strong>Adding data</strong>
+Let&#8217;s now assume we want to add more books (and authors) to the library.</p>
+
+<ol>
+<li><p>By now, you should be pretty familiar with the pattern of opening a new session:</p>
+
+<p>   {</p>
+
+<pre><code>   Session session = sessionFactory.openSession();
+   session.beginTransaction();
+</code></pre></li>
+<li><p>As we want to add new items to the library, we need to retrieve the library instance first of all:</p>
+
+<pre><code>   Query query = session.createQuery("from Library");
+   List&lt;library&gt; libraries = query.list();
+   Library library = libraries.get(0);
+</code></pre></li>
+<li><p>Creating a new book and its author is easy, as we just have to use the API EMF so kindly generated for us:</p>
+
+<pre><code>   Writer writer = LibraryFactory.eINSTANCE.createWriter();
+   writer.setName("J.R.R. Tolkien");
+   Book book = LibraryFactory.eINSTANCE.createBook();
+   book.setTitle("The Hobbit");
+   book.setPages(320);
+   book.setAuthor(writer);
+   book.setCategory(BookCategory.MYSTERY);     
+   library.getBooks().add(book);
+   library.getWriters().add(writer);
+</code></pre></li>
+<li><p>Finally, commit the transaction and close the session:</p>
+
+<pre><code>   session.getTransaction().commit();
+   session.close();
+</code></pre>
+
+<p>   }</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1048,77 +1175,6 @@ Everyone in the room was quite impressed with what is possible with Object Teams
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/eclipse-democamps/">Eclipse DemoCamps</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-10-27T15:13:06+00:00" pubdate data-updated="true">Oct 27<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>It&#8217;s that time of year again - demo time!</p>
-
-<p>Being run for the third time, <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008">demo camps</a> can be considered an integral part of the Eclipse calender of events. Attending a DemoCamp is great. If you haven&#8217;t yet been to any <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008">Eclipse DemoCamp</a>, let me briefly summarize why I think you should consider going to one:</p>
-
-<ul>
-<li><p>see cool technology in action (well, that&#8217;s the whole point of a <strong>Demo</strong>Camp, isn&#8217;t it)</p></li>
-<li><p>get to know Eclipse-minded people from your area</p></li>
-<li><p>have some frosty beverages and fingerfood (well, that actually depends on how the camp is organized)</p></li>
-<li><p>see some exciting buildings from inside (again, depends on how the camp is organized)</p></li>
-</ul>
-
-
-<p>Oh, did I mention that Eclipse DemoCamps are free? Thanks to the Eclipse Foundation and many sponsoring member companies, you get to enjoy all those nice things for absolutely free.</p>
-
-<p>Here are some of my favorite demos:</p>
-
-<ul>
-<li><p>Jingwen Owen Ou on <a href="http://wiki.eclipse.org/Mylyn/SOC/A_Wiki_Integrated_Task_Editor">WikiText for Mylyn</a></p></li>
-<li><p>Jochen Krause on <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008/Karlsruhe#Presenters">Eclipse 4.0</a></p></li>
-<li><p>Harald Wellmann on <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008/Hamburg/Session_Abstracts#Europe_on_a_Disk_-_Geodata_Processing_for_Car_Navigation_Systems">Geodata Processing for Car Navigation Systems</a></p></li>
-<li><p>Florian Fieber and Max Bureck on <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008/Leipzig#Presenters">From Model to Code - A Comparison of M2M and M2T Technologies in Eclipse Modeling</a></p></li>
-<li><p>Dave Savage on <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008/London#Presenters">Newton - a distributed OSGi application runtime</a></p></li>
-<li><p>Jens von Pilgrim on <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008/Berlin#Presenters">GEF goes 3D: GEF3D</a></p></li>
-<li><p>Eike Steppe on <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008/Berlin#Presenters">CDO Model Repository</a></p></li>
-<li><p>Boris Bokowski and Eric Moffatt on <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008/Ottawa#Presenters">the e4 Programming Model and e4 Modeled UI</a>, respectively</p></li>
-<li><p>Martin Taal on <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008/Nieuwegein#Presenters">EMF/Teneo</a></p></li>
-</ul>
-
-
-<p>By the way, if we were to award the price of the most indefatigable DemoCamp presenter, it&#8217;d go to Wassim Melhem. You can meet him at no less than three locations: Iasi (Romania), Warszawa (Poland), Poznan (Poland).</p>
-
-<p>Hope I could convince you to attend one of the many DemoCamps. I&#8217;ll be at the DemoCamps in <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008/Hamburg">Hamburg</a> and <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008/Leipzig">Leipzig</a>, so see you there!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -1141,6 +1197,10 @@ Everyone in the room was quite impressed with what is possible with Object Teams
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-issue-4/">Annotated Links, Issue 4</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-for-week-34/">Annotated Links for Week 34</a>
       </li>
     
@@ -1154,10 +1214,6 @@ Everyone in the room was quite impressed with what is possible with Object Teams
     
       <li class="post">
         <a href="/hacked-dot-io-2013/">Hacked.io 2013</a>
-      </li>
-    
-      <li class="post">
-        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
       </li>
     
   </ul>

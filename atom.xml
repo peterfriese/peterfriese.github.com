@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://www.peterfriese.de/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-08-23T17:53:03+01:00</updated>
+  <updated>2013-09-13T08:47:01+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Annotated Links, Issue 4]]></title>
+    <link href="http://www.peterfriese.de/annotated-links-issue-4/"/>
+    <updated>2013-09-13T08:11:00+01:00</updated>
+    <id>http://www.peterfriese.de/annotated-links-issue-4</id>
+    <content type="html"><![CDATA[<p>This week, I&#8217;ve got some great tips for traveling and finding out what&#8217;s installed on your Mac. We&#8217;ll also look at mobile testing, Git workflows and - cocktails!</p>
+
+<!-- more -->
+
+
+<h3><a href="http://wikitravel.org/">Wikitravel</a></h3>
+
+<p>Great source of information on everything travel-related. Whether you are considering <a href="http://wikitravel.org/en/First_and_business_class_travel">traveling in business class rather than economy</a>, need background information about <a href="http://wikitravel.org/en/Visa">visas</a> or the lowdown about cities such as <a href="http://wikitravel.org/en/London">London</a>, <a href="http://wikitravel.org/en/Berlin">Berlin</a>, <a href="http://wikitravel.org/en/Berlin">Hamburg</a>, or <a href="http://wikitravel.org/en/New_York">New York</a>, WikiTravel has you covered. I found the information on the cities to be largely up-to-date and of great value (at least for the cities I know, it seems to very accurate), so it&#8217;s worth checking out before your next travel.</p>
+
+<h3><a href="http://apple.stackexchange.com/questions/71232/how-do-i-find-what-packages-ive-installed-via-terminal">Help - How do I find out what I installed on my Mac?</a></h3>
+
+<p>The Mac doesn&#8217;t have a central repository that keeps track of everything you install. If you install software via the Mac App Store, it will be listed in the Mac App Store App (what a word!), but at least if you are a developer (and if you are a regular reader of this blog I assume you are), you&#8217;ll install software via HomeBrew, the Mac installer and several other means. Now, how did you nstall that particular version of Gradle? Was it HomeBrew? Or did it come as an installer package? Or did you maybe just download and extract a zip file? This answer on Stack Exchange lists several ways to find it out.</p>
+
+<h3><a href="https://www.facebook.com/media/set/?set=a.557107127670270.1073741828.100686616645659&amp;type=3">Nokia&#8217;s Hardware Testing Lab</a></h3>
+
+<p>A nice collection of pictures from Nokia&#8217;s device testing lab. I&#8217;m tempted to call this the &#8220;Device Torture Chamber&#8221;. If you&#8217;re not so much interested in testing devic hardware, but rather software, you should have a look at these, too:
+* <a href="http://codeascraft.com/2013/08/09/mobile-device-lab/">Mobile Test Lab by Etsy</a>
+* <a href="http://blog.zuehlke.com/app-testing-going-physical-entwicklung-eines-mobile-teststands/">Mobile Test Rig by Zühlke</a></p>
+
+<h3><a href="https://www.atlassian.com/git/workflows">Git Workflows</a></h3>
+
+<p>If you use Git and haven&#8217;t heard about <a href="http://nvie.com/posts/a-successful-git-branching-model/">Git Flow</a>, you must have been living under a rock. Atlassian, makers of the excellent Git / Hg client <a href="http://www.sourcetreeapp.com">SourceTree</a>, have been so nice to put together an overview of all the various Git workflows, such as the <a href="https://www.atlassian.com/git/workflows#!workflow-centralized">Centralized Workflow</a>, the <a href="https://www.atlassian.com/git/workflows#!workflow-feature-branch">Feature Branch Workflow</a>, the <a href="https://www.atlassian.com/git/workflows#!workflow-forking">Forking Workflow</a> and the <a href="https://www.atlassian.com/git/workflows#!workflow-gitflow">Gitflow Workflow</a>. If you&#8217;re looking for a good overview or a refresher, have a look.</p>
+
+<h3><a href="https://github.com/the-teacher/cocktails_for_programmers/blob/master/cocktails_for_programers.md">Cocktails for Programmers</a></h3>
+
+<p>I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/cocktails_for_programmers/blob/master/cocktails_for_programers.md#memory-leak">Memory Leak</a> looks nice. If you missed <a href="http://en.wikipedia.org/wiki/Programmers'_Day">Programmers&#8217; Day</a> (it&#8217;s on the 256th day of the year), you might want to make a note in your diary for 2014. Programmers&#8217; day will be on <a href="http://www.timeanddate.com/holidays/world/international-programmers-day">Saturday, September 13, 2014</a>.</p>
+
+<p>That&#8217;s it for this week - enjoy the weekend!</p>
+
+<p><a href="http://www.flickr.com/photos/h20tubig/9376203024/">Chains image</a> by <a href="http://www.flickr.com/photos/h20tubig/">Haya Bernitez</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Annotated Links for Week 34]]></title>
@@ -44,6 +82,8 @@
 <p>Don&#8217;t just drink coffee. Also have a glas of wine every now and then to spark your creativity.</p>
 
 <p>Enjoy!</p>
+
+<p><a href="http://www.flickr.com/photos/h20tubig/9376203024/">Chains image</a> by <a href="http://www.flickr.com/photos/h20tubig/">Haya Bernitez</a></p>
 ]]></content>
   </entry>
   
@@ -1193,61 +1233,6 @@
 <p>Also, be sure to drop by the new website for our mobile business: <a href="http://mobile.itemis.com">http://mobile.itemis.com</a> and follow us on Twitter: <a href="http://twitter.com/itemismobile">@itemismobile</a>.</p>
 
 <p>Enjoy <del>the</del> your conference!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
-    <link href="http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again/"/>
-    <updated>2010-09-19T21:15:30+01:00</updated>
-    <id>http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again</id>
-    <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
-
-<!-- more -->
-
-
-<p>In April 2010, together with the release of iOS 4, Apple changed the terms of the iOS Developer Program License in a way which basically prohibited creating software for iOS using languages other than Objective-C, C, C++ or JavaScript:</p>
-
-<blockquote><p>3.3.1 — Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs. Applications must be originally written in Objective-C, C, C++, or JavaScript as executed by the iPhone OS WebKit engine, and only code written in C, C++, and Objective-C may compile and directly link against the Documented APIs (e.g., Applications that link to Documented APIs through an intermediary translation or compatibility layer or tool are prohibited).</p></blockquote>
-
-<p>Back then, pretty much everyone was sure this update to section 3.3.1 of the license really was just one strike in <a href="http://www.apple.com/hotnews/thoughts-on-flash/">Apple&#8217;s crusade against Flash</a>. Adobe had been working on a tool called <a href="http://labs.adobe.com/technologies/packagerforiphone/">Flash Packager</a>, which allows Flash designers to cross-compile their applications for the iPhone. While this must have been bad news for Adobe (they effectively needed to write off development costs for the entire development team working on Flash Packager), it posed a serious threat to companies whose business model relied upon creating iPhone apps using tools and languages other than Xcode and Objective-C. The future for Novell&#8217;s <a href="http://monotouch.net/">Mono Touch</a>, <a href="http://www.appcelerator.com/">Appcelerator Titanium</a>, <a href="http://www.phonegap.com/">PhoneGap</a> and <a href="http://www.xmlvm.org/iphone/">XMLVM/iPhone</a> didn&#8217;t look very bright.</p>
-
-<p>No need to say there was quite an uproar and people came up with all sorts of creative interpretations of the terms stated in section 3.3.1 to avoid being rejected from the App Store.</p>
-
-<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn&#8217;t come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a>) does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
-
-<blockquote><p>3.3.1 Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs.</p></blockquote>
-
-<p>You might think that a small paragraph in a license agreement doesn&#8217;t mean that much, but I think the new section will fundamentally change the way we write software for the iPhone in the next few years. Let me explain:</p>
-
-<p>The new section 3.3.1 means you may write iOS software using any language you like. Yes, ANY language - there is no if and when. This means you will not only be able to write iOS software in Objective-C (which is a great language as soon as you come to grips with it), but you will be able to use language like Java, Scala, Haskell, Ruby, etc. Some people are <a href="http://twitter.com/mattgemmell/status/24014145904">even dreaming of using REALBasic</a> for iOS apps.</p>
-
-<p>Vendors of tools such as Mono Touch, Titanium and PhoneGap will be glad, as their business models now have a solid foundation (well, Apple may of course change the license again but I doubt they&#8217;ll ever restrict the usage of other languages again). Given the <a href="http://labs.adobe.com/technologies/packagerforiphone/">announcement on Adobe Labs</a>, I guess we will very soon see Adobe release their highly acclaimed Flash Packager for iPhone (I don&#8217;t think people will seriously use this tool to create data-driven applications, but it&#8217;s probably a great tool to develop games. If you&#8217;re a Flash designer / developer, that is).</p>
-
-<p>For the development community at large, this is great news: freedom to choose the language that fits your needs best has always been a cornerstone of successfully creating great software. People have expressed their desire to use languages such as Haskell and Ruby to build iPhone apps. Rumor has it Apple engineers have even been working on a version of MacRuby for iPhone - there you go.</p>
-
-<p>At <a href="http://www.itemis.com">itemis</a>, we&#8217;re very much into programming languages. We&#8217;re even building our own language development toolkit to support development of programming languages - <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we&#8217;ve mainly been using it to create languages for enterprise and web applications. We&#8217;re also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself - isn&#8217;t that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We&#8217;re not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we&#8217;re focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
-
-<div class="embed-video-container"><iframe src="http://player.vimeo.com/video/15018235 "></iframe></div>
-
-
-<p>If you&#8217;re interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
-
-<p>In a few years, I guess, Objective-C will be just one language among many others you can choose from if you want to build iOS applications.</p>
-
-<p>But why would you want to write iOS applications in languages other than Objective-C? There are many reasons:</p>
-
-<ul>
-<li>Use the language you feel most comfortable with. Maybe Objective-C&#8217;s square brackets look scary to you?</li>
-<li>Use the language you have most experience with. Maybe you&#8217;re a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator &#8220;because we&#8217;ve got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C&#8221;!</li>
-<li>use the language you use for developing your backend system. So you&#8217;ve got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</li>
-<li>Maybe you&#8217;re a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</li>
-</ul>
-
-
-<p>It all boils down to being more productive and ensuring better sustainability. Using the right tool for the job helps you to achieve a faster time to market. If you&#8217;re able to use the same language on the frontend and the backend, this will help you to secure your investment in this technology.</p>
-
-<p>Please note that I&#8217;m not saying you should by all means write your frontend and your backend using the same technology and language. The first and foremost question you need to answer is, &#8220;what&#8217;s the right tool for this job&#8221;. Being able to make a real choice will help you to give a better answer to this question.</p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="I recently came across some DSLs which had some defects. Let&#8217;s look at a sample I quickly hacked together with Xtext:[ ](http://www.flickr.com &hellip;">
+  <meta name="description" content="Marking the end of this years series of DemoCamps, Neil Bartlett and SkillsMatter are organizing the final DemoCamp in London on Monday 29th, 2009. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,54 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/xtext-does-london/">Xtext Does London</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-25T21:10:57+01:00" pubdate data-updated="true">Jun 25<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Marking the end of this years <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_Galileo_2009">series of DemoCamps</a>, <a href="http://twitter.com/njbartlett">Neil Bartlett</a> and <a href="http://skillsmatter.com/event/java-jee/eclipse-democamp-2009">SkillsMatter</a> are organizing the final DemoCamp in London on <strong>Monday 29th, 2009</strong>. Yes, that&#8217;s <em>next</em> monday!</p>
+
+<p>Neil was kind enough to <a href="http://twitter.com/njbartlett/statuses/2177688004">invite someone from the &#8220;modeling/oAW folk&#8221;</a>, so <a href="http://www.1160pm.net/">Heiko Behrens</a> will be giving an Xtext demo.</p>
+
+<p>If you haven&#8217;t had the chance to attend Code Generation 2009 or if you&#8217;re curious what all this DSL talk is all about, I urge you to <a href="http://skillsmatter.com/event/java-jee/eclipse-democamp-2009">sign up</a> for the DemoCamp now - it is free of charge.</p>
+
+<p>I was fortunate enough to hear <a href="http://www.twitter.com/hbehrens">Heiko</a> speak at the <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_Galileo_2009/Hamburg">DemoCamp in Hamburg</a>. Not only is Heiko a very good speaker (with a very convincing, deep voice), but also did he manage to come up with some very good examples of what a DSL is and why you should consider using them in your projects.</p>
+
+<p>By the way, if you want to play around with <a href="http://www.twitter.com/xtext">Xtext</a> before the DemoCamp, you can get a fresh copy from <a href="http://www.itemis.com">our</a> download site at <a href="http://xtext.itemis.com">http://xtext.itemis.com</a>.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1033,133 +1081,6 @@ The topics discussed were focussing on consumability and long-term sustainabilit
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/using-teneo-emf-and-hibernate-to-update-and-query-your-data/">Using Teneo, EMF and Hibernate to Update and Query Your Data</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-14T22:55:49+00:00" pubdate data-updated="true">Mar 14<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p><a href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/">Last week I showed you</a> how to use Teneo, EMF and Hibernate to store your data in a database.</p>
-
-<p>This week, we&#8217;re going to have a look at how to update the data, add more records and how to query the database for information using HQL, the Hibernate Query Language.</p>
-
-<p>If you haven&#8217;t done so, you might consider <a href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/">taking last week&#8217;s tutorial</a> in order to get your environment set up and understand the basic concepts. If you&#8217;re lazy, you can as well download the code of the tutorial to get started more quickly. It is available [drain file 16 url here].</p>
-
-<p>As it turns out, in order to change anything in the library database, we must first fetch the to-be-changed data, so we need to have a look at querying first.</p>
-
-<p><strong>Retrieving and updating data</strong>
-Let&#8217;s assume we&#8217;d want to the update the number of pages in a book, because the new edition has an additional chapter.</p>
-
-<ol>
-<li><p>So, first of all we need to open a session and begin a transaction:</p>
-
-<p>   {</p>
-
-<pre><code>   Session session = sessionFactory.openSession();
-   session.beginTransaction();
-</code></pre></li>
-<li><p>Next, let&#8217;s create an HQL query. We want to find any books that are written by an author by the name &#8220;A. K. Dewdney&#8221; that contain &#8220;Omnibus&#8221; in their title.</p>
-
-<pre><code>   Query query = session.createQuery(
-       "SELECT book from " +
-       "    Book book, " +
-       "    Writer writer " +
-       "WHERE " +
-       "    book.title like '%Turing Omnibus%' " +
-       "AND " +
-       "    writer.name = 'A. K. Dewdney'");
-</code></pre></li>
-<li><p>We can now execute the query and display the results:</p>
-
-<pre><code>   List&lt;book&gt; books = query.list();
-   Book book = books.get(0);
-   System.out.println(book.getTitle());
-</code></pre></li>
-<li><p>Updating the page count is pretty obvious:</p>
-
-<pre><code>   book.setPages(520);
-</code></pre></li>
-<li><p>Finally, don&#8217;t forget to commit the transaction and close the session:</p>
-
-<pre><code>   session.getTransaction().commit();
-   session.close();
-</code></pre>
-
-<p>   }</p></li>
-</ol>
-
-
-<p><strong>Adding data</strong>
-Let&#8217;s now assume we want to add more books (and authors) to the library.</p>
-
-<ol>
-<li><p>By now, you should be pretty familiar with the pattern of opening a new session:</p>
-
-<p>   {</p>
-
-<pre><code>   Session session = sessionFactory.openSession();
-   session.beginTransaction();
-</code></pre></li>
-<li><p>As we want to add new items to the library, we need to retrieve the library instance first of all:</p>
-
-<pre><code>   Query query = session.createQuery("from Library");
-   List&lt;library&gt; libraries = query.list();
-   Library library = libraries.get(0);
-</code></pre></li>
-<li><p>Creating a new book and its author is easy, as we just have to use the API EMF so kindly generated for us:</p>
-
-<pre><code>   Writer writer = LibraryFactory.eINSTANCE.createWriter();
-   writer.setName("J.R.R. Tolkien");
-   Book book = LibraryFactory.eINSTANCE.createBook();
-   book.setTitle("The Hobbit");
-   book.setPages(320);
-   book.setAuthor(writer);
-   book.setCategory(BookCategory.MYSTERY);     
-   library.getBooks().add(book);
-   library.getWriters().add(writer);
-</code></pre></li>
-<li><p>Finally, commit the transaction and close the session:</p>
-
-<pre><code>   session.getTransaction().commit();
-   session.close();
-</code></pre>
-
-<p>   }</p></li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -1182,6 +1103,10 @@ Let&#8217;s now assume we want to add more books (and authors) to the library.</
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-issue-4/">Annotated Links, Issue 4</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-for-week-34/">Annotated Links for Week 34</a>
       </li>
     
@@ -1195,10 +1120,6 @@ Let&#8217;s now assume we want to add more books (and authors) to the library.</
     
       <li class="post">
         <a href="/hacked-dot-io-2013/">Hacked.io 2013</a>
-      </li>
-    
-      <li class="post">
-        <a href="/do-androids-dream-of-electric-sheep/">Do Androids Dream of Electric Sheep?</a>
       </li>
     
   </ul>
