@@ -36,3 +36,5 @@ For a long time, Android developers didn't have outlets like these. Well, fear n
 Don't just drink coffee. Also have a glas of wine every now and then to spark your creativity.
 
 Enjoy!
+
+[Chains image](http://www.flickr.com/photos/h20tubig/9376203024/) by [Haya Bernitez](http://www.flickr.com/photos/h20tubig/)
