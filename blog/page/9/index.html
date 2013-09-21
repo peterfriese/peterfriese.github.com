@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="In this installment, we look into how working sets can help you to unclutter your workspace. [flv:screencasts/working_sets_part1_reloaded.flv 640 &hellip;">
+  <meta name="description" content="I am currently working on an ECore Type Lookup Dialog that lets you look up EClassifiers in the same fashion we know from the JDT Type Lookup Dialog &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,84 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/editors-how-to-open-an-eclassifier-in-the-ecore-editor-and-selecting-it/">Editors: How to Open an EClassifier in the ECore Editor and Selecting It</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-03-10T10:16:47+00:00" pubdate data-updated="true">Mar 10<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>I am currently working on an ECore Type Lookup Dialog that lets you look up EClassifiers in the same fashion we know from the JDT Type Lookup Dialog and the <a href="http://mea-bloga.blogspot.com/2008/02/quickly-access-exported-packages.html">PDE Artifact Lookup Dialog</a>.</p>
+
+<p>Creating the dialog is rather easy - you just need to subclass FilteredItemsSelectionDialog. I&#8217;ll blog more on this topic soon. Today, however, I wanted to document a tidbit that is not so well documented: How do I open the default editor on an EClassifier and select the EClassifier as soon as the editor has appeared.</p>
+
+<p>First of all, let&#8217;s find out more about the EClassifier:</p>
+
+<pre><code>EObject eObject = (EObject) object; 
+URI uri = EcoreUtil.getURI(eObject); 
+IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(uri.toPlatformString(true)));
+</code></pre>
+
+<p>Now that we know the URI of the object of desire and the file it resides in, we can browse the EditorRegistry for the default editor that has been registered for this particular file:</p>
+
+<pre><code>try { 
+    // open default editor 
+    Workbench workbench = PlatformUI.getWorkbench(); 
+    EditorDescriptor editorDescriptor = workbench.getEditorRegistry().getDefaultEditor(file.getName());
+</code></pre>
+
+<p>Opening the editor is a no-brainer now:</p>
+
+<pre><code>    WorkbenchPage page = workbench.getActiveWorkbenchWindow().getActivePage(); 
+    EcoreEditor ecoreEditor = (EcoreEditor) page.openEditor(new FileEditorInput(file), editorDescriptor.getId());
+</code></pre>
+
+<p>The hard part is how to select the EClassifier in the editor we just opened. The trick is to NOT just create an IStructuredSelection containing the EClassifier. You have to make sure you use the SAME EClassifier instance that is being shown in the editor. This can be ensured by retrieving the ECLassifier from the EditingDomain of the EcoreEditor:</p>
+
+<pre><code>    // set selection 
+    EditingDomain editingDomain = ecoreEditor.getEditingDomain(); 
+    EObject editObject = editingDomain.getResourceSet().getEObject(uri, true); 
+    if (editObject != null) { 
+        ecoreEditor.setSelectionToViewer(Collections.singleton(editObject)); 
+    } 
+} catch (PartInitException e) { 
+    Log.logError(e); 
+}
+</code></pre>
+
+<p>That&#8217;s it. As with most things in EMF, the answer can be found by browsing the EMF source code and the code of the editors and other artifacts that it generates.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -567,56 +645,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/reporting-bugs-has-never-been-easier/">Reporting Bugs Has Never Been Easier&#8230;</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-07-02T21:48:46+01:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>Reporting bugs for Eclipse or one of it&#8217;s various subprojects has never been easier than with Eclipse Europa. If you haven&#8217;t grabbed your copy of Europa yet, you should do so now. While waiting for the download to complete, read on to find out how to report your bugs.</p>
-
-<p>Traditionally, in order to report a bug against an Eclipse-related project (or component), you had to switch over to your browser, jump to <a href="https://bugs.eclipse.org/bugs/">https://bugs.eclipse.org/bugs/</a> and step through a rather tedious wizard that tried to help you find out whether you&#8217;re about to report a real bug (or spam the Eclipse bugzilla with duplicates) and the appropriate product and component.</p>
-
-<p>No longer! In the brave new world of Eclipse Europa, just select <em>Report Bug or Enhancement</em> from the <em>Help</em> menu (inside Eclipse).  In the dialog showing up, select <em>Eclipse.org</em> as your task repository and voilá! you are presented with a list of all available products. After selecting the desired product, you can enter all bug details in the bug editor:</p>
-
-<p><img src="http://www.peterfriese.de/wp-content/downloads/images/report_bug.png" alt="Bug editor" /></p>
-
-<p>Best of all: after committing the bug to the Eclipse bugzilla by clicking the Create New button in the bug editor, a link to the new bug is created in your local task list for later reference.</p>
-
-<p>Thanks to Mik Kersten and the Mylyn team for making this possible!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/10/">&larr; Older</a>
@@ -639,6 +667,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-issue-5/">Annotated Links, Issue 5</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-issue-4/">Annotated Links, Issue 4</a>
       </li>
     
@@ -652,10 +684,6 @@
     
       <li class="post">
         <a href="/annotated-links-for-week-32/">Annotated Links for Week 32</a>
-      </li>
-    
-      <li class="post">
-        <a href="/hacked-dot-io-2013/">Hacked.io 2013</a>
       </li>
     
   </ul>

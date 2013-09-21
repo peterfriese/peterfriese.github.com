@@ -9,8 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Want to see which resources are ignored in your workspace? Use Eclipse color decorators! Here&#8217;s how: Window -> Preferences
-Team -> Label &hellip;">
+  <meta name="description" content="Since version 2.0, Eclipse comes with a feature called early startup. Plug-ins using this mechanism will be loaded and activated when the workbench &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +96,62 @@ Team -> Label &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/why-you-should-be-careful-when-using-early-startup/">Why You Should Be Careful When Using Early Startup.</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-10-25T10:47:15+01:00" pubdate data-updated="true">Oct 25<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Since version 2.0, Eclipse comes with a feature called <em>early startup</em>. Plug-ins using this mechanism will be loaded and activated when the workbench is starting up. One of the major design goals of Eclipse was to minimize startup time, which is why plugins are divided into  a declarative (i.e. the plugin.xml) and a dynamic part (the Java classes making up the plug-in). Using early startup is strongly discouraged, mainly due to performance reasons: if everybody wants to startup early, the whole idea of separating plug-ins into a declarative and a dynamic part gets perverted.</p>
+
+<p>But there is another reason why using early startup is discouraged: if you are not careful, your plug-in might get instantiated twice! &#8220;What?&#8221;, I hear you saying, &#8220;Plug-ins are singletons, how can they possibly be instantiated twice?&#8221; Well, that&#8217;s what I thought as well. But have a look at <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=91603">bug #91603</a> and you&#8217;ll find that it is true: if you specify your plug-in class to be the early startup class, your plug-in class will be instantiated twice. As the original reporter states, this will produce strange effects when you try to refer to the plug-in&#8217;s bundle or other fields that get initialized during normal startup.</p>
+
+<p>So, what can we do about it? I suggest the following best practice:</p>
+
+<p><strong>Using early startup the safe way</strong></p>
+
+<ul>
+<li><p>Do not use early startup.</p></li>
+<li><p>Only use it if you absolutely have to.</p></li>
+<li><p>If you use it, do not specify a class in the <code>class</code> element.</p></li>
+</ul>
+
+
+<p><strong>Rationale</strong>
+Why shouldn&#8217;t you specifiy a startup class? The <a href="http://help.eclipse.org/help31/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_startup.html">online help</a> says that <em>If the startup element has a class attribute, the class will be instantiated and earlyStartup() will be called on the result. Otherwise, this method will be called on the plug-in class.</em>. To understand what the documentation writers want to tell us, review  this <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=91603#c2">comment by Nick Edgar</a>. Now it becomes clear: if you specify a class, that class will be instantiated, regardless of whether it is the plug-in class itself or any other class. If you do not specify a class, then the singleton instance of your plug-in will be used instead, which is what we want.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -566,46 +621,6 @@ Team -> Label &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/eclipse-31-is-here/">Eclipse 3.1 Is Here!</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-06-28T18:41:25+01:00" pubdate data-updated="true">Jun 28<span>th</span>, 2005</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>Only by chance, I dropped by the <a href="http://www.eclipse.org/downloads/index.php">Eclipse downloads</a> site - only to see that Eclipse 3.1 had begun shipping just a few minutes ago! Right now (18:38 CET), the downloads counter has reached 751 - and counting!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/14/">&larr; Older</a>
@@ -628,6 +643,10 @@ Team -> Label &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-issue-5/">Annotated Links, Issue 5</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-issue-4/">Annotated Links, Issue 4</a>
       </li>
     
@@ -641,10 +660,6 @@ Team -> Label &hellip;">
     
       <li class="post">
         <a href="/annotated-links-for-week-32/">Annotated Links for Week 32</a>
-      </li>
-    
-      <li class="post">
-        <a href="/hacked-dot-io-2013/">Hacked.io 2013</a>
       </li>
     
   </ul>

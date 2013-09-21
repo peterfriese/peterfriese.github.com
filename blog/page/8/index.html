@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="From October 15th - 17th, the second workshop on model driven software development &#8220;MDSD Today&#8221; will take place in Elmshorn near Hamburg &hellip;">
+  <meta name="description" content="Open Source Software (OSS) is becoming more important and plays a vital role in the IT business today. I mean, can you imagine doing a software &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,63 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/how-to-support-your-favourite-open-source-project/">How to Support Your Favourite Open Source Project</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-07-28T10:14:07+01:00" pubdate data-updated="true">Jul 28<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Open Source Software (OSS) is becoming more important and plays a vital role in the IT business today. I mean, can you imagine doing a software poject without using open source software? Looking back at the past years, I must admit that literally every project I was involved in used at least one open source component. Be it a library / framework or a tool like the IDE.</p>
+
+<p>When I started using open source, I wondered how people could afford writing software for free. That was about 8 years ago. Today, as I am myself an open source software developer, I know much better about how developing open source software works and where the money comes from. Although open source software is inherently free, it does have a cost. The people writing the software you use in your projects have to earn some money as well.</p>
+
+<p>So, if you wonder how to support your favourite open source project, here are some ideas.</p>
+
+<ul>
+<li><p>Give feedback. Read the newsgroups, use the mailing lists, ask questions on the forums. If you like the software, say so - it will make the committers happy. Happy committers write more code :-) If you dislike things about the software, say so as well, but be polite. If something isn&#8217;t working, you might consider filing a bug - it&#8217;s not difficult at all.</p></li>
+<li><p>Advocate your favourite project. Spread the news. Talk to your colleagues about how great the project is and how much time you save by using the software. Tell your customers. Write articles (did you know you get paid for writing print articles?). Go to conferences andand give a user experience talk. Send testimonies for inclusion on the website to the development team.</p></li>
+<li><p>Donate. Some projects are personal endeavours of people like you and me you spend their private time on these projects. Show your gratiude by sending some money via PayPal or choose something from the developer&#8217;s Amazon wishlist. If you&#8217;re a company, thing about sponsoring the project.</p></li>
+<li><p>Help on the forums, newsgroups and mailing list by answering questions.</p></li>
+<li><p>Fix bugs and send patches.</p></li>
+<li><p>Buy support. Most OSS development teams will be glad to provide consulting and training for their project.</p></li>
+<li><p>Buy features. If there is a feature you badly need, ask the development team to implement it and offer to pay for it. If you use open source software strategically, it is perfectlyok to pay the development team for special features. It shows your own committent and appreciation. However, the new feature needs to be available to the public.</p></li>
+</ul>
+
+
+<p>If you would like to add to this list or discuss with me, feel free to post a comment or drop me a mail.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -615,84 +672,6 @@ Using MINT, you can highlight the parts of the source code which have been chang
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/editors-how-to-open-an-eclassifier-in-the-ecore-editor-and-selecting-it/">Editors: How to Open an EClassifier in the ECore Editor and Selecting It</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-03-10T10:16:47+00:00" pubdate data-updated="true">Mar 10<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>I am currently working on an ECore Type Lookup Dialog that lets you look up EClassifiers in the same fashion we know from the JDT Type Lookup Dialog and the <a href="http://mea-bloga.blogspot.com/2008/02/quickly-access-exported-packages.html">PDE Artifact Lookup Dialog</a>.</p>
-
-<p>Creating the dialog is rather easy - you just need to subclass FilteredItemsSelectionDialog. I&#8217;ll blog more on this topic soon. Today, however, I wanted to document a tidbit that is not so well documented: How do I open the default editor on an EClassifier and select the EClassifier as soon as the editor has appeared.</p>
-
-<p>First of all, let&#8217;s find out more about the EClassifier:</p>
-
-<pre><code>EObject eObject = (EObject) object; 
-URI uri = EcoreUtil.getURI(eObject); 
-IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(uri.toPlatformString(true)));
-</code></pre>
-
-<p>Now that we know the URI of the object of desire and the file it resides in, we can browse the EditorRegistry for the default editor that has been registered for this particular file:</p>
-
-<pre><code>try { 
-    // open default editor 
-    Workbench workbench = PlatformUI.getWorkbench(); 
-    EditorDescriptor editorDescriptor = workbench.getEditorRegistry().getDefaultEditor(file.getName());
-</code></pre>
-
-<p>Opening the editor is a no-brainer now:</p>
-
-<pre><code>    WorkbenchPage page = workbench.getActiveWorkbenchWindow().getActivePage(); 
-    EcoreEditor ecoreEditor = (EcoreEditor) page.openEditor(new FileEditorInput(file), editorDescriptor.getId());
-</code></pre>
-
-<p>The hard part is how to select the EClassifier in the editor we just opened. The trick is to NOT just create an IStructuredSelection containing the EClassifier. You have to make sure you use the SAME EClassifier instance that is being shown in the editor. This can be ensured by retrieving the ECLassifier from the EditingDomain of the EcoreEditor:</p>
-
-<pre><code>    // set selection 
-    EditingDomain editingDomain = ecoreEditor.getEditingDomain(); 
-    EObject editObject = editingDomain.getResourceSet().getEObject(uri, true); 
-    if (editObject != null) { 
-        ecoreEditor.setSelectionToViewer(Collections.singleton(editObject)); 
-    } 
-} catch (PartInitException e) { 
-    Log.logError(e); 
-}
-</code></pre>
-
-<p>That&#8217;s it. As with most things in EMF, the answer can be found by browsing the EMF source code and the code of the editors and other artifacts that it generates.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/9/">&larr; Older</a>
@@ -715,6 +694,10 @@ IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(uri.toPla
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-issue-5/">Annotated Links, Issue 5</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-issue-4/">Annotated Links, Issue 4</a>
       </li>
     
@@ -728,10 +711,6 @@ IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(uri.toPla
     
       <li class="post">
         <a href="/annotated-links-for-week-32/">Annotated Links for Week 32</a>
-      </li>
-    
-      <li class="post">
-        <a href="/hacked-dot-io-2013/">Hacked.io 2013</a>
       </li>
     
   </ul>

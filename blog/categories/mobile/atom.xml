@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/mobile/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-09-13T10:24:17+01:00</updated>
+  <updated>2013-09-21T01:01:59+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Annotated Links, Issue 5]]></title>
+    <link href="http://www.peterfriese.de/annotated-links-issue-5/"/>
+    <updated>2013-09-21T00:44:00+01:00</updated>
+    <id>http://www.peterfriese.de/annotated-links-issue-5</id>
+    <content type="html"><![CDATA[<p>This week, we'll take a look at rocket science, re-usable phones and some Android libraries. Without further ado, let's get started!</p>
+
+<!-- more -->
+
+
+<h3><a href="https://github.com/nhaarman/ListViewAnimations">Android ListViewAnimations</a></h3>
+
+<p>The main goal of this library is to provide animations in listviews, but it also comes with a great implementation for a UI pattern that most users know from the GMail app: swipe to delete with undo. Rather clumsy name, but it does exactly what's written on the label: the user can swipe a list view item to either side of the screen in order to delete it. But instead of deleting it right away, ListViewAnimations will display a cell with an undo button, allowing the user to change his mind. Integrating it in your apps is straightforward, <a href="https://github.com/nhaarman/ListViewAnimations/wiki/Swipe-To-Dismiss">check out the wiki</a> for further information.</p>
+
+<h3><a href="http://phoneblocks.com/">PhoneBlocks</a></h3>
+
+<p>The number of mobile phones per capita seems to keep growing and a surprising large number of countries <a href="http://en.wikipedia.org/wiki/List_of_countries_by_number_of_mobile_phones_in_use">in this list</a> have a ratio of more than 1:1. Many of these phones aren't being used at all and lead a boring life in a dark corner in the back of a drawer of your desk. <em>Wouldn't it be great if we could use our phones longer than just a few years</em>, thought <a href="https://twitter.com/davehakkens">Dave Hakkens</a> and jotted down his ideas for a reusable, upgradable phone. A great idea, although there are good reasons why <a href="http://whatculture.com/technology/5-reasons-why-phonebloks-probably-wont-work.php">it might not work out at all</a>.</p>
+
+<h3><a href="http://blog.leapmotion.com/post/60390143676/elon-musk-designs-rockets-in-the-air-with-leap-motion">Designing Rocket Engines with the LEAP Motion</a></h3>
+
+<p>Just recently, my colleague <a href="https://twitter.com/sgrasmann">Stefan Grasmann</a> pointed me to a very interesting Hanselminutes episode in which <a href="http://hanselminutes.com/388/vision-based-computing-with-dr-neil-roodyn">Scott Hanselman and Dr. Neil Roodyn talk about vision-based input devices</a> such as Kinect and LEAP Motion. Scott pointed out he had been rather underwhelmed by the user experience of the LEAP, mostly because it requires you to perform rather precise motions instead of the more coarse-grained motions that Scott would like to use. In <a href="http://blog.leapmotion.com/post/60390143676/elon-musk-designs-rockets-in-the-air-with-leap-motion">this video</a>, Elon Musk demonstrates how to use the LEAP to design rocket part prototypes using hand gestures.</p>
+
+<p>Designing rocket engines might not be your cup of tea, but if you want to get your hands on one of those devices, you can either buy a <a href="http://www.amazon.de/gp/product/B00EUCI1GO?ie=UTF8&amp;camp=3206&amp;creative=21426&amp;creativeASIN=B00EUCI1GO&amp;linkCode=shr&amp;tag=petfrisblo-21&amp;qid=1379716777&amp;sr=8-1&amp;keywords=leap">regular LEAP at Amazon</a> or wait for the <a href="http://www8.hp.com/us/en/ads/new-products/envy-17-leap-motion.html?jumpid=reg_r1002_usen_c-001_title_r0002">HP Envy Leap</a> - a Laptop by HP with a <a href="http://venturebeat.com/2013/09/19/leap-motion-and-hp-unveil-worlds-first-laptop-with-kinect-like-3-d-gesture-control/">built-in LEAP controller</a></p>
+
+<p>That's it for this week, folks. Enjoy the weekend and create some awesome stuff!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Code Generation 2011 - Don't miss out!]]></title>

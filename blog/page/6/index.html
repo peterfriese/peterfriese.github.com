@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Last week I showed you how to use Teneo, EMF and Hibernate to store your data in a database. This week, we&#8217;re going to have a look at how to &hellip;">
+  <meta name="description" content="Although some people seem to be convinced that Eclipse and Eclipse Modeling are dead, I have been sensing quite healthy life signals of both on &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,85 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/modeling-is-dead-long-live-modeling/">Modeling Is Dead. Long Live Modeling!</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-31T16:44:18+01:00" pubdate data-updated="true">Mar 31<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Although <a href="http://kenn-hussey.blogspot.com/2009/03/on-death-of-eclipse-and-modeling.html">some people seem to be convinced</a> that <a href="http://www.eclipse.org/">Eclipse</a> and <a href="http://www.eclipse.org/modeling/">Eclipse Modeling</a> are dead, I have been sensing quite healthy life signals of both on EclipseCon 2009 (or rather <a href="http://search.twitter.com/search?q=%23eclipsecon">#eclipsecon</a>).</p>
+
+<p>On Monday, <a href="http://www.flickr.com/photos/sza/3385548232/">Bernd</a>, <a href="http://kenn-hussey.blogspot.com/">Kenn</a> and I hosted the <a href="http://www.eclipsecon.org/2009/sessions?id=780">official Modeling BOF</a>:
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3648/3383866773_ffa5c03596.jpg" alt="Modeling BOF" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3383866773)
+The topics discussed were focussing on consumability and long-term sustainability of EMF:</p>
+
+<p><strong>Documentation and Marketing</strong></p>
+
+<p>We all agreed that the entire modeling project lacks a decent documentation. While of course all of the projects and subprojects do have their own documentation, there is so such thing as an overview documentation. Modelers as we are, we quickly realized we&#8217;re lacking a documentation superstructure. The idea is to provide a guide for users (newbies and seasoned experts alike) to navigate the Eclipse Modeling world. The modeling project offers a great variety of technologies, so it is not always easy to find out which set of technologies / frameworks you might want to use - especially if you are new to EMF.</p>
+
+<p>We also agreed that we need more success stories (in the form of blog entries, articles and shiny flyers for the <a href="http://www.eclipse.org/home/categories/index.php?category=modeling">modeling landing page</a>). A quick poll revealed that more than 90% of all people attending have been working on projects in which modeling was successfully applied, so there should be enough material to create success stories!</p>
+
+<p>Kenn mentioned the Eclipse Foundation wants to start a documentation project (much like <a href="http://www.eclipse.org/babel/">Babel</a>) to improve overall documentation, we might eventually join this project. In the meantime, we decided to form a working group comprised of members of the Eclipse Modeling Project that starts to create this overview documentation. The initial members of this working group will be Kenn, Bernd, Peter, Tamer, Pierre, Marcello, Thibault and Anthony (guys, please send me your email addresses). The working group will start its work on the <a href="https://dev.eclipse.org/mailman/listinfo/emf-dev">EMF dev mailing list</a>. You are welcome to join us there.</p>
+
+<p><strong>Consuming Modeling Technology</strong></p>
+
+<p>I think there is no other technology that causes more emotions in an Eclipse committers life than P2. So we also had our little discussion about how to best provision Modeling technology. No big news here - we just re-iterated the pros and cons of using ZIPs vs. P2 and also had a short discussion about the Friends of Eclipse Download Wizard (which, rumor has it, will allow you to assemble a custom distro by just selecting the pieces you need). Several people mentioned that <a href="http://www.eclipse.org/modeling/amalgam/">Amalgamation</a> is intended to be a place for modeling distros.</p>
+
+<p><strong>EMF 3.0</strong></p>
+
+<p>We also discussed whether we should have a new major release of EMF that allows us to break API. Though not everybody agreed that we need a new major version (because the current version works smoothly for most people) we decided to set up an additional BOF to discuss this topic in more detail. I will write about the EMF 3 BOF later (yes, I am teasing)</p>
+
+<p><strong>Miscellanea</strong></p>
+
+<p>Someone asked if we need something like a model bus, the answer was no - we&#8217;ve got the <a href="http://www.eclipse.org/modeling/emft/?project=mwe">modeling workflow engine (MWE)</a>.</p>
+
+<p>We also briefly discussed the recent change of leadership on the MDT OCL component (<a href="http://give-a-damus.blogspot.com/">Christian Damus</a> <a href="http://dev.eclipse.org/mhonarc/lists/modeling-pmc/msg01042.html">revoked</a> his committer and component lead status recently). Everybody agreed that to lead a component, a long-term committment is needed (which has been met by Christian in the most excellent way). We also agreed that we need to make avoid situations in which a whole bunch of projects / components suddenly are without a leader. This will be a task for the PMC.
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3629/3383867215_982c6592ac.jpg" alt="Modeling BOF" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3383867215)</p>
+
+<p>After the official part of the BOF, there still was time to chat and shake hands with people you never met in person before. I had the pleasure to shake hands with Anthony Hunter, who works for IBM. From our discussions on mailing lists and bugs, you could guess that we have a totally different view on the marketing of software, but it turns out we&#8217;re actually not that far apart :-)</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Birds_of_a_Feather_(computing">BOFs</a>) are a great way to interact with like-minded people at conferences. So, next time you go to a conference, make sure you participate in a BOF to make yourself be heard and take part in the discussion.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1077,104 +1156,6 @@ In case you wonder how to get those funky characters: make sure us create this f
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/maps-services-relations-and-reuse-eclipse-democamp-hamburg/">Maps, Services, Relations and Reuse: Eclipse DemoCamp Hamburg</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-11-15T02:25:18+00:00" pubdate data-updated="true">Nov 15<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>On November 10th, the Hamburg Eclipse DemoCamp took place in the <a href="http://east-hamburg.de/">stylish EAST Hotel</a>.
-[</p>
-
-<p><img src="http://farm4.static.flickr.com/3040/3030032841_0940054426.jpg" alt="EAST Hotel" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3030032841)</p>
-
-<p>We had 45 reservations and almost all of them made it to the Camp. I always get a little bit nervous 15 minutes before the event starts if no more than 10 people have shown up so far, but I guess that&#8217;s alright.</p>
-
-<p>Martin and I welcomed the crowd on behalf of our sponsors <a href="http://www.eclipse.org">(Eclipse Foundation</a>, <a href="http://www.froglogic.com/">froglogic</a>, <a href="http://www.it-agile.de/">it-agile</a> and <a href="http://www.itemis.de">itemis</a>):
-[</p>
-
-<p><img src="http://farm4.static.flickr.com/3024/3030045195_f9cefec1a1.jpg" alt="Martin Lippert and Peter Friese welcome the crowd" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3030045195)</p>
-
-<p>After that, Harald Wellmann of Harman Becker told us that the world is a disc. Well, at least he and his company try to make it a disc again - Harald leads a team that develops a so called &#8220;map compiler&#8221;. A map compiler takes map source data and condenses that data by extracting only the relevant parts of it. As you may guess this is a long-running process which can hugely benefit from parallelization. Harald and his team use OSGi to modularize their software and make sure they use computing resources efficiently. One thing worth noting is that OSGi is even being used in car entertainment systems: Harald told us about one entertainment system which makes use of OSGi to act as an intermediate / glue layer between the UI (written in Java) and the core (written in C++).
-[</p>
-
-<p><img src="http://farm4.static.flickr.com/3226/3030054785_56b25b784a.jpg" alt="3022446041_2273030e59_b" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3030054785)</p>
-
-<p><a href="http://gerd-wuetherich.de">Gerd Wütherich</a> (Independent) continued where Harald stopped and showed us how to use Spring Dynamic Modules and OSGi in his excellent talk - interspersed with some neat demos:
-[</p>
-
-<p><img src="http://farm4.static.flickr.com/3013/3030910128_c0d80a4c35.jpg" alt="Eclipse DemoCamp Hamburg" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3030910128)
-Together with Nils Hartmann, Mathias Lübken and Bernd Kolb, he wrote the   first German book on OSGi, so he really knows what he is talking about.</p>
-
-<p>After those talks, we took a break to grab some refreshments and take the chance to get in touch with the other attending Eclipse enthusiasts. I had the impression that everybody had a good time discussing all things Eclipse - in fact Martin and I had to interrupt a lot of lively discussions for the second run of talks.</p>
-
-<p>In the first talk after the break, Miguel Garcia and Rakesh Prithiviraj (both Technical University of Hamburg-Harburg) gave us an update of their research on how to integrate LINQ (Language Integrated Queries) in Java:
-[</p>
-
-<p><img src="http://farm4.static.flickr.com/3005/3030138183_9d68a22655.jpg" alt="Eclipse DemoCamp Hamburg November 2008" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3030138183)[</p>
-
-<p><img src="http://farm4.static.flickr.com/3171/3030138427_514e449208.jpg" alt="Eclipse DemoCamp Hamburg November 2008" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3030138427)</p>
-
-<p>The final demo was deliverd by Stephan Herrmann who showed us Object Teams / Equinox, an amazing piece of software that can be used to re-use existing Eclipse plug-ins in an aspect-oriented way. To get an idea of how powerful this approach is, have a look at the following screenshot -  this is the JDT, but enhanced by Object Teams in order to support their very own syntax extensions for Java:
-[</p>
-
-<p><img src="http://farm4.static.flickr.com/3025/3030986548_6a084a5c01.jpg" alt="AddUnimplementedMethods" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3030986548)
-To learn more about Object Teams, browse to their web site at http://trac.objectteams.org/ot/wiki/OtEquinox.
-[</p>
-
-<p><img src="http://farm4.static.flickr.com/3277/3030160123_ae092a0af3.jpg" alt="3023294590_3c5d9c364b_b" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3030160123)
-Everyone in the room was quite impressed with what is possible with Object Teams / Equinox, so you should check it out (<a href="http://www.objectteams.org/distrib/otdt.html">it&#8217;s available for free</a>). If you can manage to go the <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2008/Berlin">DemoCamp in Berlin</a>, you&#8217;ll have the chance to see it live.</p>
-
-<p>The feedback we received from the attendees was great - some people even sent emails thanking us for organizing the event, so I guess the DemoCamp can be considered a success!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -1197,6 +1178,10 @@ Everyone in the room was quite impressed with what is possible with Object Teams
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/annotated-links-issue-5/">Annotated Links, Issue 5</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-issue-4/">Annotated Links, Issue 4</a>
       </li>
     
@@ -1210,10 +1195,6 @@ Everyone in the room was quite impressed with what is possible with Object Teams
     
       <li class="post">
         <a href="/annotated-links-for-week-32/">Annotated Links for Week 32</a>
-      </li>
-    
-      <li class="post">
-        <a href="/hacked-dot-io-2013/">Hacked.io 2013</a>
       </li>
     
   </ul>

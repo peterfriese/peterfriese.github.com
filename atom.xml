@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://www.peterfriese.de/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-09-13T10:24:17+01:00</updated>
+  <updated>2013-09-21T01:01:59+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Annotated Links, Issue 5]]></title>
+    <link href="http://www.peterfriese.de/annotated-links-issue-5/"/>
+    <updated>2013-09-21T00:44:00+01:00</updated>
+    <id>http://www.peterfriese.de/annotated-links-issue-5</id>
+    <content type="html"><![CDATA[<p>This week, we&#8217;ll take a look at rocket science, re-usable phones and some Android libraries. Without further ado, let&#8217;s get started!</p>
+
+<!-- more -->
+
+
+<h3><a href="https://github.com/nhaarman/ListViewAnimations">Android ListViewAnimations</a></h3>
+
+<p>The main goal of this library is to provide animations in listviews, but it also comes with a great implementation for a UI pattern that most users know from the GMail app: swipe to delete with undo. Rather clumsy name, but it does exactly what&#8217;s written on the label: the user can swipe a list view item to either side of the screen in order to delete it. But instead of deleting it right away, ListViewAnimations will display a cell with an undo button, allowing the user to change his mind. Integrating it in your apps is straightforward, <a href="https://github.com/nhaarman/ListViewAnimations/wiki/Swipe-To-Dismiss">check out the wiki</a> for further information.</p>
+
+<h3><a href="http://phoneblocks.com/">PhoneBlocks</a></h3>
+
+<p>The number of mobile phones per capita seems to keep growing and a surprising large number of countries <a href="http://en.wikipedia.org/wiki/List_of_countries_by_number_of_mobile_phones_in_use">in this list</a> have a ratio of more than 1:1. Many of these phones aren&#8217;t being used at all and lead a boring life in a dark corner in the back of a drawer of your desk. <em>Wouldn&#8217;t it be great if we could use our phones longer than just a few years</em>, thought <a href="https://twitter.com/davehakkens">Dave Hakkens</a> and jotted down his ideas for a reusable, upgradable phone. A great idea, although there are good reasons why <a href="http://whatculture.com/technology/5-reasons-why-phonebloks-probably-wont-work.php">it might not work out at all</a>.</p>
+
+<h3><a href="http://blog.leapmotion.com/post/60390143676/elon-musk-designs-rockets-in-the-air-with-leap-motion">Designing Rocket Engines with the LEAP Motion</a></h3>
+
+<p>Just recently, my colleague <a href="https://twitter.com/sgrasmann">Stefan Grasmann</a> pointed me to a very interesting Hanselminutes episode in which <a href="http://hanselminutes.com/388/vision-based-computing-with-dr-neil-roodyn">Scott Hanselman and Dr. Neil Roodyn talk about vision-based input devices</a> such as Kinect and LEAP Motion. Scott pointed out he had been rather underwhelmed by the user experience of the LEAP, mostly because it requires you to perform rather precise motions instead of the more coarse-grained motions that Scott would like to use. In <a href="http://blog.leapmotion.com/post/60390143676/elon-musk-designs-rockets-in-the-air-with-leap-motion">this video</a>, Elon Musk demonstrates how to use the LEAP to design rocket part prototypes using hand gestures.</p>
+
+<p>Designing rocket engines might not be your cup of tea, but if you want to get your hands on one of those devices, you can either buy a <a href="http://www.amazon.de/gp/product/B00EUCI1GO?ie=UTF8&amp;camp=3206&amp;creative=21426&amp;creativeASIN=B00EUCI1GO&amp;linkCode=shr&amp;tag=petfrisblo-21&amp;qid=1379716777&amp;sr=8-1&amp;keywords=leap">regular LEAP at Amazon</a> or wait for the <a href="http://www8.hp.com/us/en/ads/new-products/envy-17-leap-motion.html?jumpid=reg_r1002_usen_c-001_title_r0002">HP Envy Leap</a> - a Laptop by HP with a <a href="http://venturebeat.com/2013/09/19/leap-motion-and-hp-unveil-worlds-first-laptop-with-kinect-like-3-d-gesture-control/">built-in LEAP controller</a></p>
+
+<p>That&#8217;s it for this week, folks. Enjoy the weekend and create some awesome stuff!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Annotated Links, Issue 4]]></title>
@@ -1180,60 +1208,6 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 <p>Thanks to the fact we only had about 40 attendees, there were plenty of chances for networking which people really seemed to enjoy.</p>
 
 <p>I&#8217;d like to thank everybody who attended the DemoCamp or gave a demo! <a href="http://twitter.com/#!/peterfriese">Follow me on twitter</a> to be informed ahead of time for the next DemoCamp!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[Updated] Use your iPhone, Android, or BlackBerry to build Your Eclipse Summit Europe 2010]]></title>
-    <link href="http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/"/>
-    <updated>2010-11-01T11:45:02+00:00</updated>
-    <id>http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010</id>
-    <content type="html"><![CDATA[<p>As I&#8217;m writing this, Eclipse Summit Europe 2010 is merely hours away and everyone is getting excited to get there and meet Eclipse family.</p>
-
-<p>I think the program committee have done a great job at putting together an exciting conference program with lots of technical sessions, interactive tutorials and inspiring keynotes.</p>
-
-<p>As a special treat for smart phone users, we&#8217;re offering a conference schedule app for iPhone, Android and all other smart phones that come with a browser.</p>
-
-<!-- more -->
-
-
-<p>Besides reviewing the <strong>conference schedule</strong> and getting to know the <strong>speakers</strong> you can use the apps to create your very <strong>own personal conference schedule</strong>. Usually, conference attendees will use the printed conference program to mark their favorite talks - and then leave their personalized copy of the program in their hotel room or elsewhere in the conference halls!</p>
-
-<p>This will probably not happen with the smart phone app, although I can recall somebody lost their iPhone at this year&#8217;s EclipseCon&#8230;</p>
-
-<p>Without further ado, here&#8217;s a preview of the iPhone app in action:</p>
-
-<div class="embed-video-container"><iframe src="http://player.vimeo.com/video/16367311 "></iframe></div>
-
-
-<p>You can download the <strong>iPhone app</strong> from the App Store. It is available world-wide and we already have a few downloads from Singapore, Korea and India! For your convenience, <a href="http://bit.ly/ese_app_intl">here&#8217;s the link to the app</a>.</p>
-
-<p>We also prepared a version for <strong>Android</strong> users. Here&#8217;s how it will look like on your Android device:
-<a href="http://www.peterfriese.de/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/ESE_Android.png" class="fancybox" title="ESE Android app"><img class="center" src="http://www.peterfriese.de/thumbs/ESE_Android_151x300.png" alt="ESE Android app" /></a></p>
-
-<p>Head over to the Android Marketplace and search for &#8220;eclipse summit&#8221;, or use your barcode scanner:</p>
-
-<p><a href="http://www.peterfriese.de/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/1078516-1288452914800.png" class="fancybox" title="Android app barcode"><img class="center" src="http://www.peterfriese.de/thumbs/1078516-1288452914800_164x164.png" alt="Android app barcode" /></a></p>
-
-<p>The <strong>mobile web app</strong> <del>will be available from the Wifi landing page at the conference venue</del> is available via the following URL: <a href="http://bit.ly/ese_app_mobile2">http://bit.ly/ese_app_mobile2/</a>.</p>
-
-<p><a href="http://www.peterfriese.de/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/mobileweb3.png" class="fancybox" title="Mobile Web App"><img class="center" src="http://www.peterfriese.de/thumbs/mobileweb3_150x192.png" alt="Mobile Web App" /></a></p>
-
-<p><del>Rumor has it even BlackBerry users will get a native app.</del> <a href="http://ekkescorner.wordpress.com/2010/11/02/ese-app-for-blackberry/">Ekke</a> has created a native app for BlackBerry.</p>
-
-<p>Using these applications, you&#8217;ll be able to put together <strong>your Eclipse Summit Europe 2010</strong> in no time. Enjoy!</p>
-
-<p>The iPhone, Android and mobile web apps have been built by a dedicated team of software engineers at itemis I have the pleasure to work with. If you want to learn how we build applications like these, attend our sessions:</p>
-
-<ul>
-<li>Tuesday, 14:00 - <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1940">Mobile Development Symposium</a></li>
-<li>Thursday 10:30 - <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1733">Models To Go: How We Built a DSL for Mobile Apps With Tools From the Eclipse</a></li>
-</ul>
-
-
-<p>Also, be sure to drop by the new website for our mobile business: <a href="http://mobile.itemis.com">http://mobile.itemis.com</a> and follow us on Twitter: <a href="http://twitter.com/itemismobile">@itemismobile</a>.</p>
-
-<p>Enjoy <del>the</del> your conference!</p>
 ]]></content>
   </entry>
   
