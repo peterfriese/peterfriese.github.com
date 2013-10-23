@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://www.peterfriese.de/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-09-21T01:01:59+01:00</updated>
+  <updated>2013-10-23T21:29:01+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -12,6 +12,642 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android Testing with Robolectric]]></title>
+    <link href="http://www.peterfriese.de/android-testing-with-robolectric/"/>
+    <updated>2013-10-23T20:02:00+01:00</updated>
+    <id>http://www.peterfriese.de/android-testing-with-robolectric</id>
+    <content type="html"><![CDATA[<p>We all know testing is essential to verify the behaviour of the software you write. In the Android world with its huge variety of devices and OS versions, this is even more so. Unfortunately, the performance of the Android development environment, most notably the Android Emulator, leaves much to be desired which sometimes leads to neglicence of test discipline. Robolectric is a test framework that tries to alleviate this situation.</p>
+
+<!-- more -->
+
+
+<p>Robolectric achieves this by sitting between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM. This effectively means you can run your tests on your desktop - no waiting for your code to be deployed to the Emulator or a physical device!</p>
+
+<p>For more detailed background information about the inner workings of Roboloectric, check out <a href="http://www.slideshare.net/tylerschultz/robolectric-android-unit-testing-framework">this presentation</a> and this <a href="http://www.youtube.com/watch?v=T6FWL877txw">talk by Tyler Schultz</a>, one of the committers of Robolectric.</p>
+
+<h2>Creating a New Project</h2>
+
+<p>To better understand how Robolectric works, let&#8217;s create a very simple project we&#8217;ll use as our object under test. We&#8217;ll use Android Studio (at the time of writing, version 0.3.0 was the latest version).</p>
+
+<p>Create a new project using the settings you can see in the following screenshots. Choose <strong>Blank Activity</strong> and <strong>Navigation Type None</strong>.</p>
+
+<ul class="gallery">
+<li><a href="http://www.peterfriese.de/images/2013-10-23-android-testing-with-robolectric/new_project_1.png" class="fancybox" rel="gallery-65e5dd43f21e346f76d19c5f97ff3116" title="New Create New Project - Step 1"><img src="http://www.peterfriese.de/thumbs/new_project_1_200x150.png" alt="New Create New Project - Step 1" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2013-10-23-android-testing-with-robolectric/new_project_2.png" class="fancybox" rel="gallery-65e5dd43f21e346f76d19c5f97ff3116" title="New Create New Project - Step 2"><img src="http://www.peterfriese.de/thumbs/new_project_2_200x150.png" alt="New Create New Project - Step 2" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2013-10-23-android-testing-with-robolectric/new_project_3.png" class="fancybox" rel="gallery-65e5dd43f21e346f76d19c5f97ff3116" title="New Create New Project - Step 3"><img src="http://www.peterfriese.de/thumbs/new_project_3_200x150.png" alt="New Create New Project - Step 3" /></a></li>
+</ul>
+
+
+<p>To make things a bit more interesting, let&#8217;s change the UI so we&#8217;ve got a <code>TextView</code>, an <code>InputView</code> and a <code>Button</code> on, just like this:</p>
+
+<figure class='code'><figcaption><span>res/layout/fragment_main.xml</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;RelativeLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+</span><span class='line'>  <span class="na">xmlns:tools=</span><span class="s">&quot;http://schemas.android.com/tools&quot;</span>
+</span><span class='line'>  <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+</span><span class='line'>  <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+</span><span class='line'>  <span class="na">android:paddingLeft=</span><span class="s">&quot;@dimen/activity_horizontal_margin&quot;</span>
+</span><span class='line'>  <span class="na">android:paddingRight=</span><span class="s">&quot;@dimen/activity_horizontal_margin&quot;</span>
+</span><span class='line'>  <span class="na">android:paddingTop=</span><span class="s">&quot;@dimen/activity_vertical_margin&quot;</span>
+</span><span class='line'>  <span class="na">android:paddingBottom=</span><span class="s">&quot;@dimen/activity_vertical_margin&quot;</span>
+</span><span class='line'>  <span class="na">tools:context=</span><span class="s">&quot;.MainActivity$PlaceholderFragment&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nt">&lt;TextView</span>
+</span><span class='line'>      <span class="na">android:text=</span><span class="s">&quot;@string/hello_world&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>      <span class="na">android:textAppearance=</span><span class="s">&quot;?android:attr/textAppearanceLarge&quot;</span>
+</span><span class='line'>      <span class="na">android:id=</span><span class="s">&quot;@+id/textView&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_alignRight=</span><span class="s">&quot;@+id/editText&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_alignParentLeft=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nt">&lt;EditText</span>
+</span><span class='line'>      <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>      <span class="na">android:id=</span><span class="s">&quot;@+id/editText&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_below=</span><span class="s">&quot;@+id/textView&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_marginTop=</span><span class="s">&quot;24dp&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_alignParentRight=</span><span class="s">&quot;true&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_alignParentLeft=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nt">&lt;Button</span>
+</span><span class='line'>      <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>      <span class="na">android:text=</span><span class="s">&quot;Say Hi!&quot;</span>
+</span><span class='line'>      <span class="na">android:id=</span><span class="s">&quot;@+id/button&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_below=</span><span class="s">&quot;@+id/editText&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_centerHorizontal=</span><span class="s">&quot;true&quot;</span>
+</span><span class='line'>      <span class="na">android:layout_marginTop=</span><span class="s">&quot;45dp&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;/RelativeLayout&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://www.peterfriese.de/images/2013-10-23-android-testing-with-robolectric/robolectric_app_ui.png" class="fancybox" title="Application Under Test UI"><img class="center" src="http://www.peterfriese.de/thumbs/robolectric_app_ui_200x400.png" alt="Application Under Test UI" /></a></p>
+
+<h2>Preparing for Testing</h2>
+
+<p>To prepare your project for testing with Robolectric, there are a few things you need to do:</p>
+
+<ol>
+<li>Create a folder for your tests and make sure both Gradle and Android Studio recognize it.</li>
+<li>Add the Gradle Android Test Plug-in to your project</li>
+<li>Add a customized TestRunner</li>
+</ol>
+
+
+<h3>Creating a Folder For Your Tests</h3>
+
+<p>When you create a new project in Android Studio, it is not yet configured for testing. If you used to develop Android apps in Eclipse, you probably are used to creating a new project for your tests. The good news is, with the new Android build system based on Gradle, you can now place your tests in the same project as your production code (refer to the <a href="http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Testing">build system documentation</a> for more details).</p>
+
+<p>However, Android Studio (and the Gradle Plug-in) currently expect you to place tests in <code>src/instrumentTest</code>. As we won&#8217;t be writing instrument tests, we&#8217;d rather like to place our tests in <code>src/test</code>. In order for this to work, we need to tell Gradle and Android Studio we&#8217;re deviating from the default project structure:</p>
+
+<ol>
+<li>Create a new folder <code>src/test/java</code> to contain your tests.</li>
+<li>Edit <code>build.gradle</code> in your project folder and add the following source set configuration to the Android plug-in configuration:</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'>   <span class="n">sourceSets</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">instrumentTest</span><span class="o">.</span><span class="na">setRoot</span><span class="o">(</span><span class="s1">&#39;src/test&#39;</span><span class="o">)</span>
+</span><span class='line'>  <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Next, in Android Studio, select <code>Tools -&gt; Android -&gt; Sync Project with Gradle Files</code> from the main menu. This will tell Android Studio where to find your test files.</li>
+</ol>
+
+
+<p>You should notice how the icon for your test files folder turns from orange to green:</p>
+
+<p><a href="http://www.peterfriese.de/images/2013-10-23-android-testing-with-robolectric/robolectric_test_folder.png" class="fancybox" title="Test Folder Setup"><img class="center" src="http://www.peterfriese.de/thumbs/robolectric_test_folder_200x150.png" alt="Test Folder Setup" /></a></p>
+
+<h3>Adding the Gradle Test Plug-in</h3>
+
+<p>In order to be able to run Android unit tests with Gradle, we need to add the <a href="https://github.com/JakeWharton/gradle-android-test-plugin">Gradle Android Test plug-in</a> to the build script.</p>
+
+<ol>
+<li>Add the maven snapshots repository to the build script repositories and regular repositories section. This is in order to get the fix provided in <a href="https://github.com/JakeWharton/gradle-android-test-plugin/pull/26">pull request 26</a>.</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'>   <span class="n">maven</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">url</span> <span class="s1">&#39;https://oss.sonatype.org/content/repositories/snapshots/&#39;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>   <br/>
+2. Add the plug-in to the dependencies section of your <code>build.gradle</code>file:</p>
+
+<pre><code>    classpath 'com.squareup.gradle:gradle-android-test-plugin:0.9.1-SNAPSHOT'
+</code></pre>
+
+<ol>
+<li>Apply the plug-in:</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'>   <span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;android-test&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>   <br/>
+4. Add test-only dependencies:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'>   <span class="n">testCompile</span> <span class="s1">&#39;junit:junit:4.10&#39;</span>
+</span><span class='line'>  <span class="n">testCompile</span> <span class="s1">&#39;org.robolectric:robolectric:2.1.+&#39;</span>
+</span><span class='line'>  <span class="n">testCompile</span> <span class="s1">&#39;com.squareup:fest-android:1.0.+&#39;</span>
+</span><span class='line'>  <span class="n">instrumentTestCompile</span> <span class="s1">&#39;junit:junit:4.10&#39;</span>
+</span><span class='line'>  <span class="n">instrumentTestCompile</span> <span class="s1">&#39;org.robolectric:robolectric:2.3-SNAPSHOT&#39;</span>
+</span><span class='line'>  <span class="n">instrumentTestCompile</span> <span class="s1">&#39;com.squareup:fest-android:1.0.+&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Your <code>build.gradle</code> should now look like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+</pre></td><td class='code'><pre><code class='groovy'><span class='line'><span class="n">buildscript</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">repositories</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">mavenCentral</span><span class="o">()</span>
+</span><span class='line'>      <span class="n">maven</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">url</span> <span class="s1">&#39;https://oss.sonatype.org/content/repositories/snapshots/&#39;</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  <span class="n">dependencies</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">classpath</span> <span class="s1">&#39;com.android.tools.build:gradle:0.6.+&#39;</span>
+</span><span class='line'>      <span class="n">classpath</span> <span class="s1">&#39;com.squareup.gradle:gradle-android-test-plugin:0.9.1-SNAPSHOT&#39;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;android&#39;</span>
+</span><span class='line'><span class="n">apply</span> <span class="nl">plugin:</span> <span class="s1">&#39;android-test&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">repositories</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">mavenCentral</span><span class="o">()</span>
+</span><span class='line'>  <span class="n">maven</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">url</span> <span class="s1">&#39;https://oss.sonatype.org/content/repositories/snapshots/&#39;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">android</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">compileSdkVersion</span> <span class="mi">18</span>
+</span><span class='line'>  <span class="n">buildToolsVersion</span> <span class="s2">&quot;18.1.0&quot;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">defaultConfig</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">minSdkVersion</span> <span class="mi">7</span>
+</span><span class='line'>      <span class="n">targetSdkVersion</span> <span class="mi">18</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">sourceSets</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">instrumentTest</span><span class="o">.</span><span class="na">setRoot</span><span class="o">(</span><span class="s1">&#39;src/test&#39;</span><span class="o">)</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">dependencies</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">compile</span> <span class="s1">&#39;com.android.support:appcompat-v7:+&#39;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">testCompile</span> <span class="s1">&#39;junit:junit:4.10&#39;</span>
+</span><span class='line'>  <span class="n">testCompile</span> <span class="s1">&#39;org.robolectric:robolectric:2.3-SNAPSHOT&#39;</span>
+</span><span class='line'>  <span class="n">testCompile</span> <span class="s1">&#39;com.squareup:fest-android:1.0.+&#39;</span>
+</span><span class='line'>  <span class="n">instrumentTestCompile</span> <span class="s1">&#39;junit:junit:4.10&#39;</span>
+</span><span class='line'>  <span class="n">instrumentTestCompile</span> <span class="s1">&#39;org.robolectric:robolectric:2.3-SNAPSHOT&#39;</span>
+</span><span class='line'>  <span class="n">instrumentTestCompile</span> <span class="s1">&#39;com.squareup:fest-android:1.0.+&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Adding a Customized Test Runner</h3>
+
+<p>Because of the way Robolectric looks for your <code>AndroidManifest.xml</code> during test startup, it won&#8217;t find the manifest if your tests are located in <code>src/test/java</code>. To alleviate this situation, we need to add a custom test runner.</p>
+
+<p>Add the following file to your project, making sure to place it somewhere in the <code>test</code> tree:</p>
+
+<figure class='code'><figcaption><span>RobolectricGradleTestRunner.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">android.app.Fragment</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">android.app.FragmentManager</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">android.app.FragmentTransaction</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">android.support.v4.app.FragmentActivity</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.junit.runners.model.InitializationError</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.robolectric.AndroidManifest</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.robolectric.Robolectric</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.robolectric.RobolectricTestRunner</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.robolectric.annotation.Config</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.robolectric.res.Fs</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RobolectricGradleTestRunner</span> <span class="kd">extends</span> <span class="n">RobolectricTestRunner</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">RobolectricGradleTestRunner</span><span class="o">(</span><span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">testClass</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">InitializationError</span> <span class="o">{</span>
+</span><span class='line'>      <span class="kd">super</span><span class="o">(</span><span class="n">testClass</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nd">@Override</span>
+</span><span class='line'>  <span class="kd">protected</span> <span class="n">AndroidManifest</span> <span class="nf">getAppManifest</span><span class="o">(</span><span class="n">Config</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">String</span> <span class="n">manifestProperty</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;android.manifest&quot;</span><span class="o">);</span>
+</span><span class='line'>      <span class="k">if</span> <span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">manifest</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="n">Config</span><span class="o">.</span><span class="na">DEFAULT</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">manifestProperty</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">String</span> <span class="n">resProperty</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;android.resources&quot;</span><span class="o">);</span>
+</span><span class='line'>          <span class="n">String</span> <span class="n">assetsProperty</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;android.assets&quot;</span><span class="o">);</span>
+</span><span class='line'>          <span class="k">return</span> <span class="k">new</span> <span class="nf">AndroidManifest</span><span class="o">(</span><span class="n">Fs</span><span class="o">.</span><span class="na">fileFromPath</span><span class="o">(</span><span class="n">manifestProperty</span><span class="o">),</span> <span class="n">Fs</span><span class="o">.</span><span class="na">fileFromPath</span><span class="o">(</span><span class="n">resProperty</span><span class="o">),</span>
+</span><span class='line'>                  <span class="n">Fs</span><span class="o">.</span><span class="na">fileFromPath</span><span class="o">(</span><span class="n">assetsProperty</span><span class="o">));</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>      <span class="n">AndroidManifest</span> <span class="n">appManifest</span> <span class="o">=</span> <span class="kd">super</span><span class="o">.</span><span class="na">getAppManifest</span><span class="o">(</span><span class="n">config</span><span class="o">);</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">appManifest</span><span class="o">;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Writing Your First Robolectric Test</h2>
+
+<p>Let&#8217;s write our first test! Add the following class to <code>src/test/java</code>:</p>
+
+<figure class='code'><figcaption><span>MainActivityTest.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">de</span><span class="o">.</span><span class="na">peterfriese</span><span class="o">.</span><span class="na">robolectricdemo</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.junit.runner.RunWith</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">de.peterfriese.robolectric.RobolectricGradleTestRunner</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">junit</span><span class="o">.</span><span class="na">Assert</span><span class="o">.</span><span class="na">assertTrue</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@RunWith</span><span class="o">(</span><span class="n">RobolectricGradleTestRunner</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivityTest</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nd">@Test</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">shouldFail</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">assertTrue</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>A couple of things to note here:</p>
+
+<p>Firstly, we use the newly created <code>RobolectricGradleTestRunner</code>to make sure the test can access the Android manifest (and thereby the other Android components in your app).</p>
+
+<p>Secondly, we added a simple test method, making suer it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it <em>does not</em> fail, we know that something is wrong.</p>
+
+<p>So, let&#8217;s run the test!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>./gradlew <span class="nb">test</span>
+</span><span class='line'>
+</span><span class='line'>de.peterfriese.robolectricdemo.MainActivityTest &gt; shouldFail FAILED
+</span><span class='line'>java.lang.AssertionError at MainActivityTest.java:15
+</span><span class='line'>
+</span><span class='line'>1 <span class="nb">test </span>completed, 1 failed
+</span><span class='line'>:RobolectricDemo:testDebug FAILED
+</span><span class='line'>
+</span><span class='line'>FAILURE: Build failed with an exception.
+</span><span class='line'>
+</span><span class='line'>* What went wrong:
+</span><span class='line'>Execution failed <span class="k">for </span>task <span class="s1">&#39;:RobolectricDemo:testDebug&#39;</span>.
+</span><span class='line'>&gt; There were failing tests. See the report at: file:///Users/peterfriese/Projects/peterfriese.de/Robolectric/RobolectricDemoProject/RobolectricDemo/build/test-report/debug/index.html
+</span><span class='line'>
+</span><span class='line'>* Try:
+</span><span class='line'>Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+</span><span class='line'>
+</span><span class='line'>BUILD FAILED
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So, the test failed - just as we expected. You can open the test report (<code>../RobolectricDemoProject/RobolectricDemo/build/test-report/debug/index.html</code>) in your browser to get more detailed information about the test run.</p>
+
+<h2>Enhancing the Test</h2>
+
+<p>Now that we&#8217;ve got everything in place, let&#8217;s develop a small feature in a test-driven way. You already noted how we enhanced the UI of the application at the beginning, but apart from looking nice, there&#8217;s not much functionality.</p>
+
+<p>Let&#8217;s enhance the app so the user can enter their name, press a button and be greeted by the application.</p>
+
+<p>Make sure to statically import the Android FEST assertations - they&#8217;ll help us to write our tests in a fluent manner:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">fest</span><span class="o">.</span><span class="na">assertions</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">ANDROID</span><span class="o">.</span><span class="na">assertThat</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As we need to have access to the app&#8217;s main activity in all of our tests, let&#8217;s add a private field for it and create a setup method that will create a fresh activity before each test is run:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">private</span> <span class="n">MainActivity</span> <span class="n">activity</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@Before</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">setup</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">activity</span> <span class="o">=</span> <span class="n">Robolectric</span><span class="o">.</span><span class="na">buildActivity</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">get</span><span class="o">();</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is a good practice to ensure the UI is fired up and all UI elements have been initialized as expected (i.e. are not null):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Test</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">shouldNotBeNull</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">assertThat</span><span class="o">(</span><span class="n">activity</span><span class="o">).</span><span class="na">isNotNull</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">TextView</span> <span class="n">textView</span> <span class="o">=</span> <span class="o">(</span><span class="n">TextView</span><span class="o">)</span> <span class="n">activity</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">textView</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">assertThat</span><span class="o">(</span><span class="n">textView</span><span class="o">).</span><span class="na">isNotNull</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">Button</span> <span class="n">button</span> <span class="o">=</span> <span class="o">(</span><span class="n">Button</span><span class="o">)</span> <span class="n">activity</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">button</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">assertThat</span><span class="o">(</span><span class="n">button</span><span class="o">).</span><span class="na">isNotNull</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">EditText</span> <span class="n">editText</span> <span class="o">=</span> <span class="o">(</span><span class="n">EditText</span><span class="o">)</span> <span class="n">activity</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">editText</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">assertThat</span><span class="o">(</span><span class="n">editText</span><span class="o">).</span><span class="na">isNotNull</span><span class="o">();</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next, let&#8217;s write a test that places a text inside the edit field, presses the button and compares the result in the text view with the expected result.</p>
+
+<p>Here is the test method:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Test</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">shouldProduceGreetingWhenButtonPressed</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">TextView</span> <span class="n">textView</span> <span class="o">=</span> <span class="o">(</span><span class="n">TextView</span><span class="o">)</span> <span class="n">activity</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">textView</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">Button</span> <span class="n">button</span> <span class="o">=</span> <span class="o">(</span><span class="n">Button</span><span class="o">)</span> <span class="n">activity</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">button</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">EditText</span> <span class="n">editText</span> <span class="o">=</span> <span class="o">(</span><span class="n">EditText</span><span class="o">)</span> <span class="n">activity</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">editText</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">editText</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">&quot;Peter&quot;</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">button</span><span class="o">.</span><span class="na">performClick</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">assertThat</span><span class="o">(</span><span class="n">textView</span><span class="o">).</span><span class="na">containsText</span><span class="o">(</span><span class="s">&quot;Hello, Peter!&quot;</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you run the test, it will obviously fail, so let&#8217;s fix this.</p>
+
+<p>Open <code>MainActivity.java</code> and insert the following private class:</p>
+
+<figure class='code'><figcaption><span>MainActivity.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">MainFragment</span> <span class="kd">extends</span> <span class="n">Fragment</span> <span class="o">{</span>
+</span><span class='line'>  <span class="nd">@Override</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="n">View</span> <span class="nf">onCreateView</span><span class="o">(</span><span class="n">LayoutInflater</span> <span class="n">inflater</span><span class="o">,</span> <span class="n">ViewGroup</span> <span class="n">container</span><span class="o">,</span> <span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="kd">final</span> <span class="n">View</span> <span class="n">rootView</span> <span class="o">=</span> <span class="n">inflater</span><span class="o">.</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">fragment_main</span><span class="o">,</span> <span class="n">container</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">Button</span> <span class="n">button</span> <span class="o">=</span> <span class="o">(</span><span class="n">Button</span><span class="o">)</span> <span class="n">rootView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">button</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">button</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>          <span class="nd">@Override</span>
+</span><span class='line'>          <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>              <span class="n">TextView</span> <span class="n">textView</span> <span class="o">=</span> <span class="o">(</span><span class="n">TextView</span><span class="o">)</span> <span class="n">rootView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">textView</span><span class="o">);</span>
+</span><span class='line'>              <span class="n">EditText</span> <span class="n">editText</span> <span class="o">=</span> <span class="o">(</span><span class="n">EditText</span><span class="o">)</span> <span class="n">rootView</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">editText</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>              <span class="n">textView</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;Hello, %s!&quot;</span><span class="o">,</span> <span class="n">editText</span><span class="o">.</span><span class="na">getText</span><span class="o">()));</span>
+</span><span class='line'>          <span class="o">}</span>
+</span><span class='line'>      <span class="o">});</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">return</span> <span class="n">rootView</span><span class="o">;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see, this code will register an <code>OnClickListener</code> for the button and set the text of the text view according to the value of the edit field.</p>
+
+<p>Also, change the constructor of <code>MainActivity</code> so it uses the new fragment class when instantiating the view fragment:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'> <span class="k">if</span> <span class="o">(</span><span class="n">savedInstanceState</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">getSupportFragmentManager</span><span class="o">().</span><span class="na">beginTransaction</span><span class="o">()</span>
+</span><span class='line'>              <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">container</span><span class="o">,</span> <span class="k">new</span> <span class="n">MainFragment</span><span class="o">())</span>
+</span><span class='line'>              <span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+</span><span class='line'>  <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The test should now pass:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>./gradlew <span class="nb">test</span>
+</span><span class='line'>BUILD SUCCESSFUL
+</span><span class='line'>
+</span><span class='line'>Total <span class="nb">time</span>: 7.066 secs    
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Conclusion</h2>
+
+<p>Setting up Robolectric so that you can use both Gradle and Android Studio may not be as simple as it should be, but it&#8217;s reasonably easy with the information I have given you above. Adding Robolectric to a new Android project is just a matter of minutes with these instructions and helps you save a lot of time you&#8217;d have had to spend otherwise running the tests on the emulator or on physical devices.</p>
+
+<p>The source code for this blog post is <a href="https://github.com/peterfriese/RobolectricDemoProject">available on Github</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Annotated Links, Issue 5]]></title>
@@ -1162,52 +1798,6 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 <p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
 
 <p>(image of Gyroscope by stop that pigeon! taken from http://www.flickr.com/photos/25312309@N05/2651042796/)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Eclipse DemoCamp Hamburg November 2010]]></title>
-    <link href="http://www.peterfriese.de/eclipse-democamp-hamburg-november-2010/"/>
-    <updated>2010-11-15T07:28:17+00:00</updated>
-    <id>http://www.peterfriese.de/eclipse-democamp-hamburg-november-2010</id>
-    <content type="html"><![CDATA[<p>Last Friday was a happy day for Java developers in Hamburg: not only did Apple and Oracle announce their plan to continue development of Java on the Mac OSX platform, but we also had the pleasure to host this fall&#8217;s instance of Eclipse DemoCamp Hamburg in a bookstore!</p>
-
-<!-- more -->
-
-
-<p>We had a nice lineup of four speakers - unfortunately not all of them were able to attend due to a cold, but we were lucky enough to find one additional speaker - thanks Jan!</p>
-
-<p>After a casual meet-and-greet with <a href="http://www.fritz-kola.de/">Fritz Kola</a> and Pretzels, <a href="http://twitter.com/#!/robilad">Dalibor Topic</a> opened the official part of the evening with an overview of what&#8217;s coming up in JDK7 and JDK8. Here&#8217;s a list of things that sound quite interesting:</p>
-
-<ul>
-<li>Support for dynamically-typed languages (InvokeDynamic) (<a href="http://openjdk.java.net/projects/mlvm">project page</a>)</li>
-<li>Small language enhancements (Project Coin) (<a href="http://openjdk.java.net/projects/coin/">project page</a>)</li>
-<li>An even newer NIO (<a href="http://openjdk.java.net/projects/nio/">project page</a>)</li>
-</ul>
-
-
-<p>The good news of the day of course was a <a href="http://blogs.oracle.com/henrik/2010/11/oracle_and_apple_announce_openjdk_project_for_osx.html">press release announcing OpenJDK for Mac OSX</a>. Nevertheless, <a href="http://twitter.com/#!/robilad/status/3129373515321344">Dalibor demoed a freshly built OpenJDK 7 BSD port</a> on his MacBook.</p>
-
-<p><a href="http://www.peterfriese.de/images/2010-11-15-eclipse-democamp-hamburg-november-2010/democamp01.png" class="fancybox" title="Dalibor Topic"><img class="right" src="http://www.peterfriese.de/thumbs/democamp01_300x224.png" alt="Dalibor Topic" /></a></p>
-
-<p>After a short break, it was <a href="http://eclipsesource.com/blogs/author/rsternberg/">Ralf Sternberg&#8217;s turn</a> to give an overview of <a href="http://www.eclipse.org/rap/">RAP</a> and explain what Single Sourcing is. With the help of RAP, it is rather easy to bring Eclipse RCP applications to the web. Of course, you&#8217;ll have to pay attention to a few things, as Ralf pointed out: usually, RCP applications are single-user apps, whereas web applications are inherently multi-user enabled. Fortunately, RAP comes with a few utilities that cater for this fact.</p>
-
-<p>One thing I was delighted to learn: not only do RAP applications run on the iPad, but also do they support drawing using the SWT API, as you can see in the following video:</p>
-
-<div class="embed-video-container"><iframe src="http://player.vimeo.com/video/16829527 "></iframe></div>
-
-
-<p>In the last sessions, <a href="http://www.eclipse.org/Xtext/">Xtext</a> committer <a href="http://koehnlein.blogspot.com/">Jan Köhnlein</a> showed us some of the things coming up in Xtext 2.0. Being text-addicted, Jan refrained from using slides and used the IDE instead to deliver his talk:</p>
-
-<p><a href="http://www.peterfriese.de/images/2010-11-15-eclipse-democamp-hamburg-november-2010/democamp02.png" class="fancybox" title="Jan Köhnlein talking about Xbase and Xtext"><img class="right" src="http://www.peterfriese.de/thumbs/democamp02_300x224.png" alt="Jan Köhnlein talking about Xbase and Xtext" /></a></p>
-
-<p>Jan showed us how Xbase (no, not <a href="http://en.wikipedia.org/wiki/Xbase">xBase</a>) can be used to develop DSLs (and even GPLs) that not only describe structural features but also behavior. He also demoed Xdoc, a newly invented documentation language, and the fancy new Xtext syntax view (featuring <a href="http://en.wikipedia.org/wiki/Syntax_diagram">railroad diagrams</a>).</p>
-
-<p>After the demos, we had some time for chats and impromptu hack sessions. Given the event took place in a book store (many thanks to Lehmanns for having us!), you could also browse and buy books.</p>
-
-<p>Thanks to the fact we only had about 40 attendees, there were plenty of chances for networking which people really seemed to enjoy.</p>
-
-<p>I&#8217;d like to thank everybody who attended the DemoCamp or gave a demo! <a href="http://twitter.com/#!/peterfriese">Follow me on twitter</a> to be informed ahead of time for the next DemoCamp!</p>
 ]]></content>
   </entry>
   

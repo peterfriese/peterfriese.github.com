@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Open Source Software (OSS) is becoming more important and plays a vital role in the IT business today. I mean, can you imagine doing a software &hellip;">
+  <meta name="description" content="Scanning my RSS feeds today, I came across this post by Magnus Jungsbluth in which he deals with the question &#8220;Is Model Driven Development &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,76 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/some-thoughts-on-the-merits-of-model-driven-software-development/">Some Thoughts on the Merits of Model Driven Software Development</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-08-05T14:13:21+01:00" pubdate data-updated="true">Aug 5<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Scanning my RSS feeds today, I came across <a href="http://katastrophos.net/magnus/blog/2008/08/03/is-model-driven-development-faster/">this</a> post by Magnus Jungsbluth in which he deals with the question &#8220;Is Model Driven Development Faster?&#8221;.  As Magnus points out, the question whether you can be faster by using model driven development points in a wrong direction. Just being faster is not a major goal of model driven development. It&#8217;s the quality that counts. Model driven development helps you to concentrate on the relevant parts of your software (i.e. the business logic) instead of having to care too much about the architectural plumbing around the business logic. Yes, using a code generator saves you some time. Precious time you will be able to invest into other parts of the software you build. This will amount to a higher quality of your software.  Magnus mentions some more prejudices people have towards model driven software development. Here are a few:</p>
+
+<h4>&#8220;Higher level of abstraction = more complicated&#8221;</h4>
+
+<p>Now, this is plain wrong. Model driven approaches do not aim at making things more complicated. They aim at making things simpler and easier to achieve. This is what we mean by &#8220;raising the level of abstraction&#8221;. I guess it&#8217;s the word &#8220;abstract&#8221; which makes most people think things become more complicated.  <a href="http://en.wikipedia.org/wiki/Abstraction">Wikipedia states that</a> &#8221;<em><strong>Abstraction</strong> is the process or result of generalization by <strong>reducing the information content</strong> of a concept or an observable phenomenon, typically in order to <strong>retain only information which is relevant</strong> for a particular purpose.</em>&#8221; This definition makes clear that abstraction helps to <em>simplify</em> things in order to concentrate on only the relevant parts.</p>
+
+<p>Consider a subway map: it is an abstraction of a geographical map, leaving out all the superfluous information, just retaining what is needed to find your way in the underground. The subway map is a <strong>domain specific</strong> map, explicitly aimed at a special purpose. If you need to find your way by car, you&#8217;d need a different kind of map.</p>
+
+<p><a href="http://www.peterfriese.de/wp-content/subway.png"><img src="http://www.peterfriese.de/wp-content/subway.png" alt="Subway map" /></a></p>
+
+<p>Abstraction in the context of model driven software development means to leave out the superfluous details and concentrate on the relevant parts. Let me give you an example: If you are writing  a software for your HR department, you really shouldn&#8217;t need to care about writing getters and setters and how exactly to write that m:n relationship mapping in hibernate. Instead, you should concentrate on the names and types of the attributes and the fact that a certain relationship indeed is an m:n relationship.</p>
+
+<h4>&#8220;MDSD / DSLs enable business users to write software&#8221;</h4>
+
+<p>&#8230; do business users (i.e. the people who are going to be using your software) want to write software on their own at all? I don&#8217;t think so. Modern business live is organized by division of labour, which is a good thing because it allows us to do the things we&#8217;re good at and specialize ourselves.</p>
+
+<p>Although I don&#8217;t think business users should programm their own software using MDSD or DSLs, I believe that using MDSD and DSLs will help to bridge the gap between developers and business users. Much is gained if a developer and a business user can look at a graphical or textual model and discuss the business requirements in  language both understand. It is the task of software architects to ensure that the models being used can be written in this very domain specific language.</p>
+
+<p>Oh, and please resist the temptation to provide a graphical language that tries to mirror a textual DSL one-to-one. Graphical syntaxes and textual syntaxes are very different. Things that can very easily be expressed in a graphical language  might look very awkward when mapped to a textual language and vice versa. Don&#8217;t get me wrong - there&#8217;s nothing evil about using different concrete syntaxes to provide views on one common / shared model. However, graphical languages are better suited to provide an overview of a system or module, whereas textual languages are better suited to flesh out the details.</p>
+
+<h4>&#8220;Versioning is tough, DSLs do not support versioning&#8221;</h4>
+
+<p>While it certainly is true that traditional UML tools are not that well suited for collaborative work (much due to the fact that most tools store their models either in a proprietary format or in monster XMI files), this is not true for external textual DSLs.</p>
+
+<p>When using a textual external DSL, your model is plain text. Thus, your models can now be very easily stored in a version control system such as Subversion or CVS. And of course they can be diffed and merged. Using textual DSLs feels very &#8220;natural&#8221; to programmers after all.</p>
+
+<h4>Conclusion</h4>
+
+<p>So, to sum up: model driven development is neither some kind of obscure art which takes you years to learn and understand. Nor does it make things more complicated. It aims at aking your life easier. It does not neccesarily <em>save</em> you time, but it will help you to better <em>use</em> your time to build better software. One of the reasons your software will be better than before is that your business users will be able to discuss with you using a language you both understand.</p>
+
+<p>That&#8217;s what model driven software development is about.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -605,73 +675,6 @@ Using MINT, you can highlight the parts of the source code which have been chang
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/openarchitectureware-43-to-be-released-in-april-2008/">openArchitectureWare 4.3 to Be Released in April 2008</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-04-03T10:08:59+01:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>The openArchitectureWare is working in the upcoming release 4.3 of oAW which is scheduled for mid-April 2008.</p>
-
-<p>oAW 4.3 will largely be a maintenance release with a number of bugfixes and minor enhancements.</p>
-
-<p>However, the Xtext component will feature some major new features:</p>
-
-<ul>
-<li><p>support for model referencing</p></li>
-<li><p>support for referencing and instantiating existing meta models</p></li>
-<li><p>Xtext implements EMF&#8217;s resource (Xtext models can be referenced from other EMF models)</p></li>
-<li><p>some GUI enhancements</p>
-
-<ul>
-<li><p>Quick Outline</p></li>
-<li><p>Viewpoints</p></li>
-<li><p>Context-sensitive highlighting</p></li>
-</ul>
-</li>
-</ul>
-
-
-<p>Additionally, we introduced the oAW EMF Validation Adapter, which integrates oAW&#8217;s Check language with the EMF validation framework.</p>
-
-<p>The next two weeks are dedicated to bug fixing and testing. To gather feedback from the community, we are providing nightly builds at<a href="http://oawbranch.pluginbuilder.org/"> http://oawbranch.pluginbuilder.org/</a> (thanks to the team at PluginBuilder.org for supporting us!).</p>
-
-<p>Starting this week, we will also provide a bleeding edge Eclipse distribution including oAW and all dependencies. This distro will be available at <a href="http://oaw.itemis.eu">http://oaw.itemis.eu</a>.</p>
-
-<p>If you can spare some time, we&#8217;ll be happy to accept your findings (and praise :-) ) on the <a href="https://bugs.eclipse.org/bugs/">Eclipse bugzilla</a>.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/9/">&larr; Older</a>
@@ -694,6 +697,10 @@ Using MINT, you can highlight the parts of the source code which have been chang
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/android-testing-with-robolectric/">Android Testing with Robolectric</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-issue-5/">Annotated Links, Issue 5</a>
       </li>
     
@@ -707,10 +714,6 @@ Using MINT, you can highlight the parts of the source code which have been chang
     
       <li class="post">
         <a href="/annotated-links-for-week-33/">Annotated Links for Week 33</a>
-      </li>
-    
-      <li class="post">
-        <a href="/annotated-links-for-week-32/">Annotated Links for Week 32</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Xtext has been released as a part of the Eclipse Galileo release train on June 24th, 2009. Xtext is a framework for building DLSs (domain specific &hellip;">
+  <meta name="description" content="Last week, I showed you how easy it is to create a DSL with Xtext. In this installment, we will have a look at how to leverage the models created &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +96,57 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/getting-started-with-xtext-part-2/">Getting Started With Xtext, Part 2</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-11T23:48:56+01:00" pubdate data-updated="true">Jul 11<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Last week, <a href="http://www.peterfriese.de/getting-started-with-xtext/">I showed you how easy</a> it is to create a DSL with <a href="http://www.xtext.org">Xtext</a>. In this installment, we will have a look at how to leverage the models created with the DSL.</p>
+
+<h3>Goal</h3>
+
+<p>Let&#8217;s imagine we want to create an application for orders. People can sign in to the system, place orders for various items, check out and have them sent to their address. Very simple, but we can show a lot of things here.</p>
+
+<p>As we expect to be writing more than one application of this type and as we also would like to be able to express the structure of the application on a business level (one of the major drivers for DSLs and MDSD for that matter), we come up with the idea of using a DSL to describe what the application does. Defining the DSL is what we did last week. This week, we need to map the concepts of the DSL to some code and some APIs we&#8217;re going to program against.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/getting-started-with-xtext-part-2/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -965,98 +1016,6 @@ h6. An HTML sixth-level heading
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/canada-eh/">Canada, Eh!</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-04-01T04:35:53+01:00" pubdate data-updated="true">Apr 1<span>st</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>So this is the last post I am writing in Canada for quite some time. I shall be heading back to Germany tonight on AC 876 - let&#8217;s see if they&#8217;ve got <a href="http://www.peterfriese.de/o-canada/">disco lights</a> again :-)</p>
-
-<p>It has been a packed time and I guess I met more people in these two months than I ever met before in a comparable period of time. Oh, did I tell you that I used to be a shy person? Well, at least I seem to have found ways to cope with that trait.</p>
-
-<p>As I look back onto the past two months, here are some things that I really like about Canada:</p>
-
-<ul>
-<li><p>People generally seem to be more open than people in Germany. This might of course be influenced by the fact that everybody uses their first names when communicating. I also have gotten used to the little &#8220;how are you today&#8221; conversation at the beginning of each transaction. Let&#8217;s see what happens when I try that on German shop assistants&#8230;</p></li>
-<li><p>Although (or maybe just because) it was winter when I came to Canada, I really like the landscape: the wide fields, the forests, the snow&#8230; Often, on my rides through Ontario, I would get the felling of somehow knowing how much greater it must be in summer.</p></li>
-<li><p>I also like the fact you can go shopping almost any hour of day, any day of the week. In fact, I was surprised to hear that there are some stores that are not open 24/7 ;-)</p></li>
-<li><p>Turning right on a red light. Very time-saving, I wonder why we don&#8217;t have this in Germany, as we&#8217;re said to be oh so efficient&#8230;</p></li>
-</ul>
-
-
-<p>The list of things I didn&#8217;t like too much is much shorter:</p>
-
-<ul>
-<li>Tim Hortons coffee. Don&#8217;t go there. It tastes like metal. Besides, they do not know what Coffee Latte is. And don&#8217;t even try to get a Cappucino - it will be Vanilla-flavoured. Check out Second Cup instead - they have some decent coffee there and they know how to make a Latte.</li>
-</ul>
-
-
-<p>There are a number of people that really have made my stay really memorable:</p>
-
-<p>Thanks to Christian and Linda, Jeff and Nancy for so generously hosting me when I came to Ottawa.</p>
-
-<p>Thanks to Ian, Mike and Wayne of the Eclipse Foundation for connecting me with so many people.</p>
-
-<p>Thanks to Lynn for taking me on the Ottawa tour, that was a fun day out!
-[</p>
-
-<p><img src="http://farm4.static.flickr.com/3356/3318079266_d8e1ef9a37.jpg" alt="Lynn Gayowski" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3318079266)</p>
-
-<p>Thanks to Peter and Gisela Weidelich and the fine people at the Sunnyvale Baptist Church for giving me a spiritual home for the last few weeks.</p>
-
-<p>Thanks to Simon and Anneta for spending Sunday before EclipseCon with me in San Francisco and for giving me a lift!
-[</p>
-
-<p><img src="http://farm4.static.flickr.com/3574/3401069896_8235d3c33f.jpg" alt="Anneta &amp; Simon" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3401069896)</p>
-
-<p>Most of all, thanks to Ed Merks for hosting me at his place in the probably most difficult time of his life. Ed, I owe you.
-[</p>
-
-<p><img src="http://farm4.static.flickr.com/3180/3282302405_8056aafe07.jpg" alt="Amber, Ruby, Ed" /></p>
-
-<p>](http://www.flickr.com/photos/81029262@N00/3282302405)</p>
-
-<p>Oh, and thanks to everybody who reassured me that they couldn&#8217;t figure out where I come from by just listening to my dialect :-)</p>
-
-<p>You all have given me a sense of being welcome to Canada. Although I am really looking forward to returning to Germany and seeing my family again, I am feeling like I am leaving a new family behind.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -1079,6 +1038,10 @@ h6. An HTML sixth-level heading
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/android-testing-with-robolectric/">Android Testing with Robolectric</a>
+      </li>
+    
+      <li class="post">
         <a href="/annotated-links-issue-5/">Annotated Links, Issue 5</a>
       </li>
     
@@ -1092,10 +1055,6 @@ h6. An HTML sixth-level heading
     
       <li class="post">
         <a href="/annotated-links-for-week-33/">Annotated Links for Week 33</a>
-      </li>
-    
-      <li class="post">
-        <a href="/annotated-links-for-week-32/">Annotated Links for Week 32</a>
       </li>
     
   </ul>
