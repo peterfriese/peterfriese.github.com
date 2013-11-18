@@ -23,14 +23,12 @@ This is an overview of my upcoming talks. Feel free to follow [my Lanyrd profile
 
 ## Bio and pictures
 
-{% img left http://www.peterfriese.de/wp-content/Peter3_large-200x300.jpg %}
-
-{% img left http://www.peterfriese.de/wp-content/Peter1_large-200x300.jpg %}
-
-{% img left http://www.peterfriese.de/wp-content/Peter3bw_large-200x300.jpg %}
-
-{% img left http://www.peterfriese.de/wp-content/Peter1bw_large-200x300.jpg %}
-
+{% fancyalbum 100x150 %}
+/images/speaking/Peter3_large-200x300.jpg: Peter Friese
+/images/speaking/Peter1_large-200x300.jpg: Peter Friese
+/images/speaking/Peter3bw_large-200x300.jpg: Peter Friese
+/images/speaking/Peter1bw_large-200x300.jpg: Peter Friese
+{% endfancyalbum %}
 
 Peter Friese is a software engineer with 15+ years hands-on experience in software development, technical writing and public speaking. Peter works as a software engineering consultant at Zühlke Engineering. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, he has in-depth knowledge in a broad range of technologies. His main areas of expertise are model-driven software development, cross-platform mobile development (iPhone, Android, Windows Phone 7, and mobile web) and Eclipse tooling. Peter blogs at http://www.peterfriese.de and tweets at @peterfriese.
 
