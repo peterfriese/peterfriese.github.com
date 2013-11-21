@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Debugging | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/debugging/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-21T10:41:18+00:00</updated>
+  <updated>2013-11-21T10:47:38+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -170,7 +170,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <p><iframe src="http://www.slideshare.net/slideshow/embed_code/17145826 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
 
-<p>Also, Heiko Behrens and I had a chat about debugging iOS apps - it is available as an episode of the excellent (ok, I am biased) podcast <a href="http://www.UISprech.de">UISprech</a> (in German only, sorry) at <a href="http://UISprech.de/7">UISprech</a>.</p>
+<p>Also, Heiko Behrens and I had a chat about debugging iOS apps - it is available as an episode of the excellent (ok, I am biased) podcast <a href="http://www.UISprech.de">UISprech</a> (in German only, sorry) here: <a href="http://UISprech.de/7">UISprech #7: Debugging Tools mit Peter Friese</a>.</p>
 ]]></content>
   </entry>
   
