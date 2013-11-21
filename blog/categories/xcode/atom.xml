@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Xcode | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/xcode/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-21T09:32:15+00:00</updated>
+  <updated>2013-11-21T10:41:18+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.peterfriese.de/debugging-tips-for-ios-developers/"/>
     <updated>2013-11-21T12:00:00+00:00</updated>
     <id>http://www.peterfriese.de/debugging-tips-for-ios-developers</id>
-    <content type="html"><![CDATA[<p>Let's face it - no matter how hard you try, no matter how disciplined you are in writing unit tests and following the TDD drill of writing a failing test first and then adding the production code that turns the test green - bugs are inevitably linked to our lives. In this post, I'll show you a number of debugging techniques that might come in handy for your next project. Hopefully, you know some of them already, but I am sure some of them will be new for you.</p>
+    <content type="html"><![CDATA[<p>Let's face it - no matter how hard you try, no matter how many testers you use in manual tests, no matter how disciplined you are in writing unit tests and following the TDD drill of writing a failing test first and then adding the production code that turns the test green - bugs are inevitably linked to our lives. In this post, I'll show you a number of debugging techniques that might come in handy for your next project. Hopefully, you know some of them already, but I am sure some of them will be new for you.</p>
 
 <!-- more -->
 
@@ -33,15 +33,22 @@
 
 <p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint.png" class="fancybox" title="Simple Breakpoint"><img class="right" src="/thumbs/breakpoint_300x150.png" alt="Simple Breakpoint" /></a></p>
 
-<p>You can create a breakpoint by clicking on the line number in the editor gutter. The breakpoint will be displayed as a solid blue indicator in the gutter. From that moment on, your application will pause execution as soon as execution reaches the breakpoint. To temporarily disable the breakpoint, just click on the breakpoint indicator, which will then turn light blue to indicate it is disabled.</p>
+<p>You can create a breakpoint by clicking on the line number in the editor gutter. The breakpoint will be displayed as a solid blue indicator in the gutter. From that moment on, your application will pause execution as soon as execution reaches the breakpoint.</p>
 
 <h3>Editing Breakpoints</h3>
 
-<p>Breakpoints have properties that you can edit by right-clicking on a berakpoint indicator. Selecting the <em>Edit Breakpoint</em> menu will display a tool window which allows you to customize various aspects of a breakpoint.</p>
+<p>There are a few ways to manipulate breakpoints:</p>
+
+<ol>
+<li><p>To temporarily disable the breakpoint, just click on the breakpoint indicator, which will then turn light blue to indicate it is disabled.</p></li>
+<li><p>To remove a breakpoint, drag it off the editor gutter, making sure to crank up the volume to enjoy the swooshing sound ;-)</p></li>
+<li><p>Breakpoints have properties that you can edit by right-clicking on a breakpoint indicator. Selecting the <em>Edit Breakpoint</em> menu will display a tool window which allows you to customize various aspects of a breakpoint, effectively turning a breakpoint into a conditional breakpoint:</p></li>
+</ol>
+
 
 <h3>Conditional Breakpoints</h3>
 
-<p>Selecting <em>Edit Breakpoint</em> presents you with a tool window with options for the selected breakpoint. Setting any of those options will turn a regular breakpoint into a conditional breakpoint, allowing you to specify exactly under which circumstances execution should stop at the breakpoint. What's more, you can specify certain actions that should take place when the breakpoint criteria are met.</p>
+<p>The various properties of a conditional breakpoint allow you to specify exactly under which circumstances execution should stop at the breakpoint. What's more, you can specify certain actions that should take place when the breakpoint criteria are met.</p>
 
 <p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint_condition.png" class="fancybox" title="Conditional Breakpoint"><img class="right" src="/thumbs/breakpoint_condition_300x150.png" alt="Conditional Breakpoint" /></a></p>
 
@@ -54,19 +61,21 @@
 
 <p>Something which is unique to Xcode is the option to execute a certain action whenever a breakpoint is hit. There are a number of interesting actions, such as:</p>
 
-<pre><code>1. Execute an AppleScript
-2. Capturing an OpenGL ES frame
-3. Issue a Debugger command (more on that later)
-4. Log or speak a message
-5. Execute a shell command
-6. Play a sound
-</code></pre>
+<ol>
+<li>Execute an AppleScript</li>
+<li>Capturing an OpenGL ES frame</li>
+<li>Issue a Debugger command (more on that later)</li>
+<li>Log or speak a message</li>
+<li>Execute a shell command</li>
+<li>Play a sound</li>
+</ol>
+
 
 <p>Of all those options, speaking a message or playing a sound stand out the most. While you might think these are just toys, they are actually very useful in combination with the option to continue execution after hitting the breakpoint.</p>
 
 <p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint_speak.png" class="fancybox" title="Breakpoint with Action"><img class="right" src="/thumbs/breakpoint_speak_300x150.png" alt="Breakpoint with Action" /></a></p>
 
-<p>Just consider for example an app that waits for the arrival of a background signal while the user does something in the app. Now, if you place a breakpoint on the line that receives the background signal and configure the breakpoint to play a signal or speak a message, you can go on an exercise the app in the foreground while waiting for the background message to arrive. As soon as the message arrives, you'll hear the sound play and can take appropriate actions.</p>
+<p>Just consider for example an app that waits for the arrival of a background signal while the user does something in the app. Now, if you place a breakpoint on the line that receives the background signal and configure the breakpoint to play a signal or speak a message, you can go on and exercise the app in the foreground while waiting for the background message to arrive. As soon as the message arrives, you'll hear the sound play and can take appropriate actions.</p>
 
 <h3>Exception Breakpoints</h3>
 
@@ -74,7 +83,7 @@
 
 <h3>Symbolic breakpoints</h3>
 
-<p>Symbolic breakpoints are useful when you want to stop in a pice of code that you don't have source code for. Let's say you're interested in who (and when) calls <code>tableView:numberOfRowsInSection</code>. Just create a new symbolic breakpoint, using the symbol <code>tableView:numberOfRowsInSection</code>. The debugger will now break whenever any piece of code in your app sends this very message - no matter if it's your code or code from a third party.</p>
+<p>Symbolic breakpoints are useful when you want to stop in a piece of code that you don't have source code for. Let's say you're interested in who (and when) calls <code>tableView:numberOfRowsInSection</code>. Just create a new symbolic breakpoint, using the symbol <code>tableView:numberOfRowsInSection</code>. The debugger will now break whenever any piece of code in your app sends this very message - no matter if it's your code or code from a third party.</p>
 
 <h2>The Debugger Console</h2>
 
@@ -82,7 +91,7 @@
 
 <p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/debugarea.png" class="fancybox" title="Xcode Debugger"><img class="center" src="/thumbs/debugarea_600x400.png" alt="Xcode Debugger" /></a></p>
 
-<p>However, sometimes it can be tedious to click-navigate through a deep hierarchy of nested properties. This is when the debugger console comes in handy. It is located on the right hand side of the debug area. Just click inside the white space and type a command. When debuging Objective-C code for iOS, you're most likely using <a href="http://lldb.llvm.org/">lldb</a>. Former versions of Xcode used <a href="https://www.gnu.org/software/gdb/">gbd</a> as their default debugger. A comparison of lldb and gdb, including a list of commands they support can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html.%20A%20more%20in-depth%20documentation%20of%20lldb%20can%20be%20found%20[here](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-terminal-workflow-tutorial.html">here</a>. Don't worry - you do not have to wade through all of this documentation, I'll give you a run down of the most important commands here:</p>
+<p>However, sometimes it can be tedious to click-navigate through a deep hierarchy of nested properties. This is when the debugger console comes in handy. It is located on the right hand side of the debug area. Just click inside the white space and type a command. When debuging Objective-C code for iOS, you're most likely using <a href="http://lldb.llvm.org/">lldb</a>. Former versions of Xcode used <a href="https://www.gnu.org/software/gdb/">gbd</a> as their default debugger. A comparison of lldb and gdb, including a list of commands they support can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html">here</a>. A more in-depth documentation of lldb can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-terminal-workflow-tutorial.html">here</a>. Don't worry - you do not have to wade through all of this documentation, I'll give you a run down of the most important commands here:</p>
 
 <h3>Printing Objects</h3>
 
@@ -157,11 +166,11 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <h2>More Info</h2>
 
-<p>If you're interested in learning more about this topic, check out this presentation:</p>
+<p>If you're interested in learning more about debugging iOS apps in general and some tools that might come in handy, check out this presentation:</p>
 
 <p><iframe src="http://www.slideshare.net/slideshow/embed_code/17145826 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
 
-<p>Also, Heiko Behrens and I had a chat about debugging iOS apps in general - it is available (in German only, sorry) at <a href="http://UISprech.de">UISprech</a>.</p>
+<p>Also, Heiko Behrens and I had a chat about debugging iOS apps - it is available as an episode of the excellent (ok, I am biased) podcast <a href="http://www.UISprech.de">UISprech</a> (in German only, sorry) at <a href="http://UISprech.de/7">UISprech</a>.</p>
 ]]></content>
   </entry>
   
