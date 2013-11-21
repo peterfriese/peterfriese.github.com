@@ -9,7 +9,8 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="During the last weeks, I have been putting up a GUI prototype for the next version of the Eclipse FindBugs plug-in. You can get it on the downloads &hellip;">
+  <meta name="description" content="You can use this command to load more than one application context file into a spring context: String serviceContextLocation = "service.xml";
+String &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -110,6 +111,90 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/loading-more-than-one-applicationcontext-xml-file-into-a-spring-context/">Loading More Than One applicationContext XML File Into a Spring Context</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-26T15:32:42+00:00" pubdate data-updated="true">Jan 26<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>You can use this command to load more than one application context file into a spring context:</p>
+
+<p><code>String serviceContextLocation = "service.xml";
+String serverContextLocation = "server.xml";
+ClassPathXmlApplicationContext combinedContext = new ClassPathXmlApplicationContext(new String[] {serviceContextLocation, serverContextLocation});</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/docbook-rocks/">DocBook Rocks!</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-24T22:17:42+00:00" pubdate data-updated="true">Jan 24<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>I decided to write the documentation for my current project using <a href="http://www.docbook.org/">DocBook</a>. After using it for a few days, I must admit that I really love it: using <a href="http://docbook.sourceforge.net/projects/xsl/">DocBook XSL</a>, you can transform it to PDF, HTML (one single large file or many small files, one for each chapter), HTML Help or even Eclipse Help! Much to my pleasure, I found a really amazing Eclipse plug-in that helps me edit my DocBook files (in fact, you could any XML editor to edit those files). The plug-in I am talking of is called <a href="http://vex.sourceforge.net/">Vex-A Visual Editor for XML</a>. Although originally intended to edit XML files in general, it has been written with enough flexibility in mind. The editor uses a stylesheet to render the XML files into a visual representation (see the <a href="http://vex.sourceforge.net/screenshots.html">Screenshots</a>). Now I can edit my DocBook files in WYSIWYG - great!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>

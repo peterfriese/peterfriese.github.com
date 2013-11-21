@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Jeffrey Overbey talked about building refactoring tools using the LTK and his research work &#8220;Ludwig&#8221;. I guess you all agree with me that &hellip;">
+  <meta name="description" content="In the current SE-Radio episode, Laurence Tratt interviews Eelco Visser on Parsing. If you&#8217;re interested in Domain Specific Languages (DSLs), &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -110,6 +110,233 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/software-engineering-radio-eelco-visser-on-parsing/">Software Engineering Radio: Eelco Visser on Parsing</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-02T13:57:15+00:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2008</time>
+        
+         | <a href="/software-engineering-radio-eelco-visser-on-parsing/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>In the <a href="http://www.se-radio.net/podcast/2008-11/episode-118-eelco-visser-parsers">current SE-Radio episode</a>, <a href="http://tratt.net/laurie/">Laurence Tratt</a> interviews <a href="http://eelcovisser.org/">Eelco Visser</a> on <a href="http://en.wikipedia.org/wiki/Parsing">Parsing</a>.</p>
+
+<p>If you&#8217;re interested in <a href="http://en.wikipedia.org/wiki/Domain-specific_language">Domain Specific Languages (DSLs)</a>, you should take some time to listen to this episode. Especially the part on <a href="http://en.wikipedia.org/wiki/Scannerless_parsing">scanner-less parsing</a> is very interesting, as it allows to mingle code from different languages in one single file.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/using-xpand-in-your-eclipse-wizards/">Using Xpand in Your Eclipse Wizards</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-28T12:42:26+00:00" pubdate data-updated="true">Nov 28<span>th</span>, 2008</time>
+        
+         | <a href="/using-xpand-in-your-eclipse-wizards/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>At <a href="http://www.eclipsecon.org/summiteurope2008/">ESE</a>, I had a nice chat with <a href="http://mea-bloga.blogspot.com/">Chris</a> (actually, I had a lot of nice chats with a lot of nice people - it was quite a challenge to attend any of the sessions), who told me that he was looking into template engines. I leave it up to you to make any assumptions on why he&#8217;s interested in template engines. I happen to know at least three template engines: Velocity (which I had the joy of using in my active days at AndroMDA.org), the template, erhm, &#8230; mechanism being used in PDE (I <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=241074">once fixed a bug</a> which had been caused by this engine) and - you might have guessed it - Xpand (which I am a committer on).</p>
+
+<p>So, I gave a short demo of Xtext and Xpand to show Chris how easy it is to create (model-aware) code generation templates. Xpand comes with a nice editor which makes template editing a joy - it features code highlighting, hyperlink navigation, model-awareness and other editor goodness.</p>
+
+<p>Instead of letting only Chris know how that works, here&#8217;s a short guide on how to write your own Xpand template and use it in a wizard. To make the example more realistic, I chose to implement a wizard that creates an Ant build.xml file for a simple project (something which is missing in Eclipse, AFAIK). So, here we go.</p>
+
+<h2>Prerequisites:</h2>
+
+<ul>
+<li><p>Eclipse 3.5M3 (3.4 might also do)</p></li>
+<li><p><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/emf/emf/downloads/drops/2.5.0/S200811032126/emf-sdo-xsd-SDK-2.5.0M3.zip">EMF 2.5.0M3</a></p></li>
+<li><p><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/emft/compare/downloads/drops/0.8.1/R200809170822/emft-compare-SDK-incubation-0.8.1.zip">EMF Compare 0.8.1</a></p></li>
+<li><p><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/emft/mwe/downloads/drops/0.7.0/S200811120303/emft-mwe-SDK-incubation-0.7.0M3.zip">MWE 0.7.0M3</a></p></li>
+<li><p><a href="http://www.eclipse.org/modeling/download.php?file=/modeling/m2t/xpand/downloads/drops/0.7.0/S200811120513/m2t-xpand-SDK-incubation-0.7.0M3.zip">Xpand 0.7.0M3</a></p></li>
+</ul>
+
+
+<h2>How to do it</h2>
+
+<ol>
+<li><p>Download and install the prerequisites.</p></li>
+<li><p>Create a new plug-in project named &#8220;de.peterfriese.antwizard&#8221;</p></li>
+<li><p>Add a New File Wizard to the project. I used the Custom plug-in Wizard to get me started.</p></li>
+<li><p>Brush up the wizard page and add some fields for project name, source folder and binary folder.</p></li>
+<li><p>We want to transfer the values entered in this wizard into our template, so we need to create an Ecore model that describes our data model.[</p></li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3047/3065637332_0f345eaf86_o.jpg" alt="antwizard_metamodel" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3065637332)</p>
+
+<ol>
+<li><p>Add <em>org.eclipse.emf</em> and <em>org.eclipse.emf.edit</em> to the dependencies of you plug-in.</p></li>
+<li><p>Create a genmodel and let EMF generate the model code for you.</p></li>
+<li><p>Add code to your wizard that transfers the values from the input fields to your model. One might consider using databinding for doing this, I used a straight forward read&#8217;n&#8217;write approach for the time being:</p></li>
+</ol>
+
+
+<pre><code>public boolean performFinish() {
+    final String containerName = page.getContainerName();
+    final String srcDirName = page.getSrcDirName();
+    final String binDirName = page.getBinDirName();
+    // ...
+}
+private BuildSpecification createModel(IProject project, String srcDirName,
+    String binDirName) {
+    BuildSpecification buildSpecification = BuildspecificationFactory.eINSTANCE.createBuildSpecification();
+    Project projectSpecification = BuildspecificationFactory.eINSTANCE.createProject();
+    projectSpecification.setName(project.getName());
+    projectSpecification.setBinaryFolder(binDirName);
+    projectSpecification.setSourceFolder(srcDirName);
+    buildSpecification.setProject(projectSpecification);
+    return buildSpecification;
+}
+</code></pre>
+
+<ol>
+<li>Create an Xpand template <em>de.peterfriese.antwizard/src/template/BuildTemplate.xpt</em>:
+[</li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3008/3064840225_f3f3b2e799_o.jpg" alt="Ant file template" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3064840225)
+In case you wonder how to get those funky characters: make sure us create this file using the Xpand editor - it has code assist (CTRL + space) for those characters.</p>
+
+<ol>
+<li>Create an Xtend file <em>de.peterfriese.antwizard/src/template/GeneratorExtensions.ext</em>:
+[</li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3045/3065691432_b59ba29444_o.jpg" alt="Ant file extensions" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3065691432)</p>
+
+<ol>
+<li><p>Add <em>org.eclipse.xpand</em>, <em>org.eclipse.xtend</em> and <em>org.eclipse.xtend.typesystem.emf</em> to the depencies of your plug-in.</p></li>
+<li><p>Finally, we need to provide some code to invoke the generator:</p></li>
+</ol>
+
+
+<pre><code>private void generate(BuildSpecification buildSpec, IProgressMonitor monitor) throws CoreException {
+
+    // get project root folder as absolute file system path
+    IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+    IResource resource = root.findMember(new Path(buildSpec.getProject().getName()));
+    String containerName = resource.getLocation().toPortableString();
+
+    // configure outlets
+    OutputImpl output = new OutputImpl();
+    Outlet outlet = new Outlet(containerName);
+    outlet.setOverwrite(true);
+    output.addOutlet(outlet);
+
+    // create execution context
+    Map globalVarsMap = new HashMap();
+    XpandExecutionContextImpl execCtx = new XpandExecutionContextImpl(output, null, globalVarsMap, null, null);
+    EmfRegistryMetaModel metamodel = new EmfRegistryMetaModel() {
+        @Override
+        protected EPackage[] allPackages() {
+            return new EPackage[] { BuildspecificationPackage.eINSTANCE, EcorePackage.eINSTANCE };
+        }
+    };
+    execCtx.registerMetaModel(metamodel);
+
+    // generate
+    XpandFacade facade = XpandFacade.create(execCtx);
+    String templatePath = "template::BuildTemplate::main";
+    facade.evaluate(templatePath, buildSpec);
+
+    // refresh the project to get external updates:
+    resource.refreshLocal(IResource.DEPTH_INFINITE, monitor);
+}
+</code></pre>
+
+<p>That&#8217;s it!</p>
+
+<h2>Taking it for a spin</h2>
+
+<ol>
+<li><p>Launch a runtime workbench by selecting <em>de.peterfriese.antwizard/META-INF/MANIFEST.MF</em> and invoking <em>Run As -> Eclipse Application</em></p></li>
+<li><p>Create a new Java project in the runtime workspace.</p></li>
+<li><p>Invoke your wizard by selecting <em>File -> New -> Other&#8230; -> Ant -> Ant build file from existing project</em></p></li>
+<li><p>Enter the required information (project name, source folder, binariy folder)</p></li>
+<li><p>After clicking on <em>finish</em>, you should get a fresh Ant file for your project:
+[</p></li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3215/3064865073_3415a7b0c3_o.jpg" alt="Ant file" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3064865073)</p>
+
+<ol>
+<li>Enjoy!</li>
+</ol>
+
+
+<p>You can download the project <a href="http://www.peterfriese.de/wp-content/downloads/plugins/model_driven_ant_wizard.zip">here</a>. Feedback and comments are welcome!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -665,127 +892,6 @@ Everyone in the room was quite impressed with what is possible with Object Teams
 <p><a href="http://www.akquinet.de/?id=objektforum">ObjektForum Nord</a></p>
 
 <p><img src="http://hosting.shp-rp.de/hosting/east/de/gfx/4_2intro.jpg" alt="East Hotel Conference Area" /></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/eclipse-stammtisch-diversity-at-its-best/">Eclipse Stammtisch: Diversity at Its Best</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-09-02T16:14:14+01:00" pubdate data-updated="true">Sep 2<span>nd</span>, 2008</time>
-        
-         | <a href="/eclipse-stammtisch-diversity-at-its-best/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>Yesterday, the seconds Eclipse Stammtisch in Hamburg took place. About twenty Eclipse-addicts showed up to talk about all things Eclipse over <a href="http://www.fritz-kola.de/">some</a> <a href="http://en.wikipedia.org/wiki/Beer">frosty</a> beverages and delicious <a href="http://www.roxie-hamburg.com/">Roxie-style</a> food.</p>
-
-<p><img src="http://farm4.static.flickr.com/3029/2820232477_0fbb17a57a_m.jpg" alt="Peter, Martin, Karsten" /></p>
-
-<p><img src="http://farm4.static.flickr.com/3246/2820239717_824a1098e8_m.jpg" alt="Ralph" /></p>
-
-<p><img src="http://farm4.static.flickr.com/3057/2821076594_e313df5ee7_m.jpg" alt="More Eclipse Enthusiasts, including Sebastian and Miguel" /></p>
-
-<p>I had some very intersting conversations about topics like</p>
-
-<ul>
-<li><p>potential analysis of public transport</p></li>
-<li><p>wood chemistry and how to use Eclipse technology to detect smudges in paper machines</p></li>
-<li><p>how to find the best seat on your next flight (check out <a href="http://www.seatguru.com">seatguru.com</a>)</p></li>
-<li><p>and of course, <a href="http://www.xtext.org">textual DSLs</a></p></li>
-</ul>
-
-
-<p>As you can guess from the topics, we had participants from a very diverse range of industries and fields of study. I guess that&#8217;s a sign for a healthy ecosystem.</p>
-
-<p>Ralph and I talked about the evolution of the Eclipse ecosystem and the rise and fall of companies. We both agreed that companies who want to gain benefits from the Eclipse ecosystem are well advised to invest into their staff, making sure their developers, architects, projects leads and product managers are well-connected with the community.</p>
-
-<p>Networking is becoming more and more important and events like the Eclipse Stammtisch and Eclipse DemoCamps make it easy to get to know other like-minded people.</p>
-
-<p>If you are interested in participating in the next Eclipse Stammtisch in Hamburg, just <a href="mailto:peter.friese@itemis.de?subject=Eclipse%20Stammtisch%20Hamburg">drop me a short mail with the subject line &#8220;Eclipse Stammtisch Hamburg&#8221;</a> and I&#8217;ll send you an invitation for the next Stammtisch in time.</p>
-
-<p>Oh, and by the way: I&#8217;d love to see some Eclipse enthusiasts from companies like OTTO, Adobe and Google next time ;-)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/second-eclipse-stammtisch-in-hamburg-next-monday/">Second Eclipse Stammtisch in Hamburg Next Monday</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-08-27T15:47:21+01:00" pubdate data-updated="true">Aug 27<span>th</span>, 2008</time>
-        
-         | <a href="/second-eclipse-stammtisch-in-hamburg-next-monday/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>As <a href="http://www.peterfriese.de/eclipse-stammtisch-hamburg-recap/#comments">requested</a> by many and already announced at the last <a href="http://www.peterfriese.de/eclipse-democamp-hamburg-review/">Eclipse DemoCamp in Hamburg</a>, we&#8217;ll be having another Stammtisch in Hamburg next week!</p>
-
-<p>If you happen to be in our around Hamburg next week please be sure to drop by, say hi and have a frosty beverage (Ralph will attend the Stammtisch, so I guess at least one beer&#8217;s on the house).</p>
-
-<p>Here are the details:
-Location: <a href="http://www.roxie-hamburg.com">Roxie</a>, Hamburg
-Directions: <a href="http://www.roxie-hamburg.com/roxieway.htm">http://www.roxie-hamburg.com/roxieway.htm</a>
-When: September 1st, 19:00</p>
-
-<p>Please be sure to RSVP using our <a href="http://www.doodle.de/5k7x7e83mbd9p24i">Doodle poll</a>.</p>
-
-<p>We&#8217;re looking forward to seeing you on Monday!</p>
 </div>
   
   

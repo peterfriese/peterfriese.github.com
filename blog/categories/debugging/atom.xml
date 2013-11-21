@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Debugging | Peter Friese]]></title>
+  <link href="http://www.peterfriese.de/blog/categories/debugging/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2013-11-21T09:26:06+00:00</updated>
+  <id>http://www.peterfriese.de/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Debugging Tips for iOS Developers]]></title>
+    <link href="http://www.peterfriese.de/debugging-tips-for-ios-developers/"/>
+    <updated>2013-11-21T12:00:00+00:00</updated>
+    <id>http://www.peterfriese.de/debugging-tips-for-ios-developers</id>
+    <content type="html"><![CDATA[<p>Let's face it - no matter how hard you try, no matter how disciplined you are in writing unit tests and following the TDD drill of writing a failing test first and then adding the production code that turns the test green - bugs are inevitably linked to our lives. In this post, I'll show you a number of debugging techniques that might come in handy for your next project. Hopefully, you know some of them already, but I am sure some of them will be new for you.</p>
+
+<!-- more -->
+
+
+<p>Sometimes, you are responsible for a bug, sometimes bugs are in a third party library you use in your project. And sometimes, the documentation of an API doesn't match the implementation, giving you funny results for code that slavishly adheres to the official documentation.</p>
+
+<p>With the following techniques, you'll be able to go hunting for bugs and find out where they came from. Once you've found out (and fixed the bug), you should consider writing a unit test to prevent future regressions. So, here we go.</p>
+
+<h2>Breakpoints</h2>
+
+<p>Most developers are familiar with the concept of breakpoints, but if you're new to Xcode you might wonder how to create or modify a breakpoint, so I'll give a brief overview.</p>
+
+<p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint.png" class="fancybox" title="Simple Breakpoint"><img class="right" src="/thumbs/breakpoint_300x150.png" alt="Simple Breakpoint" /></a></p>
+
+<p>You can create a breakpoint by clicking on the line number in the editor gutter. The breakpoint will be displayed as a solid blue indicator in the gutter. From that moment on, your application will pause execution as soon as execution reaches the breakpoint. To temporarily disable the breakpoint, just click on the breakpoint indicator, which will then turn light blue to indicate it is disabled.</p>
+
+<h3>Editing Breakpoints</h3>
+
+<p>Breakpoints have properties that you can edit by right-clicking on a berakpoint indicator. Selecting the <em>Edit Breakpoint</em> menu will display a tool window which allows you to customize various aspects of a breakpoint.</p>
+
+<h3>Conditional Breakpoints</h3>
+
+<p>Selecting <em>Edit Breakpoint</em> presents you with a tool window with options for the selected breakpoint. Setting any of those options will turn a regular breakpoint into a conditional breakpoint, allowing you to specify exactly under which circumstances execution should stop at the breakpoint. What's more, you can specify certain actions that should take place when the breakpoint criteria are met.</p>
+
+<p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint_condition.png" class="fancybox" title="Conditional Breakpoint"><img class="right" src="/thumbs/breakpoint_condition_300x150.png" alt="Conditional Breakpoint" /></a></p>
+
+<p>For example, in order to stop execution inside a <code>UITableViewController</code>s <code>tableView:cellForRowAtIndexPath:</code> method when the table view controller requests the cell for the 3rd row, add this condition:</p>
+
+<pre><code>indexPath.row == 2
+</code></pre>
+
+<p>Of course, you can specify more complex conditions as you see fit.</p>
+
+<p>Something which is unique to Xcode is the option to execute a certain action whenever a breakpoint is hit. There are a number of interesting actions, such as:</p>
+
+<pre><code>1. Execute an AppleScript
+2. Capturing an OpenGL ES frame
+3. Issue a Debugger command (more on that later)
+4. Log or speak a message
+5. Execute a shell command
+6. Play a sound
+</code></pre>
+
+<p>Of all those options, speaking a message or playing a sound stand out the most. While you might think these are just toys, they are actually very useful in combination with the option to continue execution after hitting the breakpoint.</p>
+
+<p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint_speak.png" class="fancybox" title="Breakpoint with Action"><img class="right" src="/thumbs/breakpoint_speak_300x150.png" alt="Breakpoint with Action" /></a></p>
+
+<p>Just consider for example an app that waits for the arrival of a background signal while the user does something in the app. Now, if you place a breakpoint on the line that receives the background signal and configure the breakpoint to play a signal or speak a message, you can go on an exercise the app in the foreground while waiting for the background message to arrive. As soon as the message arrives, you'll hear the sound play and can take appropriate actions.</p>
+
+<h3>Exception Breakpoints</h3>
+
+<p>Exception Breakpoints are a very powerful tool - basically they allow you to spot places in your code where an exception is thrown (and not caught). So instead of just marvelling at a crash in <code>main.m</code>, add an Exception breakpoint to your project (by clicking the tiny <code>+</code> icon on the bottom of the breakpoints view).</p>
+
+<h3>Symbolic breakpoints</h3>
+
+<p>Symbolic breakpoints are useful when you want to stop in a pice of code that you don't have source code for. Let's say you're interested in who (and when) calls <code>tableView:numberOfRowsInSection</code>. Just create a new symbolic breakpoint, using the symbol <code>tableView:numberOfRowsInSection</code>. The debugger will now break whenever any piece of code in your app sends this very message - no matter if it's your code or code from a third party.</p>
+
+<h2>The Debugger Console</h2>
+
+<p>As soon as your application has hit a breakpoint, you can start inspecting its current state. Most likely, you'll use the <em>Debug area</em> at the bottom of the Xcode window to do so.</p>
+
+<p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/debugarea.png" class="fancybox" title="Xcode Debugger"><img class="center" src="/thumbs/debugarea_600x400.png" alt="Xcode Debugger" /></a></p>
+
+<p>However, sometimes it can be tedious to click-navigate through a deep hierarchy of nested properties. This is when the debugger console comes in handy. It is located on the right hand side of the debug area. Just click inside the white space and type a command. When debuging Objective-C code for iOS, you're most likely using <a href="http://lldb.llvm.org/">lldb</a>. Former versions of Xcode used <a href="https://www.gnu.org/software/gdb/">gbd</a> as their default debugger. A comparison of lldb and gdb, including a list of commands they support can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html.%20A%20more%20in-depth%20documentation%20of%20lldb%20can%20be%20found%20[here](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-terminal-workflow-tutorial.html">here</a>. Don't worry - you do not have to wade through all of this documentation, I'll give you a run down of the most important commands here:</p>
+
+<h3>Printing Objects</h3>
+
+<p>If you want to peek inside an object, you can use the <code>po</code> (<strong>p</strong>rint <strong>o</strong>bject) command:</p>
+
+<pre><code>(lldb) po index
+1
+</code></pre>
+
+<p>You can dig deeper into objects, like this:</p>
+
+<pre><code>(lldb) po todo.title
+Eat an apple
+</code></pre>
+
+<h3>Printing Primitives</h3>
+
+<p>Say you want to print the contents of a variable which isn't an object, for example the length of the string in the previous example. Using the <code>p</code> (<strong>p</strong>rint) command you can print the value of primitives such as integers or constants:</p>
+
+<pre><code>(lldb) p i
+17
+</code></pre>
+
+<p>You can even invoke methods:</p>
+
+<pre><code>(lldb) p [todo.title length]
+10
+</code></pre>
+
+<h3>Assigning Values</h3>
+
+<p>If you quickly want to change the value of a variable without having to restart your app, use the <code>expr</code> (<strong>expr</strong>ession) command:</p>
+
+<pre><code>(lldb) expr todo.title = @"Changed"
+(NSString *) $6 = 0x0c139a80 @"Changed"
+</code></pre>
+
+<h3>Printing the Stacktrace</h3>
+
+<p>The current stack can be printed using the <code>bt</code> (thread <strong>b</strong>ack<strong>t</strong>race) command:</p>
+
+<pre><code>(lldb) bt
+* thread #1: tid = 0x1e05f, 0x0000381a TodoMobile`-[TodoListViewController tableView:cellForRowAtIndexPath:](self=0x0c795c40, _cmd=0x00fcbadf, tableView=0x0e25e400, indexPath=0x0c7f95e0) + 138 at TodoListViewController.m:67, queue = 'com.apple.main-thread, stop reason = breakpoint 1.1
+frame #0: 0x0000381a TodoMobile`-[TodoListViewController tableView:cellForRowAtIndexPath:](self=0x0c795c40, _cmd=0x00fcbadf, tableView=0x0e25e400, indexPath=0x0c7f95e0) + 138 at TodoListViewController.m:67
+frame #1: 0x0094e61f UIKit`-[UITableView _createPreparedCellForGlobalRow:withIndexPath:] + 412
+frame #2: 0x0094e6f3 UIKit`-[UITableView _createPreparedCellForGlobalRow:] + 69
+frame #3: 0x00932774 UIKit`-[UITableView _updateVisibleCellsNow:] + 2378
+frame #4: 0x00945e95 UIKit`-[UITableView layoutSubviews] + 213
+frame #5: 0x008ca267 UIKit`-[UIView(CALayerDelegate) layoutSublayersOfLayer:] + 355
+frame #6: 0x01b0381f libobjc.A.dylib`-[NSObject performSelector:withObject:] + 70
+frame #7: 0x048062ea QuartzCore`-[CALayer layoutSublayers] + 148
+frame #8: 0x047fa0d4 QuartzCore`CA::Layer::layout_if_needed(CA::Transaction*) + 380
+frame #9: 0x047f9f40 QuartzCore`CA::Layer::layout_and_display_if_needed(CA::Transaction*) + 26
+frame #10: 0x04761ae6 QuartzCore`CA::Context::commit_transaction(CA::Transaction*) + 294
+frame #11: 0x04762e71 QuartzCore`CA::Transaction::commit() + 393
+frame #12: 0x0481f430 QuartzCore`+[CATransaction flush] + 52
+frame #13: 0x0087bdc9 UIKit`_afterCACommitHandler + 131
+frame #14: 0x01d364ce CoreFoundation`__CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 30
+frame #15: 0x01d3641f CoreFoundation`__CFRunLoopDoObservers + 399
+frame #16: 0x01d14344 CoreFoundation`__CFRunLoopRun + 1076
+frame #17: 0x01d13ac3 CoreFoundation`CFRunLoopRunSpecific + 467
+frame #18: 0x01d138db CoreFoundation`CFRunLoopRunInMode + 123
+frame #19: 0x03a3f9e2 GraphicsServices`GSEventRunModal + 192
+frame #20: 0x03a3f809 GraphicsServices`GSEventRun + 104
+frame #21: 0x0085fd3b UIKit`UIApplicationMain + 1225
+frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:16
+</code></pre>
+
+<h2>Alternatives</h2>
+
+<p>If you're not happy with the level of tool support Xcode provides you with, I recommend taking a look at <a href="http://www.jetbrains.com/objc/">AppCode</a> - its debugger is a lot more powerful. However, it currently lacks support for sound breakpoints ;-)</p>
+
+<h2>More Info</h2>
+
+<p>If you're interested in learning more about this topic, check out this presentation:</p>
+
+<p><iframe src="http://www.slideshare.net/slideshow/embed_code/17145826 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
+
+<p>Also, Heiko Behrens and I had a chat about debugging iOS apps in general - it is available (in German only, sorry) at <a href="http://UISprech.de">UISprech</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Debugging Tips for iOS Developers]]></title>
+    <link href="http://www.peterfriese.de/debugging-tips-for-ios-developers+copy/"/>
+    <updated>2013-11-20T14:36:00+00:00</updated>
+    <id>http://www.peterfriese.de/debugging-tips-for-ios-developers copy</id>
+    <content type="html"><![CDATA[<p>Let's face it - no matter how hard you try, no matter how disciplined you are in writing unit tests and following the TDD drill of writing a failing test first and then adding the production code that turns the test green - bugs are inevitably linked to our lives. In this post, I'll show you a number of debugging techniques that might come in handy for your next project. Hopefully, you know some of them already, but I am sure some of them will be new for you.</p>
+
+<!-- more -->
+
+
+<p>Sometimes, you are responsible for a bug, sometimes bugs are in a third party library you use in your project. And sometimes, the documentation of an API doesn't match the implementation, giving you funny results for code that slavishly adheres to the official documentation.</p>
+
+<p>With the following techniques, you'll be able to go hunting for bugs and find out where they came from. Once you've found out (and fixed the bug), you should consider writing a unit test to prevent future regressions. So, here we go.</p>
+
+<h2>NSLog Debugging</h2>
+
+<p>What is sometimes considered ancient, can sometimes be a great asset. There is no shortage of logging frameworks for any given programming language, and Objective-C / iOS is <a href="http://cocoapods.org/?q=name%3Alogger">no exception to this</a>.</p>
+
+<p><blockquote><p>The most effective debugging tool is still careful thought, coupled with judiciously placed print statements.</p><footer><strong>Brian W. Kernighan</strong> <cite>Unix for Beginners</cite></footer></blockquote></p>
+
+<p>Sometimes, adding a logging framework is just overhead. However, instead of sprinkling your code with <code>NSLog</code> statements and later having to remove them when you go to production, consider using a slightly more sophisticated approach. Adding the following lines to your app's precompiled header file (<code>MyApp.pch</code>) will give you two log statements that will automatically be turned off when compiling your app for production:</p>
+
+<p>```objc</p>
+
+<h1>ifdef DEBUG</h1>
+
+<h1>define DLog(...) NSLog(@"%s %@", <strong>PRETTY_FUNCTION</strong>, [NSString stringWithFormat:<strong>VA_ARGS</strong>])</h1>
+
+<h1>define ALog(...) [[NSAssertionHandler currentHandler] handleFailureInFunction:[NSString stringWithCString:<strong>PRETTY_FUNCTION</strong> encoding:NSUTF8StringEncoding] file:[NSString stringWithCString:<strong>FILE</strong> encoding:NSUTF8StringEncoding] lineNumber:<strong>LINE</strong> description:<strong>VA_ARGS</strong>]</h1>
+
+<h1>else</h1>
+
+<p>  #define DLog(...) do { } while (0)
+  #ifndef NS_BLOCK_ASSERTIONS</p>
+
+<pre><code>#define NS_BLOCK_ASSERTIONS
+</code></pre>
+
+<p>  #endif
+  #define ALog(...) NSLog(@"%s %@", <strong>PRETTY_FUNCTION</strong>, [NSString stringWithFormat:<strong>VA_ARGS</strong>])</p>
+
+<h1>endif</h1>
+
+<p>```</p>
+
+<p>As <a href="http://www.cimgf.com/2010/05/02/my-current-prefix-pch-file/">Markus Zarra points out on his blog</a>, <code>DLog</code> will log the given message to the console, along with the name of the method it came from. <code>ALog</code>, on the other hand, will throw an assertion when it gets hit. During development, your application will terminate when it hits this instruction, printing a stacktrace so you can see where your app came from. When compiling for production, <code>DLog</code> will be replaced by a NOOP, whereas <code>ALog</code> will just print the name of the function it came from. This is useful to make sure you will notice these calls during development, whereas your users will not be harmed in production.</p>
+
+<h2>Interactive Debugging</h2>
+
+<p>If you use Xcode, you probably know that you can activate a line breakpoint by clicking on the line number in the editor gutter. Clicking on the breakpoint will temporarily disable it, clicking it again will re-enable it. A not so well-know fact is that you can remove a breakpoint by dragging it out of the gutter. You can also drag the breakpoint indicator to a new position in the gutter to break on a different line in the current method or a different method altogether.</p>
+
+<p>You can edit the properties of a breakpoint, which gives you some interesting and rather unique ways to debug your code. Let's look at the various options:</p>
+
+<ol>
+<li>The most prominent option is <em>Condition</em>, which gives you the opportunity to only stop execution when a certain condition is met. If you're inside a <code>UITableViewController::tableView:cellForRowAtIndexPath:</code> method you will find it convenient to stop when a certain <code>row</code> has been reached. Try this condition: <code>indexPath.row == 2</code> to stop when the third row has been reached.</li>
+<li>Another very similar option is <em>Ignore N times before stopping</em>. It's not as flexible as a conditional breakpoint, hwoever.</li>
+<li>Something which is unique to Xcode is the option to execute a certain action whenever a breakpoint is hit. There are a number of interesting actions, such as:
+
+<ol>
+<li>Execute an AppleScript</li>
+<li>Capturing an OpenGL ES frame</li>
+<li>Issue a Debugger command (more on that later)</li>
+<li>Log or speak a message</li>
+<li>Execute a shell command</li>
+<li>Play a sound</li>
+</ol>
+</li>
+</ol>
+
+
+<p>Of all those options, speaking a message or playing a sound stand out the most. While you might think these are just toys, they are actually very useful in combination with the option to continue execution after hitting the breakpoint.</p>
+
+<p>Just consider for example an app that waits for the arrival of a background signal while the user does something in the app. Now, if you place a breakpoint on the line that receives the background signal and configure the breakpoint to play a signal or speak a message, you can go on an exercise the app in the foreground while waiting for the background message to arrive. As soon as the message arrives, you'll hear the sound play and can take appropriate actions.</p>
+
+<p>In addition to regular and conditional breakpoints, there are two other types of breakpoints worth knowing about:</p>
+
+<ol>
+<li><em>Exception breakpoints</em> are useful for stopping program execution whenever an exception is thrown. You can choose whether to stop on throwing or cathing the exception, the default being <em>on throw</em>.</li>
+<li><em>Symbolic breakpoints</em> are useful when you want to stop in a pice of code that you don't have source code for. Let's say you're interested in who (and when) calls <code>tableView:numberOfRowsInSection</code>. Just create a new symbolic breakpoint, using the symbol <code>tableView:numberOfRowsInSection</code>. The debugger will now break whenever any piece of code in your app sends this very message - no matter if it's your code or code from a third party.</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>
