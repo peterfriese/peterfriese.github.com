@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="You may have noticed that Eclipse doesn&#8217;t really look native under Windows XP. This can easily be fixed by creating a manifest file for the &hellip;">
+  <meta name="description" content="After 3 official beta versions, Opera has relased version 8 of the Opera browser. You can get it in Windows and Linux flavors. The free version &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -110,46 +110,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/making-eclipse-look-good-under-windows-xp/">Making Eclipse Look Good Under Windows XP</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-05-02T22:09:22+01:00" pubdate data-updated="true">May 2<span>nd</span>, 2005</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>You may have noticed that Eclipse doesn&#8217;t really look native under Windows XP. This can easily be fixed by creating a manifest file for the Java VM used to start Eclipse, see <a href="http://wiki.schubart.net/How_to_Make_Eclipse_Use_the_Windows_XP_Skin">here</a>. The author mentions that it might not be easy to find out which JVM is used to start Eclipse. This, too, can easily be fixed by copying an entire <strong>JRE</strong> into the <em>eclipse</em> directory. Eclipse will automatically use this JRE to start up.</p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -551,6 +511,50 @@ Quick Preferences (now, you can enable / disable you proxy with just 2 (!) keyst
   <div class="entry-content">
         
     <p>Finally, after a long and cold winter (with lots of snow), spring has finally arrived in Hamburg and Norderstedt :-) The birds are singing, the air is warm and life looks a little brighter than usual.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/loading-more-than-one-applicationcontext-xml-file-into-a-spring-context/">Loading More Than One applicationContext XML File Into a Spring Context</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-01-26T15:32:42+00:00" pubdate data-updated="true">Jan 26<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>You can use this command to load more than one application context file into a spring context:</p>
+
+<p><code>String serviceContextLocation = "service.xml";
+String serverContextLocation = "server.xml";
+ClassPathXmlApplicationContext combinedContext = new ClassPathXmlApplicationContext(new String[] {serviceContextLocation, serverContextLocation});</code></p>
 </div>
   
   

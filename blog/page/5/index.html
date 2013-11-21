@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Last week I had the chance to speak at the EclipseDay at the GooglePlex in Mountain View, CA, an event organized by the Eclipse Foundation and &hellip;">
+  <meta name="description" content="We (i.e. the Eclipse Foundation, itemis and Cloudsmith) are looking into arranging one more Eclipse Modeling Day in North America this fall and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -110,63 +110,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/xtext-google/">Xtext @ Google</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-09-04T15:46:02+01:00" pubdate data-updated="true">Sep 4<span>th</span>, 2009</time>
-        
-         | <a href="/xtext-google/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>Last week I had the chance to speak at the <a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009">EclipseDay at the GooglePlex</a> in <a href="http://maps.google.com/?q=Google+Inc.%4037.423156,-122.084917&amp;hl=en&amp;ie=UTF8&amp;ll=37.42216,-122.085764&amp;spn=0.005283,0.011362&amp;t=h&amp;z=17">Mountain View, CA</a>, an event organized by the <a href="http://www.eclipse.org">Eclipse Foundation</a> and hosted by <a href="http://code.google.com/opensource/">Google&#8217;s Open Source Programs Office</a>.  Google is a truly amazing company and the GooglePlex is a very exciting place to be at. As I was one day early and needed a creative place to put finishing touches on my slides, I took the chance to visit <a href="http://konigsberg.blogspot.com/">Robert Konigsberg</a> who was kind enough to host me for that day.  The organizers put together a great agenda with lots of interesting talks. <a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts">Looking at the agenda</a>, you will see that there actually are three major topics, <strong>Eclipse in the Enterprise</strong>, <strong>Modeling</strong> and <strong>Runtime</strong>:  The talks</p>
-
-<ul>
-<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Eclipse_in_the_Enterprise:_Lessons_from_Google">Eclipse in the Enterprise: Lessons from Google</a></p></li>
-<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Distributed_OSGi_in_the_Eclipse_Runtime_Project">Distributed OSGi</a></p></li>
-<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Deploying_Successful_Enterprise_Tools">Deploying Successful Enterprise Tools</a></p></li>
-<li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Build_and_Provision:_Two_Sides_of_the_Coin_We_Love_to_Hate">Build and Provision</a></p></li>
-</ul>
-
-
-<p>all dealt with how Eclipse can be used in the Enterprise or which challenges you will face if you start using Eclipse in large-scale scenarios.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/xtext-google/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
   
   
     <article>
@@ -923,6 +866,172 @@ newnoteworthy.textile
 <p>The whole build script and the sample document are available for [drain file 17 url download] for free. If you need help setting up a tool chain or want to book me for consulting, drop me a line (peter dot friese at itemis dot com).</p>
 
 <p>Many thanks to <a href="http://greensopinion.blogspot.com/">David Green</a> and <a href="http://steffenpingel.de/">Steffen Pingel</a> of WikiText and Mylyn who tirelessly fixed bugs I found, applied patches and created EA builds!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/getting-started-with-wikitext/">Getting Started With WikiText</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-24T00:34:54+01:00" pubdate data-updated="true">Apr 24<span>th</span>, 2009</time>
+        
+         | <a href="/getting-started-with-wikitext/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Documentation is the bane of all developers. Nobody likes to write documentation, but most people know we need it. Even more so in Open Source projects. If you don&#8217;t have a decent documentation, it will be hard to find contributors which will eventually stall the projects ability to acquire new committers.</p>
+
+<p>While documenting code is discussed quite controversial (see <a href="http://twitter.com/peterfriese/status/1573456711">here</a>, <a href="http://twitter.com/EelcoVisser/status/1573534530">here</a>, <a href="http://twitter.com/peterfriese/status/1574872897">here</a> and <a href="http://twitter.com/EelcoVisser/status/1575307114">here</a>), most people seem at least to agree that a high level documentation outlining the concepts of the software in question <strong>is</strong> appropriate.</p>
+
+<p>The options to write high-level documentation are:</p>
+
+<ol>
+<li><p>Word processors like Word, OpenOffice, Pages and the like</p></li>
+<li><p>LaTeX</p></li>
+<li><p>DocBook</p></li>
+<li><p>Wikis</p></li>
+</ol>
+
+
+<p>Using word processors for writing high-level documentation has serious drawbacks, especially when a whole team needs to contribute to the documentation. Do you remember <a href="http://word.mvps.org/fAQs/General/RecoverMasterDocs.htm">master documents</a>?</p>
+
+<p>LaTeX is a great alternative, as it allows us to split documentation across several text files - this allows for efficient team work. Moreover, text files just cannot break and can be versioned / merged / diffed quite easily. However, LaTeX syntax is not for the faint of heart.</p>
+
+<p>DocBook is great, too: it uses XML to describe documents and has a great number of transformations to about every output format you could think of (<a href="http://www.sagehill.net/docbookxsl/PrintOutput.html">PDF</a>, <a href="http://www.sagehill.net/docbookxsl/HtmlCustomEx.html">HTML</a>, <a href="http://www.sagehill.net/docbookxsl/EclipseHelp.html">EclipseHelp</a>, <a href="http://www.sagehill.net/docbookxsl/HtmlHelp.html">HTML Help</a>, <a href="http://www.sagehill.net/docbookxsl/JavaHelp.html">JavaHelp</a> and even <a href="http://www.sagehill.net/docbookxsl/RefentryToMan.html">man pages</a>! However, not everybody likes XML and in fact DocBook tends to be a little noisy.</p>
+
+<p>So this leaves us with Wikis. They are great in many regards: you can write your documentation online, most wikis support versioning and diffing to a certain degree and most wikis have a decent collision detection that helps to work on documentation collaboratively. Thanks to offline Wiki editors for IDEs, we can even store wiki documents in local files.</p>
+
+<h2>Enter WikiText</h2>
+
+<p><a href="http://wiki.eclipse.org/Mylyn/FAQ#WikiText">WikiText</a> is such a tool. It actually is very flexible, as it allows you to use a multitude of wiki dialects to write your documentation. It also supports a number of output formats (HTML, Eclipse Help, DITA, DocBook and FOP). What&#8217;s more, it features a really nice text editor that can display Wiki markup almost in a WYSIWYG fashion. WikiText is developed and maintained by <a href="http://greensopinion.blogspot.com/">David Green</a>.</p>
+
+<p>So, without further ado, here is a quick introduction on how to install WikiText, writing your first document and transforming it to HTML.</p>
+
+<h2>Installing</h2>
+
+<p>Make sure you have a recent version of Eclipse installed. Then:</p>
+
+<ol>
+<li><p>Point your update manager (<em>Help -> Install new software</em>) to the Mylyn Update Site (http://download.eclipse.org/tools/mylyn/update/weekly/e3.4)</p></li>
+<li><p>Select the most recent version of Mylyn WikiText (as of this writing, this is WikiText 1.1.0.I20090423-1700-e3x) and install</p></li>
+</ol>
+
+
+<p>After the obligatory Eclipse restart, you can start using the WikiText editor.</p>
+
+<h2>Writing your first document</h2>
+
+<ol>
+<li><p>Create a new project (<em>File -> Project&#8230; -> General -> Project</em></p></li>
+<li><p>Create a new file. We will be using the <a href="http://textile.thresholdstate.com/">Textile</a> wiki syntax, so let&#8217;s name it <em>HelloWorld.textile</em></p></li>
+<li><p>Enter some text:</p></li>
+</ol>
+
+
+<pre><code>h1(#id). An HTML first-level heading
+
+Textile syntax is really simple. You can _emphasize_ text or *emphasize it even more*.
+
+Scaled images:
+!{width: 50%}images/eiffelturm.jpg!
+
+Enumerations also are very easy:
+
+* An item in a bulleted (unordered) list
+* Another item in a bulleted list
+** Second Level
+** Second Level Items
+*** Third level
+
+# An item in an enumerated (ordered) list 
+# Another item in an enumerated list 
+## Another level in an enumerated list 
+
+Let's have more headings:
+
+h2. An HTML second-level heading
+
+Here is a table:
+
+|_. Header |_. Header |_. Header |
+| Cell 1 | Cell 2 | Cell 3 |
+| Cell 1 | Cell 2 | Cell 3 |
+
+h2. An HTML third-level heading
+
+Here is some code:
+
+bc.. 
+package org.eclipse.workflow;
+
+public class Workflow {
+
+}
+
+p. Here is a plain old paragraph. It needs to start with "p." to mark the end of the code block above.
+
+
+h4. An HTML fourth-level heading
+
+Of course, we can also have hyperlinks: "Peter's homepage":http://www.peterfriese.de 
+
+h5. An HTML fifth-level heading
+
+h6. An HTML sixth-level heading
+</code></pre>
+
+<ol>
+<li>Create a new subfolder <em>images</em> and place an image in his folder. I used <a href="http://www.wiemann.eu/1/eiffelturm.jpg">this</a> one.</li>
+</ol>
+
+
+<p>You can always switch over to the <em>preview</em> pane, but you will notice that the source editor already does a decent job at rendering the text in a kind of WYSIWYG manner:
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3587/3469612438_469c476d6a.jpg" alt="WikiText markup and preview" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3469612438)</p>
+
+<h2>Transforming your document to HTML</h2>
+
+<p>In order to convert your document to a nicely rendered HTML document, just right-click on <em>HelloWorld.textile</em> in the package explorer and select <em>WikiText -> Generate HTML</em>. This will create anew file <em>HelloWorld.html</em> in the same directory. Double-click it to open it with a browser:
+[</p>
+
+<p><img src="http://farm4.static.flickr.com/3541/3469615654_a3fe0a9016.jpg" alt="HelloWorld.html" /></p>
+
+<p>](http://www.flickr.com/photos/81029262@N00/3469615654)</p>
+
+<h2>Automating, PDF, splitting documents,&#8230;</h2>
+
+<p>I hope I could whet your appetite. In the next installment, I am going to show you how to automate the process of transforming WikiText documents into output documents, how to create PDF (by way of exploiting DocBook) and how to split your documents into smaller chunks so you can work on them as a team. Stay tuned!</p>
 </div>
   
   
