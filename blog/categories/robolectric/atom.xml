@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Robolectric | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/robolectric/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-27T17:39:22+01:00</updated>
+  <updated>2013-11-27T17:49:51+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -325,6 +325,12 @@ public void shouldProduceGreetingWhenButtonPressed() {
 <p>Setting up an Android project for using Robolectric in Eclipse is quite a bit of work, as you just have seen, but it's reasonably easy with the information I have given you above. Adding Robolectric to a new Android project is just a matter of minutes with these instructions and helps you save a lot of time you'd have had to spend otherwise running the tests on the emulator or on physical devices.</p>
 
 <p>You might be interested in checking out my recent post on integrating Robolectric in a Gradle-based Android project in Android Studio - <a href="/android-testing-with-robolectric/">this way, please</a>.</p>
+
+<h2>Slides</h2>
+
+<p>Here are the slides I used for presenting this topic at <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2013/Hamburg">Eclipse Democamp November 2013 in Hamburg</a>:</p>
+
+<p><iframe src="http://www.slideshare.net/slideshow/embed_code/28679137 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
 ]]></content>
   </entry>
   
