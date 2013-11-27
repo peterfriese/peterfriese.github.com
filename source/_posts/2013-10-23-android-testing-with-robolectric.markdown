@@ -7,6 +7,7 @@ categories:
 - Android
 - Testing
 - Robolectric
+- Android Emulator
 asins:
 - "1118102274" # Professional Android 4 Application Development (Reto Meier)
 - "1937785017" # Cucumber Recipes: Automate Anything with BDD Tools and Techniques (Ian Dees, Matt Wynne, Aslak Hellesoy)
