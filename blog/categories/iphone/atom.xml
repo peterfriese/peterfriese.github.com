@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iPhone | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/iphone/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-21T12:24:32+00:00</updated>
+  <updated>2013-11-27T17:39:22+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Code Generation 2011 - Don't miss out!]]></title>
     <link href="http://www.peterfriese.de/code-generation-2011-dont-miss-out/"/>
-    <updated>2011-05-21T11:09:11+01:00</updated>
+    <updated>2011-05-21T12:09:11+02:00</updated>
     <id>http://www.peterfriese.de/code-generation-2011-dont-miss-out</id>
     <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven't booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
 
@@ -57,7 +57,7 @@
   <entry>
     <title type="html"><![CDATA[How to Use the Gyroscope of Your iPhone in a Mobile Web App]]></title>
     <link href="http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
-    <updated>2010-11-25T12:00:43+00:00</updated>
+    <updated>2010-11-25T13:00:43+01:00</updated>
     <id>http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
     <content type="html"><![CDATA[<p>This week's release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they're neither directly visible in the iOS UI nor are they mentioned in Apple's official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone's gyroscope. Read on to see it in action and learn how to use it.</p>
 
@@ -117,7 +117,7 @@ window.ondeviceorientation = function(event) {
   <entry>
     <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
     <link href="http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again/"/>
-    <updated>2010-09-19T21:15:30+01:00</updated>
+    <updated>2010-09-19T22:15:30+02:00</updated>
     <id>http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again</id>
     <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
 
@@ -171,7 +171,7 @@ window.ondeviceorientation = function(event) {
   <entry>
     <title type="html"><![CDATA[Why Your Next App Should be Open Sourced]]></title>
     <link href="http://www.peterfriese.de/why-your-next-app-should-be-open-sourced/"/>
-    <updated>2010-09-06T14:15:17+01:00</updated>
+    <updated>2010-09-06T15:15:17+02:00</updated>
     <id>http://www.peterfriese.de/why-your-next-app-should-be-open-sourced</id>
     <content type="html"><![CDATA[<p>I've been doing all sorts of software development over the past few years, from closed-source in-house software for companies to closed-source product development to open-source frameworks and tools development to closed-source app development.</p>
 
@@ -221,7 +221,7 @@ window.ondeviceorientation = function(event) {
   <entry>
     <title type="html"><![CDATA[Watching DVDs on your iPad]]></title>
     <link href="http://www.peterfriese.de/watching-dvds-on-your-ipad/"/>
-    <updated>2010-08-06T23:22:10+01:00</updated>
+    <updated>2010-08-07T00:22:10+02:00</updated>
     <id>http://www.peterfriese.de/watching-dvds-on-your-ipad</id>
     <content type="html"><![CDATA[<p>I've been wanting to watch DVDs on my iPad since I had it. As the iPad doesn't have an optical drive, you need to jump through several loopholes to get the trick done, but in the very moment you watch your first DVD on your iPad, something magical happens...</p>
 

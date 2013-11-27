@@ -4,7 +4,7 @@
   <title><![CDATA[Category: EMF | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/emf/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-21T12:24:32+00:00</updated>
+  <updated>2013-11-27T17:39:22+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Getting started with Code Generation with Xpand]]></title>
     <link href="http://www.peterfriese.de/getting-started-with-code-generation-with-xpand/"/>
-    <updated>2010-03-17T16:05:05+00:00</updated>
+    <updated>2010-03-17T17:05:05+01:00</updated>
     <id>http://www.peterfriese.de/getting-started-with-code-generation-with-xpand</id>
     <content type="html"><![CDATA[<p>Have you heard about model driven software development (MDD / MDSD) and are thinking "what's all this fuzz about models"? "Why should models help me to be more productive," might be another thought you have.</p>
 
@@ -373,7 +373,7 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
   <entry>
     <title type="html"><![CDATA[Everything You Always Wanted To Know About Modeling (But Were Afraid To Ask)]]></title>
     <link href="http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask/"/>
-    <updated>2009-10-13T23:18:52+01:00</updated>
+    <updated>2009-10-14T00:18:52+02:00</updated>
     <id>http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
     <content type="html"><![CDATA[<ol>
 <li><p>Does Model Driven Software Development actually work?</p></li>
@@ -416,7 +416,7 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
   <entry>
     <title type="html"><![CDATA[Modeling is dead. Long live Modeling!]]></title>
     <link href="http://www.peterfriese.de/modeling-is-dead-long-live-modeling/"/>
-    <updated>2009-03-31T16:44:18+01:00</updated>
+    <updated>2009-03-31T17:44:18+02:00</updated>
     <id>http://www.peterfriese.de/modeling-is-dead-long-live-modeling</id>
     <content type="html"><![CDATA[<p>Although <a href="http://kenn-hussey.blogspot.com/2009/03/on-death-of-eclipse-and-modeling.html">some people seem to be convinced</a> that <a href="http://www.eclipse.org/">Eclipse</a> and <a href="http://www.eclipse.org/modeling/">Eclipse Modeling</a> are dead, I have been sensing quite healthy life signals of both on EclipseCon 2009 (or rather <a href="http://search.twitter.com/search?q=%23eclipsecon">#eclipsecon</a>).</p>
 
@@ -464,7 +464,7 @@ The topics discussed were focussing on consumability and long-term sustainabilit
   <entry>
     <title type="html"><![CDATA[Using Teneo, EMF and Hibernate to update and query your data]]></title>
     <link href="http://www.peterfriese.de/using-teneo-emf-and-hibernate-to-update-and-query-your-data/"/>
-    <updated>2009-03-14T22:55:49+00:00</updated>
+    <updated>2009-03-14T23:55:49+01:00</updated>
     <id>http://www.peterfriese.de/using-teneo-emf-and-hibernate-to-update-and-query-your-data</id>
     <content type="html"><![CDATA[<p><a href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/">Last week I showed you</a> how to use Teneo, EMF and Hibernate to store your data in a database.</p>
 
@@ -560,7 +560,7 @@ Let's now assume we want to add more books (and authors) to the library.</p>
   <entry>
     <title type="html"><![CDATA[Using Teneo and EMF to store your data]]></title>
     <link href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/"/>
-    <updated>2009-03-06T23:22:42+00:00</updated>
+    <updated>2009-03-07T00:22:42+01:00</updated>
     <id>http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data</id>
     <content type="html"><![CDATA[<p>Most of you know that I am working as a committer for various Eclipse-related projects (such as <a href="http://www.xtext.org">Xtext</a>, <a href="http://www.eclipse.org/modeling/m2t/?project=xpand">Xpand</a> and the <a href="http://www.eclipse.org/modeling/emft/?project=mwe#mwe">Modeling Workflow Engine</a>). You might not know, however, that I also work as a consultant for <a href="http://www.itemis.com">itemis</a>. On one of my <a href="http://www.itemis.com/itemis-ag/language=en/2621/portfolio">recent consulting assignments</a> in Ottawa, Canada, I was asked "How can we use EMF to store our data in a database?"</p>
 

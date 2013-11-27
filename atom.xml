@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://www.peterfriese.de/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-21T12:24:32+00:00</updated>
+  <updated>2013-11-27T17:39:22+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -14,9 +14,410 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Unit Testing Android Apps with Robolectric and Eclipse]]></title>
+    <link href="http://www.peterfriese.de/unit-testing-android-apps-with-robolectric-and-eclipse/"/>
+    <updated>2013-11-27T09:54:00+01:00</updated>
+    <id>http://www.peterfriese.de/unit-testing-android-apps-with-robolectric-and-eclipse</id>
+    <content type="html"><![CDATA[<p>A few weeks ago, I showed you how to set up Robolectric with Android Studio and Gradle. For the Eclipse DemoCamp in Hamburg, I have been asked to prepare a session on how to use Robolectric with Eclipse. I thought it might be worthwhile to share my experiences with everybody who wasn&#8217;t fortunate enough to attend the DemoCamp (in a truely stunning location, BTW), so here goes.</p>
+
+<!-- more -->
+
+
+<p>We all know testing is essential to verify the behaviour of the software you write. In the Android world with its huge variety of devices and OS versions, this is even more so. Unfortunately, the performance of the Android development environment, most notably the Android Emulator, leaves much to be desired which sometimes leads to neglicence of test discipline. Robolectric is a test framework that tries to alleviate this situation.</p>
+
+<p>Robolectric achieves this by sitting between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM. This effectively means you can run your tests on your desktop - no waiting for your code to be deployed to the Emulator or a physical device!</p>
+
+<p>For more detailed background information about the inner workings of Roboloectric, check out <a href="http://www.slideshare.net/tylerschultz/robolectric-android-unit-testing-framework">this presentation</a> and this <a href="http://www.youtube.com/watch?v=T6FWL877txw">talk by Tyler Schultz</a>, one of the committers of Robolectric.</p>
+
+<h2>Creating a New Project</h2>
+
+<p>As the blog title implies, this time around, we&#8217;ll use Eclipse to create our project under test. Make sure you&#8217;re using the most recent version of the Eclipse ADT, which is part of the Android SDK. If you don&#8217;t have it already, Google provides a nice all-in-one download of the SDK <a href="http://developer.android.com/sdk/index.html">here</a>.</p>
+
+<p>Create a new project, using the following settings:</p>
+
+<ul>
+<li>Application Name: <code>RobolectricDemoProjectEclipse</code></li>
+<li>Project Name: <code>RobolectricDemoProjectEclipse</code></li>
+<li>Package Name: <code>de.peterfriese.robolectricdemo</code></li>
+<li>Minimum SDK: <code>API 8: Android 2.2 (Froyo)</code></li>
+<li>Target SDK: <code>API 18: Android 4.3</code></li>
+<li>Compile With: <code>API 19: Android 4.4 (KitKat)</code></li>
+</ul>
+
+
+<p>Choose to create a custom icon and a custom launcher and place the project in a location of your liking.</p>
+
+<ul class="gallery">
+<li><a href="http://www.peterfriese.de/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_1.png" class="fancybox" rel="gallery-868840c0a2392222a736b59d1e48a583" title="New Create New Project - Step 1"><img src="http://www.peterfriese.de/thumbs/robolectric_new_project_1_200x150.png" alt="New Create New Project - Step 1" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_2.png" class="fancybox" rel="gallery-868840c0a2392222a736b59d1e48a583" title="New Create New Project - Step 2"><img src="http://www.peterfriese.de/thumbs/robolectric_new_project_2_200x150.png" alt="New Create New Project - Step 2" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_3.png" class="fancybox" rel="gallery-868840c0a2392222a736b59d1e48a583" title="New Create New Project - Step 3"><img src="http://www.peterfriese.de/thumbs/robolectric_new_project_3_200x150.png" alt="New Create New Project - Step 3" /></a></li>
+</ul>
+
+
+<p>On the <em>Create Activity</em> page, choose <em>Blank Activity</em>, and on the <em>Blank Activity</em> configuration page use the following settings:</p>
+
+<ul>
+<li>Activiy Name: <code>Main Actity</code></li>
+<li>Layout Name: <code>activity_main</code></li>
+<li>Navigation Type: <code>None</code></li>
+</ul>
+
+
+<p>To make things a bit more interesting, let&#8217;s change the UI so we&#8217;ve got a <code>TextView</code>, an <code>InputView</code> and a <code>Button</code> on, just like this:</p>
+
+<figure class='code'><figcaption><span>res/layout/fragment_main.xml</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;RelativeLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+</span><span class='line'>    <span class="na">xmlns:tools=</span><span class="s">&quot;http://schemas.android.com/tools&quot;</span>
+</span><span class='line'>    <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+</span><span class='line'>    <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+</span><span class='line'>    <span class="na">android:paddingLeft=</span><span class="s">&quot;@dimen/activity_horizontal_margin&quot;</span>
+</span><span class='line'>    <span class="na">android:paddingRight=</span><span class="s">&quot;@dimen/activity_horizontal_margin&quot;</span>
+</span><span class='line'>    <span class="na">android:paddingTop=</span><span class="s">&quot;@dimen/activity_vertical_margin&quot;</span>
+</span><span class='line'>    <span class="na">android:paddingBottom=</span><span class="s">&quot;@dimen/activity_vertical_margin&quot;</span>
+</span><span class='line'>    <span class="na">tools:context=</span><span class="s">&quot;.MainActivity$PlaceholderFragment&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;TextView</span>
+</span><span class='line'>        <span class="na">android:text=</span><span class="s">&quot;@string/hello_world&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>        <span class="na">android:textAppearance=</span><span class="s">&quot;?android:attr/textAppearanceLarge&quot;</span>
+</span><span class='line'>        <span class="na">android:id=</span><span class="s">&quot;@+id/textView&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_alignRight=</span><span class="s">&quot;@+id/editText&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_alignParentLeft=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;EditText</span>
+</span><span class='line'>        <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>        <span class="na">android:id=</span><span class="s">&quot;@+id/editText&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_below=</span><span class="s">&quot;@+id/textView&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_marginTop=</span><span class="s">&quot;24dp&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_alignParentRight=</span><span class="s">&quot;true&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_alignParentLeft=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;Button</span>
+</span><span class='line'>        <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>        <span class="na">android:text=</span><span class="s">&quot;Say Hi!&quot;</span>
+</span><span class='line'>        <span class="na">android:id=</span><span class="s">&quot;@+id/button&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_below=</span><span class="s">&quot;@+id/editText&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_centerHorizontal=</span><span class="s">&quot;true&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_marginTop=</span><span class="s">&quot;45dp&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;/RelativeLayout&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://www.peterfriese.de/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/ui_layout.png" class="fancybox" title="Application Under Test UI"><img class="center" src="http://www.peterfriese.de/thumbs/ui_layout_200x400.png" alt="Application Under Test UI" /></a></p>
+
+<h2>Preparing for Testing</h2>
+
+<p>To prepare your project for testing with Robolectric in Eclipse, there are a few things you need to do:</p>
+
+<ol>
+<li>Create a test project</li>
+<li>Add Robolectric and its dependencies</li>
+<li>Help Robolectric to find the Android manifest</li>
+</ol>
+
+
+<h3>Creating a Test Project</h3>
+
+<p>The great thing about Robolectric is your tests are plain JUnit tests, so there is no need to run the tests on a device or the Emulator. This means we can use a plain Java project to host our tests.</p>
+
+<ol>
+<li>Create a new Java project, naming it <code>RobolectricDemoProjectEclipseTests</code></li>
+<li>On the second page of the wizard, add a project reference to the Android project (<code>RobolectricDemoProjectEclipse</code>)</li>
+</ol>
+
+
+<ul class="gallery">
+<li><a href="http://www.peterfriese.de/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/testproject_1.png" class="fancybox" rel="gallery-93834d949f72bbed1ad12328558dd7df" title="New Create New Test Project - Step 1"><img src="http://www.peterfriese.de/thumbs/testproject_1_200x150.png" alt="New Create New Test Project - Step 1" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/testproject_2.png" class="fancybox" rel="gallery-93834d949f72bbed1ad12328558dd7df" title="New Create New Test Project - Step 2"><img src="http://www.peterfriese.de/thumbs/testproject_2_200x150.png" alt="New Create New Test Project - Step 2" /></a></li>
+</ul>
+
+
+<h3>Adding Robolectric and its Dependencies</h3>
+
+<p>By now, you might be wondering why we don&#8217;t use Maven to set up our dependencies. To cut a long story short: setting up an Android project in Eclipse is a lot easier without using Maven. The downside of this approach, however, is that we have to manage project dependencies ourselves.</p>
+
+<p>Head over to <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.robolectric%22">Maven Central</a> to fetch the <a href="http://search.maven.org/remotecontent?filepath=org/robolectric/robolectric/2.2/robolectric-2.2-jar-with-dependencies.jar">latest version of Robolectric including dependencies</a> (at the time of this writing, Robolectric 2.2 was the most up-to-date version).</p>
+
+<p>In <code>RobolectricDemoProjectEclipseTests</code>, create a new folder <code>libs</code> and add the downloaded jar file by dragging it to the folder. After that, right-click the added file in Eclipse and choose <em>Build Path -> Add to Build Path</em> to add it to the build path.</p>
+
+<p>Later, we will use <a href="http://square.github.io/fest-android/">FEST Android</a> to write our test assertations in a fluent way, so we need the required jar files and add the to the project as well.</p>
+
+<ul>
+<li>Latest <a href="http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&amp;g=com.squareup&amp;a=fest-android&amp;v=LATEST">FEST Android jar</a></li>
+<li>Latest <a href="http://search.maven.org/remotecontent?filepath=org/easytesting/fest-assert-core/2.0M10/fest-assert-core-2.0M10.jar">FEST jar</a></li>
+</ul>
+
+
+<p>As JUnit is the base for all our unit tests, we need to add it to our classpath, too. Open the project&#8217;s properties, navigate to <em>Java Build Path -> Libraries</em> and click on <em>Add Library&#8230;</em>. In the next dialog, choose <em>JUnit</em> and press <em>Next</em>. Finaly, choose <em>JUnit 4</em> (Robolectric relies on JUnit 4) and press <em>Finish</em>.</p>
+
+<ul class="gallery">
+<li><a href="http://www.peterfriese.de/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_1.png" class="fancybox" rel="gallery-fa20517b9274bddec4711e1f6d01fd87" title="Adding JUnit 4 - Step 1"><img src="http://www.peterfriese.de/thumbs/add_junit_1_200x150.png" alt="Adding JUnit 4 - Step 1" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_2.png" class="fancybox" rel="gallery-fa20517b9274bddec4711e1f6d01fd87" title="Adding JUnit 4 - Step 2"><img src="http://www.peterfriese.de/thumbs/add_junit_2_200x150.png" alt="Adding JUnit 4 - Step 2" /></a></li>
+<li><a href="http://www.peterfriese.de/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_3.png" class="fancybox" rel="gallery-fa20517b9274bddec4711e1f6d01fd87" title="Adding JUnit 4 - Step 3"><img src="http://www.peterfriese.de/thumbs/add_junit_3_200x150.png" alt="Adding JUnit 4 - Step 3" /></a></li>
+</ul>
+
+
+<p>Finally, we need to add the Android library itself as a dependency to our test project. To do this, open then project properties dialog (Right-click the test project, select <em>Properties</em>) and navigate to <em>Java Build Path</em>. In the dialog, click on <em>Add External JARs&#8230;</em> and navigate to <code>&lt;Android SDK&gt;/platforms/android-19/android.jar</code> to add the latest Android jar to the projects build path.</p>
+
+<ul class="gallery">
+<li><a href="http://www.peterfriese.de/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_android.png" class="fancybox" rel="gallery-60ff47917794e39212af739e4db0b6e3" title="Adding the Android jar"><img src="http://www.peterfriese.de/thumbs/add_android_200x150.png" alt="Adding the Android jar" /></a></li>
+</ul>
+
+
+<h3>Helping Robolectric to Find Your Manifest</h3>
+
+<p>Because of the way Robolectric looks for your <code>AndroidManifest.xml</code> during test startup, it won&#8217;t find the manifest if your tests and the manifest are located in different projects.</p>
+
+<p>Robolectric supports configuring individual tests using the <code>@Config</code> annotation, allowing you to use a different manifest file depending on the test you run. This can be quite handy, but it is a good idea to have a default configuration. Starting with version 2.0, Robolectric supports a global configuration using a config file.</p>
+
+<p>To specifiy a manifest file, place a file named <code>org.robolectric.Config.properties</code> in the root of the <code>src</code> tree of your test project, so it can be discovered by Robolectric during test setup and add the following line:</p>
+
+<figure class='code'><figcaption><span>src/org.robolectric.Config.properties</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='properties'><span class='line'><span class="na">manifest</span><span class="o">=</span><span class="s">../RobolectricDemoProjectEclipse/AndroidManifest.xml</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will tell Robolectric to use the <code>AndroidManifest.xml</code> file from our Android project under test.</p>
+
+<h2>Writing Your First Robolectric Test</h2>
+
+<p>Let&#8217;s write out first test! Add the following class to <code>src/test/java</code>:</p>
+
+<figure class='code'><figcaption><span>MainActivityTest.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">de</span><span class="o">.</span><span class="na">peterfriese</span><span class="o">.</span><span class="na">robolectricdemo</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.junit.runner.RunWith</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.robolectric.Robolectric</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">org.robolectric.RobolectricTestRunner</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">junit</span><span class="o">.</span><span class="na">Assert</span><span class="o">.</span><span class="na">assertTrue</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@RunWith</span><span class="o">(</span><span class="n">RobolectricTestRunner</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivityTest</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nd">@Test</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">shouldFail</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">assertTrue</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Please note that we added a simple test method, making sure it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it <em>does not</em> fail, we know that something is wrong.</p>
+
+<p>So, let&#8217;s run the test! Right-click on the test file and choose <em>Run As -> JUnit Test</em>. As a result, you should see the test bar turn red in the JUnit view.</p>
+
+<p>The test failed - just as expected. You can turn it into a passing test by changing the assert statement to <code>assertTrue(true);</code></p>
+
+<h2>Enhancing the Test</h2>
+
+<p>Now that we&#8217;ve got everything in place, let&#8217;s develop a small feature in a test-driven way. You already noted how we enhanced the UI of the application at the beginning, but apart from looking nice, there&#8217;s not much functionality.</p>
+
+<p>Let&#8217;s enhance the app so the user can enter their name, press a button and be greeted by the application.</p>
+
+<p>Make sure to statically import the Android FEST assertations - they&#8217;ll help us to write our tests in a fluent manner:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">fest</span><span class="o">.</span><span class="na">assertions</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">ANDROID</span><span class="o">.</span><span class="na">assertThat</span><span class="o">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As we need to have access to the app&#8217;s main activity in all of our tests, let&#8217;s add a private field for it and create a setup method that will create a fresh activity before each test is run:</p>
+
+<figure class='code'><figcaption><span>MainActivity.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">private</span> <span class="n">MainActivity</span> <span class="n">activity</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@Before</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">setup</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">activity</span> <span class="o">=</span> <span class="n">Robolectric</span><span class="o">.</span><span class="na">buildActivity</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">get</span><span class="o">();</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is a good practice to ensure the UI is fired up and all UI elements have been initialized as expected (i.e. are not null):</p>
+
+<figure class='code'><figcaption><span>MainActivityTest.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Test</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">shouldNotBeNull</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">assertThat</span><span class="o">(</span><span class="n">activity</span><span class="o">).</span><span class="na">isNotNull</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">TextView</span> <span class="n">textView</span> <span class="o">=</span> <span class="o">(</span><span class="n">TextView</span><span class="o">)</span> <span class="n">activity</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">textView</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">assertThat</span><span class="o">(</span><span class="n">textView</span><span class="o">).</span><span class="na">isNotNull</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">Button</span> <span class="n">button</span> <span class="o">=</span> <span class="o">(</span><span class="n">Button</span><span class="o">)</span> <span class="n">activity</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">button</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">assertThat</span><span class="o">(</span><span class="n">button</span><span class="o">).</span><span class="na">isNotNull</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">EditText</span> <span class="n">editText</span> <span class="o">=</span> <span class="o">(</span><span class="n">EditText</span><span class="o">)</span> <span class="n">activity</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">editText</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">assertThat</span><span class="o">(</span><span class="n">editText</span><span class="o">).</span><span class="na">isNotNull</span><span class="o">();</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next, let&#8217;s write a test that places a text inside the edit field, presses the button and compares the result in the text view with the expected result.</p>
+
+<p>Here is the test method:</p>
+
+<figure class='code'><figcaption><span>MainActivityTest.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Test</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">shouldProduceGreetingWhenButtonPressed</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">TextView</span> <span class="n">textView</span> <span class="o">=</span> <span class="o">(</span><span class="n">TextView</span><span class="o">)</span> <span class="n">activity</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">textView</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">Button</span> <span class="n">button</span> <span class="o">=</span> <span class="o">(</span><span class="n">Button</span><span class="o">)</span> <span class="n">activity</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">button</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">EditText</span> <span class="n">editText</span> <span class="o">=</span> <span class="o">(</span><span class="n">EditText</span><span class="o">)</span> <span class="n">activity</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">editText</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">editText</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">&quot;Peter&quot;</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">button</span><span class="o">.</span><span class="na">performClick</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">assertThat</span><span class="o">(</span><span class="n">textView</span><span class="o">).</span><span class="na">containsText</span><span class="o">(</span><span class="s">&quot;Hello, Peter!&quot;</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you run the test, it will obviously fail, so let&#8217;s fix this.</p>
+
+<p>Open <code>MainActivity.java</code> and insert the following private class:</p>
+
+<figure class='code'><figcaption><span>MainActivity.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">MainFragment</span> <span class="kd">extends</span> <span class="n">Fragment</span> <span class="o">{</span>
+</span><span class='line'>  <span class="nd">@Override</span>
+</span><span class='line'>  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+</span><span class='line'>  
+</span><span class='line'>      <span class="n">Button</span> <span class="n">button</span> <span class="o">=</span> <span class="o">(</span><span class="n">Button</span><span class="o">)</span> <span class="k">this</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">button</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">button</span><span class="o">.</span><span class="na">setOnClickListener</span><span class="o">(</span><span class="k">new</span> <span class="n">View</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>          <span class="nd">@Override</span>
+</span><span class='line'>          <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>              <span class="n">TextView</span> <span class="n">textView</span> <span class="o">=</span> <span class="o">(</span><span class="n">TextView</span><span class="o">)</span> <span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">textView</span><span class="o">);</span>
+</span><span class='line'>              <span class="n">EditText</span> <span class="n">editText</span> <span class="o">=</span> <span class="o">(</span><span class="n">EditText</span><span class="o">)</span> <span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">.</span><span class="na">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">editText</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>              <span class="n">textView</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;Hello, %s!&quot;</span><span class="o">,</span> <span class="n">editText</span><span class="o">.</span><span class="na">getText</span><span class="o">()));</span>
+</span><span class='line'>          <span class="o">}</span>
+</span><span class='line'>      <span class="o">});</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see, this code will register an <code>OnClickListener</code> for the button and set the text of the text view according to the value of the edit field.</p>
+
+<p>The test should now pass - just run the unit test again and you should see a green bar.</p>
+
+<h2>Conclusion</h2>
+
+<p>Setting up an Android project for using Robolectric in Eclipse is quite a bit of work, as you just have seen, but it&#8217;s reasonably easy with the information I have given you above. Adding Robolectric to a new Android project is just a matter of minutes with these instructions and helps you save a lot of time you&#8217;d have had to spend otherwise running the tests on the emulator or on physical devices.</p>
+
+<p>You might be interested in checking out my recent post on integrating Robolectric in a Gradle-based Android project in Android Studio - <a href="http://www.peterfriese.de/android-testing-with-robolectric/">this way, please</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Debugging Tips for iOS Developers]]></title>
     <link href="http://www.peterfriese.de/debugging-tips-for-ios-developers/"/>
-    <updated>2013-11-21T12:00:00+00:00</updated>
+    <updated>2013-11-21T12:00:00+01:00</updated>
     <id>http://www.peterfriese.de/debugging-tips-for-ios-developers</id>
     <content type="html"><![CDATA[<p>Let&#8217;s face it - no matter how hard you try, no matter how many testers you use in manual tests, no matter how disciplined you are in writing unit tests and following the TDD drill of writing a failing test first and then adding the production code that turns the test green - bugs are inevitably linked to our lives. In this post, I&#8217;ll show you a number of debugging techniques that might come in handy for your next project. Hopefully, you know some of them already, but I am sure some of them will be new for you.</p>
 
@@ -180,7 +581,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
   <entry>
     <title type="html"><![CDATA[Android Testing with Robolectric]]></title>
     <link href="http://www.peterfriese.de/android-testing-with-robolectric/"/>
-    <updated>2013-10-23T20:02:00+01:00</updated>
+    <updated>2013-10-23T20:02:00+02:00</updated>
     <id>http://www.peterfriese.de/android-testing-with-robolectric</id>
     <content type="html"><![CDATA[<p>We all know testing is essential to verify the behaviour of the software you write. In the Android world with its huge variety of devices and OS versions, this is even more so. Unfortunately, the performance of the Android development environment, most notably the Android Emulator, leaves much to be desired which sometimes leads to neglicence of test discipline. Robolectric is a test framework that tries to alleviate this situation.</p>
 
@@ -816,7 +1217,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
   <entry>
     <title type="html"><![CDATA[Annotated Links, Issue 5]]></title>
     <link href="http://www.peterfriese.de/annotated-links-issue-5/"/>
-    <updated>2013-09-21T00:44:00+01:00</updated>
+    <updated>2013-09-21T00:44:00+02:00</updated>
     <id>http://www.peterfriese.de/annotated-links-issue-5</id>
     <content type="html"><![CDATA[<p>This week, we&#8217;ll take a look at rocket science, re-usable phones and some Android libraries. Without further ado, let&#8217;s get started!</p>
 
@@ -844,7 +1245,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
   <entry>
     <title type="html"><![CDATA[Annotated Links, Issue 4]]></title>
     <link href="http://www.peterfriese.de/annotated-links-issue-4/"/>
-    <updated>2013-09-13T08:11:00+01:00</updated>
+    <updated>2013-09-13T08:11:00+02:00</updated>
     <id>http://www.peterfriese.de/annotated-links-issue-4</id>
     <content type="html"><![CDATA[<p>This week, I&#8217;ve got some great tips for traveling and finding out what&#8217;s installed on your Mac. We&#8217;ll also look at mobile testing, Git workflows and - cocktails!</p>
 
@@ -883,7 +1284,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Annotated Links for Week 34]]></title>
     <link href="http://www.peterfriese.de/annotated-links-for-week-34/"/>
-    <updated>2013-08-23T16:39:00+01:00</updated>
+    <updated>2013-08-23T16:39:00+02:00</updated>
     <id>http://www.peterfriese.de/annotated-links-for-week-34</id>
     <content type="html"><![CDATA[<p>This week we will have a look at some tools that will help you to make your screenshots shine, a fun approach at looking at your coding behaviours, a collection of views for iOS and Android developers and&#8230; beer!</p>
 
@@ -919,7 +1320,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Annotated Links for Week 33]]></title>
     <link href="http://www.peterfriese.de/annotated-links-for-week-33/"/>
-    <updated>2013-08-19T09:30:00+01:00</updated>
+    <updated>2013-08-19T09:30:00+02:00</updated>
     <id>http://www.peterfriese.de/annotated-links-for-week-33</id>
     <content type="html"><![CDATA[<p>This week&#8217;s annotated links are more coding- and code-related than last week. We&#8217;ll have a look at some data mapping frameworks for Objective-C, a way to set up your projects in a faster, more reproducible way and - as iOS 7 is around the corner, a feature comparison of iOS 7 on the various devices out there.</p>
 
@@ -964,7 +1365,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Annotated Links for Week 32]]></title>
     <link href="http://www.peterfriese.de/annotated-links-for-week-32/"/>
-    <updated>2013-08-10T01:33:00+01:00</updated>
+    <updated>2013-08-10T01:33:00+02:00</updated>
     <id>http://www.peterfriese.de/annotated-links-for-week-32</id>
     <content type="html"><![CDATA[<p>This week, we&#8217;ll have a look at Apple&#8217;s new system status page and another, more serious issue in a rather well-known computer-driven system. Other topics in this post: a very high-level view on programming (and why we failed so far) as well as a very detailed look at programming (and what you can do to excel at it). Finally, some spying.</p>
 
@@ -1000,7 +1401,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Hacked.io 2013]]></title>
     <link href="http://www.peterfriese.de/hacked-dot-io-2013/"/>
-    <updated>2013-08-03T00:18:00+01:00</updated>
+    <updated>2013-08-03T00:18:00+02:00</updated>
     <id>http://www.peterfriese.de/hacked-dot-io-2013</id>
     <content type="html"><![CDATA[<p>On the weekend of July 21st, I had the chance to attend the Hacked.io hackathon. The dimensions of this event matched the size of London: 500 attendees of all age groups (there were entire teams made up of kids) gathered in the O2 arena (more precisely: in the IndigO2) poised to spend a sleepless night full of hacking and working on creative projects. Those who didn&#8217;t already have an idea for project could let themselves be inspired by the numerous challenges set up by the event sponsors.</p>
 
@@ -1081,7 +1482,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Do Androids Dream of Electric Sheep?]]></title>
     <link href="http://www.peterfriese.de/do-androids-dream-of-electric-sheep/"/>
-    <updated>2013-03-22T00:33:48+00:00</updated>
+    <updated>2013-03-22T01:33:48+01:00</updated>
     <id>http://www.peterfriese.de/do-androids-dream-of-electric-sheep</id>
     <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
 
@@ -1124,7 +1525,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Writing Xtext Scope Providers with Xtend]]></title>
     <link href="http://www.peterfriese.de/writing-xtext-scope-providers-with-xtend/"/>
-    <updated>2012-08-14T23:04:55+01:00</updated>
+    <updated>2012-08-15T00:04:55+02:00</updated>
     <id>http://www.peterfriese.de/writing-xtext-scope-providers-with-xtend</id>
     <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is an <a href="http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html">important concept</a> in the design of programming languages. In Xtext, scoping is used <a href="http://zarnekow.blogspot.de/2009/01/xtext-corner-2-linking-and-scoping.html">to drive two major parts</a> of your DSL: <a href="http://www.eclipse.org/Xtext/documentation.html#linking">linking</a> and <a href="http://www.eclipse.org/Xtext/documentation.html#contentAssist">content assist</a>. While Xtext applies the <a href="http://en.wikiquote.org/wiki/Alan_Kay">80/20 rule</a> very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you&#8217;ll have to roll up your sleeves and write your own scope provider.</p>
 
@@ -1160,7 +1561,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Using CocoaPods to manage your dependencies]]></title>
     <link href="http://www.peterfriese.de/using-cocoapods-to-manage-your-dependencies/"/>
-    <updated>2012-06-29T23:42:22+01:00</updated>
+    <updated>2012-06-30T00:42:22+02:00</updated>
     <id>http://www.peterfriese.de/using-cocoapods-to-manage-your-dependencies</id>
     <content type="html"><![CDATA[<p>One of the few things that I find really annoying about developing apps for the iOS platform is how cumbersome it is to include third party libraries in your projects. Depending on the complexity of the library (e.g. its respective dependencies and transitive dependencies) and the effort the authors put into the consumability of their library, the steps required to add a library to your project range from just copying a few files into your source folder to a whopping two-page description of drag&#8217;n&#8217;drop wizardry.</p>
 
@@ -1262,7 +1663,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[The Accounts and Twitter Framework on iOS 5]]></title>
     <link href="http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5/"/>
-    <updated>2011-11-09T23:30:46+00:00</updated>
+    <updated>2011-11-10T00:30:46+01:00</updated>
     <id>http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5</id>
     <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&#8217;re in a news reader application you might want to let your followers know about an interesting article you just read. If you&#8217;re in a conference schedule app, you not only want to let your followers know about the awesome talks you&#8217;re listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you&#8217;re stuck in&#8230;</p>
 
@@ -1490,7 +1891,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Tired of Typing? Speak to Your Computer!]]></title>
     <link href="http://www.peterfriese.de/tired-of-typing-speak-to-your-computer/"/>
-    <updated>2011-06-03T17:54:39+01:00</updated>
+    <updated>2011-06-03T18:54:39+02:00</updated>
     <id>http://www.peterfriese.de/tired-of-typing-speak-to-your-computer</id>
     <content type="html"><![CDATA[<p>For some reason, humans have always dreamt of using natural language to communicate with computers. Quite a number of movies have been made that revolve around this theme, <a href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)">2001: A Space Odyssey</a> and <a href="http://en.wikipedia.org/wiki/I,_Robot_(film)">I, Robot</a> (named after the <a href="http://en.wikipedia.org/wiki/I_robot">great collection of SF stories</a> by <a href="http://en.wikipedia.org/wiki/Isaac_Asimov">Isaac Asimov</a> just being two of them.</p>
 
@@ -1521,7 +1922,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Code Generation 2011 - Don't miss out!]]></title>
     <link href="http://www.peterfriese.de/code-generation-2011-dont-miss-out/"/>
-    <updated>2011-05-21T11:09:11+01:00</updated>
+    <updated>2011-05-21T12:09:11+02:00</updated>
     <id>http://www.peterfriese.de/code-generation-2011-dont-miss-out</id>
     <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven&#8217;t booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
 
@@ -1563,7 +1964,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Using NSPredicate to Filter Data]]></title>
     <link href="http://www.peterfriese.de/using-nspredicate-to-filter-data/"/>
-    <updated>2011-04-22T23:15:36+01:00</updated>
+    <updated>2011-04-23T00:15:36+02:00</updated>
     <id>http://www.peterfriese.de/using-nspredicate-to-filter-data</id>
     <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you&#8217;re applying a filter to the huge set of data we call the internet.</p>
 
@@ -1685,7 +2086,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
     <link href="http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
-    <updated>2011-02-25T22:15:57+00:00</updated>
+    <updated>2011-02-25T23:15:57+01:00</updated>
     <id>http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
     <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
 
@@ -1720,7 +2121,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Appropriate Use of MapKit]]></title>
     <link href="http://www.peterfriese.de/appropriate-use-of-mapkit/"/>
-    <updated>2011-02-16T10:48:38+00:00</updated>
+    <updated>2011-02-16T11:48:38+01:00</updated>
     <id>http://www.peterfriese.de/appropriate-use-of-mapkit</id>
     <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&#8217;re violating Google&#8217;s terms of service, I was wondering what in particular was wrong.</p>
 
@@ -1798,7 +2199,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[Three reasons why I think the HP TouchPad will rock the tablet market]]></title>
     <link href="http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
-    <updated>2011-02-10T10:38:26+00:00</updated>
+    <updated>2011-02-10T11:38:26+01:00</updated>
     <id>http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
     <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn&#8217;t the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
 
@@ -1825,7 +2226,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
   <entry>
     <title type="html"><![CDATA[What's your number?]]></title>
     <link href="http://www.peterfriese.de/whats-your-number/"/>
-    <updated>2011-01-27T01:00:47+00:00</updated>
+    <updated>2011-01-27T02:00:47+01:00</updated>
     <id>http://www.peterfriese.de/whats-your-number</id>
     <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you&#8217;ve been asking yourself &#8220;what&#8217;s this number, and where do I find it?&#8221;, read on!</p>
 
@@ -1854,38 +2255,6 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 <p>Easy, isn&#8217;t it?</p>
 
 <p>Oh, and please do NOT send a screenshot of the UDID. You should know better now.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Your Windows IDE sucks? Replace it with Your Favorite Editor on the Mac!]]></title>
-    <link href="http://www.peterfriese.de/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/"/>
-    <updated>2011-01-05T00:11:11+00:00</updated>
-    <id>http://www.peterfriese.de/your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac</id>
-    <content type="html"><![CDATA[<p>For a <a href="http://www.samsungsmarttvchallenge.eu/">current project</a>, I need to use a Windows-based IDE that really sucks. So instead of letting the IDE degrade my productivity, I decided to use some combined Windows/Mac wizardry to solve the problem.</p>
-
-<!-- more -->
-
-
-<p>The IDE in question is Samsung&#8217;s TV App SDK. Basically, it&#8217;s just a Windows-based Visual-Studio look-alike IDE with editor support for CSS, JavaScript and HTML and an Emulator for Samsung TV kits. Nothing too complicated, really. In fact, the editor is quite OK.</p>
-
-<p><a href="http://www.peterfriese.de/images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung-TV-App-SDK.png" class="fancybox" title="Samsung TV App SDK"><img class="right" src="http://www.peterfriese.de/thumbs/Samsung-TV-App-SDK_1040x722.png" alt="Samsung TV App SDK" /></a></p>
-
-<p>The part about it that really sucks is the project management. How come tool vendors still think it&#8217;s good style in 2010 to place the projects under <em>Program Files\Samsung TV Apps SDK\Apps</em>? There&#8217;s no way to store your project files in a different location. The project open dialog just won&#8217;t let you navigate to some other place:</p>
-
-<p><a href="http://www.peterfriese.de/images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung_TV_App_SDK_ProjectManagement.png" class="fancybox" title="Samsung TV App SDK Project Management Dialog"><img class="right" src="http://www.peterfriese.de/thumbs/Samsung_TV_App_SDK_ProjectManagement_482x352.png" alt="Samsung TV App SDK Project Management Dialog" /></a></p>
-
-<p>So I wanted to be able to edit my files on the Mac (using <a href="http://macromates.com/">TextMate</a>) while still using the good parts of the Samsung TV SDK (i.e., the Emulator).</p>
-
-<p>I&#8217;m using VMware Fusion to run Windows 7 and the Samsung SDK (no, there is no version for the Mac). Most virtualization solutions offer a mechanism to share folders between the host and the guest OS. So I quickly set up folder sharing between my Mac and the guest OS, in this case Windows 7.</p>
-
-<p>Now that I can see the project files both on the Mac and on the Windows machine, how can I make sure I can open the project in the Samsung TV SDK IDE? As I mentioned before, there&#8217;s no way to tell the IDE to open projects form other locations than <em>Program Files\Samsung TV Apps SDK\Apps</em>!</p>
-
-<p>After playing around with some more or less usable folder synchronization utilities, I came up with something most MacOS / Linux users should be familiar with: <a href="http://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a>! While symlinks have been around in Unix-like OSes for ages, they have been rarely known to Windows users for most of the time. However, <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">starting with Windows NT</a>, you can create symbolic links, hard links and junctions using a nifty little tool called <em><a href="http://www.howtogeek.com/howto/windows-vista/using-symlinks-in-windows-vista/">mklink</a></em>. Unfortunately, you&#8217;re not allowed to run <em>mklink</em> if you&#8217;re not an administrator. Using <em>runas</em> (which is Windows&#8217; equivalent of <em>sudo</em>), didn&#8217;t help as the shared folders weren&#8217;t visible to the admin user.</p>
-
-<p>To cut a long story short, I found <a href="http://code.google.com/p/symlinker">Symlinker</a>, a UI tool that helps in creating symlinks on Windows. As it is a UI tool, you can run it with administrator privileges (by selecting Run as Admin from the context menu). Using a <a href="http://en.wikipedia.org/wiki/Path_(computing)">UNC</a> path, you can create a <a href="http://en.wikipedia.org/wiki/NTFS_symbolic_link">symlink</a> to a VMware shared folder and place this symlink in the location the Samsung IDE expects it to be.</p>
-
-<p>Finally, I can edit my files on the Mac and run the app in Samsung&#8217;s Emulator on my hosted Windows machine. And as the files on my Mac are mapped to the hosted Windows machine via a symlink, I do not suffer a synchronization lag - all files are updated instantaneously :-)</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Eclipse | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/eclipse/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-21T12:24:32+00:00</updated>
+  <updated>2013-11-27T17:39:22+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -14,9 +14,324 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Unit Testing Android Apps with Robolectric and Eclipse]]></title>
+    <link href="http://www.peterfriese.de/unit-testing-android-apps-with-robolectric-and-eclipse/"/>
+    <updated>2013-11-27T09:54:00+01:00</updated>
+    <id>http://www.peterfriese.de/unit-testing-android-apps-with-robolectric-and-eclipse</id>
+    <content type="html"><![CDATA[<p>A few weeks ago, I showed you how to set up Robolectric with Android Studio and Gradle. For the Eclipse DemoCamp in Hamburg, I have been asked to prepare a session on how to use Robolectric with Eclipse. I thought it might be worthwhile to share my experiences with everybody who wasn't fortunate enough to attend the DemoCamp (in a truely stunning location, BTW), so here goes.</p>
+
+<!-- more -->
+
+
+<p>We all know testing is essential to verify the behaviour of the software you write. In the Android world with its huge variety of devices and OS versions, this is even more so. Unfortunately, the performance of the Android development environment, most notably the Android Emulator, leaves much to be desired which sometimes leads to neglicence of test discipline. Robolectric is a test framework that tries to alleviate this situation.</p>
+
+<p>Robolectric achieves this by sitting between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM. This effectively means you can run your tests on your desktop - no waiting for your code to be deployed to the Emulator or a physical device!</p>
+
+<p>For more detailed background information about the inner workings of Roboloectric, check out <a href="http://www.slideshare.net/tylerschultz/robolectric-android-unit-testing-framework">this presentation</a> and this <a href="http://www.youtube.com/watch?v=T6FWL877txw">talk by Tyler Schultz</a>, one of the committers of Robolectric.</p>
+
+<h2>Creating a New Project</h2>
+
+<p>As the blog title implies, this time around, we'll use Eclipse to create our project under test. Make sure you're using the most recent version of the Eclipse ADT, which is part of the Android SDK. If you don't have it already, Google provides a nice all-in-one download of the SDK <a href="http://developer.android.com/sdk/index.html">here</a>.</p>
+
+<p>Create a new project, using the following settings:</p>
+
+<ul>
+<li>Application Name: <code>RobolectricDemoProjectEclipse</code></li>
+<li>Project Name: <code>RobolectricDemoProjectEclipse</code></li>
+<li>Package Name: <code>de.peterfriese.robolectricdemo</code></li>
+<li>Minimum SDK: <code>API 8: Android 2.2 (Froyo)</code></li>
+<li>Target SDK: <code>API 18: Android 4.3</code></li>
+<li>Compile With: <code>API 19: Android 4.4 (KitKat)</code></li>
+</ul>
+
+
+<p>Choose to create a custom icon and a custom launcher and place the project in a location of your liking.</p>
+
+<p><ul class="gallery">
+<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_1.png" class="fancybox" rel="gallery-868840c0a2392222a736b59d1e48a583" title="New Create New Project - Step 1"><img src="/thumbs/robolectric_new_project_1_200x150.png" alt="New Create New Project - Step 1" /></a></li>
+<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_2.png" class="fancybox" rel="gallery-868840c0a2392222a736b59d1e48a583" title="New Create New Project - Step 2"><img src="/thumbs/robolectric_new_project_2_200x150.png" alt="New Create New Project - Step 2" /></a></li>
+<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_3.png" class="fancybox" rel="gallery-868840c0a2392222a736b59d1e48a583" title="New Create New Project - Step 3"><img src="/thumbs/robolectric_new_project_3_200x150.png" alt="New Create New Project - Step 3" /></a></li>
+</ul></p>
+
+<p>On the <em>Create Activity</em> page, choose <em>Blank Activity</em>, and on the <em>Blank Activity</em> configuration page use the following settings:</p>
+
+<ul>
+<li>Activiy Name: <code>Main Actity</code></li>
+<li>Layout Name: <code>activity_main</code></li>
+<li>Navigation Type: <code>None</code></li>
+</ul>
+
+
+<p>To make things a bit more interesting, let's change the UI so we've got a <code>TextView</code>, an <code>InputView</code> and a <code>Button</code> on, just like this:</p>
+
+<p>```xml res/layout/fragment_main.xml</p>
+
+<pre><code>&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity$PlaceholderFragment"&gt;
+
+    &lt;TextView
+        android:text="@string/hello_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignParentLeft="true"/&gt;
+
+    &lt;EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"/&gt;
+
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Say Hi!"
+        android:id="@+id/button"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"/&gt;
+
+&lt;/RelativeLayout&gt;
+</code></pre>
+
+<p>```</p>
+
+<p><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/ui_layout.png" class="fancybox" title="Application Under Test UI"><img class="center" src="/thumbs/ui_layout_200x400.png" alt="Application Under Test UI" /></a></p>
+
+<h2>Preparing for Testing</h2>
+
+<p>To prepare your project for testing with Robolectric in Eclipse, there are a few things you need to do:</p>
+
+<ol>
+<li>Create a test project</li>
+<li>Add Robolectric and its dependencies</li>
+<li>Help Robolectric to find the Android manifest</li>
+</ol>
+
+
+<h3>Creating a Test Project</h3>
+
+<p>The great thing about Robolectric is your tests are plain JUnit tests, so there is no need to run the tests on a device or the Emulator. This means we can use a plain Java project to host our tests.</p>
+
+<ol>
+<li>Create a new Java project, naming it <code>RobolectricDemoProjectEclipseTests</code></li>
+<li>On the second page of the wizard, add a project reference to the Android project (<code>RobolectricDemoProjectEclipse</code>)</li>
+</ol>
+
+
+<p><ul class="gallery">
+<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/testproject_1.png" class="fancybox" rel="gallery-93834d949f72bbed1ad12328558dd7df" title="New Create New Test Project - Step 1"><img src="/thumbs/testproject_1_200x150.png" alt="New Create New Test Project - Step 1" /></a></li>
+<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/testproject_2.png" class="fancybox" rel="gallery-93834d949f72bbed1ad12328558dd7df" title="New Create New Test Project - Step 2"><img src="/thumbs/testproject_2_200x150.png" alt="New Create New Test Project - Step 2" /></a></li>
+</ul></p>
+
+<h3>Adding Robolectric and its Dependencies</h3>
+
+<p>By now, you might be wondering why we don't use Maven to set up our dependencies. To cut a long story short: setting up an Android project in Eclipse is a lot easier without using Maven. The downside of this approach, however, is that we have to manage project dependencies ourselves.</p>
+
+<p>Head over to <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.robolectric%22">Maven Central</a> to fetch the <a href="http://search.maven.org/remotecontent?filepath=org/robolectric/robolectric/2.2/robolectric-2.2-jar-with-dependencies.jar">latest version of Robolectric including dependencies</a> (at the time of this writing, Robolectric 2.2 was the most up-to-date version).</p>
+
+<p>In <code>RobolectricDemoProjectEclipseTests</code>, create a new folder <code>libs</code> and add the downloaded jar file by dragging it to the folder. After that, right-click the added file in Eclipse and choose <em>Build Path -> Add to Build Path</em> to add it to the build path.</p>
+
+<p>Later, we will use <a href="http://square.github.io/fest-android/">FEST Android</a> to write our test assertations in a fluent way, so we need the required jar files and add the to the project as well.</p>
+
+<ul>
+<li>Latest <a href="http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&amp;g=com.squareup&amp;a=fest-android&amp;v=LATEST">FEST Android jar</a></li>
+<li>Latest <a href="http://search.maven.org/remotecontent?filepath=org/easytesting/fest-assert-core/2.0M10/fest-assert-core-2.0M10.jar">FEST jar</a></li>
+</ul>
+
+
+<p>As JUnit is the base for all our unit tests, we need to add it to our classpath, too. Open the project's properties, navigate to <em>Java Build Path -> Libraries</em> and click on <em>Add Library...</em>. In the next dialog, choose <em>JUnit</em> and press <em>Next</em>. Finaly, choose <em>JUnit 4</em> (Robolectric relies on JUnit 4) and press <em>Finish</em>.</p>
+
+<p><ul class="gallery">
+<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_1.png" class="fancybox" rel="gallery-fa20517b9274bddec4711e1f6d01fd87" title="Adding JUnit 4 - Step 1"><img src="/thumbs/add_junit_1_200x150.png" alt="Adding JUnit 4 - Step 1" /></a></li>
+<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_2.png" class="fancybox" rel="gallery-fa20517b9274bddec4711e1f6d01fd87" title="Adding JUnit 4 - Step 2"><img src="/thumbs/add_junit_2_200x150.png" alt="Adding JUnit 4 - Step 2" /></a></li>
+<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_3.png" class="fancybox" rel="gallery-fa20517b9274bddec4711e1f6d01fd87" title="Adding JUnit 4 - Step 3"><img src="/thumbs/add_junit_3_200x150.png" alt="Adding JUnit 4 - Step 3" /></a></li>
+</ul></p>
+
+<p>Finally, we need to add the Android library itself as a dependency to our test project. To do this, open then project properties dialog (Right-click the test project, select <em>Properties</em>) and navigate to <em>Java Build Path</em>. In the dialog, click on <em>Add External JARs...</em> and navigate to <code>&lt;Android SDK&gt;/platforms/android-19/android.jar</code> to add the latest Android jar to the projects build path.</p>
+
+<p><ul class="gallery">
+<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_android.png" class="fancybox" rel="gallery-60ff47917794e39212af739e4db0b6e3" title="Adding the Android jar"><img src="/thumbs/add_android_200x150.png" alt="Adding the Android jar" /></a></li>
+</ul></p>
+
+<h3>Helping Robolectric to Find Your Manifest</h3>
+
+<p>Because of the way Robolectric looks for your <code>AndroidManifest.xml</code> during test startup, it won't find the manifest if your tests and the manifest are located in different projects.</p>
+
+<p>Robolectric supports configuring individual tests using the <code>@Config</code> annotation, allowing you to use a different manifest file depending on the test you run. This can be quite handy, but it is a good idea to have a default configuration. Starting with version 2.0, Robolectric supports a global configuration using a config file.</p>
+
+<p>To specifiy a manifest file, place a file named <code>org.robolectric.Config.properties</code> in the root of the <code>src</code> tree of your test project, so it can be discovered by Robolectric during test setup and add the following line:</p>
+
+<p>```properties src/org.robolectric.Config.properties</p>
+
+<pre><code>manifest=../RobolectricDemoProjectEclipse/AndroidManifest.xml
+</code></pre>
+
+<p>```</p>
+
+<p>This will tell Robolectric to use the <code>AndroidManifest.xml</code> file from our Android project under test.</p>
+
+<h2>Writing Your First Robolectric Test</h2>
+
+<p>Let's write out first test! Add the following class to <code>src/test/java</code>:</p>
+
+<p>```java MainActivityTest.java</p>
+
+<pre><code>package de.peterfriese.robolectricdemo;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
+
+
+import static org.junit.Assert.assertTrue;
+
+@RunWith(RobolectricTestRunner.class)
+public class MainActivityTest {
+
+    @Test
+    public void shouldFail() {
+        assertTrue(false);
+    }
+}
+</code></pre>
+
+<p>```</p>
+
+<p>Please note that we added a simple test method, making sure it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it <em>does not</em> fail, we know that something is wrong.</p>
+
+<p>So, let's run the test! Right-click on the test file and choose <em>Run As -> JUnit Test</em>. As a result, you should see the test bar turn red in the JUnit view.</p>
+
+<p>The test failed - just as expected. You can turn it into a passing test by changing the assert statement to <code>assertTrue(true);</code></p>
+
+<h2>Enhancing the Test</h2>
+
+<p>Now that we've got everything in place, let's develop a small feature in a test-driven way. You already noted how we enhanced the UI of the application at the beginning, but apart from looking nice, there's not much functionality.</p>
+
+<p>Let's enhance the app so the user can enter their name, press a button and be greeted by the application.</p>
+
+<p>Make sure to statically import the Android FEST assertations - they'll help us to write our tests in a fluent manner:</p>
+
+<p>``` java</p>
+
+<pre><code>import static org.fest.assertions.api.ANDROID.assertThat;
+</code></pre>
+
+<p>```</p>
+
+<p>As we need to have access to the app's main activity in all of our tests, let's add a private field for it and create a setup method that will create a fresh activity before each test is run:</p>
+
+<p>```java MainActivity.java</p>
+
+<pre><code>private MainActivity activity;
+
+@Before
+public void setup() {
+    activity = Robolectric.buildActivity(MainActivity.class).get();
+}
+</code></pre>
+
+<p>```</p>
+
+<p>It is a good practice to ensure the UI is fired up and all UI elements have been initialized as expected (i.e. are not null):</p>
+
+<p>```java MainActivityTest.java</p>
+
+<pre><code>@Test
+public void shouldNotBeNull() {
+    assertThat(activity).isNotNull();
+
+    TextView textView = (TextView) activity.findViewById(R.id.textView);
+    assertThat(textView).isNotNull();
+
+    Button button = (Button) activity.findViewById(R.id.button);
+    assertThat(button).isNotNull();
+
+    EditText editText = (EditText) activity.findViewById(R.id.editText);
+    assertThat(editText).isNotNull();
+}
+</code></pre>
+
+<p>```</p>
+
+<p>Next, let's write a test that places a text inside the edit field, presses the button and compares the result in the text view with the expected result.</p>
+
+<p>Here is the test method:</p>
+
+<p>```java MainActivityTest.java</p>
+
+<pre><code>@Test
+public void shouldProduceGreetingWhenButtonPressed() {
+    TextView textView = (TextView) activity.findViewById(R.id.textView);
+    Button button = (Button) activity.findViewById(R.id.button);
+    EditText editText = (EditText) activity.findViewById(R.id.editText);
+
+    editText.setText("Peter");
+    button.performClick();
+
+    assertThat(textView).containsText("Hello, Peter!");
+}
+</code></pre>
+
+<p>```</p>
+
+<p>When you run the test, it will obviously fail, so let's fix this.</p>
+
+<p>Open <code>MainActivity.java</code> and insert the following private class:</p>
+
+<p>```java MainActivity.java</p>
+
+<pre><code>public static class MainFragment extends Fragment {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button button = (Button) this.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextView textView = (TextView) MainActivity.this.findViewById(R.id.textView);
+                EditText editText = (EditText) MainActivity.this.findViewById(R.id.editText);
+
+                textView.setText(String.format("Hello, %s!", editText.getText()));
+            }
+        });
+    }
+}
+</code></pre>
+
+<p>```</p>
+
+<p>As you can see, this code will register an <code>OnClickListener</code> for the button and set the text of the text view according to the value of the edit field.</p>
+
+<p>The test should now pass - just run the unit test again and you should see a green bar.</p>
+
+<h2>Conclusion</h2>
+
+<p>Setting up an Android project for using Robolectric in Eclipse is quite a bit of work, as you just have seen, but it's reasonably easy with the information I have given you above. Adding Robolectric to a new Android project is just a matter of minutes with these instructions and helps you save a lot of time you'd have had to spend otherwise running the tests on the emulator or on physical devices.</p>
+
+<p>You might be interested in checking out my recent post on integrating Robolectric in a Gradle-based Android project in Android Studio - <a href="/android-testing-with-robolectric/">this way, please</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
     <link href="http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
-    <updated>2011-02-25T22:15:57+00:00</updated>
+    <updated>2011-02-25T23:15:57+01:00</updated>
     <id>http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
     <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
 
@@ -50,7 +365,7 @@
   <entry>
     <title type="html"><![CDATA[How to Use the Gyroscope of Your iPhone in a Mobile Web App]]></title>
     <link href="http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
-    <updated>2010-11-25T12:00:43+00:00</updated>
+    <updated>2010-11-25T13:00:43+01:00</updated>
     <id>http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
     <content type="html"><![CDATA[<p>This week's release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they're neither directly visible in the iOS UI nor are they mentioned in Apple's official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone's gyroscope. Read on to see it in action and learn how to use it.</p>
 
@@ -110,7 +425,7 @@ window.ondeviceorientation = function(event) {
   <entry>
     <title type="html"><![CDATA[Eclipse DemoCamp Hamburg November 2010]]></title>
     <link href="http://www.peterfriese.de/eclipse-democamp-hamburg-november-2010/"/>
-    <updated>2010-11-15T07:28:17+00:00</updated>
+    <updated>2010-11-15T08:28:17+01:00</updated>
     <id>http://www.peterfriese.de/eclipse-democamp-hamburg-november-2010</id>
     <content type="html"><![CDATA[<p>Last Friday was a happy day for Java developers in Hamburg: not only did Apple and Oracle announce their plan to continue development of Java on the Mac OSX platform, but we also had the pleasure to host this fall's instance of Eclipse DemoCamp Hamburg in a bookstore!</p>
 
@@ -155,7 +470,7 @@ window.ondeviceorientation = function(event) {
   <entry>
     <title type="html"><![CDATA[[Updated] Use your iPhone, Android, or BlackBerry to build Your Eclipse Summit Europe 2010]]></title>
     <link href="http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/"/>
-    <updated>2010-11-01T11:45:02+00:00</updated>
+    <updated>2010-11-01T12:45:02+01:00</updated>
     <id>http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010</id>
     <content type="html"><![CDATA[<p>As I'm writing this, Eclipse Summit Europe 2010 is merely hours away and everyone is getting excited to get there and meet Eclipse family.</p>
 
@@ -202,60 +517,6 @@ window.ondeviceorientation = function(event) {
 <p>Also, be sure to drop by the new website for our mobile business: <a href="http://mobile.itemis.com">http://mobile.itemis.com</a> and follow us on Twitter: <a href="http://twitter.com/itemismobile">@itemismobile</a>.</p>
 
 <p>Enjoy <del>the</del> your conference!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
-    <link href="http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again/"/>
-    <updated>2010-09-19T21:15:30+01:00</updated>
-    <id>http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again</id>
-    <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
-
-<!-- more -->
-
-
-<p>In April 2010, together with the release of iOS 4, Apple changed the terms of the iOS Developer Program License in a way which basically prohibited creating software for iOS using languages other than Objective-C, C, C++ or JavaScript:</p>
-
-<blockquote><p>3.3.1 — Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs. Applications must be originally written in Objective-C, C, C++, or JavaScript as executed by the iPhone OS WebKit engine, and only code written in C, C++, and Objective-C may compile and directly link against the Documented APIs (e.g., Applications that link to Documented APIs through an intermediary translation or compatibility layer or tool are prohibited).</p></blockquote>
-
-<p>Back then, pretty much everyone was sure this update to section 3.3.1 of the license really was just one strike in <a href="http://www.apple.com/hotnews/thoughts-on-flash/">Apple's crusade against Flash</a>. Adobe had been working on a tool called <a href="http://labs.adobe.com/technologies/packagerforiphone/">Flash Packager</a>, which allows Flash designers to cross-compile their applications for the iPhone. While this must have been bad news for Adobe (they effectively needed to write off development costs for the entire development team working on Flash Packager), it posed a serious threat to companies whose business model relied upon creating iPhone apps using tools and languages other than Xcode and Objective-C. The future for Novell's <a href="http://monotouch.net/">Mono Touch</a>, <a href="http://www.appcelerator.com/">Appcelerator Titanium</a>, <a href="http://www.phonegap.com/">PhoneGap</a> and <a href="http://www.xmlvm.org/iphone/">XMLVM/iPhone</a> didn't look very bright.</p>
-
-<p>No need to say there was quite an uproar and people came up with all sorts of creative interpretations of the terms stated in section 3.3.1 to avoid being rejected from the App Store.</p>
-
-<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn't come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a>) does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
-
-<blockquote><p>3.3.1 Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs.</p></blockquote>
-
-<p>You might think that a small paragraph in a license agreement doesn't mean that much, but I think the new section will fundamentally change the way we write software for the iPhone in the next few years. Let me explain:</p>
-
-<p>The new section 3.3.1 means you may write iOS software using any language you like. Yes, ANY language - there is no if and when. This means you will not only be able to write iOS software in Objective-C (which is a great language as soon as you come to grips with it), but you will be able to use language like Java, Scala, Haskell, Ruby, etc. Some people are <a href="http://twitter.com/mattgemmell/status/24014145904">even dreaming of using REALBasic</a> for iOS apps.</p>
-
-<p>Vendors of tools such as Mono Touch, Titanium and PhoneGap will be glad, as their business models now have a solid foundation (well, Apple may of course change the license again but I doubt they'll ever restrict the usage of other languages again). Given the <a href="http://labs.adobe.com/technologies/packagerforiphone/">announcement on Adobe Labs</a>, I guess we will very soon see Adobe release their highly acclaimed Flash Packager for iPhone (I don't think people will seriously use this tool to create data-driven applications, but it's probably a great tool to develop games. If you're a Flash designer / developer, that is).</p>
-
-<p>For the development community at large, this is great news: freedom to choose the language that fits your needs best has always been a cornerstone of successfully creating great software. People have expressed their desire to use languages such as Haskell and Ruby to build iPhone apps. Rumor has it Apple engineers have even been working on a version of MacRuby for iPhone - there you go.</p>
-
-<p>At <a href="http://www.itemis.com">itemis</a>, we're very much into programming languages. We're even building our own language development toolkit to support development of programming languages - <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we've mainly been using it to create languages for enterprise and web applications. We're also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself - isn't that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We're not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we're focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
-
-<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/15018235 "></iframe></div></p>
-
-<p>If you're interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
-
-<p>In a few years, I guess, Objective-C will be just one language among many others you can choose from if you want to build iOS applications.</p>
-
-<p>But why would you want to write iOS applications in languages other than Objective-C? There are many reasons:</p>
-
-<ul>
-<li>Use the language you feel most comfortable with. Maybe Objective-C's square brackets look scary to you?</li>
-<li>Use the language you have most experience with. Maybe you're a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator "because we've got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C"!</li>
-<li>use the language you use for developing your backend system. So you've got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</li>
-<li>Maybe you're a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</li>
-</ul>
-
-
-<p>It all boils down to being more productive and ensuring better sustainability. Using the right tool for the job helps you to achieve a faster time to market. If you're able to use the same language on the frontend and the backend, this will help you to secure your investment in this technology.</p>
-
-<p>Please note that I'm not saying you should by all means write your frontend and your backend using the same technology and language. The first and foremost question you need to answer is, "what's the right tool for this job". Being able to make a real choice will help you to give a better answer to this question.</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Debugging | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/debugging/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-21T12:24:32+00:00</updated>
+  <updated>2013-11-27T17:39:22+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Debugging Tips for iOS Developers]]></title>
     <link href="http://www.peterfriese.de/debugging-tips-for-ios-developers/"/>
-    <updated>2013-11-21T12:00:00+00:00</updated>
+    <updated>2013-11-21T12:00:00+01:00</updated>
     <id>http://www.peterfriese.de/debugging-tips-for-ios-developers</id>
     <content type="html"><![CDATA[<p>Let's face it - no matter how hard you try, no matter how many testers you use in manual tests, no matter how disciplined you are in writing unit tests and following the TDD drill of writing a failing test first and then adding the production code that turns the test green - bugs are inevitably linked to our lives. In this post, I'll show you a number of debugging techniques that might come in handy for your next project. Hopefully, you know some of them already, but I am sure some of them will be new for you.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Apple | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/apple/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-21T12:24:32+00:00</updated>
+  <updated>2013-11-27T17:39:22+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Appropriate Use of MapKit]]></title>
     <link href="http://www.peterfriese.de/appropriate-use-of-mapkit/"/>
-    <updated>2011-02-16T10:48:38+00:00</updated>
+    <updated>2011-02-16T11:48:38+01:00</updated>
     <id>http://www.peterfriese.de/appropriate-use-of-mapkit</id>
     <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you're violating Google's terms of service, I was wondering what in particular was wrong.</p>
 
@@ -79,7 +79,7 @@
   <entry>
     <title type="html"><![CDATA[Three reasons why I think the HP TouchPad will rock the tablet market]]></title>
     <link href="http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
-    <updated>2011-02-10T10:38:26+00:00</updated>
+    <updated>2011-02-10T11:38:26+01:00</updated>
     <id>http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
     <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn't the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
 
@@ -106,7 +106,7 @@
   <entry>
     <title type="html"><![CDATA[[Updated] Use your iPhone, Android, or BlackBerry to build Your Eclipse Summit Europe 2010]]></title>
     <link href="http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/"/>
-    <updated>2010-11-01T11:45:02+00:00</updated>
+    <updated>2010-11-01T12:45:02+01:00</updated>
     <id>http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010</id>
     <content type="html"><![CDATA[<p>As I'm writing this, Eclipse Summit Europe 2010 is merely hours away and everyone is getting excited to get there and meet Eclipse family.</p>
 
@@ -159,7 +159,7 @@
   <entry>
     <title type="html"><![CDATA[Apple’s Updated Developer License – This Changes Everything. Again.]]></title>
     <link href="http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again/"/>
-    <updated>2010-09-19T21:15:30+01:00</updated>
+    <updated>2010-09-19T22:15:30+02:00</updated>
     <id>http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again</id>
     <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
 
@@ -213,7 +213,7 @@
   <entry>
     <title type="html"><![CDATA[Why Your Next App Should be Open Sourced]]></title>
     <link href="http://www.peterfriese.de/why-your-next-app-should-be-open-sourced/"/>
-    <updated>2010-09-06T14:15:17+01:00</updated>
+    <updated>2010-09-06T15:15:17+02:00</updated>
     <id>http://www.peterfriese.de/why-your-next-app-should-be-open-sourced</id>
     <content type="html"><![CDATA[<p>I've been doing all sorts of software development over the past few years, from closed-source in-house software for companies to closed-source product development to open-source frameworks and tools development to closed-source app development.</p>
 
