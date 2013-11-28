@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Robolectric | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/robolectric/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-27T17:49:51+01:00</updated>
+  <updated>2013-11-28T15:42:42+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -326,11 +326,13 @@ public void shouldProduceGreetingWhenButtonPressed() {
 
 <p>You might be interested in checking out my recent post on integrating Robolectric in a Gradle-based Android project in Android Studio - <a href="/android-testing-with-robolectric/">this way, please</a>.</p>
 
-<h2>Slides</h2>
+<h2>Slides and Source Code</h2>
 
 <p>Here are the slides I used for presenting this topic at <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2013/Hamburg">Eclipse Democamp November 2013 in Hamburg</a>:</p>
 
 <p><iframe src="http://www.slideshare.net/slideshow/embed_code/28679137 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
+
+<p>The source code for this blog post can be foung on <a href="https://github.com/peterfriese/RobolectricDemoProjectEclipse">Github</a> - clone and enjoy!</p>
 ]]></content>
   </entry>
   

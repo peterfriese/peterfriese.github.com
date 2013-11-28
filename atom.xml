@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://www.peterfriese.de/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-27T17:49:51+01:00</updated>
+  <updated>2013-11-28T15:42:42+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -412,7 +412,7 @@
 
 <p>You might be interested in checking out my recent post on integrating Robolectric in a Gradle-based Android project in Android Studio - <a href="http://www.peterfriese.de/android-testing-with-robolectric/">this way, please</a>.</p>
 
-<h2>Slides</h2>
+<h2>Slides and Source Code</h2>
 
 <p>Here are the slides I used for presenting this topic at <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2013/Hamburg">Eclipse Democamp November 2013 in Hamburg</a>:</p>
 
@@ -420,6 +420,8 @@
 
 
 <p></p>
+
+<p>The source code for this blog post can be foung on <a href="https://github.com/peterfriese/RobolectricDemoProjectEclipse">Github</a> - clone and enjoy!</p>
 ]]></content>
   </entry>
   
