@@ -288,8 +288,10 @@ Setting up an Android project for using Robolectric in Eclipse is quite a bit of
 
 You might be interested in checking out my recent post on integrating Robolectric in a Gradle-based Android project in Android Studio - [this way, please](/android-testing-with-robolectric/).
 
-## Slides
+## Slides and Source Code
 
 Here are the slides I used for presenting this topic at [Eclipse Democamp November 2013 in Hamburg](http://wiki.eclipse.org/Eclipse_DemoCamps_November_2013/Hamburg):
 
 {% slideshare 28679137 %}
+
+The source code for this blog post can be found on [Github](https://github.com/peterfriese/RobolectricDemoProjectEclipse) - clone and enjoy!
