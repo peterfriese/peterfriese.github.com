@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Android | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-28T15:42:42+01:00</updated>
+  <updated>2013-11-28T15:45:27+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -332,7 +332,7 @@ public void shouldProduceGreetingWhenButtonPressed() {
 
 <p><iframe src="http://www.slideshare.net/slideshow/embed_code/28679137 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
 
-<p>The source code for this blog post can be foung on <a href="https://github.com/peterfriese/RobolectricDemoProjectEclipse">Github</a> - clone and enjoy!</p>
+<p>The source code for this blog post can be found on <a href="https://github.com/peterfriese/RobolectricDemoProjectEclipse">Github</a> - clone and enjoy!</p>
 ]]></content>
   </entry>
   

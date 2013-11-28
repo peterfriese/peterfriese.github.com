@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://www.peterfriese.de/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-28T15:42:42+01:00</updated>
+  <updated>2013-11-28T15:45:27+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -421,7 +421,7 @@
 
 <p></p>
 
-<p>The source code for this blog post can be foung on <a href="https://github.com/peterfriese/RobolectricDemoProjectEclipse">Github</a> - clone and enjoy!</p>
+<p>The source code for this blog post can be found on <a href="https://github.com/peterfriese/RobolectricDemoProjectEclipse">Github</a> - clone and enjoy!</p>
 ]]></content>
   </entry>
   
