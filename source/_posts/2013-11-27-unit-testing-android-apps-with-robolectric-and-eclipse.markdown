@@ -164,7 +164,7 @@ This will tell Robolectric to use the `AndroidManifest.xml` file from our Androi
 
 ## Writing Your First Robolectric Test
 
-Let's write out first test! Add the following class to `src/test/java`:
+Let's write our first test! Add the following class to `src/test/java`:
 
 ```java MainActivityTest.java
 	package de.peterfriese.robolectricdemo;
