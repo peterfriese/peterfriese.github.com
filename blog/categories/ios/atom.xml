@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-28T15:45:27+01:00</updated>
+  <updated>2013-12-12T15:19:21+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -14,9 +14,55 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Annotated Links, Issue 6]]></title>
+    <link href="http://www.peterfriese.de/annotated-links-issue-6/"/>
+    <updated>2013-12-11T12:24:00+00:00</updated>
+    <id>http://www.peterfriese.de/annotated-links-issue-6</id>
+    <content type="html"><![CDATA[<p>After a few weeks of silence (and on popular demand by a <a href="http://heikobehrens.net">single person</a>), I decided to pick up publishing my annotated links again. This time, we'll look at wiretapping APIs, donating code to your favourite projects on Github, Node.js in your iOS apps, and a racing game that renders its track across multiple devices.</p>
+
+<!-- more -->
+
+
+<h3><a href="http://www.runscope.com">Runscope</a></h3>
+
+<p>Runscope is an online tool for inspecting, debugging and testing API traffic. The traffic inspector allows you to easily set up a "wire tap" for your app, basically allowing you to monitor and record any traffic between your app and any API that you're using. In addition to recording traffic for inspection, you can also compare responses of two calls and find out where the differences are - very handy! You can even share individual recorded requests with your co-workers, e.g. to discuss a problem with your back-end team.</p>
+
+<p>Runscope also provides a tool for automated testing of your API, dubbed <em>Runscope Radar</em>. This tool allows you to set up a sequence of API calls, along with the expected outcome for each of the calls. Radar provides an easy-to-use UI for setting up simple, yet powerful assertions that allow you to specify how the header and body of the response should look like. Variables help you to keep things flexible. Runscope Radar supports JSON and XML, so it is easy to build expressions like <code>[2].number</code> to navigate JSON and XML responses and specify expectations. You can then schedule your tests to run at given intervals and be notified via e-mail in case a test fails. This allows you to easily set up intelligent tests that monitor the validity of your API.</p>
+
+<p><a href="http://httpkit.com/wiretap">Wiretap</a> by <a href="https://twitter.com/KrisJordan">Kris Jordan</a> looks very promising as well. It acts as a reverse proxy, allowing you to record HTTP traffic between your app and an API very easily. In fact, setting up a wiretap seems to be easier than setting up Runscope. Unfortunately, still is in beta, but Kris has set up a video to give you a goood understanding of how it works. Wiretap and Runscope look strikingly similar, but I have the impression Wiretap has been around for longer...</p>
+
+<h3><a href="http://24pullrequests.com">24 Pull Requests Until Christmas</a></h3>
+
+<p>Christmas is upon us - and this is your chance to give back some love to some of the many open source projects out there you might be using in your own work. The idea is to submit one pull request each day for any project on Github. A number of projects are already listed on the <a href="http://24pullrequests.com/projects">projects</a> page, which allows you to filter projects by programming language to find a few that you might be interested in. Your favourite project isn't listed? No problem at all - just <a href="http://24pullrequests.com/projects/new">submit a suggestion</a> and fork away!</p>
+
+<p>I found it very interesting to see <a href="http://www.eclipse.org/xtend/">Xtend</a> is officially listed as a programming language on Github - great job, <a href="https://twitter.com/xtendlang">guys</a>!</p>
+
+<h3><a href="http://nodeapp.org">Node.js in your iOS App</a></h3>
+
+<p>If you wanted to use JavaScript in your iOS apps prior to iOS 7, you basically had two options: use an embedded <code>UIWebView</code> and invoke <code>-stringByEvaluatingJavaScriptFromString:</code>, or recompile <a href="https://github.com/phoboslab/JavaScriptCore-iOS">JavaScriptCore for iOS</a>.</p>
+
+<p>Starting with iOS 7, Apple <a href="https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html">opened access to JavaScriptCore</a> (I really like <em>"For information about the classes of this framework, see the framework header files."</em>), basically enabling iOS developers to use JavaScript to script their applications.</p>
+
+<p>The NodeApp interpreter goes one step further and allows developers to re-use existing Node modules. Even if you might not be interested in using any of the <a href="https://npmjs.org">50.000+ module listed on npm.org</a>, this is good news as it allows you to re-use the Node module system, thereby enabling you to structure your JavaScript apps in a more concise way.</p>
+
+<p>Check out the <a href="https://github.com/node-app/Interpreter">NodeApp interpreter app</a> and impress your coworkers with a real JavaScript interpreter running on your iPhone!</p>
+
+<h3><a href="http://g.co/racer">Racer - A multiplayer game for your mobile browser</a></h3>
+
+<p>Racer is a Chrome Experiment that shows off various web technologies, like <a href="http://www.html5rocks.com/en/tutorials/websockets/basics/">WebSockets</a>, the <a href="http://www.html5rocks.com/en/tutorials/webaudio/intro/">Web Audio API</a>, CSS Animations and <a href="http://css-tricks.com/css-sprites/">CSS Sprites</a>.</p>
+
+<p>Watch the <a href="http://www.youtube.com/watch?v=17P67Uz0kcw">making of</a>, read the back story of how it was made on <a href="http://master.html5rocks-hrd.appspot.com/en/tutorials/casestudies/racer/">HTML 5 rocks</a>. Then, go find some friends with mobile devices and <a href="http://g.co/racer">play Racer online</a>. The <a href="http://www.youtube.com/watch?v=YT0k99hCY5I">soundtrack</a> has been composed by <a href="https://myspace.com/giorgiomoroderpage">Giorgio Moroder</a>, who composed a number of well-known songs for events like Olympia 1984 and 1988 or the 1990 Football World Cup. Some of his songs were used in racing games before, but the soundtrack for Racer is the first one to be composed specifically for the purpose of being used in a racing game.</p>
+
+<p>I hope you enjoyed this week's links - let me know if you would like me to continue compiling them by sending me a mail or - better yet - using the tweet button below to let your friends know about this post!</p>
+
+<p>Thanks for reading!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Debugging Tips for iOS Developers]]></title>
     <link href="http://www.peterfriese.de/debugging-tips-for-ios-developers/"/>
-    <updated>2013-11-21T12:00:00+01:00</updated>
+    <updated>2013-11-21T12:00:00+00:00</updated>
     <id>http://www.peterfriese.de/debugging-tips-for-ios-developers</id>
     <content type="html"><![CDATA[<p>Let's face it - no matter how hard you try, no matter how many testers you use in manual tests, no matter how disciplined you are in writing unit tests and following the TDD drill of writing a failing test first and then adding the production code that turns the test green - bugs are inevitably linked to our lives. In this post, I'll show you a number of debugging techniques that might come in handy for your next project. Hopefully, you know some of them already, but I am sure some of them will be new for you.</p>
 
@@ -31,7 +77,7 @@
 
 <p>Most developers are familiar with the concept of breakpoints, but if you're new to Xcode you might wonder how to create or modify a breakpoint, so I'll give a brief overview.</p>
 
-<p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint.png" class="fancybox" title="Simple Breakpoint"><img class="right" src="/thumbs/breakpoint_300x150.png" alt="Simple Breakpoint" /></a></p>
+<p>{% fancyimage right /images/2013-11-20-debugging-tips-for-ios-developers/breakpoint.png 300x150 Simple Breakpoint %}</p>
 
 <p>You can create a breakpoint by clicking on the line number in the editor gutter. The breakpoint will be displayed as a solid blue indicator in the gutter. From that moment on, your application will pause execution as soon as execution reaches the breakpoint.</p>
 
@@ -50,7 +96,7 @@
 
 <p>The various properties of a conditional breakpoint allow you to specify exactly under which circumstances execution should stop at the breakpoint. What's more, you can specify certain actions that should take place when the breakpoint criteria are met.</p>
 
-<p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint_condition.png" class="fancybox" title="Conditional Breakpoint"><img class="right" src="/thumbs/breakpoint_condition_300x150.png" alt="Conditional Breakpoint" /></a></p>
+<p>{% fancyimage right /images/2013-11-20-debugging-tips-for-ios-developers/breakpoint_condition.png 300x150 Conditional Breakpoint %}</p>
 
 <p>For example, in order to stop execution inside a <code>UITableViewController</code>s <code>tableView:cellForRowAtIndexPath:</code> method when the table view controller requests the cell for the 3rd row, add this condition:</p>
 
@@ -73,7 +119,7 @@
 
 <p>Of all those options, speaking a message or playing a sound stand out the most. While you might think these are just toys, they are actually very useful in combination with the option to continue execution after hitting the breakpoint.</p>
 
-<p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint_speak.png" class="fancybox" title="Breakpoint with Action"><img class="right" src="/thumbs/breakpoint_speak_300x150.png" alt="Breakpoint with Action" /></a></p>
+<p>{% fancyimage right /images/2013-11-20-debugging-tips-for-ios-developers/breakpoint_speak.png 300x150 Breakpoint with Action %}</p>
 
 <p>Just consider for example an app that waits for the arrival of a background signal while the user does something in the app. Now, if you place a breakpoint on the line that receives the background signal and configure the breakpoint to play a signal or speak a message, you can go on and exercise the app in the foreground while waiting for the background message to arrive. As soon as the message arrives, you'll hear the sound play and can take appropriate actions.</p>
 
@@ -89,7 +135,7 @@
 
 <p>As soon as your application has hit a breakpoint, you can start inspecting its current state. Most likely, you'll use the <em>Debug area</em> at the bottom of the Xcode window to do so.</p>
 
-<p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/debugarea.png" class="fancybox" title="Xcode Debugger"><img class="center" src="/thumbs/debugarea_600x400.png" alt="Xcode Debugger" /></a></p>
+<p>{% fancyimage center /images/2013-11-20-debugging-tips-for-ios-developers/debugarea.png 600x400 Xcode Debugger %}</p>
 
 <p>However, sometimes it can be tedious to click-navigate through a deep hierarchy of nested properties. This is when the debugger console comes in handy. It is located on the right hand side of the debug area. Just click inside the white space and type a command. When debuging Objective-C code for iOS, you're most likely using <a href="http://lldb.llvm.org/">lldb</a>. Former versions of Xcode used <a href="https://www.gnu.org/software/gdb/">gbd</a> as their default debugger. A comparison of lldb and gdb, including a list of commands they support can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html">here</a>. A more in-depth documentation of lldb can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-terminal-workflow-tutorial.html">here</a>. Don't worry - you do not have to wade through all of this documentation, I'll give you a run down of the most important commands here:</p>
 
@@ -168,7 +214,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <p>If you're interested in learning more about debugging iOS apps in general and some tools that might come in handy, check out this presentation:</p>
 
-<p><iframe src="http://www.slideshare.net/slideshow/embed_code/17145826 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
+<p>{% slideshare 17145826 %}</p>
 
 <p>Also, Heiko Behrens and I had a chat about debugging iOS apps - it is available as an episode of the excellent (ok, I am biased) podcast <a href="http://www.UISprech.de">UISprech</a> (in German only, sorry) here: <a href="http://UISprech.de/7">UISprech #7: Debugging Tools mit Peter Friese</a>.</p>
 ]]></content>
@@ -177,7 +223,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
   <entry>
     <title type="html"><![CDATA[Do Androids Dream of Electric Sheep?]]></title>
     <link href="http://www.peterfriese.de/do-androids-dream-of-electric-sheep/"/>
-    <updated>2013-03-22T01:33:48+01:00</updated>
+    <updated>2013-03-22T00:33:48+00:00</updated>
     <id>http://www.peterfriese.de/do-androids-dream-of-electric-sheep</id>
     <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
 
@@ -188,7 +234,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <p>In a Pecha Kucha presentation I recently delivered at the OOP conference in Munich, I took on this theme and started my talk with a imaginative conversation between two computer programs that most of you might know very well: Eliza and Siri.</p>
 
-<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/61467056 "></iframe></div></p>
+<p>{% vimeo 61467056 %}</p>
 
 <p>In this Pecha Kucha session, Siri and Eliza join me live on stage to explain why we do not (yet) use the potential of our smart phones.</p>
 
@@ -219,7 +265,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
   <entry>
     <title type="html"><![CDATA[Using CocoaPods to manage your dependencies]]></title>
     <link href="http://www.peterfriese.de/using-cocoapods-to-manage-your-dependencies/"/>
-    <updated>2012-06-30T00:42:22+02:00</updated>
+    <updated>2012-06-29T23:42:22+01:00</updated>
     <id>http://www.peterfriese.de/using-cocoapods-to-manage-your-dependencies</id>
     <content type="html"><![CDATA[<p>One of the few things that I find really annoying about developing apps for the iOS platform is how cumbersome it is to include third party libraries in your projects. Depending on the complexity of the library (e.g. its respective dependencies and transitive dependencies) and the effort the authors put into the consumability of their library, the steps required to add a library to your project range from just copying a few files into your source folder to a whopping two-page description of drag'n'drop wizardry.</p>
 
@@ -312,7 +358,7 @@ dependency 'RestKit/ObjectMapping/JSON'
   <entry>
     <title type="html"><![CDATA[The Accounts and Twitter Framework on iOS 5]]></title>
     <link href="http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5/"/>
-    <updated>2011-11-10T00:30:46+01:00</updated>
+    <updated>2011-11-09T23:30:46+00:00</updated>
     <id>http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5</id>
     <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you're in a news reader application you might want to let your followers know about an interesting article you just read. If you're in a conference schedule app, you not only want to let your followers know about the awesome talks you're listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you're stuck in...</p>
 
@@ -340,7 +386,7 @@ dependency 'RestKit/ObjectMapping/JSON'
 
 <p>To use the Accounts and Twitter frameworks, we need to add them to the project:</p>
 
-<p><img class="center" src="../images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/add_twitter_accounts.png" title="Add Accounts and Twitter frameworks to the project" ></p>
+<p>{% img center ../images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/add_twitter_accounts.png Add Accounts and Twitter frameworks to the project %}</p>
 
 <p>Once that's done, we can use the Accounts framework to fetch the list of Twitter accounts on the device.</p>
 
@@ -469,131 +515,11 @@ return cell;
 
 <p>Here's an impression of the current state of the application:</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_1.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - List of local accounts"><img src="/thumbs/twitter_client_1_120x150.png" alt="Twitter Client - List of local accounts" /></a></li>
-<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_2.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Home timeline for a user"><img src="/thumbs/twitter_client_2_120x150.png" alt="Twitter Client - Home timeline for a user" /></a></li>
-<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_3.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Composing a tweet"><img src="/thumbs/twitter_client_3_120x150.png" alt="Twitter Client - Composing a tweet" /></a></li>
-</ul></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using NSPredicate to Filter Data]]></title>
-    <link href="http://www.peterfriese.de/using-nspredicate-to-filter-data/"/>
-    <updated>2011-04-23T00:15:36+02:00</updated>
-    <id>http://www.peterfriese.de/using-nspredicate-to-filter-data</id>
-    <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you're applying a filter to the huge set of data we call the internet.</p>
-
-<!-- more -->
-
-
-<p>Even on your local computer, you use services like Spotlight or the search field in your mail application all the time. Apps that lack decent searching and filtering capabilities sometimes are really hard to use, so as developers we should spend some time on thinking how to allow users to filter the data they're dealing with.</p>
-
-<p>In this post, I am going to focus on ways to filter data. We won't be looking at the UI side of things - this is something I'll do in a subsequent blog post.</p>
-
-<h2>Old-skool filtering</h2>
-
-<p>If you look at an arbitrary code base, chances are you'll sooner or later run into a piece of code similar to this one:</p>
-
-<p>``` objc</p>
-
-<pre><code>NSMutableArray *oldSkoolFiltered = [[NSMutableArray alloc] init];
-for (Book *book in bookshelf) {
-    if ([book.publisher isEqualToString:@"Apress"]) {
-        [oldSkoolFiltered addObject:book];
-    }
-}
-</code></pre>
-
-<p>```</p>
-
-<p>It's a straight-forward approach to filtering an array of items (in this case, we're talking about books) using a rather simple <code>if</code>-statement. Nothing wrong with this, but despite the fact we're using a fairly simple expression here, the code is rather verbose. We can easily imagine what will happen in case we need to use more complicated selection criteria or a combination of filtering criteria.</p>
-
-<h2>Simple filtering with NSPredicate</h2>
-
-<p>Thanks to Cocoa, we can simplify the code by using <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSPredicate_Class/Reference/NSPredicate.html">NSPredicate</a>. <code>NSPredicate</code> is the object representation of an if-statement, or, more formally, a predicate.</p>
-
-<p>Predicates are <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSPredicate_Class/Reference/NSPredicate.html">expressions that evaluate to a truth value</a>, i.e. <code>true</code> or <code>false</code>. We can use them to perform validation and filtering. In Cocoa, we can use <code>NSPredicate</code> to evaluate single objects, filter arrays and perform queries against Core Data data sets.</p>
-
-<p>Let's have a look at how our example looks like when using <code>NSPredicate</code>:</p>
-
-<p>``` objc</p>
-
-<pre><code>NSPredicate *predicate = 
-  [NSPredicate predicateWithFormat:@"publisher == %@", @"Apress" ];
-NSArray *filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
-</code></pre>
-
-<p>```</p>
-
-<p>Much shorter and better readable!</p>
-
-<h2>Filtering with Regular Expressions</h2>
-
-<p>Regular Expressions can be used to <a href="http://xkcd.com/208/">solve almost any problem ;-)</a> so it's good to know you can use them in <code>NSPredicate</code>s as well. To use regular expressions in your <code>NSPredicate</code>, you need to use the <code>MATCHES</code> operator.</p>
-
-<p>Let's filter all books that are about iPad or iPhone programming:</p>
-
-<p>``` objc</p>
-
-<pre><code>predicate = [NSPredicate predicateWithFormat:@"title MATCHES '.*(iPhone|iPad).*'"];
-filtered = [bookshelf filteredArrayUsingPredicate:predicate];
-dumpBookshelf(@"Books that contain 'iPad' or 'iPhone' in their title", filtered);
-</code></pre>
-
-<p>```</p>
-
-<p>You need to obey some rules when using regular expressions in <code>NSPredicate</code>: most importantly, <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/Articles/pUsing.html#//apple_ref/doc/uid/TP40001794-SW9">you cannot use regular expression metacharacters inside a pattern set</a>.</p>
-
-<h2>Filtering using set operations</h2>
-
-<p>Let's for a moment assume you want to filter all books that have been published by your favorite publishers. Using the <code>IN</code> operator, this is rather simple: first, we need to set up a set containing the publishers we're interested in. Then, we can create the predicate and finally perform the filtering operation:</p>
-
-<p>``` objc</p>
-
-<pre><code>NSArray *favoritePublishers = [NSArray arrayWithObjects:@"Apress", @"O'Reilly", nil];
-predicate = [NSPredicate predicateWithFormat:@"publisher IN %@", favoritePublishers];
-filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
-dumpBookshelf(@"Books published by my favorite publishers", filtered);
-</code></pre>
-
-<p>```</p>
-
-<h2>Advanced filtering thanks to KVC goodness</h2>
-
-<p><code>NSPredicate</code> relies on <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/KeyValueCoding.html">key-value coding</a> to achieve its magic. On one hand this means your classes need to be <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/Compliant.html#//apple_ref/doc/uid/20002172-BAJEAIEE">KVC compliant</a> in order to be queried using <code>NSPredicate</code> (at least the attributes you want to query). On the other hand, this allows us to perform some very interesting things with very little lines of code.</p>
-
-<p>Let's for example retrieve a list of books written by authors with the name "Mark":</p>
-
-<p>``` objc</p>
-
-<pre><code>predicate = 
-  [NSPredicate predicateWithFormat:@"authors.lastName CONTAINS %@", @"Mark" ];
-filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
-</code></pre>
-
-<p>```</p>
-
-<p>In case we'd want to return the value of one of the aggregate functions, we don't need to use NSPredicate itself, but instead use KVC directly. Let's retrieve the average price of all books on our shelf:</p>
-
-<p>``` objc</p>
-
-<pre><code>NSNumber *average = [bookshelf valueForKeyPath:@"@avg.price"];
-</code></pre>
-
-<p>```</p>
-
-<h2>Conclusion</h2>
-
-<p>The Cocoa libraries provide some very powerful abstractions which can make your life and that of the people reading your code much easier. It pays off to know about them, so go ahead and browse the Cocoa documentation and hunt for those gems!</p>
-
-<p>Apple's <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html">NSPredicate programming guide</a> provides an in-depth documentation for <code>NSPredicate</code> containing all the things I didn't cover in this post.</p>
-
-<p><code>NSPredicate</code> also plays an important role when querying data in Core Data, something we will need to have a look at in one of the next blog posts. Stay tuned!</p>
-
-<h2>Code</h2>
-
-<p>The code for this post is available on my github page: <a href="http://github.com/peterfriese/NSPredicateDemo">get forking</a>!</p>
+<p>{% fancyalbum 120x150 %}
+/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_1.png: Twitter Client - List of local accounts
+/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_2.png: Twitter Client - Home timeline for a user
+/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_3.png: Twitter Client - Composing a tweet
+{% endfancyalbum %}</p>
 ]]></content>
   </entry>
   

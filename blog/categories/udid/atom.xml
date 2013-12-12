@@ -4,7 +4,7 @@
   <title><![CDATA[Category: UDID | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/udid/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-28T15:45:27+01:00</updated>
+  <updated>2013-12-12T15:19:21+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[What's your number?]]></title>
     <link href="http://www.peterfriese.de/whats-your-number/"/>
-    <updated>2011-01-27T02:00:47+01:00</updated>
+    <updated>2011-01-27T01:00:47+00:00</updated>
     <id>http://www.peterfriese.de/whats-your-number</id>
     <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you've been asking yourself "what's this number, and where do I find it?", read on!</p>
 
@@ -31,12 +31,12 @@
 <li>Connect your iPhone / iPad to your computer using the white USB connection cable.</li>
 <li>Wait for iTunes to start up. If it doesn't start automatically, start it manually (Windows users will find it in the depths of the Start Menu, Mac users can use Spotlight to search for it).</li>
 <li>Click on the name of your iPhone / iPad on the left-hand side of the iTunes Window:
- <a href="/images/2011-01-27-whats-your-number/whatsyournumber_screenshot_1.jpg" class="fancybox" title="Finding your iPhone's UDID, step 1"><img class="right" src="/thumbs/whatsyournumber_screenshot_1_927x348.jpg" alt="Finding your iPhone's UDID, step 1" /></a></li>
+ {% fancyimage right /images/2011-01-27-whats-your-number/whatsyournumber_screenshot_1.jpg 927x348 Finding your iPhone's UDID, step 1 %}</li>
 <li>Details about your device will be displayed in the main area of the iTunes window.</li>
 <li>Find the label titled <strong>Serial Number</strong>. The serial number IS NOT the UDID!</li>
 <li>Holding down the CMD (on the Mac) or the CTRL (on Windows) key, click on the label <strong>Serial Number</strong></li>
 <li>The label's title will change to <strong>Identifier (UDID)</strong>:
- <a href="/images/2011-01-27-whats-your-number/whatsyournumber_screenshot_2.jpg" class="fancybox" title="Finding your iPhone's UDID, step 2"><img class="right" src="/thumbs/whatsyournumber_screenshot_2_927x348.jpg" alt="Finding your iPhone's UDID, step 2" /></a></li>
+ {% fancyimage right /images/2011-01-27-whats-your-number/whatsyournumber_screenshot_2.jpg 927x348 Finding your iPhone's UDID, step 2 %}</li>
 <li>Press CMD+C (on Mac) or CTRL+C (on Windows) to copy the UDID to your clipboard</li>
 <li>Open a new mail, insert the UDID and a friendly message and send it to your developer.</li>
 </ol>

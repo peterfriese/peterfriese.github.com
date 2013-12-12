@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Eclipse FAQ | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/eclipse-faq/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-28T15:45:27+01:00</updated>
+  <updated>2013-12-12T15:19:21+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Following Eclipse Milestones]]></title>
     <link href="http://www.peterfriese.de/following-eclipse-milestones/"/>
-    <updated>2009-06-09T01:46:24+02:00</updated>
+    <updated>2009-06-09T00:46:24+01:00</updated>
     <id>http://www.peterfriese.de/following-eclipse-milestones</id>
     <content type="html"><![CDATA[<p>With the Galileo Release coming up, you might find yourself having a hard time updating to the latest milestones AND keeping your favorite plug-ins up-to-date.</p>
 
@@ -78,7 +78,7 @@
   <entry>
     <title type="html"><![CDATA[Advanced WikiText]]></title>
     <link href="http://www.peterfriese.de/advanced-wikitext/"/>
-    <updated>2009-05-05T21:18:47+02:00</updated>
+    <updated>2009-05-05T20:18:47+01:00</updated>
     <id>http://www.peterfriese.de/advanced-wikitext</id>
     <content type="html"><![CDATA[<p>In my <a href="http://www.peterfriese.de/getting-started-with-wikitext/">recent posting</a>, I showed you how to use <a href="http://wiki.eclipse.org/Mylyn/Incubator/WikiText">Mylyn WikiText</a> to easily create documentation for your project.</p>
 
@@ -266,7 +266,7 @@ newnoteworthy.textile
   <entry>
     <title type="html"><![CDATA[Getting started with WikiText]]></title>
     <link href="http://www.peterfriese.de/getting-started-with-wikitext/"/>
-    <updated>2009-04-24T01:34:54+02:00</updated>
+    <updated>2009-04-24T00:34:54+01:00</updated>
     <id>http://www.peterfriese.de/getting-started-with-wikitext</id>
     <content type="html"><![CDATA[<p>Documentation is the bane of all developers. Nobody likes to write documentation, but most people know we need it. Even more so in Open Source projects. If you don't have a decent documentation, it will be hard to find contributors which will eventually stall the projects ability to acquire new committers.</p>
 
@@ -399,7 +399,7 @@ h6. An HTML sixth-level heading
   <entry>
     <title type="html"><![CDATA[How Twitter solved my P2 problems during my lunch break]]></title>
     <link href="http://www.peterfriese.de/how-twitter-solved-my-p2-problems-during-my-lunch-break/"/>
-    <updated>2009-04-02T17:21:50+02:00</updated>
+    <updated>2009-04-02T16:21:50+01:00</updated>
     <id>http://www.peterfriese.de/how-twitter-solved-my-p2-problems-during-my-lunch-break</id>
     <content type="html"><![CDATA[<p>Today, I wanted to migrate from Eclipse 3.5M5 to Eclipse 3.6M6 (I know, it's a bit late for that already - but then, I had been busy with <a href="http://www.eclipsecon.org/">#eclipsecon</a> and preparing the <a href="http://www.eclipsecon.org/2009/sessions?id=358">Stupid Modeling Talk</a> during the past weeks).</p>
 
@@ -426,7 +426,7 @@ h6. An HTML sixth-level heading
   <entry>
     <title type="html"><![CDATA[Using Teneo, EMF and Hibernate to update and query your data]]></title>
     <link href="http://www.peterfriese.de/using-teneo-emf-and-hibernate-to-update-and-query-your-data/"/>
-    <updated>2009-03-14T23:55:49+01:00</updated>
+    <updated>2009-03-14T22:55:49+00:00</updated>
     <id>http://www.peterfriese.de/using-teneo-emf-and-hibernate-to-update-and-query-your-data</id>
     <content type="html"><![CDATA[<p><a href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/">Last week I showed you</a> how to use Teneo, EMF and Hibernate to store your data in a database.</p>
 

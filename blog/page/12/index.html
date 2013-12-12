@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="If you&#8217;re feeling this summer is way to hot and need to cool down try out this cute flash game. Great music, nice graphics and thrilling &hellip;">
+  <meta name="description" content="If you&#8217;re a Windows user like me, you are used to the idea that a filename consist of a first (the name) and a second part (the extension). &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -117,6 +117,73 @@
   <header>
     
       <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/mind-boggling-1-ant-patternset/">Mind-boggling #1: Ant Patternset</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-08-08T14:14:46+01:00" pubdate data-updated="true">Aug 8<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>If you&#8217;re a Windows user like me, you are used to the idea that a filename consist of a first (the name) and a second part (the extension). Recently, I had to write a little <a href="http://ant.apache.org/">Ant</a> file that copies an entire JRE to another directory. In order to do this, I used the following snippet:
+`</p>
+
+<!-- copy JRE -->
+
+
+<p><copy todir="${target.client.dir}/jre">
+<fileset dir="${project.jre.dir}/jre">
+<include name="**/*.*" />
+</fileset>
+`
+Now, there is something wrong with this snippet. Can you spot the mistake? I didn&#8217;t notice the mistake until my customer complained to me that the timezone information could not be read. It turned out that the timezone information is stored in files without an extension.</p>
+
+<p>But why weren&#8217;t they copied? Didn&#8217;t I tell Ant to copy all files by specifying &#8221;<em><em>/</em>.</em>&#8221;?</p>
+
+<p>No, I didn&#8217;t! The pattern &#8221;<em>.</em>&#8221; means &#8220;all files that contain a dot&#8221;. Doh. Timezone files do not have a dot. The solution to the problem is quite simple: just remove the &#8220;.*&#8221;, and you&#8217;re done:
+`</p>
+
+<!-- copy JRE -->
+
+
+<p><copy todir="${target.client.dir}/jre">
+<fileset dir="${project.jre.dir}/jre">
+<include name="****/***" />
+</fileset>
+`</p>
+
+<p>So, if you want to copy all files, remember to <strong>not</strong> use the &#8221;<em>.</em>&#8221; notation used to us Windows users, but use the &#8220;*&#8221; notation used to Linux users.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
         <h1 class="entry-title"><a href="/summer-splash/">Summer Splash</a></h1>
       
     
@@ -134,7 +201,7 @@
   
 
 
-<time datetime="2006-07-30T01:19:31+02:00" pubdate data-updated="true">Jul 30<span>th</span>, 2006</time>
+<time datetime="2006-07-30T00:19:31+01:00" pubdate data-updated="true">Jul 30<span>th</span>, 2006</time>
         
       </p>
     
@@ -174,7 +241,7 @@
   
 
 
-<time datetime="2006-07-26T22:58:40+02:00" pubdate data-updated="true">Jul 26<span>th</span>, 2006</time>
+<time datetime="2006-07-26T21:58:40+01:00" pubdate data-updated="true">Jul 26<span>th</span>, 2006</time>
         
       </p>
     
@@ -220,7 +287,7 @@ From the day I was born, I have been in your care, and from the time of my birth
   
 
 
-<time datetime="2006-07-03T13:06:01+02:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2006</time>
+<time datetime="2006-07-03T12:06:01+01:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2006</time>
         
       </p>
     
@@ -260,7 +327,7 @@ From the day I was born, I have been in your care, and from the time of my birth
   
 
 
-<time datetime="2006-05-26T21:13:40+02:00" pubdate data-updated="true">May 26<span>th</span>, 2006</time>
+<time datetime="2006-05-26T20:13:40+01:00" pubdate data-updated="true">May 26<span>th</span>, 2006</time>
         
       </p>
     
@@ -300,7 +367,7 @@ From the day I was born, I have been in your care, and from the time of my birth
   
 
 
-<time datetime="2006-05-03T23:35:03+02:00" pubdate data-updated="true">May 3<span>rd</span>, 2006</time>
+<time datetime="2006-05-03T22:35:03+01:00" pubdate data-updated="true">May 3<span>rd</span>, 2006</time>
         
       </p>
     
@@ -340,7 +407,7 @@ From the day I was born, I have been in your care, and from the time of my birth
   
 
 
-<time datetime="2006-04-19T10:53:07+02:00" pubdate data-updated="true">Apr 19<span>th</span>, 2006</time>
+<time datetime="2006-04-19T09:53:07+01:00" pubdate data-updated="true">Apr 19<span>th</span>, 2006</time>
         
       </p>
     
@@ -380,7 +447,7 @@ From the day I was born, I have been in your care, and from the time of my birth
   
 
 
-<time datetime="2006-04-18T15:13:58+02:00" pubdate data-updated="true">Apr 18<span>th</span>, 2006</time>
+<time datetime="2006-04-18T14:13:58+01:00" pubdate data-updated="true">Apr 18<span>th</span>, 2006</time>
         
       </p>
     
@@ -420,7 +487,7 @@ From the day I was born, I have been in your care, and from the time of my birth
   
 
 
-<time datetime="2006-03-09T14:09:30+01:00" pubdate data-updated="true">Mar 9<span>th</span>, 2006</time>
+<time datetime="2006-03-09T13:09:30+00:00" pubdate data-updated="true">Mar 9<span>th</span>, 2006</time>
         
       </p>
     
@@ -510,7 +577,7 @@ start putty -load another_session_name`
   
 
 
-<time datetime="2006-01-17T12:32:50+01:00" pubdate data-updated="true">Jan 17<span>th</span>, 2006</time>
+<time datetime="2006-01-17T11:32:50+00:00" pubdate data-updated="true">Jan 17<span>th</span>, 2006</time>
         
       </p>
     
@@ -520,52 +587,6 @@ start putty -load another_session_name`
   <div class="entry-content">
         
     <p>Looking for some cools sounds to spice up your Windows? Have a look at <a href="http3A//www.dailywav.com/">The20Daily20.WAV</a>, they&#8217;ve got plenty of cool sounds mainly from movies and TV shows. I found it because I was googling for a sounds featuring Marvin (the paranoid android from The <a href="http://hitchhikers.movies.go.com/">Hitchhikers</a> <a href="http://www.douglasadams.com/creations/infocomjava.html">Guide</a> <a href="http://www.bbc.co.uk/radio4/hitchhikers/game.shtml">to</a> <a href="http://www.douglasadams.com/creations/hhgg.html">the</a> <a href="http://www.bbc.co.uk/cult/hitchhikers/">Galaxy</a>). The Daily .WAV has quite some sounds from the &#8221;<a href="http://us.imdb.com/title/tt0081874/">Guide</a>&#8221; - get them <a href="http://www.dailywav.com/ha.php">here</a>!</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/android-screen-video/">Android Screen Video</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-12-24T14:50:06+01:00" pubdate data-updated="true">Dec 24<span>th</span>, 2005</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>As it is christmas, I decided to give away a christmas present. Many people have been asking for an Eclipse plug-in for AndroMDA to make this MDA toolkit more easier to use. I have begun working on such a plug-in. It is not yet finished, but I decided to give you a short demo so you can see how it is going to look like.</p>
-
-<p>You can start the screen video by clicking <a href="http://f3.tobject.de/wp-content/downloads/plugins/android/AndroidDemo.html">here</a> (you&#8217;ll need Flash, and make sure you have your speaker turned on).</p>
-
-<p>Merry Christmas!</p>
-
-<p>Peter</p>
 </div>
   
   

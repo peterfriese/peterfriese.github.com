@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conferences | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/conferences/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-28T15:45:27+01:00</updated>
+  <updated>2013-12-12T15:19:21+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Hacked.io 2013]]></title>
     <link href="http://www.peterfriese.de/hacked-dot-io-2013/"/>
-    <updated>2013-08-03T00:18:00+02:00</updated>
+    <updated>2013-08-03T00:18:00+01:00</updated>
     <id>http://www.peterfriese.de/hacked-dot-io-2013</id>
     <content type="html"><![CDATA[<p>On the weekend of July 21st, I had the chance to attend the Hacked.io hackathon. The dimensions of this event matched the size of London: 500 attendees of all age groups (there were entire teams made up of kids) gathered in the O2 arena (more precisely: in the IndigO2) poised to spend a sleepless night full of hacking and working on creative projects. Those who didn't already have an idea for project could let themselves be inspired by the numerous challenges set up by the event sponsors.</p>
 
@@ -41,17 +41,17 @@
 
 <p>The flow of events for a simple dialog is outlined in the figure below: first, both users need to choose their preferred language on their phones, while their phones register with the BabelPhone backend server. Then, the first dialog partner taps the "speak now" button to initiate speech recognition and starts speaking. As soon as he stops speaking or taps the "speak now" button again, the speech recognition engine analyses his utterance (as we're interested in detecting natural language as opposed to simple commands, voice recognition will actually take place on a server, in our case provided by Nuance) and tries to detect what the user said. The recognized text will now be sent to the BabelPhone server.</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Process.png" class="fancybox" rel="gallery-24fb3058138182be5f2be2aae5648aae" title="BabelPhone Translation Process"><img src="/thumbs/BabelPhone-Process_600x250.png" alt="BabelPhone Translation Process" /></a></li>
-</ul></p>
+<p>{% fancyalbum 600x250 %}
+/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Process.png: BabelPhone Translation Process
+{% endfancyalbum %}</p>
 
 <p>As both communication partners registered with the server when the conversation started, the server knows them, as well as their language preference. Thus, the server can now send the recognized text to Google Translate and have it translated to the target language. As soon as Google Translate returns the translated text, the server can send it to the second user's phone, where it will be converted to spoken text using the Nuance Speech SDK.</p>
 
 <p>As communication between the server side part of the application and the smartphones receiving the translation needs to take place in an asynchronous manner, we need a suitable communication channel. Web sockets lend themselves perfectly for this purpose: they offer a permanently open communication channel between server and client while at the same time being rather lightweight and ensuring a low-latency delivery of messages.</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Architecture.png" class="fancybox" rel="gallery-960d2902b022d7c679b404aa2cc30ad5" title="BabelPhone Architecture"><img src="/thumbs/BabelPhone-Architecture_600x250.png" alt="BabelPhone Architecture" /></a></li>
-</ul></p>
+<p>{% fancyalbum 600x250 %}
+/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Architecture.png: BabelPhone Architecture
+{% endfancyalbum %}</p>
 
 <p>The whole process of recognizing the users utterance over sending it to the backend server, having it translated, sending it back down to the second phone and converting the translation back to spoken language usually takes less than a second under good circumstances, allowing for a more or less fluent conversation.</p>
 
@@ -95,7 +95,7 @@
   <entry>
     <title type="html"><![CDATA[Don't attend the Eclipse DemoCamp in Hamburg this Friday...]]></title>
     <link href="http://www.peterfriese.de/dont-attend-the-eclipse-democamp-in-hamburg-this-friday/"/>
-    <updated>2010-07-07T02:36:08+02:00</updated>
+    <updated>2010-07-07T01:36:08+01:00</updated>
     <id>http://www.peterfriese.de/dont-attend-the-eclipse-democamp-in-hamburg-this-friday</id>
     <content type="html"><![CDATA[<p>... if you're not interested in meeting local (and non-local) Eclipse enthusiasts and committers, learning something about Eclipse, Git, SWT, Qt, e4 and the iPhone, watching some nice Pixar short films in a cosy cinema, and frosty beverages.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mobile | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/mobile/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-28T15:45:27+01:00</updated>
+  <updated>2013-12-12T15:19:21+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -14,9 +14,55 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Annotated Links, Issue 6]]></title>
+    <link href="http://www.peterfriese.de/annotated-links-issue-6/"/>
+    <updated>2013-12-11T12:24:00+00:00</updated>
+    <id>http://www.peterfriese.de/annotated-links-issue-6</id>
+    <content type="html"><![CDATA[<p>After a few weeks of silence (and on popular demand by a <a href="http://heikobehrens.net">single person</a>), I decided to pick up publishing my annotated links again. This time, we'll look at wiretapping APIs, donating code to your favourite projects on Github, Node.js in your iOS apps, and a racing game that renders its track across multiple devices.</p>
+
+<!-- more -->
+
+
+<h3><a href="http://www.runscope.com">Runscope</a></h3>
+
+<p>Runscope is an online tool for inspecting, debugging and testing API traffic. The traffic inspector allows you to easily set up a "wire tap" for your app, basically allowing you to monitor and record any traffic between your app and any API that you're using. In addition to recording traffic for inspection, you can also compare responses of two calls and find out where the differences are - very handy! You can even share individual recorded requests with your co-workers, e.g. to discuss a problem with your back-end team.</p>
+
+<p>Runscope also provides a tool for automated testing of your API, dubbed <em>Runscope Radar</em>. This tool allows you to set up a sequence of API calls, along with the expected outcome for each of the calls. Radar provides an easy-to-use UI for setting up simple, yet powerful assertions that allow you to specify how the header and body of the response should look like. Variables help you to keep things flexible. Runscope Radar supports JSON and XML, so it is easy to build expressions like <code>[2].number</code> to navigate JSON and XML responses and specify expectations. You can then schedule your tests to run at given intervals and be notified via e-mail in case a test fails. This allows you to easily set up intelligent tests that monitor the validity of your API.</p>
+
+<p><a href="http://httpkit.com/wiretap">Wiretap</a> by <a href="https://twitter.com/KrisJordan">Kris Jordan</a> looks very promising as well. It acts as a reverse proxy, allowing you to record HTTP traffic between your app and an API very easily. In fact, setting up a wiretap seems to be easier than setting up Runscope. Unfortunately, still is in beta, but Kris has set up a video to give you a goood understanding of how it works. Wiretap and Runscope look strikingly similar, but I have the impression Wiretap has been around for longer...</p>
+
+<h3><a href="http://24pullrequests.com">24 Pull Requests Until Christmas</a></h3>
+
+<p>Christmas is upon us - and this is your chance to give back some love to some of the many open source projects out there you might be using in your own work. The idea is to submit one pull request each day for any project on Github. A number of projects are already listed on the <a href="http://24pullrequests.com/projects">projects</a> page, which allows you to filter projects by programming language to find a few that you might be interested in. Your favourite project isn't listed? No problem at all - just <a href="http://24pullrequests.com/projects/new">submit a suggestion</a> and fork away!</p>
+
+<p>I found it very interesting to see <a href="http://www.eclipse.org/xtend/">Xtend</a> is officially listed as a programming language on Github - great job, <a href="https://twitter.com/xtendlang">guys</a>!</p>
+
+<h3><a href="http://nodeapp.org">Node.js in your iOS App</a></h3>
+
+<p>If you wanted to use JavaScript in your iOS apps prior to iOS 7, you basically had two options: use an embedded <code>UIWebView</code> and invoke <code>-stringByEvaluatingJavaScriptFromString:</code>, or recompile <a href="https://github.com/phoboslab/JavaScriptCore-iOS">JavaScriptCore for iOS</a>.</p>
+
+<p>Starting with iOS 7, Apple <a href="https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html">opened access to JavaScriptCore</a> (I really like <em>"For information about the classes of this framework, see the framework header files."</em>), basically enabling iOS developers to use JavaScript to script their applications.</p>
+
+<p>The NodeApp interpreter goes one step further and allows developers to re-use existing Node modules. Even if you might not be interested in using any of the <a href="https://npmjs.org">50.000+ module listed on npm.org</a>, this is good news as it allows you to re-use the Node module system, thereby enabling you to structure your JavaScript apps in a more concise way.</p>
+
+<p>Check out the <a href="https://github.com/node-app/Interpreter">NodeApp interpreter app</a> and impress your coworkers with a real JavaScript interpreter running on your iPhone!</p>
+
+<h3><a href="http://g.co/racer">Racer - A multiplayer game for your mobile browser</a></h3>
+
+<p>Racer is a Chrome Experiment that shows off various web technologies, like <a href="http://www.html5rocks.com/en/tutorials/websockets/basics/">WebSockets</a>, the <a href="http://www.html5rocks.com/en/tutorials/webaudio/intro/">Web Audio API</a>, CSS Animations and <a href="http://css-tricks.com/css-sprites/">CSS Sprites</a>.</p>
+
+<p>Watch the <a href="http://www.youtube.com/watch?v=17P67Uz0kcw">making of</a>, read the back story of how it was made on <a href="http://master.html5rocks-hrd.appspot.com/en/tutorials/casestudies/racer/">HTML 5 rocks</a>. Then, go find some friends with mobile devices and <a href="http://g.co/racer">play Racer online</a>. The <a href="http://www.youtube.com/watch?v=YT0k99hCY5I">soundtrack</a> has been composed by <a href="https://myspace.com/giorgiomoroderpage">Giorgio Moroder</a>, who composed a number of well-known songs for events like Olympia 1984 and 1988 or the 1990 Football World Cup. Some of his songs were used in racing games before, but the soundtrack for Racer is the first one to be composed specifically for the purpose of being used in a racing game.</p>
+
+<p>I hope you enjoyed this week's links - let me know if you would like me to continue compiling them by sending me a mail or - better yet - using the tweet button below to let your friends know about this post!</p>
+
+<p>Thanks for reading!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Annotated Links, Issue 5]]></title>
     <link href="http://www.peterfriese.de/annotated-links-issue-5/"/>
-    <updated>2013-09-21T00:44:00+02:00</updated>
+    <updated>2013-09-21T00:44:00+01:00</updated>
     <id>http://www.peterfriese.de/annotated-links-issue-5</id>
     <content type="html"><![CDATA[<p>This week, we'll take a look at rocket science, re-usable phones and some Android libraries. Without further ado, let's get started!</p>
 
@@ -44,7 +90,7 @@
   <entry>
     <title type="html"><![CDATA[Code Generation 2011 - Don't miss out!]]></title>
     <link href="http://www.peterfriese.de/code-generation-2011-dont-miss-out/"/>
-    <updated>2011-05-21T12:09:11+02:00</updated>
+    <updated>2011-05-21T11:09:11+01:00</updated>
     <id>http://www.peterfriese.de/code-generation-2011-dont-miss-out</id>
     <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven't booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
 
@@ -74,9 +120,9 @@
 </ul>
 
 
-<p><ul class="gallery">
-<li><a href="/images/2011-05-21-code-generation-2011-dont-miss-out/cg2011.png" class="fancybox" rel="gallery-f9049cdceaffaf2ba66743d40d991d29" title="Code Generation 2011 Apps for iPhone and Android"><img src="/thumbs/cg2011_300x300.png" alt="Code Generation 2011 Apps for iPhone and Android" /></a></li>
-</ul></p>
+<p>{% fancyalbum 300x300 %}
+/images/2011-05-21-code-generation-2011-dont-miss-out/cg2011.png: Code Generation 2011 Apps for iPhone and Android
+{% endfancyalbum %}</p>
 
 <p>If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? <a href="mailto:mobile@itemis.de">Drop us a note</a> or track us down at the conference (best chance to see us: <a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">come to our talk</a> ;-) ).</p>
 ]]></content>
@@ -85,7 +131,7 @@
   <entry>
     <title type="html"><![CDATA[Save a Tree, Put EclipseCon 2011 in Your Pocket]]></title>
     <link href="http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
-    <updated>2011-02-25T23:15:57+01:00</updated>
+    <updated>2011-02-25T22:15:57+00:00</updated>
     <id>http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
     <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
 
@@ -98,7 +144,7 @@
 
 <p>For a first glimpse, watch our video:</p>
 
-<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/20377509 "></iframe></div></p>
+<p>{% vimeo 20377509 %}</p>
 
 <p>As of today, both iPhone and Android users can download the apps from the Apple App Store respectively the Android Marketplace. Here are the links:</p>
 
@@ -119,7 +165,7 @@
   <entry>
     <title type="html"><![CDATA[Three reasons why I think the HP TouchPad will rock the tablet market]]></title>
     <link href="http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
-    <updated>2011-02-10T11:38:26+01:00</updated>
+    <updated>2011-02-10T10:38:26+00:00</updated>
     <id>http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
     <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn't the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
 

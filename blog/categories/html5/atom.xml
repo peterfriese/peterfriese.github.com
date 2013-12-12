@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HTML5 | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-28T15:45:27+01:00</updated>
+  <updated>2013-12-12T15:19:21+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Tired of Typing? Speak to Your Computer!]]></title>
     <link href="http://www.peterfriese.de/tired-of-typing-speak-to-your-computer/"/>
-    <updated>2011-06-03T18:54:39+02:00</updated>
+    <updated>2011-06-03T17:54:39+01:00</updated>
     <id>http://www.peterfriese.de/tired-of-typing-speak-to-your-computer</id>
     <content type="html"><![CDATA[<p>For some reason, humans have always dreamt of using natural language to communicate with computers. Quite a number of movies have been made that revolve around this theme, <a href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)">2001: A Space Odyssey</a> and <a href="http://en.wikipedia.org/wiki/I,_Robot_(film)">I, Robot</a> (named after the <a href="http://en.wikipedia.org/wiki/I_robot">great collection of SF stories</a> by <a href="http://en.wikipedia.org/wiki/Isaac_Asimov">Isaac Asimov</a> just being two of them.</p>
 
@@ -37,7 +37,7 @@
 
 <p>Here is a short video of me using Speak to Search to search for some people on Xing and LinkedIn. Please note that the extension is making sure the speech recognition engine is configured to recognize German names on Xing.</p>
 
-<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/syMpQqMJcKU "></iframe></div></p>
+<p>{% youtube syMpQqMJcKU %}</p>
 
 <p>Language makes us human - this is a quote from a <a href="http://www.pbs.org/wnet/humanspark/video/spark-blog-video-dr-steven-pinker-language-makes-us-human/212/">video</a> I found during the research for this blog post. I don't necessarily think voice recognition and speech synthesis will make computers more human, but both technologies certainly can help to create a more immersive experience. I am looking forward to seeing a broader use of the new audio capabilities of modern browsers. Feel free to <a href="http://github.com/peterfriese/Speak2Search">grab my code from Github</a> and create something new and exciting!</p>
 ]]></content>
@@ -46,7 +46,7 @@
   <entry>
     <title type="html"><![CDATA[How to Use the Gyroscope of Your iPhone in a Mobile Web App]]></title>
     <link href="http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
-    <updated>2010-11-25T13:00:43+01:00</updated>
+    <updated>2010-11-25T12:00:43+00:00</updated>
     <id>http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
     <content type="html"><![CDATA[<p>This week's release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they're neither directly visible in the iOS UI nor are they mentioned in Apple's official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone's gyroscope. Read on to see it in action and learn how to use it.</p>
 
@@ -95,7 +95,7 @@ window.ondeviceorientation = function(event) {
 
 <p>I've put together a little demo that uses the sensor data to color some boxes on the phone's screen. Here's a short video showing it in action:</p>
 
-<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/17182364 "></iframe></div></p>
+<p>{% vimeo 17182364 %}</p>
 
 <p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
 

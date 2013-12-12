@@ -4,7 +4,7 @@
   <title><![CDATA[Category: terms of service | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/terms-of-service/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-28T15:45:27+01:00</updated>
+  <updated>2013-12-12T15:19:21+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Appropriate Use of MapKit]]></title>
     <link href="http://www.peterfriese.de/appropriate-use-of-mapkit/"/>
-    <updated>2011-02-16T11:48:38+01:00</updated>
+    <updated>2011-02-16T10:48:38+00:00</updated>
     <id>http://www.peterfriese.de/appropriate-use-of-mapkit</id>
     <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you're violating Google's terms of service, I was wondering what in particular was wrong.</p>
 
@@ -25,15 +25,15 @@
 
 <p>At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google's terms of service for Maps</a>, but can you spot what is wrong?</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png" class="fancybox" rel="gallery-b85ba1d38e1c89eca83ecb8ce17b14bc" title="Google Maps in your app - without Google Logo: you're doing it wrong!"><img src="/thumbs/maps_without_google_logo_240x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a></li>
-</ul></p>
+<p>{% fancyalbum 240x300 %}
+/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png: Google Maps in your app - without Google Logo: you're doing it wrong!
+{% endfancyalbum %}</p>
 
 <p>Maybe you can better see what's wrong when I show you another screenshot, this time obeying the TOS:</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2011-02-16-appropriate-use-of-mapkit/maps_with_google_logo.png" class="fancybox" rel="gallery-8590c5cd892556ccc1df97f31d1c3e84" title="Google Maps with logo: well done!"><img src="/thumbs/maps_with_google_logo_240x300.png" alt="Google Maps with logo: well done!" /></a></li>
-</ul></p>
+<p>{% fancyalbum 240x300 %}
+/images/2011-02-16-appropriate-use-of-mapkit/maps_with_google_logo.png: Google Maps with logo: well done!
+{% endfancyalbum %}</p>
 
 <p>Can you spot the difference? It's the Google logo!</p>
 

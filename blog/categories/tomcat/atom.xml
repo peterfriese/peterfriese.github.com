@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tomcat | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/tomcat/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-11-28T15:45:27+01:00</updated>
+  <updated>2013-12-12T15:19:21+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Installing Tomcat]]></title>
     <link href="http://www.peterfriese.de/installing-tomcat/"/>
-    <updated>2006-04-19T10:53:07+02:00</updated>
+    <updated>2006-04-19T09:53:07+01:00</updated>
     <id>http://www.peterfriese.de/installing-tomcat</id>
     <content type="html"><![CDATA[<p><a href="http://www.meritonlinesystems.com/docs/apache_tomcat_redhat.html">Here is</a> a nice how-to on how to install Tomcat on Linux. Includes instructions on how to run Tomcat in the context of a special user and how to write shell scripts for (re)starting Tomcat.</p>
 ]]></content>
@@ -25,7 +25,7 @@
   <entry>
     <title type="html"><![CDATA[Installing Tomcat 5.5.12 (and enabling the Admin console)]]></title>
     <link href="http://www.peterfriese.de/installing-tomcat-5512-and-enabling-the-admin-console/"/>
-    <updated>2005-10-17T16:18:30+02:00</updated>
+    <updated>2005-10-17T15:18:30+01:00</updated>
     <id>http://www.peterfriese.de/installing-tomcat-5512-and-enabling-the-admin-console</id>
     <content type="html"><![CDATA[<p>Setting up <a href="http://tomcat.apache.org/">Tomcat</a> seems to be quite easy: just unpack the core ZIP file, and off you go! But as soon as you want to manage the server, you realize that Tomcat 5.5.x is missing the admin console. Setting up the admin console is easy as well, but is not well documented. So here we go:</p>
 
