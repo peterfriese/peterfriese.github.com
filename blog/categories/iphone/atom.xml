@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iPhone | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/iphone/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-12-12T15:19:21+00:00</updated>
+  <updated>2014-01-29T16:27:03+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -46,9 +46,9 @@
 </ul>
 
 
-<p>{% fancyalbum 300x300 %}
-/images/2011-05-21-code-generation-2011-dont-miss-out/cg2011.png: Code Generation 2011 Apps for iPhone and Android
-{% endfancyalbum %}</p>
+<p><ul class="gallery">
+<li><a href="/images/2011-05-21-code-generation-2011-dont-miss-out/cg2011.png" class="fancybox" rel="gallery-f9049cdceaffaf2ba66743d40d991d29" title="Code Generation 2011 Apps for iPhone and Android"><img src="/thumbs/cg2011_300x300.png" alt="Code Generation 2011 Apps for iPhone and Android" /></a></li>
+</ul></p>
 
 <p>If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? <a href="mailto:mobile@itemis.de">Drop us a note</a> or track us down at the conference (best chance to see us: <a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">come to our talk</a> ;-) ).</p>
 ]]></content>
@@ -106,7 +106,7 @@ window.ondeviceorientation = function(event) {
 
 <p>I've put together a little demo that uses the sensor data to color some boxes on the phone's screen. Here's a short video showing it in action:</p>
 
-<p>{% vimeo 17182364 %}</p>
+<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/17182364 "></iframe></div></p>
 
 <p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
 
@@ -146,7 +146,7 @@ window.ondeviceorientation = function(event) {
 
 <p>At <a href="http://www.itemis.com">itemis</a>, we're very much into programming languages. We're even building our own language development toolkit to support development of programming languages - <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we've mainly been using it to create languages for enterprise and web applications. We're also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself - isn't that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We're not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we're focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
 
-<p>{% vimeo 15018235 %}</p>
+<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/15018235 "></iframe></div></p>
 
 <p>If you're interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
 

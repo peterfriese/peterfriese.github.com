@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mac | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/mac/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-12-12T15:19:21+00:00</updated>
+  <updated>2014-01-29T16:27:03+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -25,11 +25,11 @@
 
 <p>The IDE in question is Samsung's TV App SDK. Basically, it's just a Windows-based Visual-Studio look-alike IDE with editor support for CSS, JavaScript and HTML and an Emulator for Samsung TV kits. Nothing too complicated, really. In fact, the editor is quite OK.</p>
 
-<p>{% fancyimage right /images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung-TV-App-SDK.png 1040x722 Samsung TV App SDK %}</p>
+<p><a href="/images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung-TV-App-SDK.png" class="fancybox" title="Samsung TV App SDK"><img class="right" src="/thumbs/Samsung-TV-App-SDK_1040x722.png" alt="Samsung TV App SDK" /></a></p>
 
 <p>The part about it that really sucks is the project management. How come tool vendors still think it's good style in 2010 to place the projects under <em>Program Files\Samsung TV Apps SDK\Apps</em>? There's no way to store your project files in a different location. The project open dialog just won't let you navigate to some other place:</p>
 
-<p>{% fancyimage right /images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung_TV_App_SDK_ProjectManagement.png 482x352 Samsung TV App SDK Project Management Dialog%}</p>
+<p><a href="/images/2011-01-05-your-windows-ide-sucks-replace-it-with-your-favorite-editor-on-the-mac/Samsung_TV_App_SDK_ProjectManagement.png" class="fancybox" title="Samsung TV App SDK Project Management Dialog"><img class="right" src="/thumbs/Samsung_TV_App_SDK_ProjectManagement_482x352.png" alt="Samsung TV App SDK Project Management Dialog" /></a></p>
 
 <p>So I wanted to be able to edit my files on the Mac (using <a href="http://macromates.com/">TextMate</a>) while still using the good parts of the Samsung TV SDK (i.e., the Emulator).</p>
 

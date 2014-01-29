@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Twitter | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/twitter/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-12-12T15:19:21+00:00</updated>
+  <updated>2014-01-29T16:27:03+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -44,7 +44,7 @@
 
 <p>To use the Accounts and Twitter frameworks, we need to add them to the project:</p>
 
-<p>{% img center ../images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/add_twitter_accounts.png Add Accounts and Twitter frameworks to the project %}</p>
+<p><img class="center" src="../images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/add_twitter_accounts.png" title="Add Accounts and Twitter frameworks to the project" ></p>
 
 <p>Once that's done, we can use the Accounts framework to fetch the list of Twitter accounts on the device.</p>
 
@@ -173,11 +173,11 @@ return cell;
 
 <p>Here's an impression of the current state of the application:</p>
 
-<p>{% fancyalbum 120x150 %}
-/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_1.png: Twitter Client - List of local accounts
-/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_2.png: Twitter Client - Home timeline for a user
-/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_3.png: Twitter Client - Composing a tweet
-{% endfancyalbum %}</p>
+<p><ul class="gallery">
+<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_1.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - List of local accounts"><img src="/thumbs/twitter_client_1_120x150.png" alt="Twitter Client - List of local accounts" /></a></li>
+<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_2.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Home timeline for a user"><img src="/thumbs/twitter_client_2_120x150.png" alt="Twitter Client - Home timeline for a user" /></a></li>
+<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_3.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Composing a tweet"><img src="/thumbs/twitter_client_3_120x150.png" alt="Twitter Client - Composing a tweet" /></a></li>
+</ul></p>
 ]]></content>
   </entry>
   

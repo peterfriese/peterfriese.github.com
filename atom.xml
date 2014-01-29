@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://www.peterfriese.de/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-12-12T15:17:46+00:00</updated>
+  <updated>2014-01-29T16:27:03+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Google+: +1]]></title>
+    <link href="http://www.peterfriese.de/google-plus-plus-1/"/>
+    <updated>2014-01-29T13:34:00+00:00</updated>
+    <id>http://www.peterfriese.de/google-plus-plus-1</id>
+    <content type="html"><![CDATA[<p>Can&#8217;t make sense of the cryptic headline? Read on, I&#8217;ll explain! If you <em>can</em> decode the headline, you qualify as a geek and should read on as well :-)</p>
+
+<!-- more -->
+
+
+<p>I am excited to announce I have started a new job with Google!</p>
+
+<p>Starting January 20th 2014, I&#8217;ll work as a Developer Advocate on the Google+ team at Google in London. Many people have asked me what a Developer Advocate actually is and what we do, so I&#8217;ll briefly explain it here for everyone&#8217;s benefit.</p>
+
+<p>The official job posting for <a href="https://www.google.com/about/jobs/search/#!t=jo&amp;jid=729001&amp;">Developer Advocates at Google</a> says:</p>
+
+<blockquote><p>We&#8217;re self-proclaimed nerds, and our Developer Relations organization helps keep us connected to the communities that love technology as much as we do. Developer Advocates are focused on supporting the 3rd party developers who are building applications and businesses on Google&#8217;s platforms. You are passionate evangelists for Google technologies as well as vocal champions for developer interests within Google. This is a position for engineers who love connecting with developers and speaking publicly about cutting-edge technologies on conference panels, at user groups, on blogs and with the press. Chrome, Android, App Engine, HTML5 as well as our core Google Apps and Ads APIs are just some of the platforms you promote and support.</p></blockquote>
+
+<p>As a part of that, I&#8217;ll be working together with a whole bunch of other Developer Relations staff to help 3rd party developers and partners to use the Google+ Platform and APIs to integrate their apps and services with Google&#8217;s platforms. The term &#8220;Advocate&#8221; means I&#8217;ll act as a two-way communication channel: on one hand, I will speak at conferences, write blog posts and articles to communicate how to use Google APIs. On the other hand, I am here to listen to the feedback user of our APIs give and make sure this gets fed back into the product life cycle. This means I will meet with a lot of partners and developers, listen to their needs and gripes and help them to make sense of our APIs</p>
+
+<p>If you are interested in a more in-depth explanation or if you&#8217;re even considering becoming a Developer Advocate yourself, I can recommend <a href="http://christianheilmann.com/">Christian Heilmann&#8217;s</a> <a href="http://bit.ly/1iLdFX3">excellent book</a> on this topic.</p>
+
+<p>That being said, feel free to reach out to me on <a href="https://twitter.com/peterfriese">Twitter</a>, <a href="https://plus.google.com/+PeterFriese/">Google+</a>, or by <a href="mailto:peterfriese@google.com">email</a> if you are interested in using the Google+ platform and becoming a platform partner. If you&#8217;ve got any technical questions, check out our excellent and friendly communities on <a href="https://plus.google.com/communities/113527920160449995981">Google+</a> and <a href="http://stackoverflow.com/tags/google-plus">StackOverflow</a>. If there is anything in particular you would like me to have a look at, ping me on Google+. When reporting a problem, keep in mind the guidelines for <a href="http://www.chiark.greenend.org.uk/~sgtatham/bugs.html">writing great bug reports</a> and also keep <a href="https://plus.google.com/+ManoMarks/">Mano Marks&#8217;</a> post on <a href="https://plus.sandbox.google.com/u/1/+ManoMarks/posts/fnhGau9BpPW">How to Approach a Google Developer Advocate with Questions</a> in mind - help us to better help you :-)</p>
+
+<p>Lastly - we&#8217;re hiring: check out <a href="https://www.google.com/about/jobs/search/">Google Jobs</a>!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Annotated Links, Issue 6]]></title>
@@ -2250,33 +2278,6 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 
 <p>So, next time you write an app that contains Google Maps, make sure the Google logo is visible. You can get the full source code for this example <a href="http://github.com/peterfriese/MapKitSample">on my GitHub page</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Three reasons why I think the HP TouchPad will rock the tablet market]]></title>
-    <link href="http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
-    <updated>2011-02-10T10:38:26+00:00</updated>
-    <id>http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
-    <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn&#8217;t the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
-
-<!-- more -->
-
-
-<p>HP is definitely doing something right. Never before has one single Tablet thrilled the interwebs as much as the TouchPad - except for the iPad, of course. Even <a href="http://scobleizer.com/2011/02/09/hp-makes-google-look-even-more-creaky/">die-hard Apple</a> fans are thrilled.</p>
-
-<p>Here&#8217;s why I think HP&#8217;s TouchPad will score a considerable market share:</p>
-
-<ol>
-<li><p>It&#8217;s programmed with web technologies like HTML, CSS and JavaScript. Don&#8217;t get me wrong - the iPad can also be programmed with web technologies: when the iPhone was first released and no one but Apple was allowed to write native apps, Steve himself told everyone that &#8220;mobile web applications are the future&#8221;. And despite the fact Apple has opened it&#8217;s SDK and we can now program the iPad / iPhone in Objective-C, many developers are more interested in writing apps with web technologies. Tools like PhoneGap and Appcelerator try to alleviate this situation, basically allowing you to wrap web code in more or less tiny wrapper apps so your web apps can be submitted to the App Store. However, most apps written using web technologies do not feel the same as real native apps on the iOS platform. So why do I think the situation will be better on the TouchPad? Well, because the TouchPad has been built for running web-based apps! It has been optimized for it. Web apps look stunningly great on the TouchPad. Now, every web developer can download the webOS SDK and get started writing apps for the TouchPad. It&#8217;s a safe bet to assume there are more web developers out there than Objective-C developers, so it shouldn&#8217;t take long until we&#8217;ve got a similar amount of apps for the TouchPad as we&#8217;ve got for the iPad.</p></li>
-<li><p>The manufacturing process. HP has a very powerful production pipeline, capable of pumping out high volumes of devices. In <a href="http://www.itchannelplanet.com/trends/article.php/3920936/Gartner-Global-PC-Shipments-Total-351-Million-Units-in-2010-Gain-138-Percent-US-Q4-PC-Market-Slides-Nearly-7-Percent.htm">Q4/2010, they shipped 17.6</a> million PCs (<a href="http://www.apple.com/pr/library/2011/01/18results.html">Apple sold 7.33 million iPads</a> in the same quarter). So if they are serious about it, it should be easy for HP to both produce and distribute high volumes of TouchPads.</p></li>
-<li><p>Security. When it comes to enterprise computing, security becomes a vital feature of your product. CIOs need to make sure to not compromise their company&#8217;s security by introducing products and devices that have no proper support for security mechanisms. There have always been <a href="http://www.wired.com/gadgetlab/2009/07/iphone-encryption/">security concerns</a> with respect to the iOS platform: for a long time, there hasn&#8217;t been a way to nuke a lost iOS device remotely. <a href="http://support.apple.com/kb/HT4175">It wasn&#8217;t before iOS 4</a> that Apple introduced data protection APIs to secure data that apps store on the device. <a href="">WebOS has several security features built in</a> (not bolted on later) which make it rather attractive for enterprise computing right from the start.</p></li>
-</ol>
-
-
-<p>It&#8217;s my firm belief that the release of the HP TouchPad is a milestone for the perception of personal computing in the long run. It looks great, we&#8217;ll see tons of great apps for it in no time and HP as a major computer vendor has the power to push it to the market.</p>
-
-<p>Good-bye, PC.</p>
 ]]></content>
   </entry>
   

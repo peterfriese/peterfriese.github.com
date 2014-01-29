@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Links | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/links/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2013-12-12T15:19:21+00:00</updated>
+  <updated>2014-01-29T16:27:03+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -196,9 +196,9 @@ I haven't tried any of these, but <a href="https://github.com/the-teacher/cockta
 
 <p>Did you ever wonder how to create those geeky looking source code screenshots that look like you used a camera to take a picture of your screen from an angle? Well, here's a tool that let's you create those screenshots without the need to take out your camera: <a href="http://instacod.es">Instacodes</a></p>
 
-<p>{% fancyalbum 600x250 %}
-/images/2013-08-17-annotated-links-for-week-33/instacodes.png: Istancodes sample
-{% endfancyalbum %}</p>
+<p><ul class="gallery">
+<li><a href="/images/2013-08-17-annotated-links-for-week-33/instacodes.png" class="fancybox" rel="gallery-58957bab7ae3483cd792adcee872db68" title="Istancodes sample"><img src="/thumbs/instacodes_600x250.png" alt="Istancodes sample" /></a></li>
+</ul></p>
 
 <p>That's it for this week, I hope you liked it. Feel free to send suggestions for next week!</p>
 
