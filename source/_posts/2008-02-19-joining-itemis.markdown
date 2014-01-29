@@ -9,6 +9,7 @@ wordpress_id: 75
 categories:
 - Computer
 - Life
+- Job
 ---
 
 Effective February 1st, 2008, I left my [former employer](http://www.gentleware.com/) and [joined](https://www.xing.com/profile/Peter_Friese) [itemis](http://www.itemis.de/).

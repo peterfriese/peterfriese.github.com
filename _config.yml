@@ -4,7 +4,7 @@
 
 url: http://www.peterfriese.de
 title: Peter Friese
-subtitle: Software Architect / Mobile Developer / Public Speaker
+subtitle: Developer Advocate / Mobile Developer / Public Speaker
 author: Peter Friese
 simple_search: http://google.com/search
 description:
@@ -49,7 +49,7 @@ titlecase: true       # Converts page and post titles to titlecase
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
 # original: default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
 default_asides: [custom/asides/about.html,
-custom/asides/amazon.html, 
+# custom/asides/amazon.html, 
 asides/github.html, asides/twitter.html, 
 custom/asides/flattr.html,
 asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
@@ -58,7 +58,7 @@ asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
 # and add an array with the asides you want to use.
 # blog_index_asides:
 post_asides: [custom/asides/about.html, asides/recent_posts.html, 
-custom/asides/amazon.html, 
+# custom/asides/amazon.html, 
 asides/github.html, asides/twitter.html, 
 custom/asides/flattr.html,
 asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
