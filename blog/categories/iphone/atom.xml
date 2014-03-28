@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iPhone | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/iphone/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,14 +18,14 @@
     <link href="http://www.peterfriese.de/code-generation-2011-dont-miss-out/"/>
     <updated>2011-05-21T11:09:11+01:00</updated>
     <id>http://www.peterfriese.de/code-generation-2011-dont-miss-out</id>
-    <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven't booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
+    <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven&rsquo;t booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> &ndash; a few places are still available!</p>
 
-<p>Quite a number of my colleagues at itemis have been busy preparing for this conference in the past few weeks. Besides working hard to hit the <a href="http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan">Eclipse Release Train milestone for Indigo on June 22nd</a>, the Xtext team brushed up their hands-on sessions "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=17">Xtext Take I: Creating Code Generators with Xtend2</a>" and "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=16">Xtext Take II: Crafting Domain Specific Languages with Xtext and Xbase</a>". If you've been using Xtext, you're well aware of the power you have at your disposal with this tool. Xbase and Xtend2, however, take this experience to a whole new level. So make sure to mark your calendar for these two sessions!</p>
+<p>Quite a number of my colleagues at itemis have been busy preparing for this conference in the past few weeks. Besides working hard to hit the <a href="http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan">Eclipse Release Train milestone for Indigo on June 22nd</a>, the Xtext team brushed up their hands-on sessions &ldquo;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=17">Xtext Take I: Creating Code Generators with Xtend2</a>&rdquo; and &ldquo;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=16">Xtext Take II: Crafting Domain Specific Languages with Xtext and Xbase</a>&rdquo;. If you&rsquo;ve been using Xtext, you&rsquo;re well aware of the power you have at your disposal with this tool. Xbase and Xtend2, however, take this experience to a whole new level. So make sure to mark your calendar for these two sessions!</p>
 
 <!-- more -->
 
 
-<p>But not only the Xtext team will share their expertise at CG2011 - Markus and Karsten will be also be in town to give hands-on tutorials and report from their experience:</p>
+<p>But not only the Xtext team will share their expertise at CG2011 &ndash; Markus and Karsten will be also be in town to give hands-on tutorials and report from their experience:</p>
 
 <ul>
 <li><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=22">Type Systems for DSLs (Markus Völter)</a></li>
@@ -34,9 +34,9 @@
 </ul>
 
 
-<p>The finale of the conference will be a panel discussion hosted by Markus on the topic of "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=20">Models, DSLs, Transformations: The Next 5 years</a>" - this should be a very interesting and lively discussion!</p>
+<p>The finale of the conference will be a panel discussion hosted by Markus on the topic of &ldquo;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=20">Models, DSLs, Transformations: The Next 5 years</a>&rdquo; &ndash; this should be a very interesting and lively discussion!</p>
 
-<p><a href="http://lanyrd.com/people/hbehrens/">Heiko</a> <a href="http://lanyrd.com/people/peterfriese/">and I</a> will present "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">Cross-Platform Mobile Development with DSLs</a>" - a <a href="http://lanyrd.com/2011/cg2011/sdpgm/">fast-paced and fun mixture of slides, live coding (or modeling, if you will), videos and audience interaction</a>. Yes, that's right - the audience will be part of the show. Make sure to bring your web-enabled mobile phone and get the chance to win a price!</p>
+<p><a href="http://lanyrd.com/people/hbehrens/">Heiko</a> <a href="http://lanyrd.com/people/peterfriese/">and I</a> will present &ldquo;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">Cross-Platform Mobile Development with DSLs</a>&rdquo; &ndash; a <a href="http://lanyrd.com/2011/cg2011/sdpgm/">fast-paced and fun mixture of slides, live coding (or modeling, if you will), videos and audience interaction</a>. Yes, that&rsquo;s right &ndash; the audience will be part of the show. Make sure to bring your web-enabled mobile phone and get the chance to win a price!</p>
 
 <p>To keep track of the conference program(me), we at <a href="http://mobile.itemis.com">itemis mobile</a> have been busy to create a conference planner for your iOS and Android powered mobile phones. Here are the download links:</p>
 
@@ -50,7 +50,7 @@
 <li><a href="/images/2011-05-21-code-generation-2011-dont-miss-out/cg2011.png" class="fancybox" rel="gallery-f9049cdceaffaf2ba66743d40d991d29" title="Code Generation 2011 Apps for iPhone and Android"><img src="/thumbs/cg2011_300x300.png" alt="Code Generation 2011 Apps for iPhone and Android" /></a></li>
 </ul></p>
 
-<p>If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? <a href="mailto:mobile@itemis.de">Drop us a note</a> or track us down at the conference (best chance to see us: <a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">come to our talk</a> ;-) ).</p>
+<p>If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? <a href="mailto:mobile@itemis.de">Drop us a note</a> or track us down at the conference (best chance to see us: <a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">come to our talk</a> ;&ndash;) ).</p>
 ]]></content>
   </entry>
   
@@ -59,23 +59,23 @@
     <link href="http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/"/>
     <updated>2010-11-25T12:00:43+00:00</updated>
     <id>http://www.peterfriese.de/how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app</id>
-    <content type="html"><![CDATA[<p>This week's release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they're neither directly visible in the iOS UI nor are they mentioned in Apple's official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone's gyroscope. Read on to see it in action and learn how to use it.</p>
+    <content type="html"><![CDATA[<p>This week&rsquo;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they&rsquo;re neither directly visible in the iOS UI nor are they mentioned in Apple&rsquo;s official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone&rsquo;s gyroscope. Read on to see it in action and learn how to use it.</p>
 
 <!-- more -->
 
 
-<p>Your iPhone has a number of sensors, some of which are rather essential for the phone's operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they're certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
+<p>Your iPhone has a number of sensors, some of which are rather essential for the phone&rsquo;s operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they&rsquo;re certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
 
-<p>Until now, web developers didn't have access to the accelerometer sensor and the gyroscope sensor. With this week's release of iOS 4.2, this has changed and we can now use <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceMotionEventClassRef/DeviceMotionEvent/DeviceMotionEvent.html">DeviceMotionEvent</a> and <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">DeviceOrientationEvent</a> to determine the acceleration and orientation data of the phone.</p>
+<p>Until now, web developers didn&rsquo;t have access to the accelerometer sensor and the gyroscope sensor. With this week&rsquo;s release of iOS 4.2, this has changed and we can now use <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceMotionEventClassRef/DeviceMotionEvent/DeviceMotionEvent.html">DeviceMotionEvent</a> and <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">DeviceOrientationEvent</a> to determine the acceleration and orientation data of the phone.</p>
 
-<p>Let's first determine whether the current browser supports device orientation sensing:</p>
+<p>Let&rsquo;s first determine whether the current browser supports device orientation sensing:</p>
 
 <p><code>javascript
 if (window.DeviceMotionEvent==undefined) {
 }
 </code></p>
 
-<p>We can then read the sensor data by registering the respective callbacks. Here's how you read the accelerometer's data:</p>
+<p>We can then read the sensor data by registering the respective callbacks. Here&rsquo;s how you read the accelerometer&rsquo;s data:</p>
 
 <p>``` javascript
 window.ondevicemotion = function(event) {
@@ -94,7 +94,7 @@ arGamma = Math.round(rotation.gamma);
 }
 ```</p>
 
-<p>The gyroscope's data can be read like this:</p>
+<p>The gyroscope&rsquo;s data can be read like this:</p>
 
 <p><code>javascript    
 window.ondeviceorientation = function(event) {
@@ -104,13 +104,13 @@ window.ondeviceorientation = function(event) {
 }
 </code></p>
 
-<p>I've put together a little demo that uses the sensor data to color some boxes on the phone's screen. Here's a short video showing it in action:</p>
+<p>I&rsquo;ve put together a little demo that uses the sensor data to color some boxes on the phone&rsquo;s screen. Here&rsquo;s a short video showing it in action:</p>
 
 <p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/17182364 "></iframe></div></p>
 
 <p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
 
-<p>(image of Gyroscope by stop that pigeon! taken from http://www.flickr.com/photos/25312309@N05/2651042796/)</p>
+<p>(image of Gyroscope by stop that pigeon! taken from <a href="http://www.flickr.com/photos/25312309@N05/2651042796/">http://www.flickr.com/photos/25312309@N05/2651042796/</a>)</p>
 ]]></content>
   </entry>
   
@@ -119,7 +119,7 @@ window.ondeviceorientation = function(event) {
     <link href="http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again/"/>
     <updated>2010-09-19T21:15:30+01:00</updated>
     <id>http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again</id>
-    <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
+    <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement &ndash; a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
 
 <!-- more -->
 
@@ -128,43 +128,43 @@ window.ondeviceorientation = function(event) {
 
 <blockquote><p>3.3.1 — Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs. Applications must be originally written in Objective-C, C, C++, or JavaScript as executed by the iPhone OS WebKit engine, and only code written in C, C++, and Objective-C may compile and directly link against the Documented APIs (e.g., Applications that link to Documented APIs through an intermediary translation or compatibility layer or tool are prohibited).</p></blockquote>
 
-<p>Back then, pretty much everyone was sure this update to section 3.3.1 of the license really was just one strike in <a href="http://www.apple.com/hotnews/thoughts-on-flash/">Apple's crusade against Flash</a>. Adobe had been working on a tool called <a href="http://labs.adobe.com/technologies/packagerforiphone/">Flash Packager</a>, which allows Flash designers to cross-compile their applications for the iPhone. While this must have been bad news for Adobe (they effectively needed to write off development costs for the entire development team working on Flash Packager), it posed a serious threat to companies whose business model relied upon creating iPhone apps using tools and languages other than Xcode and Objective-C. The future for Novell's <a href="http://monotouch.net/">Mono Touch</a>, <a href="http://www.appcelerator.com/">Appcelerator Titanium</a>, <a href="http://www.phonegap.com/">PhoneGap</a> and <a href="http://www.xmlvm.org/iphone/">XMLVM/iPhone</a> didn't look very bright.</p>
+<p>Back then, pretty much everyone was sure this update to section 3.3.1 of the license really was just one strike in <a href="http://www.apple.com/hotnews/thoughts-on-flash/">Apple&rsquo;s crusade against Flash</a>. Adobe had been working on a tool called <a href="http://labs.adobe.com/technologies/packagerforiphone/">Flash Packager</a>, which allows Flash designers to cross-compile their applications for the iPhone. While this must have been bad news for Adobe (they effectively needed to write off development costs for the entire development team working on Flash Packager), it posed a serious threat to companies whose business model relied upon creating iPhone apps using tools and languages other than Xcode and Objective-C. The future for Novell&rsquo;s <a href="http://monotouch.net/">Mono Touch</a>, <a href="http://www.appcelerator.com/">Appcelerator Titanium</a>, <a href="http://www.phonegap.com/">PhoneGap</a> and <a href="http://www.xmlvm.org/iphone/">XMLVM/iPhone</a> didn&rsquo;t look very bright.</p>
 
 <p>No need to say there was quite an uproar and people came up with all sorts of creative interpretations of the terms stated in section 3.3.1 to avoid being rejected from the App Store.</p>
 
-<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn't come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a>) does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
+<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn&rsquo;t come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a>) does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
 
 <blockquote><p>3.3.1 Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs.</p></blockquote>
 
-<p>You might think that a small paragraph in a license agreement doesn't mean that much, but I think the new section will fundamentally change the way we write software for the iPhone in the next few years. Let me explain:</p>
+<p>You might think that a small paragraph in a license agreement doesn&rsquo;t mean that much, but I think the new section will fundamentally change the way we write software for the iPhone in the next few years. Let me explain:</p>
 
-<p>The new section 3.3.1 means you may write iOS software using any language you like. Yes, ANY language - there is no if and when. This means you will not only be able to write iOS software in Objective-C (which is a great language as soon as you come to grips with it), but you will be able to use language like Java, Scala, Haskell, Ruby, etc. Some people are <a href="http://twitter.com/mattgemmell/status/24014145904">even dreaming of using REALBasic</a> for iOS apps.</p>
+<p>The new section 3.3.1 means you may write iOS software using any language you like. Yes, ANY language &ndash; there is no if and when. This means you will not only be able to write iOS software in Objective-C (which is a great language as soon as you come to grips with it), but you will be able to use language like Java, Scala, Haskell, Ruby, etc. Some people are <a href="http://twitter.com/mattgemmell/status/24014145904">even dreaming of using REALBasic</a> for iOS apps.</p>
 
-<p>Vendors of tools such as Mono Touch, Titanium and PhoneGap will be glad, as their business models now have a solid foundation (well, Apple may of course change the license again but I doubt they'll ever restrict the usage of other languages again). Given the <a href="http://labs.adobe.com/technologies/packagerforiphone/">announcement on Adobe Labs</a>, I guess we will very soon see Adobe release their highly acclaimed Flash Packager for iPhone (I don't think people will seriously use this tool to create data-driven applications, but it's probably a great tool to develop games. If you're a Flash designer / developer, that is).</p>
+<p>Vendors of tools such as Mono Touch, Titanium and PhoneGap will be glad, as their business models now have a solid foundation (well, Apple may of course change the license again but I doubt they&rsquo;ll ever restrict the usage of other languages again). Given the <a href="http://labs.adobe.com/technologies/packagerforiphone/">announcement on Adobe Labs</a>, I guess we will very soon see Adobe release their highly acclaimed Flash Packager for iPhone (I don&rsquo;t think people will seriously use this tool to create data-driven applications, but it&rsquo;s probably a great tool to develop games. If you&rsquo;re a Flash designer / developer, that is).</p>
 
-<p>For the development community at large, this is great news: freedom to choose the language that fits your needs best has always been a cornerstone of successfully creating great software. People have expressed their desire to use languages such as Haskell and Ruby to build iPhone apps. Rumor has it Apple engineers have even been working on a version of MacRuby for iPhone - there you go.</p>
+<p>For the development community at large, this is great <a href="news:">news:</a> freedom to choose the language that fits your needs best has always been a cornerstone of successfully creating great software. People have expressed their desire to use languages such as Haskell and Ruby to build iPhone apps. Rumor has it Apple engineers have even been working on a version of MacRuby for iPhone &ndash; there you go.</p>
 
-<p>At <a href="http://www.itemis.com">itemis</a>, we're very much into programming languages. We're even building our own language development toolkit to support development of programming languages - <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we've mainly been using it to create languages for enterprise and web applications. We're also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself - isn't that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We're not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we're focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
+<p>At <a href="http://www.itemis.com">itemis</a>, we&rsquo;re very much into programming languages. We&rsquo;re even building our own language development toolkit to support development of programming languages &ndash; <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we&rsquo;ve mainly been using it to create languages for enterprise and web applications. We&rsquo;re also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself &ndash; isn&rsquo;t that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We&rsquo;re not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we&rsquo;re focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
 
 <p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/15018235 "></iframe></div></p>
 
-<p>If you're interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
+<p>If you&rsquo;re interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
 
 <p>In a few years, I guess, Objective-C will be just one language among many others you can choose from if you want to build iOS applications.</p>
 
 <p>But why would you want to write iOS applications in languages other than Objective-C? There are many reasons:</p>
 
 <ul>
-<li>Use the language you feel most comfortable with. Maybe Objective-C's square brackets look scary to you?</li>
-<li>Use the language you have most experience with. Maybe you're a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator "because we've got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C"!</li>
-<li>use the language you use for developing your backend system. So you've got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</li>
-<li>Maybe you're a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</li>
+<li>Use the language you feel most comfortable with. Maybe Objective-C&rsquo;s square brackets look scary to you?</li>
+<li>Use the language you have most experience with. Maybe you&rsquo;re a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator &ldquo;because we&rsquo;ve got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C&rdquo;!</li>
+<li>use the language you use for developing your backend system. So you&rsquo;ve got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</li>
+<li>Maybe you&rsquo;re a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</li>
 </ul>
 
 
-<p>It all boils down to being more productive and ensuring better sustainability. Using the right tool for the job helps you to achieve a faster time to market. If you're able to use the same language on the frontend and the backend, this will help you to secure your investment in this technology.</p>
+<p>It all boils down to being more productive and ensuring better sustainability. Using the right tool for the job helps you to achieve a faster time to market. If you&rsquo;re able to use the same language on the frontend and the backend, this will help you to secure your investment in this technology.</p>
 
-<p>Please note that I'm not saying you should by all means write your frontend and your backend using the same technology and language. The first and foremost question you need to answer is, "what's the right tool for this job". Being able to make a real choice will help you to give a better answer to this question.</p>
+<p>Please note that I&rsquo;m not saying you should by all means write your frontend and your backend using the same technology and language. The first and foremost question you need to answer is, &ldquo;what&rsquo;s the right tool for this job&rdquo;. Being able to make a real choice will help you to give a better answer to this question.</p>
 ]]></content>
   </entry>
   
@@ -173,7 +173,7 @@ window.ondeviceorientation = function(event) {
     <link href="http://www.peterfriese.de/why-your-next-app-should-be-open-sourced/"/>
     <updated>2010-09-06T14:15:17+01:00</updated>
     <id>http://www.peterfriese.de/why-your-next-app-should-be-open-sourced</id>
-    <content type="html"><![CDATA[<p>I've been doing all sorts of software development over the past few years, from closed-source in-house software for companies to closed-source product development to open-source frameworks and tools development to closed-source app development.</p>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been doing all sorts of software development over the past few years, from closed-source in-house software for companies to closed-source product development to open-source frameworks and tools development to closed-source app development.</p>
 
 <p>Looking back on my experience with the various drawbacks and benefits of each of those development modes, I hereby recommend your next app be open sourced.</p>
 
@@ -184,37 +184,37 @@ window.ondeviceorientation = function(event) {
 
 <h3>Reasons pro Open Source</h3>
 
-<p>We all heard it before, "Open Source will make the world a better place" - but why? Well, let me give you a few reasons:</p>
+<p>We all heard it before, &ldquo;Open Source will make the world a better place&rdquo; &ndash; but why? Well, let me give you a few reasons:</p>
 
-<p><strong>First</strong>, by open sourcing your code, your code will become better. If everybody can see what your code looks like, you will do your best to make sure it's clean code. Jeff LaMarche calls this "<a href="http://iphonedevelopment.blogspot.com/2010/06/code-as-if.html">coding as if everybody is watching</a>". Clean code has less errors than quick-and-dirty code, so that's a good thing.</p>
+<p><strong>First</strong>, by open sourcing your code, your code will become better. If everybody can see what your code looks like, you will do your best to make sure it&rsquo;s clean code. Jeff LaMarche calls this &ldquo;<a href="http://iphonedevelopment.blogspot.com/2010/06/code-as-if.html">coding as if everybody is watching</a>&rdquo;. Clean code has less errors than quick-and-dirty code, so that&rsquo;s a good thing.</p>
 
-<p><strong>Enabling others to contribute</strong> will further improve your code. Should you decide to invite other developers to your project, you'll want to add some documentation to make it easier for them to get a jump start. Writing documentation will force you to think through your code and its overall structure. You might find you want to perform some refactorings before you actually let other developers work on your code. This will improve the quality of your code even more.</p>
+<p><strong>Enabling others to contribute</strong> will further improve your code. Should you decide to invite other developers to your project, you&rsquo;ll want to add some documentation to make it easier for them to get a jump start. Writing documentation will force you to think through your code and its overall structure. You might find you want to perform some refactorings before you actually let other developers work on your code. This will improve the quality of your code even more.</p>
 
-<p><strong>Enabling others to participate will make your app more attractive</strong>. Didn't you experience this before: the app you just downloaded is almost perfect - if it only had this one missing feature. For example, I really love <a href="http://www.tweetdeck.com/iphone/">TweetDeck for iPhone</a>, but I'm dearly missing an <a href="http://www.instapaper.com/">Instapaper</a> integration. If TweetDeck was open source, I would've added Instapaper integration to the code and submitted a patch to the creators of TweetDeck for the benefit of the entire user base. But unfortunately, TweetDeck is not open source - what a pity.</p>
+<p><strong>Enabling others to participate will make your app more attractive</strong>. Didn&rsquo;t you experience this before: the app you just downloaded is almost perfect &ndash; if it only had this one missing feature. For example, I really love <a href="http://www.tweetdeck.com/iphone/">TweetDeck for iPhone</a>, but I&rsquo;m dearly missing an <a href="http://www.instapaper.com/">Instapaper</a> integration. If TweetDeck was open source, I would&rsquo;ve added Instapaper integration to the code and submitted a patch to the creators of TweetDeck for the benefit of the entire user base. But unfortunately, TweetDeck is not open source &ndash; what a pity.</p>
 
-<p>By <strong>building a team of skilled people</strong>, you'll be able to deliver more features in a shorter amount of time than you can ever hope to achieve if you work alone. Successful open source projects are made up of a bunch of gifted individuals with diverse skills. This is even more important for mobile applications, as you not only have to develop the code that makes your app work. You also have to create a great looking UI, so might need a great designer. If you want to promote your app on a website, you might also consider teaming up with a web designer.</p>
+<p>By <strong>building a team of skilled people</strong>, you&rsquo;ll be able to deliver more features in a shorter amount of time than you can ever hope to achieve if you work alone. Successful open source projects are made up of a bunch of gifted individuals with diverse skills. This is even more important for mobile applications, as you not only have to develop the code that makes your app work. You also have to create a great looking UI, so might need a great designer. If you want to promote your app on a website, you might also consider teaming up with a web designer.</p>
 
-<p><strong>Speaking of contributions</strong>, you might be a bit hesitant to let other people work on your code. That's alright. Usually, contributors do not get commit rights right away. Instead, you ask them to contribute to the project by submitting patches via your bug tracker (you do use a bug tracker, don't you?). This enables you to review their code before actually committing it to the code base. If you're not satisfied, let them know (in a friendly way) what you would like them to improve. If a contributor delivers a number of great patches in a row, you can consider to promote him/her to be a committer.</p>
+<p><strong>Speaking of contributions</strong>, you might be a bit hesitant to let other people work on your code. That&rsquo;s alright. Usually, contributors do not get commit rights right away. Instead, you ask them to contribute to the project by submitting patches via your bug tracker (you do use a bug tracker, don&rsquo;t you?). This enables you to review their code before actually committing it to the code base. If you&rsquo;re not satisfied, let them know (in a friendly way) what you would like them to improve. If a contributor delivers a number of great patches in a row, you can consider to promote him/her to be a committer.</p>
 
 <h3>Reasons against Open Source</h3>
 
 <p>There are a few reasons why your next app maybe should not be open sourced:</p>
 
-<p><strong>Others might steal your ideas!</strong> I keep hearing this argument over and over again. Yes, if you open source your app, other developers might check out the code, re-brand it and sell it on the app store as their invention. Well, they can steal your ideas anyway - just by looking at your app and building an app that looks and feels the same. Granted, re-writing an app consumes considerably more time than re-branding an existing code base. But I doubt anybody dares to submit a blatant 1:1 copy of an app to the app store. At the very least, you should choose a suitable license for your code. There are a number of great open source licenses you might consider check out the <a href="http://www.opensource.org/licenses">OSI website for a list of open source licenses</a>. <a href="http://blog.robrhyne.com/">Rob Rhyne</a> even had his <a href="http://jdrhyne.tumblr.com/">brother</a> (who is a lawyer) create a <a href="http://github.com/capttaco/Briefs/blob/master/LICENSE">new app-store compatible license</a> for his app, <a href="http://giveabrief.com/">Briefs</a>. Read his blog post "<a href="http://blog.robrhyne.com/post/1043407467/selling-open-source">Selling Open Source</a>" for the rationale behind this step.</p>
+<p><strong>Others might steal your ideas!</strong> I keep hearing this argument over and over again. Yes, if you open source your app, other developers might check out the code, re-brand it and sell it on the app store as their invention. Well, they can steal your ideas anyway &ndash; just by looking at your app and building an app that looks and feels the same. Granted, re-writing an app consumes considerably more time than re-branding an existing code base. But I doubt anybody dares to submit a blatant 1:1 copy of an app to the app store. At the very least, you should choose a suitable license for your code. There are a number of great open source licenses you might consider check out the <a href="http://www.opensource.org/licenses">OSI website for a list of open source licenses</a>. <a href="http://blog.robrhyne.com/">Rob Rhyne</a> even had his <a href="http://jdrhyne.tumblr.com/">brother</a> (who is a lawyer) create a <a href="http://github.com/capttaco/Briefs/blob/master/LICENSE">new app-store compatible license</a> for his app, <a href="http://giveabrief.com/">Briefs</a>. Read his blog post &ldquo;<a href="http://blog.robrhyne.com/post/1043407467/selling-open-source">Selling Open Source</a>&rdquo; for the rationale behind this step.</p>
 
-<p>Even if other people don't copy your entire app, <strong>they still might copy some cool UI tricks</strong> you do. Maybe you've gone to great lengths to create some really cool frameworks that make your life easier or make your app behave in a very cool and new way. You might not want other apps to look as cool as your app does. Well, it's your right. In my opinion, the app store contains way too many badly designed apps. You would do the world a favour by releasing your great library to the public. Really.</p>
+<p>Even if other people don&rsquo;t copy your entire app, <strong>they still might copy some cool UI tricks</strong> you do. Maybe you&rsquo;ve gone to great lengths to create some really cool frameworks that make your life easier or make your app behave in a very cool and new way. You might not want other apps to look as cool as your app does. Well, it&rsquo;s your right. In my opinion, the app store contains way too many badly designed apps. You would do the world a favour by releasing your great library to the public. Really.</p>
 
-<p>And finally, you might not be able to open source your next app because your client or the <strong>company you're working for is against open source</strong>. Maybe they have good reasons for it, maybe they just don't know enough about open source. If the latter is the case, let them read this blog post or drop me a line - I'm available for consulting.</p>
+<p>And finally, you might not be able to open source your next app because your client or the <strong>company you&rsquo;re working for is against open source</strong>. Maybe they have good reasons for it, maybe they just don&rsquo;t know enough about open source. If the latter is the case, let them read this blog post or drop me a line &ndash; I&rsquo;m available for consulting.</p>
 
 <h3>Business Models for Open Source Apps</h3>
 
-<p>You might have a different point of view (and if you do, please leave a comment - I'm eager to hear your thoughts), but in my opinion open source is not a threat but a chance for your app. If we take this for granted, the question remains, how can you make money with an open sourced app? Here are some suggestions:</p>
+<p>You might have a different point of view (and if you do, please leave a comment &ndash; I&rsquo;m eager to hear your thoughts), but in my opinion open source is not a threat but a chance for your app. If we take this for granted, the question remains, how can you make money with an open sourced app? Here are some suggestions:</p>
 
-<p><strong>Sell it on the App Store</strong>. Yes, this might sound a little strange after all my raving about open source. If something is open source, how can you sell it? Well, it turns out selling apps on the App Store is a great idea, especially for open source apps. The app store is the only way how your clients can get hold of your application. Of course - they might check out your code, compile it and upload it to their iPhone. But to do so, they'd need to be registered iPhone developers, meaning they'd need to buy an iPhone developer certificate. Don't you think it is cheaper to just buy your app than shelling out 99 USD for the developer certificate?</p>
+<p><strong>Sell it on the App Store</strong>. Yes, this might sound a little strange after all my raving about open source. If something is open source, how can you sell it? Well, it turns out selling apps on the App Store is a great idea, especially for open source apps. The app store is the only way how your clients can get hold of your application. Of course &ndash; they might check out your code, compile it and upload it to their iPhone. But to do so, they&rsquo;d need to be registered iPhone developers, meaning they&rsquo;d need to buy an iPhone developer certificate. Don&rsquo;t you think it is cheaper to just buy your app than shelling out 99 USD for the developer certificate?</p>
 
-<p>If you're developing a library or framework, you might consider getting <strong>funding on <a href="http://www.kickstarter.com/">Kickstarter</a></strong>. Kickstarter is a great way to get funding for your project: you define the deliverable and how much funds you want to raise and people can back your project by pledging a variable amount of money. This way, <a href="http://www.penandthink.com/">John Wain</a> of <a href="http://glyphish.com/">Glyphish</a> fame <a href="http://www.kickstarter.com/projects/jpwain/great-icons-for-iphone-4-apps">managed to raise more than 27.000 USD</a>  for developing an iPhone 4 compatible version of his great Glyphish icon set. His original goal was to raise 2.000 USD, by the way.</p>
+<p>If you&rsquo;re developing a library or framework, you might consider getting <strong>funding on <a href="http://www.kickstarter.com/">Kickstarter</a></strong>. Kickstarter is a great way to get funding for your project: you define the deliverable and how much funds you want to raise and people can back your project by pledging a variable amount of money. This way, <a href="http://www.penandthink.com/">John Wain</a> of <a href="http://glyphish.com/">Glyphish</a> fame <a href="http://www.kickstarter.com/projects/jpwain/great-icons-for-iphone-4-apps">managed to raise more than 27.000 USD</a>  for developing an iPhone 4 compatible version of his great Glyphish icon set. His original goal was to raise 2.000 USD, by the way.</p>
 
-<p>I hope I could encourage you to try open source as a strategy for your next application or framework. If I did, let me know! Chances are I might want to submit a patch to add that tiny little feature I think your app is lacking ;-)</p>
+<p>I hope I could encourage you to try open source as a strategy for your next application or framework. If I did, let me know! Chances are I might want to submit a patch to add that tiny little feature I think your app is lacking ;&ndash;)</p>
 ]]></content>
   </entry>
   
@@ -223,30 +223,30 @@ window.ondeviceorientation = function(event) {
     <link href="http://www.peterfriese.de/watching-dvds-on-your-ipad/"/>
     <updated>2010-08-06T23:22:10+01:00</updated>
     <id>http://www.peterfriese.de/watching-dvds-on-your-ipad</id>
-    <content type="html"><![CDATA[<p>I've been wanting to watch DVDs on my iPad since I had it. As the iPad doesn't have an optical drive, you need to jump through several loopholes to get the trick done, but in the very moment you watch your first DVD on your iPad, something magical happens...</p>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been wanting to watch DVDs on my iPad since I had it. As the iPad doesn&rsquo;t have an optical drive, you need to jump through several loopholes to get the trick done, but in the very moment you watch your first DVD on your iPad, something magical happens&hellip;</p>
 
 <!-- more -->
 
 
-<p>At first, I came up with a solution that would allow me to watch DVDs without re-encoding them - I just streamed them from my Mac. Actually, this is very easy with the help of some great open source tools, some of which are already installed on your Mac. But I guess this is a story for another blog post.</p>
+<p>At first, I came up with a solution that would allow me to watch DVDs without re-encoding them &ndash; I just streamed them from my Mac. Actually, this is very easy with the help of some great open source tools, some of which are already installed on your Mac. But I guess this is a story for another blog post.</p>
 
-<p>If you want to take your DVDs with you on your iPad, streaming them from your Mac isn't an option. So I browsed the web to see if I could find an affordable ripper. If you google for "<a href="http://www.google.com/search?q=dvd+ipad">dvd ipad</a>", you'll be given an enormous list of hits linking to commercial tools - obviously encoding DVDs for the iPad isn't that simple, so companies can make a good business with selling tools. But I didn't want to buy any of those tools, so I looked for a solution involving freely available open source tools.</p>
+<p>If you want to take your DVDs with you on your iPad, streaming them from your Mac isn&rsquo;t an option. So I browsed the web to see if I could find an affordable ripper. If you google for &ldquo;<a href="http://www.google.com/search?q=dvd+ipad">dvd ipad</a>&rdquo;, you&rsquo;ll be given an enormous list of hits linking to commercial tools &ndash; obviously encoding DVDs for the iPad isn&rsquo;t that simple, so companies can make a good business with selling tools. But I didn&rsquo;t want to buy any of those tools, so I looked for a solution involving freely available open source tools.</p>
 
-<p>So, if you want to encode your DVDs for your iPad, here are the steps you need to take. It's very simple and doesn't cost you a single dime:</p>
+<p>So, if you want to encode your DVDs for your iPad, here are the steps you need to take. It&rsquo;s very simple and doesn&rsquo;t cost you a single dime:</p>
 
 <ol>
-<li><a href="http://handbrake.fr/downloads.php">Download</a> and install Handbrake.</li>
-<li>In order to encode for the iPad, you need to use an adjusted profile: <a href="http://www.peterfriese.de/wp-content/downloads/handbrake/iPad.plist">iPad.plist</a>.</li>
-<li>Install this profile into Handbrake (<em>Preset -> Import...</em> on the main menu)</li>
-<li>Insert a DVD into your optical drive</li>
-<li>Click the <em>Source</em> button in Handbrake and select your DVD</li>
-<li>Handbrake will now scan the DVD for what it thinks is the main feature - you might need to verif this.</li>
-<li>Select one of the profiles in the profile selection dialog (on the Mac, press the <em>Toggle Presets</em> button on the toolbar). <em>iPad full</em> worked fine for me.</li>
-<li>You can now fine-tune the settings. For example, the <em>audio</em> tab allows you to add multiple audio tracks to your video</li>
-<li>Once you're done, press <em>Start</em></li>
-<li>Now it's time to go for a walk or having a chat with your friends - ripping the DVD will take some time, depending on your computer</li>
-<li>When Handbrake is done encoding the video, just double-click the resulting <em>.m4v</em> file to import it to iTunes.</li>
-<li>As soon as the video shows up in iTunes, you can sync it to your iPad (the iPhone plays the video fine, too)</li>
+<li> <a href="http://handbrake.fr/downloads.php">Download</a> and install Handbrake.</li>
+<li> In order to encode for the iPad, you need to use an adjusted profile: <a href="http://www.peterfriese.de/wp-content/downloads/handbrake/iPad.plist">iPad.plist</a>.</li>
+<li> Install this profile into Handbrake (<em>Preset &ndash;> Import&hellip;</em> on the main menu)</li>
+<li> Insert a DVD into your optical drive</li>
+<li> Click the <em>Source</em> button in Handbrake and select your DVD</li>
+<li> Handbrake will now scan the DVD for what it thinks is the main feature &ndash; you might need to verif this.</li>
+<li> Select one of the profiles in the profile selection dialog (on the Mac, press the <em>Toggle Presets</em> button on the toolbar). <em>iPad full</em> worked fine for me.</li>
+<li> You can now fine-tune the settings. For example, the <em>audio</em> tab allows you to add multiple audio tracks to your video</li>
+<li> Once you&rsquo;re done, press <em>Start</em></li>
+<li>. Now it&rsquo;s time to go for a walk or having a chat with your friends &ndash; ripping the DVD will take some time, depending on your computer</li>
+<li>. When Handbrake is done encoding the video, just double-click the resulting <em>.m4v</em> file to import it to iTunes.</li>
+<li>. As soon as the video shows up in iTunes, you can sync it to your iPad (the iPhone plays the video fine, too)</li>
 </ol>
 
 

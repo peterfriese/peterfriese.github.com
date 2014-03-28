@@ -4,7 +4,7 @@
   <title><![CDATA[Category: OSGi | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/osgi/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,32 +18,30 @@
     <link href="http://www.peterfriese.de/osgi-servlets-flexibility-by-simplicity/"/>
     <updated>2010-04-26T11:24:03+01:00</updated>
     <id>http://www.peterfriese.de/osgi-servlets-flexibility-by-simplicity</id>
-    <content type="html"><![CDATA[<p><strong>Strangely enough</strong>, simple things tend to be more flexible than complex things. I bet you too have seen people go to great lengths to ensure a certain solution provides utmost flexibility. <!-- more -->Often, this flexibility isn't needed, so you're introducing accidental complexity.</p>
+    <content type="html"><![CDATA[<p><strong>Strangely enough</strong>, simple things tend to be more flexible than complex things. I bet you too have seen people go to great lengths to ensure a certain solution provides utmost flexibility. <!-- more -->Often, this flexibility isn&rsquo;t needed, so you&rsquo;re introducing accidental complexity.</p>
 
 <p>In <a href="http://www.peterfriese.de/osgi-servlets-a-happy-marriage/">a recent post</a>, I showed you how to create a plain servlet and register it in an OSGi environment. As both <a href="http://eclipsesource.com/blogs/author/jeff/">Jeff</a> and <a href="http://www.composent.com/">Scott</a> pointed out, my using a <em>ServiceTracker</em> to register and unregister the servlet is a little bit clumsy and can be improved by using Declarative Services.</p>
 
-<p>I highly recommend reading chapter 15 in "<a href="http://my.safaribooksonline.com/9780321561510">OSGi and Equinox</a>", but in a nutshell Declarative Services allow you to define <em>components</em> which can provide and consume <em>services</em>. <em>Binding</em> and <em>unbinding</em> references between components and services is performed by the DS runtime (also known as the Service Component Runtime).</p>
+<p>I highly recommend reading chapter 15 in &ldquo;<a href="http://my.safaribooksonline.com/9780321561510">OSGi and Equinox</a>&rdquo;, but in a nutshell Declarative Services allow you to define <em>components</em> which can provide and consume <em>services</em>. <em>Binding</em> and <em>unbinding</em> references between components and services is performed by the DS runtime (also known as the Service Component Runtime).</p>
 
 <p>Without further ado, here are the changes I had to make to DS-ify my simple servlet:</p>
 
 <ol>
-<li><p>Remove the activator. Yes, that's true: we don't need an Activator any more. Delete the class and also remove it from <em>META-INF/MANIFEST.MF</em></p></li>
-<li><p>Delete <em>HttpServiceTracker</em>. Registering the servlet with the <em>HTTPService</em> will be handled by the DS runtime.</p></li>
-<li><p>Implement a <em>component</em> to register and unregister the servlet with the <em>HttpService</em>:</p></li>
-</ol>
+<li><p> Remove the activator. Yes, that&rsquo;s true: we don&rsquo;t need an Activator any more. Delete the class and also remove it from <em>META-INF/MANIFEST.MF</em></p></li>
+<li><p> Delete <em>HttpServiceTracker</em>. Registering the servlet with the <em>HTTPService</em> will be handled by the DS runtime.</p></li>
+<li><p> Implement a <em>component</em> to register and unregister the servlet with the <em>HttpService</em>:</p>
 
+<p>public class SimpleComponent {
+  private static final String SERVLET_ALIAS = &ldquo;/hellods&rdquo;;
+  private HttpService httpService;</p>
 
-<pre><code>public class SimpleComponent {
-  private static final String SERVLET_ALIAS = "/hellods";
-  private HttpService httpService;
-
-  public void setHttpService(HttpService httpService) {
+<p>  public void setHttpService(HttpService httpService) {
     this.httpService = httpService;
-  }
+  }</p>
 
-  protected void startup() {
+<p>  protected void startup() {
     try {
-      System.out.println("Staring up sevlet at " + SERVLET_ALIAS);
+      System.out.println(&ldquo;Staring up sevlet at &rdquo; + SERVLET_ALIAS);
       SimpleServlet servlet = new SimpleServlet();
       httpService.registerServlet(SERVLET_ALIAS, servlet, null, null);
     } catch (ServletException e) {
@@ -51,30 +49,30 @@
     } catch (NamespaceException e) {
       e.printStackTrace();
     }
-  }
+  }</p>
 
-  protected void shutdown() {
+<p>  protected void shutdown() {
     httpService.unregister(SERVLET_ALIAS);
   }
-}
-</code></pre>
-
-<p>As you can see, the <em>HttpService</em> will be injected into this component using it's setter method, <em>setHttpService</em>.</p>
-
-<ol>
-<li>Register this component with the DS runtime by adding a component description:</li>
+}</p></li>
 </ol>
 
 
-<pre><code>&lt;scr:component deactivate="shutdown" activate="startup" xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="simple.ds.component"&gt;
-  &lt;implementation class="simple.ds.servlet.SimpleComponent"&gt;&lt;/implementation&gt;
-  &lt;reference interface="org.osgi.service.http.HttpService" bind="setHttpService"&gt;&lt;/reference&gt;
-&lt;/scr:component&gt;
-</code></pre>
+<p>As you can see, the <em>HttpService</em> will be injected into this component using it&rsquo;s setter method, <em>setHttpService</em>.</p>
 
-<p>I saved this file in <em>OSGI-INF/component.xml</em> and added it to the <em>Service-Component</em> section of <em>META-INF/MANIFEST.MF</em>. In fact, as I used the <em>Create New OSGi Component</em> wizard, the wizard added the entry to the <em>ServiceComponent</em> section - it's really easy to forget this if you do it manually!</p>
+<ol>
+<li><p> Register this component with the DS runtime by adding a component description:</p>
 
-<p>That's it!</p>
+<p>&lt;scr:component deactivate=&ldquo;shutdown&rdquo; activate=&ldquo;startup&rdquo; xmlns:scr=&ldquo;<a href="http://www.osgi.org/xmlns/scr/v1.1.0">http://www.osgi.org/xmlns/scr/v1.1.0</a>&rdquo; name=&ldquo;simple.ds.component&rdquo;>
+  <implementation class="simple.ds.servlet.SimpleComponent"></implementation>
+  <reference interface="org.osgi.service.http.HttpService" bind="setHttpService"></reference>
+&lt;/scr:component></p></li>
+</ol>
+
+
+<p>I saved this file in <em>OSGI-INF/component.xml</em> and added it to the <em>Service-Component</em> section of <em>META-INF/MANIFEST.MF</em>. In fact, as I used the <em>Create New OSGi Component</em> wizard, the wizard added the entry to the <em>ServiceComponent</em> section &ndash; it&rsquo;s really easy to forget this if you do it manually!</p>
+
+<p>That&rsquo;s it!</p>
 
 <p><strong>Please note</strong> that I did not change the servlet implementation at all (apart form issuing a different text to make it easier to tell the servlets apart)!</p>
 
@@ -100,19 +98,19 @@
 
 <h2>Setting up an Amazon EC2 instance</h2>
 
-<p>Scott Lewis <a href="http://eclipseecf.blogspot.com/2010/03/osgieclipsert-in-amazon-cloud.html">was kind enough to prepare an Amazon EC2 Machine Image (AMI)</a> that already contains Jetty, Equinox and p2 - everything we need to get our servlet running. So let's use this AMI to provision our instance:</p>
+<p>Scott Lewis <a href="http://eclipseecf.blogspot.com/2010/03/osgieclipsert-in-amazon-cloud.html">was kind enough to prepare an Amazon EC2 Machine Image (AMI)</a> that already contains Jetty, Equinox and p2 &ndash; everything we need to get our servlet running. So let&rsquo;s use this AMI to provision our instance:</p>
 
 <ol>
-<li><p>Sign in to the <a href="https://console.aws.amazon.com/ec2/home">AWS web console</a></p></li>
-<li><p>Click on <em>Launch instance</em> to create a new instance</p></li>
-<li><p>In the <em>Request Instances Wizard</em>, jump over to the <em>Community AMIs</em> tab</p></li>
-<li><p>Type <em>OSGi</em> in the search field to search for <strong><em>ami-69d93600</em></strong></p></li>
-<li><p>Select the AMI</p></li>
-<li><p>In the next step, you get to configure the instance. A small instance will do for now.</p></li>
-<li><p>Leave the <em>Advanced Instance</em> options as-is</p></li>
-<li><p>Next, you need to create a key pair (this will allow you to sign in to the instance using SSH). If you haven't created an EC2 instance before, select <em>Create a new Key Pair</em> and follow the instructions. Otherwise, select an existing key pair</p></li>
-<li><p>To access the instance from outside using HTTP and SSH, you need to create and assign a <em>security group</em>. Make sure to add SSH and HTTP port configurations to this security group. Unfortunately, it is not possible to freely choose the port ranges, so we need to edit the security group after we're finished with the wizard.</p></li>
-<li><p>On the summary page, review the configuration and click on <em>Launch</em> to actually start your instance.</p></li>
+<li><p> Sign in to the <a href="https://console.aws.amazon.com/ec2/home">AWS web console</a></p></li>
+<li><p> Click on <em>Launch instance</em> to create a new instance</p></li>
+<li><p> In the <em>Request Instances Wizard</em>, jump over to the <em>Community AMIs</em> tab</p></li>
+<li><p> Type <em>OSGi</em> in the search field to search for <strong><em>ami-69d93600</em></strong></p></li>
+<li><p> Select the AMI</p></li>
+<li><p> In the next step, you get to configure the instance. A small instance will do for now.</p></li>
+<li><p> Leave the <em>Advanced Instance</em> options as-is</p></li>
+<li><p> Next, you need to create a key pair (this will allow you to sign in to the instance using SSH). If you haven&rsquo;t created an EC2 instance before, select <em>Create a new Key Pair</em> and follow the instructions. Otherwise, select an existing key pair</p></li>
+<li><p> To access the instance from outside using HTTP and SSH, you need to create and assign a <em>security group</em>. Make sure to add SSH and HTTP port configurations to this security group. Unfortunately, it is not possible to freely choose the port ranges, so we need to edit the security group after we&rsquo;re finished with the wizard.</p></li>
+<li><p>. On the summary page, review the configuration and click on <em>Launch</em> to actually start your instance.</p></li>
 </ol>
 
 
@@ -147,10 +145,10 @@ Welcome to an EC2 Public Image
 <p><strong>First,</strong> create a new feature project, naming it <em>simple.servlet.feature</em>. Provide the following details to the wizard:</p>
 
 <ol>
-<li><p><em>ID:</em> simple.servlet.feature</p></li>
-<li><p><em>Version:</em> 1.0.0.qualifier</p></li>
-<li><p><em>Name:</em> Simple Servlet Feature</p></li>
-<li><p><em>Provider:</em> Your name</p></li>
+<li><p> <em>ID:</em> simple.servlet.feature</p></li>
+<li><p> <em>Version:</em> 1.0.0.qualifier</p></li>
+<li><p> <em>Name:</em> Simple Servlet Feature</p></li>
+<li><p> <em>Provider:</em> Your name</p></li>
 </ol>
 
 
@@ -158,13 +156,13 @@ Welcome to an EC2 Public Image
 
 <p><strong>Now,</strong> we can create the update site. It will only contain the feature we just created. Using the <em>New Update Site</em> wizard, create a new update site project, naming it <em>simple.servlet.updatesite</em>. Add the feature we just created to the list of features on the first page of the <em>site.xml</em> Update Site Map.</p>
 
-<p><strong>When you're done with that, </strong>, you can build the update site by pressing the <em>Build All</em> button. This will build the servlet plug-in, the feature and finally the update site. After that, we're ready to deploy.</p>
+<p><strong>When you&rsquo;re done with that, </strong>, you can build the update site by pressing the <em>Build All</em> button. This will build the servlet plug-in, the feature and finally the update site. After that, we&rsquo;re ready to deploy.</p>
 
 <h2>Installing the servlet</h2>
 
 <p>Installing the servlet into our Amazon EC2 instance is quite easy, as we can leverage p2:</p>
 
-<p><strong>Using your favourite SFTP client,</strong> copy the entire update into the <em>/tmp</em> directory of your Amazon EC2 instance. When that's done, hop over to your terminal window that's connected to the OSGi console of your Eclipse RT server (remember, we started this server when setting up the Amazon EC2 instance). Issue the following commands:</p>
+<p><strong>Using your favourite SFTP client,</strong> copy the entire update into the <em>/tmp</em> directory of your Amazon EC2 instance. When that&rsquo;s done, hop over to your terminal window that&rsquo;s connected to the OSGi console of your Eclipse RT server (remember, we started this server when setting up the Amazon EC2 instance). Issue the following commands:</p>
 
 <pre><code>provaddrepo file:/tmp/simple.servlet.updatesite
 provliu
@@ -210,7 +208,7 @@ confapply
     <link href="http://www.peterfriese.de/osgi-servlets-a-happy-marriage/"/>
     <updated>2010-04-07T13:40:41+01:00</updated>
     <id>http://www.peterfriese.de/osgi-servlets-a-happy-marriage</id>
-    <content type="html"><![CDATA[<p>In this post, I'll show you how to create a simple OSGI-based servlet. Later, we will deploy this servlet to an Amazon EC 2 instance - this should be fun!</p>
+    <content type="html"><![CDATA[<p>In this post, I&rsquo;ll show you how to create a simple OSGI-based servlet. Later, we will deploy this servlet to an Amazon EC 2 instance &ndash; this should be fun!</p>
 
 <!-- more -->
 
@@ -220,27 +218,21 @@ confapply
 <p><strong>First of all</strong>, some preliminary steps. We need to create a new OSGi project and add some dependencies:</p>
 
 <ol>
-<li><p>Create a new plug-in project, naming it <em>simple.servlet</em>. Make sure to select <em>Equinox</em> as the target OSGI framework on the first page of the wizard. Also make sure you've got an activator (that option is on by default).</p></li>
-<li><p>Open the manifest editor and add the following packages to the Imported Packages section on the Dependencies tab:</p></li>
+<li><p> Create a new plug-in project, naming it <em>simple.servlet</em>. Make sure to select <em>Equinox</em> as the target OSGI framework on the first page of the wizard. Also make sure you&rsquo;ve got an activator (that option is on by default).</p></li>
+<li><p> Open the manifest editor and add the following packages to the Imported Packages section on the Dependencies tab:</p>
+
+<ul>
+<li><p>javax.servlet</p></li>
+<li><p>javax.servlet.http</p></li>
+<li><p>org.osgi.framework</p></li>
+<li><p>org.osgi.service.http</p></li>
+<li><p>org.osgi.util.tracker</p></li>
+</ul>
+</li>
 </ol>
 
 
-<pre><code>* javax.servlet
-
-
-* javax.servlet.http
-
-
-* org.osgi.framework
-
-
-* org.osgi.service.http
-
-
-* org.osgi.util.tracker
-</code></pre>
-
-<p><strong>Next</strong>, let's create the servlet. Servlets are plain Java classes that implement the javax.servlet.Servlet interface. As we want to serve information over HTTP, we can just create a subclass of javax.servlet.http.HttpServlet which already does some of the heavy lifting for us. All we need to do is override the doGet() method. This method does not have a return value. Instead, we need to fill its second parameter, <code>HttpServletResponse resp</code> with the text we want the web browser to display. We could return HTML, but for simplicity's sake, let's just return plain text (so make sure to set the content type to <code>text/plain</code>):</p>
+<p><strong>Next</strong>, let&rsquo;s create the servlet. Servlets are plain Java classes that implement the javax.servlet.Servlet interface. As we want to serve information over HTTP, we can just create a subclass of javax.servlet.http.HttpServlet which already does some of the heavy lifting for us. All we need to do is override the doGet() method. This method does not have a return value. Instead, we need to fill its second parameter, <code>HttpServletResponse resp</code> with the text we want the web browser to display. We could return HTML, but for simplicity&rsquo;s sake, let&rsquo;s just return plain text (so make sure to set the content type to <code>text/plain</code>):</p>
 
 <pre><code>package simple.servlet;
 import java.io.IOException;
@@ -261,9 +253,9 @@ public class SimpleServlet extends HttpServlet {
 }
 </code></pre>
 
-<p><strong>In order for the servlet to be accessible</strong> via HTTP, we need to register it. If you have done some JEE/J2EE development, you know that servlets are registered using the <code>web.xml</code> servlet descriptor. As we're not in the JEE world any longer, we can't go down this road. Instead, we will register the servlet using a <code>org.osgi.util.tracker.ServiceTracker</code>. It's a little bit more code to write, but let me tell you: it's worth it as you'll see very soon.</p>
+<p><strong>In order for the servlet to be accessible</strong> via HTTP, we need to register it. If you have done some JEE/J2EE development, you know that servlets are registered using the <code>web.xml</code> servlet descriptor. As we&rsquo;re not in the JEE world any longer, we can&rsquo;t go down this road. Instead, we will register the servlet using a <code>org.osgi.util.tracker.ServiceTracker</code>. It&rsquo;s a little bit more code to write, but let me tell you: it&rsquo;s worth it as you&rsquo;ll see very soon.</p>
 
-<p>The service tracker will be registered for a specific class - in our case that's <code>org.osgi.service.http.HttpService</code>:</p>
+<p>The service tracker will be registered for a specific class &ndash; in our case that&rsquo;s <code>org.osgi.service.http.HttpService</code>:</p>
 
 <pre><code>package simple.servlet;
 
@@ -315,7 +307,7 @@ public class HttpServiceTracker extends ServiceTracker {
 }
 </code></pre>
 
-<p><strong>Now</strong> that we've got the servlet in place, we need to make sure the service tracker is started and stopped when our bundle is started and stopped. Those of you familiar with OSGi know where we're heading now: we need to implement the <code>start()</code> and <code>stop()</code> methods of our activator:</p>
+<p><strong>Now</strong> that we&rsquo;ve got the servlet in place, we need to make sure the service tracker is started and stopped when our bundle is started and stopped. Those of you familiar with OSGi know where we&rsquo;re heading now: we need to implement the <code>start()</code> and <code>stop()</code> methods of our activator:</p>
 
 <pre><code>package simple.servlet;
 
@@ -342,39 +334,23 @@ public class Activator implements BundleActivator {
 <p><strong>To test your servlet locally</strong>, create a new launch config:</p>
 
 <ol>
-<li><p>In the main menu, select <em>Run -> Run Configurations...</em></p></li>
-<li><p>Double click on <em>OSGi Framework</em> in the tree on the left hand side to create a new OSGi-based launch config
+<li><p> In the main menu, select <em>Run &ndash;> Run Configurations&hellip;</em></p></li>
+<li><p> Double click on <em>OSGi Framework</em> in the tree on the left hand side to create a new OSGi-based launch config
 and name it <em>Simple Servlet (OSGi)</em></p></li>
-<li><p>Make sure you select the following <strong>eight (8)</strong> bundles on the <em>Bundles</em> tab:</p></li>
-</ol>
-
-
-<pre><code>1. simple.servlet
-
-
-2. javax.servlet
-
-
-3. org.eclipse.equinox.http.jetty
-
-
-4. org.eclipse.equinox.http.servlet
-
-
-5. org.eclispe.osgi
-
-
-6. org.eclispe.osgi.services
-
-
-7. org.mortbay.jetty.server
-
-
-8. org.mortbay.jetty.util
-</code></pre>
+<li><p> Make sure you select the following <strong>eight (8)</strong> bundles on the <em>Bundles</em> tab:</p>
 
 <ol>
-<li>Head over to the <em>Arguments</em> tab, making sure the <em>VM arguments</em> text box reads <code>-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dorg.osgi.service.http.port=8080</code></li>
+<li><p>simple.servlet</p></li>
+<li><p>javax.servlet</p></li>
+<li><p>org.eclipse.equinox.http.jetty</p></li>
+<li><p>org.eclipse.equinox.http.servlet</p></li>
+<li><p>org.eclispe.osgi</p></li>
+<li><p>org.eclispe.osgi.services</p></li>
+<li><p>org.mortbay.jetty.server</p></li>
+<li><p>org.mortbay.jetty.util</p></li>
+</ol>
+</li>
+<li><p> Head over to the <em>Arguments</em> tab, making sure the <em>VM arguments</em> text box reads <code>-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dorg.osgi.service.http.port=8080</code></p></li>
 </ol>
 
 
@@ -384,7 +360,7 @@ and name it <em>Simple Servlet (OSGi)</em></p></li>
 
 <p><a href="http://farm3.static.flickr.com/2775/4499763290_c0045c441b_o.jpg"><img src="http://farm3.static.flickr.com/2775/4499763290_00e3405795_m.jpg" alt="OSGi SimpleServlet, local deployment" /></a></p>
 
-<p><strong>Congratulations</strong>, you've just built your first OSGi-enabled servlet. In the next post, I'll show you how to deploy this servlet in an Amazon EC2 instance. You can <a href="http://code.google.com/p/peterfriese/source/browse/#svn/osgi/trunk/simple.servlet">download the source code</a> for this post from my SVN repository on Google code.</p>
+<p><strong>Congratulations</strong>, you&rsquo;ve just built your first OSGi-enabled servlet. In the next post, I&rsquo;ll show you how to deploy this servlet in an Amazon EC2 instance. You can <a href="http://code.google.com/p/peterfriese/source/browse/#svn/osgi/trunk/simple.servlet">download the source code</a> for this post from my SVN repository on Google code.</p>
 ]]></content>
   </entry>
   

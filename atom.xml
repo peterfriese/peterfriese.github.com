@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://www.peterfriese.de/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,26 +18,26 @@
     <link href="http://www.peterfriese.de/google-plus-plus-1/"/>
     <updated>2014-01-29T13:34:00+00:00</updated>
     <id>http://www.peterfriese.de/google-plus-plus-1</id>
-    <content type="html"><![CDATA[<p>Can&#8217;t make sense of the cryptic headline? Read on, I&#8217;ll explain! If you <em>can</em> decode the headline, you qualify as a geek and should read on as well :-)</p>
+    <content type="html"><![CDATA[<p>Can&rsquo;t make sense of the cryptic headline? Read on, I&rsquo;ll explain! If you <em>can</em> decode the headline, you qualify as a geek and should read on as well :&ndash;)</p>
 
 <!-- more -->
 
 
 <p>I am excited to announce I have started a new job with Google!</p>
 
-<p>Starting January 20th 2014, I&#8217;ll work as a Developer Advocate on the Google+ team at Google in London. Many people have asked me what a Developer Advocate actually is and what we do, so I&#8217;ll briefly explain it here for everyone&#8217;s benefit.</p>
+<p>Starting January 20th 2014, I&rsquo;ll work as a Developer Advocate on the Google+ team at Google in London. Many people have asked me what a Developer Advocate actually is and what we do, so I&rsquo;ll briefly explain it here for everyone&rsquo;s benefit.</p>
 
 <p>The official job posting for <a href="https://www.google.com/about/jobs/search/#!t=jo&amp;jid=729001&amp;">Developer Advocates at Google</a> says:</p>
 
-<blockquote><p>We&#8217;re self-proclaimed nerds, and our Developer Relations organization helps keep us connected to the communities that love technology as much as we do. Developer Advocates are focused on supporting the 3rd party developers who are building applications and businesses on Google&#8217;s platforms. You are passionate evangelists for Google technologies as well as vocal champions for developer interests within Google. This is a position for engineers who love connecting with developers and speaking publicly about cutting-edge technologies on conference panels, at user groups, on blogs and with the press. Chrome, Android, App Engine, HTML5 as well as our core Google Apps and Ads APIs are just some of the platforms you promote and support.</p></blockquote>
+<blockquote><p>We&rsquo;re self-proclaimed nerds, and our Developer Relations organization helps keep us connected to the communities that love technology as much as we do. Developer Advocates are focused on supporting the 3rd party developers who are building applications and businesses on Google&rsquo;s platforms. You are passionate evangelists for Google technologies as well as vocal champions for developer interests within Google. This is a position for engineers who love connecting with developers and speaking publicly about cutting-edge technologies on conference panels, at user groups, on blogs and with the press. Chrome, Android, App Engine, HTML5 as well as our core Google Apps and Ads APIs are just some of the platforms you promote and support.</p></blockquote>
 
-<p>As a part of that, I&#8217;ll be working together with a whole bunch of other Developer Relations staff to help 3rd party developers and partners to use the Google+ Platform and APIs to integrate their apps and services with Google&#8217;s platforms. The term &#8220;Advocate&#8221; means I&#8217;ll act as a two-way communication channel: on one hand, I will speak at conferences, write blog posts and articles to communicate how to use Google APIs. On the other hand, I am here to listen to the feedback user of our APIs give and make sure this gets fed back into the product life cycle. This means I will meet with a lot of partners and developers, listen to their needs and gripes and help them to make sense of our APIs</p>
+<p>As a part of that, I&rsquo;ll be working together with a whole bunch of other Developer Relations staff to help 3rd party developers and partners to use the Google+ Platform and APIs to integrate their apps and services with Google&rsquo;s platforms. The term &ldquo;Advocate&rdquo; means I&rsquo;ll act as a two-way communication channel: on one hand, I will speak at conferences, write blog posts and articles to communicate how to use Google APIs. On the other hand, I am here to listen to the feedback user of our APIs give and make sure this gets fed back into the product life cycle. This means I will meet with a lot of partners and developers, listen to their needs and gripes and help them to make sense of our APIs</p>
 
-<p>If you are interested in a more in-depth explanation or if you&#8217;re even considering becoming a Developer Advocate yourself, I can recommend <a href="http://christianheilmann.com/">Christian Heilmann&#8217;s</a> <a href="http://bit.ly/1iLdFX3">excellent book</a> on this topic.</p>
+<p>If you are interested in a more in-depth explanation or if you&rsquo;re even considering becoming a Developer Advocate yourself, I can recommend <a href="http://christianheilmann.com/">Christian Heilmann&rsquo;s</a> <a href="http://bit.ly/1iLdFX3">excellent book</a> on this topic.</p>
 
-<p>That being said, feel free to reach out to me on <a href="https://twitter.com/peterfriese">Twitter</a>, <a href="https://plus.google.com/+PeterFriese/">Google+</a>, or by <a href="mailto:peterfriese@google.com">email</a> if you are interested in using the Google+ platform and becoming a platform partner. If you&#8217;ve got any technical questions, check out our excellent and friendly communities on <a href="https://plus.google.com/communities/113527920160449995981">Google+</a> and <a href="http://stackoverflow.com/tags/google-plus">StackOverflow</a>. If there is anything in particular you would like me to have a look at, ping me on Google+. When reporting a problem, keep in mind the guidelines for <a href="http://www.chiark.greenend.org.uk/~sgtatham/bugs.html">writing great bug reports</a> and also keep <a href="https://plus.google.com/+ManoMarks/">Mano Marks&#8217;</a> post on <a href="https://plus.sandbox.google.com/u/1/+ManoMarks/posts/fnhGau9BpPW">How to Approach a Google Developer Advocate with Questions</a> in mind - help us to better help you :-)</p>
+<p>That being said, feel free to reach out to me on <a href="https://twitter.com/peterfriese">Twitter</a>, <a href="https://plus.google.com/+PeterFriese/">Google+</a>, or by <a href="mailto:peterfriese@google.com">email</a> if you are interested in using the Google+ platform and becoming a platform partner. If you&rsquo;ve got any technical questions, check out our excellent and friendly communities on <a href="https://plus.google.com/communities/113527920160449995981">Google+</a> and <a href="http://stackoverflow.com/tags/google-plus">StackOverflow</a>. If there is anything in particular you would like me to have a look at, ping me on Google+. When reporting a problem, keep in mind the guidelines for <a href="http://www.chiark.greenend.org.uk/~sgtatham/bugs.html">writing great bug reports</a> and also keep <a href="https://plus.google.com/+ManoMarks/">Mano Marks&#8217;</a> post on <a href="https://plus.sandbox.google.com/u/1/+ManoMarks/posts/fnhGau9BpPW">How to Approach a Google Developer Advocate with Questions</a> in mind &ndash; help us to better help you :&ndash;)</p>
 
-<p>Lastly - we&#8217;re hiring: check out <a href="https://www.google.com/about/jobs/search/">Google Jobs</a>!</p>
+<p>Lastly &ndash; we&rsquo;re hiring: check out <a href="https://www.google.com/about/jobs/search/">Google Jobs</a>!</p>
 ]]></content>
   </entry>
   
@@ -46,42 +46,42 @@
     <link href="http://www.peterfriese.de/annotated-links-issue-6/"/>
     <updated>2013-12-11T12:24:00+00:00</updated>
     <id>http://www.peterfriese.de/annotated-links-issue-6</id>
-    <content type="html"><![CDATA[<p>After a few weeks of silence (and on popular demand by a <a href="http://heikobehrens.net">single person</a>), I decided to pick up publishing my annotated links again. This time, we&#8217;ll look at wiretapping APIs, donating code to your favourite projects on Github, Node.js in your iOS apps, and a racing game that renders its track across multiple devices.</p>
+    <content type="html"><![CDATA[<p>After a few weeks of silence (and on popular demand by a <a href="http://heikobehrens.net">single person</a>), I decided to pick up publishing my annotated links again. This time, we&rsquo;ll look at wiretapping APIs, donating code to your favourite projects on Github, Node.js in your iOS apps, and a racing game that renders its track across multiple devices.</p>
 
 <!-- more -->
 
 
 <h3><a href="http://www.runscope.com">Runscope</a></h3>
 
-<p>Runscope is an online tool for inspecting, debugging and testing API traffic. The traffic inspector allows you to easily set up a &#8220;wire tap&#8221; for your app, basically allowing you to monitor and record any traffic between your app and any API that you&#8217;re using. In addition to recording traffic for inspection, you can also compare responses of two calls and find out where the differences are - very handy! You can even share individual recorded requests with your co-workers, e.g. to discuss a problem with your back-end team.</p>
+<p>Runscope is an online tool for inspecting, debugging and testing API traffic. The traffic inspector allows you to easily set up a &ldquo;wire tap&rdquo; for your app, basically allowing you to monitor and record any traffic between your app and any API that you&rsquo;re using. In addition to recording traffic for inspection, you can also compare responses of two calls and find out where the differences are &ndash; very handy! You can even share individual recorded requests with your co-workers, e.g. to discuss a problem with your back-end team.</p>
 
 <p>Runscope also provides a tool for automated testing of your API, dubbed <em>Runscope Radar</em>. This tool allows you to set up a sequence of API calls, along with the expected outcome for each of the calls. Radar provides an easy-to-use UI for setting up simple, yet powerful assertions that allow you to specify how the header and body of the response should look like. Variables help you to keep things flexible. Runscope Radar supports JSON and XML, so it is easy to build expressions like <code>[2].number</code> to navigate JSON and XML responses and specify expectations. You can then schedule your tests to run at given intervals and be notified via e-mail in case a test fails. This allows you to easily set up intelligent tests that monitor the validity of your API.</p>
 
-<p><a href="http://httpkit.com/wiretap">Wiretap</a> by <a href="https://twitter.com/KrisJordan">Kris Jordan</a> looks very promising as well. It acts as a reverse proxy, allowing you to record HTTP traffic between your app and an API very easily. In fact, setting up a wiretap seems to be easier than setting up Runscope. Unfortunately, still is in beta, but Kris has set up a video to give you a goood understanding of how it works. Wiretap and Runscope look strikingly similar, but I have the impression Wiretap has been around for longer&#8230;</p>
+<p><a href="http://httpkit.com/wiretap">Wiretap</a> by <a href="https://twitter.com/KrisJordan">Kris Jordan</a> looks very promising as well. It acts as a reverse proxy, allowing you to record HTTP traffic between your app and an API very easily. In fact, setting up a wiretap seems to be easier than setting up Runscope. Unfortunately, still is in beta, but Kris has set up a video to give you a goood understanding of how it works. Wiretap and Runscope look strikingly similar, but I have the impression Wiretap has been around for longer&hellip;</p>
 
 <h3><a href="http://24pullrequests.com">24 Pull Requests Until Christmas</a></h3>
 
-<p>Christmas is upon us - and this is your chance to give back some love to some of the many open source projects out there you might be using in your own work. The idea is to submit one pull request each day for any project on Github. A number of projects are already listed on the <a href="http://24pullrequests.com/projects">projects</a> page, which allows you to filter projects by programming language to find a few that you might be interested in. Your favourite project isn&#8217;t listed? No problem at all - just <a href="http://24pullrequests.com/projects/new">submit a suggestion</a> and fork away!</p>
+<p>Christmas is upon us &ndash; and this is your chance to give back some love to some of the many open source projects out there you might be using in your own work. The idea is to submit one pull request each day for any project on Github. A number of projects are already listed on the <a href="http://24pullrequests.com/projects">projects</a> page, which allows you to filter projects by programming language to find a few that you might be interested in. Your favourite project isn&rsquo;t listed? No problem at all &ndash; just <a href="http://24pullrequests.com/projects/new">submit a suggestion</a> and fork away!</p>
 
-<p>I found it very interesting to see <a href="http://www.eclipse.org/xtend/">Xtend</a> is officially listed as a programming language on Github - great job, <a href="https://twitter.com/xtendlang">guys</a>!</p>
+<p>I found it very interesting to see <a href="http://www.eclipse.org/xtend/">Xtend</a> is officially listed as a programming language on Github &ndash; great job, <a href="https://twitter.com/xtendlang">guys</a>!</p>
 
 <h3><a href="http://nodeapp.org">Node.js in your iOS App</a></h3>
 
 <p>If you wanted to use JavaScript in your iOS apps prior to iOS 7, you basically had two options: use an embedded <code>UIWebView</code> and invoke <code>-stringByEvaluatingJavaScriptFromString:</code>, or recompile <a href="https://github.com/phoboslab/JavaScriptCore-iOS">JavaScriptCore for iOS</a>.</p>
 
-<p>Starting with iOS 7, Apple <a href="https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html">opened access to JavaScriptCore</a> (I really like <em>&#8220;For information about the classes of this framework, see the framework header files.&#8221;</em>), basically enabling iOS developers to use JavaScript to script their applications.</p>
+<p>Starting with iOS 7, Apple <a href="https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html">opened access to JavaScriptCore</a> (I really like <em>&ldquo;For information about the classes of this framework, see the framework header files.&rdquo;</em>), basically enabling iOS developers to use JavaScript to script their applications.</p>
 
 <p>The NodeApp interpreter goes one step further and allows developers to re-use existing Node modules. Even if you might not be interested in using any of the <a href="https://npmjs.org">50.000+ module listed on npm.org</a>, this is good news as it allows you to re-use the Node module system, thereby enabling you to structure your JavaScript apps in a more concise way.</p>
 
 <p>Check out the <a href="https://github.com/node-app/Interpreter">NodeApp interpreter app</a> and impress your coworkers with a real JavaScript interpreter running on your iPhone!</p>
 
-<h3><a href="http://g.co/racer">Racer - A multiplayer game for your mobile browser</a></h3>
+<h3><a href="http://g.co/racer">Racer &ndash; A multiplayer game for your mobile browser</a></h3>
 
 <p>Racer is a Chrome Experiment that shows off various web technologies, like <a href="http://www.html5rocks.com/en/tutorials/websockets/basics/">WebSockets</a>, the <a href="http://www.html5rocks.com/en/tutorials/webaudio/intro/">Web Audio API</a>, CSS Animations and <a href="http://css-tricks.com/css-sprites/">CSS Sprites</a>.</p>
 
 <p>Watch the <a href="http://www.youtube.com/watch?v=17P67Uz0kcw">making of</a>, read the back story of how it was made on <a href="http://master.html5rocks-hrd.appspot.com/en/tutorials/casestudies/racer/">HTML 5 rocks</a>. Then, go find some friends with mobile devices and <a href="http://g.co/racer">play Racer online</a>. The <a href="http://www.youtube.com/watch?v=YT0k99hCY5I">soundtrack</a> has been composed by <a href="https://myspace.com/giorgiomoroderpage">Giorgio Moroder</a>, who composed a number of well-known songs for events like Olympia 1984 and 1988 or the 1990 Football World Cup. Some of his songs were used in racing games before, but the soundtrack for Racer is the first one to be composed specifically for the purpose of being used in a racing game.</p>
 
-<p>I hope you enjoyed this week&#8217;s links - let me know if you would like me to continue compiling them by sending me a mail or - better yet - using the tweet button below to let your friends know about this post!</p>
+<p>I hope you enjoyed this week&rsquo;s links &ndash; let me know if you would like me to continue compiling them by sending me a mail or &ndash; better yet &ndash; using the tweet button below to let your friends know about this post!</p>
 
 <p>Thanks for reading!</p>
 ]]></content>
@@ -92,20 +92,20 @@
     <link href="http://www.peterfriese.de/unit-testing-android-apps-with-robolectric-and-eclipse/"/>
     <updated>2013-11-27T09:54:00+00:00</updated>
     <id>http://www.peterfriese.de/unit-testing-android-apps-with-robolectric-and-eclipse</id>
-    <content type="html"><![CDATA[<p>A few weeks ago, I showed you how to set up Robolectric with Android Studio and Gradle. For the Eclipse DemoCamp in Hamburg, I have been asked to prepare a session on how to use Robolectric with Eclipse. I thought it might be worthwhile to share my experiences with everybody who wasn&#8217;t fortunate enough to attend the DemoCamp (in a truely stunning location, BTW), so here goes.</p>
+    <content type="html"><![CDATA[<p>A few weeks ago, I showed you how to set up Robolectric with Android Studio and Gradle. For the Eclipse DemoCamp in Hamburg, I have been asked to prepare a session on how to use Robolectric with Eclipse. I thought it might be worthwhile to share my experiences with everybody who wasn&rsquo;t fortunate enough to attend the DemoCamp (in a truely stunning location, BTW), so here goes.</p>
 
 <!-- more -->
 
 
 <p>We all know testing is essential to verify the behaviour of the software you write. In the Android world with its huge variety of devices and OS versions, this is even more so. Unfortunately, the performance of the Android development environment, most notably the Android Emulator, leaves much to be desired which sometimes leads to neglicence of test discipline. Robolectric is a test framework that tries to alleviate this situation.</p>
 
-<p>Robolectric achieves this by sitting between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM. This effectively means you can run your tests on your desktop - no waiting for your code to be deployed to the Emulator or a physical device!</p>
+<p>Robolectric achieves this by sitting between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM. This effectively means you can run your tests on your desktop &ndash; no waiting for your code to be deployed to the Emulator or a physical device!</p>
 
 <p>For more detailed background information about the inner workings of Roboloectric, check out <a href="http://www.slideshare.net/tylerschultz/robolectric-android-unit-testing-framework">this presentation</a> and this <a href="http://www.youtube.com/watch?v=T6FWL877txw">talk by Tyler Schultz</a>, one of the committers of Robolectric.</p>
 
 <h2>Creating a New Project</h2>
 
-<p>As the blog title implies, this time around, we&#8217;ll use Eclipse to create our project under test. Make sure you&#8217;re using the most recent version of the Eclipse ADT, which is part of the Android SDK. If you don&#8217;t have it already, Google provides a nice all-in-one download of the SDK <a href="http://developer.android.com/sdk/index.html">here</a>.</p>
+<p>As the blog title implies, this time around, we&rsquo;ll use Eclipse to create our project under test. Make sure you&rsquo;re using the most recent version of the Eclipse ADT, which is part of the Android SDK. If you don&rsquo;t have it already, Google provides a nice all-in-one download of the SDK <a href="http://developer.android.com/sdk/index.html">here</a>.</p>
 
 <p>Create a new project, using the following settings:</p>
 
@@ -137,7 +137,7 @@
 </ul>
 
 
-<p>To make things a bit more interesting, let&#8217;s change the UI so we&#8217;ve got a <code>TextView</code>, an <code>InputView</code> and a <code>Button</code> on, just like this:</p>
+<p>To make things a bit more interesting, let&rsquo;s change the UI so we&rsquo;ve got a <code>TextView</code>, an <code>InputView</code> and a <code>Button</code> on, just like this:</p>
 
 <figure class='code'><figcaption><span>res/layout/fragment_main.xml</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -249,11 +249,11 @@
 
 <h3>Adding Robolectric and its Dependencies</h3>
 
-<p>By now, you might be wondering why we don&#8217;t use Maven to set up our dependencies. To cut a long story short: setting up an Android project in Eclipse is a lot easier without using Maven. The downside of this approach, however, is that we have to manage project dependencies ourselves.</p>
+<p>By now, you might be wondering why we don&rsquo;t use Maven to set up our dependencies. To cut a long story short: setting up an Android project in Eclipse is a lot easier without using Maven. The downside of this approach, however, is that we have to manage project dependencies ourselves.</p>
 
 <p>Head over to <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.robolectric%22">Maven Central</a> to fetch the <a href="http://search.maven.org/remotecontent?filepath=org/robolectric/robolectric/2.2/robolectric-2.2-jar-with-dependencies.jar">latest version of Robolectric including dependencies</a> (at the time of this writing, Robolectric 2.2 was the most up-to-date version).</p>
 
-<p>In <code>RobolectricDemoProjectEclipseTests</code>, create a new folder <code>libs</code> and add the downloaded jar file by dragging it to the folder. After that, right-click the added file in Eclipse and choose <em>Build Path -> Add to Build Path</em> to add it to the build path.</p>
+<p>In <code>RobolectricDemoProjectEclipseTests</code>, create a new folder <code>libs</code> and add the downloaded jar file by dragging it to the folder. After that, right-click the added file in Eclipse and choose <em>Build Path &ndash;> Add to Build Path</em> to add it to the build path.</p>
 
 <p>Later, we will use <a href="http://square.github.io/fest-android/">FEST Android</a> to write our test assertations in a fluent way, so we need the required jar files and add the to the project as well.</p>
 
@@ -263,7 +263,7 @@
 </ul>
 
 
-<p>As JUnit is the base for all our unit tests, we need to add it to our classpath, too. Open the project&#8217;s properties, navigate to <em>Java Build Path -> Libraries</em> and click on <em>Add Library&#8230;</em>. In the next dialog, choose <em>JUnit</em> and press <em>Next</em>. Finaly, choose <em>JUnit 4</em> (Robolectric relies on JUnit 4) and press <em>Finish</em>.</p>
+<p>As JUnit is the base for all our unit tests, we need to add it to our classpath, too. Open the project&rsquo;s properties, navigate to <em>Java Build Path &ndash;> Libraries</em> and click on <em>Add Library&hellip;</em>. In the next dialog, choose <em>JUnit</em> and press <em>Next</em>. Finaly, choose <em>JUnit 4</em> (Robolectric relies on JUnit 4) and press <em>Finish</em>.</p>
 
 <ul class="gallery">
 <li><a href="http://www.peterfriese.de/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_1.png" class="fancybox" rel="gallery-fa20517b9274bddec4711e1f6d01fd87" title="Adding JUnit 4 - Step 1"><img src="http://www.peterfriese.de/thumbs/add_junit_1_200x150.png" alt="Adding JUnit 4 - Step 1" /></a></li>
@@ -272,7 +272,7 @@
 </ul>
 
 
-<p>Finally, we need to add the Android library itself as a dependency to our test project. To do this, open then project properties dialog (Right-click the test project, select <em>Properties</em>) and navigate to <em>Java Build Path</em>. In the dialog, click on <em>Add External JARs&#8230;</em> and navigate to <code>&lt;Android SDK&gt;/platforms/android-19/android.jar</code> to add the latest Android jar to the projects build path.</p>
+<p>Finally, we need to add the Android library itself as a dependency to our test project. To do this, open then project properties dialog (Right-click the test project, select <em>Properties</em>) and navigate to <em>Java Build Path</em>. In the dialog, click on <em>Add External JARs&hellip;</em> and navigate to <code>&lt;Android SDK&gt;/platforms/android-19/android.jar</code> to add the latest Android jar to the projects build path.</p>
 
 <ul class="gallery">
 <li><a href="http://www.peterfriese.de/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_android.png" class="fancybox" rel="gallery-60ff47917794e39212af739e4db0b6e3" title="Adding the Android jar"><img src="http://www.peterfriese.de/thumbs/add_android_200x150.png" alt="Adding the Android jar" /></a></li>
@@ -281,7 +281,7 @@
 
 <h3>Helping Robolectric to Find Your Manifest</h3>
 
-<p>Because of the way Robolectric looks for your <code>AndroidManifest.xml</code> during test startup, it won&#8217;t find the manifest if your tests and the manifest are located in different projects.</p>
+<p>Because of the way Robolectric looks for your <code>AndroidManifest.xml</code> during test startup, it won&rsquo;t find the manifest if your tests and the manifest are located in different projects.</p>
 
 <p>Robolectric supports configuring individual tests using the <code>@Config</code> annotation, allowing you to use a different manifest file depending on the test you run. This can be quite handy, but it is a good idea to have a default configuration. Starting with version 2.0, Robolectric supports a global configuration using a config file.</p>
 
@@ -296,7 +296,7 @@
 
 <h2>Writing Your First Robolectric Test</h2>
 
-<p>Let&#8217;s write our first test! Add the following class to <code>src/test/java</code>:</p>
+<p>Let&rsquo;s write our first test! Add the following class to <code>src/test/java</code>:</p>
 
 <figure class='code'><figcaption><span>MainActivityTest.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -339,24 +339,24 @@
 
 <p>Please note that we added a simple test method, making sure it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it <em>does not</em> fail, we know that something is wrong.</p>
 
-<p>So, let&#8217;s run the test! Right-click on the test file and choose <em>Run As -> JUnit Test</em>. As a result, you should see the test bar turn red in the JUnit view.</p>
+<p>So, let&rsquo;s run the test! Right-click on the test file and choose <em>Run As &ndash;> JUnit Test</em>. As a result, you should see the test bar turn red in the JUnit view.</p>
 
-<p>The test failed - just as expected. You can turn it into a passing test by changing the assert statement to <code>assertTrue(true);</code></p>
+<p>The test failed &ndash; just as expected. You can turn it into a passing test by changing the assert statement to <code>assertTrue(true);</code></p>
 
 <h2>Enhancing the Test</h2>
 
-<p>Now that we&#8217;ve got everything in place, let&#8217;s develop a small feature in a test-driven way. You already noted how we enhanced the UI of the application at the beginning, but apart from looking nice, there&#8217;s not much functionality.</p>
+<p>Now that we&rsquo;ve got everything in place, let&rsquo;s develop a small feature in a test-driven way. You already noted how we enhanced the UI of the application at the beginning, but apart from looking nice, there&rsquo;s not much functionality.</p>
 
-<p>Let&#8217;s enhance the app so the user can enter their name, press a button and be greeted by the application.</p>
+<p>Let&rsquo;s enhance the app so the user can enter their name, press a button and be greeted by the application.</p>
 
-<p>Make sure to statically import the Android FEST assertations - they&#8217;ll help us to write our tests in a fluent manner:</p>
+<p>Make sure to statically import the Android FEST assertations &ndash; they&rsquo;ll help us to write our tests in a fluent manner:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">fest</span><span class="o">.</span><span class="na">assertions</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">ANDROID</span><span class="o">.</span><span class="na">assertThat</span><span class="o">;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>As we need to have access to the app&#8217;s main activity in all of our tests, let&#8217;s add a private field for it and create a setup method that will create a fresh activity before each test is run:</p>
+<p>As we need to have access to the app&rsquo;s main activity in all of our tests, let&rsquo;s add a private field for it and create a setup method that will create a fresh activity before each test is run:</p>
 
 <figure class='code'><figcaption><span>MainActivity.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -404,7 +404,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Next, let&#8217;s write a test that places a text inside the edit field, presses the button and compares the result in the text view with the expected result.</p>
+<p>Next, let&rsquo;s write a test that places a text inside the edit field, presses the button and compares the result in the text view with the expected result.</p>
 
 <p>Here is the test method:</p>
 
@@ -433,7 +433,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>When you run the test, it will obviously fail, so let&#8217;s fix this.</p>
+<p>When you run the test, it will obviously fail, so let&rsquo;s fix this.</p>
 
 <p>Open <code>MainActivity.java</code> and insert the following private class:</p>
 
@@ -478,13 +478,13 @@
 
 <p>As you can see, this code will register an <code>OnClickListener</code> for the button and set the text of the text view according to the value of the edit field.</p>
 
-<p>The test should now pass - just run the unit test again and you should see a green bar.</p>
+<p>The test should now pass &ndash; just run the unit test again and you should see a green bar.</p>
 
 <h2>Conclusion</h2>
 
-<p>Setting up an Android project for using Robolectric in Eclipse is quite a bit of work, as you just have seen, but it&#8217;s reasonably easy with the information I have given you above. Adding Robolectric to a new Android project is just a matter of minutes with these instructions and helps you save a lot of time you&#8217;d have had to spend otherwise running the tests on the emulator or on physical devices.</p>
+<p>Setting up an Android project for using Robolectric in Eclipse is quite a bit of work, as you just have seen, but it&rsquo;s reasonably easy with the information I have given you above. Adding Robolectric to a new Android project is just a matter of minutes with these instructions and helps you save a lot of time you&rsquo;d have had to spend otherwise running the tests on the emulator or on physical devices.</p>
 
-<p>You might be interested in checking out my recent post on integrating Robolectric in a Gradle-based Android project in Android Studio - <a href="http://www.peterfriese.de/android-testing-with-robolectric/">this way, please</a>.</p>
+<p>You might be interested in checking out my recent post on integrating Robolectric in a Gradle-based Android project in Android Studio &ndash; <a href="http://www.peterfriese.de/android-testing-with-robolectric/">this way, please</a>.</p>
 
 <h2>Slides and Source Code</h2>
 
@@ -495,7 +495,7 @@
 
 <p></p>
 
-<p>The source code for this blog post can be found on <a href="https://github.com/peterfriese/RobolectricDemoProjectEclipse">Github</a> - clone and enjoy!</p>
+<p>The source code for this blog post can be found on <a href="https://github.com/peterfriese/RobolectricDemoProjectEclipse">Github</a> &ndash; clone and enjoy!</p>
 ]]></content>
   </entry>
   
@@ -504,18 +504,18 @@
     <link href="http://www.peterfriese.de/debugging-tips-for-ios-developers/"/>
     <updated>2013-11-21T12:00:00+00:00</updated>
     <id>http://www.peterfriese.de/debugging-tips-for-ios-developers</id>
-    <content type="html"><![CDATA[<p>Let&#8217;s face it - no matter how hard you try, no matter how many testers you use in manual tests, no matter how disciplined you are in writing unit tests and following the TDD drill of writing a failing test first and then adding the production code that turns the test green - bugs are inevitably linked to our lives. In this post, I&#8217;ll show you a number of debugging techniques that might come in handy for your next project. Hopefully, you know some of them already, but I am sure some of them will be new for you.</p>
+    <content type="html"><![CDATA[<p>Let&rsquo;s face it &ndash; no matter how hard you try, no matter how many testers you use in manual tests, no matter how disciplined you are in writing unit tests and following the TDD drill of writing a failing test first and then adding the production code that turns the test green &ndash; bugs are inevitably linked to our lives. In this post, I&rsquo;ll show you a number of debugging techniques that might come in handy for your next project. Hopefully, you know some of them already, but I am sure some of them will be new for you.</p>
 
 <!-- more -->
 
 
-<p>Sometimes, you are responsible for a bug, sometimes bugs are in a third party library you use in your project. And sometimes, the documentation of an API doesn&#8217;t match the implementation, giving you funny results for code that slavishly adheres to the official documentation.</p>
+<p>Sometimes, you are responsible for a bug, sometimes bugs are in a third party library you use in your project. And sometimes, the documentation of an API doesn&rsquo;t match the implementation, giving you funny results for code that slavishly adheres to the official documentation.</p>
 
-<p>With the following techniques, you&#8217;ll be able to go hunting for bugs and find out where they came from. Once you&#8217;ve found out (and fixed the bug), you should consider writing a unit test to prevent future regressions. So, here we go.</p>
+<p>With the following techniques, you&rsquo;ll be able to go hunting for bugs and find out where they came from. Once you&rsquo;ve found out (and fixed the bug), you should consider writing a unit test to prevent future regressions. So, here we go.</p>
 
 <h2>Breakpoints</h2>
 
-<p>Most developers are familiar with the concept of breakpoints, but if you&#8217;re new to Xcode you might wonder how to create or modify a breakpoint, so I&#8217;ll give a brief overview.</p>
+<p>Most developers are familiar with the concept of breakpoints, but if you&rsquo;re new to Xcode you might wonder how to create or modify a breakpoint, so I&rsquo;ll give a brief overview.</p>
 
 <p><a href="http://www.peterfriese.de/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint.png" class="fancybox" title="Simple Breakpoint"><img class="right" src="http://www.peterfriese.de/thumbs/breakpoint_300x150.png" alt="Simple Breakpoint" /></a></p>
 
@@ -527,14 +527,14 @@
 
 <ol>
 <li><p>To temporarily disable the breakpoint, just click on the breakpoint indicator, which will then turn light blue to indicate it is disabled.</p></li>
-<li><p>To remove a breakpoint, drag it off the editor gutter, making sure to crank up the volume to enjoy the swooshing sound ;-)</p></li>
+<li><p>To remove a breakpoint, drag it off the editor gutter, making sure to crank up the volume to enjoy the swooshing sound ;&ndash;)</p></li>
 <li><p>Breakpoints have properties that you can edit by right-clicking on a breakpoint indicator. Selecting the <em>Edit Breakpoint</em> menu will display a tool window which allows you to customize various aspects of a breakpoint, effectively turning a breakpoint into a conditional breakpoint:</p></li>
 </ol>
 
 
 <h3>Conditional Breakpoints</h3>
 
-<p>The various properties of a conditional breakpoint allow you to specify exactly under which circumstances execution should stop at the breakpoint. What&#8217;s more, you can specify certain actions that should take place when the breakpoint criteria are met.</p>
+<p>The various properties of a conditional breakpoint allow you to specify exactly under which circumstances execution should stop at the breakpoint. What&rsquo;s more, you can specify certain actions that should take place when the breakpoint criteria are met.</p>
 
 <p><a href="http://www.peterfriese.de/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint_condition.png" class="fancybox" title="Conditional Breakpoint"><img class="right" src="http://www.peterfriese.de/thumbs/breakpoint_condition_300x150.png" alt="Conditional Breakpoint" /></a></p>
 
@@ -561,23 +561,23 @@
 
 <p><a href="http://www.peterfriese.de/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint_speak.png" class="fancybox" title="Breakpoint with Action"><img class="right" src="http://www.peterfriese.de/thumbs/breakpoint_speak_300x150.png" alt="Breakpoint with Action" /></a></p>
 
-<p>Just consider for example an app that waits for the arrival of a background signal while the user does something in the app. Now, if you place a breakpoint on the line that receives the background signal and configure the breakpoint to play a signal or speak a message, you can go on and exercise the app in the foreground while waiting for the background message to arrive. As soon as the message arrives, you&#8217;ll hear the sound play and can take appropriate actions.</p>
+<p>Just consider for example an app that waits for the arrival of a background signal while the user does something in the app. Now, if you place a breakpoint on the line that receives the background signal and configure the breakpoint to play a signal or speak a message, you can go on and exercise the app in the foreground while waiting for the background message to arrive. As soon as the message arrives, you&rsquo;ll hear the sound play and can take appropriate actions.</p>
 
 <h3>Exception Breakpoints</h3>
 
-<p>Exception Breakpoints are a very powerful tool - basically they allow you to spot places in your code where an exception is thrown (and not caught). So instead of just marvelling at a crash in <code>main.m</code>, add an Exception breakpoint to your project (by clicking the tiny <code>+</code> icon on the bottom of the breakpoints view).</p>
+<p>Exception Breakpoints are a very powerful tool &ndash; basically they allow you to spot places in your code where an exception is thrown (and not caught). So instead of just marvelling at a crash in <code>main.m</code>, add an Exception breakpoint to your project (by clicking the tiny <code>+</code> icon on the bottom of the breakpoints view).</p>
 
 <h3>Symbolic breakpoints</h3>
 
-<p>Symbolic breakpoints are useful when you want to stop in a piece of code that you don&#8217;t have source code for. Let&#8217;s say you&#8217;re interested in who (and when) calls <code>tableView:numberOfRowsInSection</code>. Just create a new symbolic breakpoint, using the symbol <code>tableView:numberOfRowsInSection</code>. The debugger will now break whenever any piece of code in your app sends this very message - no matter if it&#8217;s your code or code from a third party.</p>
+<p>Symbolic breakpoints are useful when you want to stop in a piece of code that you don&rsquo;t have source code for. Let&rsquo;s say you&rsquo;re interested in who (and when) calls <code>tableView:numberOfRowsInSection</code>. Just create a new symbolic breakpoint, using the symbol <code>tableView:numberOfRowsInSection</code>. The debugger will now break whenever any piece of code in your app sends this very message &ndash; no matter if it&rsquo;s your code or code from a third party.</p>
 
 <h2>The Debugger Console</h2>
 
-<p>As soon as your application has hit a breakpoint, you can start inspecting its current state. Most likely, you&#8217;ll use the <em>Debug area</em> at the bottom of the Xcode window to do so.</p>
+<p>As soon as your application has hit a breakpoint, you can start inspecting its current state. Most likely, you&rsquo;ll use the <em>Debug area</em> at the bottom of the Xcode window to do so.</p>
 
 <p><a href="http://www.peterfriese.de/images/2013-11-20-debugging-tips-for-ios-developers/debugarea.png" class="fancybox" title="Xcode Debugger"><img class="center" src="http://www.peterfriese.de/thumbs/debugarea_600x400.png" alt="Xcode Debugger" /></a></p>
 
-<p>However, sometimes it can be tedious to click-navigate through a deep hierarchy of nested properties. This is when the debugger console comes in handy. It is located on the right hand side of the debug area. Just click inside the white space and type a command. When debuging Objective-C code for iOS, you&#8217;re most likely using <a href="http://lldb.llvm.org/">lldb</a>. Former versions of Xcode used <a href="https://www.gnu.org/software/gdb/">gbd</a> as their default debugger. A comparison of lldb and gdb, including a list of commands they support can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html">here</a>. A more in-depth documentation of lldb can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-terminal-workflow-tutorial.html">here</a>. Don&#8217;t worry - you do not have to wade through all of this documentation, I&#8217;ll give you a run down of the most important commands here:</p>
+<p>However, sometimes it can be tedious to click-navigate through a deep hierarchy of nested properties. This is when the debugger console comes in handy. It is located on the right hand side of the debug area. Just click inside the white space and type a command. When debuging Objective-C code for iOS, you&rsquo;re most likely using <a href="http://lldb.llvm.org/">lldb</a>. Former versions of Xcode used <a href="https://www.gnu.org/software/gdb/">gbd</a> as their default debugger. A comparison of lldb and gdb, including a list of commands they support can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html">here</a>. A more in-depth documentation of lldb can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-terminal-workflow-tutorial.html">here</a>. Don&rsquo;t worry &ndash; you do not have to wade through all of this documentation, I&rsquo;ll give you a run down of the most important commands here:</p>
 
 <h3>Printing Objects</h3>
 
@@ -595,7 +595,7 @@ Eat an apple
 
 <h3>Printing Primitives</h3>
 
-<p>Say you want to print the contents of a variable which isn&#8217;t an object, for example the length of the string in the previous example. Using the <code>p</code> (<strong>p</strong>rint) command you can print the value of primitives such as integers or constants:</p>
+<p>Say you want to print the contents of a variable which isn&rsquo;t an object, for example the length of the string in the previous example. Using the <code>p</code> (<strong>p</strong>rint) command you can print the value of primitives such as integers or constants:</p>
 
 <pre><code>(lldb) p i
 17
@@ -648,18 +648,18 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <h2>Alternatives</h2>
 
-<p>If you&#8217;re not happy with the level of tool support Xcode provides you with, I recommend taking a look at <a href="http://www.jetbrains.com/objc/">AppCode</a> - its debugger is a lot more powerful. However, it currently lacks support for sound breakpoints ;-)</p>
+<p>If you&rsquo;re not happy with the level of tool support Xcode provides you with, I recommend taking a look at <a href="http://www.jetbrains.com/objc/">AppCode</a> &ndash; its debugger is a lot more powerful. However, it currently lacks support for sound breakpoints ;&ndash;)</p>
 
 <h2>More Info</h2>
 
-<p>If you&#8217;re interested in learning more about debugging iOS apps in general and some tools that might come in handy, check out this presentation:</p>
+<p>If you&rsquo;re interested in learning more about debugging iOS apps in general and some tools that might come in handy, check out this presentation:</p>
 
 <iframe src="http://www.slideshare.net/slideshow/embed_code/17145826 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe>
 
 
 <p></p>
 
-<p>Also, Heiko Behrens and I had a chat about debugging iOS apps - it is available as an episode of the excellent (ok, I am biased) podcast <a href="http://www.UISprech.de">UISprech</a> (in German only, sorry) here: <a href="http://UISprech.de/7">UISprech #7: Debugging Tools mit Peter Friese</a>.</p>
+<p>Also, Heiko Behrens and I had a chat about debugging iOS apps &ndash; it is available as an episode of the excellent (ok, I am biased) podcast <a href="http://www.UISprech.de">UISprech</a> (in German only, sorry) here: <a href="http://UISprech.de/7">UISprech #7: Debugging Tools mit Peter Friese</a>.</p>
 ]]></content>
   </entry>
   
@@ -673,13 +673,13 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 <!-- more -->
 
 
-<p>Robolectric achieves this by sitting between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM. This effectively means you can run your tests on your desktop - no waiting for your code to be deployed to the Emulator or a physical device!</p>
+<p>Robolectric achieves this by sitting between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM. This effectively means you can run your tests on your desktop &ndash; no waiting for your code to be deployed to the Emulator or a physical device!</p>
 
 <p>For more detailed background information about the inner workings of Roboloectric, check out <a href="http://www.slideshare.net/tylerschultz/robolectric-android-unit-testing-framework">this presentation</a> and this <a href="http://www.youtube.com/watch?v=T6FWL877txw">talk by Tyler Schultz</a>, one of the committers of Robolectric.</p>
 
 <h2>Creating a New Project</h2>
 
-<p>To better understand how Robolectric works, let&#8217;s create a very simple project we&#8217;ll use as our object under test. We&#8217;ll use Android Studio (at the time of writing, version 0.3.0 was the latest version).</p>
+<p>To better understand how Robolectric works, let&rsquo;s create a very simple project we&rsquo;ll use as our object under test. We&rsquo;ll use Android Studio (at the time of writing, version 0.3.0 was the latest version).</p>
 
 <p>Create a new project using the settings you can see in the following screenshots. Choose <strong>Blank Activity</strong> and <strong>Navigation Type None</strong>.</p>
 
@@ -690,7 +690,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 </ul>
 
 
-<p>To make things a bit more interesting, let&#8217;s change the UI so we&#8217;ve got a <code>TextView</code>, an <code>InputView</code> and a <code>Button</code> on, just like this:</p>
+<p>To make things a bit more interesting, let&rsquo;s change the UI so we&rsquo;ve got a <code>TextView</code>, an <code>InputView</code> and a <code>Button</code> on, just like this:</p>
 
 <figure class='code'><figcaption><span>res/layout/fragment_main.xml</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -788,11 +788,11 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <p>When you create a new project in Android Studio, it is not yet configured for testing. If you used to develop Android apps in Eclipse, you probably are used to creating a new project for your tests. The good news is, with the new Android build system based on Gradle, you can now place your tests in the same project as your production code (refer to the <a href="http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Testing">build system documentation</a> for more details).</p>
 
-<p>However, Android Studio (and the Gradle Plug-in) currently expect you to place tests in <code>src/instrumentTest</code>. As we won&#8217;t be writing instrument tests, we&#8217;d rather like to place our tests in <code>src/test</code>. In order for this to work, we need to tell Gradle and Android Studio we&#8217;re deviating from the default project structure:</p>
+<p>However, Android Studio (and the Gradle Plug-in) currently expect you to place tests in <code>src/instrumentTest</code>. As we won&rsquo;t be writing instrument tests, we&rsquo;d rather like to place our tests in <code>src/test</code>. In order for this to work, we need to tell Gradle and Android Studio we&rsquo;re deviating from the default project structure:</p>
 
 <ol>
 <li>Create a new folder <code>src/test/java</code> to contain your tests.</li>
-<li>Edit <code>build.gradle</code> in your project folder and add the following source set configuration to the Android plug-in configuration:</li>
+<li>Edit <code>build.gradle</code> in your project folder and add the following source set configuration to the Android plug-in configuration, right beneath the <code>defaultConfig</code> configuration:</li>
 </ol>
 
 
@@ -810,7 +810,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 </ol>
 
 
-<p>You should notice how the icon for your test files folder turns from orange to green:</p>
+<p>You will notice how the icon for your test files folder turns from orange to green:</p>
 
 <p><a href="http://www.peterfriese.de/images/2013-10-23-android-testing-with-robolectric/robolectric_test_folder.png" class="fancybox" title="Test Folder Setup"><img class="center" src="http://www.peterfriese.de/thumbs/robolectric_test_folder_200x150.png" alt="Test Folder Setup" /></a></p>
 
@@ -967,7 +967,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <h3>Adding a Customized Test Runner</h3>
 
-<p>Because of the way Robolectric looks for your <code>AndroidManifest.xml</code> during test startup, it won&#8217;t find the manifest if your tests are located in <code>src/test/java</code>. To alleviate this situation, we need to add a custom test runner.</p>
+<p>Because of the way Robolectric looks for your <code>AndroidManifest.xml</code> during test startup, it won&rsquo;t find the manifest if your tests are located in <code>src/test/java</code>. To alleviate this situation, we need to add a custom test runner.</p>
 
 <p>Add the following file to your project, making sure to place it somewhere in the <code>test</code> tree:</p>
 
@@ -1040,7 +1040,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <h2>Writing Your First Robolectric Test</h2>
 
-<p>Let&#8217;s write our first test! Add the following class to <code>src/test/java</code>:</p>
+<p>Let&rsquo;s write our first test! Add the following class to <code>src/test/java</code>:</p>
 
 <figure class='code'><figcaption><span>MainActivityTest.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1085,7 +1085,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <p>Secondly, we added a simple test method, making suer it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it <em>does not</em> fail, we know that something is wrong.</p>
 
-<p>So, let&#8217;s run the test!</p>
+<p>So, let&rsquo;s run the test!</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1126,22 +1126,22 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>So, the test failed - just as we expected. You can open the test report (<code>../RobolectricDemoProject/RobolectricDemo/build/test-report/debug/index.html</code>) in your browser to get more detailed information about the test run.</p>
+<p>So, the test failed &ndash; just as we expected. You can open the test report (<code>../RobolectricDemoProject/RobolectricDemo/build/test-report/debug/index.html</code>) in your browser to get more detailed information about the test run.</p>
 
 <h2>Enhancing the Test</h2>
 
-<p>Now that we&#8217;ve got everything in place, let&#8217;s develop a small feature in a test-driven way. You already noted how we enhanced the UI of the application at the beginning, but apart from looking nice, there&#8217;s not much functionality.</p>
+<p>Now that we&rsquo;ve got everything in place, let&rsquo;s develop a small feature in a test-driven way. You already noted how we enhanced the UI of the application at the beginning, but apart from looking nice, there&rsquo;s not much functionality.</p>
 
-<p>Let&#8217;s enhance the app so the user can enter their name, press a button and be greeted by the application.</p>
+<p>Let&rsquo;s enhance the app so the user can enter their name, press a button and be greeted by the application.</p>
 
-<p>Make sure to statically import the Android FEST assertations - they&#8217;ll help us to write our tests in a fluent manner:</p>
+<p>Make sure to statically import the Android FEST assertations &ndash; they&rsquo;ll help us to write our tests in a fluent manner:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">fest</span><span class="o">.</span><span class="na">assertions</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">ANDROID</span><span class="o">.</span><span class="na">assertThat</span><span class="o">;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>As we need to have access to the app&#8217;s main activity in all of our tests, let&#8217;s add a private field for it and create a setup method that will create a fresh activity before each test is run:</p>
+<p>As we need to have access to the app&rsquo;s main activity in all of our tests, let&rsquo;s add a private field for it and create a setup method that will create a fresh activity before each test is run:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1189,7 +1189,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Next, let&#8217;s write a test that places a text inside the edit field, presses the button and compares the result in the text view with the expected result.</p>
+<p>Next, let&rsquo;s write a test that places a text inside the edit field, presses the button and compares the result in the text view with the expected result.</p>
 
 <p>Here is the test method:</p>
 
@@ -1218,7 +1218,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>When you run the test, it will obviously fail, so let&#8217;s fix this.</p>
+<p>When you run the test, it will obviously fail, so let&rsquo;s fix this.</p>
 
 <p>Open <code>MainActivity.java</code> and insert the following private class:</p>
 
@@ -1293,7 +1293,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <h2>Conclusion</h2>
 
-<p>Setting up Robolectric so that you can use both Gradle and Android Studio may not be as simple as it should be, but it&#8217;s reasonably easy with the information I have given you above. Adding Robolectric to a new Android project is just a matter of minutes with these instructions and helps you save a lot of time you&#8217;d have had to spend otherwise running the tests on the emulator or on physical devices.</p>
+<p>Setting up Robolectric so that you can use both Gradle and Android Studio may not be as simple as it should be, but it&rsquo;s reasonably easy with the information I have given you above. Adding Robolectric to a new Android project is just a matter of minutes with these instructions and helps you save a lot of time you&rsquo;d have had to spend otherwise running the tests on the emulator or on physical devices.</p>
 
 <p>The source code for this blog post is <a href="https://github.com/peterfriese/RobolectricDemoProject">available on Github</a>.</p>
 ]]></content>
@@ -1304,26 +1304,26 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
     <link href="http://www.peterfriese.de/annotated-links-issue-5/"/>
     <updated>2013-09-21T00:44:00+01:00</updated>
     <id>http://www.peterfriese.de/annotated-links-issue-5</id>
-    <content type="html"><![CDATA[<p>This week, we&#8217;ll take a look at rocket science, re-usable phones and some Android libraries. Without further ado, let&#8217;s get started!</p>
+    <content type="html"><![CDATA[<p>This week, we&rsquo;ll take a look at rocket science, re-usable phones and some Android libraries. Without further ado, let&rsquo;s get started!</p>
 
 <!-- more -->
 
 
 <h3><a href="https://github.com/nhaarman/ListViewAnimations">Android ListViewAnimations</a></h3>
 
-<p>The main goal of this library is to provide animations in listviews, but it also comes with a great implementation for a UI pattern that most users know from the GMail app: swipe to delete with undo. Rather clumsy name, but it does exactly what&#8217;s written on the label: the user can swipe a list view item to either side of the screen in order to delete it. But instead of deleting it right away, ListViewAnimations will display a cell with an undo button, allowing the user to change his mind. Integrating it in your apps is straightforward, <a href="https://github.com/nhaarman/ListViewAnimations/wiki/Swipe-To-Dismiss">check out the wiki</a> for further information.</p>
+<p>The main goal of this library is to provide animations in listviews, but it also comes with a great implementation for a UI pattern that most users know from the GMail app: swipe to delete with undo. Rather clumsy name, but it does exactly what&rsquo;s written on the label: the user can swipe a list view item to either side of the screen in order to delete it. But instead of deleting it right away, ListViewAnimations will display a cell with an undo button, allowing the user to change his mind. Integrating it in your apps is straightforward, <a href="https://github.com/nhaarman/ListViewAnimations/wiki/Swipe-To-Dismiss">check out the wiki</a> for further information.</p>
 
 <h3><a href="http://phoneblocks.com/">PhoneBlocks</a></h3>
 
-<p>The number of mobile phones per capita seems to keep growing and a surprising large number of countries <a href="http://en.wikipedia.org/wiki/List_of_countries_by_number_of_mobile_phones_in_use">in this list</a> have a ratio of more than 1:1. Many of these phones aren&#8217;t being used at all and lead a boring life in a dark corner in the back of a drawer of your desk. <em>Wouldn&#8217;t it be great if we could use our phones longer than just a few years</em>, thought <a href="https://twitter.com/davehakkens">Dave Hakkens</a> and jotted down his ideas for a reusable, upgradable phone. A great idea, although there are good reasons why <a href="http://whatculture.com/technology/5-reasons-why-phonebloks-probably-wont-work.php">it might not work out at all</a>.</p>
+<p>The number of mobile phones per capita seems to keep growing and a surprising large number of countries <a href="http://en.wikipedia.org/wiki/List_of_countries_by_number_of_mobile_phones_in_use">in this list</a> have a ratio of more than 1:1. Many of these phones aren&rsquo;t being used at all and lead a boring life in a dark corner in the back of a drawer of your desk. <em>Wouldn&rsquo;t it be great if we could use our phones longer than just a few years</em>, thought <a href="https://twitter.com/davehakkens">Dave Hakkens</a> and jotted down his ideas for a reusable, upgradable phone. A great idea, although there are good reasons why <a href="http://whatculture.com/technology/5-reasons-why-phonebloks-probably-wont-work.php">it might not work out at all</a>.</p>
 
 <h3><a href="http://blog.leapmotion.com/post/60390143676/elon-musk-designs-rockets-in-the-air-with-leap-motion">Designing Rocket Engines with the LEAP Motion</a></h3>
 
 <p>Just recently, my colleague <a href="https://twitter.com/sgrasmann">Stefan Grasmann</a> pointed me to a very interesting Hanselminutes episode in which <a href="http://hanselminutes.com/388/vision-based-computing-with-dr-neil-roodyn">Scott Hanselman and Dr. Neil Roodyn talk about vision-based input devices</a> such as Kinect and LEAP Motion. Scott pointed out he had been rather underwhelmed by the user experience of the LEAP, mostly because it requires you to perform rather precise motions instead of the more coarse-grained motions that Scott would like to use. In <a href="http://blog.leapmotion.com/post/60390143676/elon-musk-designs-rockets-in-the-air-with-leap-motion">this video</a>, Elon Musk demonstrates how to use the LEAP to design rocket part prototypes using hand gestures.</p>
 
-<p>Designing rocket engines might not be your cup of tea, but if you want to get your hands on one of those devices, you can either buy a <a href="http://www.amazon.de/gp/product/B00EUCI1GO?ie=UTF8&amp;camp=3206&amp;creative=21426&amp;creativeASIN=B00EUCI1GO&amp;linkCode=shr&amp;tag=petfrisblo-21&amp;qid=1379716777&amp;sr=8-1&amp;keywords=leap">regular LEAP at Amazon</a> or wait for the <a href="http://www8.hp.com/us/en/ads/new-products/envy-17-leap-motion.html?jumpid=reg_r1002_usen_c-001_title_r0002">HP Envy Leap</a> - a Laptop by HP with a <a href="http://venturebeat.com/2013/09/19/leap-motion-and-hp-unveil-worlds-first-laptop-with-kinect-like-3-d-gesture-control/">built-in LEAP controller</a></p>
+<p>Designing rocket engines might not be your cup of tea, but if you want to get your hands on one of those devices, you can either buy a <a href="http://www.amazon.de/gp/product/B00EUCI1GO?ie=UTF8&amp;camp=3206&amp;creative=21426&amp;creativeASIN=B00EUCI1GO&amp;linkCode=shr&amp;tag=petfrisblo-21&amp;qid=1379716777&amp;sr=8-1&amp;keywords=leap">regular LEAP at Amazon</a> or wait for the <a href="http://www8.hp.com/us/en/ads/new-products/envy-17-leap-motion.html?jumpid=reg_r1002_usen_c-001_title_r0002">HP Envy Leap</a> &ndash; a Laptop by HP with a <a href="http://venturebeat.com/2013/09/19/leap-motion-and-hp-unveil-worlds-first-laptop-with-kinect-like-3-d-gesture-control/">built-in LEAP controller</a></p>
 
-<p>That&#8217;s it for this week, folks. Enjoy the weekend and create some awesome stuff!</p>
+<p>That&rsquo;s it for this week, folks. Enjoy the weekend and create some awesome stuff!</p>
 ]]></content>
   </entry>
   
@@ -1332,35 +1332,35 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
     <link href="http://www.peterfriese.de/annotated-links-issue-4/"/>
     <updated>2013-09-13T08:11:00+01:00</updated>
     <id>http://www.peterfriese.de/annotated-links-issue-4</id>
-    <content type="html"><![CDATA[<p>This week, I&#8217;ve got some great tips for traveling and finding out what&#8217;s installed on your Mac. We&#8217;ll also look at mobile testing, Git workflows and - cocktails!</p>
+    <content type="html"><![CDATA[<p>This week, I&rsquo;ve got some great tips for traveling and finding out what&rsquo;s installed on your Mac. We&rsquo;ll also look at mobile testing, Git workflows and &ndash; cocktails!</p>
 
 <!-- more -->
 
 
 <h3><a href="http://wikitravel.org/">Wikitravel</a></h3>
 
-<p>Great source of information on everything travel-related. Whether you are considering <a href="http://wikitravel.org/en/First_and_business_class_travel">traveling in business class rather than economy</a>, need background information about <a href="http://wikitravel.org/en/Visa">visas</a> or the lowdown about cities such as <a href="http://wikitravel.org/en/London">London</a>, <a href="http://wikitravel.org/en/Berlin">Berlin</a>, <a href="http://wikitravel.org/en/Hamburg">Hamburg</a>, or <a href="http://wikitravel.org/en/New_York">New York</a>, WikiTravel has you covered. I found the information on the cities to be largely up-to-date and of great value (at least for the cities I know, it seems to very accurate), so it&#8217;s worth checking out before your next travel.</p>
+<p>Great source of information on everything travel-related. Whether you are considering <a href="http://wikitravel.org/en/First_and_business_class_travel">traveling in business class rather than economy</a>, need background information about <a href="http://wikitravel.org/en/Visa">visas</a> or the lowdown about cities such as <a href="http://wikitravel.org/en/London">London</a>, <a href="http://wikitravel.org/en/Berlin">Berlin</a>, <a href="http://wikitravel.org/en/Hamburg">Hamburg</a>, or <a href="http://wikitravel.org/en/New_York">New York</a>, WikiTravel has you covered. I found the information on the cities to be largely up-to-date and of great value (at least for the cities I know, it seems to very accurate), so it&rsquo;s worth checking out before your next travel.</p>
 
-<h3><a href="http://apple.stackexchange.com/questions/71232/how-do-i-find-what-packages-ive-installed-via-terminal">Help - How do I find out what I installed on my Mac?</a></h3>
+<h3><a href="http://apple.stackexchange.com/questions/71232/how-do-i-find-what-packages-ive-installed-via-terminal">Help &ndash; How do I find out what I installed on my Mac?</a></h3>
 
-<p>The Mac doesn&#8217;t have a central repository that keeps track of everything you install. If you install software via the Mac App Store, it will be listed in the Mac App Store App (what a word!), but at least if you are a developer (and if you are a regular reader of this blog I assume you are), you&#8217;ll install software via HomeBrew, the Mac installer and several other means. Now, how did you nstall that particular version of Gradle? Was it HomeBrew? Or did it come as an installer package? Or did you maybe just download and extract a zip file? This answer on Stack Exchange lists several ways to find it out.</p>
+<p>The Mac doesn&rsquo;t have a central repository that keeps track of everything you install. If you install software via the Mac App Store, it will be listed in the Mac App Store App (what a word!), but at least if you are a developer (and if you are a regular reader of this blog I assume you are), you&rsquo;ll install software via HomeBrew, the Mac installer and several other means. Now, how did you nstall that particular version of Gradle? Was it HomeBrew? Or did it come as an installer package? Or did you maybe just download and extract a zip file? This answer on Stack Exchange lists several ways to find it out.</p>
 
-<h3><a href="https://www.facebook.com/media/set/?set=a.557107127670270.1073741828.100686616645659&amp;type=3">Nokia&#8217;s Hardware Testing Lab</a></h3>
+<h3><a href="https://www.facebook.com/media/set/?set=a.557107127670270.1073741828.100686616645659&amp;type=3">Nokia&rsquo;s Hardware Testing Lab</a></h3>
 
-<p>A nice collection of pictures from Nokia&#8217;s device testing lab. I&#8217;m tempted to call this the &#8220;Device Torture Chamber&#8221;. If you&#8217;re not so much interested in testing devic hardware, but rather software, you should have a look at these, too:
+<p>A nice collection of pictures from Nokia&rsquo;s device testing lab. I&rsquo;m tempted to call this the &ldquo;Device Torture Chamber&rdquo;. If you&rsquo;re not so much interested in testing devic hardware, but rather software, you should have a look at these, too:
 * <a href="http://codeascraft.com/2013/08/09/mobile-device-lab/">Mobile Test Lab by Etsy</a>
 * <a href="http://blog.zuehlke.com/app-testing-going-physical-entwicklung-eines-mobile-teststands/">Mobile Test Rig by Zühlke</a></p>
 
 <h3><a href="https://www.atlassian.com/git/workflows">Git Workflows</a></h3>
 
-<p>If you use Git and haven&#8217;t heard about <a href="http://nvie.com/posts/a-successful-git-branching-model/">Git Flow</a>, you must have been living under a rock. Atlassian, makers of the excellent Git / Hg client <a href="http://www.sourcetreeapp.com">SourceTree</a>, have been so nice to put together an overview of all the various Git workflows, such as the <a href="https://www.atlassian.com/git/workflows#!workflow-centralized">Centralized Workflow</a>, the <a href="https://www.atlassian.com/git/workflows#!workflow-feature-branch">Feature Branch Workflow</a>, the <a href="https://www.atlassian.com/git/workflows#!workflow-forking">Forking Workflow</a> and the <a href="https://www.atlassian.com/git/workflows#!workflow-gitflow">Gitflow Workflow</a>. If you&#8217;re looking for a good overview or a refresher, have a look.</p>
+<p>If you use Git and haven&rsquo;t heard about <a href="http://nvie.com/posts/a-successful-git-branching-model/">Git Flow</a>, you must have been living under a rock. Atlassian, makers of the excellent Git / Hg client <a href="http://www.sourcetreeapp.com">SourceTree</a>, have been so nice to put together an overview of all the various Git workflows, such as the <a href="https://www.atlassian.com/git/workflows#!workflow-centralized">Centralized Workflow</a>, the <a href="https://www.atlassian.com/git/workflows#!workflow-feature-branch">Feature Branch Workflow</a>, the <a href="https://www.atlassian.com/git/workflows#!workflow-forking">Forking Workflow</a> and the <a href="https://www.atlassian.com/git/workflows#!workflow-gitflow">Gitflow Workflow</a>. If you&rsquo;re looking for a good overview or a refresher, have a look.</p>
 
 <h3><a href="https://github.com/the-teacher/cocktails_for_programmers/blob/master/cocktails_for_programers.md">Cocktails for Programmers</a></h3>
 
-<p>Today (September 13) is Programmers&#8217;s Day! If you like cocktails, check out <a href="https://github.com/the-teacher/cocktails_for_programmers/blob/master/cocktails_for_programers.md">this collection of cocktails</a> created just for celebrating programmers around the world!
-I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/cocktails_for_programmers/blob/master/cocktails_for_programers.md#memory-leak">Memory Leak</a> looks nice. If you missed <a href="http://en.wikipedia.org/wiki/Programmers'_Day">Programmers&#8217; Day</a> (it&#8217;s on the 256th day of the year), you might want to make a note in your diary for 2014. Programmers&#8217; day will be on <a href="http://www.timeanddate.com/holidays/world/international-programmers-day">Saturday, September 13, 2014</a>.</p>
+<p>Today (September 13) is Programmers&rsquo;s Day! If you like cocktails, check out <a href="https://github.com/the-teacher/cocktails_for_programmers/blob/master/cocktails_for_programers.md">this collection of cocktails</a> created just for celebrating programmers around the world!
+I haven&rsquo;t tried any of these, but <a href="https://github.com/the-teacher/cocktails_for_programmers/blob/master/cocktails_for_programers.md#memory-leak">Memory Leak</a> looks nice. If you missed <a href="http://en.wikipedia.org/wiki/Programmers'_Day">Programmers&#8217; Day</a> (it&rsquo;s on the 256th day of the year), you might want to make a note in your diary for 2014. Programmers&#8217; day will be on <a href="http://www.timeanddate.com/holidays/world/international-programmers-day">Saturday, September 13, 2014</a>.</p>
 
-<p>That&#8217;s it for this week - enjoy the weekend!</p>
+<p>That&rsquo;s it for this week &ndash; enjoy the weekend!</p>
 
 <p><a href="http://www.flickr.com/photos/h20tubig/9376203024/">Chains image</a> by <a href="http://www.flickr.com/photos/h20tubig/">Haya Bernitez</a></p>
 ]]></content>
@@ -1371,16 +1371,16 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
     <link href="http://www.peterfriese.de/annotated-links-for-week-34/"/>
     <updated>2013-08-23T16:39:00+01:00</updated>
     <id>http://www.peterfriese.de/annotated-links-for-week-34</id>
-    <content type="html"><![CDATA[<p>This week we will have a look at some tools that will help you to make your screenshots shine, a fun approach at looking at your coding behaviours, a collection of views for iOS and Android developers and&#8230; beer!</p>
+    <content type="html"><![CDATA[<p>This week we will have a look at some tools that will help you to make your screenshots shine, a fun approach at looking at your coding behaviours, a collection of views for iOS and Android developers and&hellip; beer!</p>
 
 <!-- more -->
 
 
 <h3><a href="http://mockuphone.com/">MockUPhone</a></h3>
 
-<p>Brought to you by <a href="http://filesq.com">FileSquare</a>, this little web site allows you to create good looking product images of your app inside a real phone frame. As of now, MockUPhone has mockup frames for most (but not all) iOS devices and some Android and Windows Phone devices. Basically, you just upload one or screenshots of your app and - after some crunching - you can download a zip archive that contains your screenshots inside the selected phone cases. You need to provide an e-mail address to download the archive.</p>
+<p>Brought to you by <a href="http://filesq.com">FileSquare</a>, this little web site allows you to create good looking product images of your app inside a real phone frame. As of now, MockUPhone has mockup frames for most (but not all) iOS devices and some Android and Windows Phone devices. Basically, you just upload one or screenshots of your app and &ndash; after some crunching &ndash; you can download a zip archive that contains your screenshots inside the selected phone cases. You need to provide an e-mail address to download the archive.</p>
 
-<p>Currently, the site is a bit sluggish - maybe due to heavy load. Also, there is very little room for tweaking how the result looks like. Check out <a href="http://shapeitapp.com">ShapeItApp</a> by <a href="http://heikobehrens.net">Heiko Behrens</a> for a similar service that is more flexible and let&#8217;s you tweak the result before you download it. Also, it would be impossible to talk about mock-up services and not mention <a href="http://placeit.breezi.com">PlaceIt</a> by <a href="http://breezi.com">Breezi</a></p>
+<p>Currently, the site is a bit sluggish &ndash; maybe due to heavy load. Also, there is very little room for tweaking how the result looks like. Check out <a href="http://shapeitapp.com">ShapeItApp</a> by <a href="http://heikobehrens.net">Heiko Behrens</a> for a similar service that is more flexible and let&rsquo;s you tweak the result before you download it. Also, it would be impossible to talk about mock-up services and not mention <a href="http://placeit.breezi.com">PlaceIt</a> by <a href="http://breezi.com">Breezi</a></p>
 
 <h3><a href="http://osrc.dfm.io">The Open Source Report Card</a></h3>
 
@@ -1388,13 +1388,13 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <h3><a href="http://www.androidviews.net">AndroidViews</a></h3>
 
-<p>iOS developers are a blessed bunch of people - not only do we have a <a href="http://cocoapods.org">decent dependency management tool</a>, but also do we have <a href="https://www.cocoacontrols.com">CocoaControls</a>, a never-ending inspiration for new controls, libraries and apps (ever wondered which components your favorite app uses? Head over to the <a href="https://www.cocoacontrols.com/apps">apps section</a>).</p>
+<p>iOS developers are a blessed bunch of people &ndash; not only do we have a <a href="http://cocoapods.org">decent dependency management tool</a>, but also do we have <a href="https://www.cocoacontrols.com">CocoaControls</a>, a never-ending inspiration for new controls, libraries and apps (ever wondered which components your favorite app uses? Head over to the <a href="https://www.cocoacontrols.com/apps">apps section</a>).</p>
 
-<p>For a long time, Android developers didn&#8217;t have outlets like these. Well, fear no longer, <a href="http://nadavfima.com">Nadav Fima</a> has you covered. <a href="http://www.androidviews.net">AndroidViews</a> offers a nicely organized view into the universe of <a href="http://www.androidviews.net/category/custom-views/holo-style/">views</a>, <a href="http://www.androidviews.net/category/animations/">animations</a>, <a href="http://www.androidviews.net/category/libraries/">libraries</a>, <a href="http://www.androidviews.net/category/dev-tools/">development tools</a> and other <a href="http://www.androidviews.net/category/resources/">resources</a>. If you have a component that is not yet listed, <a href="http://www.androidviews.net/contact-us/">drop him a mail</a>.</p>
+<p>For a long time, Android developers didn&rsquo;t have outlets like these. Well, fear no longer, <a href="http://nadavfima.com">Nadav Fima</a> has you covered. <a href="http://www.androidviews.net">AndroidViews</a> offers a nicely organized view into the universe of <a href="http://www.androidviews.net/category/custom-views/holo-style/">views</a>, <a href="http://www.androidviews.net/category/animations/">animations</a>, <a href="http://www.androidviews.net/category/libraries/">libraries</a>, <a href="http://www.androidviews.net/category/dev-tools/">development tools</a> and other <a href="http://www.androidviews.net/category/resources/">resources</a>. If you have a component that is not yet listed, <a href="http://www.androidviews.net/contact-us/">drop him a mail</a>.</p>
 
 <h3><a href="https://medium.com/what-i-learned-today/f7fcb3b786b1">Coffee vs. beer: which drink makes you more creative?</a></h3>
 
-<p>Don&#8217;t just drink coffee. Also have a glas of wine every now and then to spark your creativity.</p>
+<p>Don&rsquo;t just drink coffee. Also have a glas of wine every now and then to spark your creativity.</p>
 
 <p>Enjoy!</p>
 
@@ -1407,41 +1407,41 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
     <link href="http://www.peterfriese.de/annotated-links-for-week-33/"/>
     <updated>2013-08-19T09:30:00+01:00</updated>
     <id>http://www.peterfriese.de/annotated-links-for-week-33</id>
-    <content type="html"><![CDATA[<p>This week&#8217;s annotated links are more coding- and code-related than last week. We&#8217;ll have a look at some data mapping frameworks for Objective-C, a way to set up your projects in a faster, more reproducible way and - as iOS 7 is around the corner, a feature comparison of iOS 7 on the various devices out there.</p>
+    <content type="html"><![CDATA[<p>This week&rsquo;s annotated links are more coding- and code-related than last week. We&rsquo;ll have a look at some data mapping frameworks for Objective-C, a way to set up your projects in a faster, more reproducible way and &ndash; as iOS 7 is around the corner, a feature comparison of iOS 7 on the various devices out there.</p>
 
 <!-- more -->
 
 
 <h3><a href="http://www.cultofmac.com/231632/the-ultimate-ios-7-compatibility-chart/">iOS 7 Compatibility Chart</a></h3>
 
-<p>With the release of iOS 7 just around the corner, you might be wondering which devices you should test your apps on in order to make sure you cover all required combinations of services that might or might not be available to your app (yes, iOS 7 is one of those releases that won&#8217;t make all features available on all devices). Cult of Mac has a nice overview chart, worth checking out.</p>
+<p>With the release of iOS 7 just around the corner, you might be wondering which devices you should test your apps on in order to make sure you cover all required combinations of services that might or might not be available to your app (yes, iOS 7 is one of those releases that won&rsquo;t make all features available on all devices). Cult of Mac has a nice overview chart, worth checking out.</p>
 
-<h3><a href="http://www.merowing.info/2013/05/crafter-setup-your-cocoa-projects-with-ease/">Crafter - Easily Setup Xcode Projects</a></h3>
+<h3><a href="http://www.merowing.info/2013/05/crafter-setup-your-cocoa-projects-with-ease/">Crafter &ndash; Easily Setup Xcode Projects</a></h3>
 
 <p>Github has made it really easy to check out new libraries or demos: just clone the repo and off you go. But what about creating new projects? If you find yourself constantly creating new projects, adjusting the build configuration to suit your needs, adding a Podfile for <a href="http://www.cocoapods.org">CocoaPods</a>, then <a href="https://github.com/krzysztofzablocki/crafter">Crafter</a> might be for you. You can configure it with your defaults, while at the same time staying flexible by adding options. Definitely worth a try.</p>
 
 <h3><a href="https://github.com/krzysztofzablocki/KZPropertyMapper">Object</a> <a href="https://github.com/uacaps/NSObject-ObjectMap">Mapping</a> <a href="https://github.com/dchohfi/KeyValueObjectMapping">in</a> <a href="https://github.com/mattiaslevin/ObjectMapper">Objective-C</a></h3>
 
-<p>Most apps require you to map data from a text-based presentation (mostly JSON or XML) to  Objective-C objects. Chances are you&#8217;ve written mapping code by hand in at least one of your projects. &#8220;Its&#8217;s just one or two classes, how hard can it be?&#8221;, was probably what you thought when you set out to implement you home-grown mapping. YOu might have ended up with either pulling your hair out while maintianing your code whenever the API team decided to implement some &#8220;minor changes&#8221; or using a full-blown framework like <a href="http://www.restkit.org">RestKit</a> that gave you more than you needed. If you just need to map data without the need for all the fancy add-ons like automatic CoreData persistence, in-memory and persistent caching and so on, you should have a look at the following frameworks. The all follow different approaches, some apply automagic mapping by matching field names, others by using an internal DSL to help you express your mapping. Take a look yourself and decide based on what you need for your current project.</p>
+<p>Most apps require you to map data from a text-based presentation (mostly JSON or XML) to  Objective-C objects. Chances are you&rsquo;ve written mapping code by hand in at least one of your projects. &ldquo;Its&rsquo;s just one or two classes, how hard can it be?&rdquo;, was probably what you thought when you set out to implement you home-grown mapping. YOu might have ended up with either pulling your hair out while maintianing your code whenever the API team decided to implement some &ldquo;minor changes&rdquo; or using a full-blown framework like <a href="http://www.restkit.org">RestKit</a> that gave you more than you needed. If you just need to map data without the need for all the fancy add-ons like automatic CoreData persistence, in-memory and persistent caching and so on, you should have a look at the following frameworks. The all follow different approaches, some apply automagic mapping by matching field names, others by using an internal DSL to help you express your mapping. Take a look yourself and decide based on what you need for your current project.</p>
 
 <ul>
-<li><a href="https://github.com/krzysztofzablocki/KZPropertyMapper">KZPropertyMapper</a> - uses an internal DSL to express data mappings</li>
-<li><a href="https://github.com/uacaps/NSObject-ObjectMap">NSObject-ObjectMap</a> - uses introspection to map properties directly unto properties.</li>
-<li><a href="https://github.com/dchohfi/KeyValueObjectMapping">KeyValueObjectMapping</a> - Uses a combination of both introspection and configuration to map data unto objects,</li>
-<li><a href="https://github.com/mattiaslevin/ObjectMapper">ObjectMapper</a> - Uses introspection and a callback method to map data.</li>
+<li><a href="https://github.com/krzysztofzablocki/KZPropertyMapper">KZPropertyMapper</a> &ndash; uses an internal DSL to express data mappings</li>
+<li><a href="https://github.com/uacaps/NSObject-ObjectMap">NSObject-ObjectMap</a> &ndash; uses introspection to map properties directly unto properties.</li>
+<li><a href="https://github.com/dchohfi/KeyValueObjectMapping">KeyValueObjectMapping</a> &ndash; Uses a combination of both introspection and configuration to map data unto objects,</li>
+<li><a href="https://github.com/mattiaslevin/ObjectMapper">ObjectMapper</a> &ndash; Uses introspection and a callback method to map data.</li>
 </ul>
 
 
-<h3><a href="http://instacod.es">And finally&#8230; Instacodes</a></h3>
+<h3><a href="http://instacod.es">And finally&hellip; Instacodes</a></h3>
 
-<p>Did you ever wonder how to create those geeky looking source code screenshots that look like you used a camera to take a picture of your screen from an angle? Well, here&#8217;s a tool that let&#8217;s you create those screenshots without the need to take out your camera: <a href="http://instacod.es">Instacodes</a></p>
+<p>Did you ever wonder how to create those geeky looking source code screenshots that look like you used a camera to take a picture of your screen from an angle? Well, here&rsquo;s a tool that let&rsquo;s you create those screenshots without the need to take out your camera: <a href="http://instacod.es">Instacodes</a></p>
 
 <ul class="gallery">
 <li><a href="http://www.peterfriese.de/images/2013-08-17-annotated-links-for-week-33/instacodes.png" class="fancybox" rel="gallery-58957bab7ae3483cd792adcee872db68" title="Istancodes sample"><img src="http://www.peterfriese.de/thumbs/instacodes_600x250.png" alt="Istancodes sample" /></a></li>
 </ul>
 
 
-<p>That&#8217;s it for this week, I hope you liked it. Feel free to send suggestions for next week!</p>
+<p>That&rsquo;s it for this week, I hope you liked it. Feel free to send suggestions for next week!</p>
 
 <p><a href="http://www.flickr.com/photos/h20tubig/9376203024/">Chains image</a> by <a href="http://www.flickr.com/photos/h20tubig/">Haya Bernitez</a></p>
 ]]></content>
@@ -1452,32 +1452,32 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
     <link href="http://www.peterfriese.de/annotated-links-for-week-32/"/>
     <updated>2013-08-10T01:33:00+01:00</updated>
     <id>http://www.peterfriese.de/annotated-links-for-week-32</id>
-    <content type="html"><![CDATA[<p>This week, we&#8217;ll have a look at Apple&#8217;s new system status page and another, more serious issue in a rather well-known computer-driven system. Other topics in this post: a very high-level view on programming (and why we failed so far) as well as a very detailed look at programming (and what you can do to excel at it). Finally, some spying.</p>
+    <content type="html"><![CDATA[<p>This week, we&rsquo;ll have a look at Apple&rsquo;s new system status page and another, more serious issue in a rather well-known computer-driven system. Other topics in this post: a very high-level view on programming (and why we failed so far) as well as a very detailed look at programming (and what you can do to excel at it). Finally, some spying.</p>
 
 <!-- more -->
 
 
 <h3><a href="https://developer.apple.com/support/system-status/">Apple System Status Page</a></h3>
 
-<p>As an iOS developer, you rely on a surprisingly high number of Apple systems. Until recently, there wasn&#8217;t a way to find out if a system was offline or if it was just you, &#8221;<a href="http://www.engadget.com/2010/06/24/apple-responds-over-iphone-4-reception-issues-youre-holding-th/">holding it wrong</a>&#8221;. As an immediate response to the (<a href="http://www.theguardian.com/technology/2013/jul/26/apple-developer-site-hack">alleged</a>) hack of their developer support systems, Apple shut down pretty much all of their developer support systems and set up this system status page. As of now, all systems are back to normal, but this page might come in handy for future outages.</p>
+<p>As an iOS developer, you rely on a surprisingly high number of Apple systems. Until recently, there wasn&rsquo;t a way to find out if a system was offline or if it was just you, &ldquo;<a href="http://www.engadget.com/2010/06/24/apple-responds-over-iphone-4-reception-issues-youre-holding-th/">holding it wrong</a>&rdquo;. As an immediate response to the (<a href="http://www.theguardian.com/technology/2013/jul/26/apple-developer-site-hack">alleged</a>) hack of their developer support systems, Apple shut down pretty much all of their developer support systems and set up this system status page. As of now, all systems are back to normal, but this page might come in handy for future outages.</p>
 
 <h3><a href="http://www.ima.umn.edu/~arnold/disasters/ariane.html">The Explosion of Ariane 5</a></h3>
 
-<p>Due to popular belief, Ariane 5 exploded because a programmer mixed up a comma with a period, but it&#8217;s not that easy<strong>,</strong></p>
+<p>Due to popular belief, Ariane 5 exploded because a programmer mixed up a comma with a period, but it&rsquo;s not that easy<strong>,</strong></p>
 
 <p>In fact, the problem was someone used a 16 bit unsigned integer variable to hold the result of converting a 64 bit floating point value. I guess this is strong point for using type safe languages in safety-critical systems as well as clearly stating the pre- and post conditions of library functions. Some unit tests might also be in good order.</p>
 
 <h3><a href="http://worrydream.com/dbx/">The Future of Programming</a></h3>
 
-<p>A talk Bret Victor gave at the DropBox conference in <del>1973</del> 2013 on how he thinks the future of programming could have looked like if developers had been more courageous in embracing new ideas instead. Instead, we often see people rejecting new ideas, stating &#8220;that&#8217;s not real programming&#8221;. Thankfully, every now and then new ideas are strong enough to gain enough traction. Otherwise, we&#8217;d still be writing code in binary. Recently, we&#8217;ve seen a growing interest in programming languages and programming paradigms other than the well-known object-oriented / procedural approaches. I think this is a good sign, however, we need to be more open minded and think more about other, new ways of programming. If you haven&#8217;t done so in this year, you should set aside some time to learn a new programming language. Why not try <a href="http://www.eclipse.org/xtend/">Xtend</a>?</p>
+<p>A talk Bret Victor gave at the DropBox conference in <del>1973</del> 2013 on how he thinks the future of programming could have looked like if developers had been more courageous in embracing new ideas instead. Instead, we often see people rejecting new ideas, stating &ldquo;that&rsquo;s not real programming&rdquo;. Thankfully, every now and then new ideas are strong enough to gain enough traction. Otherwise, we&rsquo;d still be writing code in binary. Recently, we&rsquo;ve seen a growing interest in programming languages and programming paradigms other than the well-known object-oriented / procedural approaches. I think this is a good sign, however, we need to be more open minded and think more about other, new ways of programming. If you haven&rsquo;t done so in this year, you should set aside some time to learn a new programming language. Why not try <a href="http://www.eclipse.org/xtend/">Xtend</a>?</p>
 
 <h3><a href="http://open.blogs.nytimes.com/2013/08/01/objectively-stylish/?_r=0">The NYTimes Objective-C Styleguide</a></h3>
 
-<p>If you develop software for a living, you know that following a coding style guide makes sense. Sometimes, people do get religious about how to format their code - try to steer clear of this by using a widely-regarded style guide. The NYTimes Objective-C Styleguide is well-written, has the right amount of concise examples and can be <a href="https://github.com/NYTimes/objective-c-style-guide">forked</a> in case you feel you need to adjust something to your liking. The fact that the New York Times mobile team <a href="https://github.com/NYTimes/objective-c-style-guide/graphs/contributors">welcomes contributions</a> will probably make this styleguide one of the more popular ones.</p>
+<p>If you develop software for a living, you know that following a coding style guide makes sense. Sometimes, people do get religious about how to format their code &ndash; try to steer clear of this by using a widely-regarded style guide. The NYTimes Objective-C Styleguide is well-written, has the right amount of concise examples and can be <a href="https://github.com/NYTimes/objective-c-style-guide">forked</a> in case you feel you need to adjust something to your liking. The fact that the New York Times mobile team <a href="https://github.com/NYTimes/objective-c-style-guide/graphs/contributors">welcomes contributions</a> will probably make this styleguide one of the more popular ones.</p>
 
 <h3><a href="https://github.com/ttscoff/selfspy">SelfSpy</a></h3>
 
-<p>Whether you just want to <a href="http://en.wikipedia.org/wiki/Quantified_Self">quantify yourself</a>, something which <a href="http://blog.stephenwolfram.com/2012/03/the-personal-analytics-of-my-life/">Stephen Wolfram seems to be doing to quite some extent</a> or you&#8217;re curious what secret services might know about you if they installed a keylogger on your system: SelfSpy is a good tool to get started: it runs on Linux, Windows and Mac OSX. Besides, it&#8217;s open source - so you can see what it does and you can extend it if needed.</p>
+<p>Whether you just want to <a href="http://en.wikipedia.org/wiki/Quantified_Self">quantify yourself</a>, something which <a href="http://blog.stephenwolfram.com/2012/03/the-personal-analytics-of-my-life/">Stephen Wolfram seems to be doing to quite some extent</a> or you&rsquo;re curious what secret services might know about you if they installed a keylogger on your system: SelfSpy is a good tool to get started: it runs on Linux, Windows and Mac OSX. Besides, it&rsquo;s open source &ndash; so you can see what it does and you can extend it if needed.</p>
 
 <p><a href="http://www.flickr.com/photos/h20tubig/9376203024/">Chains image</a> by <a href="http://www.flickr.com/photos/h20tubig/">Haya Bernitez</a></p>
 ]]></content>
@@ -1488,35 +1488,35 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
     <link href="http://www.peterfriese.de/hacked-dot-io-2013/"/>
     <updated>2013-08-03T00:18:00+01:00</updated>
     <id>http://www.peterfriese.de/hacked-dot-io-2013</id>
-    <content type="html"><![CDATA[<p>On the weekend of July 21st, I had the chance to attend the Hacked.io hackathon. The dimensions of this event matched the size of London: 500 attendees of all age groups (there were entire teams made up of kids) gathered in the O2 arena (more precisely: in the IndigO2) poised to spend a sleepless night full of hacking and working on creative projects. Those who didn&#8217;t already have an idea for project could let themselves be inspired by the numerous challenges set up by the event sponsors.</p>
+    <content type="html"><![CDATA[<p>On the weekend of July 21st, I had the chance to attend the Hacked.io hackathon. The dimensions of this event matched the size of London: 500 attendees of all age groups (there were entire teams made up of kids) gathered in the O2 arena (more precisely: in the IndigO2) poised to spend a sleepless night full of hacking and working on creative projects. Those who didn&rsquo;t already have an idea for project could let themselves be inspired by the numerous challenges set up by the event sponsors.</p>
 
 <!-- more -->
 
 
 <h3>The venue</h3>
 
-<p>Despite some initial issues with the wifi, the organizers did a great job: from drinks and snacks to the sponsored vouchers for selected restaurants in the O2 arena, you couldn&#8217;t wish for better catering for hackers. Those who stayed for the sleep over even got the treat of a late-night pizza delivery - hacker&#8217;s delight! Power strips were available at every desk and - after some initial hick-ups - the WiFi was available throughout the venue. Best conditions for productive work!</p>
+<p>Despite some initial issues with the wifi, the organizers did a great job: from drinks and snacks to the sponsored vouchers for selected restaurants in the O2 arena, you couldn&rsquo;t wish for better catering for hackers. Those who stayed for the sleep over even got the treat of a late-night pizza delivery &ndash; hacker&rsquo;s delight! Power strips were available at every desk and &ndash; after some initial hick-ups &ndash; the WiFi was available throughout the venue. Best conditions for productive work!</p>
 
-<p>The sponsors had not only made sure to equip everyone with a branded T-Shirt, but also had brought a generous supply of gadgets and other toys to hack on, such as Makey-Makey kits (provided by MailJet), Windows 8 Licenses (Nokia / Microsoft), numerous Hue kits (courtesy of Philips, who later told us this had been their first ever sponsored hackathon - well done, guys!). Plenty of toys to spark some creative ideas!</p>
+<p>The sponsors had not only made sure to equip everyone with a branded T-Shirt, but also had brought a generous supply of gadgets and other toys to hack on, such as Makey-Makey kits (provided by MailJet), Windows 8 Licenses (Nokia / Microsoft), numerous Hue kits (courtesy of Philips, who later told us this had been their first ever sponsored hackathon &ndash; well done, guys!). Plenty of toys to spark some creative ideas!</p>
 
 <p>Official hack time went from Saturday noon to Sunday noon, which should be enough time to build something awesome.</p>
 
 <p>Unfortunately, there was no team-building phase, so you either had to come with your team, find some team mates by chance or run on your own. I decided for the latter.</p>
 
-<h3>BabelPhone - a translation app for geeks</h3>
+<h3>BabelPhone &ndash; a translation app for geeks</h3>
 
-<p>Inspired by Microsoft&#8217;s challenge (&#8220;build something awesome with Windows Phone 8, Windows 8 or Windows Azure services&#8221;), my initial idea was to build a translation app for Windows Phone 8. Unfortunately, two things put a spoke in my wheel: the evening before the hackathon, I installed Windows 8.1 Preview in a VMware Fusion instance, but it just wouldn&#8217;t connect to my Lumia 920 test device via USB. What&#8217;s more, the Windows Phone 8 emulator refused to start - the reason being it needs Hyper-V support which isn&#8217;t activated by default for virtual machines on VMware Fusion. Later that day, I found out how to configure VMWare Fusion and Windows 8 so that the Emulator does run, however I had made up my mind and had started implementing the app on iOS.</p>
+<p>Inspired by Microsoft&rsquo;s challenge (&ldquo;build something awesome with Windows Phone 8, Windows 8 or Windows Azure services&rdquo;), my initial idea was to build a translation app for Windows Phone 8. Unfortunately, two things put a spoke in my wheel: the evening before the hackathon, I installed Windows 8.1 Preview in a VMware Fusion instance, but it just wouldn&rsquo;t connect to my Lumia 920 test device via USB. What&rsquo;s more, the Windows Phone 8 emulator refused to start &ndash; the reason being it needs Hyper-V support which isn&rsquo;t activated by default for virtual machines on VMware Fusion. Later that day, I found out how to configure VMWare Fusion and Windows 8 so that the Emulator does run, however I had made up my mind and had started implementing the app on iOS.</p>
 
-<p>In contrast to Windows Phone 8, iOS doesn&#8217;t feature a speech SDK (which is kind of funny, given Siri has been a part of iOS for a number of releases now), so you have to use a third party SDK for voice recognition and speech synthesis. As I  had evaluated a number of speech SDKs when I started work on ElizaApp, I knew already which of the current speech SDKs would fit the bill and decided to use Nuance Speech SDK. For translating the recognized text fragments, I decided to use Google Translate (which is a paid service now, by the way). In order to make things more challenging, I decided to use not only one phone for the whole translation process, but two.</p>
+<p>In contrast to Windows Phone 8, iOS doesn&rsquo;t feature a speech SDK (which is kind of funny, given Siri has been a part of iOS for a number of releases now), so you have to use a third party SDK for voice recognition and speech synthesis. As I  had evaluated a number of speech SDKs when I started work on ElizaApp, I knew already which of the current speech SDKs would fit the bill and decided to use Nuance Speech SDK. For translating the recognized text fragments, I decided to use Google Translate (which is a paid service now, by the way). In order to make things more challenging, I decided to use not only one phone for the whole translation process, but two.</p>
 
-<p>The flow of events for a simple dialog is outlined in the figure below: first, both users need to choose their preferred language on their phones, while their phones register with the BabelPhone backend server. Then, the first dialog partner taps the &#8220;speak now&#8221; button to initiate speech recognition and starts speaking. As soon as he stops speaking or taps the &#8220;speak now&#8221; button again, the speech recognition engine analyses his utterance (as we&#8217;re interested in detecting natural language as opposed to simple commands, voice recognition will actually take place on a server, in our case provided by Nuance) and tries to detect what the user said. The recognized text will now be sent to the BabelPhone server.</p>
+<p>The flow of events for a simple dialog is outlined in the figure below: first, both users need to choose their preferred language on their phones, while their phones register with the BabelPhone backend server. Then, the first dialog partner taps the &ldquo;speak now&rdquo; button to initiate speech recognition and starts speaking. As soon as he stops speaking or taps the &ldquo;speak now&rdquo; button again, the speech recognition engine analyses his utterance (as we&rsquo;re interested in detecting natural language as opposed to simple commands, voice recognition will actually take place on a server, in our case provided by Nuance) and tries to detect what the user said. The recognized text will now be sent to the BabelPhone server.</p>
 
 <ul class="gallery">
 <li><a href="http://www.peterfriese.de/images/2013-08-03-hacked-dot-io-2013/BabelPhone-Process.png" class="fancybox" rel="gallery-24fb3058138182be5f2be2aae5648aae" title="BabelPhone Translation Process"><img src="http://www.peterfriese.de/thumbs/BabelPhone-Process_600x250.png" alt="BabelPhone Translation Process" /></a></li>
 </ul>
 
 
-<p>As both communication partners registered with the server when the conversation started, the server knows them, as well as their language preference. Thus, the server can now send the recognized text to Google Translate and have it translated to the target language. As soon as Google Translate returns the translated text, the server can send it to the second user&#8217;s phone, where it will be converted to spoken text using the Nuance Speech SDK.</p>
+<p>As both communication partners registered with the server when the conversation started, the server knows them, as well as their language preference. Thus, the server can now send the recognized text to Google Translate and have it translated to the target language. As soon as Google Translate returns the translated text, the server can send it to the second user&rsquo;s phone, where it will be converted to spoken text using the Nuance Speech SDK.</p>
 
 <p>As communication between the server side part of the application and the smartphones receiving the translation needs to take place in an asynchronous manner, we need a suitable communication channel. Web sockets lend themselves perfectly for this purpose: they offer a permanently open communication channel between server and client while at the same time being rather lightweight and ensuring a low-latency delivery of messages.</p>
 
@@ -1531,26 +1531,26 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <h3>The outcome</h3>
 
-<p>After everybody left the room who wasn&#8217;t going to present a hack (for space reasons, only one member of each team was allowed to present) and everybody had grabbed a quick lunch, presentation of the hacks began. The organizers had redecorated the stage so that 6 teams could set up their demo simultaneously and wait until it was their turn to present. This way, transitions between the individual presentations were cut to a minimum.</p>
+<p>After everybody left the room who wasn&rsquo;t going to present a hack (for space reasons, only one member of each team was allowed to present) and everybody had grabbed a quick lunch, presentation of the hacks began. The organizers had redecorated the stage so that 6 teams could set up their demo simultaneously and wait until it was their turn to present. This way, transitions between the individual presentations were cut to a minimum.</p>
 
 <p>More than 60 teams presented their work, with results being really impressive throughout. A list of all hacks presented can be found on Hackerleague.org. My favorite hacks were:</p>
 
 <ul>
 <li><a href="https://www.hackerleague.org/hackathons/hacked/hacks/robot-laser-pong">Robot Laser Pong</a> (involving Kinect, AR Drones, Makey Makey and two bananas as well as the well-known Pong game)</li>
-<li><a href="https://twitter.com/HACKEDio/status/358946426115473408">Heath Robinson&#8217;s Megatron</a></li>
+<li><a href="https://twitter.com/HACKEDio/status/358946426115473408">Heath Robinson&rsquo;s Megatron</a></li>
 <li><a href="http://www.robmiles.com/difficultifier/">The Difficultifier</a></li>
 </ul>
 
 
-<p>Live demos have their special challenges, which is why most speakers tend to avoid them - nothing is more boring for the audience (and at the same time more nerve-racking for the presenter) if a demo just stops working and the presenter starts looking for the cause live on stage. A Hacked.io, every presenter <em>had</em> to present a live demo - slideware was strictly prohibited. I was quite surprised to see the vast majority of demos worked flawlessly without apparent issues. More stuff, less fluff - that&#8217;s what makes it even more interesting and engaging for the audience!</p>
+<p>Live demos have their special challenges, which is why most speakers tend to avoid them &ndash; nothing is more boring for the audience (and at the same time more nerve-racking for the presenter) if a demo just stops working and the presenter starts looking for the cause live on stage. A Hacked.io, every presenter <em>had</em> to present a live demo &ndash; slideware was strictly prohibited. I was quite surprised to see the vast majority of demos worked flawlessly without apparent issues. More stuff, less fluff &ndash; that&rsquo;s what makes it even more interesting and engaging for the audience!</p>
 
 <p>My demo went very well, too. I was lucky enough to have done a test run just a few minutes before the live demo, as I found out I had run out of Nuance credits, resulting in my app neither recognizing any speech nor uttering anything. Fortunately, I could buy additional credits on the spot and make the demo work literally minutes before going on stage!</p>
 
 <p>After all teams had presented their demos, the jury gathered for finding their verdict and decide on who should receive one of the numerous prizes. The sponsors did it in style and had brought a range of attractive prizes, among them several LEGO Star Wars Death Star models, Philips Hues kits, vouchers for services like Heroku or Github, tickets for events at the O2 arena and more.</p>
 
-<p>Apparently, the name of my hack (&#8221;<a href="https://www.hackerleague.org/hackathons/hacked/hacks/babelphone">BabelPhone</a>&#8221;) evoked sweet memories with the jury - at least I was awarded a Yahoo-sponsored gift voucher for Amazon. Later, the Yahoo jury members told me my hack reminded them of the <a href="http://en.wikipedia.org/wiki/Yahoo!_Babel_Fish">legendary Babelfish service</a> - one of the first ever publicly available translation services on the internet.</p>
+<p>Apparently, the name of my hack (&ldquo;<a href="https://www.hackerleague.org/hackathons/hacked/hacks/babelphone">BabelPhone</a>&rdquo;) evoked sweet memories with the jury &ndash; at least I was awarded a Yahoo-sponsored gift voucher for Amazon. Later, the Yahoo jury members told me my hack reminded them of the <a href="http://en.wikipedia.org/wiki/Yahoo!_Babel_Fish">legendary Babelfish service</a> &ndash; one of the first ever publicly available translation services on the internet.</p>
 
-<p>After having been awake for roughly 36 hours, I immediately fell asleep as soon as I collapsed in my bed. Hacked.io certainly was an exhausting, but also very rewarding experience. A huge thanks to all the organizers, volunteers, sponsors and all the other attendees - it was a blast!</p>
+<p>After having been awake for roughly 36 hours, I immediately fell asleep as soon as I collapsed in my bed. Hacked.io certainly was an exhausting, but also very rewarding experience. A huge thanks to all the organizers, volunteers, sponsors and all the other attendees &ndash; it was a blast!</p>
 
 <p>Finally, here is a list with upcoming hackathons and other hack events:</p>
 
@@ -1560,7 +1560,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 </ul>
 
 
-<p>BTW, if you plan attending a hackathon and need a team member wo is skilled in iOS / Windows Phone / Android / Node.js development, give me a shout (<a href="https://twitter.com/peterfriese">@peterfriese</a>) - if I am available and your idea sounds cool, I&#8217;ll join you!</p>
+<p>BTW, if you plan attending a hackathon and need a team member wo is skilled in iOS / Windows Phone / Android / Node.js development, give me a shout (<a href="https://twitter.com/peterfriese">@peterfriese</a>) &ndash; if I am available and your idea sounds cool, I&rsquo;ll join you!</p>
 ]]></content>
   </entry>
   
@@ -1569,7 +1569,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
     <link href="http://www.peterfriese.de/do-androids-dream-of-electric-sheep/"/>
     <updated>2013-03-22T00:33:48+00:00</updated>
     <id>http://www.peterfriese.de/do-androids-dream-of-electric-sheep</id>
-    <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
+    <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 &ndash; A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
 
 <!-- more -->
 
@@ -1585,13 +1585,13 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <p>Much has been said about Siri, so let’s focus on Eliza.</p>
 
-<p>Eliza started as an experiment in 1964, when Joseph Weizenbaum, then professor of computer sciences at the MIT, wrote it as an early attempt to research natural language communication between man and computer (see his ACM paper “ELIZA - A Computer Program For the Study of Natural Language Communication Between Man And Machine”). At its heart, Eliza is program that reacts to specific key words in sentences entered by a human user and will then respond to those keywords according to a predefined script. It’s the script that basically makes up the “personality” of Eliza, the most famous one being <em>Doctor</em>, simulating a rogerian psychoanalyst.</p>
+<p>Eliza started as an experiment in 1964, when Joseph Weizenbaum, then professor of computer sciences at the MIT, wrote it as an early attempt to research natural language communication between man and computer (see his ACM paper “ELIZA &ndash; A Computer Program For the Study of Natural Language Communication Between Man And Machine”). At its heart, Eliza is program that reacts to specific key words in sentences entered by a human user and will then respond to those keywords according to a predefined script. It’s the script that basically makes up the “personality” of Eliza, the most famous one being <em>Doctor</em>, simulating a rogerian psychoanalyst.</p>
 
 <p>(Weizenbaum was rather surprised to see how people thought that Eliza had a real personality and a capacity for empathy. In reaction, he started to raise uncomfortable questions about our dependence on computers.)</p>
 
 <p>In my Pecha Kucha, I went on to tell my audience to make better use of the capabilities of our smart phones. Most people have stopped thinking about it, but after all, we’re carrying a super computer in our pockets.</p>
 
-<p>So to set a good example, I decided to create <a href="http://elizaapp.com">ElizaApp</a> - an app that can listen to what you say and answer in spoken language. This is going to be a great project, because I’ll show several very interesting things:</p>
+<p>So to set a good example, I decided to create <a href="http://elizaapp.com">ElizaApp</a> &ndash; an app that can listen to what you say and answer in spoken language. This is going to be a great project, because I’ll show several very interesting things:</p>
 
 <ol>
 <li><p>How to analyse spoken language on a mobile device</p></li>
@@ -1612,14 +1612,14 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
     <link href="http://www.peterfriese.de/writing-xtext-scope-providers-with-xtend/"/>
     <updated>2012-08-14T23:04:55+01:00</updated>
     <id>http://www.peterfriese.de/writing-xtext-scope-providers-with-xtend</id>
-    <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is an <a href="http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html">important concept</a> in the design of programming languages. In Xtext, scoping is used <a href="http://zarnekow.blogspot.de/2009/01/xtext-corner-2-linking-and-scoping.html">to drive two major parts</a> of your DSL: <a href="http://www.eclipse.org/Xtext/documentation.html#linking">linking</a> and <a href="http://www.eclipse.org/Xtext/documentation.html#contentAssist">content assist</a>. While Xtext applies the <a href="http://en.wikiquote.org/wiki/Alan_Kay">80/20 rule</a> very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you&#8217;ll have to roll up your sleeves and write your own scope provider.</p>
+    <content type="html"><![CDATA[<p><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is an <a href="http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html">important concept</a> in the design of programming languages. In Xtext, scoping is used <a href="http://zarnekow.blogspot.de/2009/01/xtext-corner-2-linking-and-scoping.html">to drive two major parts</a> of your DSL: <a href="http://www.eclipse.org/Xtext/documentation.html#linking">linking</a> and <a href="http://www.eclipse.org/Xtext/documentation.html#contentAssist">content assist</a>. While Xtext applies the <a href="http://en.wikiquote.org/wiki/Alan_Kay">80/20 rule</a> very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you&rsquo;ll have to roll up your sleeves and write your own scope provider.</p>
 
 <!-- more -->
 
 
-<p>Over the years, implementing scope providers has become significantly easier, much thanks to the tiny internal scoping DSL provided by <code>org.eclipse.xtext.scoping.Scopes</code> (<a href="https://github.com/eclipse/xtext/blob/v2.3.0/plugins/org.eclipse.xtext/src/org/eclipse/xtext/scoping/Scopes.java">src</a>). However, collecting the elements that make up a scope can be a very cumbersome task if you have to use Java. Let’s face it - <a href="http://www.cafeaulait.org/slides/hope/02.html">Java has not been built for traversing models.</a></p>
+<p>Over the years, implementing scope providers has become significantly easier, much thanks to the tiny internal scoping DSL provided by <code>org.eclipse.xtext.scoping.Scopes</code> (<a href="https://github.com/eclipse/xtext/blob/v2.3.0/plugins/org.eclipse.xtext/src/org/eclipse/xtext/scoping/Scopes.java">src</a>). However, collecting the elements that make up a scope can be a very cumbersome task if you have to use Java. Let’s face it &ndash; <a href="http://www.cafeaulait.org/slides/hope/02.html">Java has not been built for traversing models.</a></p>
 
-<p>A language much better suited to traversing models is <a href="http://www.eclipse.org/xtend/">Xtend</a>, the newest kid on the X block. If you didn’t yet give it a try, you should do so now - even if you’re not writing an Xtext DSL. Xtend directly translates to Java code and allows you to write very concise code by eliminating much of Java’s ceremony. You can use it to write everything you’d write in Java - from <a href="http://blog.efftinge.de/2011/12/writing-android-uis-with-xtend.html">Android UIs</a> to <a href="http://www.eclipse.org/Xtext/7languagesDoc.html#httpRouting">web applications</a> - so why not write Eclipse plug-ins with Xtend?</p>
+<p>A language much better suited to traversing models is <a href="http://www.eclipse.org/xtend/">Xtend</a>, the newest kid on the X block. If you didn’t yet give it a try, you should do so now &ndash; even if you’re not writing an Xtext DSL. Xtend directly translates to Java code and allows you to write very concise code by eliminating much of Java’s ceremony. You can use it to write everything you’d write in Java &ndash; from <a href="http://blog.efftinge.de/2011/12/writing-android-uis-with-xtend.html">Android UIs</a> to <a href="http://www.eclipse.org/Xtext/7languagesDoc.html#httpRouting">web applications</a> &ndash; so why not write Eclipse plug-ins with Xtend?</p>
 
 <p>To write the scope provider for your language using Xtend, you need to follow a few very simple steps:</p>
 
@@ -1637,7 +1637,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 <li><p>If you already have a Java-based scope provider, copy the implementation to a safe place and delete the Java file to make room for the new Xtend-based scope provider.</p></li>
 <li><p>Create a new Xtend class <code>&lt;YourDSLPackage&gt;.&lt;YourDSL&gt;ScopeProvider.xtend</code> in the DSL project. Make sure this class inherits from <code>org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider</code>.</p></li>
 <li><p>Start writing your scope provider using Xtend.</p></li>
-<li><p>Don’t forget to smile :-)</p></li>
+<li><p>Don’t forget to smile :&ndash;)</p></li>
 </ol>
 
 ]]></content>
@@ -1653,9 +1653,9 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 <!--more-->
 
 
-<p>Wouldn&#8217;t it be awesome if you could just specify a list of dependencies and be done? You might have heard of RubyGems, Maven, Ivy, NuGet or npm that bring dependency management to the worlds of Ruby, Java, .NET and JavaScript developers.</p>
+<p>Wouldn&rsquo;t it be awesome if you could just specify a list of dependencies and be done? You might have heard of RubyGems, Maven, Ivy, NuGet or npm that bring dependency management to the worlds of Ruby, Java, .NET and JavaScript developers.</p>
 
-<p>Well, it turns out there finally is a solution for us Cocoa developers - CocoaPods. Getting started with CocoaPods is really easy and once you started using it, you won&#8217;t look back again.</p>
+<p>Well, it turns out there finally is a solution for us Cocoa developers &ndash; CocoaPods. Getting started with CocoaPods is really easy and once you started using it, you won&rsquo;t look back again.</p>
 
 <h2>Installation</h2>
 
@@ -1670,15 +1670,15 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <h2>Usage</h2>
 
-<p>Using CocoaPods to manage your project&#8217;s dependencies is a two-step process:</p>
+<p>Using CocoaPods to manage your project&rsquo;s dependencies is a two-step process:</p>
 
 <ol>
-<li>Specify the dependency in you project&#8217;s dependency specification file, <code>Podfile</code></li>
+<li>Specify the dependency in you project&rsquo;s dependency specification file, <code>Podfile</code></li>
 <li>Run <code>pod install</code></li>
 </ol>
 
 
-<p>Let me illustrate this by way of a simple example. Let&#8217;s assume you want to build an application with the awesome <a href="http://www.restkit.org">RestKit</a> library. If you have used RestKit before, you know that adding it to your project is a rather involved process. Over the years, it has become significantly easier, but it still needs a very detailed installation instruction with lots of screenshots - check out their <a href="https://github.com/RestKit/RestKit/wiki/Installing-RestKit-in-Xcode-4.x">wiki page</a>.</p>
+<p>Let me illustrate this by way of a simple example. Let&rsquo;s assume you want to build an application with the awesome <a href="http://www.restkit.org">RestKit</a> library. If you have used RestKit before, you know that adding it to your project is a rather involved process. Over the years, it has become significantly easier, but it still needs a very detailed installation instruction with lots of screenshots &ndash; check out their <a href="https://github.com/RestKit/RestKit/wiki/Installing-RestKit-in-Xcode-4.x">wiki page</a>.</p>
 
 <p>With CocoaPods, all you need to do is this:</p>
 
@@ -1735,9 +1735,9 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <h2>Where to go from here</h2>
 
-<p>Wasn&#8217;t that a lot easier than all the other ways to install third party libraries?</p>
+<p>Wasn&rsquo;t that a lot easier than all the other ways to install third party libraries?</p>
 
-<p>If you are curious which libraries are supported by CocoaPods, go to <a href="http://cocoapods.org">CocoaPods.org</a> - they have a nice little UI for searching their pod specification repository. If you are more include to using the command line, you are welcome to use <code>pod search &lt;yoursearchterm&gt;</code> to search for a specific library.</p>
+<p>If you are curious which libraries are supported by CocoaPods, go to <a href="http://cocoapods.org">CocoaPods.org</a> &ndash; they have a nice little UI for searching their pod specification repository. If you are more include to using the command line, you are welcome to use <code>pod search &lt;yoursearchterm&gt;</code> to search for a specific library.</p>
 
 <p>If your preferred library is not yet supported, why not help them out and build a pod spec? <a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a> itself and the <a href="https://github.com/CocoaPods/Specs">pod spec repository</a> are hosted on Github, so adding new pod specifications is really easy. The CocoaPods wiki has a section on <a href="https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format">creating</a> and <a href="https://github.com/CocoaPods/CocoaPods/wiki/Sharing-pod-specifications-with-yourself-and-the-world">publishing</a> new podspec files.</p>
 
@@ -1750,7 +1750,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
     <link href="http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5/"/>
     <updated>2011-11-09T23:30:46+00:00</updated>
     <id>http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5</id>
-    <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&#8217;re in a news reader application you might want to let your followers know about an interesting article you just read. If you&#8217;re in a conference schedule app, you not only want to let your followers know about the awesome talks you&#8217;re listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you&#8217;re stuck in&#8230;</p>
+    <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&rsquo;re in a news reader application you might want to let your followers know about an interesting article you just read. If you&rsquo;re in a conference schedule app, you not only want to let your followers know about the awesome talks you&rsquo;re listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you&rsquo;re stuck in&hellip;</p>
 
 <!-- more -->
 
@@ -1763,22 +1763,22 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <ul>
 <li>Providing a secure local storage for user accounts, including their credentials</li>
-<li>Providing an easy way to sign API requests you send to Twitter. You no longer have to include code to handle <a href="https://dev.twitter.com/docs/auth/oauth/faq">OAuth</a> or <a href="https://dev.twitter.com/docs/oauth/xauth">xAuth</a> in your app - this has all been done by Apple for you</li>
+<li>Providing an easy way to sign API requests you send to Twitter. You no longer have to include code to handle <a href="https://dev.twitter.com/docs/auth/oauth/faq">OAuth</a> or <a href="https://dev.twitter.com/docs/oauth/xauth">xAuth</a> in your app &ndash; this has all been done by Apple for you</li>
 <li>Providing a basic UI for composing tweets, including switching the user account you tweet from, uploading images in a tweet and including your current location</li>
 </ul>
 
 
-<p>Lots of free stuff, so let&#8217;s have a look at how much (or little) code we actually need to write to tap this source of awesomeness.</p>
+<p>Lots of free stuff, so let&rsquo;s have a look at how much (or little) code we actually need to write to tap this source of awesomeness.</p>
 
 <h2>Using the Accounts Framework to fetch the list of accounts</h2>
 
-<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you&#8217;ll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will provide easy access to Google+ and Facebook accounts -  we&#8217;ll see.</p>
+<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you&rsquo;ll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will provide easy access to Google+ and Facebook accounts &ndash;  we&rsquo;ll see.</p>
 
 <p>To use the Accounts and Twitter frameworks, we need to add them to the project:</p>
 
 <p><img class="center" src="../images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/add_twitter_accounts.png" title="Add Accounts and Twitter frameworks to the project" ></p>
 
-<p>Once that&#8217;s done, we can use the Accounts framework to fetch the list of Twitter accounts on the device.</p>
+<p>Once that&rsquo;s done, we can use the Accounts framework to fetch the list of Twitter accounts on the device.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1825,7 +1825,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Just like many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we&#8217;re interested in - <code>ACAccountTypeIdentifierTwitter</code> in our case. If we&#8217;re granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we&#8217;ve got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we&#8217;re on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
+<p>Just like many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we&rsquo;re interested in &ndash; <code>ACAccountTypeIdentifierTwitter</code> in our case. If we&rsquo;re granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we&rsquo;ve got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we&rsquo;re on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
 
 <p>Displaying the accounts in a <code>UITableViewController</code> is straightforward:</p>
 
@@ -1870,7 +1870,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <h2>Displaying the public timeline of the selected user</h2>
 
-<p>When the user selects one of the accounts, we want to display a list of recent tweets for this selected account. We&#8217;ll use <code>TWRequest</code> to fetch the list of recent tweets.</p>
+<p>When the user selects one of the accounts, we want to display a list of recent tweets for this selected account. We&rsquo;ll use <code>TWRequest</code> to fetch the list of recent tweets.</p>
 
 <p><code>TWRequest</code> is the centerpiece of the iOS Twitter Framework and relieves us of the burden of having to perform OAuth authentication and request signing on our own. In order for it to do this, we need to provide a reference to the account whose timeline we want to read. We also need to provide the URL of the Twitter API endpoint we want to access. While this might seem a little bit cumbersome at first, this allows us to access not only current API calls but also any new APIs Twitter might come up with in the future without requiring Apple to update the API. Pretty nifty.</p>
 
@@ -1923,13 +1923,13 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Again, we need to provide a completion handler which will be invoked as soon as the call to Twitter returns. As you can also see, we&#8217;re using the same approach as before to make sure we update the UI from the UI thread. It&#8217;s also interesting to see Apple provides us with their own JSON parsing framework - no longer do we need to integrate third party libraries to serialize / deserialize JSON data.</p>
+<p>Again, we need to provide a completion handler which will be invoked as soon as the call to Twitter returns. As you can also see, we&rsquo;re using the same approach as before to make sure we update the UI from the UI thread. It&rsquo;s also interesting to see Apple provides us with their own JSON parsing framework &ndash; no longer do we need to integrate third party libraries to serialize / deserialize JSON data.</p>
 
 <h2>Sending Tweets</h2>
 
 <p>So far, we can choose a Twitter account from the list of Twitter accounts on our iPhone and display the home timeline of this particular user. But how about sending a tweet?</p>
 
-<p>Sending tweets is really easy: you just have to instantiate a new <code>TWTweetComposeViewController</code> and display it - iOS will take care of the rest:</p>
+<p>Sending tweets is really easy: you just have to instantiate a new <code>TWTweetComposeViewController</code> and display it &ndash; iOS will take care of the rest:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1958,9 +1958,9 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <h2>Conclusion</h2>
 
-<p>Integrating Twitter in your own apps has never been easier. With just a few lines of code, we implemented a basic version of a Twitter client that you can use to display a user&#8217;s home timeline and send tweets. Elaborating this code base is left as an exercise to you - feel free to <a href="http://github.com/peterfriese/TwitterClient">fork the code on Github</a> and send me pull requests as you add interesting features!</p>
+<p>Integrating Twitter in your own apps has never been easier. With just a few lines of code, we implemented a basic version of a Twitter client that you can use to display a user&rsquo;s home timeline and send tweets. Elaborating this code base is left as an exercise to you &ndash; feel free to <a href="http://github.com/peterfriese/TwitterClient">fork the code on Github</a> and send me pull requests as you add interesting features!</p>
 
-<p>Here&#8217;s an impression of the current state of the application:</p>
+<p>Here&rsquo;s an impression of the current state of the application:</p>
 
 <ul class="gallery">
 <li><a href="http://www.peterfriese.de/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_1.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - List of local accounts"><img src="http://www.peterfriese.de/thumbs/twitter_client_1_120x150.png" alt="Twitter Client - List of local accounts" /></a></li>
@@ -1983,24 +1983,24 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 <!-- more -->
 
 
-<p>Well, we&#8217;ve come a long way since then and computers are more powerful than ever before. I remember using one of the first versions of <a href="http://www.research.ibm.com/hlt/html/body_history.html">IBM ViaVoice</a> which would quite literally bog down my computer when I tried using it. The quality of speech recognition software has vastly improved and using a clever stack of technology, you can even use speech recognition on your iPhone (the <a href="http://www.tuaw.com/2009/12/08/dragon-dictation-comes-to-the-iphone-wow/">actual recognition is performed on a server</a>, but the effect is stunning nevertheless).</p>
+<p>Well, we&rsquo;ve come a long way since then and computers are more powerful than ever before. I remember using one of the first versions of <a href="http://www.research.ibm.com/hlt/html/body_history.html">IBM ViaVoice</a> which would quite literally bog down my computer when I tried using it. The quality of speech recognition software has vastly improved and using a clever stack of technology, you can even use speech recognition on your iPhone (the <a href="http://www.tuaw.com/2009/12/08/dragon-dictation-comes-to-the-iphone-wow/">actual recognition is performed on a server</a>, but the effect is stunning nevertheless).</p>
 
-<p>With all the hoopla around HTML 5, it would be quite a surprise if modern browsers didn&#8217;t have something in store with regard to voice recognition. And sure enough, there is a W3C specification for a <a href="http://lists.w3.org/Archives/Public/public-xg-htmlspeech/2011Feb/att-0020/api-draft.html">Speech Input API</a>. Looking at the list of authors might give us a hint as to which browser might support this API&#8230;</p>
+<p>With all the hoopla around HTML 5, it would be quite a surprise if modern browsers didn&rsquo;t have something in store with regard to voice recognition. And sure enough, there is a W3C specification for a <a href="http://lists.w3.org/Archives/Public/public-xg-htmlspeech/2011Feb/att-0020/api-draft.html">Speech Input API</a>. Looking at the list of authors might give us a hint as to which browser might support this API&hellip;</p>
 
-<p>Using the speech input API is rather easy. All you have to do is to add the <code>x-webkit-speech</code> attribute to any <code>input</code> tag and you&#8217;re done. If you&#8217;re on a speech-enabled browsers (as of this writing, <a href="http://chrome.blogspot.com/2011/04/everybodys-talking-and-translating-with.html">only Chrome 11</a> supports this out of the box), you can check it out in the input field below. Just click on the microphone icon and start speaking:</p>
+<p>Using the speech input API is rather easy. All you have to do is to add the <code>x-webkit-speech</code> attribute to any <code>input</code> tag and you&rsquo;re done. If you&rsquo;re on a speech-enabled browsers (as of this writing, <a href="http://chrome.blogspot.com/2011/04/everybodys-talking-and-translating-with.html">only Chrome 11</a> supports this out of the box), you can check it out in the input field below. Just click on the microphone icon and start speaking:</p>
 
 <p><input name="speechinput" size="40" placeholder="click the mic and start speaking" x-webkit-speech=""></p>
 
-<p>So, the other day I thought, &#8220;wouldn&#8217;t it be cool if I could use voice recognition to look up my contacts on the social networks I am on?&#8221;. Adding voice recognition support to a website you own is rather easy, as you only have to add the <code>x-webkit-speech</code> attribute to the respective input fields. Enhancing foreign sites, however, turns out to be a little bit more involved. Fortunately, Chrome can augment existing websites by way of so-called <a href="http://code.google.com/chrome/extensions/content_scripts.html">Content Scripts</a>, which are a part of the <a href="http://code.google.com/chrome/extensions/getstarted.html">Chrome Extensions API</a>.</p>
+<p>So, the other day I thought, &ldquo;wouldn&rsquo;t it be cool if I could use voice recognition to look up my contacts on the social networks I am on?&rdquo;. Adding voice recognition support to a website you own is rather easy, as you only have to add the <code>x-webkit-speech</code> attribute to the respective input fields. Enhancing foreign sites, however, turns out to be a little bit more involved. Fortunately, Chrome can augment existing websites by way of so-called <a href="http://code.google.com/chrome/extensions/content_scripts.html">Content Scripts</a>, which are a part of the <a href="http://code.google.com/chrome/extensions/getstarted.html">Chrome Extensions API</a>.</p>
 
-<p>Writing a Chrome Extension for speech-enabling existing text input fields on just about any website <a href="http://github.com/peterfriese/Speak2Search">was a matter of minutes</a>, thanks to the good documentation and some <a href="http://jquery.com/">jQuery</a> to walk the DOM. Putting on the finishing touches took me some more time, and I am proud to present you <a href="http://chrome.google.com/webstore/detail/peldinpdedgdcbdehomnpfndejpoibeb">Speak to Search</a> - a Chrome Extension that lets you talk with your browser. It works with virtually every website that uses regular HTML input fields. By making some smart assumptions, the extension will automatically submit the current form if the input field is a search field. If it is not, the focus will remain in the field and the form will not be submitted. That way, you can fill out e.g. an address form.</p>
+<p>Writing a Chrome Extension for speech-enabling existing text input fields on just about any website <a href="http://github.com/peterfriese/Speak2Search">was a matter of minutes</a>, thanks to the good documentation and some <a href="http://jquery.com/">jQuery</a> to walk the DOM. Putting on the finishing touches took me some more time, and I am proud to present you <a href="http://chrome.google.com/webstore/detail/peldinpdedgdcbdehomnpfndejpoibeb">Speak to Search</a> &ndash; a Chrome Extension that lets you talk with your browser. It works with virtually every website that uses regular HTML input fields. By making some smart assumptions, the extension will automatically submit the current form if the input field is a search field. If it is not, the focus will remain in the field and the form will not be submitted. That way, you can fill out e.g. an address form.</p>
 
 <p>Here is a short video of me using Speak to Search to search for some people on Xing and LinkedIn. Please note that the extension is making sure the speech recognition engine is configured to recognize German names on Xing.</p>
 
 <div class="embed-video-container"><iframe src="http://www.youtube.com/embed/syMpQqMJcKU "></iframe></div>
 
 
-<p>Language makes us human - this is a quote from a <a href="http://www.pbs.org/wnet/humanspark/video/spark-blog-video-dr-steven-pinker-language-makes-us-human/212/">video</a> I found during the research for this blog post. I don&#8217;t necessarily think voice recognition and speech synthesis will make computers more human, but both technologies certainly can help to create a more immersive experience. I am looking forward to seeing a broader use of the new audio capabilities of modern browsers. Feel free to <a href="http://github.com/peterfriese/Speak2Search">grab my code from Github</a> and create something new and exciting!</p>
+<p>Language makes us human &ndash; this is a quote from a <a href="http://www.pbs.org/wnet/humanspark/video/spark-blog-video-dr-steven-pinker-language-makes-us-human/212/">video</a> I found during the research for this blog post. I don&rsquo;t necessarily think voice recognition and speech synthesis will make computers more human, but both technologies certainly can help to create a more immersive experience. I am looking forward to seeing a broader use of the new audio capabilities of modern browsers. Feel free to <a href="http://github.com/peterfriese/Speak2Search">grab my code from Github</a> and create something new and exciting!</p>
 ]]></content>
   </entry>
   
@@ -2009,14 +2009,14 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
     <link href="http://www.peterfriese.de/code-generation-2011-dont-miss-out/"/>
     <updated>2011-05-21T11:09:11+01:00</updated>
     <id>http://www.peterfriese.de/code-generation-2011-dont-miss-out</id>
-    <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven&#8217;t booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
+    <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven&rsquo;t booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> &ndash; a few places are still available!</p>
 
-<p>Quite a number of my colleagues at itemis have been busy preparing for this conference in the past few weeks. Besides working hard to hit the <a href="http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan">Eclipse Release Train milestone for Indigo on June 22nd</a>, the Xtext team brushed up their hands-on sessions &#8221;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=17">Xtext Take I: Creating Code Generators with Xtend2</a>&#8221; and &#8221;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=16">Xtext Take II: Crafting Domain Specific Languages with Xtext and Xbase</a>&#8221;. If you&#8217;ve been using Xtext, you&#8217;re well aware of the power you have at your disposal with this tool. Xbase and Xtend2, however, take this experience to a whole new level. So make sure to mark your calendar for these two sessions!</p>
+<p>Quite a number of my colleagues at itemis have been busy preparing for this conference in the past few weeks. Besides working hard to hit the <a href="http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan">Eclipse Release Train milestone for Indigo on June 22nd</a>, the Xtext team brushed up their hands-on sessions &ldquo;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=17">Xtext Take I: Creating Code Generators with Xtend2</a>&rdquo; and &ldquo;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=16">Xtext Take II: Crafting Domain Specific Languages with Xtext and Xbase</a>&rdquo;. If you&rsquo;ve been using Xtext, you&rsquo;re well aware of the power you have at your disposal with this tool. Xbase and Xtend2, however, take this experience to a whole new level. So make sure to mark your calendar for these two sessions!</p>
 
 <!-- more -->
 
 
-<p>But not only the Xtext team will share their expertise at CG2011 - Markus and Karsten will be also be in town to give hands-on tutorials and report from their experience:</p>
+<p>But not only the Xtext team will share their expertise at CG2011 &ndash; Markus and Karsten will be also be in town to give hands-on tutorials and report from their experience:</p>
 
 <ul>
 <li><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=22">Type Systems for DSLs (Markus Völter)</a></li>
@@ -2025,9 +2025,9 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 </ul>
 
 
-<p>The finale of the conference will be a panel discussion hosted by Markus on the topic of &#8221;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=20">Models, DSLs, Transformations: The Next 5 years</a>&#8221; - this should be a very interesting and lively discussion!</p>
+<p>The finale of the conference will be a panel discussion hosted by Markus on the topic of &ldquo;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=20">Models, DSLs, Transformations: The Next 5 years</a>&rdquo; &ndash; this should be a very interesting and lively discussion!</p>
 
-<p><a href="http://lanyrd.com/people/hbehrens/">Heiko</a> <a href="http://lanyrd.com/people/peterfriese/">and I</a> will present &#8221;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">Cross-Platform Mobile Development with DSLs</a>&#8221; - a <a href="http://lanyrd.com/2011/cg2011/sdpgm/">fast-paced and fun mixture of slides, live coding (or modeling, if you will), videos and audience interaction</a>. Yes, that&#8217;s right - the audience will be part of the show. Make sure to bring your web-enabled mobile phone and get the chance to win a price!</p>
+<p><a href="http://lanyrd.com/people/hbehrens/">Heiko</a> <a href="http://lanyrd.com/people/peterfriese/">and I</a> will present &ldquo;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">Cross-Platform Mobile Development with DSLs</a>&rdquo; &ndash; a <a href="http://lanyrd.com/2011/cg2011/sdpgm/">fast-paced and fun mixture of slides, live coding (or modeling, if you will), videos and audience interaction</a>. Yes, that&rsquo;s right &ndash; the audience will be part of the show. Make sure to bring your web-enabled mobile phone and get the chance to win a price!</p>
 
 <p>To keep track of the conference program(me), we at <a href="http://mobile.itemis.com">itemis mobile</a> have been busy to create a conference planner for your iOS and Android powered mobile phones. Here are the download links:</p>
 
@@ -2042,7 +2042,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 </ul>
 
 
-<p>If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? <a href="mailto:mobile@itemis.de">Drop us a note</a> or track us down at the conference (best chance to see us: <a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">come to our talk</a> ;-) ).</p>
+<p>If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? <a href="mailto:mobile@itemis.de">Drop us a note</a> or track us down at the conference (best chance to see us: <a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">come to our talk</a> ;&ndash;) ).</p>
 ]]></content>
   </entry>
   
@@ -2051,18 +2051,18 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
     <link href="http://www.peterfriese.de/using-nspredicate-to-filter-data/"/>
     <updated>2011-04-22T23:15:36+01:00</updated>
     <id>http://www.peterfriese.de/using-nspredicate-to-filter-data</id>
-    <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you&#8217;re applying a filter to the huge set of data we call the internet.</p>
+    <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day &ndash; each time you use Google, you&rsquo;re applying a filter to the huge set of data we call the internet.</p>
 
 <!-- more -->
 
 
-<p>Even on your local computer, you use services like Spotlight or the search field in your mail application all the time. Apps that lack decent searching and filtering capabilities sometimes are really hard to use, so as developers we should spend some time on thinking how to allow users to filter the data they&#8217;re dealing with.</p>
+<p>Even on your local computer, you use services like Spotlight or the search field in your mail application all the time. Apps that lack decent searching and filtering capabilities sometimes are really hard to use, so as developers we should spend some time on thinking how to allow users to filter the data they&rsquo;re dealing with.</p>
 
-<p>In this post, I am going to focus on ways to filter data. We won&#8217;t be looking at the UI side of things - this is something I&#8217;ll do in a subsequent blog post.</p>
+<p>In this post, I am going to focus on ways to filter data. We won&rsquo;t be looking at the UI side of things &ndash; this is something I&rsquo;ll do in a subsequent blog post.</p>
 
 <h2>Old-skool filtering</h2>
 
-<p>If you look at an arbitrary code base, chances are you&#8217;ll sooner or later run into a piece of code similar to this one:</p>
+<p>If you look at an arbitrary code base, chances are you&rsquo;ll sooner or later run into a piece of code similar to this one:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -2079,7 +2079,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>It&#8217;s a straight-forward approach to filtering an array of items (in this case, we&#8217;re talking about books) using a rather simple <code>if</code>-statement. Nothing wrong with this, but despite the fact we&#8217;re using a fairly simple expression here, the code is rather verbose. We can easily imagine what will happen in case we need to use more complicated selection criteria or a combination of filtering criteria.</p>
+<p>It&rsquo;s a straight-forward approach to filtering an array of items (in this case, we&rsquo;re talking about books) using a rather simple <code>if</code>-statement. Nothing wrong with this, but despite the fact we&rsquo;re using a fairly simple expression here, the code is rather verbose. We can easily imagine what will happen in case we need to use more complicated selection criteria or a combination of filtering criteria.</p>
 
 <h2>Simple filtering with NSPredicate</h2>
 
@@ -2087,7 +2087,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <p>Predicates are <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSPredicate_Class/Reference/NSPredicate.html">expressions that evaluate to a truth value</a>, i.e. <code>true</code> or <code>false</code>. We can use them to perform validation and filtering. In Cocoa, we can use <code>NSPredicate</code> to evaluate single objects, filter arrays and perform queries against Core Data data sets.</p>
 
-<p>Let&#8217;s have a look at how our example looks like when using <code>NSPredicate</code>:</p>
+<p>Let&rsquo;s have a look at how our example looks like when using <code>NSPredicate</code>:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -2102,9 +2102,9 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <h2>Filtering with Regular Expressions</h2>
 
-<p>Regular Expressions can be used to <a href="http://xkcd.com/208/">solve almost any problem ;-)</a> so it&#8217;s good to know you can use them in <code>NSPredicate</code>s as well. To use regular expressions in your <code>NSPredicate</code>, you need to use the <code>MATCHES</code> operator.</p>
+<p>Regular Expressions can be used to <a href="http://xkcd.com/208/">solve almost any problem ;&ndash;)</a> so it&rsquo;s good to know you can use them in <code>NSPredicate</code>s as well. To use regular expressions in your <code>NSPredicate</code>, you need to use the <code>MATCHES</code> operator.</p>
 
-<p>Let&#8217;s filter all books that are about iPad or iPhone programming:</p>
+<p>Let&rsquo;s filter all books that are about iPad or iPhone programming:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -2119,7 +2119,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <h2>Filtering using set operations</h2>
 
-<p>Let&#8217;s for a moment assume you want to filter all books that have been published by your favorite publishers. Using the <code>IN</code> operator, this is rather simple: first, we need to set up a set containing the publishers we&#8217;re interested in. Then, we can create the predicate and finally perform the filtering operation:</p>
+<p>Let&rsquo;s for a moment assume you want to filter all books that have been published by your favorite publishers. Using the <code>IN</code> operator, this is rather simple: first, we need to set up a set containing the publishers we&rsquo;re interested in. Then, we can create the predicate and finally perform the filtering operation:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -2136,7 +2136,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <p><code>NSPredicate</code> relies on <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/KeyValueCoding.html">key-value coding</a> to achieve its magic. On one hand this means your classes need to be <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/Compliant.html#//apple_ref/doc/uid/20002172-BAJEAIEE">KVC compliant</a> in order to be queried using <code>NSPredicate</code> (at least the attributes you want to query). On the other hand, this allows us to perform some very interesting things with very little lines of code.</p>
 
-<p>Let&#8217;s for example retrieve a list of books written by authors with the name &#8220;Mark&#8221;:</p>
+<p>Let&rsquo;s for example retrieve a list of books written by authors with the name &ldquo;Mark&rdquo;:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -2147,7 +2147,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>In case we&#8217;d want to return the value of one of the aggregate functions, we don&#8217;t need to use NSPredicate itself, but instead use KVC directly. Let&#8217;s retrieve the average price of all books on our shelf:</p>
+<p>In case we&rsquo;d want to return the value of one of the aggregate functions, we don&rsquo;t need to use NSPredicate itself, but instead use KVC directly. Let&rsquo;s retrieve the average price of all books on our shelf:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSNumber</span> <span class="o">*</span><span class="n">average</span> <span class="o">=</span> <span class="p">[</span><span class="n">bookshelf</span> <span class="nl">valueForKeyPath:</span><span class="s">@&quot;@avg.price&quot;</span><span class="p">];</span>
@@ -2158,7 +2158,7 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 
 <p>The Cocoa libraries provide some very powerful abstractions which can make your life and that of the people reading your code much easier. It pays off to know about them, so go ahead and browse the Cocoa documentation and hunt for those gems!</p>
 
-<p>Apple&#8217;s <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html">NSPredicate programming guide</a> provides an in-depth documentation for <code>NSPredicate</code> containing all the things I didn&#8217;t cover in this post.</p>
+<p>Apple&rsquo;s <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html">NSPredicate programming guide</a> provides an in-depth documentation for <code>NSPredicate</code> containing all the things I didn&rsquo;t cover in this post.</p>
 
 <p><code>NSPredicate</code> also plays an important role when querying data in Core Data, something we will need to have a look at in one of the next blog posts. Stay tuned!</p>
 
@@ -2173,12 +2173,12 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
     <link href="http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket/"/>
     <updated>2011-02-25T22:15:57+00:00</updated>
     <id>http://www.peterfriese.de/save-a-tree-put-eclipsecon-2011-in-your-pocket</id>
-    <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone - wherever you are!</p>
+    <content type="html"><![CDATA[<p>After the huge success of the mobile apps for Eclipse Summit Europe, we decided to provide mobile apps for EclipseCon 2011, too. So instead of using a printed copy of the conference program, you can browse the schedule on your smart phone &ndash; wherever you are!</p>
 
 <!-- more -->
 
 
-<p>This year, we&#8217;re providing a rather impressive lineup of mobile apps for iPhone, iPod Touch, iPad (thanks to <a href="http://www.compeople.eu/blog/?p=786">Christian Campo who created a stand-alone iPad app</a>), BlackBerry (<a href="http://ekkes-apps.org/">Ekke is working on a updated version, AFAIK</a>), and all other smart phones that feature a browser.</p>
+<p>This year, we&rsquo;re providing a rather impressive lineup of mobile apps for iPhone, iPod Touch, iPad (thanks to <a href="http://www.compeople.eu/blog/?p=786">Christian Campo who created a stand-alone iPad app</a>), BlackBerry (<a href="http://ekkes-apps.org/">Ekke is working on a updated version, AFAIK</a>), and all other smart phones that feature a browser.</p>
 
 <p>All apps allow you to browse the program, select your favorite talks and get to know the speakers (with headshots so you recognise them in the hallways). We also have included maps of the convention center as well as Santa Clara.</p>
 
@@ -2190,12 +2190,12 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
 <p>As of today, both iPhone and Android users can download the apps from the Apple App Store respectively the Android Marketplace. Here are the links:</p>
 
 <ol>
-<li><a href="http://bit.ly/econ2011iphone">EclipseCon 2011 iPhone App</a></li>
-<li><a href="http://bit.ly/econ2011android">EclipseCon 2011 Android App</a></li>
+<li> <a href="http://bit.ly/econ2011iphone">EclipseCon 2011 iPhone App</a></li>
+<li> <a href="http://bit.ly/econ2011android">EclipseCon 2011 Android App</a></li>
 </ol>
 
 
-<p>If you don&#8217;t own an iPhone or Android, you can always use the HTML-only version of the conference program available at <a href="http://bit.ly/econ2011html">http://bit.ly/econ2011html</a>.</p>
+<p>If you don&rsquo;t own an iPhone or Android, you can always use the HTML-only version of the conference program available at <a href="http://bit.ly/econ2011html">http://bit.ly/econ2011html</a>.</p>
 
 <p>The iPad and BlackBerry apps will be available soon, so stay tuned!</p>
 
@@ -2208,26 +2208,26 @@ I haven&#8217;t tried any of these, but <a href="https://github.com/the-teacher/
     <link href="http://www.peterfriese.de/appropriate-use-of-mapkit/"/>
     <updated>2011-02-16T10:48:38+00:00</updated>
     <id>http://www.peterfriese.de/appropriate-use-of-mapkit</id>
-    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&#8217;re violating Google&#8217;s terms of service, I was wondering what in particular was wrong.</p>
+    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&rsquo;re violating Google&rsquo;s terms of service, I was wondering what in particular was wrong.</p>
 
 <!-- more -->
 
 
-<p>At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google&#8217;s terms of service for Maps</a>, but can you spot what is wrong?</p>
+<p>At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google&rsquo;s terms of service for Maps</a>, but can you spot what is wrong?</p>
 
 <ul class="gallery">
 <li><a href="http://www.peterfriese.de/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png" class="fancybox" rel="gallery-b85ba1d38e1c89eca83ecb8ce17b14bc" title="Google Maps in your app - without Google Logo: you're doing it wrong!"><img src="http://www.peterfriese.de/thumbs/maps_without_google_logo_240x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a></li>
 </ul>
 
 
-<p>Maybe you can better see what&#8217;s wrong when I show you another screenshot, this time obeying the TOS:</p>
+<p>Maybe you can better see what&rsquo;s wrong when I show you another screenshot, this time obeying the TOS:</p>
 
 <ul class="gallery">
 <li><a href="http://www.peterfriese.de/images/2011-02-16-appropriate-use-of-mapkit/maps_with_google_logo.png" class="fancybox" rel="gallery-8590c5cd892556ccc1df97f31d1c3e84" title="Google Maps with logo: well done!"><img src="http://www.peterfriese.de/thumbs/maps_with_google_logo_240x300.png" alt="Google Maps with logo: well done!" /></a></li>
 </ul>
 
 
-<p>Can you spot the difference? It&#8217;s the Google logo!</p>
+<p>Can you spot the difference? It&rsquo;s the Google logo!</p>
 
 <p>The reason why it is not shown in the first screenshot is that the bounds for the map are not set correctly. In the offending version of my app, I used a piece of code similar to this one:</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CocoaPods | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/cocoapods/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -23,9 +23,9 @@
 <!--more-->
 
 
-<p>Wouldn't it be awesome if you could just specify a list of dependencies and be done? You might have heard of RubyGems, Maven, Ivy, NuGet or npm that bring dependency management to the worlds of Ruby, Java, .NET and JavaScript developers.</p>
+<p>Wouldn&rsquo;t it be awesome if you could just specify a list of dependencies and be done? You might have heard of RubyGems, Maven, Ivy, NuGet or npm that bring dependency management to the worlds of Ruby, Java, .NET and JavaScript developers.</p>
 
-<p>Well, it turns out there finally is a solution for us Cocoa developers - CocoaPods. Getting started with CocoaPods is really easy and once you started using it, you won't look back again.</p>
+<p>Well, it turns out there finally is a solution for us Cocoa developers &ndash; CocoaPods. Getting started with CocoaPods is really easy and once you started using it, you won&rsquo;t look back again.</p>
 
 <h2>Installation</h2>
 
@@ -38,15 +38,15 @@ pod setup
 
 <h2>Usage</h2>
 
-<p>Using CocoaPods to manage your project's dependencies is a two-step process:</p>
+<p>Using CocoaPods to manage your project&rsquo;s dependencies is a two-step process:</p>
 
 <ol>
-<li>Specify the dependency in you project's dependency specification file, <code>Podfile</code></li>
+<li>Specify the dependency in you project&rsquo;s dependency specification file, <code>Podfile</code></li>
 <li>Run <code>pod install</code></li>
 </ol>
 
 
-<p>Let me illustrate this by way of a simple example. Let's assume you want to build an application with the awesome <a href="http://www.restkit.org">RestKit</a> library. If you have used RestKit before, you know that adding it to your project is a rather involved process. Over the years, it has become significantly easier, but it still needs a very detailed installation instruction with lots of screenshots - check out their <a href="https://github.com/RestKit/RestKit/wiki/Installing-RestKit-in-Xcode-4.x">wiki page</a>.</p>
+<p>Let me illustrate this by way of a simple example. Let&rsquo;s assume you want to build an application with the awesome <a href="http://www.restkit.org">RestKit</a> library. If you have used RestKit before, you know that adding it to your project is a rather involved process. Over the years, it has become significantly easier, but it still needs a very detailed installation instruction with lots of screenshots &ndash; check out their <a href="https://github.com/RestKit/RestKit/wiki/Installing-RestKit-in-Xcode-4.x">wiki page</a>.</p>
 
 <p>With CocoaPods, all you need to do is this:</p>
 
@@ -96,9 +96,9 @@ dependency 'RestKit/ObjectMapping/JSON'
 
 <h2>Where to go from here</h2>
 
-<p>Wasn't that a lot easier than all the other ways to install third party libraries?</p>
+<p>Wasn&rsquo;t that a lot easier than all the other ways to install third party libraries?</p>
 
-<p>If you are curious which libraries are supported by CocoaPods, go to <a href="http://cocoapods.org">CocoaPods.org</a> - they have a nice little UI for searching their pod specification repository. If you are more include to using the command line, you are welcome to use <code>pod search &lt;yoursearchterm&gt;</code> to search for a specific library.</p>
+<p>If you are curious which libraries are supported by CocoaPods, go to <a href="http://cocoapods.org">CocoaPods.org</a> &ndash; they have a nice little UI for searching their pod specification repository. If you are more include to using the command line, you are welcome to use <code>pod search &lt;yoursearchterm&gt;</code> to search for a specific library.</p>
 
 <p>If your preferred library is not yet supported, why not help them out and build a pod spec? <a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a> itself and the <a href="https://github.com/CocoaPods/Specs">pod spec repository</a> are hosted on Github, so adding new pod specifications is really easy. The CocoaPods wiki has a section on <a href="https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format">creating</a> and <a href="https://github.com/CocoaPods/CocoaPods/wiki/Sharing-pod-specifications-with-yourself-and-the-world">publishing</a> new podspec files.</p>
 

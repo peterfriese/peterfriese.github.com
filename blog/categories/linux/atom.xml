@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -40,7 +40,7 @@
     <link href="http://www.peterfriese.de/bugzilla-trouble/"/>
     <updated>2006-07-03T12:06:01+01:00</updated>
     <id>http://www.peterfriese.de/bugzilla-trouble</id>
-    <content type="html"><![CDATA[<p>Back from holidays, I discovered that our customer migrated our development server to a new hardware. Without telling anybody of the devlopment team! First thing I noticed was that Bugzilla didn't work any more: I just got error messages like this: <code>data/versioncache did not return a true value at globals.pl line 628</code>. Googling around returned <a href="http://mozdev.org/pipermail/project_owners/2004-October/003149.html">this</a> mailing list entry which recommends rerunning checksetup.pl. Running <code>./checksetup.pl</code> in the installation directory (under <code>/etc/var/www/bugzilla</code>) did the trick: everything is fine again. On to the next problem!</p>
+    <content type="html"><![CDATA[<p>Back from holidays, I discovered that our customer migrated our development server to a new hardware. Without telling anybody of the devlopment team! First thing I noticed was that Bugzilla didn&rsquo;t work any more: I just got error messages like this: <code>data/versioncache did not return a true value at globals.pl line 628</code>. Googling around returned <a href="http://mozdev.org/pipermail/project_owners/2004-October/003149.html">this</a> mailing list entry which recommends rerunning checksetup.pl. Running <code>./checksetup.pl</code> in the installation directory (under <code>/etc/var/www/bugzilla</code>) did the trick: everything is fine again. On to the next problem!</p>
 ]]></content>
   </entry>
   

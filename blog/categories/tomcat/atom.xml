@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tomcat | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/tomcat/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -30,7 +30,7 @@
     <content type="html"><![CDATA[<p>Setting up <a href="http://tomcat.apache.org/">Tomcat</a> seems to be quite easy: just unpack the core ZIP file, and off you go! But as soon as you want to manage the server, you realize that Tomcat 5.5.x is missing the admin console. Setting up the admin console is easy as well, but is not well documented. So here we go:</p>
 
 <ul>
-<li><p>Get the <a href="http://tomcat.apache.org/download-55.cgi">latest binary builds</a> (apache-tomcat-5.5.12.zip, apache-tomcat-5.5.12-admin.zip and (if you're running on JDK 1.4) apache-tomcat-5.5.12-compat.zip)</p></li>
+<li><p>Get the <a href="http://tomcat.apache.org/download-55.cgi">latest binary builds</a> (apache-tomcat-5.5.12.zip, apache-tomcat-5.5.12-admin.zip and (if you&rsquo;re running on JDK 1.4) apache-tomcat-5.5.12-compat.zip)</p></li>
 <li><pre><code>Unzip the files into the same directory, making sure you obey this order:
 </code></pre>
 

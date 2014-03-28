@@ -4,7 +4,7 @@
   <title><![CDATA[Category: terms of service | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/terms-of-service/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,24 +18,24 @@
     <link href="http://www.peterfriese.de/appropriate-use-of-mapkit/"/>
     <updated>2011-02-16T10:48:38+00:00</updated>
     <id>http://www.peterfriese.de/appropriate-use-of-mapkit</id>
-    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you're violating Google's terms of service, I was wondering what in particular was wrong.</p>
+    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&rsquo;re violating Google&rsquo;s terms of service, I was wondering what in particular was wrong.</p>
 
 <!-- more -->
 
 
-<p>At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google's terms of service for Maps</a>, but can you spot what is wrong?</p>
+<p>At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google&rsquo;s terms of service for Maps</a>, but can you spot what is wrong?</p>
 
 <p><ul class="gallery">
-<li><a href="/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png" class="fancybox" rel="gallery-b85ba1d38e1c89eca83ecb8ce17b14bc" title="Google Maps in your app - without Google Logo: you're doing it wrong!"><img src="/thumbs/maps_without_google_logo_240x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a></li>
+<li><a href="/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png" class="fancybox" rel="gallery-2541fd897745d40b916d6d0c64b0c4f5" title="Google Maps in your app &ndash; without Google Logo: you&rsquo;re doing it wrong!"><img src="/thumbs/maps_without_google_logo_240x300.png" alt="Google Maps in your app &ndash; without Google Logo: you&rsquo;re doing it wrong!" /></a></li>
 </ul></p>
 
-<p>Maybe you can better see what's wrong when I show you another screenshot, this time obeying the TOS:</p>
+<p>Maybe you can better see what&rsquo;s wrong when I show you another screenshot, this time obeying the TOS:</p>
 
 <p><ul class="gallery">
 <li><a href="/images/2011-02-16-appropriate-use-of-mapkit/maps_with_google_logo.png" class="fancybox" rel="gallery-8590c5cd892556ccc1df97f31d1c3e84" title="Google Maps with logo: well done!"><img src="/thumbs/maps_with_google_logo_240x300.png" alt="Google Maps with logo: well done!" /></a></li>
 </ul></p>
 
-<p>Can you spot the difference? It's the Google logo!</p>
+<p>Can you spot the difference? It&rsquo;s the Google logo!</p>
 
 <p>The reason why it is not shown in the first screenshot is that the bounds for the map are not set correctly. In the offending version of my app, I used a piece of code similar to this one:</p>
 

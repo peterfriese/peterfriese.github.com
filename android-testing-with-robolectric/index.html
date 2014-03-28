@@ -61,6 +61,7 @@
     })();
 /* ]]> */</script>
 
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -151,13 +152,13 @@
 <!-- more -->
 
 
-<p>Robolectric achieves this by sitting between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM. This effectively means you can run your tests on your desktop - no waiting for your code to be deployed to the Emulator or a physical device!</p>
+<p>Robolectric achieves this by sitting between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM. This effectively means you can run your tests on your desktop &ndash; no waiting for your code to be deployed to the Emulator or a physical device!</p>
 
 <p>For more detailed background information about the inner workings of Roboloectric, check out <a href="http://www.slideshare.net/tylerschultz/robolectric-android-unit-testing-framework">this presentation</a> and this <a href="http://www.youtube.com/watch?v=T6FWL877txw">talk by Tyler Schultz</a>, one of the committers of Robolectric.</p>
 
 <h2>Creating a New Project</h2>
 
-<p>To better understand how Robolectric works, let&#8217;s create a very simple project we&#8217;ll use as our object under test. We&#8217;ll use Android Studio (at the time of writing, version 0.3.0 was the latest version).</p>
+<p>To better understand how Robolectric works, let&rsquo;s create a very simple project we&rsquo;ll use as our object under test. We&rsquo;ll use Android Studio (at the time of writing, version 0.3.0 was the latest version).</p>
 
 <p>Create a new project using the settings you can see in the following screenshots. Choose <strong>Blank Activity</strong> and <strong>Navigation Type None</strong>.</p>
 
@@ -168,7 +169,7 @@
 </ul>
 
 
-<p>To make things a bit more interesting, let&#8217;s change the UI so we&#8217;ve got a <code>TextView</code>, an <code>InputView</code> and a <code>Button</code> on, just like this:</p>
+<p>To make things a bit more interesting, let&rsquo;s change the UI so we&rsquo;ve got a <code>TextView</code>, an <code>InputView</code> and a <code>Button</code> on, just like this:</p>
 
 <figure class='code'><figcaption><span>res/layout/fragment_main.xml</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -266,11 +267,11 @@
 
 <p>When you create a new project in Android Studio, it is not yet configured for testing. If you used to develop Android apps in Eclipse, you probably are used to creating a new project for your tests. The good news is, with the new Android build system based on Gradle, you can now place your tests in the same project as your production code (refer to the <a href="http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Testing">build system documentation</a> for more details).</p>
 
-<p>However, Android Studio (and the Gradle Plug-in) currently expect you to place tests in <code>src/instrumentTest</code>. As we won&#8217;t be writing instrument tests, we&#8217;d rather like to place our tests in <code>src/test</code>. In order for this to work, we need to tell Gradle and Android Studio we&#8217;re deviating from the default project structure:</p>
+<p>However, Android Studio (and the Gradle Plug-in) currently expect you to place tests in <code>src/instrumentTest</code>. As we won&rsquo;t be writing instrument tests, we&rsquo;d rather like to place our tests in <code>src/test</code>. In order for this to work, we need to tell Gradle and Android Studio we&rsquo;re deviating from the default project structure:</p>
 
 <ol>
 <li>Create a new folder <code>src/test/java</code> to contain your tests.</li>
-<li>Edit <code>build.gradle</code> in your project folder and add the following source set configuration to the Android plug-in configuration:</li>
+<li>Edit <code>build.gradle</code> in your project folder and add the following source set configuration to the Android plug-in configuration, right beneath the <code>defaultConfig</code> configuration:</li>
 </ol>
 
 
@@ -288,7 +289,7 @@
 </ol>
 
 
-<p>You should notice how the icon for your test files folder turns from orange to green:</p>
+<p>You will notice how the icon for your test files folder turns from orange to green:</p>
 
 <p><a href="/images/2013-10-23-android-testing-with-robolectric/robolectric_test_folder.png" class="fancybox" title="Test Folder Setup"><img class="center" src="/thumbs/robolectric_test_folder_200x150.png" alt="Test Folder Setup" /></a></p>
 
@@ -445,7 +446,7 @@
 
 <h3>Adding a Customized Test Runner</h3>
 
-<p>Because of the way Robolectric looks for your <code>AndroidManifest.xml</code> during test startup, it won&#8217;t find the manifest if your tests are located in <code>src/test/java</code>. To alleviate this situation, we need to add a custom test runner.</p>
+<p>Because of the way Robolectric looks for your <code>AndroidManifest.xml</code> during test startup, it won&rsquo;t find the manifest if your tests are located in <code>src/test/java</code>. To alleviate this situation, we need to add a custom test runner.</p>
 
 <p>Add the following file to your project, making sure to place it somewhere in the <code>test</code> tree:</p>
 
@@ -518,7 +519,7 @@
 
 <h2>Writing Your First Robolectric Test</h2>
 
-<p>Let&#8217;s write our first test! Add the following class to <code>src/test/java</code>:</p>
+<p>Let&rsquo;s write our first test! Add the following class to <code>src/test/java</code>:</p>
 
 <figure class='code'><figcaption><span>MainActivityTest.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -563,7 +564,7 @@
 
 <p>Secondly, we added a simple test method, making suer it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it <em>does not</em> fail, we know that something is wrong.</p>
 
-<p>So, let&#8217;s run the test!</p>
+<p>So, let&rsquo;s run the test!</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -604,22 +605,22 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>So, the test failed - just as we expected. You can open the test report (<code>../RobolectricDemoProject/RobolectricDemo/build/test-report/debug/index.html</code>) in your browser to get more detailed information about the test run.</p>
+<p>So, the test failed &ndash; just as we expected. You can open the test report (<code>../RobolectricDemoProject/RobolectricDemo/build/test-report/debug/index.html</code>) in your browser to get more detailed information about the test run.</p>
 
 <h2>Enhancing the Test</h2>
 
-<p>Now that we&#8217;ve got everything in place, let&#8217;s develop a small feature in a test-driven way. You already noted how we enhanced the UI of the application at the beginning, but apart from looking nice, there&#8217;s not much functionality.</p>
+<p>Now that we&rsquo;ve got everything in place, let&rsquo;s develop a small feature in a test-driven way. You already noted how we enhanced the UI of the application at the beginning, but apart from looking nice, there&rsquo;s not much functionality.</p>
 
-<p>Let&#8217;s enhance the app so the user can enter their name, press a button and be greeted by the application.</p>
+<p>Let&rsquo;s enhance the app so the user can enter their name, press a button and be greeted by the application.</p>
 
-<p>Make sure to statically import the Android FEST assertations - they&#8217;ll help us to write our tests in a fluent manner:</p>
+<p>Make sure to statically import the Android FEST assertations &ndash; they&rsquo;ll help us to write our tests in a fluent manner:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">fest</span><span class="o">.</span><span class="na">assertions</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">ANDROID</span><span class="o">.</span><span class="na">assertThat</span><span class="o">;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>As we need to have access to the app&#8217;s main activity in all of our tests, let&#8217;s add a private field for it and create a setup method that will create a fresh activity before each test is run:</p>
+<p>As we need to have access to the app&rsquo;s main activity in all of our tests, let&rsquo;s add a private field for it and create a setup method that will create a fresh activity before each test is run:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -667,7 +668,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Next, let&#8217;s write a test that places a text inside the edit field, presses the button and compares the result in the text view with the expected result.</p>
+<p>Next, let&rsquo;s write a test that places a text inside the edit field, presses the button and compares the result in the text view with the expected result.</p>
 
 <p>Here is the test method:</p>
 
@@ -696,7 +697,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>When you run the test, it will obviously fail, so let&#8217;s fix this.</p>
+<p>When you run the test, it will obviously fail, so let&rsquo;s fix this.</p>
 
 <p>Open <code>MainActivity.java</code> and insert the following private class:</p>
 
@@ -771,7 +772,7 @@
 
 <h2>Conclusion</h2>
 
-<p>Setting up Robolectric so that you can use both Gradle and Android Studio may not be as simple as it should be, but it&#8217;s reasonably easy with the information I have given you above. Adding Robolectric to a new Android project is just a matter of minutes with these instructions and helps you save a lot of time you&#8217;d have had to spend otherwise running the tests on the emulator or on physical devices.</p>
+<p>Setting up Robolectric so that you can use both Gradle and Android Studio may not be as simple as it should be, but it&rsquo;s reasonably easy with the information I have given you above. Adding Robolectric to a new Android project is just a matter of minutes with these instructions and helps you save a lot of time you&rsquo;d have had to spend otherwise running the tests on the emulator or on physical devices.</p>
 
 <p>The source code for this blog post is <a href="https://github.com/peterfriese/RobolectricDemoProject">available on Github</a>.</p>
 
@@ -857,7 +858,7 @@
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -933,9 +934,9 @@
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -944,8 +945,6 @@
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

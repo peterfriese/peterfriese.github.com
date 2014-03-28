@@ -4,7 +4,7 @@
   <title><![CDATA[Category: UDID | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/udid/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,31 +18,31 @@
     <link href="http://www.peterfriese.de/whats-your-number/"/>
     <updated>2011-01-27T01:00:47+00:00</updated>
     <id>http://www.peterfriese.de/whats-your-number</id>
-    <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you've been asking yourself "what's this number, and where do I find it?", read on!</p>
+    <content type="html"><![CDATA[<p>If you take part in a beta test for an iPhone app, the app developer will likely ask you to send him the UDID of your iPhone. If you&rsquo;ve been asking yourself &ldquo;what&rsquo;s this number, and where do I find it?&rdquo;, read on!</p>
 
 <!-- more -->
 
 
-<p>The <strong>U</strong>nique <strong>D</strong>evice <strong>ID</strong>entifier (UDID) is a 40-digit number that uniquely identifies your iPhone or iPad. It's tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.</p>
+<p>The <strong>U</strong>nique <strong>D</strong>evice <strong>ID</strong>entifier (UDID) is a 40-digit number that uniquely identifies your iPhone or iPad. It&rsquo;s tied to your device, not to a SIM card you might (or might not, depending on the type of device) have inserted.</p>
 
-<p>Here's how you can find this number and send it to your developer:</p>
+<p>Here&rsquo;s how you can find this number and send it to your developer:</p>
 
 <ol>
 <li>Connect your iPhone / iPad to your computer using the white USB connection cable.</li>
-<li>Wait for iTunes to start up. If it doesn't start automatically, start it manually (Windows users will find it in the depths of the Start Menu, Mac users can use Spotlight to search for it).</li>
+<li>Wait for iTunes to start up. If it doesn&rsquo;t start automatically, start it manually (Windows users will find it in the depths of the Start Menu, Mac users can use Spotlight to search for it).</li>
 <li>Click on the name of your iPhone / iPad on the left-hand side of the iTunes Window:
- <a href="/images/2011-01-27-whats-your-number/whatsyournumber_screenshot_1.jpg" class="fancybox" title="Finding your iPhone's UDID, step 1"><img class="right" src="/thumbs/whatsyournumber_screenshot_1_927x348.jpg" alt="Finding your iPhone's UDID, step 1" /></a></li>
+ <a href="/images/2011-01-27-whats-your-number/whatsyournumber_screenshot_1.jpg" class="fancybox" title="Finding your iPhone&rsquo;s UDID, step 1"><img class="right" src="/thumbs/whatsyournumber_screenshot_1_927x348.jpg" alt="Finding your iPhone&rsquo;s UDID, step 1" /></a></li>
 <li>Details about your device will be displayed in the main area of the iTunes window.</li>
 <li>Find the label titled <strong>Serial Number</strong>. The serial number IS NOT the UDID!</li>
 <li>Holding down the CMD (on the Mac) or the CTRL (on Windows) key, click on the label <strong>Serial Number</strong></li>
-<li>The label's title will change to <strong>Identifier (UDID)</strong>:
- <a href="/images/2011-01-27-whats-your-number/whatsyournumber_screenshot_2.jpg" class="fancybox" title="Finding your iPhone's UDID, step 2"><img class="right" src="/thumbs/whatsyournumber_screenshot_2_927x348.jpg" alt="Finding your iPhone's UDID, step 2" /></a></li>
+<li>The label&rsquo;s title will change to <strong>Identifier (UDID)</strong>:
+ <a href="/images/2011-01-27-whats-your-number/whatsyournumber_screenshot_2.jpg" class="fancybox" title="Finding your iPhone&rsquo;s UDID, step 2"><img class="right" src="/thumbs/whatsyournumber_screenshot_2_927x348.jpg" alt="Finding your iPhone&rsquo;s UDID, step 2" /></a></li>
 <li>Press CMD+C (on Mac) or CTRL+C (on Windows) to copy the UDID to your clipboard</li>
 <li>Open a new mail, insert the UDID and a friendly message and send it to your developer.</li>
 </ol>
 
 
-<p>Easy, isn't it?</p>
+<p>Easy, isn&rsquo;t it?</p>
 
 <p>Oh, and please do NOT send a screenshot of the UDID. You should know better now.</p>
 ]]></content>

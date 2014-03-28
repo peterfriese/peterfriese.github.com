@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="In this post, I&#8217;ll show you how to create a simple OSGI-based servlet. Later, we will deploy this servlet to an Amazon EC 2 instance - this &hellip;">
+  <meta name="description" content="In this post, I&rsquo;ll show you how to create a simple OSGI-based servlet. Later, we will deploy this servlet to an Amazon EC 2 instance &ndash; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -60,6 +60,7 @@
         t.parentNode.insertBefore(s, t);
     })();
 /* ]]> */</script>
+
 
   
   <script type="text/javascript">
@@ -142,7 +143,7 @@
 
 <div class="entry-content">
   
-  <p>In this post, I&#8217;ll show you how to create a simple OSGI-based servlet. Later, we will deploy this servlet to an Amazon EC 2 instance - this should be fun!</p>
+  <p>In this post, I&rsquo;ll show you how to create a simple OSGI-based servlet. Later, we will deploy this servlet to an Amazon EC 2 instance &ndash; this should be fun!</p>
 
 <!-- more -->
 
@@ -152,27 +153,21 @@
 <p><strong>First of all</strong>, some preliminary steps. We need to create a new OSGi project and add some dependencies:</p>
 
 <ol>
-<li><p>Create a new plug-in project, naming it <em>simple.servlet</em>. Make sure to select <em>Equinox</em> as the target OSGI framework on the first page of the wizard. Also make sure you&#8217;ve got an activator (that option is on by default).</p></li>
-<li><p>Open the manifest editor and add the following packages to the Imported Packages section on the Dependencies tab:</p></li>
+<li><p> Create a new plug-in project, naming it <em>simple.servlet</em>. Make sure to select <em>Equinox</em> as the target OSGI framework on the first page of the wizard. Also make sure you&rsquo;ve got an activator (that option is on by default).</p></li>
+<li><p> Open the manifest editor and add the following packages to the Imported Packages section on the Dependencies tab:</p>
+
+<ul>
+<li><p>javax.servlet</p></li>
+<li><p>javax.servlet.http</p></li>
+<li><p>org.osgi.framework</p></li>
+<li><p>org.osgi.service.http</p></li>
+<li><p>org.osgi.util.tracker</p></li>
+</ul>
+</li>
 </ol>
 
 
-<pre><code>* javax.servlet
-
-
-* javax.servlet.http
-
-
-* org.osgi.framework
-
-
-* org.osgi.service.http
-
-
-* org.osgi.util.tracker
-</code></pre>
-
-<p><strong>Next</strong>, let&#8217;s create the servlet. Servlets are plain Java classes that implement the javax.servlet.Servlet interface. As we want to serve information over HTTP, we can just create a subclass of javax.servlet.http.HttpServlet which already does some of the heavy lifting for us. All we need to do is override the doGet() method. This method does not have a return value. Instead, we need to fill its second parameter, <code>HttpServletResponse resp</code> with the text we want the web browser to display. We could return HTML, but for simplicity&#8217;s sake, let&#8217;s just return plain text (so make sure to set the content type to <code>text/plain</code>):</p>
+<p><strong>Next</strong>, let&rsquo;s create the servlet. Servlets are plain Java classes that implement the javax.servlet.Servlet interface. As we want to serve information over HTTP, we can just create a subclass of javax.servlet.http.HttpServlet which already does some of the heavy lifting for us. All we need to do is override the doGet() method. This method does not have a return value. Instead, we need to fill its second parameter, <code>HttpServletResponse resp</code> with the text we want the web browser to display. We could return HTML, but for simplicity&rsquo;s sake, let&rsquo;s just return plain text (so make sure to set the content type to <code>text/plain</code>):</p>
 
 <pre><code>package simple.servlet;
 import java.io.IOException;
@@ -193,9 +188,9 @@ public class SimpleServlet extends HttpServlet {
 }
 </code></pre>
 
-<p><strong>In order for the servlet to be accessible</strong> via HTTP, we need to register it. If you have done some JEE/J2EE development, you know that servlets are registered using the <code>web.xml</code> servlet descriptor. As we&#8217;re not in the JEE world any longer, we can&#8217;t go down this road. Instead, we will register the servlet using a <code>org.osgi.util.tracker.ServiceTracker</code>. It&#8217;s a little bit more code to write, but let me tell you: it&#8217;s worth it as you&#8217;ll see very soon.</p>
+<p><strong>In order for the servlet to be accessible</strong> via HTTP, we need to register it. If you have done some JEE/J2EE development, you know that servlets are registered using the <code>web.xml</code> servlet descriptor. As we&rsquo;re not in the JEE world any longer, we can&rsquo;t go down this road. Instead, we will register the servlet using a <code>org.osgi.util.tracker.ServiceTracker</code>. It&rsquo;s a little bit more code to write, but let me tell you: it&rsquo;s worth it as you&rsquo;ll see very soon.</p>
 
-<p>The service tracker will be registered for a specific class - in our case that&#8217;s <code>org.osgi.service.http.HttpService</code>:</p>
+<p>The service tracker will be registered for a specific class &ndash; in our case that&rsquo;s <code>org.osgi.service.http.HttpService</code>:</p>
 
 <pre><code>package simple.servlet;
 
@@ -247,7 +242,7 @@ public class HttpServiceTracker extends ServiceTracker {
 }
 </code></pre>
 
-<p><strong>Now</strong> that we&#8217;ve got the servlet in place, we need to make sure the service tracker is started and stopped when our bundle is started and stopped. Those of you familiar with OSGi know where we&#8217;re heading now: we need to implement the <code>start()</code> and <code>stop()</code> methods of our activator:</p>
+<p><strong>Now</strong> that we&rsquo;ve got the servlet in place, we need to make sure the service tracker is started and stopped when our bundle is started and stopped. Those of you familiar with OSGi know where we&rsquo;re heading now: we need to implement the <code>start()</code> and <code>stop()</code> methods of our activator:</p>
 
 <pre><code>package simple.servlet;
 
@@ -274,39 +269,23 @@ public class Activator implements BundleActivator {
 <p><strong>To test your servlet locally</strong>, create a new launch config:</p>
 
 <ol>
-<li><p>In the main menu, select <em>Run -> Run Configurations&#8230;</em></p></li>
-<li><p>Double click on <em>OSGi Framework</em> in the tree on the left hand side to create a new OSGi-based launch config
+<li><p> In the main menu, select <em>Run &ndash;> Run Configurations&hellip;</em></p></li>
+<li><p> Double click on <em>OSGi Framework</em> in the tree on the left hand side to create a new OSGi-based launch config
 and name it <em>Simple Servlet (OSGi)</em></p></li>
-<li><p>Make sure you select the following <strong>eight (8)</strong> bundles on the <em>Bundles</em> tab:</p></li>
-</ol>
-
-
-<pre><code>1. simple.servlet
-
-
-2. javax.servlet
-
-
-3. org.eclipse.equinox.http.jetty
-
-
-4. org.eclipse.equinox.http.servlet
-
-
-5. org.eclispe.osgi
-
-
-6. org.eclispe.osgi.services
-
-
-7. org.mortbay.jetty.server
-
-
-8. org.mortbay.jetty.util
-</code></pre>
+<li><p> Make sure you select the following <strong>eight (8)</strong> bundles on the <em>Bundles</em> tab:</p>
 
 <ol>
-<li>Head over to the <em>Arguments</em> tab, making sure the <em>VM arguments</em> text box reads <code>-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dorg.osgi.service.http.port=8080</code></li>
+<li><p>simple.servlet</p></li>
+<li><p>javax.servlet</p></li>
+<li><p>org.eclipse.equinox.http.jetty</p></li>
+<li><p>org.eclipse.equinox.http.servlet</p></li>
+<li><p>org.eclispe.osgi</p></li>
+<li><p>org.eclispe.osgi.services</p></li>
+<li><p>org.mortbay.jetty.server</p></li>
+<li><p>org.mortbay.jetty.util</p></li>
+</ol>
+</li>
+<li><p> Head over to the <em>Arguments</em> tab, making sure the <em>VM arguments</em> text box reads <code>-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dorg.osgi.service.http.port=8080</code></p></li>
 </ol>
 
 
@@ -316,7 +295,7 @@ and name it <em>Simple Servlet (OSGi)</em></p></li>
 
 <p><a href="http://farm3.static.flickr.com/2775/4499763290_c0045c441b_o.jpg"><img src="http://farm3.static.flickr.com/2775/4499763290_00e3405795_m.jpg" alt="OSGi SimpleServlet, local deployment" /></a></p>
 
-<p><strong>Congratulations</strong>, you&#8217;ve just built your first OSGi-enabled servlet. In the next post, I&#8217;ll show you how to deploy this servlet in an Amazon EC2 instance. You can <a href="http://code.google.com/p/peterfriese/source/browse/#svn/osgi/trunk/simple.servlet">download the source code</a> for this post from my SVN repository on Google code.</p>
+<p><strong>Congratulations</strong>, you&rsquo;ve just built your first OSGi-enabled servlet. In the next post, I&rsquo;ll show you how to deploy this servlet in an Amazon EC2 instance. You can <a href="http://code.google.com/p/peterfriese/source/browse/#svn/osgi/trunk/simple.servlet">download the source code</a> for this post from my SVN repository on Google code.</p>
 
 </div>
 
@@ -400,7 +379,7 @@ and name it <em>Simple Servlet (OSGi)</em></p></li>
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -476,9 +455,9 @@ and name it <em>Simple Servlet (OSGi)</em></p></li>
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -487,8 +466,6 @@ and name it <em>Simple Servlet (OSGi)</em></p></li>
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

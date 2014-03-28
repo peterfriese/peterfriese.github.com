@@ -61,6 +61,7 @@
     })();
 /* ]]> */</script>
 
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -142,7 +143,7 @@
 
 <div class="entry-content">
   
-  <p>In my current project, I need to launch an external application and maybe execute some additional commands on this external application. Due to the very nature of the project, the whole system will always be run on Mac OS X. So I thought, &#8220;why not use AppleScript&#8221;?<!-- more -->
+  <p>In my current project, I need to launch an external application and maybe execute some additional commands on this external application. Due to the very nature of the project, the whole system will always be run on Mac OS X. So I thought, &ldquo;why not use AppleScript&rdquo;?<!-- more -->
 Turns out using AppleScript to launch applications is fairly easy, all you have to do is</p>
 
 <pre><code>tell application "name of your app" to launch
@@ -153,7 +154,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
 <pre><code>osascript -e 'tell app "iTunes" to launch'
 </code></pre>
 
-<p>So far so good. Should be easy to do this from Java, shouldn&#8217;t it? Turns out it&#8217;s not so easy at all. Let&#8217;s try this:</p>
+<p>So far so good. Should be easy to do this from Java, shouldn&rsquo;t it? Turns out it&rsquo;s not so easy at all. Let&rsquo;s try this:</p>
 
 <pre><code>  String launchCmd = "osascript -e 'tell application \"iTunes\" to play'";
   process = Runtime.getRuntime().exec(launchCmd);
@@ -165,7 +166,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
   }
 </code></pre>
 
-<p>I&#8217;m not sure why, but it results in a nasty &#8221;<em>0:1: syntax error: A unknown token can&#8217;t go here. (-2740)</em>&#8221; error message.</p>
+<p>I&rsquo;m not sure why, but it results in a nasty &ldquo;<em>0:1: syntax error: A unknown token can&rsquo;t go here. (-2740)</em>&rdquo; error message.</p>
 
 <p>But there is another signature for Runtime.exec:</p>
 
@@ -179,7 +180,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
   }
 </code></pre>
 
-<p>&#8230; and this works out just fine!</p>
+<p>&hellip; and this works out just fine!</p>
 
 </div>
 
@@ -263,7 +264,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -339,9 +340,9 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -350,8 +351,6 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

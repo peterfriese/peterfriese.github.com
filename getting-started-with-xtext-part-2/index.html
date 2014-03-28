@@ -61,6 +61,7 @@
     })();
 /* ]]> */</script>
 
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -146,24 +147,24 @@
 
 <h3>Goal</h3>
 
-<p>Let&#8217;s imagine we want to create an application for orders. People can sign in to the system, place orders for various items, check out and have them sent to their address. Very simple, but we can show a lot of things here.</p>
+<p>Let&rsquo;s imagine we want to create an application for orders. People can sign in to the system, place orders for various items, check out and have them sent to their address. Very simple, but we can show a lot of things here.</p>
 
-<p>As we expect to be writing more than one application of this type and as we also would like to be able to express the structure of the application on a business level (one of the major drivers for DSLs and MDSD for that matter), we come up with the idea of using a DSL to describe what the application does. Defining the DSL is what we did last week. This week, we need to map the concepts of the DSL to some code and some APIs we&#8217;re going to program against.</p>
+<p>As we expect to be writing more than one application of this type and as we also would like to be able to express the structure of the application on a business level (one of the major drivers for DSLs and MDSD for that matter), we come up with the idea of using a DSL to describe what the application does. Defining the DSL is what we did last week. This week, we need to map the concepts of the DSL to some code and some APIs we&rsquo;re going to program against.</p>
 
 <!-- more -->
 
 
-<p>So, we&#8217;re going to create a set of code templates for a code generator that can then read our DSL models and create persistence code for us.</p>
+<p>So, we&rsquo;re going to create a set of code templates for a code generator that can then read our DSL models and create persistence code for us.</p>
 
 <h3>Prepare</h3>
 
-<p>In order to draw any benefit from this post, you need to have a running version of the DSL we created last time round. If you&#8217;re new to this series, please go back one week and follow along the steps outlined in last week&#8217;s article. It shouldn&#8217;t take you longer than 30 minutes, and I promise we&#8217;ll wait here for you.</p>
+<p>In order to draw any benefit from this post, you need to have a running version of the DSL we created last time round. If you&rsquo;re new to this series, please go back one week and follow along the steps outlined in last week&rsquo;s article. It shouldn&rsquo;t take you longer than 30 minutes, and I promise we&rsquo;ll wait here for you.</p>
 
 <h3>Create a main template</h3>
 
-<p>As we&#8217;re probably going to create more than one kind of class (we&#8217;ll have Entity beans, DAOs and maybe some interfaces), it is a wise idea to separate all those templates into separate files. The code generator then needs to invoke all those template files in order to generate our application. To make things more maintainable, every code generator should have a main entry point, so let&#8217;s create a main template file which serves as this main entry point.</p>
+<p>As we&rsquo;re probably going to create more than one kind of class (we&rsquo;ll have Entity beans, DAOs and maybe some interfaces), it is a wise idea to separate all those templates into separate files. The code generator then needs to invoke all those template files in order to generate our application. To make things more maintainable, every code generator should have a main entry point, so let&rsquo;s create a main template file which serves as this main entry point.</p>
 
-<p>First, please <em>delete</em> everything in <em>org.xtext.example.entity.generator/templates</em>. Then, create a new <em>Xpand</em> template in this directory by selecting <em>File -> New -> Other &#8230; -> Xpand Template</em>. This is going to be our main template, so let&#8217;s call it <em>Main.xpt</em>. An empty editor will open.</p>
+<p>First, please <em>delete</em> everything in <em>org.xtext.example.entity.generator/templates</em>. Then, create a new <em>Xpand</em> template in this directory by selecting <em>File &ndash;> New &ndash;> Other &hellip; &ndash;> Xpand Template</em>. This is going to be our main template, so let&rsquo;s call it <em>Main.xpt</em>. An empty editor will open.</p>
 
 <p>Insert the following line:</p>
 
@@ -181,13 +182,13 @@
 «ENDDEFINE»
 </code></pre>
 
-<p>This will add a new template called <em>main</em> to your template file. By specifying <em>FOR Model</em>, we specify that this template will later be bound to a variable representing your model. The <em>EXPAND&#8230;FOREACH</em> statement will invoke a template called <em>entity</em> in a template file called <em>Entity</em> for all elements of the collection <em>types</em> in your model. Remember, your model contains a number of entities and type definitions. These are stored in the collection <em>types</em>. The <em>typeSelect(Entity)</em> statement makes sure the generator only considers elements which are of type <em>Entity</em> (we do not want to create Java beans for the plain data types).</p>
+<p>This will add a new template called <em>main</em> to your template file. By specifying <em>FOR Model</em>, we specify that this template will later be bound to a variable representing your model. The <em>EXPAND&hellip;FOREACH</em> statement will invoke a template called <em>entity</em> in a template file called <em>Entity</em> for all elements of the collection <em>types</em> in your model. Remember, your model contains a number of entities and type definitions. These are stored in the collection <em>types</em>. The <em>typeSelect(Entity)</em> statement makes sure the generator only considers elements which are of type <em>Entity</em> (we do not want to create Java beans for the plain data types).</p>
 
 <h3>Create a template for Java beans</h3>
 
-<p>Every data-oriented application needs a bunch of classes to hold the data. Usually referred to as <em>entities</em>, these classes are POJOs in our case. So, let&#8217;s now create a template which helps us to create POJOs from our model.</p>
+<p>Every data-oriented application needs a bunch of classes to hold the data. Usually referred to as <em>entities</em>, these classes are POJOs in our case. So, let&rsquo;s now create a template which helps us to create POJOs from our model.</p>
 
-<p>Please add another <em>Xpand template</em> to your project by selecting <em>File -> New -> Other &#8230; -> Xpand Template</em>. Name the new file <em>Entity.xpt</em>, making sure to save it to the same folder as <em>Main.xpt</em>.</p>
+<p>Please add another <em>Xpand template</em> to your project by selecting <em>File &ndash;> New &ndash;> Other &hellip; &ndash;> Xpand Template</em>. Name the new file <em>Entity.xpt</em>, making sure to save it to the same folder as <em>Main.xpt</em>.</p>
 
 <p>Again, start the file by importing the meta model:</p>
 
@@ -205,7 +206,7 @@
 «ENDDEFINE»
 </code></pre>
 
-<p>This template will create a new Java file for each entity instance it is invoked for. This is achieved by the <em>FILE</em> statement, which takes the name of the output file as it&#8217;s first parameter.</p>
+<p>This template will create a new Java file for each entity instance it is invoked for. This is achieved by the <em>FILE</em> statement, which takes the name of the output file as it&rsquo;s first parameter.</p>
 
 <p>As you can guess, we also need a template to create the attributes, so please add the following lines:</p>
 
@@ -226,7 +227,7 @@
 
 <h3>Create a template for a DAO</h3>
 
-<p>To load entities from a database and save them back, we will need to write some entities, but again, this is something the generator can do for us, so let&#8217;s write a template:</p>
+<p>To load entities from a database and save them back, we will need to write some entities, but again, this is something the generator can do for us, so let&rsquo;s write a template:</p>
 
 <p>Create a template <em>DAO.xpt</em> and insert this text:</p>
 
@@ -328,7 +329,7 @@ entity OrderLine {
 
 <p>Before we can actually start the generator and transform our model, we need to adjust some aspects of the generator project.</p>
 
-<p>First, please open the generator workflow in <em>/org.xtext.example.entity.generator/src/workflow/EntityGenerator.mwe</em>. We need to change the name of the root template so it matches the name of the root template we chose. We also would like the generator to format the output properly, so we&#8217;re going to add an output beautifier.</p>
+<p>First, please open the generator workflow in <em>/org.xtext.example.entity.generator/src/workflow/EntityGenerator.mwe</em>. We need to change the name of the root template so it matches the name of the root template we chose. We also would like the generator to format the output properly, so we&rsquo;re going to add an output beautifier.</p>
 
 <p>Change the generator component in the workflow file to match the following:</p>
 
@@ -358,7 +359,7 @@ entity OrderLine {
 
 <h3>Running the generator</h3>
 
-<p>To run the generator, simply select the workflow file <em>/org.xtext.example.entity.generator/src/workflow/EntityGenerator.mwe</em> and choose <em>Run as&#8230; -> MWE Workflow</em> from the context menu. You&#8217;ll see a bunch of log messages in the console view, and after a few seconds, you&#8217;ll find a bunch of just generated files in <em>/org.xtext.example.entity.generator/src-gen</em>.</p>
+<p>To run the generator, simply select the workflow file <em>/org.xtext.example.entity.generator/src/workflow/EntityGenerator.mwe</em> and choose <em>Run as&hellip; &ndash;> MWE Workflow</em> from the context menu. You&rsquo;ll see a bunch of log messages in the console view, and after a few seconds, you&rsquo;ll find a bunch of just generated files in <em>/org.xtext.example.entity.generator/src-gen</em>.</p>
 
 <h3>Using the DSL to drive the generator</h3>
 
@@ -367,63 +368,33 @@ entity OrderLine {
 <p>Actually, it is very easy if you follow these steps:</p>
 
 <ol>
-<li><p>Start the DSL in a runtime workbench (refer to the last installment to see how)</p></li>
-<li><p>In the runtime workspace, create a new <em>Eclipse Plug-in Project</em>. Choose any name you like, e.g. <em>org.xtext.example.entity.mymodel</em>. Make sure you deselect <em>Generate an activator&#8230;</em> on the second page of the wizard - we don&#8217;t need one.</p></li>
-<li><p>Add all of the following dependencies to the newly created project&#8217;s manifest file:</p></li>
-</ol>
+<li><p> Start the DSL in a runtime workbench (refer to the last installment to see how)</p></li>
+<li><p> In the runtime workspace, create a new <em>Eclipse Plug-in Project</em>. Choose any name you like, e.g. <em>org.xtext.example.entity.mymodel</em>. Make sure you deselect <em>Generate an activator&hellip;</em> on the second page of the wizard &ndash; we don&rsquo;t need one.</p></li>
+<li><p> Add all of the following dependencies to the newly created project&rsquo;s manifest file:</p>
 
+<ul>
+<li><p>org.xtext.example.entity</p></li>
+<li><p>org.eclipse.xpand</p></li>
+<li><p>org.eclipse.xtend</p></li>
+<li><p>org.eclipse.xtext</p></li>
+<li><p>org.eclipse.emf.mwe.core</p></li>
+<li><p>org.eclipse.emf.mwe.utils</p></li>
+<li><p>org.eclipse.xtend.typesystem.emf</p></li>
+<li><p>org.eclipse.jface.text</p></li>
+<li><p>org.eclipse.core.runtime</p></li>
+<li><p>org.eclipse.jdt.core</p></li>
+<li><p>org.eclipse.xtext.log4j</p></li>
+<li><p>com.ibm.icu</p></li>
+<li><p>org.xtext.example.entity.generator</p></li>
+</ul>
+</li>
+<li><p> Create a new workflow file in <em>/org.xtext.example.entity.mymodel/src/workflow/EntityGenerator.mwe</em> and insert the following text:</p>
 
-<pre><code>* org.xtext.example.entity
-
-
-* org.eclipse.xpand
-
-
-* org.eclipse.xtend
-
-
-* org.eclipse.xtext
-
-
-* org.eclipse.emf.mwe.core
-
-
-* org.eclipse.emf.mwe.utils
-
-
-* org.eclipse.xtend.typesystem.emf
-
-* org.eclipse.jface.text
-
-
-* org.eclipse.core.runtime
-
-
-* org.eclipse.jdt.core
-
-
-* org.eclipse.xtext.log4j
-
-
-* com.ibm.icu
-
-
-* org.xtext.example.entity.generator
-</code></pre>
-
-<ol>
-<li>Create a new workflow file in <em>/org.xtext.example.entity.mymodel/src/workflow/EntityGenerator.mwe</em> and insert the following text:</li>
-</ol>
-
-
-<pre><code>&lt;workflow&gt;
-  &lt;cartridge file="workflow/EntityGenerator.mwe" model="classpath:/model/MyModel.entity"/&gt;
-&lt;/workflow&gt;
-</code></pre>
-
-<ol>
-<li><p>Patch the workflow file in the generator: Go back to the original workspace and change the line containing <em><component class="org.eclipse.xtext.MweReader" uri="..._ to _<component class="org.eclipse.xtext.MweReader" uri="${model}"></em></p></li>
-<li><p>Go back to the runtime workspace and create a new file <em>MyModel.entity</em> in <em>/org.xtext.example.entity.mymodel/src/model/MyModel.entity</em>.</p></li>
+<p><workflow>
+  <cartridge file="workflow/EntityGenerator.mwe" model="classpath:/model/MyModel.entity"/>
+</workflow></p></li>
+<li><p> Patch the workflow file in the generator: Go back to the original workspace and change the line containing <em><component class="org.eclipse.xtext.MweReader" uri="..._ to _<component class="org.eclipse.xtext.MweReader" uri="${model}"></em></p></li>
+<li><p> Go back to the runtime workspace and create a new file <em>MyModel.entity</em> in <em>/org.xtext.example.entity.mymodel/src/model/MyModel.entity</em>.</p></li>
 </ol>
 
 
@@ -431,11 +402,11 @@ entity OrderLine {
 
 <h3>Conclusion</h3>
 
-<p>I hope the last section didn&#8217;t bother you too much. The good news is that we&#8217;re going to provide a wizard which will help you setting up DSL model projects - see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=281214">bug 281214</a>.</p>
+<p>I hope the last section didn&rsquo;t bother you too much. The good news is that we&rsquo;re going to provide a wizard which will help you setting up DSL model projects &ndash; see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=281214">bug 281214</a>.</p>
 
-<p>Due to space limitations, this example is not complete in a sense that you can generate a fully functional CRUD application from it. You should, however be able to see what&#8217;s possible with textual DSLs and code generation.</p>
+<p>Due to space limitations, this example is not complete in a sense that you can generate a fully functional CRUD application from it. You should, however be able to see what&rsquo;s possible with textual DSLs and code generation.</p>
 
-<p>If you&#8217;re interested in seeing the whole generator, drop me a line (peter dot friese [at] itemis dot de) or DM me on Twitter (my Twitter ID is @peterfriese).</p>
+<p>If you&rsquo;re interested in seeing the whole generator, drop me a line (peter dot friese [at] itemis dot de) or DM me on Twitter (my Twitter ID is @peterfriese).</p>
 
 <h3>Download the code</h3>
 
@@ -523,7 +494,7 @@ entity OrderLine {
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -599,9 +570,9 @@ entity OrderLine {
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -610,8 +581,6 @@ entity OrderLine {
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Stuff that rocks | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/stuff-that-rocks/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -22,52 +22,52 @@
 
 <p>Did you know that you can migrate your additional plug-ins from one Eclipse install to another one? This can be a huge time-saver, especially for people who like to live on the bleeding edge.</p>
 
-<p>Here's how:</p>
+<p>Here&rsquo;s how:</p>
 
 <ol>
-<li><p>Install a fresh copy of Eclipse. Let's assume you install Eclipse 3.5 RC4 Cocoa 64bit (you're feeling lucky)</p></li>
-<li><p>Let's further assume you've got an existing install of Eclipse 3.5 RC3 Cocoa 32bit with some additional plug-ins, like <a href="http://findbugs.sourceforge.net/">FindBugs</a>, <a href="http://www.windowbuilderpro.com/">WindowBuilder Pro</a>, etc.</p></li>
-<li><p>After installing, start your newly installed instance of Eclipse</p></li>
-<li><p>Select <em>Help -> Install New Software...</em></p></li>
-<li><p>In the <em>Install</em> dialog, click the <em>Add...</em> button to add a new update site: [</p></li>
+<li><p> Install a fresh copy of Eclipse. Let&rsquo;s assume you install Eclipse 3.5 RC4 Cocoa 64bit (you&rsquo;re feeling lucky)</p></li>
+<li><p> Let&rsquo;s further assume you&rsquo;ve got an existing install of Eclipse 3.5 RC3 Cocoa 32bit with some additional plug-ins, like <a href="http://findbugs.sourceforge.net/">FindBugs</a>, <a href="http://www.windowbuilderpro.com/">WindowBuilder Pro</a>, etc.</p></li>
+<li><p> After installing, start your newly installed instance of Eclipse</p></li>
+<li><p> Select <em>Help &ndash;> Install New Software&hellip;</em></p></li>
+<li><p> In the <em>Install</em> dialog, click the <em>Add&hellip;</em> button to add a new update site: [</p></li>
 </ol>
 
 
 <p><img src="http://farm4.static.flickr.com/3343/3608873664_f25891cb7f.jpg" alt="Eclipse Install Dialog" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3608873664)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3608873664">http://www.flickr.com/photos/81029262@N00/3608873664</a>)</p>
 
 <ol>
-<li>In the next dialog, click on <em>Local...</em> to add a local update site:[</li>
+<li> In the next dialog, click on <em>Local&hellip;</em> to add a local update site:[</li>
 </ol>
 
 
 <p><img src="http://farm4.static.flickr.com/3409/3608070929_32df5d32cd.jpg" alt="Eclipse: Add Site" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3608070929)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3608070929">http://www.flickr.com/photos/81029262@N00/3608070929</a>)</p>
 
 <ol>
-<li><p>using the file chooser, browse to <em><path_to_your_OLD_eclipse_instance>/eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/SDKProfile.profile/</em> and click <em>Choose</em> to select that directory.</p></li>
-<li><p>Click <em>OK</em> to add the update site:[</p></li>
+<li><p> using the file chooser, browse to <em>&lt;path_to_your_OLD_eclipse_instance>/eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/SDKProfile.profile/</em> and click <em>Choose</em> to select that directory.</p></li>
+<li><p> Click <em>OK</em> to add the update site:[</p></li>
 </ol>
 
 
 <p><img src="http://farm3.static.flickr.com/2434/3608904194_5b6c4de3be.jpg" alt="Eclipse: Add Local Update Site" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3608904194)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3608904194">http://www.flickr.com/photos/81029262@N00/3608904194</a>)</p>
 
 <ol>
-<li>The <em>Install</em> dialog will now list all plug-ins installed in the old location (i.e. your old Eclipse instance), clearly highlighting the ones that are not already installed in the new instance:[</li>
+<li> The <em>Install</em> dialog will now list all plug-ins installed in the old location (i.e. your old Eclipse instance), clearly highlighting the ones that are not already installed in the new instance:[</li>
 </ol>
 
 
 <p><img src="http://farm4.static.flickr.com/3562/3608920684_9fc82065a9.jpg" alt="Eclipse: Install from existing Eclipse install" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3608920684)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3608920684">http://www.flickr.com/photos/81029262@N00/3608920684</a>)</p>
 
 <ol>
-<li><p>Check all features that you want to transport to the new location and continue the installation by clicking <em>Next></em>.</p></li>
-<li><p>After confirming the license terms and clicking <em>Finish</em>, Eclipse will install the selected features from the old location into the new location. After the obligatory workbench restart you're good to go._</p></li>
+<li><p>. Check all features that you want to transport to the new location and continue the installation by clicking <em>Next></em>.</p></li>
+<li><p>. After confirming the license terms and clicking <em>Finish</em>, Eclipse will install the selected features from the old location into the new location. After the obligatory workbench restart you&rsquo;re good to go._</p></li>
 </ol>
 
 
@@ -80,24 +80,24 @@
     <link href="http://www.peterfriese.de/mac-in-black-skitch/"/>
     <updated>2009-05-25T01:16:11+01:00</updated>
     <id>http://www.peterfriese.de/mac-in-black-skitch</id>
-    <content type="html"><![CDATA[<p>Last week, <a href="http://www.1160pm.net/">Heiko</a>, <a href="http://koehnlein.blogspot.com/">Jan</a> and I were talking about blogging about the tools that make our lifes easier on the Mac. "Isn't the Mac supposed to be making your life easier anyway?" you might ask. Well, most things really are easy with a Mac. However, there are some things that cannot be done easily with a Mac. More often than not, this is due to the fact that Apple tries to hide the complexity of computers from nosy users. Which is fine for beginners - but makes life harder for the pros. Thankfully, there is a vast array of tools out there that fill the gap and make life on a Mac easier.</p>
+    <content type="html"><![CDATA[<p>Last week, <a href="http://www.1160pm.net/">Heiko</a>, <a href="http://koehnlein.blogspot.com/">Jan</a> and I were talking about blogging about the tools that make our lifes easier on the Mac. &ldquo;Isn&rsquo;t the Mac supposed to be making your life easier anyway?&rdquo; you might ask. Well, most things really are easy with a Mac. However, there are some things that cannot be done easily with a Mac. More often than not, this is due to the fact that Apple tries to hide the complexity of computers from nosy users. Which is fine for beginners &ndash; but makes life harder for the pros. Thankfully, there is a vast array of tools out there that fill the gap and make life on a Mac easier.</p>
 
-<p>I am going to try to post one tool recommendation per week - unless I am on vacation or speaking at a conference.</p>
+<p>I am going to try to post one tool recommendation per week &ndash; unless I am on vacation or speaking at a conference.</p>
 
 <p>So without further ado, here is the first tool: <a href="http://www.skitch.com/">Skitch</a>!</p>
 
-<p>Skitch is a tool that helps you to create screenshots. I need to create lots of screenshots: for documentation, to explain things to people by mail, and to annotate my bug reports. Of course, Mac OSX has several shortcuts to create screenshots, so what's the deal about Skitch?</p>
+<p>Skitch is a tool that helps you to create screenshots. I need to create lots of screenshots: for documentation, to explain things to people by mail, and to annotate my bug reports. Of course, Mac OSX has several shortcuts to create screenshots, so what&rsquo;s the deal about Skitch?</p>
 
-<p>First of all, Skitch allows you to view and edit your screenshot: press CMD+SHIFT+5, select the capture area and voilà - Skitch opens a window showing the screenshot just taken:
+<p>First of all, Skitch allows you to view and edit your screenshot: press CMD+SHIFT+5, select the capture area and voilà &ndash; Skitch opens a window showing the screenshot just taken:
 [</p>
 
 <p><img src="http://farm3.static.flickr.com/2469/3560151513_31ff0b4529.jpg" alt="Skitch itself" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3560151513)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3560151513">http://www.flickr.com/photos/81029262@N00/3560151513</a>)</p>
 
-<p>You can now use the tools at the left hand side of the Skitch window to highlight certain areas of the screenshot, which comes on handy if you're filing a bug report for your favorite open source tool.</p>
+<p>You can now use the tools at the left hand side of the Skitch window to highlight certain areas of the screenshot, which comes on handy if you&rsquo;re filing a bug report for your favorite open source tool.</p>
 
-<p>When you're done with editing, you can either drag the image to another application (using the "drag me" tab at the bottom of the window) or you can post the image to the web. I have set up Skitch to use my Flickr account, so I can use the images in other tools right away (I am writing my blog posts in Mars Edit, which has a great Flickr integration, so I've got a complete tool chain here). Skitch supports a number of file formats (JPG, SVG, PDF, TIF, GIF, BMP and native Skitch), so you can select the desired file format before sending the image to the web or dragging it to another application.</p>
+<p>When you&rsquo;re done with editing, you can either drag the image to another application (using the &ldquo;drag me&rdquo; tab at the bottom of the window) or you can post the image to the web. I have set up Skitch to use my Flickr account, so I can use the images in other tools right away (I am writing my blog posts in Mars Edit, which has a great Flickr integration, so I&rsquo;ve got a complete tool chain here). Skitch supports a number of file formats (JPG, SVG, PDF, TIF, GIF, BMP and native Skitch), so you can select the desired file format before sending the image to the web or dragging it to another application.</p>
 
 <p>All images are also stored in a local history, so if you need to go back to one of the screenshots you took a while ago, no problem with Skitch.</p>
 
@@ -105,7 +105,7 @@
 
 <p>You can download Skitch beta from <a href="http://www.skitch.com">http://www.skitch.com</a>. You will be asked to sign up, however, both the download and the software will work without registering.</p>
 
-<p>Happy screen shooting :-)</p>
+<p>Happy screen shooting :&ndash;)</p>
 ]]></content>
   </entry>
   
@@ -116,17 +116,17 @@
     <id>http://www.peterfriese.de/advanced-wikitext</id>
     <content type="html"><![CDATA[<p>In my <a href="http://www.peterfriese.de/getting-started-with-wikitext/">recent posting</a>, I showed you how to use <a href="http://wiki.eclipse.org/Mylyn/Incubator/WikiText">Mylyn WikiText</a> to easily create documentation for your project.</p>
 
-<p>In this installment, we're going to look at four things:</p>
+<p>In this installment, we&rsquo;re going to look at four things:</p>
 
 <ol>
-<li><p>How to create PDFs</p></li>
-<li><p>How to automate your publishing process</p></li>
-<li><p>How to split your documents to facilitate team work</p></li>
-<li><p>How to use DocBook as an intermediary format to add even more flexibility to your publishing process</p></li>
+<li><p> How to create PDFs</p></li>
+<li><p> How to automate your publishing process</p></li>
+<li><p> How to split your documents to facilitate team work</p></li>
+<li><p> How to use DocBook as an intermediary format to add even more flexibility to your publishing process</p></li>
 </ol>
 
 
-<p>Lots of stuff, so let's get started!</p>
+<p>Lots of stuff, so let&rsquo;s get started!</p>
 
 <h2>How to create PDFs</h2>
 
@@ -135,15 +135,15 @@
 <p>To install the Textile-J PDF add-on, proceed as follows:</p>
 
 <ol>
-<li><p>Make sure you have WikiText 1.1.0 or better installed</p></li>
-<li><p>Add the Textile-J update site to your Update Manager: <em>https://textile-j.dev.java.net/builds/wikitext/site</em></p></li>
-<li><p>Refresh the Update Manager. You should now see <em>Textile-J WikiText PDF</em> in the list of available features.</p></li>
-<li><p>Select <em>Textile-J WikiText PDF</em> and click <em>Install</em></p></li>
-<li><p>Restart Eclipse as requested</p></li>
+<li><p> Make sure you have WikiText 1.1.0 or better installed</p></li>
+<li><p> Add the Textile-J update site to your Update Manager: _<a href="https://textile-j.dev.java.net/builds/wikitext/site_">https://textile-j.dev.java.net/builds/wikitext/site_</a></p></li>
+<li><p> Refresh the Update Manager. You should now see <em>Textile-J WikiText PDF</em> in the list of available features.</p></li>
+<li><p> Select <em>Textile-J WikiText PDF</em> and click <em>Install</em></p></li>
+<li><p> Restart Eclipse as requested</p></li>
 </ol>
 
 
-<p>You can now right-click on any wiki file (<em>*.textile</em>, <em>*.mediawiki</em>, <em>*.confluence</em>, <em>*.twiki</em>, <em>*.tracwiki</em> and select <em>Textile-J -> Generate PDF</em> from the context menu.</p>
+<p>You can now right-click on any wiki file (<em>*.textile</em>, <em>*.mediawiki</em>, <em>*.confluence</em>, <em>*.twiki</em>, <em>*.tracwiki</em> and select <em>Textile-J &ndash;> Generate PDF</em> from the context menu.</p>
 
 <h2>How to automate the process</h2>
 
@@ -183,7 +183,7 @@
 
 <h2>How to split your documents to facilitate team work</h2>
 
-<p>Now that you know how to transform Wiki markup to various output formats, you might wonder how to split your Wiki files into smaller chunks so the members of your team can work on them separately. This is something which is very easy with, say, LaTeX or DocBook because they both have the concept of importing other documents. In Wikis, there usually is no such thing as importing another Wiki page - you rather <em>link</em> to that other page. If you're writing a documentation, this isn't sufficient, however. You really need to be able to import document fragments.</p>
+<p>Now that you know how to transform Wiki markup to various output formats, you might wonder how to split your Wiki files into smaller chunks so the members of your team can work on them separately. This is something which is very easy with, say, LaTeX or DocBook because they both have the concept of importing other documents. In Wikis, there usually is no such thing as importing another Wiki page &ndash; you rather <em>link</em> to that other page. If you&rsquo;re writing a documentation, this isn&rsquo;t sufficient, however. You really need to be able to import document fragments.</p>
 
 <p>Instead of adding the notion of imports to WikiText, I decided to control the assembling of the master document by using a little bit of ANT wizardry and a text file.</p>
 
@@ -227,11 +227,11 @@ newnoteworthy.textile
 
 <p>DocBook has been around for quite some years now and together with LaTeX still will give you the most flexibility when it comes to documentation engineering. I have been using both LaTeX and DocBook to write all sorts of documentation, ranging from my diploma thesis to open source project documentation and have found both the be versatile and reliable, but also quite verbose. Regarding flexibility, both give you the possibility to choose a document template / style of your liking. If none of the existing document styles match your needs, you can more or less easily create you own.</p>
 
-<p>As WikiText supports creating DocBook from your Wiki files, we'll have a look at how to use this DocBook output to further process it. Here is what we need to do:</p>
+<p>As WikiText supports creating DocBook from your Wiki files, we&rsquo;ll have a look at how to use this DocBook output to further process it. Here is what we need to do:</p>
 
 <ol>
-<li><p>Enhance our build script so it downloads the relevant DocBook files (libraries, basic styles and XSL transformations)</p></li>
-<li><p>Add targets to our build script that allow you to choose the output to be created: PDF, HTML or Eclipse Help</p></li>
+<li><p> Enhance our build script so it downloads the relevant DocBook files (libraries, basic styles and XSL transformations)</p></li>
+<li><p> Add targets to our build script that allow you to choose the output to be created: PDF, HTML or Eclipse Help</p></li>
 </ol>
 
 
@@ -240,9 +240,9 @@ newnoteworthy.textile
 
 <p><img src="http://farm4.static.flickr.com/3599/3494324023_c4cf66ba24_o.png" alt="WikiTextDocBook ToolChain" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3494324023)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3494324023">http://www.flickr.com/photos/81029262@N00/3494324023</a>)</p>
 
-<p>Let's have a look at some crucial parts of the script.</p>
+<p>Let&rsquo;s have a look at some crucial parts of the script.</p>
 
 <p>We already saw how to assemble multiple Wiki files into one big Wiki file. The next step is to convert this file to DocBook:</p>
 
@@ -289,7 +289,7 @@ newnoteworthy.textile
 
 <p>You can now control the output by supplying different stylesheets. DocBook XSLT comes with a variety of stylesheets for articles, books and online help systems. You can now easily create printed documentation AND online help from one source. DocBook XSLT supports EclipseHelp, JavaHelp, HTMLHelp (the Windows Help System) and even man pages!</p>
 
-<p>So, next time you need to write documentation for a project you're working on, don't let it get you down. Instead, set up a trusty WikiText / DocBook toolchain and write down that documentation in Wiki markup in no time!</p>
+<p>So, next time you need to write documentation for a project you&rsquo;re working on, don&rsquo;t let it get you down. Instead, set up a trusty WikiText / DocBook toolchain and write down that documentation in Wiki markup in no time!</p>
 
 <p>The whole build script and the sample document are available for [drain file 17 url download] for free. If you need help setting up a tool chain or want to book me for consulting, drop me a line (peter dot friese at itemis dot com).</p>
 
@@ -302,23 +302,23 @@ newnoteworthy.textile
     <link href="http://www.peterfriese.de/getting-started-with-wikitext/"/>
     <updated>2009-04-24T00:34:54+01:00</updated>
     <id>http://www.peterfriese.de/getting-started-with-wikitext</id>
-    <content type="html"><![CDATA[<p>Documentation is the bane of all developers. Nobody likes to write documentation, but most people know we need it. Even more so in Open Source projects. If you don't have a decent documentation, it will be hard to find contributors which will eventually stall the projects ability to acquire new committers.</p>
+    <content type="html"><![CDATA[<p>Documentation is the bane of all developers. Nobody likes to write documentation, but most people know we need it. Even more so in Open Source projects. If you don&rsquo;t have a decent documentation, it will be hard to find contributors which will eventually stall the projects ability to acquire new committers.</p>
 
 <p>While documenting code is discussed quite controversial (see <a href="http://twitter.com/peterfriese/status/1573456711">here</a>, <a href="http://twitter.com/EelcoVisser/status/1573534530">here</a>, <a href="http://twitter.com/peterfriese/status/1574872897">here</a> and <a href="http://twitter.com/EelcoVisser/status/1575307114">here</a>), most people seem at least to agree that a high level documentation outlining the concepts of the software in question <strong>is</strong> appropriate.</p>
 
 <p>The options to write high-level documentation are:</p>
 
 <ol>
-<li><p>Word processors like Word, OpenOffice, Pages and the like</p></li>
-<li><p>LaTeX</p></li>
-<li><p>DocBook</p></li>
-<li><p>Wikis</p></li>
+<li><p> Word processors like Word, OpenOffice, Pages and the like</p></li>
+<li><p> LaTeX</p></li>
+<li><p> DocBook</p></li>
+<li><p> Wikis</p></li>
 </ol>
 
 
 <p>Using word processors for writing high-level documentation has serious drawbacks, especially when a whole team needs to contribute to the documentation. Do you remember <a href="http://word.mvps.org/fAQs/General/RecoverMasterDocs.htm">master documents</a>?</p>
 
-<p>LaTeX is a great alternative, as it allows us to split documentation across several text files - this allows for efficient team work. Moreover, text files just cannot break and can be versioned / merged / diffed quite easily. However, LaTeX syntax is not for the faint of heart.</p>
+<p>LaTeX is a great alternative, as it allows us to split documentation across several text files &ndash; this allows for efficient team work. Moreover, text files just cannot break and can be versioned / merged / diffed quite easily. However, LaTeX syntax is not for the faint of heart.</p>
 
 <p>DocBook is great, too: it uses XML to describe documents and has a great number of transformations to about every output format you could think of (<a href="http://www.sagehill.net/docbookxsl/PrintOutput.html">PDF</a>, <a href="http://www.sagehill.net/docbookxsl/HtmlCustomEx.html">HTML</a>, <a href="http://www.sagehill.net/docbookxsl/EclipseHelp.html">EclipseHelp</a>, <a href="http://www.sagehill.net/docbookxsl/HtmlHelp.html">HTML Help</a>, <a href="http://www.sagehill.net/docbookxsl/JavaHelp.html">JavaHelp</a> and even <a href="http://www.sagehill.net/docbookxsl/RefentryToMan.html">man pages</a>! However, not everybody likes XML and in fact DocBook tends to be a little noisy.</p>
 
@@ -326,7 +326,7 @@ newnoteworthy.textile
 
 <h2>Enter WikiText</h2>
 
-<p><a href="http://wiki.eclipse.org/Mylyn/FAQ#WikiText">WikiText</a> is such a tool. It actually is very flexible, as it allows you to use a multitude of wiki dialects to write your documentation. It also supports a number of output formats (HTML, Eclipse Help, DITA, DocBook and FOP). What's more, it features a really nice text editor that can display Wiki markup almost in a WYSIWYG fashion. WikiText is developed and maintained by <a href="http://greensopinion.blogspot.com/">David Green</a>.</p>
+<p><a href="http://wiki.eclipse.org/Mylyn/FAQ#WikiText">WikiText</a> is such a tool. It actually is very flexible, as it allows you to use a multitude of wiki dialects to write your documentation. It also supports a number of output formats (HTML, Eclipse Help, DITA, DocBook and FOP). What&rsquo;s more, it features a really nice text editor that can display Wiki markup almost in a WYSIWYG fashion. WikiText is developed and maintained by <a href="http://greensopinion.blogspot.com/">David Green</a>.</p>
 
 <p>So, without further ado, here is a quick introduction on how to install WikiText, writing your first document and transforming it to HTML.</p>
 
@@ -335,8 +335,8 @@ newnoteworthy.textile
 <p>Make sure you have a recent version of Eclipse installed. Then:</p>
 
 <ol>
-<li><p>Point your update manager (<em>Help -> Install new software</em>) to the Mylyn Update Site (http://download.eclipse.org/tools/mylyn/update/weekly/e3.4)</p></li>
-<li><p>Select the most recent version of Mylyn WikiText (as of this writing, this is WikiText 1.1.0.I20090423-1700-e3x) and install</p></li>
+<li><p> Point your update manager (<em>Help &ndash;> Install new software</em>) to the Mylyn Update Site (<a href="http://download.eclipse.org/tools/mylyn/update/weekly/e3.4">http://download.eclipse.org/tools/mylyn/update/weekly/e3.4</a>)</p></li>
+<li><p> Select the most recent version of Mylyn WikiText (as of this writing, this is WikiText 1.1.0.I20090423-1700-e3x) and install</p></li>
 </ol>
 
 
@@ -345,66 +345,68 @@ newnoteworthy.textile
 <h2>Writing your first document</h2>
 
 <ol>
-<li><p>Create a new project (<em>File -> Project... -> General -> Project</em></p></li>
-<li><p>Create a new file. We will be using the <a href="http://textile.thresholdstate.com/">Textile</a> wiki syntax, so let's name it <em>HelloWorld.textile</em></p></li>
-<li><p>Enter some text:</p></li>
+<li><p> Create a new project (<em>File &ndash;> Project&hellip; &ndash;> General &ndash;> Project</em></p></li>
+<li><p> Create a new file. We will be using the <a href="http://textile.thresholdstate.com/">Textile</a> wiki syntax, so let&rsquo;s name it <em>HelloWorld.textile</em></p></li>
+<li><p> Enter some text:</p>
+
+<p>h1(#id). An HTML first-level heading</p>
+
+<p>Textile syntax is really simple. You can <em>emphasize</em> text or <em>emphasize it even more</em>.</p>
+
+<p>Scaled images:
+!{width: 50%}images/eiffelturm.jpg!</p>
+
+<p>Enumerations also are very easy:</p>
+
+<ul>
+<li>An item in a bulleted (unordered) list</li>
+<li>Another item in a bulleted list
+<strong> Second Level
+</strong> Second Level Items
+*** Third level</li>
+</ul>
+
+
+<h1>An item in an enumerated (ordered) list</h1>
+
+<h1>Another item in an enumerated list</h1>
+
+<h2>Another level in an enumerated list</h2>
+
+<p>Let&rsquo;s have more headings:</p>
+
+<p>h2. An HTML second-level heading</p>
+
+<p>Here is a table:</p>
+
+<p>|<em>. Header |</em>. Header |_. Header |
+| Cell 1 | Cell 2 | Cell 3 |
+| Cell 1 | Cell 2 | Cell 3 |</p>
+
+<p>h2. An HTML third-level heading</p>
+
+<p>Here is some code:</p>
+
+<p>bc..
+package org.eclipse.workflow;</p>
+
+<p>public class Workflow {</p>
+
+<p>}</p>
+
+<ol type="a">
+<li>Here is a plain old paragraph. It needs to start with &ldquo;p.&rdquo; to mark the end of the code block above.</li>
 </ol>
 
 
-<pre><code>h1(#id). An HTML first-level heading
+<p>h4. An HTML fourth-level heading</p>
 
-Textile syntax is really simple. You can _emphasize_ text or *emphasize it even more*.
+<p>Of course, we can also have hyperlinks: &ldquo;Peter&rsquo;s homepage&rdquo;:<a href="http://www.peterfriese.de">http://www.peterfriese.de</a></p>
 
-Scaled images:
-!{width: 50%}images/eiffelturm.jpg!
+<p>h5. An HTML fifth-level heading</p>
 
-Enumerations also are very easy:
-
-* An item in a bulleted (unordered) list
-* Another item in a bulleted list
-** Second Level
-** Second Level Items
-*** Third level
-
-# An item in an enumerated (ordered) list 
-# Another item in an enumerated list 
-## Another level in an enumerated list 
-
-Let's have more headings:
-
-h2. An HTML second-level heading
-
-Here is a table:
-
-|_. Header |_. Header |_. Header |
-| Cell 1 | Cell 2 | Cell 3 |
-| Cell 1 | Cell 2 | Cell 3 |
-
-h2. An HTML third-level heading
-
-Here is some code:
-
-bc.. 
-package org.eclipse.workflow;
-
-public class Workflow {
-
-}
-
-p. Here is a plain old paragraph. It needs to start with "p." to mark the end of the code block above.
-
-
-h4. An HTML fourth-level heading
-
-Of course, we can also have hyperlinks: "Peter's homepage":http://www.peterfriese.de 
-
-h5. An HTML fifth-level heading
-
-h6. An HTML sixth-level heading
-</code></pre>
-
-<ol>
-<li>Create a new subfolder <em>images</em> and place an image in his folder. I used <a href="http://www.wiemann.eu/1/eiffelturm.jpg">this</a> one.</li>
+<p>h6. An HTML sixth-level heading</p></li>
+<li><p> Create a new subfolder <em>images</em> and place an image in his folder. I used <a href="http://www.wiemann.eu/1/eiffelturm.jpg">this</a> one.</p></li>
 </ol>
 
 
@@ -413,18 +415,18 @@ h6. An HTML sixth-level heading
 
 <p><img src="http://farm4.static.flickr.com/3587/3469612438_469c476d6a.jpg" alt="WikiText markup and preview" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3469612438)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3469612438">http://www.flickr.com/photos/81029262@N00/3469612438</a>)</p>
 
 <h2>Transforming your document to HTML</h2>
 
-<p>In order to convert your document to a nicely rendered HTML document, just right-click on <em>HelloWorld.textile</em> in the package explorer and select <em>WikiText -> Generate HTML</em>. This will create anew file <em>HelloWorld.html</em> in the same directory. Double-click it to open it with a browser:
+<p>In order to convert your document to a nicely rendered HTML document, just right-click on <em>HelloWorld.textile</em> in the package explorer and select <em>WikiText &ndash;> Generate HTML</em>. This will create anew file <em>HelloWorld.html</em> in the same directory. Double-click it to open it with a browser:
 [</p>
 
 <p><img src="http://farm4.static.flickr.com/3541/3469615654_a3fe0a9016.jpg" alt="HelloWorld.html" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3469615654)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3469615654">http://www.flickr.com/photos/81029262@N00/3469615654</a>)</p>
 
-<h2>Automating, PDF, splitting documents,...</h2>
+<h2>Automating, PDF, splitting documents,&hellip;</h2>
 
 <p>I hope I could whet your appetite. In the next installment, I am going to show you how to automate the process of transforming WikiText documents into output documents, how to create PDF (by way of exploiting DocBook) and how to split your documents into smaller chunks so you can work on them as a team. Stay tuned!</p>
 ]]></content>
@@ -435,11 +437,11 @@ h6. An HTML sixth-level heading
     <link href="http://www.peterfriese.de/how-twitter-solved-my-p2-problems-during-my-lunch-break/"/>
     <updated>2009-04-02T16:21:50+01:00</updated>
     <id>http://www.peterfriese.de/how-twitter-solved-my-p2-problems-during-my-lunch-break</id>
-    <content type="html"><![CDATA[<p>Today, I wanted to migrate from Eclipse 3.5M5 to Eclipse 3.6M6 (I know, it's a bit late for that already - but then, I had been busy with <a href="http://www.eclipsecon.org/">#eclipsecon</a> and preparing the <a href="http://www.eclipsecon.org/2009/sessions?id=358">Stupid Modeling Talk</a> during the past weeks).</p>
+    <content type="html"><![CDATA[<p>Today, I wanted to migrate from Eclipse 3.5M5 to Eclipse 3.6M6 (I know, it&rsquo;s a bit late for that already &ndash; but then, I had been busy with <a href="http://www.eclipsecon.org/">#eclipsecon</a> and preparing the <a href="http://www.eclipsecon.org/2009/sessions?id=358">Stupid Modeling Talk</a> during the past weeks).</p>
 
-<p>As of course I've got quite a number of additional bundles installed (e.g., EMF, Window Builder, Mylyn, Xpand and Xtend), I wanted to re-use them. I recalled that a while back someone (probably Chris?) blogged that it basically is possible to use an existing Eclipse installation as a local update site. However, I couldn't find the blog posting describing how to do that.</p>
+<p>As of course I&rsquo;ve got quite a number of additional bundles installed (e.g., EMF, Window Builder, Mylyn, Xpand and Xtend), I wanted to re-use them. I recalled that a while back someone (probably Chris?) blogged that it basically is possible to use an existing Eclipse installation as a local update site. However, I couldn&rsquo;t find the blog posting describing how to do that.</p>
 
-<p>Given the fact it was about lunch time, I decided to let the #wisecrowd figure out how to solve my problem. So I twittered "<a href="http://twitter.com/peterfriese/statuses/1437609552">desperately looking for a hint how to use an existing Eclipse install as a P2 repo. Goal:transport features from my M5 install to a fresh M6</a>".</p>
+<p>Given the fact it was about lunch time, I decided to let the #wisecrowd figure out how to solve my problem. So I twittered &ldquo;<a href="http://twitter.com/peterfriese/statuses/1437609552">desperately looking for a hint how to use an existing Eclipse install as a P2 repo. Goal:transport features from my M5 install to a fresh M6</a>&rdquo;.</p>
 
 <p>So, during my lunch break, the wise crowd (<a href="http://twitter.com/kaitoedter">Kai</a>, <a href="http://twitter.com/ekkescorner">Ekke</a>, <a href="http://twitter.com/bokowski">Boris</a> and <a href="http://twitter.com/paulweb515">Paul</a>) sent me their opinions on the matter:</p>
 
@@ -447,9 +449,9 @@ h6. An HTML sixth-level heading
 
 <p><img src="http://farm4.static.flickr.com/3650/3407041702_4b788ff887.jpg" alt="How Twitter solved my P2 problem during my lunch break" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3407041702)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3407041702">http://www.flickr.com/photos/81029262@N00/3407041702</a>)</p>
 
-<p>At first, it seemed like there is no solution, but in the end Paul's <a href="http://twitter.com/paulweb515/status/1437925330">tweet</a> reveals the solution I was looking for:</p>
+<p>At first, it seemed like there is no solution, but in the end Paul&rsquo;s <a href="http://twitter.com/paulweb515/status/1437925330">tweet</a> reveals the solution I was looking for:</p>
 
 <p>Add eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/SDKProfile.profile/ as a local update site.</p>
 

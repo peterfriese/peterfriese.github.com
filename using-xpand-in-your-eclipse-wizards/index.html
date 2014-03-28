@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="At ESE, I had a nice chat with Chris (actually, I had a lot of nice chats with a lot of nice people - it was quite a challenge to attend any of the &hellip;">
+  <meta name="description" content="At ESE, I had a nice chat with Chris (actually, I had a lot of nice chats with a lot of nice people &ndash; it was quite a challenge to attend any &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -60,6 +60,7 @@
         t.parentNode.insertBefore(s, t);
     })();
 /* ]]> */</script>
+
 
   
   <script type="text/javascript">
@@ -142,11 +143,11 @@
 
 <div class="entry-content">
   
-  <p>At <a href="http://www.eclipsecon.org/summiteurope2008/">ESE</a>, I had a nice chat with <a href="http://mea-bloga.blogspot.com/">Chris</a> (actually, I had a lot of nice chats with a lot of nice people - it was quite a challenge to attend any of the sessions), who told me that he was looking into template engines. I leave it up to you to make any assumptions on why he&#8217;s interested in template engines. I happen to know at least three template engines: Velocity (which I had the joy of using in my active days at AndroMDA.org), the template, erhm, &#8230; mechanism being used in PDE (I <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=241074">once fixed a bug</a> which had been caused by this engine) and - you might have guessed it - Xpand (which I am a committer on).</p>
+  <p>At <a href="http://www.eclipsecon.org/summiteurope2008/">ESE</a>, I had a nice chat with <a href="http://mea-bloga.blogspot.com/">Chris</a> (actually, I had a lot of nice chats with a lot of nice people &ndash; it was quite a challenge to attend any of the sessions), who told me that he was looking into template engines. I leave it up to you to make any assumptions on why he&rsquo;s interested in template engines. I happen to know at least three template engines: Velocity (which I had the joy of using in my active days at AndroMDA.org), the template, erhm, &hellip; mechanism being used in PDE (I <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=241074">once fixed a bug</a> which had been caused by this engine) and &ndash; you might have guessed it &ndash; Xpand (which I am a committer on).</p>
 
-<p>So, I gave a short demo of Xtext and Xpand to show Chris how easy it is to create (model-aware) code generation templates. Xpand comes with a nice editor which makes template editing a joy - it features code highlighting, hyperlink navigation, model-awareness and other editor goodness.</p>
+<p>So, I gave a short demo of Xtext and Xpand to show Chris how easy it is to create (model-aware) code generation templates. Xpand comes with a nice editor which makes template editing a joy &ndash; it features code highlighting, hyperlink navigation, model-awareness and other editor goodness.</p>
 
-<p>Instead of letting only Chris know how that works, here&#8217;s a short guide on how to write your own Xpand template and use it in a wizard. To make the example more realistic, I chose to implement a wizard that creates an Ant build.xml file for a simple project (something which is missing in Eclipse, AFAIK). So, here we go.</p>
+<p>Instead of letting only Chris know how that works, here&rsquo;s a short guide on how to write your own Xpand template and use it in a wizard. To make the example more realistic, I chose to implement a wizard that creates an Ant build.xml file for a simple project (something which is missing in Eclipse, AFAIK). So, here we go.</p>
 
 <h2>Prerequisites:</h2>
 
@@ -162,30 +163,28 @@
 <h2>How to do it</h2>
 
 <ol>
-<li><p>Download and install the prerequisites.</p></li>
-<li><p>Create a new plug-in project named &#8220;de.peterfriese.antwizard&#8221;</p></li>
-<li><p>Add a New File Wizard to the project. I used the Custom plug-in Wizard to get me started.</p></li>
-<li><p>Brush up the wizard page and add some fields for project name, source folder and binary folder.</p></li>
-<li><p>We want to transfer the values entered in this wizard into our template, so we need to create an Ecore model that describes our data model.[</p></li>
+<li><p> Download and install the prerequisites.</p></li>
+<li><p> Create a new plug-in project named &ldquo;de.peterfriese.antwizard&rdquo;</p></li>
+<li><p> Add a New File Wizard to the project. I used the Custom plug-in Wizard to get me started.</p></li>
+<li><p> Brush up the wizard page and add some fields for project name, source folder and binary folder.</p></li>
+<li><p> We want to transfer the values entered in this wizard into our template, so we need to create an Ecore model that describes our data model.[</p></li>
 </ol>
 
 
 <p><img src="http://farm4.static.flickr.com/3047/3065637332_0f345eaf86_o.jpg" alt="antwizard_metamodel" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3065637332)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3065637332">http://www.flickr.com/photos/81029262@N00/3065637332</a>)</p>
 
 <ol>
-<li><p>Add <em>org.eclipse.emf</em> and <em>org.eclipse.emf.edit</em> to the dependencies of you plug-in.</p></li>
-<li><p>Create a genmodel and let EMF generate the model code for you.</p></li>
-<li><p>Add code to your wizard that transfers the values from the input fields to your model. One might consider using databinding for doing this, I used a straight forward read&#8217;n&#8217;write approach for the time being:</p></li>
-</ol>
+<li><p> Add <em>org.eclipse.emf</em> and <em>org.eclipse.emf.edit</em> to the dependencies of you plug-in.</p></li>
+<li><p> Create a genmodel and let EMF generate the model code for you.</p></li>
+<li><p> Add code to your wizard that transfers the values from the input fields to your model. One might consider using databinding for doing this, I used a straight forward read&#8217;n&#8217;write approach for the time being:</p>
 
-
-<pre><code>public boolean performFinish() {
+<p>public boolean performFinish() {
     final String containerName = page.getContainerName();
     final String srcDirName = page.getSrcDirName();
     final String binDirName = page.getBinDirName();
-    // ...
+    // &hellip;
 }
 private BuildSpecification createModel(IProject project, String srcDirName,
     String binDirName) {
@@ -196,90 +195,88 @@ private BuildSpecification createModel(IProject project, String srcDirName,
     projectSpecification.setSourceFolder(srcDirName);
     buildSpecification.setProject(projectSpecification);
     return buildSpecification;
-}
-</code></pre>
-
-<ol>
-<li>Create an Xpand template <em>de.peterfriese.antwizard/src/template/BuildTemplate.xpt</em>:
-[</li>
+}</p></li>
+<li><p> Create an Xpand template <em>de.peterfriese.antwizard/src/template/BuildTemplate.xpt</em>:
+[</p></li>
 </ol>
 
 
 <p><img src="http://farm4.static.flickr.com/3008/3064840225_f3f3b2e799_o.jpg" alt="Ant file template" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3064840225)
-In case you wonder how to get those funky characters: make sure us create this file using the Xpand editor - it has code assist (CTRL + space) for those characters.</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3064840225">http://www.flickr.com/photos/81029262@N00/3064840225</a>)
+In case you wonder how to get those funky characters: make sure us create this file using the Xpand editor &ndash; it has code assist (CTRL + space) for those characters.</p>
 
 <ol>
-<li>Create an Xtend file <em>de.peterfriese.antwizard/src/template/GeneratorExtensions.ext</em>:
+<li>. Create an Xtend file <em>de.peterfriese.antwizard/src/template/GeneratorExtensions.ext</em>:
 [</li>
 </ol>
 
 
 <p><img src="http://farm4.static.flickr.com/3045/3065691432_b59ba29444_o.jpg" alt="Ant file extensions" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3065691432)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3065691432">http://www.flickr.com/photos/81029262@N00/3065691432</a>)</p>
 
 <ol>
-<li><p>Add <em>org.eclipse.xpand</em>, <em>org.eclipse.xtend</em> and <em>org.eclipse.xtend.typesystem.emf</em> to the depencies of your plug-in.</p></li>
-<li><p>Finally, we need to provide some code to invoke the generator:</p></li>
+<li><p>. Add <em>org.eclipse.xpand</em>, <em>org.eclipse.xtend</em> and <em>org.eclipse.xtend.typesystem.emf</em> to the depencies of your plug-in.</p></li>
+<li><p>. Finally, we need to provide some code to invoke the generator:</p>
+
+<p>private void generate(BuildSpecification buildSpec, IProgressMonitor monitor) throws CoreException {</p>
+
+<pre><code>// get project root folder as absolute file system path
+IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+IResource resource = root.findMember(new Path(buildSpec.getProject().getName()));
+String containerName = resource.getLocation().toPortableString();
+
+// configure outlets
+OutputImpl output = new OutputImpl();
+Outlet outlet = new Outlet(containerName);
+outlet.setOverwrite(true);
+output.addOutlet(outlet);
+
+// create execution context
+Map globalVarsMap = new HashMap();
+XpandExecutionContextImpl execCtx = new XpandExecutionContextImpl(output, null, globalVarsMap, null, null);
+EmfRegistryMetaModel metamodel = new EmfRegistryMetaModel() {
+    @Override
+    protected EPackage[] allPackages() {
+        return new EPackage[] { BuildspecificationPackage.eINSTANCE, EcorePackage.eINSTANCE };
+    }
+};
+execCtx.registerMetaModel(metamodel);
+
+// generate
+XpandFacade facade = XpandFacade.create(execCtx);
+String templatePath = "template::BuildTemplate::main";
+facade.evaluate(templatePath, buildSpec);
+
+// refresh the project to get external updates:
+resource.refreshLocal(IResource.DEPTH_INFINITE, monitor);
+</code></pre>
+
+<p>}</p></li>
 </ol>
 
 
-<pre><code>private void generate(BuildSpecification buildSpec, IProgressMonitor monitor) throws CoreException {
-
-    // get project root folder as absolute file system path
-    IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
-    IResource resource = root.findMember(new Path(buildSpec.getProject().getName()));
-    String containerName = resource.getLocation().toPortableString();
-
-    // configure outlets
-    OutputImpl output = new OutputImpl();
-    Outlet outlet = new Outlet(containerName);
-    outlet.setOverwrite(true);
-    output.addOutlet(outlet);
-
-    // create execution context
-    Map globalVarsMap = new HashMap();
-    XpandExecutionContextImpl execCtx = new XpandExecutionContextImpl(output, null, globalVarsMap, null, null);
-    EmfRegistryMetaModel metamodel = new EmfRegistryMetaModel() {
-        @Override
-        protected EPackage[] allPackages() {
-            return new EPackage[] { BuildspecificationPackage.eINSTANCE, EcorePackage.eINSTANCE };
-        }
-    };
-    execCtx.registerMetaModel(metamodel);
-
-    // generate
-    XpandFacade facade = XpandFacade.create(execCtx);
-    String templatePath = "template::BuildTemplate::main";
-    facade.evaluate(templatePath, buildSpec);
-
-    // refresh the project to get external updates:
-    resource.refreshLocal(IResource.DEPTH_INFINITE, monitor);
-}
-</code></pre>
-
-<p>That&#8217;s it!</p>
+<p>That&rsquo;s it!</p>
 
 <h2>Taking it for a spin</h2>
 
 <ol>
-<li><p>Launch a runtime workbench by selecting <em>de.peterfriese.antwizard/META-INF/MANIFEST.MF</em> and invoking <em>Run As -> Eclipse Application</em></p></li>
-<li><p>Create a new Java project in the runtime workspace.</p></li>
-<li><p>Invoke your wizard by selecting <em>File -> New -> Other&#8230; -> Ant -> Ant build file from existing project</em></p></li>
-<li><p>Enter the required information (project name, source folder, binariy folder)</p></li>
-<li><p>After clicking on <em>finish</em>, you should get a fresh Ant file for your project:
+<li><p> Launch a runtime workbench by selecting <em>de.peterfriese.antwizard/META-INF/MANIFEST.MF</em> and invoking <em>Run As &ndash;> Eclipse Application</em></p></li>
+<li><p> Create a new Java project in the runtime workspace.</p></li>
+<li><p> Invoke your wizard by selecting <em>File &ndash;> New &ndash;> Other&hellip; &ndash;> Ant &ndash;> Ant build file from existing project</em></p></li>
+<li><p> Enter the required information (project name, source folder, binariy folder)</p></li>
+<li><p> After clicking on <em>finish</em>, you should get a fresh Ant file for your project:
 [</p></li>
 </ol>
 
 
 <p><img src="http://farm4.static.flickr.com/3215/3064865073_3415a7b0c3_o.jpg" alt="Ant file" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3064865073)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3064865073">http://www.flickr.com/photos/81029262@N00/3064865073</a>)</p>
 
 <ol>
-<li>Enjoy!</li>
+<li> Enjoy!</li>
 </ol>
 
 
@@ -367,7 +364,7 @@ In case you wonder how to get those funky characters: make sure us create this f
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -443,9 +440,9 @@ In case you wonder how to get those funky characters: make sure us create this f
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -454,8 +451,6 @@ In case you wonder how to get those funky characters: make sure us create this f
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

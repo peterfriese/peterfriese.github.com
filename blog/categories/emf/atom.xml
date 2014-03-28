@@ -4,7 +4,7 @@
   <title><![CDATA[Category: EMF | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/emf/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,13 +18,13 @@
     <link href="http://www.peterfriese.de/getting-started-with-code-generation-with-xpand/"/>
     <updated>2010-03-17T16:05:05+00:00</updated>
     <id>http://www.peterfriese.de/getting-started-with-code-generation-with-xpand</id>
-    <content type="html"><![CDATA[<p>Have you heard about model driven software development (MDD / MDSD) and are thinking "what's all this fuzz about models"? "Why should models help me to be more productive," might be another thought you have.</p>
+    <content type="html"><![CDATA[<p>Have you heard about model driven software development (MDD / MDSD) and are thinking &ldquo;what&rsquo;s all this fuzz about models&rdquo;? &ldquo;Why should models help me to be more productive,&rdquo; might be another thought you have.</p>
 
 <p>People have been asking how to leverage models on and off on the web and in meetings I attended, so I thought I might share this little tutorial with you. In this tutorial, we will develop a little code generator that helps you to create (HTML) forms from models.</p>
 
 <h2>A short Overview</h2>
 
-<p>Xpand is a template engine, similar to FreeMarker, Velocity, JET and JSP. However, it features some very unique properties that makes using Xpand very well suited for generating code from models, such as <strong><a href="http://en.wikipedia.org/wiki/Type_safety">type safety</a></strong> and <strong>polymorphic dispatch</strong>. If you haven't heard those terms before, fear not! I'll show you how to use Xpand by way of an easy-to-follow example.</p>
+<p>Xpand is a template engine, similar to FreeMarker, Velocity, JET and JSP. However, it features some very unique properties that makes using Xpand very well suited for generating code from models, such as <strong><a href="http://en.wikipedia.org/wiki/Type_safety">type safety</a></strong> and <strong>polymorphic dispatch</strong>. If you haven&rsquo;t heard those terms before, fear not! I&rsquo;ll show you how to use Xpand by way of an easy-to-follow example.</p>
 
 <!-- more -->
 
@@ -32,49 +32,49 @@
 <p>The usual process of writing a code generator with Xpand is as follows:</p>
 
 <ol>
-<li><p>Define the structure of the model you want to process. This is called a <em>metamodel</em></p></li>
-<li><p>Define one or more template(s) that teach the code generator how to translate your model into code.</p></li>
+<li><p> Define the structure of the model you want to process. This is called a <em>metamodel</em></p></li>
+<li><p> Define one or more template(s) that teach the code generator how to translate your model into code.</p></li>
 </ol>
 
 
-<p>Easy, isn't it?</p>
+<p>Easy, isn&rsquo;t it?</p>
 
 <p>Using the code generator is even easier:</p>
 
 <ol>
-<li><p>Create a model</p></li>
-<li><p>Start the code generator</p></li>
+<li><p> Create a model</p></li>
+<li><p> Start the code generator</p></li>
 </ol>
 
 
-<p>It is worth mentioning that you can use Xpand to generate code for almost any known programming language. Everything you can express in text can be generated using Xpand. So, while we will be generating HTML and Java code in the following example, you can easily write code templates that generate code for C#, Basic, Lua, SmallTalk, ABAP, or any other programming language. You can also generate manuals and other documentation artifacts from your models using Xpand. I've successfully used Xpand to create DocBook files from models. Those DocBook files have then been converted to PDF files and online help files.</p>
+<p>It is worth mentioning that you can use Xpand to generate code for almost any known programming language. Everything you can express in text can be generated using Xpand. So, while we will be generating HTML and Java code in the following example, you can easily write code templates that generate code for C#, Basic, Lua, SmallTalk, ABAP, or any other programming language. You can also generate manuals and other documentation artifacts from your models using Xpand. I&rsquo;ve successfully used Xpand to create DocBook files from models. Those DocBook files have then been converted to PDF files and online help files.</p>
 
 <h2>Preparing your IDE</h2>
 
 <ol>
-<li><p>Grab and install a recent copy of Eclipse. At the time of writing, I am using <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6M6-201003121448/index.php">Eclipse 3.6 M6</a>.</p></li>
-<li><p>Install the latest version of Xpand (<em>Help -> Install New Software ...</em>)</p></li>
-<li><p>Add the Xpand update site (at the time of this writing, I am using Xpand 1.0 nightly builds from <a href="http://download.eclipse.org/modeling/m2t/xpand/updates/nightly/">http://download.eclipse.org/modeling/m2t/xpand/updates/nightly/</a>)</p></li>
-<li><p>Add the MWE update site (<a href="http://download.eclipse.org/modeling/emft/mwe/updates/nightly/">http://download.eclipse.org/modeling/emft/mwe/updates/nightly/</a>)</p></li>
-<li><p>Select MWE and Xpand:</p></li>
+<li><p> Grab and install a recent copy of Eclipse. At the time of writing, I am using <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6M6-201003121448/index.php">Eclipse 3.6 M6</a>.</p></li>
+<li><p> Install the latest version of Xpand (<em>Help &ndash;> Install New Software &hellip;</em>)</p></li>
+<li><p> Add the Xpand update site (at the time of this writing, I am using Xpand 1.0 nightly builds from <a href="http://download.eclipse.org/modeling/m2t/xpand/updates/nightly/">http://download.eclipse.org/modeling/m2t/xpand/updates/nightly/</a>)</p></li>
+<li><p> Add the MWE update site (<a href="http://download.eclipse.org/modeling/emft/mwe/updates/nightly/">http://download.eclipse.org/modeling/emft/mwe/updates/nightly/</a>)</p></li>
+<li><p> Select MWE and Xpand:</p></li>
 </ol>
 
 
 <p><a href="http://www.flickr.com/photos/81029262@N00/4439298864"><img src="http://farm5.static.flickr.com/4001/4439298864_40b913f0e5.jpg" alt="Install MWE and Xpand" /></a></p>
 
 <ol>
-<li>After the obligatory restart, do yourself the favour and set the platform encoding to <strong>UTF-8</strong>!</li>
+<li> After the obligatory restart, do yourself the favour and set the platform encoding to <strong>UTF-8</strong>!</li>
 </ol>
 
 
 <h2>Creating a Generator Project</h2>
 
-<p>Xpand code generators are hosted in Eclipse plug-ins, mainly because this makes handling the classpath a lot easier. People have reportedly used Maven to run Xpand code generators, but we won't go down this road today. Let's create a simple generator project:</p>
+<p>Xpand code generators are hosted in Eclipse plug-ins, mainly because this makes handling the classpath a lot easier. People have reportedly used Maven to run Xpand code generators, but we won&rsquo;t go down this road today. Let&rsquo;s create a simple generator project:</p>
 
 <ol>
-<li><p>Open the new project wizard and choose <em>Xpand Project</em> from the list</p></li>
-<li><p>Choose a meaningful name for your project (e.g. <em>org.xpand.example.gettingstarted</em></p></li>
-<li><p>Select <em>Create a sample EMF based Xpand project</em></p></li>
+<li><p> Open the new project wizard and choose <em>Xpand Project</em> from the list</p></li>
+<li><p> Choose a meaningful name for your project (e.g. <em>org.xpand.example.gettingstarted</em></p></li>
+<li><p> Select <em>Create a sample EMF based Xpand project</em></p></li>
 </ol>
 
 
@@ -85,11 +85,11 @@
 <p>Before we can start working with this project, we need to perform some clean-up actions:</p>
 
 <ol>
-<li><p>Open <em>src/metamodel/Checks.chk</em> and delete all its contents</p></li>
-<li><p>Open <em>src/metamodel/Extensions.chk</em> and delete all its contents</p></li>
-<li><p>Open <em>src/template/GeneratorExtensions.ext</em> and delete all its contents</p></li>
-<li><p>Delete <em>src/Model.xmi</em></p></li>
-<li><p>Don't forget to save all modified files</p></li>
+<li><p> Open <em>src/metamodel/Checks.chk</em> and delete all its contents</p></li>
+<li><p> Open <em>src/metamodel/Extensions.chk</em> and delete all its contents</p></li>
+<li><p> Open <em>src/template/GeneratorExtensions.ext</em> and delete all its contents</p></li>
+<li><p> Delete <em>src/Model.xmi</em></p></li>
+<li><p> Don&rsquo;t forget to save all modified files</p></li>
 </ol>
 
 
@@ -99,113 +99,81 @@
 Xpand is capable of understanding a variety of metamodel types. For example, if you have an XML schema file, you can use this as a metamodel and thereby enable Xpand to use XML files which are compliant to your schema as input models. Or, if you already have a bunch of Java files making up your data model, you can use those to drive Xpand code generation. In this tutorial, however, we will be using an Ecore metamodel to define the structure of our models. The project has already been configured to support Ecore metamodels, so all we need to do is open <em>metamodel.ecore</em> and define the structure:</p>
 
 <ol>
-<li><p>Please open <em>src/metamodel/metamodel.ecore</em>
+<li><p> Please open <em>src/metamodel/metamodel.ecore</em>
 .</p></li>
-<li><p>Remove the following elements from the metamodel: <em>Feature</em>, <em>Entity</em>, <em>Datatype</em>, <em>Type</em>, <em>Model</em>. The metamodel should now be empty:</p></li>
+<li><p> Remove the following elements from the metamodel: <em>Feature</em>, <em>Entity</em>, <em>Datatype</em>, <em>Type</em>, <em>Model</em>. The metamodel should now be empty:</p></li>
 </ol>
 
 
 <p><a href="http://www.flickr.com/photos/81029262@N00/4439788989"><img src="http://farm3.static.flickr.com/2555/4439788989_42665597db.jpg" alt="Empty metamodel" /></a></p>
 
 <ol>
-<li><p>Select package <em>metamodel</em> (as depicted in the screenshot above) and add a new <em>EClass</em> (<em>context menu -> New Child -> EClass</em>). Use the properties view to change the name of the newly created EClass to <em>Model</em>.</p></li>
-<li><p>Create a new EClass <em>Form</em></p></li>
-<li><p>Select the newly created EClass <em>Form</em> and add the following _EAttribute_s:</p></li>
+<li><p> Select package <em>metamodel</em> (as depicted in the screenshot above) and add a new <em>EClass</em> (<em>context menu &ndash;> New Child &ndash;> EClass</em>). Use the properties view to change the name of the newly created EClass to <em>Model</em>.</p></li>
+<li><p> Create a new EClass <em>Form</em></p></li>
+<li><p> Select the newly created EClass <em>Form</em> and add the following _EAttribute_s:</p>
+
+<ul>
+<li><p><em>name</em>, set the EType to <em>EString</em></p></li>
+<li><p><em>description</em>, EType = <em>EString</em></p></li>
+<li><p><em>title</em>, EType = <em>EString</em></p></li>
+</ul>
+</li>
+<li><p> Select EClass <em>Model</em> and add a new <em>EReference</em>, setting its attributes as follows:</p>
+
+<ul>
+<li><p>name = <em>forms</em></p></li>
+<li><p>EType = <em>Form</em></p></li>
+<li><p>Containment = <em>true</em></p></li>
+<li><p>Upperbound = <em>-1</em> (meaning: unlimited)</p></li>
+</ul>
+</li>
+<li><p> Create a new EClass <em>Field</em> and add the following EAttributes to it:</p>
+
+<ul>
+<li><p><em>name</em>, EType = <em>EString</em></p></li>
+<li><p><em>label</em>, EType = <em>Estring</em></p></li>
+</ul>
+</li>
+<li><p> Create another EClass <em>TextField</em>, setting its properties as follows:</p>
+
+<ul>
+<li><p>name = <em>TextField</em></p></li>
+<li><p>ESuper Types = <em>Field</em></p></li>
+</ul>
+</li>
+<li><p> Add one EAttribute <em>text</em> to <em>Textfield</em>:</p>
+
+<ul>
+<li>name = <em>text</em>, EType = <em>EString</em></li>
+</ul>
+</li>
+<li><p>. Add an EClass <em>MultiLineTextField</em> to the metamodel:</p>
+
+<ul>
+<li><p>name = <em>MultiLineTextTield</em></p></li>
+<li><p>ESuper Types = <em>TextField</em></p></li>
+</ul>
+</li>
+<li><p>. Now that we have everything in place, we finally need to add a reference from <em>Form</em> to <em>Field</em> so we can later add fields to a form. Select EClass <em>Form</em> and add an EReference to it, setting its properties as follows:</p>
+
+<ul>
+<li><p>name = <em>fields</em></p></li>
+<li><p>EType = <em>Field</em></p></li>
+<li><p>Containment = <em>true</em></p></li>
+<li><p>Upperbound = <em>-1</em> (meaning: unlimited)</p></li>
+</ul>
+</li>
 </ol>
 
-
-<pre><code>* _name_, set the EType to _EString_
-
-
-* _description_, EType = _EString_
-
-
-* _title_, EType = _EString_
-</code></pre>
-
-<ol>
-<li>Select EClass <em>Model</em> and add a new <em>EReference</em>, setting its attributes as follows:</li>
-</ol>
-
-
-<pre><code>* name = _forms_
-
-
-* EType = _Form_
-
-
-* Containment = _true_
-
-
-* Upperbound = _-1_ (meaning: unlimited)
-</code></pre>
-
-<ol>
-<li>Create a new EClass <em>Field</em> and add the following EAttributes to it:</li>
-</ol>
-
-
-<pre><code>* _name_, EType = _EString_
-
-
-* _label_, EType = _Estring_
-</code></pre>
-
-<ol>
-<li>Create another EClass <em>TextField</em>, setting its properties as follows:</li>
-</ol>
-
-
-<pre><code>* name = _TextField_
-
-
-* ESuper Types = _Field_
-</code></pre>
-
-<ol>
-<li>Add one EAttribute <em>text</em> to <em>Textfield</em>:</li>
-</ol>
-
-
-<pre><code>* name = _text_, EType = _EString_
-</code></pre>
-
-<ol>
-<li>Add an EClass <em>MultiLineTextField</em> to the metamodel:</li>
-</ol>
-
-
-<pre><code>* name = _MultiLineTextTield_
-
-
-* ESuper Types = _TextField_
-</code></pre>
-
-<ol>
-<li>Now that we have everything in place, we finally need to add a reference from <em>Form</em> to <em>Field</em> so we can later add fields to a form. Select EClass <em>Form</em> and add an EReference to it, setting its properties as follows:</li>
-</ol>
-
-
-<pre><code>* name = _fields_
-
-
-* EType = _Field_
-
-
-* Containment = _true_
-
-
-* Upperbound = _-1_ (meaning: unlimited)
-</code></pre>
 
 <h2>Creating a Model</h2>
 
-<p>Let's now create a model that follows the structure of the metamodel:</p>
+<p>Let&rsquo;s now create a model that follows the structure of the metamodel:</p>
 
 <ol>
-<li><p>In <em>metamodel.ecore</em>, select EClass <em>Model</em></p></li>
-<li><p>Create a model instance by choosing <em>Create Dynamic Instance...</em> from the context menu</p></li>
-<li><p>Save the model file to <em>src/Model.xmi</em></p></li>
+<li><p> In <em>metamodel.ecore</em>, select EClass <em>Model</em></p></li>
+<li><p> Create a model instance by choosing <em>Create Dynamic Instance&hellip;</em> from the context menu</p></li>
+<li><p> Save the model file to <em>src/Model.xmi</em></p></li>
 </ol>
 
 
@@ -264,7 +232,7 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 «ENDDEFINE»
 </code></pre>
 
-<p>On the first line, we import the metamodel so that the generator (and the editor as well) knows about the structure of our model. On line 2 - 4 we define a code template named <em>main</em>, making sure it is bound to model elements of type <em>Model</em>. The template doesn't do much, except to call another template (which we will define in a minute) named <em>form</em> with the collection of <em>Form_s, contained in the reference </em>forms_ of the current form.</p>
+<p>On the first line, we import the metamodel so that the generator (and the editor as well) knows about the structure of our model. On line 2 &ndash; 4 we define a code template named <em>main</em>, making sure it is bound to model elements of type <em>Model</em>. The template doesn&rsquo;t do much, except to call another template (which we will define in a minute) named <em>form</em> with the collection of <em>Form_s, contained in the reference </em>forms_ of the current form.</p>
 
 <p>Add the following lines to the template file, defining the template for the HTML file:</p>
 
@@ -279,7 +247,7 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 &lt;/head&gt;
 </code></pre>
 
-<p>In the first line, we start the template by specifying its name (<em>form</em>) and the type it is bound to (<em>Form</em>). On the next line, we use the <em>FILE</em> statement to specify the file the output is going to be written to. The name of the file is derived by concatenating the attribute <em>name</em> of the current <em>Form</em> and the string literal <em>".html"</em>.</p>
+<p>In the first line, we start the template by specifying its name (<em>form</em>) and the type it is bound to (<em>Form</em>). On the next line, we use the <em>FILE</em> statement to specify the file the output is going to be written to. The name of the file is derived by concatenating the attribute <em>name</em> of the current <em>Form</em> and the string literal <em>&ldquo;.html&rdquo;</em>.</p>
 
 <p>Continue the template by appending the following text:</p>
 
@@ -312,9 +280,9 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 <p>You might recall that we we defined three different kinds of _>Field_s in the metamodel:</p>
 
 <ol>
-<li><p>Field (which is the super class for the other two field types</p></li>
-<li><p>TextField</p></li>
-<li><p>MultiLineTextField</p></li>
+<li><p> Field (which is the super class for the other two field types</p></li>
+<li><p> TextField</p></li>
+<li><p> MultiLineTextField</p></li>
 </ol>
 
 
@@ -337,13 +305,13 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 «ENDDEFINE»
 </code></pre>
 
-<p>As you can see, all three templates have the same name. Only the type they are bound to differs. This is enough to let Xpand know which template to choose according to the type of the current model element. Let's suppose Xpand is iterating the model and the current model element is a <em>TextField</em>. Although <em>Field</em> is a direct super type of <em>TextField</em>, Xpand will not invoke the first template (<em>«DEFINE field FOR Field»</em>), but the second template (<em>«DEFINE field FOR TextField»</em>), as this is the most concrete match for the type of the model element.</p>
+<p>As you can see, all three templates have the same name. Only the type they are bound to differs. This is enough to let Xpand know which template to choose according to the type of the current model element. Let&rsquo;s suppose Xpand is iterating the model and the current model element is a <em>TextField</em>. Although <em>Field</em> is a direct super type of <em>TextField</em>, Xpand will not invoke the first template (<em>«DEFINE field FOR Field»</em>), but the second template (<em>«DEFINE field FOR TextField»</em>), as this is the most concrete match for the type of the model element.</p>
 
 <h2>Running the Code Generator</h2>
 
 <p>If you have followed the above steps, running the code generator is a piece of cake:</p>
 
-<p>Open the context menu on <em>src/workflow/workflow.mwe</em> and select <em>Run As -> MWE Workflow</em></p>
+<p>Open the context menu on <em>src/workflow/workflow.mwe</em> and select <em>Run As &ndash;> MWE Workflow</em></p>
 
 <p>This will start the code generator. You will see some log messages in the console view. If all went well, the output in the console reads something like this:</p>
 
@@ -356,9 +324,9 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 
 <h2>Where to go from here</h2>
 
-<p>If you want to learn more about Xpand, be sure to attend my talk <a href="http://www.eclipsecon.org/2010/sessions/?page=sessions&amp;id=1129">Use models and let the computer do the grunt work with Xpand</a> at EclipseCon 2010. I'll show some more advanced topics in this talk (such as generator cartridges, using Xtend to augment your models, partitioning your code templates, using other metamodels to define your models).</p>
+<p>If you want to learn more about Xpand, be sure to attend my talk <a href="http://www.eclipsecon.org/2010/sessions/?page=sessions&amp;id=1129">Use models and let the computer do the grunt work with Xpand</a> at EclipseCon 2010. I&rsquo;ll show some more advanced topics in this talk (such as generator cartridges, using Xtend to augment your models, partitioning your code templates, using other metamodels to define your models).</p>
 
-<p>Xpand comes with an extensive documentation (just go to <em>Help -> Help Contents -> Xpand Documentation</em> in Eclipse). You can also get help on Xpand in the <a href="http://www.eclipse.org/forums/index.php?t=tree&amp;th=163643&amp;">Eclipse Community Forums</a></p>
+<p>Xpand comes with an extensive documentation (just go to <em>Help &ndash;> Help Contents &ndash;> Xpand Documentation</em> in Eclipse). You can also get help on Xpand in the <a href="http://www.eclipse.org/forums/index.php?t=tree&amp;th=163643&amp;">Eclipse Community Forums</a></p>
 
 <p>Should you need help, <a href="http://www.itemis.com">itemis (the company I work with)</a> offers training and consulting for Xpand and a host of other modeling related technologies.</p>
 
@@ -376,13 +344,13 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
     <updated>2009-10-13T23:18:52+01:00</updated>
     <id>http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
     <content type="html"><![CDATA[<ol>
-<li><p>Does Model Driven Software Development actually work?</p></li>
-<li><p>Are some developers more productive than others?</p></li>
-<li><p>What happens during code generation?</p></li>
-<li><p>Do diagrams and text go together well?</p></li>
-<li><p>What happens during model transformation?</p></li>
-<li><p>What are DSLs? And can I create them with Eclipse?</p></li>
-<li><p>Does modeling scale in the enterprise?</p></li>
+<li><p> Does Model Driven Software Development actually work?</p></li>
+<li><p> Are some developers more productive than others?</p></li>
+<li><p> What happens during code generation?</p></li>
+<li><p> Do diagrams and text go together well?</p></li>
+<li><p> What happens during model transformation?</p></li>
+<li><p> What are DSLs? And can I create them with Eclipse?</p></li>
+<li><p> Does modeling scale in the enterprise?</p></li>
 </ol>
 
 
@@ -391,25 +359,25 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 <!-- more -->
 
 
-<p>So if you are wondering why everybody in Europe is so thrilled about Modeling, attend to one of these events - you'll get the answers there.</p>
+<p>So if you are wondering why everybody in Europe is so thrilled about Modeling, attend to one of these events &ndash; you&rsquo;ll get the answers there.</p>
 
 <p>For your convenience, here is a list of some of the talks:</p>
 
 <ul>
-<li><p>Case Study: Model Transformations - Richard Woods, Credit Suisse</p></li>
-<li><p>Building DSLs with Xtext - Heiko Behrens, itemis</p></li>
-<li><p>Modeling on an enterprise scale - Eike Stepper, Eclipse Modeling Project</p></li>
-<li><p>Query, Transaction and Validation - Bernd Kolb &amp; Boris Gruschko, both SAP</p></li>
-<li><p>Agent-Based Computer Simulation for Operational Risk Analysis - Ed MacKerrow, Los Alamos Labs</p></li>
-<li><p>Papyrus: Advent of an Open Source IME - Kenn Hussey, Zeligsoft</p></li>
+<li><p>Case Study: Model Transformations &ndash; Richard Woods, Credit Suisse</p></li>
+<li><p>Building DSLs with Xtext &ndash; Heiko Behrens, itemis</p></li>
+<li><p>Modeling on an enterprise scale &ndash; Eike Stepper, Eclipse Modeling Project</p></li>
+<li><p>Query, Transaction and Validation &ndash; Bernd Kolb &amp; Boris Gruschko, both SAP</p></li>
+<li><p>Agent-Based Computer Simulation for Operational Risk Analysis &ndash; Ed MacKerrow, Los Alamos Labs</p></li>
+<li><p>Papyrus: Advent of an Open Source IME &ndash; Kenn Hussey, Zeligsoft</p></li>
 <li><p>B3: A Model for Unbreakable Builds</p></li>
-<li><p>There's a Modeling Solution for That - Bruce Trask, MDE Systems &amp; Angel Roman, MDE Systems</p></li>
+<li><p>There&rsquo;s a Modeling Solution for That &ndash; Bruce Trask, MDE Systems &amp; Angel Roman, MDE Systems</p></li>
 </ul>
 
 
 <p>If you ask me, this is a pretty decent line-up, both content-wise and people-wise. Not being one of the big conferences, the Modeling Days will actually give you the chance to talk to the experts and other end-users. Remember, networking is key.</p>
 
-<p>So go ahead and register by adding your name to <a href="http://wiki.eclipse.org/Eclipse_Modeling_Day">this wiki page</a>. Registration is free, but you need to register in order to help the organizers to plan the catering. If you don't have an account for editing the wiki page or don't want to create one, just send mail to <a href="mailto:eclipse_modeling_nyc@eclipse.org">eclipse_modeling_nyc@eclipse.org</a> or <a href="mailto:eclipse_modeling_toronto@eclipse.org">eclipse_modeling_toronto@eclipse.org</a></p>
+<p>So go ahead and register by adding your name to <a href="http://wiki.eclipse.org/Eclipse_Modeling_Day">this wiki page</a>. Registration is free, but you need to register in order to help the organizers to plan the catering. If you don&rsquo;t have an account for editing the wiki page or don&rsquo;t want to create one, just send mail to <a href="mailto:eclipse_modeling_nyc@eclipse.org">eclipse_modeling_nyc@eclipse.org</a> or <a href="mailto:eclipse_modeling_toronto@eclipse.org">eclipse_modeling_toronto@eclipse.org</a></p>
 ]]></content>
   </entry>
   
@@ -425,12 +393,12 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 
 <p><img src="http://farm4.static.flickr.com/3648/3383866773_ffa5c03596.jpg" alt="Modeling BOF" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3383866773)
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3383866773">http://www.flickr.com/photos/81029262@N00/3383866773</a>)
 The topics discussed were focussing on consumability and long-term sustainability of EMF:</p>
 
 <p><strong>Documentation and Marketing</strong></p>
 
-<p>We all agreed that the entire modeling project lacks a decent documentation. While of course all of the projects and subprojects do have their own documentation, there is so such thing as an overview documentation. Modelers as we are, we quickly realized we're lacking a documentation superstructure. The idea is to provide a guide for users (newbies and seasoned experts alike) to navigate the Eclipse Modeling world. The modeling project offers a great variety of technologies, so it is not always easy to find out which set of technologies / frameworks you might want to use - especially if you are new to EMF.</p>
+<p>We all agreed that the entire modeling project lacks a decent documentation. While of course all of the projects and subprojects do have their own documentation, there is so such thing as an overview documentation. Modelers as we are, we quickly realized we&rsquo;re lacking a documentation superstructure. The idea is to provide a guide for users (newbies and seasoned experts alike) to navigate the Eclipse Modeling world. The modeling project offers a great variety of technologies, so it is not always easy to find out which set of technologies / frameworks you might want to use &ndash; especially if you are new to EMF.</p>
 
 <p>We also agreed that we need more success stories (in the form of blog entries, articles and shiny flyers for the <a href="http://www.eclipse.org/home/categories/index.php?category=modeling">modeling landing page</a>). A quick poll revealed that more than 90% of all people attending have been working on projects in which modeling was successfully applied, so there should be enough material to create success stories!</p>
 
@@ -438,7 +406,7 @@ The topics discussed were focussing on consumability and long-term sustainabilit
 
 <p><strong>Consuming Modeling Technology</strong></p>
 
-<p>I think there is no other technology that causes more emotions in an Eclipse committers life than P2. So we also had our little discussion about how to best provision Modeling technology. No big news here - we just re-iterated the pros and cons of using ZIPs vs. P2 and also had a short discussion about the Friends of Eclipse Download Wizard (which, rumor has it, will allow you to assemble a custom distro by just selecting the pieces you need). Several people mentioned that <a href="http://www.eclipse.org/modeling/amalgam/">Amalgamation</a> is intended to be a place for modeling distros.</p>
+<p>I think there is no other technology that causes more emotions in an Eclipse committers life than P2. So we also had our little discussion about how to best provision Modeling technology. No big news here &ndash; we just re-iterated the pros and cons of using ZIPs vs. P2 and also had a short discussion about the Friends of Eclipse Download Wizard (which, rumor has it, will allow you to assemble a custom distro by just selecting the pieces you need). Several people mentioned that <a href="http://www.eclipse.org/modeling/amalgam/">Amalgamation</a> is intended to be a place for modeling distros.</p>
 
 <p><strong>EMF 3.0</strong></p>
 
@@ -446,16 +414,16 @@ The topics discussed were focussing on consumability and long-term sustainabilit
 
 <p><strong>Miscellanea</strong></p>
 
-<p>Someone asked if we need something like a model bus, the answer was no - we've got the <a href="http://www.eclipse.org/modeling/emft/?project=mwe">modeling workflow engine (MWE)</a>.</p>
+<p>Someone asked if we need something like a model bus, the answer was no &ndash; we&rsquo;ve got the <a href="http://www.eclipse.org/modeling/emft/?project=mwe">modeling workflow engine (MWE)</a>.</p>
 
 <p>We also briefly discussed the recent change of leadership on the MDT OCL component (<a href="http://give-a-damus.blogspot.com/">Christian Damus</a> <a href="http://dev.eclipse.org/mhonarc/lists/modeling-pmc/msg01042.html">revoked</a> his committer and component lead status recently). Everybody agreed that to lead a component, a long-term committment is needed (which has been met by Christian in the most excellent way). We also agreed that we need to make avoid situations in which a whole bunch of projects / components suddenly are without a leader. This will be a task for the PMC.
 [</p>
 
 <p><img src="http://farm4.static.flickr.com/3629/3383867215_982c6592ac.jpg" alt="Modeling BOF" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3383867215)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3383867215">http://www.flickr.com/photos/81029262@N00/3383867215</a>)</p>
 
-<p>After the official part of the BOF, there still was time to chat and shake hands with people you never met in person before. I had the pleasure to shake hands with Anthony Hunter, who works for IBM. From our discussions on mailing lists and bugs, you could guess that we have a totally different view on the marketing of software, but it turns out we're actually not that far apart :-)</p>
+<p>After the official part of the BOF, there still was time to chat and shake hands with people you never met in person before. I had the pleasure to shake hands with Anthony Hunter, who works for IBM. From our discussions on mailing lists and bugs, you could guess that we have a totally different view on the marketing of software, but it turns out we&rsquo;re actually not that far apart :&ndash;)</p>
 
 <p><a href="http://en.wikipedia.org/wiki/Birds_of_a_Feather_(computing">BOFs</a>) are a great way to interact with like-minded people at conferences. So, next time you go to a conference, make sure you participate in a BOF to make yourself be heard and take part in the discussion.</p>
 ]]></content>
@@ -468,90 +436,86 @@ The topics discussed were focussing on consumability and long-term sustainabilit
     <id>http://www.peterfriese.de/using-teneo-emf-and-hibernate-to-update-and-query-your-data</id>
     <content type="html"><![CDATA[<p><a href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/">Last week I showed you</a> how to use Teneo, EMF and Hibernate to store your data in a database.</p>
 
-<p>This week, we're going to have a look at how to update the data, add more records and how to query the database for information using HQL, the Hibernate Query Language.</p>
+<p>This week, we&rsquo;re going to have a look at how to update the data, add more records and how to query the database for information using HQL, the Hibernate Query Language.</p>
 
-<p>If you haven't done so, you might consider <a href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/">taking last week's tutorial</a> in order to get your environment set up and understand the basic concepts. If you're lazy, you can as well download the code of the tutorial to get started more quickly. It is available [drain file 16 url here].</p>
+<p>If you haven&rsquo;t done so, you might consider <a href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/">taking last week&rsquo;s tutorial</a> in order to get your environment set up and understand the basic concepts. If you&rsquo;re lazy, you can as well download the code of the tutorial to get started more quickly. It is available [drain file 16 url here].</p>
 
 <p>As it turns out, in order to change anything in the library database, we must first fetch the to-be-changed data, so we need to have a look at querying first.</p>
 
 <p><strong>Retrieving and updating data</strong>
-Let's assume we'd want to the update the number of pages in a book, because the new edition has an additional chapter.</p>
+Let&rsquo;s assume we&rsquo;d want to the update the number of pages in a book, because the new edition has an additional chapter.</p>
 
 <ol>
-<li><p>So, first of all we need to open a session and begin a transaction:</p>
+<li><p> So, first of all we need to open a session and begin a transaction:</p>
 
-<p>   {</p>
-
-<pre><code>   Session session = sessionFactory.openSession();
-   session.beginTransaction();
+<pre><code>{
+    Session session = sessionFactory.openSession();
+    session.beginTransaction();
 </code></pre></li>
-<li><p>Next, let's create an HQL query. We want to find any books that are written by an author by the name "A. K. Dewdney" that contain "Omnibus" in their title.</p>
+<li><p> Next, let&rsquo;s create an HQL query. We want to find any books that are written by an author by the name &ldquo;A. K. Dewdney&rdquo; that contain &ldquo;Omnibus&rdquo; in their title.</p>
 
-<pre><code>   Query query = session.createQuery(
-       "SELECT book from " +
-       "    Book book, " +
-       "    Writer writer " +
-       "WHERE " +
-       "    book.title like '%Turing Omnibus%' " +
-       "AND " +
-       "    writer.name = 'A. K. Dewdney'");
+<pre><code>    Query query = session.createQuery(
+        "SELECT book from " +
+        "    Book book, " +
+        "    Writer writer " +
+        "WHERE " +
+        "    book.title like '%Turing Omnibus%' " +
+        "AND " +
+        "    writer.name = 'A. K. Dewdney'");
 </code></pre></li>
-<li><p>We can now execute the query and display the results:</p>
+<li><p> We can now execute the query and display the results:</p>
 
-<pre><code>   List&lt;book&gt; books = query.list();
-   Book book = books.get(0);
-   System.out.println(book.getTitle());
+<pre><code>    List&lt;book&gt; books = query.list();
+    Book book = books.get(0);
+    System.out.println(book.getTitle());
 </code></pre></li>
-<li><p>Updating the page count is pretty obvious:</p>
+<li><p> Updating the page count is pretty obvious:</p>
 
-<pre><code>   book.setPages(520);
+<pre><code>    book.setPages(520);
 </code></pre></li>
-<li><p>Finally, don't forget to commit the transaction and close the session:</p>
+<li><p> Finally, don&rsquo;t forget to commit the transaction and close the session:</p>
 
-<pre><code>   session.getTransaction().commit();
-   session.close();
-</code></pre>
-
-<p>   }</p></li>
+<pre><code>    session.getTransaction().commit();
+    session.close();
+}
+</code></pre></li>
 </ol>
 
 
 <p><strong>Adding data</strong>
-Let's now assume we want to add more books (and authors) to the library.</p>
+Let&rsquo;s now assume we want to add more books (and authors) to the library.</p>
 
 <ol>
-<li><p>By now, you should be pretty familiar with the pattern of opening a new session:</p>
+<li><p> By now, you should be pretty familiar with the pattern of opening a new session:</p>
 
-<p>   {</p>
-
-<pre><code>   Session session = sessionFactory.openSession();
-   session.beginTransaction();
+<pre><code>{
+    Session session = sessionFactory.openSession();
+    session.beginTransaction();
 </code></pre></li>
-<li><p>As we want to add new items to the library, we need to retrieve the library instance first of all:</p>
+<li><p> As we want to add new items to the library, we need to retrieve the library instance first of all:</p>
 
-<pre><code>   Query query = session.createQuery("from Library");
-   List&lt;library&gt; libraries = query.list();
-   Library library = libraries.get(0);
+<pre><code>    Query query = session.createQuery("from Library");
+    List&lt;library&gt; libraries = query.list();
+    Library library = libraries.get(0);
 </code></pre></li>
-<li><p>Creating a new book and its author is easy, as we just have to use the API EMF so kindly generated for us:</p>
+<li><p> Creating a new book and its author is easy, as we just have to use the API EMF so kindly generated for us:</p>
 
-<pre><code>   Writer writer = LibraryFactory.eINSTANCE.createWriter();
-   writer.setName("J.R.R. Tolkien");
-   Book book = LibraryFactory.eINSTANCE.createBook();
-   book.setTitle("The Hobbit");
-   book.setPages(320);
-   book.setAuthor(writer);
-   book.setCategory(BookCategory.MYSTERY);     
-   library.getBooks().add(book);
-   library.getWriters().add(writer);
+<pre><code>    Writer writer = LibraryFactory.eINSTANCE.createWriter();
+    writer.setName("J.R.R. Tolkien");
+    Book book = LibraryFactory.eINSTANCE.createBook();
+    book.setTitle("The Hobbit");
+    book.setPages(320);
+    book.setAuthor(writer);
+    book.setCategory(BookCategory.MYSTERY);     
+    library.getBooks().add(book);
+    library.getWriters().add(writer);
 </code></pre></li>
-<li><p>Finally, commit the transaction and close the session:</p>
+<li><p> Finally, commit the transaction and close the session:</p>
 
-<pre><code>   session.getTransaction().commit();
-   session.close();
-</code></pre>
-
-<p>   }</p></li>
+<pre><code>    session.getTransaction().commit();
+    session.close();
+}
+</code></pre></li>
 </ol>
 
 ]]></content>
@@ -562,28 +526,28 @@ Let's now assume we want to add more books (and authors) to the library.</p>
     <link href="http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data/"/>
     <updated>2009-03-06T23:22:42+00:00</updated>
     <id>http://www.peterfriese.de/using-teneo-and-emf-to-store-your-data</id>
-    <content type="html"><![CDATA[<p>Most of you know that I am working as a committer for various Eclipse-related projects (such as <a href="http://www.xtext.org">Xtext</a>, <a href="http://www.eclipse.org/modeling/m2t/?project=xpand">Xpand</a> and the <a href="http://www.eclipse.org/modeling/emft/?project=mwe#mwe">Modeling Workflow Engine</a>). You might not know, however, that I also work as a consultant for <a href="http://www.itemis.com">itemis</a>. On one of my <a href="http://www.itemis.com/itemis-ag/language=en/2621/portfolio">recent consulting assignments</a> in Ottawa, Canada, I was asked "How can we use EMF to store our data in a database?"</p>
+    <content type="html"><![CDATA[<p>Most of you know that I am working as a committer for various Eclipse-related projects (such as <a href="http://www.xtext.org">Xtext</a>, <a href="http://www.eclipse.org/modeling/m2t/?project=xpand">Xpand</a> and the <a href="http://www.eclipse.org/modeling/emft/?project=mwe#mwe">Modeling Workflow Engine</a>). You might not know, however, that I also work as a consultant for <a href="http://www.itemis.com">itemis</a>. On one of my <a href="http://www.itemis.com/itemis-ag/language=en/2621/portfolio">recent consulting assignments</a> in Ottawa, Canada, I was asked &ldquo;How can we use EMF to store our data in a database?&rdquo;</p>
 
 <p>Well, it turns out EMF can help a long way to store data in a database. Here is how.
 <strong>Prepare your development environment</strong></p>
 
 <ol>
-<li><p>Get Eclipse 3.5 M5 (<a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M5-200902021535/index.php">click here to download</a>)</p></li>
-<li><p>Unpack and start Eclipse</p></li>
-<li><p>Bring up the "Install New Software" dialog (Help -> Install New Software)</p></li>
-<li><p>Select <em>Teneo EMF Hibernate Runtime</em> and <em>Teneo EMF Hibernate SDK</em>, version 1.0.3</p></li>
-<li><p>Cick <em>Finish</em></p></li>
-<li><p>You most probably will be asked to restart Eclipse.</p></li>
+<li><p> Get Eclipse 3.5 M5 (<a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M5-200902021535/index.php">click here to download</a>)</p></li>
+<li><p> Unpack and start Eclipse</p></li>
+<li><p> Bring up the &ldquo;Install New Software&rdquo; dialog (Help &ndash;> Install New Software)</p></li>
+<li><p> Select <em>Teneo EMF Hibernate Runtime</em> and <em>Teneo EMF Hibernate SDK</em>, version 1.0.3</p></li>
+<li><p> Cick <em>Finish</em></p></li>
+<li><p> You most probably will be asked to restart Eclipse.</p></li>
 </ol>
 
 
 <p><strong>Create a target definition that includes Hibernate and HSQLDB</strong>
-In order to keep things simple, we will store the data in an <a href="http://hsqldb.org/">HSQLDB</a> database. We will use the <a href="http://www.hibernate.org/">Hibernate</a> OR Mapper to perform the mapping between your data objects and the database. As you might guess, quite a number of libraries will be involved to get the task accomplished. Instead of creating a bunch of plug-in projects containing the respective libraries, or - even worse - copying all libraries into our project, we'll set up a target definition. Target definitions help to maintain a common set of dependencies for all developers on a team, which is a Good Thing.</p>
+In order to keep things simple, we will store the data in an <a href="http://hsqldb.org/">HSQLDB</a> database. We will use the <a href="http://www.hibernate.org/">Hibernate</a> OR Mapper to perform the mapping between your data objects and the database. As you might guess, quite a number of libraries will be involved to get the task accomplished. Instead of creating a bunch of plug-in projects containing the respective libraries, or &ndash; even worse &ndash; copying all libraries into our project, we&rsquo;ll set up a target definition. Target definitions help to maintain a common set of dependencies for all developers on a team, which is a Good Thing.</p>
 
 <ol>
-<li><p>Create a new project <em>library.target</em> (File -> New -> Project... -> General -> Project)</p></li>
-<li><p>Create three folders in this project: <em>hibernate</em>, <em>dependencies</em>, <em>hsqldb</em></p></li>
-<li><p>Go to the <a href="http://www.springsource.com/repository/app/">SpringSource Bundle Repository</a> and download the following OSGi bundles:</p></li>
+<li><p> Create a new project <em>library.target</em> (File &ndash;> New &ndash;> Project&hellip; &ndash;> General &ndash;> Project)</p></li>
+<li><p> Create three folders in this project: <em>hibernate</em>, <em>dependencies</em>, <em>hsqldb</em></p></li>
+<li><p> Go to the <a href="http://www.springsource.com/repository/app/">SpringSource Bundle Repository</a> and download the following OSGi bundles:</p></li>
 </ol>
 
 
@@ -619,25 +583,20 @@ save in folder</p>
 <p>library.target/hsqldb</p>
 
 <ol>
-<li><p>Create a new target definition library.target in this project (File -> New -> Other... -> Plug-in Development -> Target Definition)</p></li>
-<li><p>Open the target definition and add the three directories to it's contents. As the GUI does not allow you to work with relative paths, you might consider to use a text editor to paste the following text:</p></li>
-</ol>
+<li><p> Create a new target definition library.target in this project (File &ndash;> New &ndash;> Other&hellip; &ndash;> Plug-in Development &ndash;> Target Definition)</p></li>
+<li><p> Open the target definition and add the three directories to it&rsquo;s contents. As the GUI does not allow you to work with relative paths, you might consider to use a text editor to paste the following text:</p>
 
-
-<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;?pde version="3.5"?&gt;
-&lt;target description="Teneo-related stuff, mostly Hibernate" name="Library Target Definition"&gt;
-    &lt;locations&gt;
-        &lt;location path="${eclipse_home}" type="Profile"/&gt;
-        &lt;location path="${workspace_loc}/library.target/hibernate" type="Directory"/&gt;
-        &lt;location path="${workspace_loc}/library.target/dependencies" type="Directory"/&gt;
-        &lt;location path="${workspace_loc}/library.target/hsqldb" type="Directory"/&gt;
-    &lt;/locations&gt;
-&lt;/target&gt;
-</code></pre>
-
-<ol>
-<li>Open the target definition in the Target Definition Editor and click on the <em>Set as Target Platform</em> hyperlink in the upper right area. This will activate the target definition. All contained bundles are now available and can be referenced as dependencies.</li>
+<p>&lt;?xml version=&ldquo;1.0&rdquo; encoding=&ldquo;UTF-8&rdquo;?>
+&lt;?pde version=&ldquo;3.5&rdquo;?>
+<target description="Teneo-related stuff, mostly Hibernate" name="Library Target Definition">
+    <locations>
+        <location path="${eclipse_home}" type="Profile"/>
+        <location path="${workspace_loc}/library.target/hibernate" type="Directory"/>
+        <location path="${workspace_loc}/library.target/dependencies" type="Directory"/>
+        <location path="${workspace_loc}/library.target/hsqldb" type="Directory"/>
+    </locations>
+</target></p></li>
+<li><p> Open the target definition in the Target Definition Editor and click on the <em>Set as Target Platform</em> hyperlink in the upper right area. This will activate the target definition. All contained bundles are now available and can be referenced as dependencies.</p></li>
 </ol>
 
 
@@ -645,28 +604,18 @@ save in folder</p>
 The data model will be based on the <a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/references/overview/EMF.html">well-known library tutorial</a> that ships with EMF. If you are interested in a more in-depth look, I recommend taking this tutorial. However, to shortcut things, here is the ultra-slim version of the EMF-Tutorial:</p>
 
 <ol>
-<li><p>Download the Rose class model and save it on your computer</p></li>
-<li><p>Create a new EMF project (File -> New -> Other... -> Eclipse Modeling Framework -> EMF Project)</p></li>
-</ol>
+<li><p> Download the Rose class model and save it on your computer</p></li>
+<li><p> Create a new EMF project (File &ndash;> New &ndash;> Other&hellip; &ndash;> Eclipse Modeling Framework &ndash;> EMF Project)</p>
 
-
-<pre><code>* Project name: library
-
-
-* Model importer: Rose class model
-
-
-* Browse to the Rose class model _library.mdl_ mentioned before
-
-
-* Click on Load to load the model
-
-
-* Click Next, then Finish
-</code></pre>
-
-<ol>
-<li>In the library.genmodel editor, right-click on the Library node and select Generate Model Code</li>
+<ul>
+<li><p>Project name: library</p></li>
+<li><p>Model importer: Rose class model</p></li>
+<li><p>Browse to the Rose class model <em>library.mdl</em> mentioned before</p></li>
+<li><p>Click on Load to load the model</p></li>
+<li><p>Click Next, then Finish</p></li>
+</ul>
+</li>
+<li><p> In the library.genmodel editor, right-click on the Library node and select Generate Model Code</p></li>
 </ol>
 
 
@@ -674,161 +623,132 @@ The data model will be based on the <a href="http://help.eclipse.org/ganymede/in
 In order to demonstrate how to use the data model and how to perform CRUD operations with your data, we will create a simple Java class. In the good spirit of encapsulation and components, we will create a new plug-in project to host this class:</p>
 
 <ol>
-<li><p>Create a new Plug-in project library.main (File -> New -> Project... -> Plug-in Project)</p></li>
-<li><p>Open the manifest and add the following dependencies:</p></li>
-</ol>
+<li><p> Create a new Plug-in project library.main (File &ndash;> New &ndash;> Project&hellip; &ndash;> Plug-in Project)</p></li>
+<li><p> Open the manifest and add the following dependencies:</p>
 
+<ul>
+<li><p><em>library</em> (this is the bundle which contains our data model)</p></li>
+<li><p><em>org.eclipse.emf.teneo.hibernate</em></p></li>
+<li><p><em>org.eclipse.emf.ecore.xmi</em></p></li>
+<li><p><em>com.springsource.org.hibernate</em></p></li>
+<li><p><em>com.springsource.org.apache.commons.logging</em></p></li>
+<li><p><em>com.springsource.org.dom4j</em></p></li>
+<li><p><em>com.springsource.org.apache.commons.collections</em></p></li>
+<li><p><em>com.springsource.javax.transaction</em></p></li>
+<li><p><em>com.springsource.antlr</em></p></li>
+<li><p><em>com.springsource.org.hsqldb</em></p></li>
+</ul>
+</li>
+<li><p> Create a new Hibernate configuration file <em>hibernate.properties</em> in <em>library.main/src</em> and paste the following lines:</p>
 
-<pre><code>* _library_ (this is the bundle which contains our data model)
+<p>hibernate.connection.driver_class=org.hsqldb.jdbcDriver</p>
 
+<h1>use the following line to run the embedded db:</h1>
 
-* _org.eclipse.emf.teneo.hibernate_
+<h1>hibernate.connection.url=jdbc:hsqldb:file:/some/path/on/your/computer/dbname</h1>
 
+<h1>the following line will connect to a standalone (local) DB server:</h1>
 
-* _org.eclipse.emf.ecore.xmi_
-
-
-* _com.springsource.org.hibernate_
-
-
-* _com.springsource.org.apache.commons.logging_
-
-
-* _com.springsource.org.dom4j_
-
-
-* _com.springsource.org.apache.commons.collections_
-
-
-* _com.springsource.javax.transaction_
-
-
-* _com.springsource.antlr_
-
-
-* _com.springsource.org.hsqldb_
-</code></pre>
-
-<ol>
-<li>Create a new Hibernate configuration file <em>hibernate.properties</em> in <em>library.main/src</em> and paste the following lines:</li>
-</ol>
-
-
-<pre><code>hibernate.connection.driver_class=org.hsqldb.jdbcDriver
-# use the following line to run the embedded db:
-# hibernate.connection.url=jdbc:hsqldb:file:/some/path/on/your/computer/dbname
-# the following line will connect to a standalone (local) DB server:
-hibernate.connection.url=jdbc:hsqldb:hsql://127.0.0.1/library
+<p>hibernate.connection.url=jdbc:hsqldb:hsql://127.0.0.1/library
 hibernate.connection.username=sa
 hibernate.connection.password=
 hibernate.dialect=org.hibernate.dialect.HSQLDialect
-hibernate.hbm2ddl.auto=true
-</code></pre>
+hibernate.hbm2ddl.auto=true</p></li>
+</ol>
+
 
 <p><strong>Implement the library main application</strong>
-With all the boilerplate in place, we're finally ready to write some code. We will create a new class and add some code to create an author and his book and store both in a library.</p>
+With all the boilerplate in place, we&rsquo;re finally ready to write some code. We will create a new class and add some code to create an author and his book and store both in a library.</p>
 
 <ol>
-<li><p>Create a new class LibraryDemo, making sure it has a main method</p></li>
-<li><p>In order to use Teneo to persist our data, we first need to create a datastore and register our model package with it:</p>
+<li><p> Create a new class LibraryDemo, making sure it has a main method</p></li>
+<li><p> In order to use Teneo to persist our data, we first need to create a datastore and register our model package with it:</p>
 
-<p>   // create the data store
-   String dataStoreName = "LibraryDataStore";
-   HbDataStore dataStore = HbHelper.INSTANCE.createRegisterDataStore(dataStoreName);</p>
+<pre><code>// create the data store
+String dataStoreName = "LibraryDataStore";
+HbDataStore dataStore = HbHelper.INSTANCE.createRegisterDataStore(dataStoreName);
 
-<p>   // register the model package with the data store
-   dataStore.setEPackages(new EPackage[] { LibraryPackage.eINSTANCE });</p>
+// register the model package with the data store
+dataStore.setEPackages(new EPackage[] { LibraryPackage.eINSTANCE });
 
-<p>   // initialize the data store, which creates the tables
-   dataStore.initialize();</p></li>
-<li><p>Next, we need to get hold of a session factory and request a new session form it:</p>
-
-<p>   SessionFactory sessionFactory = dataStore.getSessionFactory();
-   {</p>
-
-<pre><code>   Session session = sessionFactory.openSession();
-   session.beginTransaction();
+// initialize the data store, which creates the tables
+dataStore.initialize();
 </code></pre></li>
-<li><p>Now, let's create a new library and save it to the session:</p>
+<li><p> Next, we need to get hold of a session factory and request a new session form it:</p>
 
-<pre><code>   // create a library
-   Library library = LibraryFactory.eINSTANCE.createLibrary();
-   library.setName("Developer's bookshelf");
-
-   // store the library
-   session.save(library);
+<pre><code>SessionFactory sessionFactory = dataStore.getSessionFactory();
+{
+    Session session = sessionFactory.openSession();
+    session.beginTransaction();
 </code></pre></li>
-<li><p>In the following part, we will create an author and his book, link them to each other and add them to the library. There is no specific Teneo aspect to this part of the code, it is just straightforward usage of the API EMF generated for your datamodel:</p>
+<li><p> Now, let&rsquo;s create a new library and save it to the session:</p>
 
-<pre><code>   // create an author
-   Writer writer = LibraryFactory.eINSTANCE.createWriter();
-   writer.setName("A. K. Dewdney");
+<pre><code>    // create a library
+    Library library = LibraryFactory.eINSTANCE.createLibrary();
+    library.setName("Developer's bookshelf");
 
-   // create a book
-   Book book = LibraryFactory.eINSTANCE.createBook();
-   book.setTitle("The New Turing Omnibus");
-   book.setPages(480);
-   book.setCategory(BookCategory.MYSTERY); // oh well, let's hope it's not mystery to most readers!
-   book.setAuthor(writer);
-
-   // add book and writer to library
-   library.getBooks().add(book);
-   library.getWriters().add(writer);
+    // store the library
+    session.save(library);
 </code></pre></li>
-<li><p>Finally, we need to commit our changes to the database and close the session:</p>
+<li><p> In the following part, we will create an author and his book, link them to each other and add them to the library. There is no specific Teneo aspect to this part of the code, it is just straightforward usage of the API EMF generated for your datamodel:</p>
 
-<pre><code>   // commit changes to the database and close the session
-   session.getTransaction().commit();
-   session.close();
-</code></pre>
+<pre><code>    // create an author
+    Writer writer = LibraryFactory.eINSTANCE.createWriter();
+    writer.setName("A. K. Dewdney");
 
-<p>   }</p></li>
+    // create a book
+    Book book = LibraryFactory.eINSTANCE.createBook();
+    book.setTitle("The New Turing Omnibus");
+    book.setPages(480);
+    book.setCategory(BookCategory.MYSTERY); // oh well, let's hope it's not mystery to most readers!
+    book.setAuthor(writer);
+
+    // add book and writer to library
+    library.getBooks().add(book);
+    library.getWriters().add(writer);
+</code></pre></li>
+<li><p> Finally, we need to commit our changes to the database and close the session:</p>
+
+<pre><code>    // commit changes to the database and close the session
+    session.getTransaction().commit();
+    session.close();
+}
+</code></pre></li>
 </ol>
 
 
 <p><strong>Start the DB server and run the application</strong></p>
 
 <ol>
-<li><p>Open a command line and navigate to the directory that contains <em>hsqldb.jar</em></p></li>
-<li><p>Start the HSQLDB server using this command line:</p></li>
-</ol>
+<li><p> Open a command line and navigate to the directory that contains <em>hsqldb.jar</em></p></li>
+<li><p> Start the HSQLDB server using this command line:</p>
 
+<p>java -cp com.springsource.org.hsqldb-1.8.0.9.jar org.hsqldb.Server -database.0 file:library -dbname.0 library</p></li>
+<li><p> Finally (!) go back to Eclipse and start <em>LibraryDemo</em>. You should get an output similar to this one:</p>
 
-<pre><code>java -cp com.springsource.org.hsqldb-1.8.0.9.jar org.hsqldb.Server -database.0 file:library -dbname.0 library
-</code></pre>
-
-<ol>
-<li>Finally (!) go back to Eclipse and start <em>LibraryDemo</em>. You should get an output similar to this one:</li>
-</ol>
-
-
-<pre><code>Mar 6, 2009 1:50:26 PM org.eclipse.emf.teneo.hibernate.HbHelper createRegisterDataStore
+<p>Mar 6, 2009 1:50:26 PM org.eclipse.emf.teneo.hibernate.HbHelper createRegisterDataStore
 INFO: Creating emf data store and registering it under name: LibraryDataStore
-...
+&hellip;
 Mar 6, 2009 1:50:28 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
-INFO: schema update complete
-</code></pre>
+INFO: schema update complete</p></li>
+<li><p> To actually see the data stored in the database, navigate to the directory containing the database and open <em>library.log</em>:</p>
 
-<ol>
-<li>To actually see the data stored in the database, navigate to the directory containing the database and open <em>library.log</em>:</li>
+<p>CREATE USER SA PASSWORD &ldquo;&rdquo; ADMIN
+/<em>C1</em>/SET SCHEMA PUBLIC
+CONNECT USER SA
+&hellip;
+INSERT INTO &ldquo;library&rdquo; VALUES(1,&lsquo;Library&rsquo;,0,&lsquo;Developer&rsquo;&rsquo;s bookshelf')
+INSERT INTO &ldquo;writer&rdquo; VALUES(1,&lsquo;Writer&rsquo;,0,&lsquo;A. K. Dewdney&rsquo;,NULL,NULL,&lsquo;Library&rsquo;,&lsquo;1&rsquo;,-2)
+INSERT INTO &ldquo;book&rdquo; VALUES(1,&lsquo;Book&rsquo;,0,&lsquo;The New Turing Omnibus&rsquo;,480,&lsquo;Mystery&rsquo;,1,NULL,NULL,&lsquo;Library&rsquo;,&lsquo;1&rsquo;,-3)
+DELETE FROM &ldquo;writer&rdquo; WHERE E_ID=1
+INSERT INTO &ldquo;writer&rdquo; VALUES(1,&lsquo;Writer&rsquo;,0,&lsquo;A. K. Dewdney&rsquo;,1,0,&lsquo;Library&rsquo;,&lsquo;1&rsquo;,-2)
+DELETE FROM &ldquo;book&rdquo; WHERE E_ID=1
+INSERT INTO &ldquo;book&rdquo; VALUES(1,&lsquo;Book&rsquo;,0,&lsquo;The New Turing Omnibus&rsquo;,480,&lsquo;Mystery&rsquo;,1,1,0,&lsquo;Library&rsquo;,&lsquo;1&rsquo;,-3)
+INSERT INTO &ldquo;writer_books&rdquo; VALUES(1,1,0)
+COMMIT
+DISCONNECT</p></li>
 </ol>
 
-
-<pre><code>CREATE USER SA PASSWORD "" ADMIN
-/*C1*/SET SCHEMA PUBLIC
-CONNECT USER SA
-...
-INSERT INTO "library" VALUES(1,'Library',0,'Developer''s bookshelf')
-INSERT INTO "writer" VALUES(1,'Writer',0,'A. K. Dewdney',NULL,NULL,'Library','1',-2)
-INSERT INTO "book" VALUES(1,'Book',0,'The New Turing Omnibus',480,'Mystery',1,NULL,NULL,'Library','1',-3)
-DELETE FROM "writer" WHERE E_ID=1
-INSERT INTO "writer" VALUES(1,'Writer',0,'A. K. Dewdney',1,0,'Library','1',-2)
-DELETE FROM "book" WHERE E_ID=1
-INSERT INTO "book" VALUES(1,'Book',0,'The New Turing Omnibus',480,'Mystery',1,1,0,'Library','1',-3)
-INSERT INTO "writer_books" VALUES(1,1,0)
-COMMIT
-DISCONNECT
-</code></pre>
 
 <p>In the next installment, I will show you how to retrieve objects from the database and query the database using Hibernate Query Language (HQL).</p>
 

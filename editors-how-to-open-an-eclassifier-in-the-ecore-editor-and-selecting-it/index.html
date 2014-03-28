@@ -61,6 +61,7 @@
     })();
 /* ]]> */</script>
 
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -144,9 +145,9 @@
   
   <p>I am currently working on an ECore Type Lookup Dialog that lets you look up EClassifiers in the same fashion we know from the JDT Type Lookup Dialog and the <a href="http://mea-bloga.blogspot.com/2008/02/quickly-access-exported-packages.html">PDE Artifact Lookup Dialog</a>.</p>
 
-<p>Creating the dialog is rather easy - you just need to subclass FilteredItemsSelectionDialog. I&#8217;ll blog more on this topic soon. Today, however, I wanted to document a tidbit that is not so well documented: How do I open the default editor on an EClassifier and select the EClassifier as soon as the editor has appeared.</p>
+<p>Creating the dialog is rather easy &ndash; you just need to subclass FilteredItemsSelectionDialog. I&rsquo;ll blog more on this topic soon. Today, however, I wanted to document a tidbit that is not so well documented: How do I open the default editor on an EClassifier and select the EClassifier as soon as the editor has appeared.</p>
 
-<p>First of all, let&#8217;s find out more about the EClassifier:</p>
+<p>First of all, let&rsquo;s find out more about the EClassifier:</p>
 
 <pre><code>EObject eObject = (EObject) object; 
 URI uri = EcoreUtil.getURI(eObject); 
@@ -180,7 +181,7 @@ IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(uri.toPla
 }
 </code></pre>
 
-<p>That&#8217;s it. As with most things in EMF, the answer can be found by browsing the EMF source code and the code of the editors and other artifacts that it generates.</p>
+<p>That&rsquo;s it. As with most things in EMF, the answer can be found by browsing the EMF source code and the code of the editors and other artifacts that it generates.</p>
 
 </div>
 
@@ -264,7 +265,7 @@ IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(uri.toPla
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -340,9 +341,9 @@ IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(uri.toPla
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -351,8 +352,6 @@ IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(uri.toPla
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

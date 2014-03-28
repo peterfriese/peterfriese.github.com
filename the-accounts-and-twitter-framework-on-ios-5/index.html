@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&#8217;re in a news reader application you &hellip;">
+  <meta name="description" content="Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&rsquo;re in a news reader application you &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -60,6 +60,7 @@
         t.parentNode.insertBefore(s, t);
     })();
 /* ]]> */</script>
+
 
   
   <script type="text/javascript">
@@ -146,7 +147,7 @@
     <img class="left" src="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_150x150.png">
   </p>
   
-  <p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&#8217;re in a news reader application you might want to let your followers know about an interesting article you just read. If you&#8217;re in a conference schedule app, you not only want to let your followers know about the awesome talks you&#8217;re listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you&#8217;re stuck in&#8230;</p>
+  <p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&rsquo;re in a news reader application you might want to let your followers know about an interesting article you just read. If you&rsquo;re in a conference schedule app, you not only want to let your followers know about the awesome talks you&rsquo;re listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you&rsquo;re stuck in&hellip;</p>
 
 <!-- more -->
 
@@ -159,22 +160,22 @@
 
 <ul>
 <li>Providing a secure local storage for user accounts, including their credentials</li>
-<li>Providing an easy way to sign API requests you send to Twitter. You no longer have to include code to handle <a href="https://dev.twitter.com/docs/auth/oauth/faq">OAuth</a> or <a href="https://dev.twitter.com/docs/oauth/xauth">xAuth</a> in your app - this has all been done by Apple for you</li>
+<li>Providing an easy way to sign API requests you send to Twitter. You no longer have to include code to handle <a href="https://dev.twitter.com/docs/auth/oauth/faq">OAuth</a> or <a href="https://dev.twitter.com/docs/oauth/xauth">xAuth</a> in your app &ndash; this has all been done by Apple for you</li>
 <li>Providing a basic UI for composing tweets, including switching the user account you tweet from, uploading images in a tweet and including your current location</li>
 </ul>
 
 
-<p>Lots of free stuff, so let&#8217;s have a look at how much (or little) code we actually need to write to tap this source of awesomeness.</p>
+<p>Lots of free stuff, so let&rsquo;s have a look at how much (or little) code we actually need to write to tap this source of awesomeness.</p>
 
 <h2>Using the Accounts Framework to fetch the list of accounts</h2>
 
-<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you&#8217;ll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will provide easy access to Google+ and Facebook accounts -  we&#8217;ll see.</p>
+<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you&rsquo;ll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will provide easy access to Google+ and Facebook accounts &ndash;  we&rsquo;ll see.</p>
 
 <p>To use the Accounts and Twitter frameworks, we need to add them to the project:</p>
 
 <p><img class="center" src="../images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/add_twitter_accounts.png" title="Add Accounts and Twitter frameworks to the project" ></p>
 
-<p>Once that&#8217;s done, we can use the Accounts framework to fetch the list of Twitter accounts on the device.</p>
+<p>Once that&rsquo;s done, we can use the Accounts framework to fetch the list of Twitter accounts on the device.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -221,7 +222,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Just like many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we&#8217;re interested in - <code>ACAccountTypeIdentifierTwitter</code> in our case. If we&#8217;re granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we&#8217;ve got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we&#8217;re on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
+<p>Just like many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we&rsquo;re interested in &ndash; <code>ACAccountTypeIdentifierTwitter</code> in our case. If we&rsquo;re granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we&rsquo;ve got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we&rsquo;re on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
 
 <p>Displaying the accounts in a <code>UITableViewController</code> is straightforward:</p>
 
@@ -266,7 +267,7 @@
 
 <h2>Displaying the public timeline of the selected user</h2>
 
-<p>When the user selects one of the accounts, we want to display a list of recent tweets for this selected account. We&#8217;ll use <code>TWRequest</code> to fetch the list of recent tweets.</p>
+<p>When the user selects one of the accounts, we want to display a list of recent tweets for this selected account. We&rsquo;ll use <code>TWRequest</code> to fetch the list of recent tweets.</p>
 
 <p><code>TWRequest</code> is the centerpiece of the iOS Twitter Framework and relieves us of the burden of having to perform OAuth authentication and request signing on our own. In order for it to do this, we need to provide a reference to the account whose timeline we want to read. We also need to provide the URL of the Twitter API endpoint we want to access. While this might seem a little bit cumbersome at first, this allows us to access not only current API calls but also any new APIs Twitter might come up with in the future without requiring Apple to update the API. Pretty nifty.</p>
 
@@ -319,13 +320,13 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Again, we need to provide a completion handler which will be invoked as soon as the call to Twitter returns. As you can also see, we&#8217;re using the same approach as before to make sure we update the UI from the UI thread. It&#8217;s also interesting to see Apple provides us with their own JSON parsing framework - no longer do we need to integrate third party libraries to serialize / deserialize JSON data.</p>
+<p>Again, we need to provide a completion handler which will be invoked as soon as the call to Twitter returns. As you can also see, we&rsquo;re using the same approach as before to make sure we update the UI from the UI thread. It&rsquo;s also interesting to see Apple provides us with their own JSON parsing framework &ndash; no longer do we need to integrate third party libraries to serialize / deserialize JSON data.</p>
 
 <h2>Sending Tweets</h2>
 
 <p>So far, we can choose a Twitter account from the list of Twitter accounts on our iPhone and display the home timeline of this particular user. But how about sending a tweet?</p>
 
-<p>Sending tweets is really easy: you just have to instantiate a new <code>TWTweetComposeViewController</code> and display it - iOS will take care of the rest:</p>
+<p>Sending tweets is really easy: you just have to instantiate a new <code>TWTweetComposeViewController</code> and display it &ndash; iOS will take care of the rest:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -354,9 +355,9 @@
 
 <h2>Conclusion</h2>
 
-<p>Integrating Twitter in your own apps has never been easier. With just a few lines of code, we implemented a basic version of a Twitter client that you can use to display a user&#8217;s home timeline and send tweets. Elaborating this code base is left as an exercise to you - feel free to <a href="http://github.com/peterfriese/TwitterClient">fork the code on Github</a> and send me pull requests as you add interesting features!</p>
+<p>Integrating Twitter in your own apps has never been easier. With just a few lines of code, we implemented a basic version of a Twitter client that you can use to display a user&rsquo;s home timeline and send tweets. Elaborating this code base is left as an exercise to you &ndash; feel free to <a href="http://github.com/peterfriese/TwitterClient">fork the code on Github</a> and send me pull requests as you add interesting features!</p>
 
-<p>Here&#8217;s an impression of the current state of the application:</p>
+<p>Here&rsquo;s an impression of the current state of the application:</p>
 
 <ul class="gallery">
 <li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_1.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - List of local accounts"><img src="/thumbs/twitter_client_1_120x150.png" alt="Twitter Client - List of local accounts" /></a></li>
@@ -449,7 +450,7 @@
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -525,9 +526,9 @@
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -536,8 +537,6 @@
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

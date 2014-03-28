@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,24 +18,24 @@
     <link href="http://www.peterfriese.de/dont-attend-the-eclipse-democamp-in-hamburg-this-friday/"/>
     <updated>2010-07-07T01:36:08+01:00</updated>
     <id>http://www.peterfriese.de/dont-attend-the-eclipse-democamp-in-hamburg-this-friday</id>
-    <content type="html"><![CDATA[<p>... if you're not interested in meeting local (and non-local) Eclipse enthusiasts and committers, learning something about Eclipse, Git, SWT, Qt, e4 and the iPhone, watching some nice Pixar short films in a cosy cinema, and frosty beverages.</p>
+    <content type="html"><![CDATA[<p>&hellip; if you&rsquo;re not interested in meeting local (and non-local) Eclipse enthusiasts and committers, learning something about Eclipse, Git, SWT, Qt, e4 and the iPhone, watching some nice Pixar short films in a cosy cinema, and frosty beverages.</p>
 
 <!-- more -->
 
 
 <p>On the other hand, if you <strong>are</strong> interested in at least one of those things, I encourage you to sign up for the DemoCamp <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_Helios_2010/Hamburg">here</a> or <a href="http://www.twitter.com/peterfriese">ping me on Twitter</a> or just send me a mail so I can add you to the list.</p>
 
-<p>Here's the detailed program:</p>
+<p>Here&rsquo;s the detailed program:</p>
 
 <ul>
-<li>18:00 - 18:40 Welcome / Short films</li>
-<li>18:45 - 19:15 <a href="http://twitter.com/vogella">Lars Vogel</a>, Developing with e4</li>
-<li>19:20 - 19:50 <a href="http://twitter.com/szarnekow">Sebastian Zarnekow</a>, Xtext - A Language Development Framework, Live demo of new and noteworthy features in Xtext</li>
-<li>19:50 - 20:20 Break + Surprise</li>
-<li>20:20 - 20:35 <a href="http://www.xing.com/profile/Juergen_Becker">Jürgen Becker</a>, UI with style - a new SWT platform that is based on Qt</li>
-<li>20:40 - 21:10 <a href="http://twitter.com/ralfebert">Ralf Ebert</a>, Introduction to distributed version control with Git</li>
-<li>21:15 - 21:45 <a href="http://twitter.com/HBehrens">Heiko Behrens</a>, Build your own iPhone app within minutes - thanks to Eclipse</li>
-<li>21:45 - open end Closing remarks / Frosty beverages</li>
+<li>18:00 &ndash; 18:40 Welcome / Short films</li>
+<li>18:45 &ndash; 19:15 <a href="http://twitter.com/vogella">Lars Vogel</a>, Developing with e4</li>
+<li>19:20 &ndash; 19:50 <a href="http://twitter.com/szarnekow">Sebastian Zarnekow</a>, Xtext &ndash; A Language Development Framework, Live demo of new and noteworthy features in Xtext</li>
+<li>19:50 &ndash; 20:20 Break + Surprise</li>
+<li>20:20 &ndash; 20:35 <a href="http://www.xing.com/profile/Juergen_Becker">Jürgen Becker</a>, UI with style &ndash; a new SWT platform that is based on Qt</li>
+<li>20:40 &ndash; 21:10 <a href="http://twitter.com/ralfebert">Ralf Ebert</a>, Introduction to distributed version control with Git</li>
+<li>21:15 &ndash; 21:45 <a href="http://twitter.com/HBehrens">Heiko Behrens</a>, Build your own iPhone app within minutes &ndash; thanks to Eclipse</li>
+<li>21:45 &ndash; open end Closing remarks / Frosty beverages</li>
 </ul>
 
 
@@ -54,7 +54,7 @@
     <link href="http://www.peterfriese.de/running-applescript-from-java/"/>
     <updated>2010-03-08T21:42:38+00:00</updated>
     <id>http://www.peterfriese.de/running-applescript-from-java</id>
-    <content type="html"><![CDATA[<p>In my current project, I need to launch an external application and maybe execute some additional commands on this external application. Due to the very nature of the project, the whole system will always be run on Mac OS X. So I thought, "why not use AppleScript"?<!-- more -->
+    <content type="html"><![CDATA[<p>In my current project, I need to launch an external application and maybe execute some additional commands on this external application. Due to the very nature of the project, the whole system will always be run on Mac OS X. So I thought, &ldquo;why not use AppleScript&rdquo;?<!-- more -->
 Turns out using AppleScript to launch applications is fairly easy, all you have to do is</p>
 
 <pre><code>tell application "name of your app" to launch
@@ -65,7 +65,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
 <pre><code>osascript -e 'tell app "iTunes" to launch'
 </code></pre>
 
-<p>So far so good. Should be easy to do this from Java, shouldn't it? Turns out it's not so easy at all. Let's try this:</p>
+<p>So far so good. Should be easy to do this from Java, shouldn&rsquo;t it? Turns out it&rsquo;s not so easy at all. Let&rsquo;s try this:</p>
 
 <pre><code>  String launchCmd = "osascript -e 'tell application \"iTunes\" to play'";
   process = Runtime.getRuntime().exec(launchCmd);
@@ -77,7 +77,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
   }
 </code></pre>
 
-<p>I'm not sure why, but it results in a nasty "<em>0:1: syntax error: A unknown token can't go here. (-2740)</em>" error message.</p>
+<p>I&rsquo;m not sure why, but it results in a nasty &ldquo;<em>0:1: syntax error: A unknown token can&rsquo;t go here. (-2740)</em>&rdquo; error message.</p>
 
 <p>But there is another signature for Runtime.exec:</p>
 
@@ -91,7 +91,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
   }
 </code></pre>
 
-<p>... and this works out just fine!</p>
+<p>&hellip; and this works out just fine!</p>
 ]]></content>
   </entry>
   
@@ -109,7 +109,7 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
     <link href="http://www.peterfriese.de/mind-boggling-1-ant-patternset/"/>
     <updated>2006-08-08T14:14:46+01:00</updated>
     <id>http://www.peterfriese.de/mind-boggling-1-ant-patternset</id>
-    <content type="html"><![CDATA[<p>If you're a Windows user like me, you are used to the idea that a filename consist of a first (the name) and a second part (the extension). Recently, I had to write a little <a href="http://ant.apache.org/">Ant</a> file that copies an entire JRE to another directory. In order to do this, I used the following snippet:
+    <content type="html"><![CDATA[<p>If you&rsquo;re a Windows user like me, you are used to the idea that a filename consist of a first (the name) and a second part (the extension). Recently, I had to write a little <a href="http://ant.apache.org/">Ant</a> file that copies an entire JRE to another directory. In order to do this, I used the following snippet:
 `</p>
 
 <!-- copy JRE -->
@@ -120,11 +120,11 @@ Turns out using AppleScript to launch applications is fairly easy, all you have 
 <include name="**/*.*" />
 </fileset>
 `
-Now, there is something wrong with this snippet. Can you spot the mistake? I didn't notice the mistake until my customer complained to me that the timezone information could not be read. It turned out that the timezone information is stored in files without an extension.</p>
+Now, there is something wrong with this snippet. Can you spot the mistake? I didn&rsquo;t notice the mistake until my customer complained to me that the timezone information could not be read. It turned out that the timezone information is stored in files without an extension.</p>
 
-<p>But why weren't they copied? Didn't I tell Ant to copy all files by specifying "<em><em>/</em>.</em>"?</p>
+<p>But why weren&rsquo;t they copied? Didn&rsquo;t I tell Ant to copy all files by specifying &ldquo;<em><em>/</em>.</em>&rdquo;?</p>
 
-<p>No, I didn't! The pattern "<em>.</em>" means "all files that contain a dot". Doh. Timezone files do not have a dot. The solution to the problem is quite simple: just remove the ".*", and you're done:
+<p>No, I didn&rsquo;t! The pattern &ldquo;<em>.</em>&rdquo; means &ldquo;all files that contain a dot&rdquo;. Doh. Timezone files do not have a dot. The solution to the problem is quite simple: just remove the &ldquo;.*&rdquo;, and you&rsquo;re done:
 `</p>
 
 <!-- copy JRE -->
@@ -136,7 +136,7 @@ Now, there is something wrong with this snippet. Can you spot the mistake? I did
 </fileset>
 `</p>
 
-<p>So, if you want to copy all files, remember to <strong>not</strong> use the "<em>.</em>" notation used to us Windows users, but use the "*" notation used to Linux users.</p>
+<p>So, if you want to copy all files, remember to <strong>not</strong> use the &ldquo;<em>.</em>&rdquo; notation used to us Windows users, but use the &ldquo;*&rdquo; notation used to Linux users.</p>
 ]]></content>
   </entry>
   
@@ -145,7 +145,7 @@ Now, there is something wrong with this snippet. Can you spot the mistake? I did
     <link href="http://www.peterfriese.de/andromda-31-has-been-released/"/>
     <updated>2005-11-25T14:22:15+00:00</updated>
     <id>http://www.peterfriese.de/andromda-31-has-been-released</id>
-    <content type="html"><![CDATA[<p>AndroMDA (pronounced "Andromeda") is an extensible generator framework that adheres to the Model Driven Architecture (MDA) paradigm. Models from UML tools will be transformed into deployable components for your favorite platform (J2EE, Spring, .NET). Unlike other MDA toolkits, AndroMDA comes with a host of ready-made cartridges that target today's development toolkits like Axis, jBPM, Struts, JSF, Spring and Hibernate. AndroMDA also contains a toolkit for building your own cartridges or customize existing ones - the meta cartridge. Using it, you can build a custom code generator using your favorite UML tool.</p>
+    <content type="html"><![CDATA[<p>AndroMDA (pronounced &ldquo;Andromeda&rdquo;) is an extensible generator framework that adheres to the Model Driven Architecture (MDA) paradigm. Models from UML tools will be transformed into deployable components for your favorite platform (J2EE, Spring, .NET). Unlike other MDA toolkits, AndroMDA comes with a host of ready-made cartridges that target today&rsquo;s development toolkits like Axis, jBPM, Struts, JSF, Spring and Hibernate. AndroMDA also contains a toolkit for building your own cartridges or customize existing ones &ndash; the meta cartridge. Using it, you can build a custom code generator using your favorite UML tool.</p>
 
 <p>A list of new features can be found <a href="http://www.andromda.org/changes-report.html">here</a>.</p>
 

@@ -61,6 +61,7 @@
     })();
 /* ]]> */</script>
 
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -142,7 +143,7 @@
   
   <p>Since version 2.0, Eclipse comes with a feature called <em>early startup</em>. Plug-ins using this mechanism will be loaded and activated when the workbench is starting up. One of the major design goals of Eclipse was to minimize startup time, which is why plugins are divided into  a declarative (i.e. the plugin.xml) and a dynamic part (the Java classes making up the plug-in). Using early startup is strongly discouraged, mainly due to performance reasons: if everybody wants to startup early, the whole idea of separating plug-ins into a declarative and a dynamic part gets perverted.</p>
 
-<p>But there is another reason why using early startup is discouraged: if you are not careful, your plug-in might get instantiated twice! &#8220;What?&#8221;, I hear you saying, &#8220;Plug-ins are singletons, how can they possibly be instantiated twice?&#8221; Well, that&#8217;s what I thought as well. But have a look at <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=91603">bug #91603</a> and you&#8217;ll find that it is true: if you specify your plug-in class to be the early startup class, your plug-in class will be instantiated twice. As the original reporter states, this will produce strange effects when you try to refer to the plug-in&#8217;s bundle or other fields that get initialized during normal startup.</p>
+<p>But there is another reason why using early startup is discouraged: if you are not careful, your plug-in might get instantiated twice! &ldquo;What?&rdquo;, I hear you saying, &ldquo;Plug-ins are singletons, how can they possibly be instantiated twice?&rdquo; Well, that&rsquo;s what I thought as well. But have a look at <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=91603">bug #91603</a> and you&rsquo;ll find that it is true: if you specify your plug-in class to be the early startup class, your plug-in class will be instantiated twice. As the original reporter states, this will produce strange effects when you try to refer to the plug-in&rsquo;s bundle or other fields that get initialized during normal startup.</p>
 
 <p>So, what can we do about it? I suggest the following best practice:</p>
 
@@ -156,7 +157,7 @@
 
 
 <p><strong>Rationale</strong>
-Why shouldn&#8217;t you specifiy a startup class? The <a href="http://help.eclipse.org/help31/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_startup.html">online help</a> says that <em>If the startup element has a class attribute, the class will be instantiated and earlyStartup() will be called on the result. Otherwise, this method will be called on the plug-in class.</em>. To understand what the documentation writers want to tell us, review  this <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=91603#c2">comment by Nick Edgar</a>. Now it becomes clear: if you specify a class, that class will be instantiated, regardless of whether it is the plug-in class itself or any other class. If you do not specify a class, then the singleton instance of your plug-in will be used instead, which is what we want.</p>
+Why shouldn&rsquo;t you specifiy a startup class? The <a href="http://help.eclipse.org/help31/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/extension-points/org_eclipse_ui_startup.html">online help</a> says that <em>If the startup element has a class attribute, the class will be instantiated and earlyStartup() will be called on the result. Otherwise, this method will be called on the plug-in class.</em>. To understand what the documentation writers want to tell us, review  this <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=91603#c2">comment by Nick Edgar</a>. Now it becomes clear: if you specify a class, that class will be instantiated, regardless of whether it is the plug-in class itself or any other class. If you do not specify a class, then the singleton instance of your plug-in will be used instead, which is what we want.</p>
 
 </div>
 
@@ -234,7 +235,7 @@ Why shouldn&#8217;t you specifiy a startup class? The <a href="http://help.eclip
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -310,9 +311,9 @@ Why shouldn&#8217;t you specifiy a startup class? The <a href="http://help.eclip
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -321,8 +322,6 @@ Why shouldn&#8217;t you specifiy a startup class? The <a href="http://help.eclip
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

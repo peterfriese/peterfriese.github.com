@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Canada | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/canada/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -19,13 +19,13 @@
     <updated>2009-10-13T23:18:52+01:00</updated>
     <id>http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
     <content type="html"><![CDATA[<ol>
-<li><p>Does Model Driven Software Development actually work?</p></li>
-<li><p>Are some developers more productive than others?</p></li>
-<li><p>What happens during code generation?</p></li>
-<li><p>Do diagrams and text go together well?</p></li>
-<li><p>What happens during model transformation?</p></li>
-<li><p>What are DSLs? And can I create them with Eclipse?</p></li>
-<li><p>Does modeling scale in the enterprise?</p></li>
+<li><p> Does Model Driven Software Development actually work?</p></li>
+<li><p> Are some developers more productive than others?</p></li>
+<li><p> What happens during code generation?</p></li>
+<li><p> Do diagrams and text go together well?</p></li>
+<li><p> What happens during model transformation?</p></li>
+<li><p> What are DSLs? And can I create them with Eclipse?</p></li>
+<li><p> Does modeling scale in the enterprise?</p></li>
 </ol>
 
 
@@ -34,25 +34,25 @@
 <!-- more -->
 
 
-<p>So if you are wondering why everybody in Europe is so thrilled about Modeling, attend to one of these events - you'll get the answers there.</p>
+<p>So if you are wondering why everybody in Europe is so thrilled about Modeling, attend to one of these events &ndash; you&rsquo;ll get the answers there.</p>
 
 <p>For your convenience, here is a list of some of the talks:</p>
 
 <ul>
-<li><p>Case Study: Model Transformations - Richard Woods, Credit Suisse</p></li>
-<li><p>Building DSLs with Xtext - Heiko Behrens, itemis</p></li>
-<li><p>Modeling on an enterprise scale - Eike Stepper, Eclipse Modeling Project</p></li>
-<li><p>Query, Transaction and Validation - Bernd Kolb &amp; Boris Gruschko, both SAP</p></li>
-<li><p>Agent-Based Computer Simulation for Operational Risk Analysis - Ed MacKerrow, Los Alamos Labs</p></li>
-<li><p>Papyrus: Advent of an Open Source IME - Kenn Hussey, Zeligsoft</p></li>
+<li><p>Case Study: Model Transformations &ndash; Richard Woods, Credit Suisse</p></li>
+<li><p>Building DSLs with Xtext &ndash; Heiko Behrens, itemis</p></li>
+<li><p>Modeling on an enterprise scale &ndash; Eike Stepper, Eclipse Modeling Project</p></li>
+<li><p>Query, Transaction and Validation &ndash; Bernd Kolb &amp; Boris Gruschko, both SAP</p></li>
+<li><p>Agent-Based Computer Simulation for Operational Risk Analysis &ndash; Ed MacKerrow, Los Alamos Labs</p></li>
+<li><p>Papyrus: Advent of an Open Source IME &ndash; Kenn Hussey, Zeligsoft</p></li>
 <li><p>B3: A Model for Unbreakable Builds</p></li>
-<li><p>There's a Modeling Solution for That - Bruce Trask, MDE Systems &amp; Angel Roman, MDE Systems</p></li>
+<li><p>There&rsquo;s a Modeling Solution for That &ndash; Bruce Trask, MDE Systems &amp; Angel Roman, MDE Systems</p></li>
 </ul>
 
 
 <p>If you ask me, this is a pretty decent line-up, both content-wise and people-wise. Not being one of the big conferences, the Modeling Days will actually give you the chance to talk to the experts and other end-users. Remember, networking is key.</p>
 
-<p>So go ahead and register by adding your name to <a href="http://wiki.eclipse.org/Eclipse_Modeling_Day">this wiki page</a>. Registration is free, but you need to register in order to help the organizers to plan the catering. If you don't have an account for editing the wiki page or don't want to create one, just send mail to <a href="mailto:eclipse_modeling_nyc@eclipse.org">eclipse_modeling_nyc@eclipse.org</a> or <a href="mailto:eclipse_modeling_toronto@eclipse.org">eclipse_modeling_toronto@eclipse.org</a></p>
+<p>So go ahead and register by adding your name to <a href="http://wiki.eclipse.org/Eclipse_Modeling_Day">this wiki page</a>. Registration is free, but you need to register in order to help the organizers to plan the catering. If you don&rsquo;t have an account for editing the wiki page or don&rsquo;t want to create one, just send mail to <a href="mailto:eclipse_modeling_nyc@eclipse.org">eclipse_modeling_nyc@eclipse.org</a> or <a href="mailto:eclipse_modeling_toronto@eclipse.org">eclipse_modeling_toronto@eclipse.org</a></p>
 ]]></content>
   </entry>
   
@@ -61,24 +61,24 @@
     <link href="http://www.peterfriese.de/canada-eh/"/>
     <updated>2009-04-01T04:35:53+01:00</updated>
     <id>http://www.peterfriese.de/canada-eh</id>
-    <content type="html"><![CDATA[<p>So this is the last post I am writing in Canada for quite some time. I shall be heading back to Germany tonight on AC 876 - let's see if they've got <a href="http://www.peterfriese.de/o-canada/">disco lights</a> again :-)</p>
+    <content type="html"><![CDATA[<p>So this is the last post I am writing in Canada for quite some time. I shall be heading back to Germany tonight on AC 876 &ndash; let&rsquo;s see if they&rsquo;ve got <a href="http://www.peterfriese.de/o-canada/">disco lights</a> again :&ndash;)</p>
 
 <p>It has been a packed time and I guess I met more people in these two months than I ever met before in a comparable period of time. Oh, did I tell you that I used to be a shy person? Well, at least I seem to have found ways to cope with that trait.</p>
 
 <p>As I look back onto the past two months, here are some things that I really like about Canada:</p>
 
 <ul>
-<li><p>People generally seem to be more open than people in Germany. This might of course be influenced by the fact that everybody uses their first names when communicating. I also have gotten used to the little "how are you today" conversation at the beginning of each transaction. Let's see what happens when I try that on German shop assistants...</p></li>
-<li><p>Although (or maybe just because) it was winter when I came to Canada, I really like the landscape: the wide fields, the forests, the snow... Often, on my rides through Ontario, I would get the felling of somehow knowing how much greater it must be in summer.</p></li>
-<li><p>I also like the fact you can go shopping almost any hour of day, any day of the week. In fact, I was surprised to hear that there are some stores that are not open 24/7 ;-)</p></li>
-<li><p>Turning right on a red light. Very time-saving, I wonder why we don't have this in Germany, as we're said to be oh so efficient...</p></li>
+<li><p>People generally seem to be more open than people in Germany. This might of course be influenced by the fact that everybody uses their first names when communicating. I also have gotten used to the little &ldquo;how are you today&rdquo; conversation at the beginning of each transaction. Let&rsquo;s see what happens when I try that on German shop assistants&hellip;</p></li>
+<li><p>Although (or maybe just because) it was winter when I came to Canada, I really like the landscape: the wide fields, the forests, the snow&hellip; Often, on my rides through Ontario, I would get the felling of somehow knowing how much greater it must be in summer.</p></li>
+<li><p>I also like the fact you can go shopping almost any hour of day, any day of the week. In fact, I was surprised to hear that there are some stores that are not open 24/7 ;&ndash;)</p></li>
+<li><p>Turning right on a red light. Very time-saving, I wonder why we don&rsquo;t have this in Germany, as we&rsquo;re said to be oh so efficient&hellip;</p></li>
 </ul>
 
 
-<p>The list of things I didn't like too much is much shorter:</p>
+<p>The list of things I didn&rsquo;t like too much is much shorter:</p>
 
 <ul>
-<li>Tim Hortons coffee. Don't go there. It tastes like metal. Besides, they do not know what Coffee Latte is. And don't even try to get a Cappucino - it will be Vanilla-flavoured. Check out Second Cup instead - they have some decent coffee there and they know how to make a Latte.</li>
+<li>Tim Hortons coffee. Don&rsquo;t go there. It tastes like metal. Besides, they do not know what Coffee Latte is. And don&rsquo;t even try to get a Cappucino &ndash; it will be Vanilla-flavoured. Check out Second Cup instead &ndash; they have some decent coffee there and they know how to make a Latte.</li>
 </ul>
 
 
@@ -93,7 +93,7 @@
 
 <p><img src="http://farm4.static.flickr.com/3356/3318079266_d8e1ef9a37.jpg" alt="Lynn Gayowski" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3318079266)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3318079266">http://www.flickr.com/photos/81029262@N00/3318079266</a>)</p>
 
 <p>Thanks to Peter and Gisela Weidelich and the fine people at the Sunnyvale Baptist Church for giving me a spiritual home for the last few weeks.</p>
 
@@ -102,16 +102,16 @@
 
 <p><img src="http://farm4.static.flickr.com/3574/3401069896_8235d3c33f.jpg" alt="Anneta &amp; Simon" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3401069896)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3401069896">http://www.flickr.com/photos/81029262@N00/3401069896</a>)</p>
 
 <p>Most of all, thanks to Ed Merks for hosting me at his place in the probably most difficult time of his life. Ed, I owe you.
 [</p>
 
 <p><img src="http://farm4.static.flickr.com/3180/3282302405_8056aafe07.jpg" alt="Amber, Ruby, Ed" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3282302405)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3282302405">http://www.flickr.com/photos/81029262@N00/3282302405</a>)</p>
 
-<p>Oh, and thanks to everybody who reassured me that they couldn't figure out where I come from by just listening to my dialect :-)</p>
+<p>Oh, and thanks to everybody who reassured me that they couldn&rsquo;t figure out where I come from by just listening to my dialect :&ndash;)</p>
 
 <p>You all have given me a sense of being welcome to Canada. Although I am really looking forward to returning to Germany and seeing my family again, I am feeling like I am leaving a new family behind.</p>
 ]]></content>
@@ -122,29 +122,29 @@
     <link href="http://www.peterfriese.de/o-canada/"/>
     <updated>2009-02-02T22:03:56+00:00</updated>
     <id>http://www.peterfriese.de/o-canada</id>
-    <content type="html"><![CDATA[<p>So I arrived in Canada on Friday night aboard Air Canada 877 from Frankfurt to Toronto. I was very pleased to see that the flight wasn't fully booked, so I had the luxury of using two seats for the price of one. They have a fancy lighting system aboard these air crafts which might be supposed to simulate the diurnal rhythm, but if that's actually true, I lived through several days and nights on that flight!</p>
+    <content type="html"><![CDATA[<p>So I arrived in Canada on Friday night aboard Air Canada 877 from Frankfurt to Toronto. I was very pleased to see that the flight wasn&rsquo;t fully booked, so I had the luxury of using two seats for the price of one. They have a fancy lighting system aboard these air crafts which might be supposed to simulate the diurnal rhythm, but if that&rsquo;s actually true, I lived through several days and nights on that flight!</p>
 
 <p>[</p>
 
 <p><img src="http://farm4.static.flickr.com/3372/3242484712_a9be61503c.jpg" alt="Disco lights aboard Air Canada 877" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3242484712)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3242484712">http://www.flickr.com/photos/81029262@N00/3242484712</a>)</p>
 
-<p>After having a nice supper and watching "<a href="http://en.wikipedia.org/wiki/Burn_After_Reading">Burn After Reading</a>", I took the chance to have a nap and actually arrived well rested at Toronto Pearson Airport.</p>
+<p>After having a nice supper and watching &ldquo;<a href="http://en.wikipedia.org/wiki/Burn_After_Reading">Burn After Reading</a>&rdquo;, I took the chance to have a nap and actually arrived well rested at Toronto Pearson Airport.</p>
 
 <p>[</p>
 
 <p><img src="http://farm4.static.flickr.com/3083/3242490062_f2ae80743c.jpg" alt="Approaching Toronto" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3242490062)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3242490062">http://www.flickr.com/photos/81029262@N00/3242490062</a>)</p>
 
-<p>Canada is full of snow at this time, which I like very much - we do not have so much snow up in Hamburg, where I live.</p>
+<p>Canada is full of snow at this time, which I like very much &ndash; we do not have so much snow up in Hamburg, where I live.</p>
 
 <p>[</p>
 
 <p><img src="http://static.flickr.com/3390/3244884282_ffb97a69a3.jpg" alt="Ballantrae" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3244884282)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3244884282">http://www.flickr.com/photos/81029262@N00/3244884282</a>)</p>
 
 <p>I am staying at Ed Merks' place for the next few weeks in order to talk about business opportunities for itemis here in North America.</p>
 
@@ -152,9 +152,9 @@
 
 <p><img src="http://farm4.static.flickr.com/3368/3241511257_4d846e81b0.jpg" alt="Ed's house" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3241511257)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3241511257">http://www.flickr.com/photos/81029262@N00/3241511257</a>)</p>
 
-<p>So, if you're interested in doing model driven software development or need some advise on EMF, openArchitectureWare or textual DSLs (with Xtext), just drop me or Ed a note. You can reach me via peter at itemis dot com.</p>
+<p>So, if you&rsquo;re interested in doing model driven software development or need some advise on EMF, openArchitectureWare or textual DSLs (with Xtext), just drop me or Ed a note. You can reach me via peter at itemis dot com.</p>
 ]]></content>
   </entry>
   

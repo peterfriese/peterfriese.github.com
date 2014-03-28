@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="This week&#8217;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as &hellip;">
+  <meta name="description" content="This week&rsquo;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -60,6 +60,7 @@
         t.parentNode.insertBefore(s, t);
     })();
 /* ]]> */</script>
+
 
   
   <script type="text/javascript">
@@ -146,16 +147,16 @@
     <img class="left" src="/images/2010-11-25-how-to-use-the-gyroscope-of-your-iphone-in-a-mobile-web-app/gyroscope_150x150.png">
   </p>
   
-  <p>This week&#8217;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they&#8217;re neither directly visible in the iOS UI nor are they mentioned in Apple&#8217;s official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone&#8217;s gyroscope. Read on to see it in action and learn how to use it.</p>
+  <p>This week&rsquo;s release of iOS 4.2 for iPad and iPhone comes with some nice little features most people will not immediately become aware of as they&rsquo;re neither directly visible in the iOS UI nor are they mentioned in Apple&rsquo;s official release notes. You have to dig a little deeper to find them. One of them is a JavaScript API for the iPhone&rsquo;s gyroscope. Read on to see it in action and learn how to use it.</p>
 
 <!-- more -->
 
 
-<p>Your iPhone has a number of sensors, some of which are rather essential for the phone&#8217;s operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they&#8217;re certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
+<p>Your iPhone has a number of sensors, some of which are rather essential for the phone&rsquo;s operation (such as the microphone). While the accelerometer and the gyroscope might not be the most essential sensors for a phone, they&rsquo;re certainly the most exciting ones. While accelerometer measures the acceleration you induce on the phone, the gyroscope gives a rather precise feedback on the orientation of the phone.</p>
 
-<p>Until now, web developers didn&#8217;t have access to the accelerometer sensor and the gyroscope sensor. With this week&#8217;s release of iOS 4.2, this has changed and we can now use <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceMotionEventClassRef/DeviceMotionEvent/DeviceMotionEvent.html">DeviceMotionEvent</a> and <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">DeviceOrientationEvent</a> to determine the acceleration and orientation data of the phone.</p>
+<p>Until now, web developers didn&rsquo;t have access to the accelerometer sensor and the gyroscope sensor. With this week&rsquo;s release of iOS 4.2, this has changed and we can now use <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceMotionEventClassRef/DeviceMotionEvent/DeviceMotionEvent.html">DeviceMotionEvent</a> and <a href="https://developer.apple.com/library/safari/#documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">DeviceOrientationEvent</a> to determine the acceleration and orientation data of the phone.</p>
 
-<p>Let&#8217;s first determine whether the current browser supports device orientation sensing:</p>
+<p>Let&rsquo;s first determine whether the current browser supports device orientation sensing:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -164,7 +165,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>We can then read the sensor data by registering the respective callbacks. Here&#8217;s how you read the accelerometer&#8217;s data:</p>
+<p>We can then read the sensor data by registering the respective callbacks. Here&rsquo;s how you read the accelerometer&rsquo;s data:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -191,7 +192,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>The gyroscope&#8217;s data can be read like this:</p>
+<p>The gyroscope&rsquo;s data can be read like this:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -206,14 +207,14 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>I&#8217;ve put together a little demo that uses the sensor data to color some boxes on the phone&#8217;s screen. Here&#8217;s a short video showing it in action:</p>
+<p>I&rsquo;ve put together a little demo that uses the sensor data to color some boxes on the phone&rsquo;s screen. Here&rsquo;s a short video showing it in action:</p>
 
 <div class="embed-video-container"><iframe src="http://player.vimeo.com/video/17182364 "></iframe></div>
 
 
 <p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
 
-<p>(image of Gyroscope by stop that pigeon! taken from http://www.flickr.com/photos/25312309@N05/2651042796/)</p>
+<p>(image of Gyroscope by stop that pigeon! taken from <a href="http://www.flickr.com/photos/25312309@N05/2651042796/">http://www.flickr.com/photos/25312309@N05/2651042796/</a>)</p>
 
 </div>
 
@@ -297,7 +298,7 @@
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -373,9 +374,9 @@
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -384,8 +385,6 @@
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

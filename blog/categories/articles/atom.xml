@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Articles | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/articles/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -31,12 +31,12 @@
 The aspects being compared are:</p>
 
 <ol>
-<li><p>Scalability</p></li>
-<li><p>Firewall-enabled</p></li>
-<li><p>Deployment</p></li>
-<li><p>Security</p></li>
-<li><p>Serviceability</p></li>
-<li><p>Usability</p></li>
+<li><p> Scalability</p></li>
+<li><p> Firewall-enabled</p></li>
+<li><p> Deployment</p></li>
+<li><p> Security</p></li>
+<li><p> Serviceability</p></li>
+<li><p> Usability</p></li>
 </ol>
 
 ]]></content>
@@ -56,12 +56,12 @@ The aspects being compared are:</p>
     <link href="http://www.peterfriese.de/eclipse-job-api-my-personal-eclipse/"/>
     <updated>2005-08-23T01:21:21+01:00</updated>
     <id>http://www.peterfriese.de/eclipse-job-api-my-personal-eclipse</id>
-    <content type="html"><![CDATA[<p><a href="http://www.eclipsemagazin.de/itr/ausgaben/psecom,id,282,nodeid,228.html">Issue 4.2005</a> of the german Eclipse Magazin contains three articles written by me: a review of  <a href="http://www.eclipse-magazin.de/itr/buchtipps/psecom,id,438,nodeid,249.html">The Java Developer's Guide to Eclipse</a>, a technical article on the Eclipse Job API and a quite fun article about why I love Eclipse.</p>
+    <content type="html"><![CDATA[<p><a href="http://www.eclipsemagazin.de/itr/ausgaben/psecom,id,282,nodeid,228.html">Issue 4.2005</a> of the german Eclipse Magazin contains three articles written by me: a review of  <a href="http://www.eclipse-magazin.de/itr/buchtipps/psecom,id,438,nodeid,249.html">The Java Developer&rsquo;s Guide to Eclipse</a>, a technical article on the Eclipse Job API and a quite fun article about why I love Eclipse.</p>
 
 <p>You can read the articles online:</p>
 
 <ul>
-<li><p><a href="http://www.peterfriese.de/downloads/articles/EM_Java-Developers-Guide-to-Eclipse.pdf">Review of The Java Developer's Guide to Eclipse</a></p></li>
+<li><p><a href="http://www.peterfriese.de/downloads/articles/EM_Java-Developers-Guide-to-Eclipse.pdf">Review of The Java Developer&rsquo;s Guide to Eclipse</a></p></li>
 <li><p><a href="http://www.peterfriese.de/downloads/articles/EM_Jobs.pdf">Eclipse Jobs API</a></p></li>
 <li><p><a href="http://www.peterfriese.de/downloads/articles/EM_My-Personal-Eclipse.pdf">My personal Eclipse</a></p></li>
 </ul>

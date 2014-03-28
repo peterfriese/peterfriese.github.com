@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,42 +18,42 @@
     <link href="http://www.peterfriese.de/annotated-links-issue-6/"/>
     <updated>2013-12-11T12:24:00+00:00</updated>
     <id>http://www.peterfriese.de/annotated-links-issue-6</id>
-    <content type="html"><![CDATA[<p>After a few weeks of silence (and on popular demand by a <a href="http://heikobehrens.net">single person</a>), I decided to pick up publishing my annotated links again. This time, we'll look at wiretapping APIs, donating code to your favourite projects on Github, Node.js in your iOS apps, and a racing game that renders its track across multiple devices.</p>
+    <content type="html"><![CDATA[<p>After a few weeks of silence (and on popular demand by a <a href="http://heikobehrens.net">single person</a>), I decided to pick up publishing my annotated links again. This time, we&rsquo;ll look at wiretapping APIs, donating code to your favourite projects on Github, Node.js in your iOS apps, and a racing game that renders its track across multiple devices.</p>
 
 <!-- more -->
 
 
 <h3><a href="http://www.runscope.com">Runscope</a></h3>
 
-<p>Runscope is an online tool for inspecting, debugging and testing API traffic. The traffic inspector allows you to easily set up a "wire tap" for your app, basically allowing you to monitor and record any traffic between your app and any API that you're using. In addition to recording traffic for inspection, you can also compare responses of two calls and find out where the differences are - very handy! You can even share individual recorded requests with your co-workers, e.g. to discuss a problem with your back-end team.</p>
+<p>Runscope is an online tool for inspecting, debugging and testing API traffic. The traffic inspector allows you to easily set up a &ldquo;wire tap&rdquo; for your app, basically allowing you to monitor and record any traffic between your app and any API that you&rsquo;re using. In addition to recording traffic for inspection, you can also compare responses of two calls and find out where the differences are &ndash; very handy! You can even share individual recorded requests with your co-workers, e.g. to discuss a problem with your back-end team.</p>
 
 <p>Runscope also provides a tool for automated testing of your API, dubbed <em>Runscope Radar</em>. This tool allows you to set up a sequence of API calls, along with the expected outcome for each of the calls. Radar provides an easy-to-use UI for setting up simple, yet powerful assertions that allow you to specify how the header and body of the response should look like. Variables help you to keep things flexible. Runscope Radar supports JSON and XML, so it is easy to build expressions like <code>[2].number</code> to navigate JSON and XML responses and specify expectations. You can then schedule your tests to run at given intervals and be notified via e-mail in case a test fails. This allows you to easily set up intelligent tests that monitor the validity of your API.</p>
 
-<p><a href="http://httpkit.com/wiretap">Wiretap</a> by <a href="https://twitter.com/KrisJordan">Kris Jordan</a> looks very promising as well. It acts as a reverse proxy, allowing you to record HTTP traffic between your app and an API very easily. In fact, setting up a wiretap seems to be easier than setting up Runscope. Unfortunately, still is in beta, but Kris has set up a video to give you a goood understanding of how it works. Wiretap and Runscope look strikingly similar, but I have the impression Wiretap has been around for longer...</p>
+<p><a href="http://httpkit.com/wiretap">Wiretap</a> by <a href="https://twitter.com/KrisJordan">Kris Jordan</a> looks very promising as well. It acts as a reverse proxy, allowing you to record HTTP traffic between your app and an API very easily. In fact, setting up a wiretap seems to be easier than setting up Runscope. Unfortunately, still is in beta, but Kris has set up a video to give you a goood understanding of how it works. Wiretap and Runscope look strikingly similar, but I have the impression Wiretap has been around for longer&hellip;</p>
 
 <h3><a href="http://24pullrequests.com">24 Pull Requests Until Christmas</a></h3>
 
-<p>Christmas is upon us - and this is your chance to give back some love to some of the many open source projects out there you might be using in your own work. The idea is to submit one pull request each day for any project on Github. A number of projects are already listed on the <a href="http://24pullrequests.com/projects">projects</a> page, which allows you to filter projects by programming language to find a few that you might be interested in. Your favourite project isn't listed? No problem at all - just <a href="http://24pullrequests.com/projects/new">submit a suggestion</a> and fork away!</p>
+<p>Christmas is upon us &ndash; and this is your chance to give back some love to some of the many open source projects out there you might be using in your own work. The idea is to submit one pull request each day for any project on Github. A number of projects are already listed on the <a href="http://24pullrequests.com/projects">projects</a> page, which allows you to filter projects by programming language to find a few that you might be interested in. Your favourite project isn&rsquo;t listed? No problem at all &ndash; just <a href="http://24pullrequests.com/projects/new">submit a suggestion</a> and fork away!</p>
 
-<p>I found it very interesting to see <a href="http://www.eclipse.org/xtend/">Xtend</a> is officially listed as a programming language on Github - great job, <a href="https://twitter.com/xtendlang">guys</a>!</p>
+<p>I found it very interesting to see <a href="http://www.eclipse.org/xtend/">Xtend</a> is officially listed as a programming language on Github &ndash; great job, <a href="https://twitter.com/xtendlang">guys</a>!</p>
 
 <h3><a href="http://nodeapp.org">Node.js in your iOS App</a></h3>
 
 <p>If you wanted to use JavaScript in your iOS apps prior to iOS 7, you basically had two options: use an embedded <code>UIWebView</code> and invoke <code>-stringByEvaluatingJavaScriptFromString:</code>, or recompile <a href="https://github.com/phoboslab/JavaScriptCore-iOS">JavaScriptCore for iOS</a>.</p>
 
-<p>Starting with iOS 7, Apple <a href="https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html">opened access to JavaScriptCore</a> (I really like <em>"For information about the classes of this framework, see the framework header files."</em>), basically enabling iOS developers to use JavaScript to script their applications.</p>
+<p>Starting with iOS 7, Apple <a href="https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html">opened access to JavaScriptCore</a> (I really like <em>&ldquo;For information about the classes of this framework, see the framework header files.&rdquo;</em>), basically enabling iOS developers to use JavaScript to script their applications.</p>
 
 <p>The NodeApp interpreter goes one step further and allows developers to re-use existing Node modules. Even if you might not be interested in using any of the <a href="https://npmjs.org">50.000+ module listed on npm.org</a>, this is good news as it allows you to re-use the Node module system, thereby enabling you to structure your JavaScript apps in a more concise way.</p>
 
 <p>Check out the <a href="https://github.com/node-app/Interpreter">NodeApp interpreter app</a> and impress your coworkers with a real JavaScript interpreter running on your iPhone!</p>
 
-<h3><a href="http://g.co/racer">Racer - A multiplayer game for your mobile browser</a></h3>
+<h3><a href="http://g.co/racer">Racer &ndash; A multiplayer game for your mobile browser</a></h3>
 
 <p>Racer is a Chrome Experiment that shows off various web technologies, like <a href="http://www.html5rocks.com/en/tutorials/websockets/basics/">WebSockets</a>, the <a href="http://www.html5rocks.com/en/tutorials/webaudio/intro/">Web Audio API</a>, CSS Animations and <a href="http://css-tricks.com/css-sprites/">CSS Sprites</a>.</p>
 
 <p>Watch the <a href="http://www.youtube.com/watch?v=17P67Uz0kcw">making of</a>, read the back story of how it was made on <a href="http://master.html5rocks-hrd.appspot.com/en/tutorials/casestudies/racer/">HTML 5 rocks</a>. Then, go find some friends with mobile devices and <a href="http://g.co/racer">play Racer online</a>. The <a href="http://www.youtube.com/watch?v=YT0k99hCY5I">soundtrack</a> has been composed by <a href="https://myspace.com/giorgiomoroderpage">Giorgio Moroder</a>, who composed a number of well-known songs for events like Olympia 1984 and 1988 or the 1990 Football World Cup. Some of his songs were used in racing games before, but the soundtrack for Racer is the first one to be composed specifically for the purpose of being used in a racing game.</p>
 
-<p>I hope you enjoyed this week's links - let me know if you would like me to continue compiling them by sending me a mail or - better yet - using the tweet button below to let your friends know about this post!</p>
+<p>I hope you enjoyed this week&rsquo;s links &ndash; let me know if you would like me to continue compiling them by sending me a mail or &ndash; better yet &ndash; using the tweet button below to let your friends know about this post!</p>
 
 <p>Thanks for reading!</p>
 ]]></content>
@@ -64,18 +64,18 @@
     <link href="http://www.peterfriese.de/debugging-tips-for-ios-developers/"/>
     <updated>2013-11-21T12:00:00+00:00</updated>
     <id>http://www.peterfriese.de/debugging-tips-for-ios-developers</id>
-    <content type="html"><![CDATA[<p>Let's face it - no matter how hard you try, no matter how many testers you use in manual tests, no matter how disciplined you are in writing unit tests and following the TDD drill of writing a failing test first and then adding the production code that turns the test green - bugs are inevitably linked to our lives. In this post, I'll show you a number of debugging techniques that might come in handy for your next project. Hopefully, you know some of them already, but I am sure some of them will be new for you.</p>
+    <content type="html"><![CDATA[<p>Let&rsquo;s face it &ndash; no matter how hard you try, no matter how many testers you use in manual tests, no matter how disciplined you are in writing unit tests and following the TDD drill of writing a failing test first and then adding the production code that turns the test green &ndash; bugs are inevitably linked to our lives. In this post, I&rsquo;ll show you a number of debugging techniques that might come in handy for your next project. Hopefully, you know some of them already, but I am sure some of them will be new for you.</p>
 
 <!-- more -->
 
 
-<p>Sometimes, you are responsible for a bug, sometimes bugs are in a third party library you use in your project. And sometimes, the documentation of an API doesn't match the implementation, giving you funny results for code that slavishly adheres to the official documentation.</p>
+<p>Sometimes, you are responsible for a bug, sometimes bugs are in a third party library you use in your project. And sometimes, the documentation of an API doesn&rsquo;t match the implementation, giving you funny results for code that slavishly adheres to the official documentation.</p>
 
-<p>With the following techniques, you'll be able to go hunting for bugs and find out where they came from. Once you've found out (and fixed the bug), you should consider writing a unit test to prevent future regressions. So, here we go.</p>
+<p>With the following techniques, you&rsquo;ll be able to go hunting for bugs and find out where they came from. Once you&rsquo;ve found out (and fixed the bug), you should consider writing a unit test to prevent future regressions. So, here we go.</p>
 
 <h2>Breakpoints</h2>
 
-<p>Most developers are familiar with the concept of breakpoints, but if you're new to Xcode you might wonder how to create or modify a breakpoint, so I'll give a brief overview.</p>
+<p>Most developers are familiar with the concept of breakpoints, but if you&rsquo;re new to Xcode you might wonder how to create or modify a breakpoint, so I&rsquo;ll give a brief overview.</p>
 
 <p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint.png" class="fancybox" title="Simple Breakpoint"><img class="right" src="/thumbs/breakpoint_300x150.png" alt="Simple Breakpoint" /></a></p>
 
@@ -87,14 +87,14 @@
 
 <ol>
 <li><p>To temporarily disable the breakpoint, just click on the breakpoint indicator, which will then turn light blue to indicate it is disabled.</p></li>
-<li><p>To remove a breakpoint, drag it off the editor gutter, making sure to crank up the volume to enjoy the swooshing sound ;-)</p></li>
+<li><p>To remove a breakpoint, drag it off the editor gutter, making sure to crank up the volume to enjoy the swooshing sound ;&ndash;)</p></li>
 <li><p>Breakpoints have properties that you can edit by right-clicking on a breakpoint indicator. Selecting the <em>Edit Breakpoint</em> menu will display a tool window which allows you to customize various aspects of a breakpoint, effectively turning a breakpoint into a conditional breakpoint:</p></li>
 </ol>
 
 
 <h3>Conditional Breakpoints</h3>
 
-<p>The various properties of a conditional breakpoint allow you to specify exactly under which circumstances execution should stop at the breakpoint. What's more, you can specify certain actions that should take place when the breakpoint criteria are met.</p>
+<p>The various properties of a conditional breakpoint allow you to specify exactly under which circumstances execution should stop at the breakpoint. What&rsquo;s more, you can specify certain actions that should take place when the breakpoint criteria are met.</p>
 
 <p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint_condition.png" class="fancybox" title="Conditional Breakpoint"><img class="right" src="/thumbs/breakpoint_condition_300x150.png" alt="Conditional Breakpoint" /></a></p>
 
@@ -121,23 +121,23 @@
 
 <p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/breakpoint_speak.png" class="fancybox" title="Breakpoint with Action"><img class="right" src="/thumbs/breakpoint_speak_300x150.png" alt="Breakpoint with Action" /></a></p>
 
-<p>Just consider for example an app that waits for the arrival of a background signal while the user does something in the app. Now, if you place a breakpoint on the line that receives the background signal and configure the breakpoint to play a signal or speak a message, you can go on and exercise the app in the foreground while waiting for the background message to arrive. As soon as the message arrives, you'll hear the sound play and can take appropriate actions.</p>
+<p>Just consider for example an app that waits for the arrival of a background signal while the user does something in the app. Now, if you place a breakpoint on the line that receives the background signal and configure the breakpoint to play a signal or speak a message, you can go on and exercise the app in the foreground while waiting for the background message to arrive. As soon as the message arrives, you&rsquo;ll hear the sound play and can take appropriate actions.</p>
 
 <h3>Exception Breakpoints</h3>
 
-<p>Exception Breakpoints are a very powerful tool - basically they allow you to spot places in your code where an exception is thrown (and not caught). So instead of just marvelling at a crash in <code>main.m</code>, add an Exception breakpoint to your project (by clicking the tiny <code>+</code> icon on the bottom of the breakpoints view).</p>
+<p>Exception Breakpoints are a very powerful tool &ndash; basically they allow you to spot places in your code where an exception is thrown (and not caught). So instead of just marvelling at a crash in <code>main.m</code>, add an Exception breakpoint to your project (by clicking the tiny <code>+</code> icon on the bottom of the breakpoints view).</p>
 
 <h3>Symbolic breakpoints</h3>
 
-<p>Symbolic breakpoints are useful when you want to stop in a piece of code that you don't have source code for. Let's say you're interested in who (and when) calls <code>tableView:numberOfRowsInSection</code>. Just create a new symbolic breakpoint, using the symbol <code>tableView:numberOfRowsInSection</code>. The debugger will now break whenever any piece of code in your app sends this very message - no matter if it's your code or code from a third party.</p>
+<p>Symbolic breakpoints are useful when you want to stop in a piece of code that you don&rsquo;t have source code for. Let&rsquo;s say you&rsquo;re interested in who (and when) calls <code>tableView:numberOfRowsInSection</code>. Just create a new symbolic breakpoint, using the symbol <code>tableView:numberOfRowsInSection</code>. The debugger will now break whenever any piece of code in your app sends this very message &ndash; no matter if it&rsquo;s your code or code from a third party.</p>
 
 <h2>The Debugger Console</h2>
 
-<p>As soon as your application has hit a breakpoint, you can start inspecting its current state. Most likely, you'll use the <em>Debug area</em> at the bottom of the Xcode window to do so.</p>
+<p>As soon as your application has hit a breakpoint, you can start inspecting its current state. Most likely, you&rsquo;ll use the <em>Debug area</em> at the bottom of the Xcode window to do so.</p>
 
 <p><a href="/images/2013-11-20-debugging-tips-for-ios-developers/debugarea.png" class="fancybox" title="Xcode Debugger"><img class="center" src="/thumbs/debugarea_600x400.png" alt="Xcode Debugger" /></a></p>
 
-<p>However, sometimes it can be tedious to click-navigate through a deep hierarchy of nested properties. This is when the debugger console comes in handy. It is located on the right hand side of the debug area. Just click inside the white space and type a command. When debuging Objective-C code for iOS, you're most likely using <a href="http://lldb.llvm.org/">lldb</a>. Former versions of Xcode used <a href="https://www.gnu.org/software/gdb/">gbd</a> as their default debugger. A comparison of lldb and gdb, including a list of commands they support can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html">here</a>. A more in-depth documentation of lldb can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-terminal-workflow-tutorial.html">here</a>. Don't worry - you do not have to wade through all of this documentation, I'll give you a run down of the most important commands here:</p>
+<p>However, sometimes it can be tedious to click-navigate through a deep hierarchy of nested properties. This is when the debugger console comes in handy. It is located on the right hand side of the debug area. Just click inside the white space and type a command. When debuging Objective-C code for iOS, you&rsquo;re most likely using <a href="http://lldb.llvm.org/">lldb</a>. Former versions of Xcode used <a href="https://www.gnu.org/software/gdb/">gbd</a> as their default debugger. A comparison of lldb and gdb, including a list of commands they support can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html">here</a>. A more in-depth documentation of lldb can be found <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-terminal-workflow-tutorial.html">here</a>. Don&rsquo;t worry &ndash; you do not have to wade through all of this documentation, I&rsquo;ll give you a run down of the most important commands here:</p>
 
 <h3>Printing Objects</h3>
 
@@ -155,7 +155,7 @@ Eat an apple
 
 <h3>Printing Primitives</h3>
 
-<p>Say you want to print the contents of a variable which isn't an object, for example the length of the string in the previous example. Using the <code>p</code> (<strong>p</strong>rint) command you can print the value of primitives such as integers or constants:</p>
+<p>Say you want to print the contents of a variable which isn&rsquo;t an object, for example the length of the string in the previous example. Using the <code>p</code> (<strong>p</strong>rint) command you can print the value of primitives such as integers or constants:</p>
 
 <pre><code>(lldb) p i
 17
@@ -208,15 +208,15 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <h2>Alternatives</h2>
 
-<p>If you're not happy with the level of tool support Xcode provides you with, I recommend taking a look at <a href="http://www.jetbrains.com/objc/">AppCode</a> - its debugger is a lot more powerful. However, it currently lacks support for sound breakpoints ;-)</p>
+<p>If you&rsquo;re not happy with the level of tool support Xcode provides you with, I recommend taking a look at <a href="http://www.jetbrains.com/objc/">AppCode</a> &ndash; its debugger is a lot more powerful. However, it currently lacks support for sound breakpoints ;&ndash;)</p>
 
 <h2>More Info</h2>
 
-<p>If you're interested in learning more about debugging iOS apps in general and some tools that might come in handy, check out this presentation:</p>
+<p>If you&rsquo;re interested in learning more about debugging iOS apps in general and some tools that might come in handy, check out this presentation:</p>
 
 <p><iframe src="http://www.slideshare.net/slideshow/embed_code/17145826 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
 
-<p>Also, Heiko Behrens and I had a chat about debugging iOS apps - it is available as an episode of the excellent (ok, I am biased) podcast <a href="http://www.UISprech.de">UISprech</a> (in German only, sorry) here: <a href="http://UISprech.de/7">UISprech #7: Debugging Tools mit Peter Friese</a>.</p>
+<p>Also, Heiko Behrens and I had a chat about debugging iOS apps &ndash; it is available as an episode of the excellent (ok, I am biased) podcast <a href="http://www.UISprech.de">UISprech</a> (in German only, sorry) here: <a href="http://UISprech.de/7">UISprech #7: Debugging Tools mit Peter Friese</a>.</p>
 ]]></content>
   </entry>
   
@@ -225,7 +225,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
     <link href="http://www.peterfriese.de/do-androids-dream-of-electric-sheep/"/>
     <updated>2013-03-22T00:33:48+00:00</updated>
     <id>http://www.peterfriese.de/do-androids-dream-of-electric-sheep</id>
-    <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
+    <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 &ndash; A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
 
 <!-- more -->
 
@@ -240,13 +240,13 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <p>Much has been said about Siri, so let’s focus on Eliza.</p>
 
-<p>Eliza started as an experiment in 1964, when Joseph Weizenbaum, then professor of computer sciences at the MIT, wrote it as an early attempt to research natural language communication between man and computer (see his ACM paper “ELIZA - A Computer Program For the Study of Natural Language Communication Between Man And Machine”). At its heart, Eliza is program that reacts to specific key words in sentences entered by a human user and will then respond to those keywords according to a predefined script. It’s the script that basically makes up the “personality” of Eliza, the most famous one being <em>Doctor</em>, simulating a rogerian psychoanalyst.</p>
+<p>Eliza started as an experiment in 1964, when Joseph Weizenbaum, then professor of computer sciences at the MIT, wrote it as an early attempt to research natural language communication between man and computer (see his ACM paper “ELIZA &ndash; A Computer Program For the Study of Natural Language Communication Between Man And Machine”). At its heart, Eliza is program that reacts to specific key words in sentences entered by a human user and will then respond to those keywords according to a predefined script. It’s the script that basically makes up the “personality” of Eliza, the most famous one being <em>Doctor</em>, simulating a rogerian psychoanalyst.</p>
 
 <p>(Weizenbaum was rather surprised to see how people thought that Eliza had a real personality and a capacity for empathy. In reaction, he started to raise uncomfortable questions about our dependence on computers.)</p>
 
 <p>In my Pecha Kucha, I went on to tell my audience to make better use of the capabilities of our smart phones. Most people have stopped thinking about it, but after all, we’re carrying a super computer in our pockets.</p>
 
-<p>So to set a good example, I decided to create <a href="http://elizaapp.com">ElizaApp</a> - an app that can listen to what you say and answer in spoken language. This is going to be a great project, because I’ll show several very interesting things:</p>
+<p>So to set a good example, I decided to create <a href="http://elizaapp.com">ElizaApp</a> &ndash; an app that can listen to what you say and answer in spoken language. This is going to be a great project, because I’ll show several very interesting things:</p>
 
 <ol>
 <li><p>How to analyse spoken language on a mobile device</p></li>
@@ -272,9 +272,9 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 <!--more-->
 
 
-<p>Wouldn't it be awesome if you could just specify a list of dependencies and be done? You might have heard of RubyGems, Maven, Ivy, NuGet or npm that bring dependency management to the worlds of Ruby, Java, .NET and JavaScript developers.</p>
+<p>Wouldn&rsquo;t it be awesome if you could just specify a list of dependencies and be done? You might have heard of RubyGems, Maven, Ivy, NuGet or npm that bring dependency management to the worlds of Ruby, Java, .NET and JavaScript developers.</p>
 
-<p>Well, it turns out there finally is a solution for us Cocoa developers - CocoaPods. Getting started with CocoaPods is really easy and once you started using it, you won't look back again.</p>
+<p>Well, it turns out there finally is a solution for us Cocoa developers &ndash; CocoaPods. Getting started with CocoaPods is really easy and once you started using it, you won&rsquo;t look back again.</p>
 
 <h2>Installation</h2>
 
@@ -287,15 +287,15 @@ pod setup
 
 <h2>Usage</h2>
 
-<p>Using CocoaPods to manage your project's dependencies is a two-step process:</p>
+<p>Using CocoaPods to manage your project&rsquo;s dependencies is a two-step process:</p>
 
 <ol>
-<li>Specify the dependency in you project's dependency specification file, <code>Podfile</code></li>
+<li>Specify the dependency in you project&rsquo;s dependency specification file, <code>Podfile</code></li>
 <li>Run <code>pod install</code></li>
 </ol>
 
 
-<p>Let me illustrate this by way of a simple example. Let's assume you want to build an application with the awesome <a href="http://www.restkit.org">RestKit</a> library. If you have used RestKit before, you know that adding it to your project is a rather involved process. Over the years, it has become significantly easier, but it still needs a very detailed installation instruction with lots of screenshots - check out their <a href="https://github.com/RestKit/RestKit/wiki/Installing-RestKit-in-Xcode-4.x">wiki page</a>.</p>
+<p>Let me illustrate this by way of a simple example. Let&rsquo;s assume you want to build an application with the awesome <a href="http://www.restkit.org">RestKit</a> library. If you have used RestKit before, you know that adding it to your project is a rather involved process. Over the years, it has become significantly easier, but it still needs a very detailed installation instruction with lots of screenshots &ndash; check out their <a href="https://github.com/RestKit/RestKit/wiki/Installing-RestKit-in-Xcode-4.x">wiki page</a>.</p>
 
 <p>With CocoaPods, all you need to do is this:</p>
 
@@ -345,9 +345,9 @@ dependency 'RestKit/ObjectMapping/JSON'
 
 <h2>Where to go from here</h2>
 
-<p>Wasn't that a lot easier than all the other ways to install third party libraries?</p>
+<p>Wasn&rsquo;t that a lot easier than all the other ways to install third party libraries?</p>
 
-<p>If you are curious which libraries are supported by CocoaPods, go to <a href="http://cocoapods.org">CocoaPods.org</a> - they have a nice little UI for searching their pod specification repository. If you are more include to using the command line, you are welcome to use <code>pod search &lt;yoursearchterm&gt;</code> to search for a specific library.</p>
+<p>If you are curious which libraries are supported by CocoaPods, go to <a href="http://cocoapods.org">CocoaPods.org</a> &ndash; they have a nice little UI for searching their pod specification repository. If you are more include to using the command line, you are welcome to use <code>pod search &lt;yoursearchterm&gt;</code> to search for a specific library.</p>
 
 <p>If your preferred library is not yet supported, why not help them out and build a pod spec? <a href="https://github.com/CocoaPods/CocoaPods">CocoaPods</a> itself and the <a href="https://github.com/CocoaPods/Specs">pod spec repository</a> are hosted on Github, so adding new pod specifications is really easy. The CocoaPods wiki has a section on <a href="https://github.com/CocoaPods/CocoaPods/wiki/The-podspec-format">creating</a> and <a href="https://github.com/CocoaPods/CocoaPods/wiki/Sharing-pod-specifications-with-yourself-and-the-world">publishing</a> new podspec files.</p>
 
@@ -360,7 +360,7 @@ dependency 'RestKit/ObjectMapping/JSON'
     <link href="http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5/"/>
     <updated>2011-11-09T23:30:46+00:00</updated>
     <id>http://www.peterfriese.de/the-accounts-and-twitter-framework-on-ios-5</id>
-    <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you're in a news reader application you might want to let your followers know about an interesting article you just read. If you're in a conference schedule app, you not only want to let your followers know about the awesome talks you're listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you're stuck in...</p>
+    <content type="html"><![CDATA[<p>Adding Twitter support is something that makes quite a lot of sense for a number of applications. If you&rsquo;re in a news reader application you might want to let your followers know about an interesting article you just read. If you&rsquo;re in a conference schedule app, you not only want to let your followers know about the awesome talks you&rsquo;re listening to but you also might want to know which other talks other conference attendees are tweeting about to decide whether they are actually even more awesome than that talk you&rsquo;re stuck in&hellip;</p>
 
 <!-- more -->
 
@@ -373,25 +373,25 @@ dependency 'RestKit/ObjectMapping/JSON'
 
 <ul>
 <li>Providing a secure local storage for user accounts, including their credentials</li>
-<li>Providing an easy way to sign API requests you send to Twitter. You no longer have to include code to handle <a href="https://dev.twitter.com/docs/auth/oauth/faq">OAuth</a> or <a href="https://dev.twitter.com/docs/oauth/xauth">xAuth</a> in your app - this has all been done by Apple for you</li>
+<li>Providing an easy way to sign API requests you send to Twitter. You no longer have to include code to handle <a href="https://dev.twitter.com/docs/auth/oauth/faq">OAuth</a> or <a href="https://dev.twitter.com/docs/oauth/xauth">xAuth</a> in your app &ndash; this has all been done by Apple for you</li>
 <li>Providing a basic UI for composing tweets, including switching the user account you tweet from, uploading images in a tweet and including your current location</li>
 </ul>
 
 
-<p>Lots of free stuff, so let's have a look at how much (or little) code we actually need to write to tap this source of awesomeness.</p>
+<p>Lots of free stuff, so let&rsquo;s have a look at how much (or little) code we actually need to write to tap this source of awesomeness.</p>
 
 <h2>Using the Accounts Framework to fetch the list of accounts</h2>
 
-<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you'll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will provide easy access to Google+ and Facebook accounts -  we'll see.</p>
+<p>The <a href="http://developer.apple.com/library/ios/#documentation/Accounts/Reference/AccountsFrameworkRef/_index.html">Accounts Framework</a> provides access to all Twitter accounts the user has added to their iPhone using the settings app. Currently, the Accounts Framework only supports Twitter accounts, but you&rsquo;ll soon realize it has been build so that it basically can be used to access any other kind of account in future releases. Maybe the next version of iOS will provide easy access to Google+ and Facebook accounts &ndash;  we&rsquo;ll see.</p>
 
 <p>To use the Accounts and Twitter frameworks, we need to add them to the project:</p>
 
 <p><img class="center" src="../images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/add_twitter_accounts.png" title="Add Accounts and Twitter frameworks to the project" ></p>
 
-<p>Once that's done, we can use the Accounts framework to fetch the list of Twitter accounts on the device.</p>
+<p>Once that&rsquo;s done, we can use the Accounts framework to fetch the list of Twitter accounts on the device.</p>
 
 <p>``` objc
-- (void)fetchData
+&ndash; (void)fetchData
 {</p>
 
 <pre><code>if (_accounts == nil) {
@@ -417,12 +417,12 @@ dependency 'RestKit/ObjectMapping/JSON'
 <p>}
 ```</p>
 
-<p>Just like many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we're interested in - <code>ACAccountTypeIdentifierTwitter</code> in our case. If we're granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we've got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we're on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
+<p>Just like many other new APIs that perform potentially blocking I/O, the Accounts framework uses blocks to execute your code as soon as the data you requested is available. When querying the accounts database, we can specify the kind of accounts we&rsquo;re interested in &ndash; <code>ACAccountTypeIdentifierTwitter</code> in our case. If we&rsquo;re granted access to the accounts database, we fetch the list of accounts using <code>accountsWithAccountType:</code>. As soon as we&rsquo;ve got this list, we want to save it in a ivar / property and update the UI. Since there is no guarantee we&rsquo;re on the UI thread when our completion handler is run, we use <code>dispatch_sync</code> to ensure assigning the list of accounts and updating the UI is run on the UI thread (<code>dispatch_get_main_queue()</code> returns the GCD queue of the UI thread). For more information on blocks and Grand Central Dispatch (GCD) check out <a href="http://www.mikeash.com/pyblog/friday-qa-2009-08-28-intro-to-grand-central-dispatch-part-i-basics-and-dispatch-queues.html">this excellent blog post</a>.</p>
 
 <p>Displaying the accounts in a <code>UITableViewController</code> is straightforward:</p>
 
 <p>```objc
-- (UITableViewCell <em>)tableView:(UITableView </em>)tableView</p>
+&ndash; (UITableViewCell <em>)tableView:(UITableView </em>)tableView</p>
 
 <pre><code>    cellForRowAtIndexPath:(NSIndexPath *)indexPath
 </code></pre>
@@ -450,7 +450,7 @@ return cell;
 
 <h2>Displaying the public timeline of the selected user</h2>
 
-<p>When the user selects one of the accounts, we want to display a list of recent tweets for this selected account. We'll use <code>TWRequest</code> to fetch the list of recent tweets.</p>
+<p>When the user selects one of the accounts, we want to display a list of recent tweets for this selected account. We&rsquo;ll use <code>TWRequest</code> to fetch the list of recent tweets.</p>
 
 <p><code>TWRequest</code> is the centerpiece of the iOS Twitter Framework and relieves us of the burden of having to perform OAuth authentication and request signing on our own. In order for it to do this, we need to provide a reference to the account whose timeline we want to read. We also need to provide the URL of the Twitter API endpoint we want to access. While this might seem a little bit cumbersome at first, this allows us to access not only current API calls but also any new APIs Twitter might come up with in the future without requiring Apple to update the API. Pretty nifty.</p>
 
@@ -483,13 +483,13 @@ return cell;
 
 <p>```</p>
 
-<p>Again, we need to provide a completion handler which will be invoked as soon as the call to Twitter returns. As you can also see, we're using the same approach as before to make sure we update the UI from the UI thread. It's also interesting to see Apple provides us with their own JSON parsing framework - no longer do we need to integrate third party libraries to serialize / deserialize JSON data.</p>
+<p>Again, we need to provide a completion handler which will be invoked as soon as the call to Twitter returns. As you can also see, we&rsquo;re using the same approach as before to make sure we update the UI from the UI thread. It&rsquo;s also interesting to see Apple provides us with their own JSON parsing framework &ndash; no longer do we need to integrate third party libraries to serialize / deserialize JSON data.</p>
 
 <h2>Sending Tweets</h2>
 
 <p>So far, we can choose a Twitter account from the list of Twitter accounts on our iPhone and display the home timeline of this particular user. But how about sending a tweet?</p>
 
-<p>Sending tweets is really easy: you just have to instantiate a new <code>TWTweetComposeViewController</code> and display it - iOS will take care of the rest:</p>
+<p>Sending tweets is really easy: you just have to instantiate a new <code>TWTweetComposeViewController</code> and display it &ndash; iOS will take care of the rest:</p>
 
 <p>``` objc</p>
 
@@ -511,14 +511,14 @@ return cell;
 
 <h2>Conclusion</h2>
 
-<p>Integrating Twitter in your own apps has never been easier. With just a few lines of code, we implemented a basic version of a Twitter client that you can use to display a user's home timeline and send tweets. Elaborating this code base is left as an exercise to you - feel free to <a href="http://github.com/peterfriese/TwitterClient">fork the code on Github</a> and send me pull requests as you add interesting features!</p>
+<p>Integrating Twitter in your own apps has never been easier. With just a few lines of code, we implemented a basic version of a Twitter client that you can use to display a user&rsquo;s home timeline and send tweets. Elaborating this code base is left as an exercise to you &ndash; feel free to <a href="http://github.com/peterfriese/TwitterClient">fork the code on Github</a> and send me pull requests as you add interesting features!</p>
 
-<p>Here's an impression of the current state of the application:</p>
+<p>Here&rsquo;s an impression of the current state of the application:</p>
 
 <p><ul class="gallery">
-<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_1.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - List of local accounts"><img src="/thumbs/twitter_client_1_120x150.png" alt="Twitter Client - List of local accounts" /></a></li>
-<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_2.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Home timeline for a user"><img src="/thumbs/twitter_client_2_120x150.png" alt="Twitter Client - Home timeline for a user" /></a></li>
-<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_3.png" class="fancybox" rel="gallery-dc42c338437a41c21e197e5ab323fb78" title="Twitter Client - Composing a tweet"><img src="/thumbs/twitter_client_3_120x150.png" alt="Twitter Client - Composing a tweet" /></a></li>
+<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_1.png" class="fancybox" rel="gallery-549182312d685b9959a78676654a7069" title="Twitter Client &ndash; List of local accounts"><img src="/thumbs/twitter_client_1_120x150.png" alt="Twitter Client &ndash; List of local accounts" /></a></li>
+<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_2.png" class="fancybox" rel="gallery-549182312d685b9959a78676654a7069" title="Twitter Client &ndash; Home timeline for a user"><img src="/thumbs/twitter_client_2_120x150.png" alt="Twitter Client &ndash; Home timeline for a user" /></a></li>
+<li><a href="/images/2011-11-09-the-accounts-and-twitter-framework-on-ios-5/twitter_client_3.png" class="fancybox" rel="gallery-549182312d685b9959a78676654a7069" title="Twitter Client &ndash; Composing a tweet"><img src="/thumbs/twitter_client_3_120x150.png" alt="Twitter Client &ndash; Composing a tweet" /></a></li>
 </ul></p>
 ]]></content>
   </entry>

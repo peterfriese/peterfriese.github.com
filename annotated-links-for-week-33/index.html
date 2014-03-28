@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="This week&#8217;s annotated links are more coding- and code-related than last week. We&#8217;ll have a look at some data mapping frameworks for &hellip;">
+  <meta name="description" content="This week&rsquo;s annotated links are more coding- and code-related than last week. We&rsquo;ll have a look at some data mapping frameworks for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -60,6 +60,7 @@
         t.parentNode.insertBefore(s, t);
     })();
 /* ]]> */</script>
+
 
   
   <script type="text/javascript">
@@ -146,41 +147,41 @@
     <img class="left" src="/images/2013-08-10-annotated-links-for-week-32/chains.jpg">
   </p>
   
-  <p>This week&#8217;s annotated links are more coding- and code-related than last week. We&#8217;ll have a look at some data mapping frameworks for Objective-C, a way to set up your projects in a faster, more reproducible way and - as iOS 7 is around the corner, a feature comparison of iOS 7 on the various devices out there.</p>
+  <p>This week&rsquo;s annotated links are more coding- and code-related than last week. We&rsquo;ll have a look at some data mapping frameworks for Objective-C, a way to set up your projects in a faster, more reproducible way and &ndash; as iOS 7 is around the corner, a feature comparison of iOS 7 on the various devices out there.</p>
 
 <!-- more -->
 
 
 <h3><a href="http://www.cultofmac.com/231632/the-ultimate-ios-7-compatibility-chart/">iOS 7 Compatibility Chart</a></h3>
 
-<p>With the release of iOS 7 just around the corner, you might be wondering which devices you should test your apps on in order to make sure you cover all required combinations of services that might or might not be available to your app (yes, iOS 7 is one of those releases that won&#8217;t make all features available on all devices). Cult of Mac has a nice overview chart, worth checking out.</p>
+<p>With the release of iOS 7 just around the corner, you might be wondering which devices you should test your apps on in order to make sure you cover all required combinations of services that might or might not be available to your app (yes, iOS 7 is one of those releases that won&rsquo;t make all features available on all devices). Cult of Mac has a nice overview chart, worth checking out.</p>
 
-<h3><a href="http://www.merowing.info/2013/05/crafter-setup-your-cocoa-projects-with-ease/">Crafter - Easily Setup Xcode Projects</a></h3>
+<h3><a href="http://www.merowing.info/2013/05/crafter-setup-your-cocoa-projects-with-ease/">Crafter &ndash; Easily Setup Xcode Projects</a></h3>
 
 <p>Github has made it really easy to check out new libraries or demos: just clone the repo and off you go. But what about creating new projects? If you find yourself constantly creating new projects, adjusting the build configuration to suit your needs, adding a Podfile for <a href="http://www.cocoapods.org">CocoaPods</a>, then <a href="https://github.com/krzysztofzablocki/crafter">Crafter</a> might be for you. You can configure it with your defaults, while at the same time staying flexible by adding options. Definitely worth a try.</p>
 
 <h3><a href="https://github.com/krzysztofzablocki/KZPropertyMapper">Object</a> <a href="https://github.com/uacaps/NSObject-ObjectMap">Mapping</a> <a href="https://github.com/dchohfi/KeyValueObjectMapping">in</a> <a href="https://github.com/mattiaslevin/ObjectMapper">Objective-C</a></h3>
 
-<p>Most apps require you to map data from a text-based presentation (mostly JSON or XML) to  Objective-C objects. Chances are you&#8217;ve written mapping code by hand in at least one of your projects. &#8220;Its&#8217;s just one or two classes, how hard can it be?&#8221;, was probably what you thought when you set out to implement you home-grown mapping. YOu might have ended up with either pulling your hair out while maintianing your code whenever the API team decided to implement some &#8220;minor changes&#8221; or using a full-blown framework like <a href="http://www.restkit.org">RestKit</a> that gave you more than you needed. If you just need to map data without the need for all the fancy add-ons like automatic CoreData persistence, in-memory and persistent caching and so on, you should have a look at the following frameworks. The all follow different approaches, some apply automagic mapping by matching field names, others by using an internal DSL to help you express your mapping. Take a look yourself and decide based on what you need for your current project.</p>
+<p>Most apps require you to map data from a text-based presentation (mostly JSON or XML) to  Objective-C objects. Chances are you&rsquo;ve written mapping code by hand in at least one of your projects. &ldquo;Its&rsquo;s just one or two classes, how hard can it be?&rdquo;, was probably what you thought when you set out to implement you home-grown mapping. YOu might have ended up with either pulling your hair out while maintianing your code whenever the API team decided to implement some &ldquo;minor changes&rdquo; or using a full-blown framework like <a href="http://www.restkit.org">RestKit</a> that gave you more than you needed. If you just need to map data without the need for all the fancy add-ons like automatic CoreData persistence, in-memory and persistent caching and so on, you should have a look at the following frameworks. The all follow different approaches, some apply automagic mapping by matching field names, others by using an internal DSL to help you express your mapping. Take a look yourself and decide based on what you need for your current project.</p>
 
 <ul>
-<li><a href="https://github.com/krzysztofzablocki/KZPropertyMapper">KZPropertyMapper</a> - uses an internal DSL to express data mappings</li>
-<li><a href="https://github.com/uacaps/NSObject-ObjectMap">NSObject-ObjectMap</a> - uses introspection to map properties directly unto properties.</li>
-<li><a href="https://github.com/dchohfi/KeyValueObjectMapping">KeyValueObjectMapping</a> - Uses a combination of both introspection and configuration to map data unto objects,</li>
-<li><a href="https://github.com/mattiaslevin/ObjectMapper">ObjectMapper</a> - Uses introspection and a callback method to map data.</li>
+<li><a href="https://github.com/krzysztofzablocki/KZPropertyMapper">KZPropertyMapper</a> &ndash; uses an internal DSL to express data mappings</li>
+<li><a href="https://github.com/uacaps/NSObject-ObjectMap">NSObject-ObjectMap</a> &ndash; uses introspection to map properties directly unto properties.</li>
+<li><a href="https://github.com/dchohfi/KeyValueObjectMapping">KeyValueObjectMapping</a> &ndash; Uses a combination of both introspection and configuration to map data unto objects,</li>
+<li><a href="https://github.com/mattiaslevin/ObjectMapper">ObjectMapper</a> &ndash; Uses introspection and a callback method to map data.</li>
 </ul>
 
 
-<h3><a href="http://instacod.es">And finally&#8230; Instacodes</a></h3>
+<h3><a href="http://instacod.es">And finally&hellip; Instacodes</a></h3>
 
-<p>Did you ever wonder how to create those geeky looking source code screenshots that look like you used a camera to take a picture of your screen from an angle? Well, here&#8217;s a tool that let&#8217;s you create those screenshots without the need to take out your camera: <a href="http://instacod.es">Instacodes</a></p>
+<p>Did you ever wonder how to create those geeky looking source code screenshots that look like you used a camera to take a picture of your screen from an angle? Well, here&rsquo;s a tool that let&rsquo;s you create those screenshots without the need to take out your camera: <a href="http://instacod.es">Instacodes</a></p>
 
 <ul class="gallery">
 <li><a href="/images/2013-08-17-annotated-links-for-week-33/instacodes.png" class="fancybox" rel="gallery-58957bab7ae3483cd792adcee872db68" title="Istancodes sample"><img src="/thumbs/instacodes_600x250.png" alt="Istancodes sample" /></a></li>
 </ul>
 
 
-<p>That&#8217;s it for this week, I hope you liked it. Feel free to send suggestions for next week!</p>
+<p>That&rsquo;s it for this week, I hope you liked it. Feel free to send suggestions for next week!</p>
 
 <p><a href="http://www.flickr.com/photos/h20tubig/9376203024/">Chains image</a> by <a href="http://www.flickr.com/photos/h20tubig/">Haya Bernitez</a></p>
 
@@ -266,7 +267,7 @@
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -342,9 +343,9 @@
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -353,8 +354,6 @@
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

@@ -61,6 +61,7 @@
     })();
 /* ]]> */</script>
 
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -146,14 +147,14 @@
     <img class="left" src="/images/2012-08-14-writing-xtext-scope-providers-with-xtend/scope_150x150.jpg">
   </p>
   
-  <p><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is an <a href="http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html">important concept</a> in the design of programming languages. In Xtext, scoping is used <a href="http://zarnekow.blogspot.de/2009/01/xtext-corner-2-linking-and-scoping.html">to drive two major parts</a> of your DSL: <a href="http://www.eclipse.org/Xtext/documentation.html#linking">linking</a> and <a href="http://www.eclipse.org/Xtext/documentation.html#contentAssist">content assist</a>. While Xtext applies the <a href="http://en.wikiquote.org/wiki/Alan_Kay">80/20 rule</a> very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you&#8217;ll have to roll up your sleeves and write your own scope provider.</p>
+  <p><a href="http://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is an <a href="http://phobos.ramapo.edu/~amruth/grants/problets/courseware/scope/home.html">important concept</a> in the design of programming languages. In Xtext, scoping is used <a href="http://zarnekow.blogspot.de/2009/01/xtext-corner-2-linking-and-scoping.html">to drive two major parts</a> of your DSL: <a href="http://www.eclipse.org/Xtext/documentation.html#linking">linking</a> and <a href="http://www.eclipse.org/Xtext/documentation.html#contentAssist">content assist</a>. While Xtext applies the <a href="http://en.wikiquote.org/wiki/Alan_Kay">80/20 rule</a> very successfully, thereby providing you with a decent scoping implementation out of the box, eventually you&rsquo;ll have to roll up your sleeves and write your own scope provider.</p>
 
 <!-- more -->
 
 
-<p>Over the years, implementing scope providers has become significantly easier, much thanks to the tiny internal scoping DSL provided by <code>org.eclipse.xtext.scoping.Scopes</code> (<a href="https://github.com/eclipse/xtext/blob/v2.3.0/plugins/org.eclipse.xtext/src/org/eclipse/xtext/scoping/Scopes.java">src</a>). However, collecting the elements that make up a scope can be a very cumbersome task if you have to use Java. Let’s face it - <a href="http://www.cafeaulait.org/slides/hope/02.html">Java has not been built for traversing models.</a></p>
+<p>Over the years, implementing scope providers has become significantly easier, much thanks to the tiny internal scoping DSL provided by <code>org.eclipse.xtext.scoping.Scopes</code> (<a href="https://github.com/eclipse/xtext/blob/v2.3.0/plugins/org.eclipse.xtext/src/org/eclipse/xtext/scoping/Scopes.java">src</a>). However, collecting the elements that make up a scope can be a very cumbersome task if you have to use Java. Let’s face it &ndash; <a href="http://www.cafeaulait.org/slides/hope/02.html">Java has not been built for traversing models.</a></p>
 
-<p>A language much better suited to traversing models is <a href="http://www.eclipse.org/xtend/">Xtend</a>, the newest kid on the X block. If you didn’t yet give it a try, you should do so now - even if you’re not writing an Xtext DSL. Xtend directly translates to Java code and allows you to write very concise code by eliminating much of Java’s ceremony. You can use it to write everything you’d write in Java - from <a href="http://blog.efftinge.de/2011/12/writing-android-uis-with-xtend.html">Android UIs</a> to <a href="http://www.eclipse.org/Xtext/7languagesDoc.html#httpRouting">web applications</a> - so why not write Eclipse plug-ins with Xtend?</p>
+<p>A language much better suited to traversing models is <a href="http://www.eclipse.org/xtend/">Xtend</a>, the newest kid on the X block. If you didn’t yet give it a try, you should do so now &ndash; even if you’re not writing an Xtext DSL. Xtend directly translates to Java code and allows you to write very concise code by eliminating much of Java’s ceremony. You can use it to write everything you’d write in Java &ndash; from <a href="http://blog.efftinge.de/2011/12/writing-android-uis-with-xtend.html">Android UIs</a> to <a href="http://www.eclipse.org/Xtext/7languagesDoc.html#httpRouting">web applications</a> &ndash; so why not write Eclipse plug-ins with Xtend?</p>
 
 <p>To write the scope provider for your language using Xtend, you need to follow a few very simple steps:</p>
 
@@ -171,7 +172,7 @@
 <li><p>If you already have a Java-based scope provider, copy the implementation to a safe place and delete the Java file to make room for the new Xtend-based scope provider.</p></li>
 <li><p>Create a new Xtend class <code>&lt;YourDSLPackage&gt;.&lt;YourDSL&gt;ScopeProvider.xtend</code> in the DSL project. Make sure this class inherits from <code>org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider</code>.</p></li>
 <li><p>Start writing your scope provider using Xtend.</p></li>
-<li><p>Don’t forget to smile :-)</p></li>
+<li><p>Don’t forget to smile :&ndash;)</p></li>
 </ol>
 
 
@@ -257,7 +258,7 @@
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -333,9 +334,9 @@
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -344,8 +345,6 @@
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

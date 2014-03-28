@@ -61,6 +61,7 @@
     })();
 /* ]]> */</script>
 
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -151,19 +152,19 @@
 
 <h2>Setting up an Amazon EC2 instance</h2>
 
-<p>Scott Lewis <a href="http://eclipseecf.blogspot.com/2010/03/osgieclipsert-in-amazon-cloud.html">was kind enough to prepare an Amazon EC2 Machine Image (AMI)</a> that already contains Jetty, Equinox and p2 - everything we need to get our servlet running. So let&#8217;s use this AMI to provision our instance:</p>
+<p>Scott Lewis <a href="http://eclipseecf.blogspot.com/2010/03/osgieclipsert-in-amazon-cloud.html">was kind enough to prepare an Amazon EC2 Machine Image (AMI)</a> that already contains Jetty, Equinox and p2 &ndash; everything we need to get our servlet running. So let&rsquo;s use this AMI to provision our instance:</p>
 
 <ol>
-<li><p>Sign in to the <a href="https://console.aws.amazon.com/ec2/home">AWS web console</a></p></li>
-<li><p>Click on <em>Launch instance</em> to create a new instance</p></li>
-<li><p>In the <em>Request Instances Wizard</em>, jump over to the <em>Community AMIs</em> tab</p></li>
-<li><p>Type <em>OSGi</em> in the search field to search for <strong><em>ami-69d93600</em></strong></p></li>
-<li><p>Select the AMI</p></li>
-<li><p>In the next step, you get to configure the instance. A small instance will do for now.</p></li>
-<li><p>Leave the <em>Advanced Instance</em> options as-is</p></li>
-<li><p>Next, you need to create a key pair (this will allow you to sign in to the instance using SSH). If you haven&#8217;t created an EC2 instance before, select <em>Create a new Key Pair</em> and follow the instructions. Otherwise, select an existing key pair</p></li>
-<li><p>To access the instance from outside using HTTP and SSH, you need to create and assign a <em>security group</em>. Make sure to add SSH and HTTP port configurations to this security group. Unfortunately, it is not possible to freely choose the port ranges, so we need to edit the security group after we&#8217;re finished with the wizard.</p></li>
-<li><p>On the summary page, review the configuration and click on <em>Launch</em> to actually start your instance.</p></li>
+<li><p> Sign in to the <a href="https://console.aws.amazon.com/ec2/home">AWS web console</a></p></li>
+<li><p> Click on <em>Launch instance</em> to create a new instance</p></li>
+<li><p> In the <em>Request Instances Wizard</em>, jump over to the <em>Community AMIs</em> tab</p></li>
+<li><p> Type <em>OSGi</em> in the search field to search for <strong><em>ami-69d93600</em></strong></p></li>
+<li><p> Select the AMI</p></li>
+<li><p> In the next step, you get to configure the instance. A small instance will do for now.</p></li>
+<li><p> Leave the <em>Advanced Instance</em> options as-is</p></li>
+<li><p> Next, you need to create a key pair (this will allow you to sign in to the instance using SSH). If you haven&rsquo;t created an EC2 instance before, select <em>Create a new Key Pair</em> and follow the instructions. Otherwise, select an existing key pair</p></li>
+<li><p> To access the instance from outside using HTTP and SSH, you need to create and assign a <em>security group</em>. Make sure to add SSH and HTTP port configurations to this security group. Unfortunately, it is not possible to freely choose the port ranges, so we need to edit the security group after we&rsquo;re finished with the wizard.</p></li>
+<li><p>. On the summary page, review the configuration and click on <em>Launch</em> to actually start your instance.</p></li>
 </ol>
 
 
@@ -198,10 +199,10 @@ Welcome to an EC2 Public Image
 <p><strong>First,</strong> create a new feature project, naming it <em>simple.servlet.feature</em>. Provide the following details to the wizard:</p>
 
 <ol>
-<li><p><em>ID:</em> simple.servlet.feature</p></li>
-<li><p><em>Version:</em> 1.0.0.qualifier</p></li>
-<li><p><em>Name:</em> Simple Servlet Feature</p></li>
-<li><p><em>Provider:</em> Your name</p></li>
+<li><p> <em>ID:</em> simple.servlet.feature</p></li>
+<li><p> <em>Version:</em> 1.0.0.qualifier</p></li>
+<li><p> <em>Name:</em> Simple Servlet Feature</p></li>
+<li><p> <em>Provider:</em> Your name</p></li>
 </ol>
 
 
@@ -209,13 +210,13 @@ Welcome to an EC2 Public Image
 
 <p><strong>Now,</strong> we can create the update site. It will only contain the feature we just created. Using the <em>New Update Site</em> wizard, create a new update site project, naming it <em>simple.servlet.updatesite</em>. Add the feature we just created to the list of features on the first page of the <em>site.xml</em> Update Site Map.</p>
 
-<p><strong>When you&#8217;re done with that, </strong>, you can build the update site by pressing the <em>Build All</em> button. This will build the servlet plug-in, the feature and finally the update site. After that, we&#8217;re ready to deploy.</p>
+<p><strong>When you&rsquo;re done with that, </strong>, you can build the update site by pressing the <em>Build All</em> button. This will build the servlet plug-in, the feature and finally the update site. After that, we&rsquo;re ready to deploy.</p>
 
 <h2>Installing the servlet</h2>
 
 <p>Installing the servlet into our Amazon EC2 instance is quite easy, as we can leverage p2:</p>
 
-<p><strong>Using your favourite SFTP client,</strong> copy the entire update into the <em>/tmp</em> directory of your Amazon EC2 instance. When that&#8217;s done, hop over to your terminal window that&#8217;s connected to the OSGi console of your Eclipse RT server (remember, we started this server when setting up the Amazon EC2 instance). Issue the following commands:</p>
+<p><strong>Using your favourite SFTP client,</strong> copy the entire update into the <em>/tmp</em> directory of your Amazon EC2 instance. When that&rsquo;s done, hop over to your terminal window that&rsquo;s connected to the OSGi console of your Eclipse RT server (remember, we started this server when setting up the Amazon EC2 instance). Issue the following commands:</p>
 
 <pre><code>provaddrepo file:/tmp/simple.servlet.updatesite
 provliu
@@ -336,7 +337,7 @@ confapply
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -412,9 +413,9 @@ confapply
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -423,8 +424,6 @@ confapply
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

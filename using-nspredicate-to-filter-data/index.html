@@ -61,6 +61,7 @@
     })();
 /* ]]> */</script>
 
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -146,18 +147,18 @@
     <img class="left" src="/images/2011-04-22-using-nspredicate-to-filter-data/coffee_filtered_150x150.png">
   </p>
   
-  <p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you&#8217;re applying a filter to the huge set of data we call the internet.</p>
+  <p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day &ndash; each time you use Google, you&rsquo;re applying a filter to the huge set of data we call the internet.</p>
 
 <!-- more -->
 
 
-<p>Even on your local computer, you use services like Spotlight or the search field in your mail application all the time. Apps that lack decent searching and filtering capabilities sometimes are really hard to use, so as developers we should spend some time on thinking how to allow users to filter the data they&#8217;re dealing with.</p>
+<p>Even on your local computer, you use services like Spotlight or the search field in your mail application all the time. Apps that lack decent searching and filtering capabilities sometimes are really hard to use, so as developers we should spend some time on thinking how to allow users to filter the data they&rsquo;re dealing with.</p>
 
-<p>In this post, I am going to focus on ways to filter data. We won&#8217;t be looking at the UI side of things - this is something I&#8217;ll do in a subsequent blog post.</p>
+<p>In this post, I am going to focus on ways to filter data. We won&rsquo;t be looking at the UI side of things &ndash; this is something I&rsquo;ll do in a subsequent blog post.</p>
 
 <h2>Old-skool filtering</h2>
 
-<p>If you look at an arbitrary code base, chances are you&#8217;ll sooner or later run into a piece of code similar to this one:</p>
+<p>If you look at an arbitrary code base, chances are you&rsquo;ll sooner or later run into a piece of code similar to this one:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -174,7 +175,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>It&#8217;s a straight-forward approach to filtering an array of items (in this case, we&#8217;re talking about books) using a rather simple <code>if</code>-statement. Nothing wrong with this, but despite the fact we&#8217;re using a fairly simple expression here, the code is rather verbose. We can easily imagine what will happen in case we need to use more complicated selection criteria or a combination of filtering criteria.</p>
+<p>It&rsquo;s a straight-forward approach to filtering an array of items (in this case, we&rsquo;re talking about books) using a rather simple <code>if</code>-statement. Nothing wrong with this, but despite the fact we&rsquo;re using a fairly simple expression here, the code is rather verbose. We can easily imagine what will happen in case we need to use more complicated selection criteria or a combination of filtering criteria.</p>
 
 <h2>Simple filtering with NSPredicate</h2>
 
@@ -182,7 +183,7 @@
 
 <p>Predicates are <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSPredicate_Class/Reference/NSPredicate.html">expressions that evaluate to a truth value</a>, i.e. <code>true</code> or <code>false</code>. We can use them to perform validation and filtering. In Cocoa, we can use <code>NSPredicate</code> to evaluate single objects, filter arrays and perform queries against Core Data data sets.</p>
 
-<p>Let&#8217;s have a look at how our example looks like when using <code>NSPredicate</code>:</p>
+<p>Let&rsquo;s have a look at how our example looks like when using <code>NSPredicate</code>:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -197,9 +198,9 @@
 
 <h2>Filtering with Regular Expressions</h2>
 
-<p>Regular Expressions can be used to <a href="http://xkcd.com/208/">solve almost any problem ;-)</a> so it&#8217;s good to know you can use them in <code>NSPredicate</code>s as well. To use regular expressions in your <code>NSPredicate</code>, you need to use the <code>MATCHES</code> operator.</p>
+<p>Regular Expressions can be used to <a href="http://xkcd.com/208/">solve almost any problem ;&ndash;)</a> so it&rsquo;s good to know you can use them in <code>NSPredicate</code>s as well. To use regular expressions in your <code>NSPredicate</code>, you need to use the <code>MATCHES</code> operator.</p>
 
-<p>Let&#8217;s filter all books that are about iPad or iPhone programming:</p>
+<p>Let&rsquo;s filter all books that are about iPad or iPhone programming:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -214,7 +215,7 @@
 
 <h2>Filtering using set operations</h2>
 
-<p>Let&#8217;s for a moment assume you want to filter all books that have been published by your favorite publishers. Using the <code>IN</code> operator, this is rather simple: first, we need to set up a set containing the publishers we&#8217;re interested in. Then, we can create the predicate and finally perform the filtering operation:</p>
+<p>Let&rsquo;s for a moment assume you want to filter all books that have been published by your favorite publishers. Using the <code>IN</code> operator, this is rather simple: first, we need to set up a set containing the publishers we&rsquo;re interested in. Then, we can create the predicate and finally perform the filtering operation:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -231,7 +232,7 @@
 
 <p><code>NSPredicate</code> relies on <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/KeyValueCoding.html">key-value coding</a> to achieve its magic. On one hand this means your classes need to be <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/Compliant.html#//apple_ref/doc/uid/20002172-BAJEAIEE">KVC compliant</a> in order to be queried using <code>NSPredicate</code> (at least the attributes you want to query). On the other hand, this allows us to perform some very interesting things with very little lines of code.</p>
 
-<p>Let&#8217;s for example retrieve a list of books written by authors with the name &#8220;Mark&#8221;:</p>
+<p>Let&rsquo;s for example retrieve a list of books written by authors with the name &ldquo;Mark&rdquo;:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -242,7 +243,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>In case we&#8217;d want to return the value of one of the aggregate functions, we don&#8217;t need to use NSPredicate itself, but instead use KVC directly. Let&#8217;s retrieve the average price of all books on our shelf:</p>
+<p>In case we&rsquo;d want to return the value of one of the aggregate functions, we don&rsquo;t need to use NSPredicate itself, but instead use KVC directly. Let&rsquo;s retrieve the average price of all books on our shelf:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSNumber</span> <span class="o">*</span><span class="n">average</span> <span class="o">=</span> <span class="p">[</span><span class="n">bookshelf</span> <span class="nl">valueForKeyPath:</span><span class="s">@&quot;@avg.price&quot;</span><span class="p">];</span>
@@ -253,7 +254,7 @@
 
 <p>The Cocoa libraries provide some very powerful abstractions which can make your life and that of the people reading your code much easier. It pays off to know about them, so go ahead and browse the Cocoa documentation and hunt for those gems!</p>
 
-<p>Apple&#8217;s <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html">NSPredicate programming guide</a> provides an in-depth documentation for <code>NSPredicate</code> containing all the things I didn&#8217;t cover in this post.</p>
+<p>Apple&rsquo;s <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html">NSPredicate programming guide</a> provides an in-depth documentation for <code>NSPredicate</code> containing all the things I didn&rsquo;t cover in this post.</p>
 
 <p><code>NSPredicate</code> also plays an important role when querying data in Core Data, something we will need to have a look at in one of the next blog posts. Stay tuned!</p>
 
@@ -343,7 +344,7 @@
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -419,9 +420,9 @@
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -430,8 +431,6 @@
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

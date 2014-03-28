@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Have you heard about model driven software development (MDD / MDSD) and are thinking &#8220;what&#8217;s all this fuzz about models&#8221;? &#8220; &hellip;">
+  <meta name="description" content="Have you heard about model driven software development (MDD / MDSD) and are thinking &ldquo;what&rsquo;s all this fuzz about models&rdquo;? &ldquo; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -60,6 +60,7 @@
         t.parentNode.insertBefore(s, t);
     })();
 /* ]]> */</script>
+
 
   
   <script type="text/javascript">
@@ -142,13 +143,13 @@
 
 <div class="entry-content">
   
-  <p>Have you heard about model driven software development (MDD / MDSD) and are thinking &#8220;what&#8217;s all this fuzz about models&#8221;? &#8220;Why should models help me to be more productive,&#8221; might be another thought you have.</p>
+  <p>Have you heard about model driven software development (MDD / MDSD) and are thinking &ldquo;what&rsquo;s all this fuzz about models&rdquo;? &ldquo;Why should models help me to be more productive,&rdquo; might be another thought you have.</p>
 
 <p>People have been asking how to leverage models on and off on the web and in meetings I attended, so I thought I might share this little tutorial with you. In this tutorial, we will develop a little code generator that helps you to create (HTML) forms from models.</p>
 
 <h2>A short Overview</h2>
 
-<p>Xpand is a template engine, similar to FreeMarker, Velocity, JET and JSP. However, it features some very unique properties that makes using Xpand very well suited for generating code from models, such as <strong><a href="http://en.wikipedia.org/wiki/Type_safety">type safety</a></strong> and <strong>polymorphic dispatch</strong>. If you haven&#8217;t heard those terms before, fear not! I&#8217;ll show you how to use Xpand by way of an easy-to-follow example.</p>
+<p>Xpand is a template engine, similar to FreeMarker, Velocity, JET and JSP. However, it features some very unique properties that makes using Xpand very well suited for generating code from models, such as <strong><a href="http://en.wikipedia.org/wiki/Type_safety">type safety</a></strong> and <strong>polymorphic dispatch</strong>. If you haven&rsquo;t heard those terms before, fear not! I&rsquo;ll show you how to use Xpand by way of an easy-to-follow example.</p>
 
 <!-- more -->
 
@@ -156,49 +157,49 @@
 <p>The usual process of writing a code generator with Xpand is as follows:</p>
 
 <ol>
-<li><p>Define the structure of the model you want to process. This is called a <em>metamodel</em></p></li>
-<li><p>Define one or more template(s) that teach the code generator how to translate your model into code.</p></li>
+<li><p> Define the structure of the model you want to process. This is called a <em>metamodel</em></p></li>
+<li><p> Define one or more template(s) that teach the code generator how to translate your model into code.</p></li>
 </ol>
 
 
-<p>Easy, isn&#8217;t it?</p>
+<p>Easy, isn&rsquo;t it?</p>
 
 <p>Using the code generator is even easier:</p>
 
 <ol>
-<li><p>Create a model</p></li>
-<li><p>Start the code generator</p></li>
+<li><p> Create a model</p></li>
+<li><p> Start the code generator</p></li>
 </ol>
 
 
-<p>It is worth mentioning that you can use Xpand to generate code for almost any known programming language. Everything you can express in text can be generated using Xpand. So, while we will be generating HTML and Java code in the following example, you can easily write code templates that generate code for C#, Basic, Lua, SmallTalk, ABAP, or any other programming language. You can also generate manuals and other documentation artifacts from your models using Xpand. I&#8217;ve successfully used Xpand to create DocBook files from models. Those DocBook files have then been converted to PDF files and online help files.</p>
+<p>It is worth mentioning that you can use Xpand to generate code for almost any known programming language. Everything you can express in text can be generated using Xpand. So, while we will be generating HTML and Java code in the following example, you can easily write code templates that generate code for C#, Basic, Lua, SmallTalk, ABAP, or any other programming language. You can also generate manuals and other documentation artifacts from your models using Xpand. I&rsquo;ve successfully used Xpand to create DocBook files from models. Those DocBook files have then been converted to PDF files and online help files.</p>
 
 <h2>Preparing your IDE</h2>
 
 <ol>
-<li><p>Grab and install a recent copy of Eclipse. At the time of writing, I am using <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6M6-201003121448/index.php">Eclipse 3.6 M6</a>.</p></li>
-<li><p>Install the latest version of Xpand (<em>Help -> Install New Software &#8230;</em>)</p></li>
-<li><p>Add the Xpand update site (at the time of this writing, I am using Xpand 1.0 nightly builds from <a href="http://download.eclipse.org/modeling/m2t/xpand/updates/nightly/">http://download.eclipse.org/modeling/m2t/xpand/updates/nightly/</a>)</p></li>
-<li><p>Add the MWE update site (<a href="http://download.eclipse.org/modeling/emft/mwe/updates/nightly/">http://download.eclipse.org/modeling/emft/mwe/updates/nightly/</a>)</p></li>
-<li><p>Select MWE and Xpand:</p></li>
+<li><p> Grab and install a recent copy of Eclipse. At the time of writing, I am using <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6M6-201003121448/index.php">Eclipse 3.6 M6</a>.</p></li>
+<li><p> Install the latest version of Xpand (<em>Help &ndash;> Install New Software &hellip;</em>)</p></li>
+<li><p> Add the Xpand update site (at the time of this writing, I am using Xpand 1.0 nightly builds from <a href="http://download.eclipse.org/modeling/m2t/xpand/updates/nightly/">http://download.eclipse.org/modeling/m2t/xpand/updates/nightly/</a>)</p></li>
+<li><p> Add the MWE update site (<a href="http://download.eclipse.org/modeling/emft/mwe/updates/nightly/">http://download.eclipse.org/modeling/emft/mwe/updates/nightly/</a>)</p></li>
+<li><p> Select MWE and Xpand:</p></li>
 </ol>
 
 
 <p><a href="http://www.flickr.com/photos/81029262@N00/4439298864"><img src="http://farm5.static.flickr.com/4001/4439298864_40b913f0e5.jpg" alt="Install MWE and Xpand" /></a></p>
 
 <ol>
-<li>After the obligatory restart, do yourself the favour and set the platform encoding to <strong>UTF-8</strong>!</li>
+<li> After the obligatory restart, do yourself the favour and set the platform encoding to <strong>UTF-8</strong>!</li>
 </ol>
 
 
 <h2>Creating a Generator Project</h2>
 
-<p>Xpand code generators are hosted in Eclipse plug-ins, mainly because this makes handling the classpath a lot easier. People have reportedly used Maven to run Xpand code generators, but we won&#8217;t go down this road today. Let&#8217;s create a simple generator project:</p>
+<p>Xpand code generators are hosted in Eclipse plug-ins, mainly because this makes handling the classpath a lot easier. People have reportedly used Maven to run Xpand code generators, but we won&rsquo;t go down this road today. Let&rsquo;s create a simple generator project:</p>
 
 <ol>
-<li><p>Open the new project wizard and choose <em>Xpand Project</em> from the list</p></li>
-<li><p>Choose a meaningful name for your project (e.g. <em>org.xpand.example.gettingstarted</em></p></li>
-<li><p>Select <em>Create a sample EMF based Xpand project</em></p></li>
+<li><p> Open the new project wizard and choose <em>Xpand Project</em> from the list</p></li>
+<li><p> Choose a meaningful name for your project (e.g. <em>org.xpand.example.gettingstarted</em></p></li>
+<li><p> Select <em>Create a sample EMF based Xpand project</em></p></li>
 </ol>
 
 
@@ -209,11 +210,11 @@
 <p>Before we can start working with this project, we need to perform some clean-up actions:</p>
 
 <ol>
-<li><p>Open <em>src/metamodel/Checks.chk</em> and delete all its contents</p></li>
-<li><p>Open <em>src/metamodel/Extensions.chk</em> and delete all its contents</p></li>
-<li><p>Open <em>src/template/GeneratorExtensions.ext</em> and delete all its contents</p></li>
-<li><p>Delete <em>src/Model.xmi</em></p></li>
-<li><p>Don&#8217;t forget to save all modified files</p></li>
+<li><p> Open <em>src/metamodel/Checks.chk</em> and delete all its contents</p></li>
+<li><p> Open <em>src/metamodel/Extensions.chk</em> and delete all its contents</p></li>
+<li><p> Open <em>src/template/GeneratorExtensions.ext</em> and delete all its contents</p></li>
+<li><p> Delete <em>src/Model.xmi</em></p></li>
+<li><p> Don&rsquo;t forget to save all modified files</p></li>
 </ol>
 
 
@@ -223,113 +224,81 @@
 Xpand is capable of understanding a variety of metamodel types. For example, if you have an XML schema file, you can use this as a metamodel and thereby enable Xpand to use XML files which are compliant to your schema as input models. Or, if you already have a bunch of Java files making up your data model, you can use those to drive Xpand code generation. In this tutorial, however, we will be using an Ecore metamodel to define the structure of our models. The project has already been configured to support Ecore metamodels, so all we need to do is open <em>metamodel.ecore</em> and define the structure:</p>
 
 <ol>
-<li><p>Please open <em>src/metamodel/metamodel.ecore</em>
+<li><p> Please open <em>src/metamodel/metamodel.ecore</em>
 .</p></li>
-<li><p>Remove the following elements from the metamodel: <em>Feature</em>, <em>Entity</em>, <em>Datatype</em>, <em>Type</em>, <em>Model</em>. The metamodel should now be empty:</p></li>
+<li><p> Remove the following elements from the metamodel: <em>Feature</em>, <em>Entity</em>, <em>Datatype</em>, <em>Type</em>, <em>Model</em>. The metamodel should now be empty:</p></li>
 </ol>
 
 
 <p><a href="http://www.flickr.com/photos/81029262@N00/4439788989"><img src="http://farm3.static.flickr.com/2555/4439788989_42665597db.jpg" alt="Empty metamodel" /></a></p>
 
 <ol>
-<li><p>Select package <em>metamodel</em> (as depicted in the screenshot above) and add a new <em>EClass</em> (<em>context menu -> New Child -> EClass</em>). Use the properties view to change the name of the newly created EClass to <em>Model</em>.</p></li>
-<li><p>Create a new EClass <em>Form</em></p></li>
-<li><p>Select the newly created EClass <em>Form</em> and add the following _EAttribute_s:</p></li>
+<li><p> Select package <em>metamodel</em> (as depicted in the screenshot above) and add a new <em>EClass</em> (<em>context menu &ndash;> New Child &ndash;> EClass</em>). Use the properties view to change the name of the newly created EClass to <em>Model</em>.</p></li>
+<li><p> Create a new EClass <em>Form</em></p></li>
+<li><p> Select the newly created EClass <em>Form</em> and add the following _EAttribute_s:</p>
+
+<ul>
+<li><p><em>name</em>, set the EType to <em>EString</em></p></li>
+<li><p><em>description</em>, EType = <em>EString</em></p></li>
+<li><p><em>title</em>, EType = <em>EString</em></p></li>
+</ul>
+</li>
+<li><p> Select EClass <em>Model</em> and add a new <em>EReference</em>, setting its attributes as follows:</p>
+
+<ul>
+<li><p>name = <em>forms</em></p></li>
+<li><p>EType = <em>Form</em></p></li>
+<li><p>Containment = <em>true</em></p></li>
+<li><p>Upperbound = <em>-1</em> (meaning: unlimited)</p></li>
+</ul>
+</li>
+<li><p> Create a new EClass <em>Field</em> and add the following EAttributes to it:</p>
+
+<ul>
+<li><p><em>name</em>, EType = <em>EString</em></p></li>
+<li><p><em>label</em>, EType = <em>Estring</em></p></li>
+</ul>
+</li>
+<li><p> Create another EClass <em>TextField</em>, setting its properties as follows:</p>
+
+<ul>
+<li><p>name = <em>TextField</em></p></li>
+<li><p>ESuper Types = <em>Field</em></p></li>
+</ul>
+</li>
+<li><p> Add one EAttribute <em>text</em> to <em>Textfield</em>:</p>
+
+<ul>
+<li>name = <em>text</em>, EType = <em>EString</em></li>
+</ul>
+</li>
+<li><p>. Add an EClass <em>MultiLineTextField</em> to the metamodel:</p>
+
+<ul>
+<li><p>name = <em>MultiLineTextTield</em></p></li>
+<li><p>ESuper Types = <em>TextField</em></p></li>
+</ul>
+</li>
+<li><p>. Now that we have everything in place, we finally need to add a reference from <em>Form</em> to <em>Field</em> so we can later add fields to a form. Select EClass <em>Form</em> and add an EReference to it, setting its properties as follows:</p>
+
+<ul>
+<li><p>name = <em>fields</em></p></li>
+<li><p>EType = <em>Field</em></p></li>
+<li><p>Containment = <em>true</em></p></li>
+<li><p>Upperbound = <em>-1</em> (meaning: unlimited)</p></li>
+</ul>
+</li>
 </ol>
 
-
-<pre><code>* _name_, set the EType to _EString_
-
-
-* _description_, EType = _EString_
-
-
-* _title_, EType = _EString_
-</code></pre>
-
-<ol>
-<li>Select EClass <em>Model</em> and add a new <em>EReference</em>, setting its attributes as follows:</li>
-</ol>
-
-
-<pre><code>* name = _forms_
-
-
-* EType = _Form_
-
-
-* Containment = _true_
-
-
-* Upperbound = _-1_ (meaning: unlimited)
-</code></pre>
-
-<ol>
-<li>Create a new EClass <em>Field</em> and add the following EAttributes to it:</li>
-</ol>
-
-
-<pre><code>* _name_, EType = _EString_
-
-
-* _label_, EType = _Estring_
-</code></pre>
-
-<ol>
-<li>Create another EClass <em>TextField</em>, setting its properties as follows:</li>
-</ol>
-
-
-<pre><code>* name = _TextField_
-
-
-* ESuper Types = _Field_
-</code></pre>
-
-<ol>
-<li>Add one EAttribute <em>text</em> to <em>Textfield</em>:</li>
-</ol>
-
-
-<pre><code>* name = _text_, EType = _EString_
-</code></pre>
-
-<ol>
-<li>Add an EClass <em>MultiLineTextField</em> to the metamodel:</li>
-</ol>
-
-
-<pre><code>* name = _MultiLineTextTield_
-
-
-* ESuper Types = _TextField_
-</code></pre>
-
-<ol>
-<li>Now that we have everything in place, we finally need to add a reference from <em>Form</em> to <em>Field</em> so we can later add fields to a form. Select EClass <em>Form</em> and add an EReference to it, setting its properties as follows:</li>
-</ol>
-
-
-<pre><code>* name = _fields_
-
-
-* EType = _Field_
-
-
-* Containment = _true_
-
-
-* Upperbound = _-1_ (meaning: unlimited)
-</code></pre>
 
 <h2>Creating a Model</h2>
 
-<p>Let&#8217;s now create a model that follows the structure of the metamodel:</p>
+<p>Let&rsquo;s now create a model that follows the structure of the metamodel:</p>
 
 <ol>
-<li><p>In <em>metamodel.ecore</em>, select EClass <em>Model</em></p></li>
-<li><p>Create a model instance by choosing <em>Create Dynamic Instance&#8230;</em> from the context menu</p></li>
-<li><p>Save the model file to <em>src/Model.xmi</em></p></li>
+<li><p> In <em>metamodel.ecore</em>, select EClass <em>Model</em></p></li>
+<li><p> Create a model instance by choosing <em>Create Dynamic Instance&hellip;</em> from the context menu</p></li>
+<li><p> Save the model file to <em>src/Model.xmi</em></p></li>
 </ol>
 
 
@@ -388,7 +357,7 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 «ENDDEFINE»
 </code></pre>
 
-<p>On the first line, we import the metamodel so that the generator (and the editor as well) knows about the structure of our model. On line 2 - 4 we define a code template named <em>main</em>, making sure it is bound to model elements of type <em>Model</em>. The template doesn&#8217;t do much, except to call another template (which we will define in a minute) named <em>form</em> with the collection of <em>Form_s, contained in the reference </em>forms_ of the current form.</p>
+<p>On the first line, we import the metamodel so that the generator (and the editor as well) knows about the structure of our model. On line 2 &ndash; 4 we define a code template named <em>main</em>, making sure it is bound to model elements of type <em>Model</em>. The template doesn&rsquo;t do much, except to call another template (which we will define in a minute) named <em>form</em> with the collection of <em>Form_s, contained in the reference </em>forms_ of the current form.</p>
 
 <p>Add the following lines to the template file, defining the template for the HTML file:</p>
 
@@ -403,7 +372,7 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 &lt;/head&gt;
 </code></pre>
 
-<p>In the first line, we start the template by specifying its name (<em>form</em>) and the type it is bound to (<em>Form</em>). On the next line, we use the <em>FILE</em> statement to specify the file the output is going to be written to. The name of the file is derived by concatenating the attribute <em>name</em> of the current <em>Form</em> and the string literal <em>&#8220;.html&#8221;</em>.</p>
+<p>In the first line, we start the template by specifying its name (<em>form</em>) and the type it is bound to (<em>Form</em>). On the next line, we use the <em>FILE</em> statement to specify the file the output is going to be written to. The name of the file is derived by concatenating the attribute <em>name</em> of the current <em>Form</em> and the string literal <em>&ldquo;.html&rdquo;</em>.</p>
 
 <p>Continue the template by appending the following text:</p>
 
@@ -436,9 +405,9 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 <p>You might recall that we we defined three different kinds of _>Field_s in the metamodel:</p>
 
 <ol>
-<li><p>Field (which is the super class for the other two field types</p></li>
-<li><p>TextField</p></li>
-<li><p>MultiLineTextField</p></li>
+<li><p> Field (which is the super class for the other two field types</p></li>
+<li><p> TextField</p></li>
+<li><p> MultiLineTextField</p></li>
 </ol>
 
 
@@ -461,13 +430,13 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 «ENDDEFINE»
 </code></pre>
 
-<p>As you can see, all three templates have the same name. Only the type they are bound to differs. This is enough to let Xpand know which template to choose according to the type of the current model element. Let&#8217;s suppose Xpand is iterating the model and the current model element is a <em>TextField</em>. Although <em>Field</em> is a direct super type of <em>TextField</em>, Xpand will not invoke the first template (<em>«DEFINE field FOR Field»</em>), but the second template (<em>«DEFINE field FOR TextField»</em>), as this is the most concrete match for the type of the model element.</p>
+<p>As you can see, all three templates have the same name. Only the type they are bound to differs. This is enough to let Xpand know which template to choose according to the type of the current model element. Let&rsquo;s suppose Xpand is iterating the model and the current model element is a <em>TextField</em>. Although <em>Field</em> is a direct super type of <em>TextField</em>, Xpand will not invoke the first template (<em>«DEFINE field FOR Field»</em>), but the second template (<em>«DEFINE field FOR TextField»</em>), as this is the most concrete match for the type of the model element.</p>
 
 <h2>Running the Code Generator</h2>
 
 <p>If you have followed the above steps, running the code generator is a piece of cake:</p>
 
-<p>Open the context menu on <em>src/workflow/workflow.mwe</em> and select <em>Run As -> MWE Workflow</em></p>
+<p>Open the context menu on <em>src/workflow/workflow.mwe</em> and select <em>Run As &ndash;> MWE Workflow</em></p>
 
 <p>This will start the code generator. You will see some log messages in the console view. If all went well, the output in the console reads something like this:</p>
 
@@ -480,9 +449,9 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 
 <h2>Where to go from here</h2>
 
-<p>If you want to learn more about Xpand, be sure to attend my talk <a href="http://www.eclipsecon.org/2010/sessions/?page=sessions&amp;id=1129">Use models and let the computer do the grunt work with Xpand</a> at EclipseCon 2010. I&#8217;ll show some more advanced topics in this talk (such as generator cartridges, using Xtend to augment your models, partitioning your code templates, using other metamodels to define your models).</p>
+<p>If you want to learn more about Xpand, be sure to attend my talk <a href="http://www.eclipsecon.org/2010/sessions/?page=sessions&amp;id=1129">Use models and let the computer do the grunt work with Xpand</a> at EclipseCon 2010. I&rsquo;ll show some more advanced topics in this talk (such as generator cartridges, using Xtend to augment your models, partitioning your code templates, using other metamodels to define your models).</p>
 
-<p>Xpand comes with an extensive documentation (just go to <em>Help -> Help Contents -> Xpand Documentation</em> in Eclipse). You can also get help on Xpand in the <a href="http://www.eclipse.org/forums/index.php?t=tree&amp;th=163643&amp;">Eclipse Community Forums</a></p>
+<p>Xpand comes with an extensive documentation (just go to <em>Help &ndash;> Help Contents &ndash;> Xpand Documentation</em> in Eclipse). You can also get help on Xpand in the <a href="http://www.eclipse.org/forums/index.php?t=tree&amp;th=163643&amp;">Eclipse Community Forums</a></p>
 
 <p>Should you need help, <a href="http://www.itemis.com">itemis (the company I work with)</a> offers training and consulting for Xpand and a host of other modeling related technologies.</p>
 
@@ -574,7 +543,7 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -650,9 +619,9 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -661,8 +630,6 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

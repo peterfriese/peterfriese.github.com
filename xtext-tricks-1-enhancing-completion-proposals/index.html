@@ -61,6 +61,7 @@
     })();
 /* ]]> */</script>
 
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -142,15 +143,15 @@
 
 <div class="entry-content">
   
-  <p>Those of you who <a href="htp://twitter.com/peterfriese">follow me on Twitter</a> might have noticed <a href="http://twitter.com/peterfriese/status/4889552469">I am working on an Xtext based DSL</a> for <a href="http://en.wikipedia.org/wiki/Behavior_driven_development">Behaviour Driven Development</a>. Part of the DSL allows the DSL user to define actors and the verbs these actors can execute. Actors can have a hierarchy (much like a class hierarchy), meaning an actor will inherit all verbs of it&#8217;s super actors. As the list of verbs can grow quite a bit, the content assist drop down menu becomes a bit overwhelming.</p>
+  <p>Those of you who <a href="htp://twitter.com/peterfriese">follow me on Twitter</a> might have noticed <a href="http://twitter.com/peterfriese/status/4889552469">I am working on an Xtext based DSL</a> for <a href="http://en.wikipedia.org/wiki/Behavior_driven_development">Behaviour Driven Development</a>. Part of the DSL allows the DSL user to define actors and the verbs these actors can execute. Actors can have a hierarchy (much like a class hierarchy), meaning an actor will inherit all verbs of it&rsquo;s super actors. As the list of verbs can grow quite a bit, the content assist drop down menu becomes a bit overwhelming.</p>
 
 <p>[</p>
 
 <p><img src="http://farm3.static.flickr.com/2581/4029808851_22fd514946.jpg" alt="XtextProposalProviderBefore" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/4029808851)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/4029808851">http://www.flickr.com/photos/81029262@N00/4029808851</a>)</p>
 
-<p>To alleviate  this situation, I decided to display the &#8220;owner&#8221; of a verb along with the name of the verb in the content assist drop down box. Here is my first try:</p>
+<p>To alleviate  this situation, I decided to display the &ldquo;owner&rdquo; of a verb along with the name of the verb in the content assist drop down box. Here is my first try:</p>
 
 <!-- more -->
 
@@ -170,13 +171,13 @@
 }
 </code></pre>
 
-<p>With this piece of code in place, the content assist proposals for verbs will now display the name of the &#8220;owner&#8221; to the right of the replacement text:</p>
+<p>With this piece of code in place, the content assist proposals for verbs will now display the name of the &ldquo;owner&rdquo; to the right of the replacement text:</p>
 
 <p>[</p>
 
 <p><img src="http://farm4.static.flickr.com/3526/4030575068_2358208f22.jpg" alt="XtextContentAssistAfter" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/4030575068)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/4030575068">http://www.flickr.com/photos/81029262@N00/4030575068</a>)</p>
 
 <p><a href="http://zarnekow.blogspot.com/">Sebastian</a> pointed out that there is a <code>getDisplayString()</code> in <code>AbstractContentProposalProvider</code> that you should override in order to create a custom display string. It turned out, however, that this method will not be called as expected. I <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=293380">filed a bug</a>, so expect to see a fix in one of the next milestones of the Xtext 0.8.0 stream.</p>
 
@@ -262,7 +263,7 @@
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -338,9 +339,9 @@
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -349,8 +350,6 @@
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

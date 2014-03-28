@@ -4,7 +4,7 @@
   <title><![CDATA[Category: NSPredicate | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/nspredicate/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,18 +18,18 @@
     <link href="http://www.peterfriese.de/using-nspredicate-to-filter-data/"/>
     <updated>2011-04-22T23:15:36+01:00</updated>
     <id>http://www.peterfriese.de/using-nspredicate-to-filter-data</id>
-    <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day - each time you use Google, you're applying a filter to the huge set of data we call the internet.</p>
+    <content type="html"><![CDATA[<p>Filtering data is one of the essential tasks in computing. With all the data available today, we need to apply certain limits and constraints to actually make it usable. What use is it to be able to scroll down a list of literally thousands of list items when you really care about one or two of them? Filtering and searching information make up a significant part of our work day &ndash; each time you use Google, you&rsquo;re applying a filter to the huge set of data we call the internet.</p>
 
 <!-- more -->
 
 
-<p>Even on your local computer, you use services like Spotlight or the search field in your mail application all the time. Apps that lack decent searching and filtering capabilities sometimes are really hard to use, so as developers we should spend some time on thinking how to allow users to filter the data they're dealing with.</p>
+<p>Even on your local computer, you use services like Spotlight or the search field in your mail application all the time. Apps that lack decent searching and filtering capabilities sometimes are really hard to use, so as developers we should spend some time on thinking how to allow users to filter the data they&rsquo;re dealing with.</p>
 
-<p>In this post, I am going to focus on ways to filter data. We won't be looking at the UI side of things - this is something I'll do in a subsequent blog post.</p>
+<p>In this post, I am going to focus on ways to filter data. We won&rsquo;t be looking at the UI side of things &ndash; this is something I&rsquo;ll do in a subsequent blog post.</p>
 
 <h2>Old-skool filtering</h2>
 
-<p>If you look at an arbitrary code base, chances are you'll sooner or later run into a piece of code similar to this one:</p>
+<p>If you look at an arbitrary code base, chances are you&rsquo;ll sooner or later run into a piece of code similar to this one:</p>
 
 <p>``` objc</p>
 
@@ -43,7 +43,7 @@ for (Book *book in bookshelf) {
 
 <p>```</p>
 
-<p>It's a straight-forward approach to filtering an array of items (in this case, we're talking about books) using a rather simple <code>if</code>-statement. Nothing wrong with this, but despite the fact we're using a fairly simple expression here, the code is rather verbose. We can easily imagine what will happen in case we need to use more complicated selection criteria or a combination of filtering criteria.</p>
+<p>It&rsquo;s a straight-forward approach to filtering an array of items (in this case, we&rsquo;re talking about books) using a rather simple <code>if</code>-statement. Nothing wrong with this, but despite the fact we&rsquo;re using a fairly simple expression here, the code is rather verbose. We can easily imagine what will happen in case we need to use more complicated selection criteria or a combination of filtering criteria.</p>
 
 <h2>Simple filtering with NSPredicate</h2>
 
@@ -51,7 +51,7 @@ for (Book *book in bookshelf) {
 
 <p>Predicates are <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSPredicate_Class/Reference/NSPredicate.html">expressions that evaluate to a truth value</a>, i.e. <code>true</code> or <code>false</code>. We can use them to perform validation and filtering. In Cocoa, we can use <code>NSPredicate</code> to evaluate single objects, filter arrays and perform queries against Core Data data sets.</p>
 
-<p>Let's have a look at how our example looks like when using <code>NSPredicate</code>:</p>
+<p>Let&rsquo;s have a look at how our example looks like when using <code>NSPredicate</code>:</p>
 
 <p>``` objc</p>
 
@@ -66,9 +66,9 @@ NSArray *filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
 
 <h2>Filtering with Regular Expressions</h2>
 
-<p>Regular Expressions can be used to <a href="http://xkcd.com/208/">solve almost any problem ;-)</a> so it's good to know you can use them in <code>NSPredicate</code>s as well. To use regular expressions in your <code>NSPredicate</code>, you need to use the <code>MATCHES</code> operator.</p>
+<p>Regular Expressions can be used to <a href="http://xkcd.com/208/">solve almost any problem ;&ndash;)</a> so it&rsquo;s good to know you can use them in <code>NSPredicate</code>s as well. To use regular expressions in your <code>NSPredicate</code>, you need to use the <code>MATCHES</code> operator.</p>
 
-<p>Let's filter all books that are about iPad or iPhone programming:</p>
+<p>Let&rsquo;s filter all books that are about iPad or iPhone programming:</p>
 
 <p>``` objc</p>
 
@@ -83,7 +83,7 @@ dumpBookshelf(@"Books that contain 'iPad' or 'iPhone' in their title", filtered)
 
 <h2>Filtering using set operations</h2>
 
-<p>Let's for a moment assume you want to filter all books that have been published by your favorite publishers. Using the <code>IN</code> operator, this is rather simple: first, we need to set up a set containing the publishers we're interested in. Then, we can create the predicate and finally perform the filtering operation:</p>
+<p>Let&rsquo;s for a moment assume you want to filter all books that have been published by your favorite publishers. Using the <code>IN</code> operator, this is rather simple: first, we need to set up a set containing the publishers we&rsquo;re interested in. Then, we can create the predicate and finally perform the filtering operation:</p>
 
 <p>``` objc</p>
 
@@ -99,7 +99,7 @@ dumpBookshelf(@"Books published by my favorite publishers", filtered);
 
 <p><code>NSPredicate</code> relies on <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/KeyValueCoding.html">key-value coding</a> to achieve its magic. On one hand this means your classes need to be <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/Compliant.html#//apple_ref/doc/uid/20002172-BAJEAIEE">KVC compliant</a> in order to be queried using <code>NSPredicate</code> (at least the attributes you want to query). On the other hand, this allows us to perform some very interesting things with very little lines of code.</p>
 
-<p>Let's for example retrieve a list of books written by authors with the name "Mark":</p>
+<p>Let&rsquo;s for example retrieve a list of books written by authors with the name &ldquo;Mark&rdquo;:</p>
 
 <p>``` objc</p>
 
@@ -110,7 +110,7 @@ filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
 
 <p>```</p>
 
-<p>In case we'd want to return the value of one of the aggregate functions, we don't need to use NSPredicate itself, but instead use KVC directly. Let's retrieve the average price of all books on our shelf:</p>
+<p>In case we&rsquo;d want to return the value of one of the aggregate functions, we don&rsquo;t need to use NSPredicate itself, but instead use KVC directly. Let&rsquo;s retrieve the average price of all books on our shelf:</p>
 
 <p>``` objc</p>
 
@@ -123,7 +123,7 @@ filtered  = [bookshelf filteredArrayUsingPredicate:predicate];
 
 <p>The Cocoa libraries provide some very powerful abstractions which can make your life and that of the people reading your code much easier. It pays off to know about them, so go ahead and browse the Cocoa documentation and hunt for those gems!</p>
 
-<p>Apple's <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html">NSPredicate programming guide</a> provides an in-depth documentation for <code>NSPredicate</code> containing all the things I didn't cover in this post.</p>
+<p>Apple&rsquo;s <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html">NSPredicate programming guide</a> provides an in-depth documentation for <code>NSPredicate</code> containing all the things I didn&rsquo;t cover in this post.</p>
 
 <p><code>NSPredicate</code> also plays an important role when querying data in Core Data, something we will need to have a look at in one of the next blog posts. Stay tuned!</p>
 

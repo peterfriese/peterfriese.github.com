@@ -61,6 +61,7 @@
     })();
 /* ]]> */</script>
 
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -142,28 +143,28 @@
 
 <div class="entry-content">
   
-  <p>Most of you know that I am working as a committer for various Eclipse-related projects (such as <a href="http://www.xtext.org">Xtext</a>, <a href="http://www.eclipse.org/modeling/m2t/?project=xpand">Xpand</a> and the <a href="http://www.eclipse.org/modeling/emft/?project=mwe#mwe">Modeling Workflow Engine</a>). You might not know, however, that I also work as a consultant for <a href="http://www.itemis.com">itemis</a>. On one of my <a href="http://www.itemis.com/itemis-ag/language=en/2621/portfolio">recent consulting assignments</a> in Ottawa, Canada, I was asked &#8220;How can we use EMF to store our data in a database?&#8221;</p>
+  <p>Most of you know that I am working as a committer for various Eclipse-related projects (such as <a href="http://www.xtext.org">Xtext</a>, <a href="http://www.eclipse.org/modeling/m2t/?project=xpand">Xpand</a> and the <a href="http://www.eclipse.org/modeling/emft/?project=mwe#mwe">Modeling Workflow Engine</a>). You might not know, however, that I also work as a consultant for <a href="http://www.itemis.com">itemis</a>. On one of my <a href="http://www.itemis.com/itemis-ag/language=en/2621/portfolio">recent consulting assignments</a> in Ottawa, Canada, I was asked &ldquo;How can we use EMF to store our data in a database?&rdquo;</p>
 
 <p>Well, it turns out EMF can help a long way to store data in a database. Here is how.
 <strong>Prepare your development environment</strong></p>
 
 <ol>
-<li><p>Get Eclipse 3.5 M5 (<a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M5-200902021535/index.php">click here to download</a>)</p></li>
-<li><p>Unpack and start Eclipse</p></li>
-<li><p>Bring up the &#8220;Install New Software&#8221; dialog (Help -> Install New Software)</p></li>
-<li><p>Select <em>Teneo EMF Hibernate Runtime</em> and <em>Teneo EMF Hibernate SDK</em>, version 1.0.3</p></li>
-<li><p>Cick <em>Finish</em></p></li>
-<li><p>You most probably will be asked to restart Eclipse.</p></li>
+<li><p> Get Eclipse 3.5 M5 (<a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M5-200902021535/index.php">click here to download</a>)</p></li>
+<li><p> Unpack and start Eclipse</p></li>
+<li><p> Bring up the &ldquo;Install New Software&rdquo; dialog (Help &ndash;> Install New Software)</p></li>
+<li><p> Select <em>Teneo EMF Hibernate Runtime</em> and <em>Teneo EMF Hibernate SDK</em>, version 1.0.3</p></li>
+<li><p> Cick <em>Finish</em></p></li>
+<li><p> You most probably will be asked to restart Eclipse.</p></li>
 </ol>
 
 
 <p><strong>Create a target definition that includes Hibernate and HSQLDB</strong>
-In order to keep things simple, we will store the data in an <a href="http://hsqldb.org/">HSQLDB</a> database. We will use the <a href="http://www.hibernate.org/">Hibernate</a> OR Mapper to perform the mapping between your data objects and the database. As you might guess, quite a number of libraries will be involved to get the task accomplished. Instead of creating a bunch of plug-in projects containing the respective libraries, or - even worse - copying all libraries into our project, we&#8217;ll set up a target definition. Target definitions help to maintain a common set of dependencies for all developers on a team, which is a Good Thing.</p>
+In order to keep things simple, we will store the data in an <a href="http://hsqldb.org/">HSQLDB</a> database. We will use the <a href="http://www.hibernate.org/">Hibernate</a> OR Mapper to perform the mapping between your data objects and the database. As you might guess, quite a number of libraries will be involved to get the task accomplished. Instead of creating a bunch of plug-in projects containing the respective libraries, or &ndash; even worse &ndash; copying all libraries into our project, we&rsquo;ll set up a target definition. Target definitions help to maintain a common set of dependencies for all developers on a team, which is a Good Thing.</p>
 
 <ol>
-<li><p>Create a new project <em>library.target</em> (File -> New -> Project&#8230; -> General -> Project)</p></li>
-<li><p>Create three folders in this project: <em>hibernate</em>, <em>dependencies</em>, <em>hsqldb</em></p></li>
-<li><p>Go to the <a href="http://www.springsource.com/repository/app/">SpringSource Bundle Repository</a> and download the following OSGi bundles:</p></li>
+<li><p> Create a new project <em>library.target</em> (File &ndash;> New &ndash;> Project&hellip; &ndash;> General &ndash;> Project)</p></li>
+<li><p> Create three folders in this project: <em>hibernate</em>, <em>dependencies</em>, <em>hsqldb</em></p></li>
+<li><p> Go to the <a href="http://www.springsource.com/repository/app/">SpringSource Bundle Repository</a> and download the following OSGi bundles:</p></li>
 </ol>
 
 
@@ -199,25 +200,20 @@ save in folder</p>
 <p>library.target/hsqldb</p>
 
 <ol>
-<li><p>Create a new target definition library.target in this project (File -> New -> Other&#8230; -> Plug-in Development -> Target Definition)</p></li>
-<li><p>Open the target definition and add the three directories to it&#8217;s contents. As the GUI does not allow you to work with relative paths, you might consider to use a text editor to paste the following text:</p></li>
-</ol>
+<li><p> Create a new target definition library.target in this project (File &ndash;> New &ndash;> Other&hellip; &ndash;> Plug-in Development &ndash;> Target Definition)</p></li>
+<li><p> Open the target definition and add the three directories to it&rsquo;s contents. As the GUI does not allow you to work with relative paths, you might consider to use a text editor to paste the following text:</p>
 
-
-<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;?pde version="3.5"?&gt;
-&lt;target description="Teneo-related stuff, mostly Hibernate" name="Library Target Definition"&gt;
-    &lt;locations&gt;
-        &lt;location path="${eclipse_home}" type="Profile"/&gt;
-        &lt;location path="${workspace_loc}/library.target/hibernate" type="Directory"/&gt;
-        &lt;location path="${workspace_loc}/library.target/dependencies" type="Directory"/&gt;
-        &lt;location path="${workspace_loc}/library.target/hsqldb" type="Directory"/&gt;
-    &lt;/locations&gt;
-&lt;/target&gt;
-</code></pre>
-
-<ol>
-<li>Open the target definition in the Target Definition Editor and click on the <em>Set as Target Platform</em> hyperlink in the upper right area. This will activate the target definition. All contained bundles are now available and can be referenced as dependencies.</li>
+<p>&lt;?xml version=&ldquo;1.0&rdquo; encoding=&ldquo;UTF-8&rdquo;?>
+&lt;?pde version=&ldquo;3.5&rdquo;?>
+<target description="Teneo-related stuff, mostly Hibernate" name="Library Target Definition">
+    <locations>
+        <location path="${eclipse_home}" type="Profile"/>
+        <location path="${workspace_loc}/library.target/hibernate" type="Directory"/>
+        <location path="${workspace_loc}/library.target/dependencies" type="Directory"/>
+        <location path="${workspace_loc}/library.target/hsqldb" type="Directory"/>
+    </locations>
+</target></p></li>
+<li><p> Open the target definition in the Target Definition Editor and click on the <em>Set as Target Platform</em> hyperlink in the upper right area. This will activate the target definition. All contained bundles are now available and can be referenced as dependencies.</p></li>
 </ol>
 
 
@@ -225,28 +221,18 @@ save in folder</p>
 The data model will be based on the <a href="http://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.emf.doc/references/overview/EMF.html">well-known library tutorial</a> that ships with EMF. If you are interested in a more in-depth look, I recommend taking this tutorial. However, to shortcut things, here is the ultra-slim version of the EMF-Tutorial:</p>
 
 <ol>
-<li><p>Download the Rose class model and save it on your computer</p></li>
-<li><p>Create a new EMF project (File -> New -> Other&#8230; -> Eclipse Modeling Framework -> EMF Project)</p></li>
-</ol>
+<li><p> Download the Rose class model and save it on your computer</p></li>
+<li><p> Create a new EMF project (File &ndash;> New &ndash;> Other&hellip; &ndash;> Eclipse Modeling Framework &ndash;> EMF Project)</p>
 
-
-<pre><code>* Project name: library
-
-
-* Model importer: Rose class model
-
-
-* Browse to the Rose class model _library.mdl_ mentioned before
-
-
-* Click on Load to load the model
-
-
-* Click Next, then Finish
-</code></pre>
-
-<ol>
-<li>In the library.genmodel editor, right-click on the Library node and select Generate Model Code</li>
+<ul>
+<li><p>Project name: library</p></li>
+<li><p>Model importer: Rose class model</p></li>
+<li><p>Browse to the Rose class model <em>library.mdl</em> mentioned before</p></li>
+<li><p>Click on Load to load the model</p></li>
+<li><p>Click Next, then Finish</p></li>
+</ul>
+</li>
+<li><p> In the library.genmodel editor, right-click on the Library node and select Generate Model Code</p></li>
 </ol>
 
 
@@ -254,161 +240,132 @@ The data model will be based on the <a href="http://help.eclipse.org/ganymede/in
 In order to demonstrate how to use the data model and how to perform CRUD operations with your data, we will create a simple Java class. In the good spirit of encapsulation and components, we will create a new plug-in project to host this class:</p>
 
 <ol>
-<li><p>Create a new Plug-in project library.main (File -> New -> Project&#8230; -> Plug-in Project)</p></li>
-<li><p>Open the manifest and add the following dependencies:</p></li>
-</ol>
+<li><p> Create a new Plug-in project library.main (File &ndash;> New &ndash;> Project&hellip; &ndash;> Plug-in Project)</p></li>
+<li><p> Open the manifest and add the following dependencies:</p>
 
+<ul>
+<li><p><em>library</em> (this is the bundle which contains our data model)</p></li>
+<li><p><em>org.eclipse.emf.teneo.hibernate</em></p></li>
+<li><p><em>org.eclipse.emf.ecore.xmi</em></p></li>
+<li><p><em>com.springsource.org.hibernate</em></p></li>
+<li><p><em>com.springsource.org.apache.commons.logging</em></p></li>
+<li><p><em>com.springsource.org.dom4j</em></p></li>
+<li><p><em>com.springsource.org.apache.commons.collections</em></p></li>
+<li><p><em>com.springsource.javax.transaction</em></p></li>
+<li><p><em>com.springsource.antlr</em></p></li>
+<li><p><em>com.springsource.org.hsqldb</em></p></li>
+</ul>
+</li>
+<li><p> Create a new Hibernate configuration file <em>hibernate.properties</em> in <em>library.main/src</em> and paste the following lines:</p>
 
-<pre><code>* _library_ (this is the bundle which contains our data model)
+<p>hibernate.connection.driver_class=org.hsqldb.jdbcDriver</p>
 
+<h1>use the following line to run the embedded db:</h1>
 
-* _org.eclipse.emf.teneo.hibernate_
+<h1>hibernate.connection.url=jdbc:hsqldb:file:/some/path/on/your/computer/dbname</h1>
 
+<h1>the following line will connect to a standalone (local) DB server:</h1>
 
-* _org.eclipse.emf.ecore.xmi_
-
-
-* _com.springsource.org.hibernate_
-
-
-* _com.springsource.org.apache.commons.logging_
-
-
-* _com.springsource.org.dom4j_
-
-
-* _com.springsource.org.apache.commons.collections_
-
-
-* _com.springsource.javax.transaction_
-
-
-* _com.springsource.antlr_
-
-
-* _com.springsource.org.hsqldb_
-</code></pre>
-
-<ol>
-<li>Create a new Hibernate configuration file <em>hibernate.properties</em> in <em>library.main/src</em> and paste the following lines:</li>
-</ol>
-
-
-<pre><code>hibernate.connection.driver_class=org.hsqldb.jdbcDriver
-# use the following line to run the embedded db:
-# hibernate.connection.url=jdbc:hsqldb:file:/some/path/on/your/computer/dbname
-# the following line will connect to a standalone (local) DB server:
-hibernate.connection.url=jdbc:hsqldb:hsql://127.0.0.1/library
+<p>hibernate.connection.url=jdbc:hsqldb:hsql://127.0.0.1/library
 hibernate.connection.username=sa
 hibernate.connection.password=
 hibernate.dialect=org.hibernate.dialect.HSQLDialect
-hibernate.hbm2ddl.auto=true
-</code></pre>
+hibernate.hbm2ddl.auto=true</p></li>
+</ol>
+
 
 <p><strong>Implement the library main application</strong>
-With all the boilerplate in place, we&#8217;re finally ready to write some code. We will create a new class and add some code to create an author and his book and store both in a library.</p>
+With all the boilerplate in place, we&rsquo;re finally ready to write some code. We will create a new class and add some code to create an author and his book and store both in a library.</p>
 
 <ol>
-<li><p>Create a new class LibraryDemo, making sure it has a main method</p></li>
-<li><p>In order to use Teneo to persist our data, we first need to create a datastore and register our model package with it:</p>
+<li><p> Create a new class LibraryDemo, making sure it has a main method</p></li>
+<li><p> In order to use Teneo to persist our data, we first need to create a datastore and register our model package with it:</p>
 
-<p>   // create the data store
-   String dataStoreName = &#8220;LibraryDataStore&#8221;;
-   HbDataStore dataStore = HbHelper.INSTANCE.createRegisterDataStore(dataStoreName);</p>
+<pre><code>// create the data store
+String dataStoreName = "LibraryDataStore";
+HbDataStore dataStore = HbHelper.INSTANCE.createRegisterDataStore(dataStoreName);
 
-<p>   // register the model package with the data store
-   dataStore.setEPackages(new EPackage[] { LibraryPackage.eINSTANCE });</p>
+// register the model package with the data store
+dataStore.setEPackages(new EPackage[] { LibraryPackage.eINSTANCE });
 
-<p>   // initialize the data store, which creates the tables
-   dataStore.initialize();</p></li>
-<li><p>Next, we need to get hold of a session factory and request a new session form it:</p>
-
-<p>   SessionFactory sessionFactory = dataStore.getSessionFactory();
-   {</p>
-
-<pre><code>   Session session = sessionFactory.openSession();
-   session.beginTransaction();
+// initialize the data store, which creates the tables
+dataStore.initialize();
 </code></pre></li>
-<li><p>Now, let&#8217;s create a new library and save it to the session:</p>
+<li><p> Next, we need to get hold of a session factory and request a new session form it:</p>
 
-<pre><code>   // create a library
-   Library library = LibraryFactory.eINSTANCE.createLibrary();
-   library.setName("Developer's bookshelf");
-
-   // store the library
-   session.save(library);
+<pre><code>SessionFactory sessionFactory = dataStore.getSessionFactory();
+{
+    Session session = sessionFactory.openSession();
+    session.beginTransaction();
 </code></pre></li>
-<li><p>In the following part, we will create an author and his book, link them to each other and add them to the library. There is no specific Teneo aspect to this part of the code, it is just straightforward usage of the API EMF generated for your datamodel:</p>
+<li><p> Now, let&rsquo;s create a new library and save it to the session:</p>
 
-<pre><code>   // create an author
-   Writer writer = LibraryFactory.eINSTANCE.createWriter();
-   writer.setName("A. K. Dewdney");
+<pre><code>    // create a library
+    Library library = LibraryFactory.eINSTANCE.createLibrary();
+    library.setName("Developer's bookshelf");
 
-   // create a book
-   Book book = LibraryFactory.eINSTANCE.createBook();
-   book.setTitle("The New Turing Omnibus");
-   book.setPages(480);
-   book.setCategory(BookCategory.MYSTERY); // oh well, let's hope it's not mystery to most readers!
-   book.setAuthor(writer);
-
-   // add book and writer to library
-   library.getBooks().add(book);
-   library.getWriters().add(writer);
+    // store the library
+    session.save(library);
 </code></pre></li>
-<li><p>Finally, we need to commit our changes to the database and close the session:</p>
+<li><p> In the following part, we will create an author and his book, link them to each other and add them to the library. There is no specific Teneo aspect to this part of the code, it is just straightforward usage of the API EMF generated for your datamodel:</p>
 
-<pre><code>   // commit changes to the database and close the session
-   session.getTransaction().commit();
-   session.close();
-</code></pre>
+<pre><code>    // create an author
+    Writer writer = LibraryFactory.eINSTANCE.createWriter();
+    writer.setName("A. K. Dewdney");
 
-<p>   }</p></li>
+    // create a book
+    Book book = LibraryFactory.eINSTANCE.createBook();
+    book.setTitle("The New Turing Omnibus");
+    book.setPages(480);
+    book.setCategory(BookCategory.MYSTERY); // oh well, let's hope it's not mystery to most readers!
+    book.setAuthor(writer);
+
+    // add book and writer to library
+    library.getBooks().add(book);
+    library.getWriters().add(writer);
+</code></pre></li>
+<li><p> Finally, we need to commit our changes to the database and close the session:</p>
+
+<pre><code>    // commit changes to the database and close the session
+    session.getTransaction().commit();
+    session.close();
+}
+</code></pre></li>
 </ol>
 
 
 <p><strong>Start the DB server and run the application</strong></p>
 
 <ol>
-<li><p>Open a command line and navigate to the directory that contains <em>hsqldb.jar</em></p></li>
-<li><p>Start the HSQLDB server using this command line:</p></li>
-</ol>
+<li><p> Open a command line and navigate to the directory that contains <em>hsqldb.jar</em></p></li>
+<li><p> Start the HSQLDB server using this command line:</p>
 
+<p>java -cp com.springsource.org.hsqldb-1.8.0.9.jar org.hsqldb.Server -database.0 file:library -dbname.0 library</p></li>
+<li><p> Finally (!) go back to Eclipse and start <em>LibraryDemo</em>. You should get an output similar to this one:</p>
 
-<pre><code>java -cp com.springsource.org.hsqldb-1.8.0.9.jar org.hsqldb.Server -database.0 file:library -dbname.0 library
-</code></pre>
-
-<ol>
-<li>Finally (!) go back to Eclipse and start <em>LibraryDemo</em>. You should get an output similar to this one:</li>
-</ol>
-
-
-<pre><code>Mar 6, 2009 1:50:26 PM org.eclipse.emf.teneo.hibernate.HbHelper createRegisterDataStore
+<p>Mar 6, 2009 1:50:26 PM org.eclipse.emf.teneo.hibernate.HbHelper createRegisterDataStore
 INFO: Creating emf data store and registering it under name: LibraryDataStore
-...
+&hellip;
 Mar 6, 2009 1:50:28 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
-INFO: schema update complete
-</code></pre>
+INFO: schema update complete</p></li>
+<li><p> To actually see the data stored in the database, navigate to the directory containing the database and open <em>library.log</em>:</p>
 
-<ol>
-<li>To actually see the data stored in the database, navigate to the directory containing the database and open <em>library.log</em>:</li>
+<p>CREATE USER SA PASSWORD &ldquo;&rdquo; ADMIN
+/<em>C1</em>/SET SCHEMA PUBLIC
+CONNECT USER SA
+&hellip;
+INSERT INTO &ldquo;library&rdquo; VALUES(1,&lsquo;Library&rsquo;,0,&lsquo;Developer&rsquo;&rsquo;s bookshelf&#8217;)
+INSERT INTO &ldquo;writer&rdquo; VALUES(1,&lsquo;Writer&rsquo;,0,&lsquo;A. K. Dewdney&rsquo;,NULL,NULL,&lsquo;Library&rsquo;,&lsquo;1&rsquo;,-2)
+INSERT INTO &ldquo;book&rdquo; VALUES(1,&lsquo;Book&rsquo;,0,&lsquo;The New Turing Omnibus&rsquo;,480,&lsquo;Mystery&rsquo;,1,NULL,NULL,&lsquo;Library&rsquo;,&lsquo;1&rsquo;,-3)
+DELETE FROM &ldquo;writer&rdquo; WHERE E_ID=1
+INSERT INTO &ldquo;writer&rdquo; VALUES(1,&lsquo;Writer&rsquo;,0,&lsquo;A. K. Dewdney&rsquo;,1,0,&lsquo;Library&rsquo;,&lsquo;1&rsquo;,-2)
+DELETE FROM &ldquo;book&rdquo; WHERE E_ID=1
+INSERT INTO &ldquo;book&rdquo; VALUES(1,&lsquo;Book&rsquo;,0,&lsquo;The New Turing Omnibus&rsquo;,480,&lsquo;Mystery&rsquo;,1,1,0,&lsquo;Library&rsquo;,&lsquo;1&rsquo;,-3)
+INSERT INTO &ldquo;writer_books&rdquo; VALUES(1,1,0)
+COMMIT
+DISCONNECT</p></li>
 </ol>
 
-
-<pre><code>CREATE USER SA PASSWORD "" ADMIN
-/*C1*/SET SCHEMA PUBLIC
-CONNECT USER SA
-...
-INSERT INTO "library" VALUES(1,'Library',0,'Developer''s bookshelf')
-INSERT INTO "writer" VALUES(1,'Writer',0,'A. K. Dewdney',NULL,NULL,'Library','1',-2)
-INSERT INTO "book" VALUES(1,'Book',0,'The New Turing Omnibus',480,'Mystery',1,NULL,NULL,'Library','1',-3)
-DELETE FROM "writer" WHERE E_ID=1
-INSERT INTO "writer" VALUES(1,'Writer',0,'A. K. Dewdney',1,0,'Library','1',-2)
-DELETE FROM "book" WHERE E_ID=1
-INSERT INTO "book" VALUES(1,'Book',0,'The New Turing Omnibus',480,'Mystery',1,1,0,'Library','1',-3)
-INSERT INTO "writer_books" VALUES(1,1,0)
-COMMIT
-DISCONNECT
-</code></pre>
 
 <p>In the next installment, I will show you how to retrieve objects from the database and query the database using Hibernate Query Language (HQL).</p>
 
@@ -497,7 +454,7 @@ If you are interested in the source for the solution so far, you can [drain file
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -573,9 +530,9 @@ If you are interested in the source for the solution so far, you can [drain file
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -584,8 +541,6 @@ If you are interested in the source for the solution so far, you can [drain file
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

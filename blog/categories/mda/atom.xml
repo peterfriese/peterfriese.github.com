@@ -4,7 +4,7 @@
   <title><![CDATA[Category: MDA | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/mda/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -22,7 +22,7 @@
 
 <p>But Microsoft does not just talk about modeling, they also put their money where their mouth is: during the last few years, a number of people including <a href="http://blogs.msdn.com/stevecook/">Steve</a> <a href="http://www.domainspecificdevelopment.com/Bios/SteveCook.aspx">Cook</a> and <a href="http://blogs.msdn.com/stuart_kent/">Stuart</a> <a href="http://www.domainspecificdevelopment.com/Bios/StuartKent.aspx">Kent</a> have been working on a toolchain which first has seen the light of day under the somewhat cryptic name <a href="http://msdn.microsoft.com/en-us/vsx/cc677256.aspx">VSX DSL Tools</a>.</p>
 
-<p>VSXDSL Tools are really good at rapidly creating (simple) graphical modeling tools. However, when it came to model transformations and code generation, you were stuck with a somewhat dated technology called <a href="http://msdn.microsoft.com/en-us/library/bb126445.aspx">T4 (Text Templating Transformation Toolkit)</a> - a template language quite similar to JSP and ASP. <a href="http://www.olegsych.com/2007/12/text-template-transformation-toolkit/">T4</a> seriously lacks some important features, like polymorphic dispatch, support for multiple file output and - believe it or not - a decent editor. Well, you can get one from <a href="http://www.t4editor.net/">http://www.t4editor.net/</a>, but who likes to shell out 99 dollars for just an editor?</p>
+<p>VSXDSL Tools are really good at rapidly creating (simple) graphical modeling tools. However, when it came to model transformations and code generation, you were stuck with a somewhat dated technology called <a href="http://msdn.microsoft.com/en-us/library/bb126445.aspx">T4 (Text Templating Transformation Toolkit)</a> &ndash; a template language quite similar to JSP and ASP. <a href="http://www.olegsych.com/2007/12/text-template-transformation-toolkit/">T4</a> seriously lacks some important features, like polymorphic dispatch, support for multiple file output and &ndash; believe it or not &ndash; a decent editor. Well, you can get one from <a href="http://www.t4editor.net/">http://www.t4editor.net/</a>, but who likes to shell out 99 dollars for just an editor?</p>
 
 <p>Now, Microsoft seem to have listened to their users and are coming up with an updated and extended version of the DSL Tools, code-named Oslo.</p>
 
@@ -37,9 +37,9 @@
 
 <p>At <a href="http://www.microsoftpdc.com/">PDC 2008</a>, the team will reveal Oslo and all its nice features.</p>
 
-<p>Although I am an <a href="http://www.eclipse.org/pde/pde-ui/committers/committers.php#contributors">Eclipse fan</a> and an <a href="http://www.openarchitectureware.org/">openArchitectureWare</a> committer, I am quite thrilled so see Microsoft make this move to embrace modeling. In my opinion, this will advance MDSD and DSLs quite a deal. A lot of people who may have never heard of DSLs and MDSD will now get in touch with those techniques due to the sheer marketing power of Microsoft. This will also bring some nice competition to the market, which always is a Good Thing (tm).</p>
+<p>Although I am an <a href="http://www.eclipse.org/pde/pde-ui/committers/committers.php#contributors">Eclipse fan</a> and an <a href="http://www.openarchitectureware.org/">openArchitectureWare</a> committer, I am quite thrilled so see Microsoft make this move to embrace modeling. In my opinion, this will advance MDSD and DSLs quite a deal. A lot of people who may have never heard of DSLs and MDSD will now get in touch with those techniques due to the sheer marketing power of Microsoft. This will also bring some nice competition to the market, which always is a Good Thing &trade;.</p>
 
-<p>The <a href="http://www.microsoft.com/presspass/press/2008/sep08/09-10OMGModelingPR.mspx">press release</a> <a href="http://blogs.msdn.com/architectsrule/archive/2008/09/10/microsoft-joins-omg.aspx">states that</a> "to make model-driven development a reality, Microsoft is focused on providing a model-driven platform and visual modeling tools [...]"  - So, welcome to the modeling world, Microsoft!</p>
+<p>The <a href="http://www.microsoft.com/presspass/press/2008/sep08/09-10OMGModelingPR.mspx">press release</a> <a href="http://blogs.msdn.com/architectsrule/archive/2008/09/10/microsoft-joins-omg.aspx">states that</a> &ldquo;to make model-driven development a reality, Microsoft is focused on providing a model-driven platform and visual modeling tools [&hellip;]&rdquo;  &ndash; So, welcome to the modeling world, Microsoft!</p>
 ]]></content>
   </entry>
   
@@ -48,37 +48,37 @@
     <link href="http://www.peterfriese.de/some-thoughts-on-the-merits-of-model-driven-software-development/"/>
     <updated>2008-08-05T14:13:21+01:00</updated>
     <id>http://www.peterfriese.de/some-thoughts-on-the-merits-of-model-driven-software-development</id>
-    <content type="html"><![CDATA[<p>Scanning my RSS feeds today, I came across <a href="http://katastrophos.net/magnus/blog/2008/08/03/is-model-driven-development-faster/">this</a> post by Magnus Jungsbluth in which he deals with the question "Is Model Driven Development Faster?".  As Magnus points out, the question whether you can be faster by using model driven development points in a wrong direction. Just being faster is not a major goal of model driven development. It's the quality that counts. Model driven development helps you to concentrate on the relevant parts of your software (i.e. the business logic) instead of having to care too much about the architectural plumbing around the business logic. Yes, using a code generator saves you some time. Precious time you will be able to invest into other parts of the software you build. This will amount to a higher quality of your software.  Magnus mentions some more prejudices people have towards model driven software development. Here are a few:</p>
+    <content type="html"><![CDATA[<p>Scanning my RSS feeds today, I came across <a href="http://katastrophos.net/magnus/blog/2008/08/03/is-model-driven-development-faster/">this</a> post by Magnus Jungsbluth in which he deals with the question &ldquo;Is Model Driven Development Faster?&rdquo;.  As Magnus points out, the question whether you can be faster by using model driven development points in a wrong direction. Just being faster is not a major goal of model driven development. It&rsquo;s the quality that counts. Model driven development helps you to concentrate on the relevant parts of your software (i.e. the business logic) instead of having to care too much about the architectural plumbing around the business logic. Yes, using a code generator saves you some time. Precious time you will be able to invest into other parts of the software you build. This will amount to a higher quality of your software.  Magnus mentions some more prejudices people have towards model driven software development. Here are a few:</p>
 
-<h4>"Higher level of abstraction = more complicated"</h4>
+<h4>&ldquo;Higher level of abstraction = more complicated&rdquo;</h4>
 
-<p>Now, this is plain wrong. Model driven approaches do not aim at making things more complicated. They aim at making things simpler and easier to achieve. This is what we mean by "raising the level of abstraction". I guess it's the word "abstract" which makes most people think things become more complicated.  <a href="http://en.wikipedia.org/wiki/Abstraction">Wikipedia states that</a> "<em><strong>Abstraction</strong> is the process or result of generalization by <strong>reducing the information content</strong> of a concept or an observable phenomenon, typically in order to <strong>retain only information which is relevant</strong> for a particular purpose.</em>" This definition makes clear that abstraction helps to <em>simplify</em> things in order to concentrate on only the relevant parts.</p>
+<p>Now, this is plain wrong. Model driven approaches do not aim at making things more complicated. They aim at making things simpler and easier to achieve. This is what we mean by &ldquo;raising the level of abstraction&rdquo;. I guess it&rsquo;s the word &ldquo;abstract&rdquo; which makes most people think things become more complicated.  <a href="http://en.wikipedia.org/wiki/Abstraction">Wikipedia states that</a> &ldquo;<em><strong>Abstraction</strong> is the process or result of generalization by <strong>reducing the information content</strong> of a concept or an observable phenomenon, typically in order to <strong>retain only information which is relevant</strong> for a particular purpose.</em>&rdquo; This definition makes clear that abstraction helps to <em>simplify</em> things in order to concentrate on only the relevant parts.</p>
 
-<p>Consider a subway map: it is an abstraction of a geographical map, leaving out all the superfluous information, just retaining what is needed to find your way in the underground. The subway map is a <strong>domain specific</strong> map, explicitly aimed at a special purpose. If you need to find your way by car, you'd need a different kind of map.</p>
+<p>Consider a subway map: it is an abstraction of a geographical map, leaving out all the superfluous information, just retaining what is needed to find your way in the underground. The subway map is a <strong>domain specific</strong> map, explicitly aimed at a special purpose. If you need to find your way by car, you&rsquo;d need a different kind of map.</p>
 
 <p><a href="http://www.peterfriese.de/wp-content/subway.png"><img src="http://www.peterfriese.de/wp-content/subway.png" alt="Subway map" /></a></p>
 
-<p>Abstraction in the context of model driven software development means to leave out the superfluous details and concentrate on the relevant parts. Let me give you an example: If you are writing  a software for your HR department, you really shouldn't need to care about writing getters and setters and how exactly to write that m:n relationship mapping in hibernate. Instead, you should concentrate on the names and types of the attributes and the fact that a certain relationship indeed is an m:n relationship.</p>
+<p>Abstraction in the context of model driven software development means to leave out the superfluous details and concentrate on the relevant parts. Let me give you an example: If you are writing  a software for your HR department, you really shouldn&rsquo;t need to care about writing getters and setters and how exactly to write that m:n relationship mapping in hibernate. Instead, you should concentrate on the names and types of the attributes and the fact that a certain relationship indeed is an m:n relationship.</p>
 
-<h4>"MDSD / DSLs enable business users to write software"</h4>
+<h4>&ldquo;MDSD / DSLs enable business users to write software&rdquo;</h4>
 
-<p>... do business users (i.e. the people who are going to be using your software) want to write software on their own at all? I don't think so. Modern business live is organized by division of labour, which is a good thing because it allows us to do the things we're good at and specialize ourselves.</p>
+<p>&hellip; do business users (i.e. the people who are going to be using your software) want to write software on their own at all? I don&rsquo;t think so. Modern business live is organized by division of labour, which is a good thing because it allows us to do the things we&rsquo;re good at and specialize ourselves.</p>
 
-<p>Although I don't think business users should programm their own software using MDSD or DSLs, I believe that using MDSD and DSLs will help to bridge the gap between developers and business users. Much is gained if a developer and a business user can look at a graphical or textual model and discuss the business requirements in  language both understand. It is the task of software architects to ensure that the models being used can be written in this very domain specific language.</p>
+<p>Although I don&rsquo;t think business users should programm their own software using MDSD or DSLs, I believe that using MDSD and DSLs will help to bridge the gap between developers and business users. Much is gained if a developer and a business user can look at a graphical or textual model and discuss the business requirements in  language both understand. It is the task of software architects to ensure that the models being used can be written in this very domain specific language.</p>
 
-<p>Oh, and please resist the temptation to provide a graphical language that tries to mirror a textual DSL one-to-one. Graphical syntaxes and textual syntaxes are very different. Things that can very easily be expressed in a graphical language  might look very awkward when mapped to a textual language and vice versa. Don't get me wrong - there's nothing evil about using different concrete syntaxes to provide views on one common / shared model. However, graphical languages are better suited to provide an overview of a system or module, whereas textual languages are better suited to flesh out the details.</p>
+<p>Oh, and please resist the temptation to provide a graphical language that tries to mirror a textual DSL one-to-one. Graphical syntaxes and textual syntaxes are very different. Things that can very easily be expressed in a graphical language  might look very awkward when mapped to a textual language and vice versa. Don&rsquo;t get me wrong &ndash; there&rsquo;s nothing evil about using different concrete syntaxes to provide views on one common / shared model. However, graphical languages are better suited to provide an overview of a system or module, whereas textual languages are better suited to flesh out the details.</p>
 
-<h4>"Versioning is tough, DSLs do not support versioning"</h4>
+<h4>&ldquo;Versioning is tough, DSLs do not support versioning&rdquo;</h4>
 
 <p>While it certainly is true that traditional UML tools are not that well suited for collaborative work (much due to the fact that most tools store their models either in a proprietary format or in monster XMI files), this is not true for external textual DSLs.</p>
 
-<p>When using a textual external DSL, your model is plain text. Thus, your models can now be very easily stored in a version control system such as Subversion or CVS. And of course they can be diffed and merged. Using textual DSLs feels very "natural" to programmers after all.</p>
+<p>When using a textual external DSL, your model is plain text. Thus, your models can now be very easily stored in a version control system such as Subversion or CVS. And of course they can be diffed and merged. Using textual DSLs feels very &ldquo;natural&rdquo; to programmers after all.</p>
 
 <h4>Conclusion</h4>
 
 <p>So, to sum up: model driven development is neither some kind of obscure art which takes you years to learn and understand. Nor does it make things more complicated. It aims at aking your life easier. It does not neccesarily <em>save</em> you time, but it will help you to better <em>use</em> your time to build better software. One of the reasons your software will be better than before is that your business users will be able to discuss with you using a language you both understand.</p>
 
-<p>That's what model driven software development is about.</p>
+<p>That&rsquo;s what model driven software development is about.</p>
 ]]></content>
   </entry>
   
@@ -87,16 +87,16 @@
     <link href="http://www.peterfriese.de/call-for-papers-participation-mdsd-today-08/"/>
     <updated>2008-07-22T12:48:23+01:00</updated>
     <id>http://www.peterfriese.de/call-for-papers-participation-mdsd-today-08</id>
-    <content type="html"><![CDATA[<p>From October 15th - 17th, the second workshop on model driven software development "MDSD Today" will take place in Elmshorn near Hamburg, Germany.</p>
+    <content type="html"><![CDATA[<p>From October 15th &ndash; 17th, the second workshop on model driven software development &ldquo;MDSD Today&rdquo; will take place in Elmshorn near Hamburg, Germany.</p>
 
 <p>The goal of this conference is to provide a platform for professionals (managers, architects and engineers alike) in the field of model driven software development to meet and exchange ideas.</p>
 
 <p>The three day will be organized into the following major blocks:</p>
 
 <ol>
-<li><p>Management Day</p></li>
-<li><p>Research Papers and Industrial Reports</p></li>
-<li><p>MDSD Tutorials</p></li>
+<li><p> Management Day</p></li>
+<li><p> Research Papers and Industrial Reports</p></li>
+<li><p> MDSD Tutorials</p></li>
 </ol>
 
 
@@ -106,7 +106,7 @@
 
 <p>If you use model driven software development in your daily work, please consider giving a presentation.</p>
 
-<p>If you do not use MDSD and would like to hear about other's experiences, you should consider participating in the conference and take the chance to attend the MDSD tutorials. At EUR 350 for three days, that's a real bargain.</p>
+<p>If you do not use MDSD and would like to hear about other&rsquo;s experiences, you should consider participating in the conference and take the chance to attend the MDSD tutorials. At EUR 350 for three days, that&rsquo;s a real bargain.</p>
 
 <p>The CfPs and more information on the conference can be found <a href="http://mdsd08.techjava.de/index.php?lang=en">here</a> (english) and <a href="http://mdsd08.techjava.de/index.php?lang=de">here</a> (german).</p>
 
@@ -119,7 +119,7 @@
     <link href="http://www.peterfriese.de/how-to-distinguish-generated-code-from-non-generated-code/"/>
     <updated>2008-06-28T00:18:55+01:00</updated>
     <id>http://www.peterfriese.de/how-to-distinguish-generated-code-from-non-generated-code</id>
-    <content type="html"><![CDATA[<p>It is a well-known fact that for most real-life applications, you canot use full code generation - some bits have to implemented in the source, not in the model. I sometimes find it funny to hear us software developers talk about business <em>logic</em>. If the business logic really would be logical in a mathematical sense, we'd be able to do full code generation. Alas, it is not, thus we are required to write some source code.</p>
+    <content type="html"><![CDATA[<p>It is a well-known fact that for most real-life applications, you canot use full code generation &ndash; some bits have to implemented in the source, not in the model. I sometimes find it funny to hear us software developers talk about business <em>logic</em>. If the business logic really would be logical in a mathematical sense, we&rsquo;d be able to do full code generation. Alas, it is not, thus we are required to write some source code.</p>
 
 <p>Over the last years, quite a number of patterns have evolved for integrating generated and non-generated code. Some of them are protected regions, generation gap, recipe frameworks, particial classes and annotated models.</p>
 
@@ -134,14 +134,14 @@ If you use the generation gap pattern (illustrated below), you should set aside 
 
 <p><a href="http://www.peterfriese.de/wp-content/generation_gap.png"><img src="http://www.peterfriese.de/wp-content/generation_gap-300x176.png" alt="The Generation Gap Pattern" /></a></p>
 
-<p>Since all generated code is generated by your code generator, there is no need to check in generated code. You only have to version your model and the manually crafted code. To ensure developers do not accidentally check in generated code, you should add the src-gen directory to your <em>.cvsignore</em> (or <em>.svnignore</em>) file. Having the ignore file, you can now turn on Eclipse color decorators, which is the corner stone of this tip. Here's how:</p>
+<p>Since all generated code is generated by your code generator, there is no need to check in generated code. You only have to version your model and the manually crafted code. To ensure developers do not accidentally check in generated code, you should add the src-gen directory to your <em>.cvsignore</em> (or <em>.svnignore</em>) file. Having the ignore file, you can now turn on Eclipse color decorators, which is the corner stone of this tip. Here&rsquo;s how:</p>
 
 <ol>
-<li><p>Open the preference dialog (<em>Window > Preferences</em>)</p></li>
-<li><p>Navigate to <em>Team > CVS > Label Decorations</em></p></li>
-<li><p>Tick the <em>Enable font and color decorations</em> checkmark</p></li>
-<li><p>Navigate to <em>General > Appearance > Colors and Fonts</em> by clicking on the <em>Colors and Fonts</em> hyperlink below the check box</p></li>
-<li><p>In this dialog, change the color for <em>Ignored Resource (Foreground)</em> to silver or light gray</p></li>
+<li><p> Open the preference dialog (<em>Window > Preferences</em>)</p></li>
+<li><p> Navigate to <em>Team > CVS > Label Decorations</em></p></li>
+<li><p> Tick the <em>Enable font and color decorations</em> checkmark</p></li>
+<li><p> Navigate to <em>General > Appearance > Colors and Fonts</em> by clicking on the <em>Colors and Fonts</em> hyperlink below the check box</p></li>
+<li><p> In this dialog, change the color for <em>Ignored Resource (Foreground)</em> to silver or light gray</p></li>
 </ol>
 
 
@@ -149,7 +149,7 @@ If you use the generation gap pattern (illustrated below), you should set aside 
 <a href="http://www.peterfriese.de/wp-content/generated_code_decorated.png"><img src="http://www.peterfriese.de/wp-content/generated_code_decorated-300x173.png" alt="Decorating generated code files" /></a></p>
 
 <p><strong>Use MINT</strong>
-If you use protected regions, you need a way to decorate the parts in your code that won't be touched by the generator. The Eclipse Modeling Framework Technology project (EMFT) has a subcomponent which was written with this in mind - <a href="http://wiki.eclipse.org/Mint">MINT</a>.
+If you use protected regions, you need a way to decorate the parts in your code that won&rsquo;t be touched by the generator. The Eclipse Modeling Framework Technology project (EMFT) has a subcomponent which was written with this in mind &ndash; <a href="http://wiki.eclipse.org/Mint">MINT</a>.
 Using MINT, you can highlight the parts of the source code which have been changed by you:
 <a href="http://www.peterfriese.de/wp-content/emf-jdt-outline.png"><img src="http://www.peterfriese.de/wp-content/emf-jdt-outline-300x225.png" alt="Highlighting handcrafted code with MINT" /></a></p>
 ]]></content>

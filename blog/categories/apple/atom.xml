@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Apple | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/apple/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,24 +18,24 @@
     <link href="http://www.peterfriese.de/appropriate-use-of-mapkit/"/>
     <updated>2011-02-16T10:48:38+00:00</updated>
     <id>http://www.peterfriese.de/appropriate-use-of-mapkit</id>
-    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you're violating Google's terms of service, I was wondering what in particular was wrong.</p>
+    <content type="html"><![CDATA[<p>I just had an app rejected because of violation of the Google Maps terms of service. While it certainly is kind of funny Apple rejects an app because you&rsquo;re violating Google&rsquo;s terms of service, I was wondering what in particular was wrong.</p>
 
 <!-- more -->
 
 
-<p>At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google's terms of service for Maps</a>, but can you spot what is wrong?</p>
+<p>At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google&rsquo;s terms of service for Maps</a>, but can you spot what is wrong?</p>
 
 <p><ul class="gallery">
-<li><a href="/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png" class="fancybox" rel="gallery-b85ba1d38e1c89eca83ecb8ce17b14bc" title="Google Maps in your app - without Google Logo: you're doing it wrong!"><img src="/thumbs/maps_without_google_logo_240x300.png" alt="Google Maps in your app - without Google Logo: you're doing it wrong!" /></a></li>
+<li><a href="/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png" class="fancybox" rel="gallery-2541fd897745d40b916d6d0c64b0c4f5" title="Google Maps in your app &ndash; without Google Logo: you&rsquo;re doing it wrong!"><img src="/thumbs/maps_without_google_logo_240x300.png" alt="Google Maps in your app &ndash; without Google Logo: you&rsquo;re doing it wrong!" /></a></li>
 </ul></p>
 
-<p>Maybe you can better see what's wrong when I show you another screenshot, this time obeying the TOS:</p>
+<p>Maybe you can better see what&rsquo;s wrong when I show you another screenshot, this time obeying the TOS:</p>
 
 <p><ul class="gallery">
 <li><a href="/images/2011-02-16-appropriate-use-of-mapkit/maps_with_google_logo.png" class="fancybox" rel="gallery-8590c5cd892556ccc1df97f31d1c3e84" title="Google Maps with logo: well done!"><img src="/thumbs/maps_with_google_logo_240x300.png" alt="Google Maps with logo: well done!" /></a></li>
 </ul></p>
 
-<p>Can you spot the difference? It's the Google logo!</p>
+<p>Can you spot the difference? It&rsquo;s the Google logo!</p>
 
 <p>The reason why it is not shown in the first screenshot is that the bounds for the map are not set correctly. In the offending version of my app, I used a piece of code similar to this one:</p>
 
@@ -81,23 +81,23 @@
     <link href="http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market/"/>
     <updated>2011-02-10T10:38:26+00:00</updated>
     <id>http://www.peterfriese.de/three-reasons-why-i-think-the-hp-touchpad-will-rock-the-tablet-market</id>
-    <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn't the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
+    <content type="html"><![CDATA[<p>Yesterday, <a href="http://www.engadget.com/2011/02/09/hp-posts-complete-think-beyond-event-video/">HP introduced</a> the <a href="http://www.palm.com/us/products/pads/touchpad/index.html">Touchpad</a>, an <del>iPad-like</del> tablet device that is programmed with web technologies. While this certainly isn&rsquo;t the first attempt of a vendor to compete with Apple on the tablet market, I am convinced the TouchPad is a true challenger to the iPad. There are three reasons why the TouchPad might be a real contender: the programming environment, the manufacturing process and security.</p>
 
 <!-- more -->
 
 
-<p>HP is definitely doing something right. Never before has one single Tablet thrilled the interwebs as much as the TouchPad - except for the iPad, of course. Even <a href="http://scobleizer.com/2011/02/09/hp-makes-google-look-even-more-creaky/">die-hard Apple</a> fans are thrilled.</p>
+<p>HP is definitely doing something right. Never before has one single Tablet thrilled the interwebs as much as the TouchPad &ndash; except for the iPad, of course. Even <a href="http://scobleizer.com/2011/02/09/hp-makes-google-look-even-more-creaky/">die-hard Apple</a> fans are thrilled.</p>
 
-<p>Here's why I think HP's TouchPad will score a considerable market share:</p>
+<p>Here&rsquo;s why I think HP&rsquo;s TouchPad will score a considerable market share:</p>
 
 <ol>
-<li><p>It's programmed with web technologies like HTML, CSS and JavaScript. Don't get me wrong - the iPad can also be programmed with web technologies: when the iPhone was first released and no one but Apple was allowed to write native apps, Steve himself told everyone that "mobile web applications are the future". And despite the fact Apple has opened it's SDK and we can now program the iPad / iPhone in Objective-C, many developers are more interested in writing apps with web technologies. Tools like PhoneGap and Appcelerator try to alleviate this situation, basically allowing you to wrap web code in more or less tiny wrapper apps so your web apps can be submitted to the App Store. However, most apps written using web technologies do not feel the same as real native apps on the iOS platform. So why do I think the situation will be better on the TouchPad? Well, because the TouchPad has been built for running web-based apps! It has been optimized for it. Web apps look stunningly great on the TouchPad. Now, every web developer can download the webOS SDK and get started writing apps for the TouchPad. It's a safe bet to assume there are more web developers out there than Objective-C developers, so it shouldn't take long until we've got a similar amount of apps for the TouchPad as we've got for the iPad.</p></li>
+<li><p>It&rsquo;s programmed with web technologies like HTML, CSS and JavaScript. Don&rsquo;t get me wrong &ndash; the iPad can also be programmed with web technologies: when the iPhone was first released and no one but Apple was allowed to write native apps, Steve himself told everyone that &ldquo;mobile web applications are the future&rdquo;. And despite the fact Apple has opened it&rsquo;s SDK and we can now program the iPad / iPhone in Objective-C, many developers are more interested in writing apps with web technologies. Tools like PhoneGap and Appcelerator try to alleviate this situation, basically allowing you to wrap web code in more or less tiny wrapper apps so your web apps can be submitted to the App Store. However, most apps written using web technologies do not feel the same as real native apps on the iOS platform. So why do I think the situation will be better on the TouchPad? Well, because the TouchPad has been built for running web-based apps! It has been optimized for it. Web apps look stunningly great on the TouchPad. Now, every web developer can download the webOS SDK and get started writing apps for the TouchPad. It&rsquo;s a safe bet to assume there are more web developers out there than Objective-C developers, so it shouldn&rsquo;t take long until we&rsquo;ve got a similar amount of apps for the TouchPad as we&rsquo;ve got for the iPad.</p></li>
 <li><p>The manufacturing process. HP has a very powerful production pipeline, capable of pumping out high volumes of devices. In <a href="http://www.itchannelplanet.com/trends/article.php/3920936/Gartner-Global-PC-Shipments-Total-351-Million-Units-in-2010-Gain-138-Percent-US-Q4-PC-Market-Slides-Nearly-7-Percent.htm">Q4/2010, they shipped 17.6</a> million PCs (<a href="http://www.apple.com/pr/library/2011/01/18results.html">Apple sold 7.33 million iPads</a> in the same quarter). So if they are serious about it, it should be easy for HP to both produce and distribute high volumes of TouchPads.</p></li>
-<li><p>Security. When it comes to enterprise computing, security becomes a vital feature of your product. CIOs need to make sure to not compromise their company's security by introducing products and devices that have no proper support for security mechanisms. There have always been <a href="http://www.wired.com/gadgetlab/2009/07/iphone-encryption/">security concerns</a> with respect to the iOS platform: for a long time, there hasn't been a way to nuke a lost iOS device remotely. <a href="http://support.apple.com/kb/HT4175">It wasn't before iOS 4</a> that Apple introduced data protection APIs to secure data that apps store on the device. <a href="">WebOS has several security features built in</a> (not bolted on later) which make it rather attractive for enterprise computing right from the start.</p></li>
+<li><p>Security. When it comes to enterprise computing, security becomes a vital feature of your product. CIOs need to make sure to not compromise their company&rsquo;s security by introducing products and devices that have no proper support for security mechanisms. There have always been <a href="http://www.wired.com/gadgetlab/2009/07/iphone-encryption/">security concerns</a> with respect to the iOS platform: for a long time, there hasn&rsquo;t been a way to nuke a lost iOS device remotely. <a href="http://support.apple.com/kb/HT4175">It wasn&rsquo;t before iOS 4</a> that Apple introduced data protection APIs to secure data that apps store on the device. <a href="">WebOS has several security features built in</a> (not bolted on later) which make it rather attractive for enterprise computing right from the start.</p></li>
 </ol>
 
 
-<p>It's my firm belief that the release of the HP TouchPad is a milestone for the perception of personal computing in the long run. It looks great, we'll see tons of great apps for it in no time and HP as a major computer vendor has the power to push it to the market.</p>
+<p>It&rsquo;s my firm belief that the release of the HP TouchPad is a milestone for the perception of personal computing in the long run. It looks great, we&rsquo;ll see tons of great apps for it in no time and HP as a major computer vendor has the power to push it to the market.</p>
 
 <p>Good-bye, PC.</p>
 ]]></content>
@@ -108,29 +108,29 @@
     <link href="http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/"/>
     <updated>2010-11-01T11:45:02+00:00</updated>
     <id>http://www.peterfriese.de/updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010</id>
-    <content type="html"><![CDATA[<p>As I'm writing this, Eclipse Summit Europe 2010 is merely hours away and everyone is getting excited to get there and meet Eclipse family.</p>
+    <content type="html"><![CDATA[<p>As I&rsquo;m writing this, Eclipse Summit Europe 2010 is merely hours away and everyone is getting excited to get there and meet Eclipse family.</p>
 
 <p>I think the program committee have done a great job at putting together an exciting conference program with lots of technical sessions, interactive tutorials and inspiring keynotes.</p>
 
-<p>As a special treat for smart phone users, we're offering a conference schedule app for iPhone, Android and all other smart phones that come with a browser.</p>
+<p>As a special treat for smart phone users, we&rsquo;re offering a conference schedule app for iPhone, Android and all other smart phones that come with a browser.</p>
 
 <!-- more -->
 
 
-<p>Besides reviewing the <strong>conference schedule</strong> and getting to know the <strong>speakers</strong> you can use the apps to create your very <strong>own personal conference schedule</strong>. Usually, conference attendees will use the printed conference program to mark their favorite talks - and then leave their personalized copy of the program in their hotel room or elsewhere in the conference halls!</p>
+<p>Besides reviewing the <strong>conference schedule</strong> and getting to know the <strong>speakers</strong> you can use the apps to create your very <strong>own personal conference schedule</strong>. Usually, conference attendees will use the printed conference program to mark their favorite talks &ndash; and then leave their personalized copy of the program in their hotel room or elsewhere in the conference halls!</p>
 
-<p>This will probably not happen with the smart phone app, although I can recall somebody lost their iPhone at this year's EclipseCon...</p>
+<p>This will probably not happen with the smart phone app, although I can recall somebody lost their iPhone at this year&rsquo;s EclipseCon&hellip;</p>
 
-<p>Without further ado, here's a preview of the iPhone app in action:</p>
+<p>Without further ado, here&rsquo;s a preview of the iPhone app in action:</p>
 
 <p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/16367311 "></iframe></div></p>
 
-<p>You can download the <strong>iPhone app</strong> from the App Store. It is available world-wide and we already have a few downloads from Singapore, Korea and India! For your convenience, <a href="http://bit.ly/ese_app_intl">here's the link to the app</a>.</p>
+<p>You can download the <strong>iPhone app</strong> from the App Store. It is available world-wide and we already have a few downloads from Singapore, Korea and India! For your convenience, <a href="http://bit.ly/ese_app_intl">here&rsquo;s the link to the app</a>.</p>
 
-<p>We also prepared a version for <strong>Android</strong> users. Here's how it will look like on your Android device:
+<p>We also prepared a version for <strong>Android</strong> users. Here&rsquo;s how it will look like on your Android device:
 <a href="/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/ESE_Android.png" class="fancybox" title="ESE Android app"><img class="center" src="/thumbs/ESE_Android_151x300.png" alt="ESE Android app" /></a></p>
 
-<p>Head over to the Android Marketplace and search for "eclipse summit", or use your barcode scanner:</p>
+<p>Head over to the Android Marketplace and search for &ldquo;eclipse summit&rdquo;, or use your barcode scanner:</p>
 
 <p><a href="/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/1078516-1288452914800.png" class="fancybox" title="Android app barcode"><img class="center" src="/thumbs/1078516-1288452914800_164x164.png" alt="Android app barcode" /></a></p>
 
@@ -140,13 +140,13 @@
 
 <p><del>Rumor has it even BlackBerry users will get a native app.</del> <a href="http://ekkescorner.wordpress.com/2010/11/02/ese-app-for-blackberry/">Ekke</a> has created a native app for BlackBerry.</p>
 
-<p>Using these applications, you'll be able to put together <strong>your Eclipse Summit Europe 2010</strong> in no time. Enjoy!</p>
+<p>Using these applications, you&rsquo;ll be able to put together <strong>your Eclipse Summit Europe 2010</strong> in no time. Enjoy!</p>
 
 <p>The iPhone, Android and mobile web apps have been built by a dedicated team of software engineers at itemis I have the pleasure to work with. If you want to learn how we build applications like these, attend our sessions:</p>
 
 <ul>
-<li>Tuesday, 14:00 - <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1940">Mobile Development Symposium</a></li>
-<li>Thursday 10:30 - <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1733">Models To Go: How We Built a DSL for Mobile Apps With Tools From the Eclipse</a></li>
+<li>Tuesday, 14:00 &ndash; <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1940">Mobile Development Symposium</a></li>
+<li>Thursday 10:30 &ndash; <a href="http://www.eclipsecon.org/summiteurope2010/sessions/?page=sessions&amp;id=1733">Models To Go: How We Built a DSL for Mobile Apps With Tools From the Eclipse</a></li>
 </ul>
 
 
@@ -161,7 +161,7 @@
     <link href="http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again/"/>
     <updated>2010-09-19T21:15:30+01:00</updated>
     <id>http://www.peterfriese.de/apples-updated-developer-license-this-changes-everything-again</id>
-    <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement - a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
+    <content type="html"><![CDATA[<p>A few days ago, Apple made some small, but very important changes to the iOS Developer Program Agreement &ndash; a document which you must agree to before you can download the iOS SDK and start developing software for the iOS platform. These changes will drastically change the way we will build software for the iPhone, iPad and iPod and any other device that runs iOS.</p>
 
 <!-- more -->
 
@@ -170,43 +170,43 @@
 
 <blockquote><p>3.3.1 — Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs. Applications must be originally written in Objective-C, C, C++, or JavaScript as executed by the iPhone OS WebKit engine, and only code written in C, C++, and Objective-C may compile and directly link against the Documented APIs (e.g., Applications that link to Documented APIs through an intermediary translation or compatibility layer or tool are prohibited).</p></blockquote>
 
-<p>Back then, pretty much everyone was sure this update to section 3.3.1 of the license really was just one strike in <a href="http://www.apple.com/hotnews/thoughts-on-flash/">Apple's crusade against Flash</a>. Adobe had been working on a tool called <a href="http://labs.adobe.com/technologies/packagerforiphone/">Flash Packager</a>, which allows Flash designers to cross-compile their applications for the iPhone. While this must have been bad news for Adobe (they effectively needed to write off development costs for the entire development team working on Flash Packager), it posed a serious threat to companies whose business model relied upon creating iPhone apps using tools and languages other than Xcode and Objective-C. The future for Novell's <a href="http://monotouch.net/">Mono Touch</a>, <a href="http://www.appcelerator.com/">Appcelerator Titanium</a>, <a href="http://www.phonegap.com/">PhoneGap</a> and <a href="http://www.xmlvm.org/iphone/">XMLVM/iPhone</a> didn't look very bright.</p>
+<p>Back then, pretty much everyone was sure this update to section 3.3.1 of the license really was just one strike in <a href="http://www.apple.com/hotnews/thoughts-on-flash/">Apple&rsquo;s crusade against Flash</a>. Adobe had been working on a tool called <a href="http://labs.adobe.com/technologies/packagerforiphone/">Flash Packager</a>, which allows Flash designers to cross-compile their applications for the iPhone. While this must have been bad news for Adobe (they effectively needed to write off development costs for the entire development team working on Flash Packager), it posed a serious threat to companies whose business model relied upon creating iPhone apps using tools and languages other than Xcode and Objective-C. The future for Novell&rsquo;s <a href="http://monotouch.net/">Mono Touch</a>, <a href="http://www.appcelerator.com/">Appcelerator Titanium</a>, <a href="http://www.phonegap.com/">PhoneGap</a> and <a href="http://www.xmlvm.org/iphone/">XMLVM/iPhone</a> didn&rsquo;t look very bright.</p>
 
 <p>No need to say there was quite an uproar and people came up with all sorts of creative interpretations of the terms stated in section 3.3.1 to avoid being rejected from the App Store.</p>
 
-<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn't come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a>) does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
+<p>Of course, if a monopolist starts endangering other, dependent companies, this soon will call the Federal Trade Commission to action. It doesn&rsquo;t come that much of a surprise Apple published a new, very relaxed version of the iOS Developer Program Agreement just a few days ago. The new version (which is publicly available at <a href="http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf">http://developer.apple.com/programs/terms/ios/standard/ios_standard_agreement_20100909.pdf</a>) does not limit the programming languages you may use to create applications for the iOS platform any more. In particular, section 3.3.1 now reads:</p>
 
 <blockquote><p>3.3.1 Applications may only use Documented APIs in the manner prescribed by Apple and must not use or call any private APIs.</p></blockquote>
 
-<p>You might think that a small paragraph in a license agreement doesn't mean that much, but I think the new section will fundamentally change the way we write software for the iPhone in the next few years. Let me explain:</p>
+<p>You might think that a small paragraph in a license agreement doesn&rsquo;t mean that much, but I think the new section will fundamentally change the way we write software for the iPhone in the next few years. Let me explain:</p>
 
-<p>The new section 3.3.1 means you may write iOS software using any language you like. Yes, ANY language - there is no if and when. This means you will not only be able to write iOS software in Objective-C (which is a great language as soon as you come to grips with it), but you will be able to use language like Java, Scala, Haskell, Ruby, etc. Some people are <a href="http://twitter.com/mattgemmell/status/24014145904">even dreaming of using REALBasic</a> for iOS apps.</p>
+<p>The new section 3.3.1 means you may write iOS software using any language you like. Yes, ANY language &ndash; there is no if and when. This means you will not only be able to write iOS software in Objective-C (which is a great language as soon as you come to grips with it), but you will be able to use language like Java, Scala, Haskell, Ruby, etc. Some people are <a href="http://twitter.com/mattgemmell/status/24014145904">even dreaming of using REALBasic</a> for iOS apps.</p>
 
-<p>Vendors of tools such as Mono Touch, Titanium and PhoneGap will be glad, as their business models now have a solid foundation (well, Apple may of course change the license again but I doubt they'll ever restrict the usage of other languages again). Given the <a href="http://labs.adobe.com/technologies/packagerforiphone/">announcement on Adobe Labs</a>, I guess we will very soon see Adobe release their highly acclaimed Flash Packager for iPhone (I don't think people will seriously use this tool to create data-driven applications, but it's probably a great tool to develop games. If you're a Flash designer / developer, that is).</p>
+<p>Vendors of tools such as Mono Touch, Titanium and PhoneGap will be glad, as their business models now have a solid foundation (well, Apple may of course change the license again but I doubt they&rsquo;ll ever restrict the usage of other languages again). Given the <a href="http://labs.adobe.com/technologies/packagerforiphone/">announcement on Adobe Labs</a>, I guess we will very soon see Adobe release their highly acclaimed Flash Packager for iPhone (I don&rsquo;t think people will seriously use this tool to create data-driven applications, but it&rsquo;s probably a great tool to develop games. If you&rsquo;re a Flash designer / developer, that is).</p>
 
-<p>For the development community at large, this is great news: freedom to choose the language that fits your needs best has always been a cornerstone of successfully creating great software. People have expressed their desire to use languages such as Haskell and Ruby to build iPhone apps. Rumor has it Apple engineers have even been working on a version of MacRuby for iPhone - there you go.</p>
+<p>For the development community at large, this is great <a href="news:">news:</a> freedom to choose the language that fits your needs best has always been a cornerstone of successfully creating great software. People have expressed their desire to use languages such as Haskell and Ruby to build iPhone apps. Rumor has it Apple engineers have even been working on a version of MacRuby for iPhone &ndash; there you go.</p>
 
-<p>At <a href="http://www.itemis.com">itemis</a>, we're very much into programming languages. We're even building our own language development toolkit to support development of programming languages - <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we've mainly been using it to create languages for enterprise and web applications. We're also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself - isn't that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We're not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we're focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
+<p>At <a href="http://www.itemis.com">itemis</a>, we&rsquo;re very much into programming languages. We&rsquo;re even building our own language development toolkit to support development of programming languages &ndash; <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we&rsquo;ve mainly been using it to create languages for enterprise and web applications. We&rsquo;re also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself &ndash; isn&rsquo;t that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We&rsquo;re not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we&rsquo;re focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
 
 <p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/15018235 "></iframe></div></p>
 
-<p>If you're interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
+<p>If you&rsquo;re interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
 
 <p>In a few years, I guess, Objective-C will be just one language among many others you can choose from if you want to build iOS applications.</p>
 
 <p>But why would you want to write iOS applications in languages other than Objective-C? There are many reasons:</p>
 
 <ul>
-<li>Use the language you feel most comfortable with. Maybe Objective-C's square brackets look scary to you?</li>
-<li>Use the language you have most experience with. Maybe you're a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator "because we've got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C"!</li>
-<li>use the language you use for developing your backend system. So you've got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</li>
-<li>Maybe you're a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</li>
+<li>Use the language you feel most comfortable with. Maybe Objective-C&rsquo;s square brackets look scary to you?</li>
+<li>Use the language you have most experience with. Maybe you&rsquo;re a company and have a tight schedule. Writing your application using the language your developers have the most skills in helps you to meet your deadline. In fact, a friend just recently told me they used Appcelerator &ldquo;because we&rsquo;ve got JavaScript and HTML knowledge in-house, but none of our developers had experience with Objective-C&rdquo;!</li>
+<li>use the language you use for developing your backend system. So you&rsquo;ve got this huge backend system written C#, running on the .NT platform. Why not write all the front-end code in C# as well?</li>
+<li>Maybe you&rsquo;re a start-up in the social media realm and your website is written all in Ruby and Ruby on Rails. So why not write the iPhone app in Ruby as well?</li>
 </ul>
 
 
-<p>It all boils down to being more productive and ensuring better sustainability. Using the right tool for the job helps you to achieve a faster time to market. If you're able to use the same language on the frontend and the backend, this will help you to secure your investment in this technology.</p>
+<p>It all boils down to being more productive and ensuring better sustainability. Using the right tool for the job helps you to achieve a faster time to market. If you&rsquo;re able to use the same language on the frontend and the backend, this will help you to secure your investment in this technology.</p>
 
-<p>Please note that I'm not saying you should by all means write your frontend and your backend using the same technology and language. The first and foremost question you need to answer is, "what's the right tool for this job". Being able to make a real choice will help you to give a better answer to this question.</p>
+<p>Please note that I&rsquo;m not saying you should by all means write your frontend and your backend using the same technology and language. The first and foremost question you need to answer is, &ldquo;what&rsquo;s the right tool for this job&rdquo;. Being able to make a real choice will help you to give a better answer to this question.</p>
 ]]></content>
   </entry>
   
@@ -215,7 +215,7 @@
     <link href="http://www.peterfriese.de/why-your-next-app-should-be-open-sourced/"/>
     <updated>2010-09-06T14:15:17+01:00</updated>
     <id>http://www.peterfriese.de/why-your-next-app-should-be-open-sourced</id>
-    <content type="html"><![CDATA[<p>I've been doing all sorts of software development over the past few years, from closed-source in-house software for companies to closed-source product development to open-source frameworks and tools development to closed-source app development.</p>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been doing all sorts of software development over the past few years, from closed-source in-house software for companies to closed-source product development to open-source frameworks and tools development to closed-source app development.</p>
 
 <p>Looking back on my experience with the various drawbacks and benefits of each of those development modes, I hereby recommend your next app be open sourced.</p>
 
@@ -226,37 +226,37 @@
 
 <h3>Reasons pro Open Source</h3>
 
-<p>We all heard it before, "Open Source will make the world a better place" - but why? Well, let me give you a few reasons:</p>
+<p>We all heard it before, &ldquo;Open Source will make the world a better place&rdquo; &ndash; but why? Well, let me give you a few reasons:</p>
 
-<p><strong>First</strong>, by open sourcing your code, your code will become better. If everybody can see what your code looks like, you will do your best to make sure it's clean code. Jeff LaMarche calls this "<a href="http://iphonedevelopment.blogspot.com/2010/06/code-as-if.html">coding as if everybody is watching</a>". Clean code has less errors than quick-and-dirty code, so that's a good thing.</p>
+<p><strong>First</strong>, by open sourcing your code, your code will become better. If everybody can see what your code looks like, you will do your best to make sure it&rsquo;s clean code. Jeff LaMarche calls this &ldquo;<a href="http://iphonedevelopment.blogspot.com/2010/06/code-as-if.html">coding as if everybody is watching</a>&rdquo;. Clean code has less errors than quick-and-dirty code, so that&rsquo;s a good thing.</p>
 
-<p><strong>Enabling others to contribute</strong> will further improve your code. Should you decide to invite other developers to your project, you'll want to add some documentation to make it easier for them to get a jump start. Writing documentation will force you to think through your code and its overall structure. You might find you want to perform some refactorings before you actually let other developers work on your code. This will improve the quality of your code even more.</p>
+<p><strong>Enabling others to contribute</strong> will further improve your code. Should you decide to invite other developers to your project, you&rsquo;ll want to add some documentation to make it easier for them to get a jump start. Writing documentation will force you to think through your code and its overall structure. You might find you want to perform some refactorings before you actually let other developers work on your code. This will improve the quality of your code even more.</p>
 
-<p><strong>Enabling others to participate will make your app more attractive</strong>. Didn't you experience this before: the app you just downloaded is almost perfect - if it only had this one missing feature. For example, I really love <a href="http://www.tweetdeck.com/iphone/">TweetDeck for iPhone</a>, but I'm dearly missing an <a href="http://www.instapaper.com/">Instapaper</a> integration. If TweetDeck was open source, I would've added Instapaper integration to the code and submitted a patch to the creators of TweetDeck for the benefit of the entire user base. But unfortunately, TweetDeck is not open source - what a pity.</p>
+<p><strong>Enabling others to participate will make your app more attractive</strong>. Didn&rsquo;t you experience this before: the app you just downloaded is almost perfect &ndash; if it only had this one missing feature. For example, I really love <a href="http://www.tweetdeck.com/iphone/">TweetDeck for iPhone</a>, but I&rsquo;m dearly missing an <a href="http://www.instapaper.com/">Instapaper</a> integration. If TweetDeck was open source, I would&rsquo;ve added Instapaper integration to the code and submitted a patch to the creators of TweetDeck for the benefit of the entire user base. But unfortunately, TweetDeck is not open source &ndash; what a pity.</p>
 
-<p>By <strong>building a team of skilled people</strong>, you'll be able to deliver more features in a shorter amount of time than you can ever hope to achieve if you work alone. Successful open source projects are made up of a bunch of gifted individuals with diverse skills. This is even more important for mobile applications, as you not only have to develop the code that makes your app work. You also have to create a great looking UI, so might need a great designer. If you want to promote your app on a website, you might also consider teaming up with a web designer.</p>
+<p>By <strong>building a team of skilled people</strong>, you&rsquo;ll be able to deliver more features in a shorter amount of time than you can ever hope to achieve if you work alone. Successful open source projects are made up of a bunch of gifted individuals with diverse skills. This is even more important for mobile applications, as you not only have to develop the code that makes your app work. You also have to create a great looking UI, so might need a great designer. If you want to promote your app on a website, you might also consider teaming up with a web designer.</p>
 
-<p><strong>Speaking of contributions</strong>, you might be a bit hesitant to let other people work on your code. That's alright. Usually, contributors do not get commit rights right away. Instead, you ask them to contribute to the project by submitting patches via your bug tracker (you do use a bug tracker, don't you?). This enables you to review their code before actually committing it to the code base. If you're not satisfied, let them know (in a friendly way) what you would like them to improve. If a contributor delivers a number of great patches in a row, you can consider to promote him/her to be a committer.</p>
+<p><strong>Speaking of contributions</strong>, you might be a bit hesitant to let other people work on your code. That&rsquo;s alright. Usually, contributors do not get commit rights right away. Instead, you ask them to contribute to the project by submitting patches via your bug tracker (you do use a bug tracker, don&rsquo;t you?). This enables you to review their code before actually committing it to the code base. If you&rsquo;re not satisfied, let them know (in a friendly way) what you would like them to improve. If a contributor delivers a number of great patches in a row, you can consider to promote him/her to be a committer.</p>
 
 <h3>Reasons against Open Source</h3>
 
 <p>There are a few reasons why your next app maybe should not be open sourced:</p>
 
-<p><strong>Others might steal your ideas!</strong> I keep hearing this argument over and over again. Yes, if you open source your app, other developers might check out the code, re-brand it and sell it on the app store as their invention. Well, they can steal your ideas anyway - just by looking at your app and building an app that looks and feels the same. Granted, re-writing an app consumes considerably more time than re-branding an existing code base. But I doubt anybody dares to submit a blatant 1:1 copy of an app to the app store. At the very least, you should choose a suitable license for your code. There are a number of great open source licenses you might consider check out the <a href="http://www.opensource.org/licenses">OSI website for a list of open source licenses</a>. <a href="http://blog.robrhyne.com/">Rob Rhyne</a> even had his <a href="http://jdrhyne.tumblr.com/">brother</a> (who is a lawyer) create a <a href="http://github.com/capttaco/Briefs/blob/master/LICENSE">new app-store compatible license</a> for his app, <a href="http://giveabrief.com/">Briefs</a>. Read his blog post "<a href="http://blog.robrhyne.com/post/1043407467/selling-open-source">Selling Open Source</a>" for the rationale behind this step.</p>
+<p><strong>Others might steal your ideas!</strong> I keep hearing this argument over and over again. Yes, if you open source your app, other developers might check out the code, re-brand it and sell it on the app store as their invention. Well, they can steal your ideas anyway &ndash; just by looking at your app and building an app that looks and feels the same. Granted, re-writing an app consumes considerably more time than re-branding an existing code base. But I doubt anybody dares to submit a blatant 1:1 copy of an app to the app store. At the very least, you should choose a suitable license for your code. There are a number of great open source licenses you might consider check out the <a href="http://www.opensource.org/licenses">OSI website for a list of open source licenses</a>. <a href="http://blog.robrhyne.com/">Rob Rhyne</a> even had his <a href="http://jdrhyne.tumblr.com/">brother</a> (who is a lawyer) create a <a href="http://github.com/capttaco/Briefs/blob/master/LICENSE">new app-store compatible license</a> for his app, <a href="http://giveabrief.com/">Briefs</a>. Read his blog post &ldquo;<a href="http://blog.robrhyne.com/post/1043407467/selling-open-source">Selling Open Source</a>&rdquo; for the rationale behind this step.</p>
 
-<p>Even if other people don't copy your entire app, <strong>they still might copy some cool UI tricks</strong> you do. Maybe you've gone to great lengths to create some really cool frameworks that make your life easier or make your app behave in a very cool and new way. You might not want other apps to look as cool as your app does. Well, it's your right. In my opinion, the app store contains way too many badly designed apps. You would do the world a favour by releasing your great library to the public. Really.</p>
+<p>Even if other people don&rsquo;t copy your entire app, <strong>they still might copy some cool UI tricks</strong> you do. Maybe you&rsquo;ve gone to great lengths to create some really cool frameworks that make your life easier or make your app behave in a very cool and new way. You might not want other apps to look as cool as your app does. Well, it&rsquo;s your right. In my opinion, the app store contains way too many badly designed apps. You would do the world a favour by releasing your great library to the public. Really.</p>
 
-<p>And finally, you might not be able to open source your next app because your client or the <strong>company you're working for is against open source</strong>. Maybe they have good reasons for it, maybe they just don't know enough about open source. If the latter is the case, let them read this blog post or drop me a line - I'm available for consulting.</p>
+<p>And finally, you might not be able to open source your next app because your client or the <strong>company you&rsquo;re working for is against open source</strong>. Maybe they have good reasons for it, maybe they just don&rsquo;t know enough about open source. If the latter is the case, let them read this blog post or drop me a line &ndash; I&rsquo;m available for consulting.</p>
 
 <h3>Business Models for Open Source Apps</h3>
 
-<p>You might have a different point of view (and if you do, please leave a comment - I'm eager to hear your thoughts), but in my opinion open source is not a threat but a chance for your app. If we take this for granted, the question remains, how can you make money with an open sourced app? Here are some suggestions:</p>
+<p>You might have a different point of view (and if you do, please leave a comment &ndash; I&rsquo;m eager to hear your thoughts), but in my opinion open source is not a threat but a chance for your app. If we take this for granted, the question remains, how can you make money with an open sourced app? Here are some suggestions:</p>
 
-<p><strong>Sell it on the App Store</strong>. Yes, this might sound a little strange after all my raving about open source. If something is open source, how can you sell it? Well, it turns out selling apps on the App Store is a great idea, especially for open source apps. The app store is the only way how your clients can get hold of your application. Of course - they might check out your code, compile it and upload it to their iPhone. But to do so, they'd need to be registered iPhone developers, meaning they'd need to buy an iPhone developer certificate. Don't you think it is cheaper to just buy your app than shelling out 99 USD for the developer certificate?</p>
+<p><strong>Sell it on the App Store</strong>. Yes, this might sound a little strange after all my raving about open source. If something is open source, how can you sell it? Well, it turns out selling apps on the App Store is a great idea, especially for open source apps. The app store is the only way how your clients can get hold of your application. Of course &ndash; they might check out your code, compile it and upload it to their iPhone. But to do so, they&rsquo;d need to be registered iPhone developers, meaning they&rsquo;d need to buy an iPhone developer certificate. Don&rsquo;t you think it is cheaper to just buy your app than shelling out 99 USD for the developer certificate?</p>
 
-<p>If you're developing a library or framework, you might consider getting <strong>funding on <a href="http://www.kickstarter.com/">Kickstarter</a></strong>. Kickstarter is a great way to get funding for your project: you define the deliverable and how much funds you want to raise and people can back your project by pledging a variable amount of money. This way, <a href="http://www.penandthink.com/">John Wain</a> of <a href="http://glyphish.com/">Glyphish</a> fame <a href="http://www.kickstarter.com/projects/jpwain/great-icons-for-iphone-4-apps">managed to raise more than 27.000 USD</a>  for developing an iPhone 4 compatible version of his great Glyphish icon set. His original goal was to raise 2.000 USD, by the way.</p>
+<p>If you&rsquo;re developing a library or framework, you might consider getting <strong>funding on <a href="http://www.kickstarter.com/">Kickstarter</a></strong>. Kickstarter is a great way to get funding for your project: you define the deliverable and how much funds you want to raise and people can back your project by pledging a variable amount of money. This way, <a href="http://www.penandthink.com/">John Wain</a> of <a href="http://glyphish.com/">Glyphish</a> fame <a href="http://www.kickstarter.com/projects/jpwain/great-icons-for-iphone-4-apps">managed to raise more than 27.000 USD</a>  for developing an iPhone 4 compatible version of his great Glyphish icon set. His original goal was to raise 2.000 USD, by the way.</p>
 
-<p>I hope I could encourage you to try open source as a strategy for your next application or framework. If I did, let me know! Chances are I might want to submit a patch to add that tiny little feature I think your app is lacking ;-)</p>
+<p>I hope I could encourage you to try open source as a strategy for your next application or framework. If I did, let me know! Chances are I might want to submit a patch to add that tiny little feature I think your app is lacking ;&ndash;)</p>
 ]]></content>
   </entry>
   

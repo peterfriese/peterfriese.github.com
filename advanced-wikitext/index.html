@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="In my recent posting, I showed you how to use Mylyn WikiText to easily create documentation for your project. In this installment, we&#8217;re going &hellip;">
+  <meta name="description" content="In my recent posting, I showed you how to use Mylyn WikiText to easily create documentation for your project. In this installment, we&rsquo;re going &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -60,6 +60,7 @@
         t.parentNode.insertBefore(s, t);
     })();
 /* ]]> */</script>
+
 
   
   <script type="text/javascript">
@@ -144,17 +145,17 @@
   
   <p>In my <a href="http://www.peterfriese.de/getting-started-with-wikitext/">recent posting</a>, I showed you how to use <a href="http://wiki.eclipse.org/Mylyn/Incubator/WikiText">Mylyn WikiText</a> to easily create documentation for your project.</p>
 
-<p>In this installment, we&#8217;re going to look at four things:</p>
+<p>In this installment, we&rsquo;re going to look at four things:</p>
 
 <ol>
-<li><p>How to create PDFs</p></li>
-<li><p>How to automate your publishing process</p></li>
-<li><p>How to split your documents to facilitate team work</p></li>
-<li><p>How to use DocBook as an intermediary format to add even more flexibility to your publishing process</p></li>
+<li><p> How to create PDFs</p></li>
+<li><p> How to automate your publishing process</p></li>
+<li><p> How to split your documents to facilitate team work</p></li>
+<li><p> How to use DocBook as an intermediary format to add even more flexibility to your publishing process</p></li>
 </ol>
 
 
-<p>Lots of stuff, so let&#8217;s get started!</p>
+<p>Lots of stuff, so let&rsquo;s get started!</p>
 
 <h2>How to create PDFs</h2>
 
@@ -163,15 +164,15 @@
 <p>To install the Textile-J PDF add-on, proceed as follows:</p>
 
 <ol>
-<li><p>Make sure you have WikiText 1.1.0 or better installed</p></li>
-<li><p>Add the Textile-J update site to your Update Manager: <em>https://textile-j.dev.java.net/builds/wikitext/site</em></p></li>
-<li><p>Refresh the Update Manager. You should now see <em>Textile-J WikiText PDF</em> in the list of available features.</p></li>
-<li><p>Select <em>Textile-J WikiText PDF</em> and click <em>Install</em></p></li>
-<li><p>Restart Eclipse as requested</p></li>
+<li><p> Make sure you have WikiText 1.1.0 or better installed</p></li>
+<li><p> Add the Textile-J update site to your Update Manager: _<a href="https://textile-j.dev.java.net/builds/wikitext/site_">https://textile-j.dev.java.net/builds/wikitext/site_</a></p></li>
+<li><p> Refresh the Update Manager. You should now see <em>Textile-J WikiText PDF</em> in the list of available features.</p></li>
+<li><p> Select <em>Textile-J WikiText PDF</em> and click <em>Install</em></p></li>
+<li><p> Restart Eclipse as requested</p></li>
 </ol>
 
 
-<p>You can now right-click on any wiki file (<em>*.textile</em>, <em>*.mediawiki</em>, <em>*.confluence</em>, <em>*.twiki</em>, <em>*.tracwiki</em> and select <em>Textile-J -> Generate PDF</em> from the context menu.</p>
+<p>You can now right-click on any wiki file (<em>*.textile</em>, <em>*.mediawiki</em>, <em>*.confluence</em>, <em>*.twiki</em>, <em>*.tracwiki</em> and select <em>Textile-J &ndash;> Generate PDF</em> from the context menu.</p>
 
 <h2>How to automate the process</h2>
 
@@ -211,7 +212,7 @@
 
 <h2>How to split your documents to facilitate team work</h2>
 
-<p>Now that you know how to transform Wiki markup to various output formats, you might wonder how to split your Wiki files into smaller chunks so the members of your team can work on them separately. This is something which is very easy with, say, LaTeX or DocBook because they both have the concept of importing other documents. In Wikis, there usually is no such thing as importing another Wiki page - you rather <em>link</em> to that other page. If you&#8217;re writing a documentation, this isn&#8217;t sufficient, however. You really need to be able to import document fragments.</p>
+<p>Now that you know how to transform Wiki markup to various output formats, you might wonder how to split your Wiki files into smaller chunks so the members of your team can work on them separately. This is something which is very easy with, say, LaTeX or DocBook because they both have the concept of importing other documents. In Wikis, there usually is no such thing as importing another Wiki page &ndash; you rather <em>link</em> to that other page. If you&rsquo;re writing a documentation, this isn&rsquo;t sufficient, however. You really need to be able to import document fragments.</p>
 
 <p>Instead of adding the notion of imports to WikiText, I decided to control the assembling of the master document by using a little bit of ANT wizardry and a text file.</p>
 
@@ -255,11 +256,11 @@ newnoteworthy.textile
 
 <p>DocBook has been around for quite some years now and together with LaTeX still will give you the most flexibility when it comes to documentation engineering. I have been using both LaTeX and DocBook to write all sorts of documentation, ranging from my diploma thesis to open source project documentation and have found both the be versatile and reliable, but also quite verbose. Regarding flexibility, both give you the possibility to choose a document template / style of your liking. If none of the existing document styles match your needs, you can more or less easily create you own.</p>
 
-<p>As WikiText supports creating DocBook from your Wiki files, we&#8217;ll have a look at how to use this DocBook output to further process it. Here is what we need to do:</p>
+<p>As WikiText supports creating DocBook from your Wiki files, we&rsquo;ll have a look at how to use this DocBook output to further process it. Here is what we need to do:</p>
 
 <ol>
-<li><p>Enhance our build script so it downloads the relevant DocBook files (libraries, basic styles and XSL transformations)</p></li>
-<li><p>Add targets to our build script that allow you to choose the output to be created: PDF, HTML or Eclipse Help</p></li>
+<li><p> Enhance our build script so it downloads the relevant DocBook files (libraries, basic styles and XSL transformations)</p></li>
+<li><p> Add targets to our build script that allow you to choose the output to be created: PDF, HTML or Eclipse Help</p></li>
 </ol>
 
 
@@ -268,9 +269,9 @@ newnoteworthy.textile
 
 <p><img src="http://farm4.static.flickr.com/3599/3494324023_c4cf66ba24_o.png" alt="WikiTextDocBook ToolChain" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/3494324023)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3494324023">http://www.flickr.com/photos/81029262@N00/3494324023</a>)</p>
 
-<p>Let&#8217;s have a look at some crucial parts of the script.</p>
+<p>Let&rsquo;s have a look at some crucial parts of the script.</p>
 
 <p>We already saw how to assemble multiple Wiki files into one big Wiki file. The next step is to convert this file to DocBook:</p>
 
@@ -317,7 +318,7 @@ newnoteworthy.textile
 
 <p>You can now control the output by supplying different stylesheets. DocBook XSLT comes with a variety of stylesheets for articles, books and online help systems. You can now easily create printed documentation AND online help from one source. DocBook XSLT supports EclipseHelp, JavaHelp, HTMLHelp (the Windows Help System) and even man pages!</p>
 
-<p>So, next time you need to write documentation for a project you&#8217;re working on, don&#8217;t let it get you down. Instead, set up a trusty WikiText / DocBook toolchain and write down that documentation in Wiki markup in no time!</p>
+<p>So, next time you need to write documentation for a project you&rsquo;re working on, don&rsquo;t let it get you down. Instead, set up a trusty WikiText / DocBook toolchain and write down that documentation in Wiki markup in no time!</p>
 
 <p>The whole build script and the sample document are available for [drain file 17 url download] for free. If you need help setting up a tool chain or want to book me for consulting, drop me a line (peter dot friese at itemis dot com).</p>
 
@@ -405,7 +406,7 @@ newnoteworthy.textile
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -481,9 +482,9 @@ newnoteworthy.textile
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -492,8 +493,6 @@ newnoteworthy.textile
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

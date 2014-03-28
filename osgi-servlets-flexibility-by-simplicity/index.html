@@ -61,6 +61,7 @@
     })();
 /* ]]> */</script>
 
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -142,32 +143,30 @@
 
 <div class="entry-content">
   
-  <p><strong>Strangely enough</strong>, simple things tend to be more flexible than complex things. I bet you too have seen people go to great lengths to ensure a certain solution provides utmost flexibility. <!-- more -->Often, this flexibility isn&#8217;t needed, so you&#8217;re introducing accidental complexity.</p>
+  <p><strong>Strangely enough</strong>, simple things tend to be more flexible than complex things. I bet you too have seen people go to great lengths to ensure a certain solution provides utmost flexibility. <!-- more -->Often, this flexibility isn&rsquo;t needed, so you&rsquo;re introducing accidental complexity.</p>
 
 <p>In <a href="http://www.peterfriese.de/osgi-servlets-a-happy-marriage/">a recent post</a>, I showed you how to create a plain servlet and register it in an OSGi environment. As both <a href="http://eclipsesource.com/blogs/author/jeff/">Jeff</a> and <a href="http://www.composent.com/">Scott</a> pointed out, my using a <em>ServiceTracker</em> to register and unregister the servlet is a little bit clumsy and can be improved by using Declarative Services.</p>
 
-<p>I highly recommend reading chapter 15 in &#8221;<a href="http://my.safaribooksonline.com/9780321561510">OSGi and Equinox</a>&#8221;, but in a nutshell Declarative Services allow you to define <em>components</em> which can provide and consume <em>services</em>. <em>Binding</em> and <em>unbinding</em> references between components and services is performed by the DS runtime (also known as the Service Component Runtime).</p>
+<p>I highly recommend reading chapter 15 in &ldquo;<a href="http://my.safaribooksonline.com/9780321561510">OSGi and Equinox</a>&rdquo;, but in a nutshell Declarative Services allow you to define <em>components</em> which can provide and consume <em>services</em>. <em>Binding</em> and <em>unbinding</em> references between components and services is performed by the DS runtime (also known as the Service Component Runtime).</p>
 
 <p>Without further ado, here are the changes I had to make to DS-ify my simple servlet:</p>
 
 <ol>
-<li><p>Remove the activator. Yes, that&#8217;s true: we don&#8217;t need an Activator any more. Delete the class and also remove it from <em>META-INF/MANIFEST.MF</em></p></li>
-<li><p>Delete <em>HttpServiceTracker</em>. Registering the servlet with the <em>HTTPService</em> will be handled by the DS runtime.</p></li>
-<li><p>Implement a <em>component</em> to register and unregister the servlet with the <em>HttpService</em>:</p></li>
-</ol>
+<li><p> Remove the activator. Yes, that&rsquo;s true: we don&rsquo;t need an Activator any more. Delete the class and also remove it from <em>META-INF/MANIFEST.MF</em></p></li>
+<li><p> Delete <em>HttpServiceTracker</em>. Registering the servlet with the <em>HTTPService</em> will be handled by the DS runtime.</p></li>
+<li><p> Implement a <em>component</em> to register and unregister the servlet with the <em>HttpService</em>:</p>
 
+<p>public class SimpleComponent {
+  private static final String SERVLET_ALIAS = &ldquo;/hellods&rdquo;;
+  private HttpService httpService;</p>
 
-<pre><code>public class SimpleComponent {
-  private static final String SERVLET_ALIAS = "/hellods";
-  private HttpService httpService;
-
-  public void setHttpService(HttpService httpService) {
+<p>  public void setHttpService(HttpService httpService) {
     this.httpService = httpService;
-  }
+  }</p>
 
-  protected void startup() {
+<p>  protected void startup() {
     try {
-      System.out.println("Staring up sevlet at " + SERVLET_ALIAS);
+      System.out.println(&ldquo;Staring up sevlet at &rdquo; + SERVLET_ALIAS);
       SimpleServlet servlet = new SimpleServlet();
       httpService.registerServlet(SERVLET_ALIAS, servlet, null, null);
     } catch (ServletException e) {
@@ -175,30 +174,30 @@
     } catch (NamespaceException e) {
       e.printStackTrace();
     }
-  }
+  }</p>
 
-  protected void shutdown() {
+<p>  protected void shutdown() {
     httpService.unregister(SERVLET_ALIAS);
   }
-}
-</code></pre>
-
-<p>As you can see, the <em>HttpService</em> will be injected into this component using it&#8217;s setter method, <em>setHttpService</em>.</p>
-
-<ol>
-<li>Register this component with the DS runtime by adding a component description:</li>
+}</p></li>
 </ol>
 
 
-<pre><code>&lt;scr:component deactivate="shutdown" activate="startup" xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="simple.ds.component"&gt;
-  &lt;implementation class="simple.ds.servlet.SimpleComponent"&gt;&lt;/implementation&gt;
-  &lt;reference interface="org.osgi.service.http.HttpService" bind="setHttpService"&gt;&lt;/reference&gt;
-&lt;/scr:component&gt;
-</code></pre>
+<p>As you can see, the <em>HttpService</em> will be injected into this component using it&rsquo;s setter method, <em>setHttpService</em>.</p>
 
-<p>I saved this file in <em>OSGI-INF/component.xml</em> and added it to the <em>Service-Component</em> section of <em>META-INF/MANIFEST.MF</em>. In fact, as I used the <em>Create New OSGi Component</em> wizard, the wizard added the entry to the <em>ServiceComponent</em> section - it&#8217;s really easy to forget this if you do it manually!</p>
+<ol>
+<li><p> Register this component with the DS runtime by adding a component description:</p>
 
-<p>That&#8217;s it!</p>
+<p>&lt;scr:component deactivate=&ldquo;shutdown&rdquo; activate=&ldquo;startup&rdquo; xmlns:scr=&ldquo;<a href="http://www.osgi.org/xmlns/scr/v1.1.0">http://www.osgi.org/xmlns/scr/v1.1.0</a>&rdquo; name=&ldquo;simple.ds.component&rdquo;>
+  <implementation class="simple.ds.servlet.SimpleComponent"></implementation>
+  <reference interface="org.osgi.service.http.HttpService" bind="setHttpService"></reference>
+&lt;/scr:component></p></li>
+</ol>
+
+
+<p>I saved this file in <em>OSGI-INF/component.xml</em> and added it to the <em>Service-Component</em> section of <em>META-INF/MANIFEST.MF</em>. In fact, as I used the <em>Create New OSGi Component</em> wizard, the wizard added the entry to the <em>ServiceComponent</em> section &ndash; it&rsquo;s really easy to forget this if you do it manually!</p>
+
+<p>That&rsquo;s it!</p>
 
 <p><strong>Please note</strong> that I did not change the servlet implementation at all (apart form issuing a different text to make it easier to tell the servlets apart)!</p>
 
@@ -290,7 +289,7 @@
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -366,9 +365,9 @@
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -377,8 +376,6 @@
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

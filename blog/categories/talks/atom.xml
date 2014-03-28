@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Talks | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/talks/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.peterfriese.de/do-androids-dream-of-electric-sheep/"/>
     <updated>2013-03-22T00:33:48+00:00</updated>
     <id>http://www.peterfriese.de/do-androids-dream-of-electric-sheep</id>
-    <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 - A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
+    <content type="html"><![CDATA[<p>Humans have always been fascinated by the idea of talking with machines. Almost no main stream science fiction movie exists that does not pick up the idea of audio-visual communication with computers, the most well-known probably being <em>2001 &ndash; A Space Odyssey</em>, <em>Blade Runner</em>, <em>Star Trek</em>, <em>The Hitchhiker’s Guide to the Galaxy</em> and <em>I, Robot</em>.</p>
 
 <!-- more -->
 
@@ -33,13 +33,13 @@
 
 <p>Much has been said about Siri, so let’s focus on Eliza.</p>
 
-<p>Eliza started as an experiment in 1964, when Joseph Weizenbaum, then professor of computer sciences at the MIT, wrote it as an early attempt to research natural language communication between man and computer (see his ACM paper “ELIZA - A Computer Program For the Study of Natural Language Communication Between Man And Machine”). At its heart, Eliza is program that reacts to specific key words in sentences entered by a human user and will then respond to those keywords according to a predefined script. It’s the script that basically makes up the “personality” of Eliza, the most famous one being <em>Doctor</em>, simulating a rogerian psychoanalyst.</p>
+<p>Eliza started as an experiment in 1964, when Joseph Weizenbaum, then professor of computer sciences at the MIT, wrote it as an early attempt to research natural language communication between man and computer (see his ACM paper “ELIZA &ndash; A Computer Program For the Study of Natural Language Communication Between Man And Machine”). At its heart, Eliza is program that reacts to specific key words in sentences entered by a human user and will then respond to those keywords according to a predefined script. It’s the script that basically makes up the “personality” of Eliza, the most famous one being <em>Doctor</em>, simulating a rogerian psychoanalyst.</p>
 
 <p>(Weizenbaum was rather surprised to see how people thought that Eliza had a real personality and a capacity for empathy. In reaction, he started to raise uncomfortable questions about our dependence on computers.)</p>
 
 <p>In my Pecha Kucha, I went on to tell my audience to make better use of the capabilities of our smart phones. Most people have stopped thinking about it, but after all, we’re carrying a super computer in our pockets.</p>
 
-<p>So to set a good example, I decided to create <a href="http://elizaapp.com">ElizaApp</a> - an app that can listen to what you say and answer in spoken language. This is going to be a great project, because I’ll show several very interesting things:</p>
+<p>So to set a good example, I decided to create <a href="http://elizaapp.com">ElizaApp</a> &ndash; an app that can listen to what you say and answer in spoken language. This is going to be a great project, because I’ll show several very interesting things:</p>
 
 <ol>
 <li><p>How to analyse spoken language on a mobile device</p></li>
@@ -60,15 +60,15 @@
     <link href="http://www.peterfriese.de/a-vision-of-eclipse/"/>
     <updated>2005-05-10T17:57:55+01:00</updated>
     <id>http://www.peterfriese.de/a-vision-of-eclipse</id>
-    <content type="html"><![CDATA[<p>Here are some thoughts from <a href="http://www.jax.de/konferenzen/psecom,id,250,nodeid,.html#815">Mike Milinkovich's</a> keynote on Eclipse titled "<a href="http://www.jax.de/konferenzen/jax05/sessions_popup.php?id=1543">A Vision of Eclipse</a>":</p>
+    <content type="html"><![CDATA[<p>Here are some thoughts from <a href="http://www.jax.de/konferenzen/psecom,id,250,nodeid,.html#815">Mike Milinkovich&rsquo;s</a> keynote on Eclipse titled &ldquo;<a href="http://www.jax.de/konferenzen/jax05/sessions_popup.php?id=1543">A Vision of Eclipse</a>&rdquo;:</p>
 
 <ol>
-<li><p>Primary goal of Eclipse is to build a general purpose tool platform.</p></li>
-<li><p>Writing software is hard - mostly because of all the people you have to talk to.</p></li>
-<li><p>One of the biggest problem in developing software is integrating all the tools you have to use. Eclipse is trying to provide a universal tooling platform to enable all of the tools to talk to each other.</p></li>
-<li><p>Eclipse is never done: there is always a new language to integrate, there is always a new platform to run on.</p></li>
-<li><p>There are around 415 committers on various projects around Eclipse</p></li>
-<li><p>The RCP platform was almost entirely community-driven.</p></li>
+<li><p> Primary goal of Eclipse is to build a general purpose tool platform.</p></li>
+<li><p> Writing software is hard &ndash; mostly because of all the people you have to talk to.</p></li>
+<li><p> One of the biggest problem in developing software is integrating all the tools you have to use. Eclipse is trying to provide a universal tooling platform to enable all of the tools to talk to each other.</p></li>
+<li><p> Eclipse is never done: there is always a new language to integrate, there is always a new platform to run on.</p></li>
+<li><p> There are around 415 committers on various projects around Eclipse</p></li>
+<li><p> The RCP platform was almost entirely community-driven.</p></li>
 </ol>
 
 ]]></content>
@@ -79,7 +79,7 @@
     <link href="http://www.peterfriese.de/mda-transformations-in-practice/"/>
     <updated>2005-05-02T22:21:26+01:00</updated>
     <id>http://www.peterfriese.de/mda-transformations-in-practice</id>
-    <content type="html"><![CDATA[<p>Together with <a href="http://www.mbohlen.de/">Matthias Bohlen</a>, I'll be giving a talk on MDA transformation at the <a href="http://www.jax.de">JAX</a> conference in May 2005.</p>
+    <content type="html"><![CDATA[<p>Together with <a href="http://www.mbohlen.de/">Matthias Bohlen</a>, I&rsquo;ll be giving a talk on MDA transformation at the <a href="http://www.jax.de">JAX</a> conference in May 2005.</p>
 
 <p>Matthias and I will explain what transformations are and how to use the in modern MDA frameworks. Of course, since both of us are members of the <a href="http://www.andromda.org">AndroMDA</a> <a href="http://team.andromda.org">team</a>, we will show the use of MDA model to code transformations in AndroMDA and explain why the AndroMDA team chose not to use model to model transformations. A german abstract of the talk can be found <a href="http://www.jax.de/konferenzen/psecom,id,272,nodeid,,.html#MG3">here</a>.</p>
 ]]></content>

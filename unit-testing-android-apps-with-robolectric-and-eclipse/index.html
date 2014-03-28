@@ -61,6 +61,7 @@
     })();
 /* ]]> */</script>
 
+
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -146,20 +147,20 @@
     <img class="left" src="/images/2013-10-23-android-testing-with-robolectric/robolectric.png">
   </p>
   
-  <p>A few weeks ago, I showed you how to set up Robolectric with Android Studio and Gradle. For the Eclipse DemoCamp in Hamburg, I have been asked to prepare a session on how to use Robolectric with Eclipse. I thought it might be worthwhile to share my experiences with everybody who wasn&#8217;t fortunate enough to attend the DemoCamp (in a truely stunning location, BTW), so here goes.</p>
+  <p>A few weeks ago, I showed you how to set up Robolectric with Android Studio and Gradle. For the Eclipse DemoCamp in Hamburg, I have been asked to prepare a session on how to use Robolectric with Eclipse. I thought it might be worthwhile to share my experiences with everybody who wasn&rsquo;t fortunate enough to attend the DemoCamp (in a truely stunning location, BTW), so here goes.</p>
 
 <!-- more -->
 
 
 <p>We all know testing is essential to verify the behaviour of the software you write. In the Android world with its huge variety of devices and OS versions, this is even more so. Unfortunately, the performance of the Android development environment, most notably the Android Emulator, leaves much to be desired which sometimes leads to neglicence of test discipline. Robolectric is a test framework that tries to alleviate this situation.</p>
 
-<p>Robolectric achieves this by sitting between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM. This effectively means you can run your tests on your desktop - no waiting for your code to be deployed to the Emulator or a physical device!</p>
+<p>Robolectric achieves this by sitting between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM. This effectively means you can run your tests on your desktop &ndash; no waiting for your code to be deployed to the Emulator or a physical device!</p>
 
 <p>For more detailed background information about the inner workings of Roboloectric, check out <a href="http://www.slideshare.net/tylerschultz/robolectric-android-unit-testing-framework">this presentation</a> and this <a href="http://www.youtube.com/watch?v=T6FWL877txw">talk by Tyler Schultz</a>, one of the committers of Robolectric.</p>
 
 <h2>Creating a New Project</h2>
 
-<p>As the blog title implies, this time around, we&#8217;ll use Eclipse to create our project under test. Make sure you&#8217;re using the most recent version of the Eclipse ADT, which is part of the Android SDK. If you don&#8217;t have it already, Google provides a nice all-in-one download of the SDK <a href="http://developer.android.com/sdk/index.html">here</a>.</p>
+<p>As the blog title implies, this time around, we&rsquo;ll use Eclipse to create our project under test. Make sure you&rsquo;re using the most recent version of the Eclipse ADT, which is part of the Android SDK. If you don&rsquo;t have it already, Google provides a nice all-in-one download of the SDK <a href="http://developer.android.com/sdk/index.html">here</a>.</p>
 
 <p>Create a new project, using the following settings:</p>
 
@@ -191,7 +192,7 @@
 </ul>
 
 
-<p>To make things a bit more interesting, let&#8217;s change the UI so we&#8217;ve got a <code>TextView</code>, an <code>InputView</code> and a <code>Button</code> on, just like this:</p>
+<p>To make things a bit more interesting, let&rsquo;s change the UI so we&rsquo;ve got a <code>TextView</code>, an <code>InputView</code> and a <code>Button</code> on, just like this:</p>
 
 <figure class='code'><figcaption><span>res/layout/fragment_main.xml</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -303,11 +304,11 @@
 
 <h3>Adding Robolectric and its Dependencies</h3>
 
-<p>By now, you might be wondering why we don&#8217;t use Maven to set up our dependencies. To cut a long story short: setting up an Android project in Eclipse is a lot easier without using Maven. The downside of this approach, however, is that we have to manage project dependencies ourselves.</p>
+<p>By now, you might be wondering why we don&rsquo;t use Maven to set up our dependencies. To cut a long story short: setting up an Android project in Eclipse is a lot easier without using Maven. The downside of this approach, however, is that we have to manage project dependencies ourselves.</p>
 
 <p>Head over to <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.robolectric%22">Maven Central</a> to fetch the <a href="http://search.maven.org/remotecontent?filepath=org/robolectric/robolectric/2.2/robolectric-2.2-jar-with-dependencies.jar">latest version of Robolectric including dependencies</a> (at the time of this writing, Robolectric 2.2 was the most up-to-date version).</p>
 
-<p>In <code>RobolectricDemoProjectEclipseTests</code>, create a new folder <code>libs</code> and add the downloaded jar file by dragging it to the folder. After that, right-click the added file in Eclipse and choose <em>Build Path -> Add to Build Path</em> to add it to the build path.</p>
+<p>In <code>RobolectricDemoProjectEclipseTests</code>, create a new folder <code>libs</code> and add the downloaded jar file by dragging it to the folder. After that, right-click the added file in Eclipse and choose <em>Build Path &ndash;> Add to Build Path</em> to add it to the build path.</p>
 
 <p>Later, we will use <a href="http://square.github.io/fest-android/">FEST Android</a> to write our test assertations in a fluent way, so we need the required jar files and add the to the project as well.</p>
 
@@ -317,7 +318,7 @@
 </ul>
 
 
-<p>As JUnit is the base for all our unit tests, we need to add it to our classpath, too. Open the project&#8217;s properties, navigate to <em>Java Build Path -> Libraries</em> and click on <em>Add Library&#8230;</em>. In the next dialog, choose <em>JUnit</em> and press <em>Next</em>. Finaly, choose <em>JUnit 4</em> (Robolectric relies on JUnit 4) and press <em>Finish</em>.</p>
+<p>As JUnit is the base for all our unit tests, we need to add it to our classpath, too. Open the project&rsquo;s properties, navigate to <em>Java Build Path &ndash;> Libraries</em> and click on <em>Add Library&hellip;</em>. In the next dialog, choose <em>JUnit</em> and press <em>Next</em>. Finaly, choose <em>JUnit 4</em> (Robolectric relies on JUnit 4) and press <em>Finish</em>.</p>
 
 <ul class="gallery">
 <li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_1.png" class="fancybox" rel="gallery-fa20517b9274bddec4711e1f6d01fd87" title="Adding JUnit 4 - Step 1"><img src="/thumbs/add_junit_1_200x150.png" alt="Adding JUnit 4 - Step 1" /></a></li>
@@ -326,7 +327,7 @@
 </ul>
 
 
-<p>Finally, we need to add the Android library itself as a dependency to our test project. To do this, open then project properties dialog (Right-click the test project, select <em>Properties</em>) and navigate to <em>Java Build Path</em>. In the dialog, click on <em>Add External JARs&#8230;</em> and navigate to <code>&lt;Android SDK&gt;/platforms/android-19/android.jar</code> to add the latest Android jar to the projects build path.</p>
+<p>Finally, we need to add the Android library itself as a dependency to our test project. To do this, open then project properties dialog (Right-click the test project, select <em>Properties</em>) and navigate to <em>Java Build Path</em>. In the dialog, click on <em>Add External JARs&hellip;</em> and navigate to <code>&lt;Android SDK&gt;/platforms/android-19/android.jar</code> to add the latest Android jar to the projects build path.</p>
 
 <ul class="gallery">
 <li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_android.png" class="fancybox" rel="gallery-60ff47917794e39212af739e4db0b6e3" title="Adding the Android jar"><img src="/thumbs/add_android_200x150.png" alt="Adding the Android jar" /></a></li>
@@ -335,7 +336,7 @@
 
 <h3>Helping Robolectric to Find Your Manifest</h3>
 
-<p>Because of the way Robolectric looks for your <code>AndroidManifest.xml</code> during test startup, it won&#8217;t find the manifest if your tests and the manifest are located in different projects.</p>
+<p>Because of the way Robolectric looks for your <code>AndroidManifest.xml</code> during test startup, it won&rsquo;t find the manifest if your tests and the manifest are located in different projects.</p>
 
 <p>Robolectric supports configuring individual tests using the <code>@Config</code> annotation, allowing you to use a different manifest file depending on the test you run. This can be quite handy, but it is a good idea to have a default configuration. Starting with version 2.0, Robolectric supports a global configuration using a config file.</p>
 
@@ -350,7 +351,7 @@
 
 <h2>Writing Your First Robolectric Test</h2>
 
-<p>Let&#8217;s write our first test! Add the following class to <code>src/test/java</code>:</p>
+<p>Let&rsquo;s write our first test! Add the following class to <code>src/test/java</code>:</p>
 
 <figure class='code'><figcaption><span>MainActivityTest.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -393,24 +394,24 @@
 
 <p>Please note that we added a simple test method, making sure it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it <em>does not</em> fail, we know that something is wrong.</p>
 
-<p>So, let&#8217;s run the test! Right-click on the test file and choose <em>Run As -> JUnit Test</em>. As a result, you should see the test bar turn red in the JUnit view.</p>
+<p>So, let&rsquo;s run the test! Right-click on the test file and choose <em>Run As &ndash;> JUnit Test</em>. As a result, you should see the test bar turn red in the JUnit view.</p>
 
-<p>The test failed - just as expected. You can turn it into a passing test by changing the assert statement to <code>assertTrue(true);</code></p>
+<p>The test failed &ndash; just as expected. You can turn it into a passing test by changing the assert statement to <code>assertTrue(true);</code></p>
 
 <h2>Enhancing the Test</h2>
 
-<p>Now that we&#8217;ve got everything in place, let&#8217;s develop a small feature in a test-driven way. You already noted how we enhanced the UI of the application at the beginning, but apart from looking nice, there&#8217;s not much functionality.</p>
+<p>Now that we&rsquo;ve got everything in place, let&rsquo;s develop a small feature in a test-driven way. You already noted how we enhanced the UI of the application at the beginning, but apart from looking nice, there&rsquo;s not much functionality.</p>
 
-<p>Let&#8217;s enhance the app so the user can enter their name, press a button and be greeted by the application.</p>
+<p>Let&rsquo;s enhance the app so the user can enter their name, press a button and be greeted by the application.</p>
 
-<p>Make sure to statically import the Android FEST assertations - they&#8217;ll help us to write our tests in a fluent manner:</p>
+<p>Make sure to statically import the Android FEST assertations &ndash; they&rsquo;ll help us to write our tests in a fluent manner:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">fest</span><span class="o">.</span><span class="na">assertions</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">ANDROID</span><span class="o">.</span><span class="na">assertThat</span><span class="o">;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>As we need to have access to the app&#8217;s main activity in all of our tests, let&#8217;s add a private field for it and create a setup method that will create a fresh activity before each test is run:</p>
+<p>As we need to have access to the app&rsquo;s main activity in all of our tests, let&rsquo;s add a private field for it and create a setup method that will create a fresh activity before each test is run:</p>
 
 <figure class='code'><figcaption><span>MainActivity.java</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -458,7 +459,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Next, let&#8217;s write a test that places a text inside the edit field, presses the button and compares the result in the text view with the expected result.</p>
+<p>Next, let&rsquo;s write a test that places a text inside the edit field, presses the button and compares the result in the text view with the expected result.</p>
 
 <p>Here is the test method:</p>
 
@@ -487,7 +488,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>When you run the test, it will obviously fail, so let&#8217;s fix this.</p>
+<p>When you run the test, it will obviously fail, so let&rsquo;s fix this.</p>
 
 <p>Open <code>MainActivity.java</code> and insert the following private class:</p>
 
@@ -532,13 +533,13 @@
 
 <p>As you can see, this code will register an <code>OnClickListener</code> for the button and set the text of the text view according to the value of the edit field.</p>
 
-<p>The test should now pass - just run the unit test again and you should see a green bar.</p>
+<p>The test should now pass &ndash; just run the unit test again and you should see a green bar.</p>
 
 <h2>Conclusion</h2>
 
-<p>Setting up an Android project for using Robolectric in Eclipse is quite a bit of work, as you just have seen, but it&#8217;s reasonably easy with the information I have given you above. Adding Robolectric to a new Android project is just a matter of minutes with these instructions and helps you save a lot of time you&#8217;d have had to spend otherwise running the tests on the emulator or on physical devices.</p>
+<p>Setting up an Android project for using Robolectric in Eclipse is quite a bit of work, as you just have seen, but it&rsquo;s reasonably easy with the information I have given you above. Adding Robolectric to a new Android project is just a matter of minutes with these instructions and helps you save a lot of time you&rsquo;d have had to spend otherwise running the tests on the emulator or on physical devices.</p>
 
-<p>You might be interested in checking out my recent post on integrating Robolectric in a Gradle-based Android project in Android Studio - <a href="/android-testing-with-robolectric/">this way, please</a>.</p>
+<p>You might be interested in checking out my recent post on integrating Robolectric in a Gradle-based Android project in Android Studio &ndash; <a href="/android-testing-with-robolectric/">this way, please</a>.</p>
 
 <h2>Slides and Source Code</h2>
 
@@ -549,7 +550,7 @@
 
 <p></p>
 
-<p>The source code for this blog post can be found on <a href="https://github.com/peterfriese/RobolectricDemoProjectEclipse">Github</a> - clone and enjoy!</p>
+<p>The source code for this blog post can be found on <a href="https://github.com/peterfriese/RobolectricDemoProjectEclipse">Github</a> &ndash; clone and enjoy!</p>
 
 </div>
 
@@ -633,7 +634,7 @@
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a <a href="http://www.zuehlke.com/">software architect</a>, mobile application developer, technical writer, <a href="http://www.peterfriese.de/speaking/">public speaker</a> and open source committer. I have worked on a broad range of software systems, but I focus mainly on native and <a href="http://www.slideshare.net/peterfriese/cross-platform-mobile-development-11239246">cross-platform</a> mobile software development (iOS, Android, Windows Phone 7, mobile web), model-driven software development and Eclipse as a platform!
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -709,9 +710,9 @@
 
 <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
 <noscript>
-  <a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
 </noscript>
 
 <section>
@@ -720,8 +721,6 @@
   <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
-
 
 
   

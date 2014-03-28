@@ -4,7 +4,7 @@
   <title><![CDATA[Category: MDSD | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/mdsd/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-01-29T16:27:03+00:00</updated>
+  <updated>2014-03-28T17:57:00+00:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -18,14 +18,14 @@
     <link href="http://www.peterfriese.de/code-generation-2011-dont-miss-out/"/>
     <updated>2011-05-21T11:09:11+01:00</updated>
     <id>http://www.peterfriese.de/code-generation-2011-dont-miss-out</id>
-    <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven't booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> - a few places are still available!</p>
+    <content type="html"><![CDATA[<p>Code Generation 2011 is <a href="http://www.codegeneration.net/cg2011/index.php">just around the corner</a> and if you haven&rsquo;t booked yet, <a href="http://evbk.software-acumen.com/makebooking.php?event=CG2011">you should hurry up</a> &ndash; a few places are still available!</p>
 
-<p>Quite a number of my colleagues at itemis have been busy preparing for this conference in the past few weeks. Besides working hard to hit the <a href="http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan">Eclipse Release Train milestone for Indigo on June 22nd</a>, the Xtext team brushed up their hands-on sessions "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=17">Xtext Take I: Creating Code Generators with Xtend2</a>" and "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=16">Xtext Take II: Crafting Domain Specific Languages with Xtext and Xbase</a>". If you've been using Xtext, you're well aware of the power you have at your disposal with this tool. Xbase and Xtend2, however, take this experience to a whole new level. So make sure to mark your calendar for these two sessions!</p>
+<p>Quite a number of my colleagues at itemis have been busy preparing for this conference in the past few weeks. Besides working hard to hit the <a href="http://wiki.eclipse.org/Indigo/Simultaneous_Release_Plan">Eclipse Release Train milestone for Indigo on June 22nd</a>, the Xtext team brushed up their hands-on sessions &ldquo;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=17">Xtext Take I: Creating Code Generators with Xtend2</a>&rdquo; and &ldquo;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=16">Xtext Take II: Crafting Domain Specific Languages with Xtext and Xbase</a>&rdquo;. If you&rsquo;ve been using Xtext, you&rsquo;re well aware of the power you have at your disposal with this tool. Xbase and Xtend2, however, take this experience to a whole new level. So make sure to mark your calendar for these two sessions!</p>
 
 <!-- more -->
 
 
-<p>But not only the Xtext team will share their expertise at CG2011 - Markus and Karsten will be also be in town to give hands-on tutorials and report from their experience:</p>
+<p>But not only the Xtext team will share their expertise at CG2011 &ndash; Markus and Karsten will be also be in town to give hands-on tutorials and report from their experience:</p>
 
 <ul>
 <li><a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=22">Type Systems for DSLs (Markus Völter)</a></li>
@@ -34,9 +34,9 @@
 </ul>
 
 
-<p>The finale of the conference will be a panel discussion hosted by Markus on the topic of "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=20">Models, DSLs, Transformations: The Next 5 years</a>" - this should be a very interesting and lively discussion!</p>
+<p>The finale of the conference will be a panel discussion hosted by Markus on the topic of &ldquo;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=20">Models, DSLs, Transformations: The Next 5 years</a>&rdquo; &ndash; this should be a very interesting and lively discussion!</p>
 
-<p><a href="http://lanyrd.com/people/hbehrens/">Heiko</a> <a href="http://lanyrd.com/people/peterfriese/">and I</a> will present "<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">Cross-Platform Mobile Development with DSLs</a>" - a <a href="http://lanyrd.com/2011/cg2011/sdpgm/">fast-paced and fun mixture of slides, live coding (or modeling, if you will), videos and audience interaction</a>. Yes, that's right - the audience will be part of the show. Make sure to bring your web-enabled mobile phone and get the chance to win a price!</p>
+<p><a href="http://lanyrd.com/people/hbehrens/">Heiko</a> <a href="http://lanyrd.com/people/peterfriese/">and I</a> will present &ldquo;<a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">Cross-Platform Mobile Development with DSLs</a>&rdquo; &ndash; a <a href="http://lanyrd.com/2011/cg2011/sdpgm/">fast-paced and fun mixture of slides, live coding (or modeling, if you will), videos and audience interaction</a>. Yes, that&rsquo;s right &ndash; the audience will be part of the show. Make sure to bring your web-enabled mobile phone and get the chance to win a price!</p>
 
 <p>To keep track of the conference program(me), we at <a href="http://mobile.itemis.com">itemis mobile</a> have been busy to create a conference planner for your iOS and Android powered mobile phones. Here are the download links:</p>
 
@@ -50,7 +50,7 @@
 <li><a href="/images/2011-05-21-code-generation-2011-dont-miss-out/cg2011.png" class="fancybox" rel="gallery-f9049cdceaffaf2ba66743d40d991d29" title="Code Generation 2011 Apps for iPhone and Android"><img src="/thumbs/cg2011_300x300.png" alt="Code Generation 2011 Apps for iPhone and Android" /></a></li>
 </ul></p>
 
-<p>If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? <a href="mailto:mobile@itemis.de">Drop us a note</a> or track us down at the conference (best chance to see us: <a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">come to our talk</a> ;-) ).</p>
+<p>If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? <a href="mailto:mobile@itemis.de">Drop us a note</a> or track us down at the conference (best chance to see us: <a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">come to our talk</a> ;&ndash;) ).</p>
 ]]></content>
   </entry>
   
@@ -59,13 +59,13 @@
     <link href="http://www.peterfriese.de/getting-started-with-code-generation-with-xpand/"/>
     <updated>2010-03-17T16:05:05+00:00</updated>
     <id>http://www.peterfriese.de/getting-started-with-code-generation-with-xpand</id>
-    <content type="html"><![CDATA[<p>Have you heard about model driven software development (MDD / MDSD) and are thinking "what's all this fuzz about models"? "Why should models help me to be more productive," might be another thought you have.</p>
+    <content type="html"><![CDATA[<p>Have you heard about model driven software development (MDD / MDSD) and are thinking &ldquo;what&rsquo;s all this fuzz about models&rdquo;? &ldquo;Why should models help me to be more productive,&rdquo; might be another thought you have.</p>
 
 <p>People have been asking how to leverage models on and off on the web and in meetings I attended, so I thought I might share this little tutorial with you. In this tutorial, we will develop a little code generator that helps you to create (HTML) forms from models.</p>
 
 <h2>A short Overview</h2>
 
-<p>Xpand is a template engine, similar to FreeMarker, Velocity, JET and JSP. However, it features some very unique properties that makes using Xpand very well suited for generating code from models, such as <strong><a href="http://en.wikipedia.org/wiki/Type_safety">type safety</a></strong> and <strong>polymorphic dispatch</strong>. If you haven't heard those terms before, fear not! I'll show you how to use Xpand by way of an easy-to-follow example.</p>
+<p>Xpand is a template engine, similar to FreeMarker, Velocity, JET and JSP. However, it features some very unique properties that makes using Xpand very well suited for generating code from models, such as <strong><a href="http://en.wikipedia.org/wiki/Type_safety">type safety</a></strong> and <strong>polymorphic dispatch</strong>. If you haven&rsquo;t heard those terms before, fear not! I&rsquo;ll show you how to use Xpand by way of an easy-to-follow example.</p>
 
 <!-- more -->
 
@@ -73,49 +73,49 @@
 <p>The usual process of writing a code generator with Xpand is as follows:</p>
 
 <ol>
-<li><p>Define the structure of the model you want to process. This is called a <em>metamodel</em></p></li>
-<li><p>Define one or more template(s) that teach the code generator how to translate your model into code.</p></li>
+<li><p> Define the structure of the model you want to process. This is called a <em>metamodel</em></p></li>
+<li><p> Define one or more template(s) that teach the code generator how to translate your model into code.</p></li>
 </ol>
 
 
-<p>Easy, isn't it?</p>
+<p>Easy, isn&rsquo;t it?</p>
 
 <p>Using the code generator is even easier:</p>
 
 <ol>
-<li><p>Create a model</p></li>
-<li><p>Start the code generator</p></li>
+<li><p> Create a model</p></li>
+<li><p> Start the code generator</p></li>
 </ol>
 
 
-<p>It is worth mentioning that you can use Xpand to generate code for almost any known programming language. Everything you can express in text can be generated using Xpand. So, while we will be generating HTML and Java code in the following example, you can easily write code templates that generate code for C#, Basic, Lua, SmallTalk, ABAP, or any other programming language. You can also generate manuals and other documentation artifacts from your models using Xpand. I've successfully used Xpand to create DocBook files from models. Those DocBook files have then been converted to PDF files and online help files.</p>
+<p>It is worth mentioning that you can use Xpand to generate code for almost any known programming language. Everything you can express in text can be generated using Xpand. So, while we will be generating HTML and Java code in the following example, you can easily write code templates that generate code for C#, Basic, Lua, SmallTalk, ABAP, or any other programming language. You can also generate manuals and other documentation artifacts from your models using Xpand. I&rsquo;ve successfully used Xpand to create DocBook files from models. Those DocBook files have then been converted to PDF files and online help files.</p>
 
 <h2>Preparing your IDE</h2>
 
 <ol>
-<li><p>Grab and install a recent copy of Eclipse. At the time of writing, I am using <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6M6-201003121448/index.php">Eclipse 3.6 M6</a>.</p></li>
-<li><p>Install the latest version of Xpand (<em>Help -> Install New Software ...</em>)</p></li>
-<li><p>Add the Xpand update site (at the time of this writing, I am using Xpand 1.0 nightly builds from <a href="http://download.eclipse.org/modeling/m2t/xpand/updates/nightly/">http://download.eclipse.org/modeling/m2t/xpand/updates/nightly/</a>)</p></li>
-<li><p>Add the MWE update site (<a href="http://download.eclipse.org/modeling/emft/mwe/updates/nightly/">http://download.eclipse.org/modeling/emft/mwe/updates/nightly/</a>)</p></li>
-<li><p>Select MWE and Xpand:</p></li>
+<li><p> Grab and install a recent copy of Eclipse. At the time of writing, I am using <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6M6-201003121448/index.php">Eclipse 3.6 M6</a>.</p></li>
+<li><p> Install the latest version of Xpand (<em>Help &ndash;> Install New Software &hellip;</em>)</p></li>
+<li><p> Add the Xpand update site (at the time of this writing, I am using Xpand 1.0 nightly builds from <a href="http://download.eclipse.org/modeling/m2t/xpand/updates/nightly/">http://download.eclipse.org/modeling/m2t/xpand/updates/nightly/</a>)</p></li>
+<li><p> Add the MWE update site (<a href="http://download.eclipse.org/modeling/emft/mwe/updates/nightly/">http://download.eclipse.org/modeling/emft/mwe/updates/nightly/</a>)</p></li>
+<li><p> Select MWE and Xpand:</p></li>
 </ol>
 
 
 <p><a href="http://www.flickr.com/photos/81029262@N00/4439298864"><img src="http://farm5.static.flickr.com/4001/4439298864_40b913f0e5.jpg" alt="Install MWE and Xpand" /></a></p>
 
 <ol>
-<li>After the obligatory restart, do yourself the favour and set the platform encoding to <strong>UTF-8</strong>!</li>
+<li> After the obligatory restart, do yourself the favour and set the platform encoding to <strong>UTF-8</strong>!</li>
 </ol>
 
 
 <h2>Creating a Generator Project</h2>
 
-<p>Xpand code generators are hosted in Eclipse plug-ins, mainly because this makes handling the classpath a lot easier. People have reportedly used Maven to run Xpand code generators, but we won't go down this road today. Let's create a simple generator project:</p>
+<p>Xpand code generators are hosted in Eclipse plug-ins, mainly because this makes handling the classpath a lot easier. People have reportedly used Maven to run Xpand code generators, but we won&rsquo;t go down this road today. Let&rsquo;s create a simple generator project:</p>
 
 <ol>
-<li><p>Open the new project wizard and choose <em>Xpand Project</em> from the list</p></li>
-<li><p>Choose a meaningful name for your project (e.g. <em>org.xpand.example.gettingstarted</em></p></li>
-<li><p>Select <em>Create a sample EMF based Xpand project</em></p></li>
+<li><p> Open the new project wizard and choose <em>Xpand Project</em> from the list</p></li>
+<li><p> Choose a meaningful name for your project (e.g. <em>org.xpand.example.gettingstarted</em></p></li>
+<li><p> Select <em>Create a sample EMF based Xpand project</em></p></li>
 </ol>
 
 
@@ -126,11 +126,11 @@
 <p>Before we can start working with this project, we need to perform some clean-up actions:</p>
 
 <ol>
-<li><p>Open <em>src/metamodel/Checks.chk</em> and delete all its contents</p></li>
-<li><p>Open <em>src/metamodel/Extensions.chk</em> and delete all its contents</p></li>
-<li><p>Open <em>src/template/GeneratorExtensions.ext</em> and delete all its contents</p></li>
-<li><p>Delete <em>src/Model.xmi</em></p></li>
-<li><p>Don't forget to save all modified files</p></li>
+<li><p> Open <em>src/metamodel/Checks.chk</em> and delete all its contents</p></li>
+<li><p> Open <em>src/metamodel/Extensions.chk</em> and delete all its contents</p></li>
+<li><p> Open <em>src/template/GeneratorExtensions.ext</em> and delete all its contents</p></li>
+<li><p> Delete <em>src/Model.xmi</em></p></li>
+<li><p> Don&rsquo;t forget to save all modified files</p></li>
 </ol>
 
 
@@ -140,113 +140,81 @@
 Xpand is capable of understanding a variety of metamodel types. For example, if you have an XML schema file, you can use this as a metamodel and thereby enable Xpand to use XML files which are compliant to your schema as input models. Or, if you already have a bunch of Java files making up your data model, you can use those to drive Xpand code generation. In this tutorial, however, we will be using an Ecore metamodel to define the structure of our models. The project has already been configured to support Ecore metamodels, so all we need to do is open <em>metamodel.ecore</em> and define the structure:</p>
 
 <ol>
-<li><p>Please open <em>src/metamodel/metamodel.ecore</em>
+<li><p> Please open <em>src/metamodel/metamodel.ecore</em>
 .</p></li>
-<li><p>Remove the following elements from the metamodel: <em>Feature</em>, <em>Entity</em>, <em>Datatype</em>, <em>Type</em>, <em>Model</em>. The metamodel should now be empty:</p></li>
+<li><p> Remove the following elements from the metamodel: <em>Feature</em>, <em>Entity</em>, <em>Datatype</em>, <em>Type</em>, <em>Model</em>. The metamodel should now be empty:</p></li>
 </ol>
 
 
 <p><a href="http://www.flickr.com/photos/81029262@N00/4439788989"><img src="http://farm3.static.flickr.com/2555/4439788989_42665597db.jpg" alt="Empty metamodel" /></a></p>
 
 <ol>
-<li><p>Select package <em>metamodel</em> (as depicted in the screenshot above) and add a new <em>EClass</em> (<em>context menu -> New Child -> EClass</em>). Use the properties view to change the name of the newly created EClass to <em>Model</em>.</p></li>
-<li><p>Create a new EClass <em>Form</em></p></li>
-<li><p>Select the newly created EClass <em>Form</em> and add the following _EAttribute_s:</p></li>
+<li><p> Select package <em>metamodel</em> (as depicted in the screenshot above) and add a new <em>EClass</em> (<em>context menu &ndash;> New Child &ndash;> EClass</em>). Use the properties view to change the name of the newly created EClass to <em>Model</em>.</p></li>
+<li><p> Create a new EClass <em>Form</em></p></li>
+<li><p> Select the newly created EClass <em>Form</em> and add the following _EAttribute_s:</p>
+
+<ul>
+<li><p><em>name</em>, set the EType to <em>EString</em></p></li>
+<li><p><em>description</em>, EType = <em>EString</em></p></li>
+<li><p><em>title</em>, EType = <em>EString</em></p></li>
+</ul>
+</li>
+<li><p> Select EClass <em>Model</em> and add a new <em>EReference</em>, setting its attributes as follows:</p>
+
+<ul>
+<li><p>name = <em>forms</em></p></li>
+<li><p>EType = <em>Form</em></p></li>
+<li><p>Containment = <em>true</em></p></li>
+<li><p>Upperbound = <em>-1</em> (meaning: unlimited)</p></li>
+</ul>
+</li>
+<li><p> Create a new EClass <em>Field</em> and add the following EAttributes to it:</p>
+
+<ul>
+<li><p><em>name</em>, EType = <em>EString</em></p></li>
+<li><p><em>label</em>, EType = <em>Estring</em></p></li>
+</ul>
+</li>
+<li><p> Create another EClass <em>TextField</em>, setting its properties as follows:</p>
+
+<ul>
+<li><p>name = <em>TextField</em></p></li>
+<li><p>ESuper Types = <em>Field</em></p></li>
+</ul>
+</li>
+<li><p> Add one EAttribute <em>text</em> to <em>Textfield</em>:</p>
+
+<ul>
+<li>name = <em>text</em>, EType = <em>EString</em></li>
+</ul>
+</li>
+<li><p>. Add an EClass <em>MultiLineTextField</em> to the metamodel:</p>
+
+<ul>
+<li><p>name = <em>MultiLineTextTield</em></p></li>
+<li><p>ESuper Types = <em>TextField</em></p></li>
+</ul>
+</li>
+<li><p>. Now that we have everything in place, we finally need to add a reference from <em>Form</em> to <em>Field</em> so we can later add fields to a form. Select EClass <em>Form</em> and add an EReference to it, setting its properties as follows:</p>
+
+<ul>
+<li><p>name = <em>fields</em></p></li>
+<li><p>EType = <em>Field</em></p></li>
+<li><p>Containment = <em>true</em></p></li>
+<li><p>Upperbound = <em>-1</em> (meaning: unlimited)</p></li>
+</ul>
+</li>
 </ol>
 
-
-<pre><code>* _name_, set the EType to _EString_
-
-
-* _description_, EType = _EString_
-
-
-* _title_, EType = _EString_
-</code></pre>
-
-<ol>
-<li>Select EClass <em>Model</em> and add a new <em>EReference</em>, setting its attributes as follows:</li>
-</ol>
-
-
-<pre><code>* name = _forms_
-
-
-* EType = _Form_
-
-
-* Containment = _true_
-
-
-* Upperbound = _-1_ (meaning: unlimited)
-</code></pre>
-
-<ol>
-<li>Create a new EClass <em>Field</em> and add the following EAttributes to it:</li>
-</ol>
-
-
-<pre><code>* _name_, EType = _EString_
-
-
-* _label_, EType = _Estring_
-</code></pre>
-
-<ol>
-<li>Create another EClass <em>TextField</em>, setting its properties as follows:</li>
-</ol>
-
-
-<pre><code>* name = _TextField_
-
-
-* ESuper Types = _Field_
-</code></pre>
-
-<ol>
-<li>Add one EAttribute <em>text</em> to <em>Textfield</em>:</li>
-</ol>
-
-
-<pre><code>* name = _text_, EType = _EString_
-</code></pre>
-
-<ol>
-<li>Add an EClass <em>MultiLineTextField</em> to the metamodel:</li>
-</ol>
-
-
-<pre><code>* name = _MultiLineTextTield_
-
-
-* ESuper Types = _TextField_
-</code></pre>
-
-<ol>
-<li>Now that we have everything in place, we finally need to add a reference from <em>Form</em> to <em>Field</em> so we can later add fields to a form. Select EClass <em>Form</em> and add an EReference to it, setting its properties as follows:</li>
-</ol>
-
-
-<pre><code>* name = _fields_
-
-
-* EType = _Field_
-
-
-* Containment = _true_
-
-
-* Upperbound = _-1_ (meaning: unlimited)
-</code></pre>
 
 <h2>Creating a Model</h2>
 
-<p>Let's now create a model that follows the structure of the metamodel:</p>
+<p>Let&rsquo;s now create a model that follows the structure of the metamodel:</p>
 
 <ol>
-<li><p>In <em>metamodel.ecore</em>, select EClass <em>Model</em></p></li>
-<li><p>Create a model instance by choosing <em>Create Dynamic Instance...</em> from the context menu</p></li>
-<li><p>Save the model file to <em>src/Model.xmi</em></p></li>
+<li><p> In <em>metamodel.ecore</em>, select EClass <em>Model</em></p></li>
+<li><p> Create a model instance by choosing <em>Create Dynamic Instance&hellip;</em> from the context menu</p></li>
+<li><p> Save the model file to <em>src/Model.xmi</em></p></li>
 </ol>
 
 
@@ -305,7 +273,7 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 «ENDDEFINE»
 </code></pre>
 
-<p>On the first line, we import the metamodel so that the generator (and the editor as well) knows about the structure of our model. On line 2 - 4 we define a code template named <em>main</em>, making sure it is bound to model elements of type <em>Model</em>. The template doesn't do much, except to call another template (which we will define in a minute) named <em>form</em> with the collection of <em>Form_s, contained in the reference </em>forms_ of the current form.</p>
+<p>On the first line, we import the metamodel so that the generator (and the editor as well) knows about the structure of our model. On line 2 &ndash; 4 we define a code template named <em>main</em>, making sure it is bound to model elements of type <em>Model</em>. The template doesn&rsquo;t do much, except to call another template (which we will define in a minute) named <em>form</em> with the collection of <em>Form_s, contained in the reference </em>forms_ of the current form.</p>
 
 <p>Add the following lines to the template file, defining the template for the HTML file:</p>
 
@@ -320,7 +288,7 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 &lt;/head&gt;
 </code></pre>
 
-<p>In the first line, we start the template by specifying its name (<em>form</em>) and the type it is bound to (<em>Form</em>). On the next line, we use the <em>FILE</em> statement to specify the file the output is going to be written to. The name of the file is derived by concatenating the attribute <em>name</em> of the current <em>Form</em> and the string literal <em>".html"</em>.</p>
+<p>In the first line, we start the template by specifying its name (<em>form</em>) and the type it is bound to (<em>Form</em>). On the next line, we use the <em>FILE</em> statement to specify the file the output is going to be written to. The name of the file is derived by concatenating the attribute <em>name</em> of the current <em>Form</em> and the string literal <em>&ldquo;.html&rdquo;</em>.</p>
 
 <p>Continue the template by appending the following text:</p>
 
@@ -353,9 +321,9 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 <p>You might recall that we we defined three different kinds of _>Field_s in the metamodel:</p>
 
 <ol>
-<li><p>Field (which is the super class for the other two field types</p></li>
-<li><p>TextField</p></li>
-<li><p>MultiLineTextField</p></li>
+<li><p> Field (which is the super class for the other two field types</p></li>
+<li><p> TextField</p></li>
+<li><p> MultiLineTextField</p></li>
 </ol>
 
 
@@ -378,13 +346,13 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 «ENDDEFINE»
 </code></pre>
 
-<p>As you can see, all three templates have the same name. Only the type they are bound to differs. This is enough to let Xpand know which template to choose according to the type of the current model element. Let's suppose Xpand is iterating the model and the current model element is a <em>TextField</em>. Although <em>Field</em> is a direct super type of <em>TextField</em>, Xpand will not invoke the first template (<em>«DEFINE field FOR Field»</em>), but the second template (<em>«DEFINE field FOR TextField»</em>), as this is the most concrete match for the type of the model element.</p>
+<p>As you can see, all three templates have the same name. Only the type they are bound to differs. This is enough to let Xpand know which template to choose according to the type of the current model element. Let&rsquo;s suppose Xpand is iterating the model and the current model element is a <em>TextField</em>. Although <em>Field</em> is a direct super type of <em>TextField</em>, Xpand will not invoke the first template (<em>«DEFINE field FOR Field»</em>), but the second template (<em>«DEFINE field FOR TextField»</em>), as this is the most concrete match for the type of the model element.</p>
 
 <h2>Running the Code Generator</h2>
 
 <p>If you have followed the above steps, running the code generator is a piece of cake:</p>
 
-<p>Open the context menu on <em>src/workflow/workflow.mwe</em> and select <em>Run As -> MWE Workflow</em></p>
+<p>Open the context menu on <em>src/workflow/workflow.mwe</em> and select <em>Run As &ndash;> MWE Workflow</em></p>
 
 <p>This will start the code generator. You will see some log messages in the console view. If all went well, the output in the console reads something like this:</p>
 
@@ -397,9 +365,9 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 
 <h2>Where to go from here</h2>
 
-<p>If you want to learn more about Xpand, be sure to attend my talk <a href="http://www.eclipsecon.org/2010/sessions/?page=sessions&amp;id=1129">Use models and let the computer do the grunt work with Xpand</a> at EclipseCon 2010. I'll show some more advanced topics in this talk (such as generator cartridges, using Xtend to augment your models, partitioning your code templates, using other metamodels to define your models).</p>
+<p>If you want to learn more about Xpand, be sure to attend my talk <a href="http://www.eclipsecon.org/2010/sessions/?page=sessions&amp;id=1129">Use models and let the computer do the grunt work with Xpand</a> at EclipseCon 2010. I&rsquo;ll show some more advanced topics in this talk (such as generator cartridges, using Xtend to augment your models, partitioning your code templates, using other metamodels to define your models).</p>
 
-<p>Xpand comes with an extensive documentation (just go to <em>Help -> Help Contents -> Xpand Documentation</em> in Eclipse). You can also get help on Xpand in the <a href="http://www.eclipse.org/forums/index.php?t=tree&amp;th=163643&amp;">Eclipse Community Forums</a></p>
+<p>Xpand comes with an extensive documentation (just go to <em>Help &ndash;> Help Contents &ndash;> Xpand Documentation</em> in Eclipse). You can also get help on Xpand in the <a href="http://www.eclipse.org/forums/index.php?t=tree&amp;th=163643&amp;">Eclipse Community Forums</a></p>
 
 <p>Should you need help, <a href="http://www.itemis.com">itemis (the company I work with)</a> offers training and consulting for Xpand and a host of other modeling related technologies.</p>
 
@@ -416,15 +384,15 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
     <link href="http://www.peterfriese.de/xtext-tricks-1-enhancing-completion-proposals/"/>
     <updated>2009-10-27T16:55:43+00:00</updated>
     <id>http://www.peterfriese.de/xtext-tricks-1-enhancing-completion-proposals</id>
-    <content type="html"><![CDATA[<p>Those of you who <a href="htp://twitter.com/peterfriese">follow me on Twitter</a> might have noticed <a href="http://twitter.com/peterfriese/status/4889552469">I am working on an Xtext based DSL</a> for <a href="http://en.wikipedia.org/wiki/Behavior_driven_development">Behaviour Driven Development</a>. Part of the DSL allows the DSL user to define actors and the verbs these actors can execute. Actors can have a hierarchy (much like a class hierarchy), meaning an actor will inherit all verbs of it's super actors. As the list of verbs can grow quite a bit, the content assist drop down menu becomes a bit overwhelming.</p>
+    <content type="html"><![CDATA[<p>Those of you who <a href="htp://twitter.com/peterfriese">follow me on Twitter</a> might have noticed <a href="http://twitter.com/peterfriese/status/4889552469">I am working on an Xtext based DSL</a> for <a href="http://en.wikipedia.org/wiki/Behavior_driven_development">Behaviour Driven Development</a>. Part of the DSL allows the DSL user to define actors and the verbs these actors can execute. Actors can have a hierarchy (much like a class hierarchy), meaning an actor will inherit all verbs of it&rsquo;s super actors. As the list of verbs can grow quite a bit, the content assist drop down menu becomes a bit overwhelming.</p>
 
 <p>[</p>
 
 <p><img src="http://farm3.static.flickr.com/2581/4029808851_22fd514946.jpg" alt="XtextProposalProviderBefore" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/4029808851)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/4029808851">http://www.flickr.com/photos/81029262@N00/4029808851</a>)</p>
 
-<p>To alleviate  this situation, I decided to display the "owner" of a verb along with the name of the verb in the content assist drop down box. Here is my first try:</p>
+<p>To alleviate  this situation, I decided to display the &ldquo;owner&rdquo; of a verb along with the name of the verb in the content assist drop down box. Here is my first try:</p>
 
 <!-- more -->
 
@@ -444,13 +412,13 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 }
 </code></pre>
 
-<p>With this piece of code in place, the content assist proposals for verbs will now display the name of the "owner" to the right of the replacement text:</p>
+<p>With this piece of code in place, the content assist proposals for verbs will now display the name of the &ldquo;owner&rdquo; to the right of the replacement text:</p>
 
 <p>[</p>
 
 <p><img src="http://farm4.static.flickr.com/3526/4030575068_2358208f22.jpg" alt="XtextContentAssistAfter" /></p>
 
-<p>](http://www.flickr.com/photos/81029262@N00/4030575068)</p>
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/4030575068">http://www.flickr.com/photos/81029262@N00/4030575068</a>)</p>
 
 <p><a href="http://zarnekow.blogspot.com/">Sebastian</a> pointed out that there is a <code>getDisplayString()</code> in <code>AbstractContentProposalProvider</code> that you should override in order to create a custom display string. It turned out, however, that this method will not be called as expected. I <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=293380">filed a bug</a>, so expect to see a fix in one of the next milestones of the Xtext 0.8.0 stream.</p>
 ]]></content>
@@ -462,13 +430,13 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
     <updated>2009-10-13T23:18:52+01:00</updated>
     <id>http://www.peterfriese.de/everything-you-always-wanted-to-know-about-modeling-but-were-afraid-to-ask</id>
     <content type="html"><![CDATA[<ol>
-<li><p>Does Model Driven Software Development actually work?</p></li>
-<li><p>Are some developers more productive than others?</p></li>
-<li><p>What happens during code generation?</p></li>
-<li><p>Do diagrams and text go together well?</p></li>
-<li><p>What happens during model transformation?</p></li>
-<li><p>What are DSLs? And can I create them with Eclipse?</p></li>
-<li><p>Does modeling scale in the enterprise?</p></li>
+<li><p> Does Model Driven Software Development actually work?</p></li>
+<li><p> Are some developers more productive than others?</p></li>
+<li><p> What happens during code generation?</p></li>
+<li><p> Do diagrams and text go together well?</p></li>
+<li><p> What happens during model transformation?</p></li>
+<li><p> What are DSLs? And can I create them with Eclipse?</p></li>
+<li><p> Does modeling scale in the enterprise?</p></li>
 </ol>
 
 
@@ -477,25 +445,25 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 <!-- more -->
 
 
-<p>So if you are wondering why everybody in Europe is so thrilled about Modeling, attend to one of these events - you'll get the answers there.</p>
+<p>So if you are wondering why everybody in Europe is so thrilled about Modeling, attend to one of these events &ndash; you&rsquo;ll get the answers there.</p>
 
 <p>For your convenience, here is a list of some of the talks:</p>
 
 <ul>
-<li><p>Case Study: Model Transformations - Richard Woods, Credit Suisse</p></li>
-<li><p>Building DSLs with Xtext - Heiko Behrens, itemis</p></li>
-<li><p>Modeling on an enterprise scale - Eike Stepper, Eclipse Modeling Project</p></li>
-<li><p>Query, Transaction and Validation - Bernd Kolb &amp; Boris Gruschko, both SAP</p></li>
-<li><p>Agent-Based Computer Simulation for Operational Risk Analysis - Ed MacKerrow, Los Alamos Labs</p></li>
-<li><p>Papyrus: Advent of an Open Source IME - Kenn Hussey, Zeligsoft</p></li>
+<li><p>Case Study: Model Transformations &ndash; Richard Woods, Credit Suisse</p></li>
+<li><p>Building DSLs with Xtext &ndash; Heiko Behrens, itemis</p></li>
+<li><p>Modeling on an enterprise scale &ndash; Eike Stepper, Eclipse Modeling Project</p></li>
+<li><p>Query, Transaction and Validation &ndash; Bernd Kolb &amp; Boris Gruschko, both SAP</p></li>
+<li><p>Agent-Based Computer Simulation for Operational Risk Analysis &ndash; Ed MacKerrow, Los Alamos Labs</p></li>
+<li><p>Papyrus: Advent of an Open Source IME &ndash; Kenn Hussey, Zeligsoft</p></li>
 <li><p>B3: A Model for Unbreakable Builds</p></li>
-<li><p>There's a Modeling Solution for That - Bruce Trask, MDE Systems &amp; Angel Roman, MDE Systems</p></li>
+<li><p>There&rsquo;s a Modeling Solution for That &ndash; Bruce Trask, MDE Systems &amp; Angel Roman, MDE Systems</p></li>
 </ul>
 
 
 <p>If you ask me, this is a pretty decent line-up, both content-wise and people-wise. Not being one of the big conferences, the Modeling Days will actually give you the chance to talk to the experts and other end-users. Remember, networking is key.</p>
 
-<p>So go ahead and register by adding your name to <a href="http://wiki.eclipse.org/Eclipse_Modeling_Day">this wiki page</a>. Registration is free, but you need to register in order to help the organizers to plan the catering. If you don't have an account for editing the wiki page or don't want to create one, just send mail to <a href="mailto:eclipse_modeling_nyc@eclipse.org">eclipse_modeling_nyc@eclipse.org</a> or <a href="mailto:eclipse_modeling_toronto@eclipse.org">eclipse_modeling_toronto@eclipse.org</a></p>
+<p>So go ahead and register by adding your name to <a href="http://wiki.eclipse.org/Eclipse_Modeling_Day">this wiki page</a>. Registration is free, but you need to register in order to help the organizers to plan the catering. If you don&rsquo;t have an account for editing the wiki page or don&rsquo;t want to create one, just send mail to <a href="mailto:eclipse_modeling_nyc@eclipse.org">eclipse_modeling_nyc@eclipse.org</a> or <a href="mailto:eclipse_modeling_toronto@eclipse.org">eclipse_modeling_toronto@eclipse.org</a></p>
 ]]></content>
   </entry>
   
@@ -504,7 +472,7 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
     <link href="http://www.peterfriese.de/xtext-google/"/>
     <updated>2009-09-04T15:46:02+01:00</updated>
     <id>http://www.peterfriese.de/xtext-google</id>
-    <content type="html"><![CDATA[<p>Last week I had the chance to speak at the <a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009">EclipseDay at the GooglePlex</a> in <a href="http://maps.google.com/?q=Google+Inc.%4037.423156,-122.084917&amp;hl=en&amp;ie=UTF8&amp;ll=37.42216,-122.085764&amp;spn=0.005283,0.011362&amp;t=h&amp;z=17">Mountain View, CA</a>, an event organized by the <a href="http://www.eclipse.org">Eclipse Foundation</a> and hosted by <a href="http://code.google.com/opensource/">Google's Open Source Programs Office</a>.  Google is a truly amazing company and the GooglePlex is a very exciting place to be at. As I was one day early and needed a creative place to put finishing touches on my slides, I took the chance to visit <a href="http://konigsberg.blogspot.com/">Robert Konigsberg</a> who was kind enough to host me for that day.  The organizers put together a great agenda with lots of interesting talks. <a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts">Looking at the agenda</a>, you will see that there actually are three major topics, <strong>Eclipse in the Enterprise</strong>, <strong>Modeling</strong> and <strong>Runtime</strong>:  The talks</p>
+    <content type="html"><![CDATA[<p>Last week I had the chance to speak at the <a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009">EclipseDay at the GooglePlex</a> in <a href="http://maps.google.com/?q=Google+Inc.%4037.423156,-122.084917&amp;hl=en&amp;ie=UTF8&amp;ll=37.42216,-122.085764&amp;spn=0.005283,0.011362&amp;t=h&amp;z=17">Mountain View, CA</a>, an event organized by the <a href="http://www.eclipse.org">Eclipse Foundation</a> and hosted by <a href="http://code.google.com/opensource/">Google&rsquo;s Open Source Programs Office</a>.  Google is a truly amazing company and the GooglePlex is a very exciting place to be at. As I was one day early and needed a creative place to put finishing touches on my slides, I took the chance to visit <a href="http://konigsberg.blogspot.com/">Robert Konigsberg</a> who was kind enough to host me for that day.  The organizers put together a great agenda with lots of interesting talks. <a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts">Looking at the agenda</a>, you will see that there actually are three major topics, <strong>Eclipse in the Enterprise</strong>, <strong>Modeling</strong> and <strong>Runtime</strong>:  The talks</p>
 
 <ul>
 <li><p><a href="http://wiki.eclipse.org/Eclipse_Day_At_Googleplex_2009/Session_Abstacts#Eclipse_in_the_Enterprise:_Lessons_from_Google">Eclipse in the Enterprise: Lessons from Google</a></p></li>
@@ -537,7 +505,7 @@ Xpand is capable of understanding a variety of metamodel types. For example, if 
 </ul>
 
 
-<p>Attending great talks of course is one of the major benefits of going to a conference like this. To me, meeting other people and connecting has become even more important than attending great talks. Of course, this is nothing new to event organizers and so there were many chances to grab a drink and chat with the other attendees. With more than 170 people attending, it was hard to have a chat with everyone, but nevertheless I managed to talk to a number of people, many of which already are Xtext users or are now planing to have a detailed look at it. Even Google is using Xtext, but ssshh!  Overall, I really enjoyed my two days at Google and look forward to more events like this. Speaking of which, <a href="http://www.eclipsecon.org/summiteurope2009/">Eclipse Summit Europe is approaching fast</a>, so make sure you register on time. Also, if you're interested in Modeling and DSLs, we're organizing a Modeling / DSL Day in North America this coming fall - see <a href="http://www.peterfriese.de/eclipse-modeling-day-in-north-america/">my previous post</a> for more info.  And finally, here are the slides and the video of my talk:</p>
+<p>Attending great talks of course is one of the major benefits of going to a conference like this. To me, meeting other people and connecting has become even more important than attending great talks. Of course, this is nothing new to event organizers and so there were many chances to grab a drink and chat with the other attendees. With more than 170 people attending, it was hard to have a chat with everyone, but nevertheless I managed to talk to a number of people, many of which already are Xtext users or are now planing to have a detailed look at it. Even Google is using Xtext, but ssshh!  Overall, I really enjoyed my two days at Google and look forward to more events like this. Speaking of which, <a href="http://www.eclipsecon.org/summiteurope2009/">Eclipse Summit Europe is approaching fast</a>, so make sure you register on time. Also, if you&rsquo;re interested in Modeling and DSLs, we&rsquo;re organizing a Modeling / DSL Day in North America this coming fall &ndash; see <a href="http://www.peterfriese.de/eclipse-modeling-day-in-north-america/">my previous post</a> for more info.  And finally, here are the slides and the video of my talk:</p>
 ]]></content>
   </entry>
   
