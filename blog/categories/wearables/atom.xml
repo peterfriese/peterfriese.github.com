@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Wearables | Peter Friese]]></title>
+  <link href="http://www.peterfriese.de/blog/categories/wearables/atom.xml" rel="self"/>
+  <link href="http://www.peterfriese.de/"/>
+  <updated>2014-04-06T20:29:54+01:00</updated>
+  <id>http://www.peterfriese.de/</id>
+  <author>
+    <name><![CDATA[Peter Friese]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Getting Started with Android Wear]]></title>
+    <link href="http://www.peterfriese.de/getting-started-with-android-wear/"/>
+    <updated>2014-03-31T19:05:25+01:00</updated>
+    <id>http://www.peterfriese.de/getting-started-with-android-wear</id>
+    <content type="html"><![CDATA[<p>Wearables are one of the hot topics of the year. No &ndash; I am not talking about T-shirts with embroidered <a href="http://blog.divineforge.com/2010/09/flashwear-birt-rocks-t-shirt.html">flashing charts</a>. Rather, let’s consider gadgets like <a href="https://getpebble.com/">Pebble</a>, <a href="http://www.oculusvr.com/">Oculus Rift</a>, and <a href="http://www.google.com/glass/start/">Google Glass</a>. Besides being geeky pieces of technology (and who of us wouldn’t enjoy playing around with gadgets), they mark the beginning of a whole new era of computing.</p>
+
+<!-- more -->
+
+
+<p>Until now, using a computer usually meant interacting with a conglomeration of metal, silicon and other materials that could more or less clearly be perceived as a computer. Even smartphones &ndash; the latest step in the evolution of computers &ndash; are rather clumsy to use, if you think about it.</p>
+
+<p>Perhaps the most striking way to see the difference between regular computers and wearables is the user’s posture when using the computer. Using a computer results in a more or less non-natural posture or &ndash; even worse &ndash; behaviour (see <a href="http://curiousrituals.wordpress.com/2012/09/03/curious-rituals-book/">Curious Rituals</a> for a look in the mirror).</p>
+
+<p>Wearables change this. By being attached to or located closely to your body, they allow you to take up a much more natural posture and eventually (in the more or less distant future), people around you will no longer notice them.</p>
+
+<p>Granted, in their current incarnation, many wearables are still a long way from this vision and it is remains to the readers imagination how long you can wear a VR device like the Oculus Rift without getting a sore neck or becoming nauseous. However, this is only just the start and we will see great progress in the following years.</p>
+
+<p>On March 18th, Google announced <a href="http://googleblog.blogspot.co.uk/2014/03/sharing-whats-up-our-sleeve-android.html">Android Wear</a> and released the <a href="http://android-developers.blogspot.co.uk/2014/03/android-wear-developer-preview.html">Android Wear Developer Preview</a>. Shortly after that, Motorola announced their <a href="http://motorola-blog.blogspot.co.uk/2014/03/moto-360-its-time.html">Moto 360 watch</a> which generated quite some excitement on the internet. On the same day, LG announced their <a href="http://www.lg.com/global/gwatch">LG G watch</a> &ndash; a rectangular model.</p>
+
+<p><a href="http://www.android.com/wear/">Android Wear</a> is Google&rsquo;s second platform for wearable devices (<a href="http://www.google.co.uk/glass/start/">Google Glass</a> being the first one). The theme for both platforms is to bring useful, contextual information to users when they need it. Ultimately, the goal is to empower users without distracting them.</p>
+
+<p>If you’re excited about Android Wear as well, here are some ideas for you to try out.</p>
+
+<h2>First of all &ndash; watch the videos</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=0xQ3y902DEQ#t=17">Introducing Android Wear Developer Preview</a> with <a href="https://plus.google.com/+DavidSingleton/posts">+DavidSingleton</a></li>
+<li><a href="https://www.youtube.com/watch?v=1dQf0sANoDw&amp;list=PLWz5rJ2EKKc-kIrPiq098QH9dOle-fLef">Android Wear Developer Preview</a> with <a href="https://plus.google.com/+JustinKoh">+JustinKoh</a></li>
+<li><a href="https://www.youtube.com/watch?v=SEZbZK4jFLY">Android Wear: receiving Voice Replies</a> with <a href="https://plus.google.com/+JustinKoh">+JustinKoh</a></li>
+</ul>
+
+
+<h2>If you&rsquo;re a developer</h2>
+
+<ol>
+<li><p>Sign up for the Developer Preview. Head over to <a href="http://developer.android.com/wear/preview/start.html">our developer site</a> and sign up for the Developer Preview. When signing up, <strong>please make sure to use the same Gmail account you use on your Android device</strong> &ndash; this will make it much easier for you to download the Android Wear Preview beta app to your phone or tablet. As soon as you’ve been accepted to the preview, you will receive a confirmation email that outlines how to opt-in to the Android Wear Preview app beta program. You’ll need this app in order to connect your Android Wear simulator to your device.</p></li>
+<li><p>Follow the instructions for setting up the Developer Preview on your developer machine as described in <a href="http://developer.android.com/wear/preview/start.html">Getting Started with the Developer Preview</a>. Here are a few things to make sure it all works out fine:</p>
+
+<ul>
+<li>use the same Gmail account for signing up that is connected to your test device</li>
+<li>make sure to use a device running Android 4.3 or better, as this is a prerequisite for the Preview app</li>
+<li>after installing and starting the Android Wear Preview on your Android device, make sure to tap the blue note on the preview app to register the app as a notification listener</li>
+</ul>
+</li>
+</ol>
+
+
+<p>The great thing about Android Wear is that your app&rsquo;s notifications will show up on any connected Android Wear device (or emulator, for that matter) <a href="http://developer.android.com/wear/notifications/creating.html">without any further effort</a>. So, if you have an app that uses notifications to alert the user, you should be able to see those notifications on the Android Wear Emulator as soon as you have connected the Emulator to your Android device (phone or tablet) running your app. If you don&rsquo;t have an app that uses notifications, you can quickly check this out by sending an email to the Gmail account cyou use on your device so the notification for the email pops up in the notification center.</p>
+
+<p>Notifications are one of the <a href="http://developer.android.com/wear/design/user-interface.html">two major design principles</a> of Android Wear: <strong>Suggest</strong> and <strong>Demand</strong>.</p>
+
+<h3>Suggest: The Context Stream</h3>
+
+<div class="wear-inset-video-container" style="float:left;margin:0 0px 20px -30px">
+  <img class="wear-bezel-only" src="http://www.peterfriese.de/images/2014-03-31-getting-started-with-android-wear/bezel.png" alt="">
+  <img class="gif" src="http://www.peterfriese.de/images/2014-03-31-getting-started-with-android-wear/stream.gif">
+</div>
+
+
+<p>All notifications will end up on the context stream, which is a vertical list of cards, much like Google Now on Android phones. The user can interact with the cards by swiping them vertically, thereby navigating the stream of important information. Due to the limited screen real estate, only one card will be displayed at a time. You can add cards to the context stream by creating and delivering notifications. Use <a href="https://developer.android.com/reference/android/preview/support/v4/app/NotificationManagerCompat.html">NotificationCompat.Builder</a> to create basic notifications (make sure to use the one in the Android Wear Preview SDK, otherwise some features will not work). To use Android Wear specific features like pages or actions, or to customize the look of cards on the context stream, use <a href="http://developer.android.com/reference/android/preview/support/wearable/notifications/WearableNotifications.Builder.html">WearableNotifications.Builder</a>. Here is a short snippet that shows how to create a notification:</p>
+
+<p>```java
+int notificationId = 001;</p>
+
+<p>// Build intent for notification content
+Intent viewIntent = new Intent(this, ViewEventActivity.class);
+viewIntent.putExtra(EXTRA_EVENT_ID, eventId);
+PendingIntent viewPendingIntent =</p>
+
+<pre><code>    PendingIntent.getActivity(this, 0, viewIntent, 0);
+</code></pre>
+
+<p>NotificationCompat.Builder notificationBuilder =</p>
+
+<pre><code>    new NotificationCompat.Builder(this)
+    .setSmallIcon(R.drawable.ic_event)
+    .setContentTitle(eventTitle)
+    .setContentText(eventLocation)
+    .setContentIntent(viewPendingIntent);
+</code></pre>
+
+<p>// Get an instance of the NotificationManager service
+NotificationManagerCompat notificationManager =</p>
+
+<pre><code>    NotificationManagerCompat.from(this);
+</code></pre>
+
+<p>// Build the notification and issues it with notification manager.
+notificationManager.notify(notificationId, notificationBuilder.build());
+```</p>
+
+<p>Whenever you create notifications, be sure to follow the [Android Wear Design Principles](<a href="http://developer.android.com/wear/design/index.html.">http://developer.android.com/wear/design/index.html.</a> In particular, you should make sure all information you deliver follows the principle of being <em>timely</em>, <em>relevant</em>, and <em>specific</em>.</p>
+
+<h3>Demand: The Cue Card</h3>
+
+<div class="wear-inset-video-container" style="float:right;margin:0 -30px 20px 0px">
+  <img class="wear-bezel-only" src="http://www.peterfriese.de/images/2014-03-31-getting-started-with-android-wear/bezel.png" alt="">
+  <img class="gif" src="http://www.peterfriese.de/images/2014-03-31-getting-started-with-android-wear/cuecard.gif">
+</div>
+
+
+<p>Android Wear is not just about displaying notifications that the user can then interact with. In addition, users can initiate an interaction with their device by using the cue card. The cue card is brought up by saying &ldquo;OK Google&rdquo; or tapping on the &ldquo;g&rdquo; icon on the home stream of the device. Swiping up on the cue card will reveal a number of actions that can be executed by tapping them or speaking them. Voice actions are not yet available in the current preview SDK.</p>
+
+<h3>A word of caution</h3>
+
+<p>As the name implies, the Android Wear Developer Preview is not intended for creating production apps at this time. The APIs might change significantly prior to the official release of Android Wear. The preview is intended for development and testing purposes only. Also, we&rsquo;re interested in your feedback, so make use of the <a href="https://plus.google.com/communities/113381227473021565406">Google+ community</a> and <a href="http://stackoverflow.com/questions/tagged/android-wear">Stack Overflow</a>.</p>
+
+<h2>If you&rsquo;re a designer</h2>
+
+<p>(or a developer who wants to understand the design ideas behind Android Wear)</p>
+
+<ol>
+<li><p>Read the <a href="http://developer.android.com/wear/design/index.html">Android Wear Design Principles</a>.</p></li>
+<li><p>Become a member of the <a href="https://plus.google.com/communities/113381227473021565406">Android Wear Google+ Community</a> to get in touch with fellow developers / designers and share your ideas.</p></li>
+<li><p>A few people have created some great design resources for Android Wear. If you’re interested in creating some mock-ups, check out <a href="https://plus.google.com/+TaylorLing">+TaylorLing</a>’s <a href="http://androiduiux.com/2014/03/19/android-wear-ui-design-kit-for-photoshop-0-1-free-download/">Android Wear UI Design Kit for Photoshop</a>. If you want to add some more glitz, head over to <a href="https://plus.google.com/+SpiderflyStudios">+SpiderflyStudios</a> and download their Moto 360 mockups. Photoshop is not your thing? Check out <a href="http://frankerlich.com/">Frank Erlich</a>’s <a href="https://www.graffletopia.com/stencils/1257">OmniGraffle stencil</a>.</p></li>
+</ol>
+
+
+<p><ul class="gallery">
+<li><a href="/images/2014-03-31-getting-started-with-android-wear/android_wear_design_kit.png" class="fancybox" rel="gallery-04e1be52f2e70b4689efa13ca7a7d133" title="Android Wear UI Design Kit for Photoshop"><img src="/thumbs/android_wear_design_kit_200x150.png" alt="Android Wear UI Design Kit for Photoshop" /></a></li>
+<li><a href="/images/2014-03-31-getting-started-with-android-wear/spiderfly_moto360_mockup.png" class="fancybox" rel="gallery-04e1be52f2e70b4689efa13ca7a7d133" title="Spiderfly Moto 360 Mockup"><img src="/thumbs/spiderfly_moto360_mockup_200x150.png" alt="Spiderfly Moto 360 Mockup" /></a></li>
+<li><a href="/images/2014-03-31-getting-started-with-android-wear/omnigraffle_stencil.png" class="fancybox" rel="gallery-04e1be52f2e70b4689efa13ca7a7d133" title="Frank Erlich&rsquo;s Omnigraffle Stencil"><img src="/thumbs/omnigraffle_stencil_200x150.png" alt="Frank Erlich&rsquo;s Omnigraffle Stencil" /></a></li>
+</ul></p>
+
+<p><strong>Please note</strong> that the current SDK focusses entirely on notifications. Refer to the Design Principles of Android Wear for a good overview of the <a href="http://developer.android.com/wear/design/index.html">Notifiaction UI Patterns available</a>. Let this be your guide when using the design resources I linked. Not everything that&rsquo;s possible in Photoshop might be possible with the current SDK.</p>
+
+<h2>Lastly&hellip;</h2>
+
+<p>&hellip;here is the link to the music used in the video: <a href="http://open.spotify.com/track/7aC7xWyT2LJ4R5r18GymA2">Chromeo – Jealous (I Ain&rsquo;t With It)</a></p>
+
+<iframe src="https://embed.spotify.com/?uri=spotify:track:7aC7xWyT2LJ4R5r18GymA2" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+</feed>

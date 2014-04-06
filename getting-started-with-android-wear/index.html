@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Getting Started with Android Wear - Peter Friese</title>
+  <meta name="author" content="Peter Friese">
+
+  
+  <meta name="description" content="Wearables are one of the hot topics of the year. No &ndash; I am not talking about T-shirts with embroidered flashing charts. Rather, let’s consider &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.peterfriese.de/getting-started-with-android-wear/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Peter Friese" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<!-- FancyBox -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Fix FancyBox style for OctoPress -->
+<style type="text/css">
+  .fancybox-wrap { position: fixed !important; }
+  .fancybox-opened {
+    -webkit-border-radius: 4px !important;
+       -moz-border-radius: 4px !important;
+            border-radius: 4px !important;
+  }
+  .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+</style>
+
+
+<!-- Add the following section for flattr -->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */</script>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3683476-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  <script src="http://cdn.lanyrd.net/badges/person-v1.min.js"></script>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Peter Friese</a></h1>
+  
+    <h2>Developer Advocate / Mobile Developer / Public Speaker</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.peterfriese.de" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Getting Started With Android Wear</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-31T19:05:25+01:00" pubdate data-updated="true">Mar 31<span>st</span>, 2014</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+    
+  <p>
+    <img class="left" src="/images/2014-03-31-getting-started-with-android-wear/androidwear-2.png">
+  </p>
+  
+  <p>Wearables are one of the hot topics of the year. No &ndash; I am not talking about T-shirts with embroidered <a href="http://blog.divineforge.com/2010/09/flashwear-birt-rocks-t-shirt.html">flashing charts</a>. Rather, let’s consider gadgets like <a href="https://getpebble.com/">Pebble</a>, <a href="http://www.oculusvr.com/">Oculus Rift</a>, and <a href="http://www.google.com/glass/start/">Google Glass</a>. Besides being geeky pieces of technology (and who of us wouldn’t enjoy playing around with gadgets), they mark the beginning of a whole new era of computing.</p>
+
+<!-- more -->
+
+
+<p>Until now, using a computer usually meant interacting with a conglomeration of metal, silicon and other materials that could more or less clearly be perceived as a computer. Even smartphones &ndash; the latest step in the evolution of computers &ndash; are rather clumsy to use, if you think about it.</p>
+
+<p>Perhaps the most striking way to see the difference between regular computers and wearables is the user’s posture when using the computer. Using a computer results in a more or less non-natural posture or &ndash; even worse &ndash; behaviour (see <a href="http://curiousrituals.wordpress.com/2012/09/03/curious-rituals-book/">Curious Rituals</a> for a look in the mirror).</p>
+
+<p>Wearables change this. By being attached to or located closely to your body, they allow you to take up a much more natural posture and eventually (in the more or less distant future), people around you will no longer notice them.</p>
+
+<p>Granted, in their current incarnation, many wearables are still a long way from this vision and it is remains to the readers imagination how long you can wear a VR device like the Oculus Rift without getting a sore neck or becoming nauseous. However, this is only just the start and we will see great progress in the following years.</p>
+
+<p>On March 18th, Google announced <a href="http://googleblog.blogspot.co.uk/2014/03/sharing-whats-up-our-sleeve-android.html">Android Wear</a> and released the <a href="http://android-developers.blogspot.co.uk/2014/03/android-wear-developer-preview.html">Android Wear Developer Preview</a>. Shortly after that, Motorola announced their <a href="http://motorola-blog.blogspot.co.uk/2014/03/moto-360-its-time.html">Moto 360 watch</a> which generated quite some excitement on the internet. On the same day, LG announced their <a href="http://www.lg.com/global/gwatch">LG G watch</a> &ndash; a rectangular model.</p>
+
+<p><a href="http://www.android.com/wear/">Android Wear</a> is Google&rsquo;s second platform for wearable devices (<a href="http://www.google.co.uk/glass/start/">Google Glass</a> being the first one). The theme for both platforms is to bring useful, contextual information to users when they need it. Ultimately, the goal is to empower users without distracting them.</p>
+
+<p>If you’re excited about Android Wear as well, here are some ideas for you to try out.</p>
+
+<h2>First of all &ndash; watch the videos</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=0xQ3y902DEQ#t=17">Introducing Android Wear Developer Preview</a> with <a href="https://plus.google.com/+DavidSingleton/posts">+DavidSingleton</a></li>
+<li><a href="https://www.youtube.com/watch?v=1dQf0sANoDw&amp;list=PLWz5rJ2EKKc-kIrPiq098QH9dOle-fLef">Android Wear Developer Preview</a> with <a href="https://plus.google.com/+JustinKoh">+JustinKoh</a></li>
+<li><a href="https://www.youtube.com/watch?v=SEZbZK4jFLY">Android Wear: receiving Voice Replies</a> with <a href="https://plus.google.com/+JustinKoh">+JustinKoh</a></li>
+</ul>
+
+
+<h2>If you&rsquo;re a developer</h2>
+
+<ol>
+<li><p>Sign up for the Developer Preview. Head over to <a href="http://developer.android.com/wear/preview/start.html">our developer site</a> and sign up for the Developer Preview. When signing up, <strong>please make sure to use the same Gmail account you use on your Android device</strong> &ndash; this will make it much easier for you to download the Android Wear Preview beta app to your phone or tablet. As soon as you’ve been accepted to the preview, you will receive a confirmation email that outlines how to opt-in to the Android Wear Preview app beta program. You’ll need this app in order to connect your Android Wear simulator to your device.</p></li>
+<li><p>Follow the instructions for setting up the Developer Preview on your developer machine as described in <a href="http://developer.android.com/wear/preview/start.html">Getting Started with the Developer Preview</a>. Here are a few things to make sure it all works out fine:</p>
+
+<ul>
+<li>use the same Gmail account for signing up that is connected to your test device</li>
+<li>make sure to use a device running Android 4.3 or better, as this is a prerequisite for the Preview app</li>
+<li>after installing and starting the Android Wear Preview on your Android device, make sure to tap the blue note on the preview app to register the app as a notification listener</li>
+</ul>
+</li>
+</ol>
+
+
+<p>The great thing about Android Wear is that your app&rsquo;s notifications will show up on any connected Android Wear device (or emulator, for that matter) <a href="http://developer.android.com/wear/notifications/creating.html">without any further effort</a>. So, if you have an app that uses notifications to alert the user, you should be able to see those notifications on the Android Wear Emulator as soon as you have connected the Emulator to your Android device (phone or tablet) running your app. If you don&rsquo;t have an app that uses notifications, you can quickly check this out by sending an email to the Gmail account cyou use on your device so the notification for the email pops up in the notification center.</p>
+
+<p>Notifications are one of the <a href="http://developer.android.com/wear/design/user-interface.html">two major design principles</a> of Android Wear: <strong>Suggest</strong> and <strong>Demand</strong>.</p>
+
+<h3>Suggest: The Context Stream</h3>
+
+<div class="wear-inset-video-container" style="float:left;margin:0 0px 20px -30px">
+  <img class="wear-bezel-only" src="/images/2014-03-31-getting-started-with-android-wear/bezel.png" alt="">
+  <img class="gif" src="/images/2014-03-31-getting-started-with-android-wear/stream.gif">
+</div>
+
+
+<p>All notifications will end up on the context stream, which is a vertical list of cards, much like Google Now on Android phones. The user can interact with the cards by swiping them vertically, thereby navigating the stream of important information. Due to the limited screen real estate, only one card will be displayed at a time. You can add cards to the context stream by creating and delivering notifications. Use <a href="https://developer.android.com/reference/android/preview/support/v4/app/NotificationManagerCompat.html">NotificationCompat.Builder</a> to create basic notifications (make sure to use the one in the Android Wear Preview SDK, otherwise some features will not work). To use Android Wear specific features like pages or actions, or to customize the look of cards on the context stream, use <a href="http://developer.android.com/reference/android/preview/support/wearable/notifications/WearableNotifications.Builder.html">WearableNotifications.Builder</a>. Here is a short snippet that shows how to create a notification:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kt">int</span> <span class="n">notificationId</span> <span class="o">=</span> <span class="mi">001</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Build intent for notification content</span>
+</span><span class='line'><span class="n">Intent</span> <span class="n">viewIntent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">ViewEventActivity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</span><span class='line'><span class="n">viewIntent</span><span class="o">.</span><span class="na">putExtra</span><span class="o">(</span><span class="n">EXTRA_EVENT_ID</span><span class="o">,</span> <span class="n">eventId</span><span class="o">);</span>
+</span><span class='line'><span class="n">PendingIntent</span> <span class="n">viewPendingIntent</span> <span class="o">=</span>
+</span><span class='line'>        <span class="n">PendingIntent</span><span class="o">.</span><span class="na">getActivity</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">viewIntent</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">NotificationCompat</span><span class="o">.</span><span class="na">Builder</span> <span class="n">notificationBuilder</span> <span class="o">=</span>
+</span><span class='line'>        <span class="k">new</span> <span class="n">NotificationCompat</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="k">this</span><span class="o">)</span>
+</span><span class='line'>        <span class="o">.</span><span class="na">setSmallIcon</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">ic_event</span><span class="o">)</span>
+</span><span class='line'>        <span class="o">.</span><span class="na">setContentTitle</span><span class="o">(</span><span class="n">eventTitle</span><span class="o">)</span>
+</span><span class='line'>        <span class="o">.</span><span class="na">setContentText</span><span class="o">(</span><span class="n">eventLocation</span><span class="o">)</span>
+</span><span class='line'>        <span class="o">.</span><span class="na">setContentIntent</span><span class="o">(</span><span class="n">viewPendingIntent</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Get an instance of the NotificationManager service</span>
+</span><span class='line'><span class="n">NotificationManagerCompat</span> <span class="n">notificationManager</span> <span class="o">=</span>
+</span><span class='line'>        <span class="n">NotificationManagerCompat</span><span class="o">.</span><span class="na">from</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Build the notification and issues it with notification manager.</span>
+</span><span class='line'><span class="n">notificationManager</span><span class="o">.</span><span class="na">notify</span><span class="o">(</span><span class="n">notificationId</span><span class="o">,</span> <span class="n">notificationBuilder</span><span class="o">.</span><span class="na">build</span><span class="o">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Whenever you create notifications, be sure to follow the [Android Wear Design Principles](<a href="http://developer.android.com/wear/design/index.html.">http://developer.android.com/wear/design/index.html.</a> In particular, you should make sure all information you deliver follows the principle of being <em>timely</em>, <em>relevant</em>, and <em>specific</em>.</p>
+
+<h3>Demand: The Cue Card</h3>
+
+<div class="wear-inset-video-container" style="float:right;margin:0 -30px 20px 0px">
+  <img class="wear-bezel-only" src="/images/2014-03-31-getting-started-with-android-wear/bezel.png" alt="">
+  <img class="gif" src="/images/2014-03-31-getting-started-with-android-wear/cuecard.gif">
+</div>
+
+
+<p>Android Wear is not just about displaying notifications that the user can then interact with. In addition, users can initiate an interaction with their device by using the cue card. The cue card is brought up by saying &ldquo;OK Google&rdquo; or tapping on the &ldquo;g&rdquo; icon on the home stream of the device. Swiping up on the cue card will reveal a number of actions that can be executed by tapping them or speaking them. Voice actions are not yet available in the current preview SDK.</p>
+
+<h3>A word of caution</h3>
+
+<p>As the name implies, the Android Wear Developer Preview is not intended for creating production apps at this time. The APIs might change significantly prior to the official release of Android Wear. The preview is intended for development and testing purposes only. Also, we&rsquo;re interested in your feedback, so make use of the <a href="https://plus.google.com/communities/113381227473021565406">Google+ community</a> and <a href="http://stackoverflow.com/questions/tagged/android-wear">Stack Overflow</a>.</p>
+
+<h2>If you&rsquo;re a designer</h2>
+
+<p>(or a developer who wants to understand the design ideas behind Android Wear)</p>
+
+<ol>
+<li><p>Read the <a href="http://developer.android.com/wear/design/index.html">Android Wear Design Principles</a>.</p></li>
+<li><p>Become a member of the <a href="https://plus.google.com/communities/113381227473021565406">Android Wear Google+ Community</a> to get in touch with fellow developers / designers and share your ideas.</p></li>
+<li><p>A few people have created some great design resources for Android Wear. If you’re interested in creating some mock-ups, check out <a href="https://plus.google.com/+TaylorLing">+TaylorLing</a>’s <a href="http://androiduiux.com/2014/03/19/android-wear-ui-design-kit-for-photoshop-0-1-free-download/">Android Wear UI Design Kit for Photoshop</a>. If you want to add some more glitz, head over to <a href="https://plus.google.com/+SpiderflyStudios">+SpiderflyStudios</a> and download their Moto 360 mockups. Photoshop is not your thing? Check out <a href="http://frankerlich.com/">Frank Erlich</a>’s <a href="https://www.graffletopia.com/stencils/1257">OmniGraffle stencil</a>.</p></li>
+</ol>
+
+
+<ul class="gallery">
+<li><a href="/images/2014-03-31-getting-started-with-android-wear/android_wear_design_kit.png" class="fancybox" rel="gallery-748b07c36550da35acad181b302d7565" title="Android Wear UI Design Kit for Photoshop"><img src="/thumbs/android_wear_design_kit_200x150.png" alt="Android Wear UI Design Kit for Photoshop" /></a></li>
+<li><a href="/images/2014-03-31-getting-started-with-android-wear/spiderfly_moto360_mockup.png" class="fancybox" rel="gallery-748b07c36550da35acad181b302d7565" title="Spiderfly Moto 360 Mockup"><img src="/thumbs/spiderfly_moto360_mockup_200x150.png" alt="Spiderfly Moto 360 Mockup" /></a></li>
+<li><a href="/images/2014-03-31-getting-started-with-android-wear/omnigraffle_stencil.png" class="fancybox" rel="gallery-748b07c36550da35acad181b302d7565" title="Frank Erlich's Omnigraffle Stencil"><img src="/thumbs/omnigraffle_stencil_200x150.png" alt="Frank Erlich's Omnigraffle Stencil" /></a></li>
+</ul>
+
+
+<p><strong>Please note</strong> that the current SDK focusses entirely on notifications. Refer to the Design Principles of Android Wear for a good overview of the <a href="http://developer.android.com/wear/design/index.html">Notifiaction UI Patterns available</a>. Let this be your guide when using the design resources I linked. Not everything that&rsquo;s possible in Photoshop might be possible with the current SDK.</p>
+
+<h2>Lastly&hellip;</h2>
+
+<p>&hellip;here is the link to the music used in the video: <a href="http://open.spotify.com/track/7aC7xWyT2LJ4R5r18GymA2">Chromeo – Jealous (I Ain&rsquo;t With It)</a></p>
+
+<iframe src="https://embed.spotify.com/?uri=spotify:track:7aC7xWyT2LJ4R5r18GymA2" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+
+<p>Enjoy!</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Peter Friese</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-31T19:05:25+01:00" pubdate data-updated="true">Mar 31<span>st</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/android/'>Android</a>, <a class='category' href='/blog/categories/wearables/'>Wearables</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.peterfriese.de/getting-started-with-android-wear/" data-via="peterfriese" data-counturl="http://www.peterfriese.de/getting-started-with-android-wear/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+  
+  	<a class="FlattrButton" style="display:none;"
+    title="Getting Started with Android Wear"
+    data-flattr-uid="peterfriese"
+    data-flattr-tags=""
+    data-flattr-button="compact"
+    data-flattr-category="text"
+    href="http://www.peterfriese.de/getting-started-with-android-wear/">
+    
+</a>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/google-plus-plus-1/" title="Previous Post: Google+: +1">&laquo; Google+: +1</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About me</h1>
+  <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>. 
+
+  This is my personal blog. The views expressed on these pages are mine alone and not necessarily those of my employer.
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/getting-started-with-android-wear/">Getting Started with Android Wear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/google-plus-plus-1/">Google+: +1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/annotated-links-issue-6/">Annotated Links, Issue 6</a>
+      </li>
+    
+      <li class="post">
+        <a href="/unit-testing-android-apps-with-robolectric-and-eclipse/">Unit Testing Android Apps with Robolectric and Eclipse</a>
+      </li>
+    
+      <li class="post">
+        <a href="/debugging-tips-for-ios-developers/">Debugging Tips for iOS Developers</a>
+      </li>
+    
+  </ul>
+</section>
+
+	
+
+
+
+<section>
+  <h1>Recommended reading</h1>
+  <ul id="recommended_reading">    
+    
+      <li class="recommended_reading">
+      <p> 
+        <a href="http://www.amazon.com/Make-It-So-Interaction-Lessons/dp/1933820985?SubscriptionId=AKIAJHEKUI5Z4SO3HKLA&tag=peterfriese-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1933820985"><img src="http://ecx.images-amazon.com/images/I/41uSFWH-1YL._SL160_.jpg" /></a>
+      </p>
+      <p>
+        <a href="http://www.amazon.com/Make-It-So-Interaction-Lessons/dp/1933820985?SubscriptionId=AKIAJHEKUI5Z4SO3HKLA&tag=peterfriese-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1933820985">Make It So: Interaction Design Lessons from Science Fiction</a>
+        by Nathan Shedroff and Christopher Noessel
+      </p>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/peterfriese">@peterfriese</a> on GitHub
+  
+  <script src="/javascripts/github.js" type="text/javascript"> </script>  
+  <script type="text/javascript">
+      if (!window.jXHR){
+          var jxhr = document.createElement('script');
+          jxhr.type = 'text/javascript';
+          jxhr.src = '/javascripts/libs/jXHR.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(jxhr, s);
+      }
+      github.showRepos({
+          user: 'peterfriese',
+          count: 10,
+          sortByDate: true,
+          skip_forks: true,
+          target: '#gh_repos'
+      });
+  </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("peterfriese", 5, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/peterfriese" class="twitter-follow-button" data-show-count="true">Follow @peterfriese</a>
+  
+</section>
+
+
+<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.peterfriese.de"></a>
+<noscript>
+	<a href="https://flattr.com/thing/2943/Peter-Frieses-Blog" target="_blank">
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+	</a>
+</noscript>
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Peter Friese -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'peterfriese';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.peterfriese.de/getting-started-with-android-wear/';
+        var disqus_url = 'http://www.peterfriese.de/getting-started-with-android-wear/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- FancyBox -->
+<script type="text/javascript" src="/javascripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		prevEffect		: 'none',
+		nextEffect		: 'none',
+		helpers		: {
+			title	: { type : 'inside' }
+		}
+	});
+});
+</script>
+
+</body>
+</html>

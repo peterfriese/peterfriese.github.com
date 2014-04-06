@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Issue 10.2005 of the german Java Magazin contains an article by Markus Völter, Eberhard Wolff and me about how the Spring framework and model driven &hellip;">
+  <meta name="description" content="Often, you need to hide property pages if a project doesn&rsquo;t have a specific nature. Here&rsquo;s how you can do that: ` &lt;page adaptable=" &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -111,6 +111,86 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/how-to-filter-property-pages-according-to-the-project-nature/">How to Filter Property Pages According to the Project Nature</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-10-10T01:28:52+01:00" pubdate data-updated="true">Oct 10<span>th</span>, 2005</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>Often, you need to hide property pages if a project doesn&rsquo;t have a specific nature. Here&rsquo;s how you can do that:</p>
+
+<p>`
+   <extension point="org.eclipse.ui.propertyPages"></p>
+
+<pre><code>  &lt;page adaptable="false"
+        class="org.andromda.android.ui.ideas.AndroidProjectPropertyPage"
+        id="org.andromda.android.ui.ideas.AndroidProjectPropertyPage"
+        name="Android Project Layout"
+        objectClass="org.eclipse.core.resources.IProject"&gt;
+     &lt;filter name="nature"
+           value="org.andromda.android.core.androidnature"/&gt;
+  &lt;/page&gt;
+</code></pre>
+
+<p>   </extension>
+`</p>
+
+<p>How does it work? In order to make this work, the class you register the property page for must implement <em>IActionFilter</em>. Projects do not implement <em>IActionFilter</em>, but there is a class <em>WorkbenchProject</em> that does so. This class is registered with the workbench adapter manager, so it will eventually be called (if no one else supplies a suitable adapter, that is) in order to find out whether the project has an attribute named <em>nature</em> whose value is <em>org.andromda.android.core.androidnature</em>. In order  to resolve attributes, <em>IActionFilter</em> requires clients to implement the method <em>public boolean testAttribute(Object target, String name, String value)</em>. Here is the implementation as supplied by <em>WorkbenchProject</em>:</p>
+
+<p>`</p>
+
+<pre><code>public boolean testAttribute(Object target, String name, String value) {
+    IProject proj = (IProject) target;
+    if (name.equals(NATURE)) {
+        try {
+            return proj.isAccessible() &amp;&amp; proj.hasNature(value);
+        } catch (CoreException e) {
+            return false;
+        }
+    } else if (name.equals(OPEN)) {
+        value = value.toLowerCase();
+        return (proj.isOpen() == value.equals("true"));//$NON-NLS-1$
+    }
+    return super.testAttribute(target, name, value);
+}
+</code></pre>
+
+<p>`</p>
+
+<p>As you can see, <em>WorkbenchProject</em> will check whether the underlying project has a certain nature.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -548,49 +628,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/jax-2005-started/">JAX 2005 Started!</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-05-10T09:21:54+01:00" pubdate data-updated="true">May 10<span>th</span>, 2005</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>Today, JAX 2005 started with an overwhelming number of 120 sessions. Detailed information can be found <a href="http://jax2005.de">here</a>, a live blogging site has been set up <a href="http://www.jax.de/weblogs/jax/">here</a>.  The topics most intersting for me are <a href="http://www.jax.de/konferenzen/psecom,id,277,nodeid,,.html">Eclipse</a>, <a href="http://www.jax.de/konferenzen/psecom,id,272,nodeid,,.html">Modelling</a> and the current discussion around heavyweight (EJB-centric) and lightweight (Spring, PicoContainer) containers.</p>
-
-<p>Currently, I am attending Craig Russel&rsquo;s keynote on persistence. He started with a nice story about architects:
-A manager, an engineer and an architect are traveling to a fereign country. They are stopped at the customs and are asked what they do. &ldquo;We are selling object relational mapping&rdquo;, they answer. &ldquo;Oh, intersting&rdquo;, the customs officer replies, &ldquo;Which kind of object relational mapping?&rdquo;. The reply is &ldquo;We are doing Java Data Objects&rdquo;. The customer says: &ldquo;Oh, in this country we are using Toplink. I am sorry, but we&rsquo;ll have to kill you.&rdquo; The manager, the engineer and the architects have to stand in a row. When it comes to shooting the manager, the gun is jammed. &ldquo;This must be divine revelation, you are free to go&rdquo;, says the customs officer and the manager leaves. Now the engineer is about to be shot, but the gun blocks again. He may go as well. The architect is the last man standing. &ldquo;Is there anything you want to say before we shoot you?&rdquo; &ndash; &ldquo;Oh yes, &rdquo; answers the architect, &ldquo;I think I know what the problem is.&rdquo;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/15/">&larr; Older</a>
@@ -606,8 +643,14 @@ A manager, an engineer and an architect are traveling to a fereign country. They
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>. 
+
+  This is my personal blog. The views expressed on these pages are mine alone and not necessarily those of my employer.
 </section>
+
+  
+
+
 
 <section>
   <h1>GitHub Repos</h1>
@@ -664,7 +707,7 @@ A manager, an engineer and an architect are traveling to a fereign country. They
 <section>
   <h1>On Delicious</h1>
   <div id="delicious"></div>
-  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
 

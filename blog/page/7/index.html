@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="So I arrived in Canada on Friday night aboard Air Canada 877 from Frankfurt to Toronto. I was very pleased to see that the flight wasn&rsquo;t fully &hellip;">
+  <meta name="description" content="In order to be able to work on some of our Xtext / Eclipse related build scripts, I needed to install a CVS command line client on my Mac. Now if &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -111,6 +111,87 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/cvs-on-a-mac/">CVS on a Mac</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-12T20:52:04+00:00" pubdate data-updated="true">Feb 12<span>th</span>, 2009</time>
+        
+         | <a href="/cvs-on-a-mac/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>In order to be able to work on some of our <a href="http://www.xtext.org">Xtext</a> / <a href="http://www.eclipse.org">Eclipse</a> related build scripts, I needed to install a <a href="http://www.nongnu.org/cvs/">CVS</a> command line client on my Mac. Now if you google for &ldquo;<a href="http://www.google.com/search?hl=en&amp;q=cvs+mac">cvs mac</a>&rdquo;, you&rsquo;ll get a large list of result, basically telling you to get the <a href="http://developer.apple.com/technology/xcode.html">Apple Xcode SDK</a>. While the Xcode SDK is for free, and usually you don&rsquo;t even need to download it from the <a href="http://developer.apple.com/">Apple Developer Connection&rsquo;s website</a> (as you already have it on your Mac install disks as <a href="http://www.lullabot.com/videocast/install_cvs_mac_osx">Lullabot</a> points out), it occurred to me that installing a 1+GB space hog seems to be a bit of an overkill for getting a tiny application.</p>
+
+<p>So I decided to give <a href="http://www.finkproject.org/">Fink</a> a try. Here is what you need to do to get a CVS commandline client on your Mac:</p>
+
+<ol>
+<li><p> <a href="http://www.finkproject.org/download/index.php?phpLang=en">Download Fink</a></p></li>
+<li><p> Install Fink</p></li>
+<li><p> Copy FinkCommander to your Applications folder</p></li>
+<li><p> Start FinkCommander</p></li>
+<li><p> In the search box, type &ldquo;cvs&rdquo;
+[</p></li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3513/3274121893_93b22306c0.jpg" alt="Fink Commander" /></p>
+
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3274121893">http://www.flickr.com/photos/81029262@N00/3274121893</a>)</p>
+
+<ol>
+<li><p> Click on the &ldquo;install binary package&rdquo; button (it&rsquo;s the leftmost, with the blue plus sign)</p></li>
+<li><p> In the lower pane, you can now watch Fink downloading and installing the CVS package.
+[</p></li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3391/3274949728_0fbd4612b3.jpg" alt="Fink Commander, CVS installed" /></p>
+
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3274949728">http://www.flickr.com/photos/81029262@N00/3274949728</a>)</p>
+
+<ol>
+<li> Let&rsquo;s see if it works. Open a command line window and type &ldquo;cvs&rdquo;:
+[</li>
+</ol>
+
+
+<p><img src="http://farm4.static.flickr.com/3397/3274132941_36c13ac586.jpg" alt="CVS command line" /></p>
+
+<p>](<a href="http://www.flickr.com/photos/81029262@N00/3274132941">http://www.flickr.com/photos/81029262@N00/3274132941</a>)</p>
+
+<p>Perfect!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -865,50 +946,6 @@ Everyone in the room was quite impressed with what is possible with Object Teams
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/eclipse-on-macos/">Eclipse on MacOS</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-09-30T22:27:45+01:00" pubdate data-updated="true">Sep 30<span>th</span>, 2008</time>
-        
-         | <a href="/eclipse-on-macos/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>By default, runtime instances of Eclipse will start with large fonts. To get rid of this behaviour, just add <code>-Dorg.eclipse.swt.internal.carbon.smallFonts</code> to the VM arguments of the respective launch configuration.</p>
-
-<p>I guess it might be a good idea if PDE UI could transparently add this parameter to Eclipse launch configurations &ndash; I <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249179">opened a bug</a> to get this fixed.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -924,8 +961,14 @@ Everyone in the room was quite impressed with what is possible with Object Teams
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>. 
+
+  This is my personal blog. The views expressed on these pages are mine alone and not necessarily those of my employer.
 </section>
+
+  
+
+
 
 <section>
   <h1>GitHub Repos</h1>
@@ -982,7 +1025,7 @@ Everyone in the room was quite impressed with what is possible with Object Teams
 <section>
   <h1>On Delicious</h1>
   <div id="delicious"></div>
-  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
 

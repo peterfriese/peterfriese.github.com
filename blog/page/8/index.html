@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="Microsoft seem to be quite excited about modeling these days. Just recently, they announced that they have joined the OMG. OMG does NOT stand for &hellip;">
+  <meta name="description" content="By default, runtime instances of Eclipse will start with large fonts. To get rid of this behaviour, just add -Dorg.eclipse.swt.internal.carbon. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -111,6 +111,50 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/eclipse-on-macos/">Eclipse on MacOS</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-09-30T22:27:45+01:00" pubdate data-updated="true">Sep 30<span>th</span>, 2008</time>
+        
+         | <a href="/eclipse-on-macos/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p>By default, runtime instances of Eclipse will start with large fonts. To get rid of this behaviour, just add <code>-Dorg.eclipse.swt.internal.carbon.smallFonts</code> to the VM arguments of the respective launch configuration.</p>
+
+<p>I guess it might be a good idea if PDE UI could transparently add this parameter to Eclipse launch configurations &ndash; I <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249179">opened a bug</a> to get this fixed.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -708,58 +752,6 @@ Using MINT, you can highlight the parts of the source code which have been chang
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/today-1800-eclipse-democamp-soccer-in-hamburg/">Today @ 18:00: Eclipse DemoCamp + Soccer in Hamburg</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-06-16T09:56:38+01:00" pubdate data-updated="true">Jun 16<span>th</span>, 2008</time>
-        
-         | <a href="/today-1800-eclipse-democamp-soccer-in-hamburg/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>A friendly reminder to everybody <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_2008_-_Ganymede_Edition/Hamburg#Who_Is_Attending">who signed up</a> for the <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_2008_-_Ganymede_Edition/Hamburg">Eclipse DemoCamp in Hamburg</a>: the DemoCamp will start today at <strong>18:00 &ndash; one hour earlier than originally announced!</strong></p>
-
-<p>The reason for starting at 18:00 is&hellip;. soccer! At 20:45, the German and Austrian soccer teams will meet in a critical play. Both Martin and I didn&rsquo;t think of this, until <a href="http://www.xing.com/profile/Matthias_Luebken">Matthias Lübken</a> reminded us of the fact. Since we couldn&rsquo;t rearrange dates and / or rooms, we decided to just start earlier and finish early enough to <strong>watch the game together</strong>.</p>
-
-<p>So, if you like socer, this is the perfect chance to combine Eclipse and soccer.</p>
-
-<p>If you haven&rsquo;t heard of the DemoCamp before and would like to join &ndash; do not hesitate to add yourself to the <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_2008_-_Ganymede_Edition/Hamburg">list of attendees</a> (you need a bugzilla account to do so), or drop me short mail so I can add you to the list.</p>
-
-<p>So far, we&rsquo;ve got 48 registrations, so this will be a nice crowd :&ndash;)</p>
-
-<p>We&rsquo;re looking forward to seeing you tonight!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/9/">&larr; Older</a>
@@ -775,8 +767,14 @@ Using MINT, you can highlight the parts of the source code which have been chang
     <section>
   <h1>About me</h1>
   <img src="/images/peter/peter_sylt_300x200.png" alt="Peter Friese"  width="100%"/>
-  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>.
+  I am a software engineer with 15+ years hands-on experience in software development, technical writing and <a href="/speaking/">public speaking</a>. I work as a Developer Advocate at Google in the Google+ Developer Relations Team in London, UK. Having worked on a host of industry projects in diverse domains and being an active committer on a number of open source projects, I have in-depth knowledge in a broad range of technologies. I am deeply interested in everything mobile and social. Follow me on Twitter at <a href="http://www.twitter.com/peterfriese">@peterfriese</a> and on Google+ at <a href="https://plus.google.com/+PeterFriese?rel=author">+peterfriese</a>. 
+
+  This is my personal blog. The views expressed on these pages are mine alone and not necessarily those of my employer.
 </section>
+
+  
+
+
 
 <section>
   <h1>GitHub Repos</h1>
@@ -833,7 +831,7 @@ Using MINT, you can highlight the parts of the source code which have been chang
 <section>
   <h1>On Delicious</h1>
   <div id="delicious"></div>
-  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/freter?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
   <p><a href="http://delicious.com/freter">My Delicious Bookmarks &raquo;</a></p>
 </section>
 
