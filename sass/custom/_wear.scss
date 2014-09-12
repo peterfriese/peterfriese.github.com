@@ -1,0 +1,19 @@
+.wear-inset-video-container {
+	position: relative;
+	
+	img.gif {
+		max-width: 222px;
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		border: 0px;
+	}
+
+}
+
+img.wear-bezel-only {
+  height:302px;
+  width:302px;
+  border: 0px;
+  @include box-shadow(none);
+}

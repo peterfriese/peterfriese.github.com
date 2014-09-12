@@ -3,7 +3,7 @@ layout: post
 title: "Android Testing with Robolectric"
 date: 2013-10-23 20:02
 comments: true
-categories: 
+categories:
 - Android
 - Testing
 - Robolectric
@@ -21,7 +21,7 @@ We all know testing is essential to verify the behaviour of the software you wri
 
 Robolectric achieves this by sitting between your code and the Android OS code intercepting calls and redirecting them to shadow objects, making it possible to run your tests inside a regular JVM. This effectively means you can run your tests on your desktop - no waiting for your code to be deployed to the Emulator or a physical device!
 
-For more detailed background information about the inner workings of Roboloectric, check out [this presentation](http://www.slideshare.net/tylerschultz/robolectric-android-unit-testing-framework) and this [talk by Tyler Schultz](http://www.youtube.com/watch?v=T6FWL877txw), one of the committers of Robolectric. 
+For more detailed background information about the inner workings of Roboloectric, check out [this presentation](http://www.slideshare.net/tylerschultz/robolectric-android-unit-testing-framework) and this [talk by Tyler Schultz](http://www.youtube.com/watch?v=T6FWL877txw), one of the committers of Robolectric.
 
 ## Creating a New Project
 
@@ -48,7 +48,7 @@ To make things a bit more interesting, let's change the UI so we've got a `TextV
 		android:paddingTop="@dimen/activity_vertical_margin"
 		android:paddingBottom="@dimen/activity_vertical_margin"
 		tools:context=".MainActivity$PlaceholderFragment">
-	
+
 		<TextView
 			android:text="@string/hello_world"
 			android:layout_width="wrap_content"
@@ -57,7 +57,7 @@ To make things a bit more interesting, let's change the UI so we've got a `TextV
 			android:id="@+id/textView"
 			android:layout_alignRight="@+id/editText"
 			android:layout_alignParentLeft="true"/>
-	
+
 		<EditText
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -66,7 +66,7 @@ To make things a bit more interesting, let's change the UI so we've got a `TextV
 			android:layout_marginTop="24dp"
 			android:layout_alignParentRight="true"
 			android:layout_alignParentLeft="true"/>
-	
+
 		<Button
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -75,7 +75,7 @@ To make things a bit more interesting, let's change the UI so we've got a `TextV
 			android:layout_below="@+id/editText"
 			android:layout_centerHorizontal="true"
 			android:layout_marginTop="45dp"/>
-	
+
 	</RelativeLayout>
 ```
 
@@ -97,7 +97,7 @@ When you create a new project in Android Studio, it is not yet configured for te
 However, Android Studio (and the Gradle Plug-in) currently expect you to place tests in `src/instrumentTest`. As we won't be writing instrument tests, we'd rather like to place our tests in `src/test`. In order for this to work, we need to tell Gradle and Android Studio we're deviating from the default project structure:
 
 1. Create a new folder `src/test/java` to contain your tests.
-2. Edit `build.gradle` in your project folder and add the following source set configuration to the Android plug-in configuration:
+2. Edit `build.gradle` in your project folder and add the following source set configuration to the Android plug-in configuration, right beneath the `defaultConfig` configuration:
 
 ``` groovy
 		sourceSets {
@@ -107,7 +107,7 @@ However, Android Studio (and the Gradle Plug-in) currently expect you to place t
 
 3. Next, in Android Studio, select `Tools -> Android -> Sync Project with Gradle Files` from the main menu. This will tell Android Studio where to find your test files.
 
-You should notice how the icon for your test files folder turns from orange to green:
+You will notice how the icon for your test files folder turns from orange to green:
 
 {% fancyimage center /images/2013-10-23-android-testing-with-robolectric/robolectric_test_folder.png 200x150 Test Folder Setup%}
 
@@ -120,15 +120,15 @@ In order to be able to run Android unit tests with Gradle, we need to add the [G
 		maven {
 			url 'https://oss.sonatype.org/content/repositories/snapshots/'
 		}
-```		
+```
 2. Add the plug-in to the dependencies section of your `build.gradle`file:
 
 		classpath 'com.squareup.gradle:gradle-android-test-plugin:0.9.1-SNAPSHOT'
-		
+
 3. Apply the plug-in:
 ```groovy
 		apply plugin: 'android-test'
-```		
+```
 4. Add test-only dependencies:
 ```groovy
 		testCompile 'junit:junit:4.10'
@@ -138,7 +138,7 @@ In order to be able to run Android unit tests with Gradle, we need to add the [G
 		instrumentTestCompile 'org.robolectric:robolectric:2.3-SNAPSHOT'
 		instrumentTestCompile 'com.squareup:fest-android:1.0.+'
 ```
-		
+
 Your `build.gradle` should now look like this:
 ```groovy
 	buildscript {
@@ -155,38 +155,38 @@ Your `build.gradle` should now look like this:
 	}
 	apply plugin: 'android'
 	apply plugin: 'android-test'
-	
+
 	repositories {
 		mavenCentral()
 		maven {
 			url 'https://oss.sonatype.org/content/repositories/snapshots/'
 		}
 	}
-	
+
 	android {
 		compileSdkVersion 18
 		buildToolsVersion "18.1.0"
-	
+
 		defaultConfig {
 			minSdkVersion 7
 			targetSdkVersion 18
 		}
-	
+
 		sourceSets {
 			instrumentTest.setRoot('src/test')
 		}
 	}
-	
+
 	dependencies {
 		compile 'com.android.support:appcompat-v7:+'
-	
+
 		testCompile 'junit:junit:4.10'
 		testCompile 'org.robolectric:robolectric:2.3-SNAPSHOT'
 		testCompile 'com.squareup:fest-android:1.0.+'
 		instrumentTestCompile 'junit:junit:4.10'
 		instrumentTestCompile 'org.robolectric:robolectric:2.3-SNAPSHOT'
 		instrumentTestCompile 'com.squareup:fest-android:1.0.+'
-	
+
 	}
 ```
 
@@ -201,20 +201,20 @@ Add the following file to your project, making sure to place it somewhere in the
 	import android.app.FragmentManager;
 	import android.app.FragmentTransaction;
 	import android.support.v4.app.FragmentActivity;
-	
+
 	import org.junit.runners.model.InitializationError;
 	import org.robolectric.AndroidManifest;
 	import org.robolectric.Robolectric;
 	import org.robolectric.RobolectricTestRunner;
 	import org.robolectric.annotation.Config;
 	import org.robolectric.res.Fs;
-	
+
 	public class RobolectricGradleTestRunner extends RobolectricTestRunner {
-	
+
 		public RobolectricGradleTestRunner(Class<?> testClass) throws InitializationError {
 			super(testClass);
 		}
-	
+
 		@Override
 		protected AndroidManifest getAppManifest(Config config) {
 			String manifestProperty = System.getProperty("android.manifest");
@@ -227,7 +227,7 @@ Add the following file to your project, making sure to place it somewhere in the
 			AndroidManifest appManifest = super.getAppManifest(config);
 			return appManifest;
 		}
-	
+
 	}
 ```
 
@@ -237,17 +237,17 @@ Let's write our first test! Add the following class to `src/test/java`:
 
 ``` java MainActivityTest.java
 	package de.peterfriese.robolectricdemo;
-	
+
 	import org.junit.Test;
 	import org.junit.runner.RunWith;
-	
+
 	import de.peterfriese.robolectric.RobolectricGradleTestRunner;
-	
+
 	import static org.junit.Assert.assertTrue;
-	
+
 	@RunWith(RobolectricGradleTestRunner.class)
 	public class MainActivityTest {
-	
+
 		@Test
 		public void shouldFail() {
 			assertTrue(false);
@@ -255,16 +255,16 @@ Let's write our first test! Add the following class to `src/test/java`:
 	}
 ```
 
-A couple of things to note here: 
+A couple of things to note here:
 
 Firstly, we use the newly created `RobolectricGradleTestRunner`to make sure the test can access the Android manifest (and thereby the other Android components in your app).
 
-Secondly, we added a simple test method, making suer it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it *does not* fail, we know that something is wrong.
+Secondly, we added a simple test method, making sure it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it *does not* fail, we know that something is wrong.
 
 So, let's run the test!
 ``` sh
 	$ ./gradlew test
-	
+
 	de.peterfriese.robolectricdemo.MainActivityTest > shouldFail FAILED
 	java.lang.AssertionError at MainActivityTest.java:15
 
@@ -369,9 +369,9 @@ Open `MainActivity.java` and insert the following private class:
 		}
 	}
 ```
-	
+
 As you can see, this code will register an `OnClickListener` for the button and set the text of the text view according to the value of the edit field.
-	
+
 Also, change the constructor of `MainActivity` so it uses the new fragment class when instantiating the view fragment:
 
 ``` java
@@ -388,7 +388,7 @@ The test should now pass:
 	$ ./gradlew test
 	BUILD SUCCESSFUL
 
-	Total time: 7.066 secs	
+	Total time: 7.066 secs
 ```
 
 ## Conclusion
