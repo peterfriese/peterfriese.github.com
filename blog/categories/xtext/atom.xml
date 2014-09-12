@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Xtext | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/xtext/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-04-06T20:29:54+01:00</updated>
+  <updated>2014-09-12T16:06:08+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -81,7 +81,7 @@
 
 <p>At <a href="http://www.itemis.com">itemis</a>, we&rsquo;re very much into programming languages. We&rsquo;re even building our own language development toolkit to support development of programming languages &ndash; <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we&rsquo;ve mainly been using it to create languages for enterprise and web applications. We&rsquo;re also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself &ndash; isn&rsquo;t that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We&rsquo;re not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we&rsquo;re focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
 
-<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/15018235 "></iframe></div></p>
+<p>{% vimeo 15018235 %}</p>
 
 <p>If you&rsquo;re interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
 

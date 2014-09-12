@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Eclipse | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/eclipse/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-04-06T20:29:54+01:00</updated>
+  <updated>2014-09-12T16:06:08+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -47,11 +47,11 @@
 
 <p>Choose to create a custom icon and a custom launcher and place the project in a location of your liking.</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_1.png" class="fancybox" rel="gallery-71c5a075199ab4106dd4dd708b445982" title="New Create New Project &ndash; Step 1"><img src="/thumbs/robolectric_new_project_1_200x150.png" alt="New Create New Project &ndash; Step 1" /></a></li>
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_2.png" class="fancybox" rel="gallery-71c5a075199ab4106dd4dd708b445982" title="New Create New Project &ndash; Step 2"><img src="/thumbs/robolectric_new_project_2_200x150.png" alt="New Create New Project &ndash; Step 2" /></a></li>
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_3.png" class="fancybox" rel="gallery-71c5a075199ab4106dd4dd708b445982" title="New Create New Project &ndash; Step 3"><img src="/thumbs/robolectric_new_project_3_200x150.png" alt="New Create New Project &ndash; Step 3" /></a></li>
-</ul></p>
+<p>{% fancyalbum 200x150 %}
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_1.png: New Create New Project &ndash; Step 1
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_2.png: New Create New Project &ndash; Step 2
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_3.png: New Create New Project &ndash; Step 3
+{% endfancyalbum %}</p>
 
 <p>On the <em>Create Activity</em> page, choose <em>Blank Activity</em>, and on the <em>Blank Activity</em> configuration page use the following settings:</p>
 
@@ -108,7 +108,7 @@
 
 <p>```</p>
 
-<p><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/ui_layout.png" class="fancybox" title="Application Under Test UI"><img class="center" src="/thumbs/ui_layout_200x400.png" alt="Application Under Test UI" /></a></p>
+<p>{% fancyimage center /images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/ui_layout.png 200x400 Application Under Test UI %}</p>
 
 <h2>Preparing for Testing</h2>
 
@@ -131,10 +131,10 @@
 </ol>
 
 
-<p><ul class="gallery">
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/testproject_1.png" class="fancybox" rel="gallery-8df2dbdc48dd06236a2b0a654863ff32" title="New Create New Test Project &ndash; Step 1"><img src="/thumbs/testproject_1_200x150.png" alt="New Create New Test Project &ndash; Step 1" /></a></li>
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/testproject_2.png" class="fancybox" rel="gallery-8df2dbdc48dd06236a2b0a654863ff32" title="New Create New Test Project &ndash; Step 2"><img src="/thumbs/testproject_2_200x150.png" alt="New Create New Test Project &ndash; Step 2" /></a></li>
-</ul></p>
+<p>{% fancyalbum 200x150 %}
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/testproject_1.png: New Create New Test Project &ndash; Step 1
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/testproject_2.png: New Create New Test Project &ndash; Step 2
+{% endfancyalbum %}</p>
 
 <h3>Adding Robolectric and its Dependencies</h3>
 
@@ -154,17 +154,17 @@
 
 <p>As JUnit is the base for all our unit tests, we need to add it to our classpath, too. Open the project&rsquo;s properties, navigate to <em>Java Build Path &ndash;> Libraries</em> and click on <em>Add Library&hellip;</em>. In the next dialog, choose <em>JUnit</em> and press <em>Next</em>. Finaly, choose <em>JUnit 4</em> (Robolectric relies on JUnit 4) and press <em>Finish</em>.</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_1.png" class="fancybox" rel="gallery-a8c42e4e03479bd09d2b0e1d5e6938d2" title="Adding JUnit 4 &ndash; Step 1"><img src="/thumbs/add_junit_1_200x150.png" alt="Adding JUnit 4 &ndash; Step 1" /></a></li>
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_2.png" class="fancybox" rel="gallery-a8c42e4e03479bd09d2b0e1d5e6938d2" title="Adding JUnit 4 &ndash; Step 2"><img src="/thumbs/add_junit_2_200x150.png" alt="Adding JUnit 4 &ndash; Step 2" /></a></li>
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_3.png" class="fancybox" rel="gallery-a8c42e4e03479bd09d2b0e1d5e6938d2" title="Adding JUnit 4 &ndash; Step 3"><img src="/thumbs/add_junit_3_200x150.png" alt="Adding JUnit 4 &ndash; Step 3" /></a></li>
-</ul></p>
+<p>{% fancyalbum 200x150 %}
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_1.png: Adding JUnit 4 &ndash; Step 1
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_2.png: Adding JUnit 4 &ndash; Step 2
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_3.png: Adding JUnit 4 &ndash; Step 3
+{% endfancyalbum %}</p>
 
 <p>Finally, we need to add the Android library itself as a dependency to our test project. To do this, open then project properties dialog (Right-click the test project, select <em>Properties</em>) and navigate to <em>Java Build Path</em>. In the dialog, click on <em>Add External JARs&hellip;</em> and navigate to <code>&lt;Android SDK&gt;/platforms/android-19/android.jar</code> to add the latest Android jar to the projects build path.</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_android.png" class="fancybox" rel="gallery-60ff47917794e39212af739e4db0b6e3" title="Adding the Android jar"><img src="/thumbs/add_android_200x150.png" alt="Adding the Android jar" /></a></li>
-</ul></p>
+<p>{% fancyalbum 200x150 %}
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_android.png: Adding the Android jar
+{% endfancyalbum %}</p>
 
 <h3>Helping Robolectric to Find Your Manifest</h3>
 
@@ -330,7 +330,7 @@ public void shouldProduceGreetingWhenButtonPressed() {
 
 <p>Here are the slides I used for presenting this topic at <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2013/Hamburg">Eclipse Democamp November 2013 in Hamburg</a>:</p>
 
-<p><iframe src="http://www.slideshare.net/slideshow/embed_code/28679137 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
+<p>{% slideshare 28679137 %}</p>
 
 <p>The source code for this blog post can be found on <a href="https://github.com/peterfriese/RobolectricDemoProjectEclipse">Github</a> &ndash; clone and enjoy!</p>
 ]]></content>
@@ -352,7 +352,7 @@ public void shouldProduceGreetingWhenButtonPressed() {
 
 <p>For a first glimpse, watch our video:</p>
 
-<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/20377509 "></iframe></div></p>
+<p>{% vimeo 20377509 %}</p>
 
 <p>As of today, both iPhone and Android users can download the apps from the Apple App Store respectively the Android Marketplace. Here are the links:</p>
 
@@ -422,7 +422,7 @@ window.ondeviceorientation = function(event) {
 
 <p>I&rsquo;ve put together a little demo that uses the sensor data to color some boxes on the phone&rsquo;s screen. Here&rsquo;s a short video showing it in action:</p>
 
-<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/17182364 "></iframe></div></p>
+<p>{% vimeo 17182364 %}</p>
 
 <p>If you want to take it for a spin, open this URL in mobile safari on your phone: <a href="http://demos.peterfriese.de/gyro/gyro.html">http://demos.peterfriese.de/gyro/gyro.html</a>.</p>
 
@@ -453,17 +453,17 @@ window.ondeviceorientation = function(event) {
 
 <p>The good news of the day of course was a <a href="http://blogs.oracle.com/henrik/2010/11/oracle_and_apple_announce_openjdk_project_for_osx.html">press release announcing OpenJDK for Mac OSX</a>. Nevertheless, <a href="http://twitter.com/#!/robilad/status/3129373515321344">Dalibor demoed a freshly built OpenJDK 7 BSD port</a> on his MacBook.</p>
 
-<p><a href="/images/2010-11-15-eclipse-democamp-hamburg-november-2010/democamp01.png" class="fancybox" title="Dalibor Topic"><img class="right" src="/thumbs/democamp01_300x224.png" alt="Dalibor Topic" /></a></p>
+<p>{% fancyimage right /images/2010-11-15-eclipse-democamp-hamburg-november-2010/democamp01.png 300x224 Dalibor Topic%}</p>
 
 <p>After a short break, it was <a href="http://eclipsesource.com/blogs/author/rsternberg/">Ralf Sternberg&rsquo;s turn</a> to give an overview of <a href="http://www.eclipse.org/rap/">RAP</a> and explain what Single Sourcing is. With the help of RAP, it is rather easy to bring Eclipse RCP applications to the web. Of course, you&rsquo;ll have to pay attention to a few things, as Ralf pointed out: usually, RCP applications are single-user apps, whereas web applications are inherently multi-user enabled. Fortunately, RAP comes with a few utilities that cater for this fact.</p>
 
 <p>One thing I was delighted to learn: not only do RAP applications run on the iPad, but also do they support drawing using the SWT API, as you can see in the following video:</p>
 
-<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/16829527 "></iframe></div></p>
+<p>{% vimeo 16829527 %}</p>
 
 <p>In the last sessions, <a href="http://www.eclipse.org/Xtext/">Xtext</a> committer <a href="http://koehnlein.blogspot.com/">Jan Köhnlein</a> showed us some of the things coming up in Xtext 2.0. Being text-addicted, Jan refrained from using slides and used the IDE instead to deliver his talk:</p>
 
-<p><a href="/images/2010-11-15-eclipse-democamp-hamburg-november-2010/democamp02.png" class="fancybox" title="Jan Köhnlein talking about Xbase and Xtext"><img class="right" src="/thumbs/democamp02_300x224.png" alt="Jan Köhnlein talking about Xbase and Xtext" /></a></p>
+<p>{% fancyimage right /images/2010-11-15-eclipse-democamp-hamburg-november-2010/democamp02.png 300x224 Jan Köhnlein talking about Xbase and Xtext%}</p>
 
 <p>Jan showed us how Xbase (no, not <a href="http://en.wikipedia.org/wiki/Xbase">xBase</a>) can be used to develop DSLs (and even GPLs) that not only describe structural features but also behavior. He also demoed Xdoc, a newly invented documentation language, and the fancy new Xtext syntax view (featuring <a href="http://en.wikipedia.org/wiki/Syntax_diagram">railroad diagrams</a>).</p>
 
@@ -495,20 +495,20 @@ window.ondeviceorientation = function(event) {
 
 <p>Without further ado, here&rsquo;s a preview of the iPhone app in action:</p>
 
-<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/16367311 "></iframe></div></p>
+<p>{% vimeo 16367311 %}</p>
 
 <p>You can download the <strong>iPhone app</strong> from the App Store. It is available world-wide and we already have a few downloads from Singapore, Korea and India! For your convenience, <a href="http://bit.ly/ese_app_intl">here&rsquo;s the link to the app</a>.</p>
 
 <p>We also prepared a version for <strong>Android</strong> users. Here&rsquo;s how it will look like on your Android device:
-<a href="/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/ESE_Android.png" class="fancybox" title="ESE Android app"><img class="center" src="/thumbs/ESE_Android_151x300.png" alt="ESE Android app" /></a></p>
+{% fancyimage center /images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/ESE_Android.png 151x300 ESE Android app%}</p>
 
 <p>Head over to the Android Marketplace and search for &ldquo;eclipse summit&rdquo;, or use your barcode scanner:</p>
 
-<p><a href="/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/1078516-1288452914800.png" class="fancybox" title="Android app barcode"><img class="center" src="/thumbs/1078516-1288452914800_164x164.png" alt="Android app barcode" /></a></p>
+<p>{% fancyimage center /images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/1078516-1288452914800.png 164x164 Android app barcode %}</p>
 
 <p>The <strong>mobile web app</strong> <del>will be available from the Wifi landing page at the conference venue</del> is available via the following URL: <a href="http://bit.ly/ese_app_mobile2">http://bit.ly/ese_app_mobile2/</a>.</p>
 
-<p><a href="/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/mobileweb3.png" class="fancybox" title="Mobile Web App"><img class="center" src="/thumbs/mobileweb3_150x192.png" alt="Mobile Web App" /></a></p>
+<p>{% fancyimage center /images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/mobileweb3.png 150x192 Mobile Web App %}</p>
 
 <p><del>Rumor has it even BlackBerry users will get a native app.</del> <a href="http://ekkescorner.wordpress.com/2010/11/02/ese-app-for-blackberry/">Ekke</a> has created a native app for BlackBerry.</p>
 

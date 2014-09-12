@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Android | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-04-06T20:29:54+01:00</updated>
+  <updated>2014-09-12T16:06:08+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -132,11 +132,11 @@ notificationManager.notify(notificationId, notificationBuilder.build());
 </ol>
 
 
-<p><ul class="gallery">
-<li><a href="/images/2014-03-31-getting-started-with-android-wear/android_wear_design_kit.png" class="fancybox" rel="gallery-04e1be52f2e70b4689efa13ca7a7d133" title="Android Wear UI Design Kit for Photoshop"><img src="/thumbs/android_wear_design_kit_200x150.png" alt="Android Wear UI Design Kit for Photoshop" /></a></li>
-<li><a href="/images/2014-03-31-getting-started-with-android-wear/spiderfly_moto360_mockup.png" class="fancybox" rel="gallery-04e1be52f2e70b4689efa13ca7a7d133" title="Spiderfly Moto 360 Mockup"><img src="/thumbs/spiderfly_moto360_mockup_200x150.png" alt="Spiderfly Moto 360 Mockup" /></a></li>
-<li><a href="/images/2014-03-31-getting-started-with-android-wear/omnigraffle_stencil.png" class="fancybox" rel="gallery-04e1be52f2e70b4689efa13ca7a7d133" title="Frank Erlich&rsquo;s Omnigraffle Stencil"><img src="/thumbs/omnigraffle_stencil_200x150.png" alt="Frank Erlich&rsquo;s Omnigraffle Stencil" /></a></li>
-</ul></p>
+<p>{% fancyalbum 200x150 %}
+/images/2014-03-31-getting-started-with-android-wear/android_wear_design_kit.png: Android Wear UI Design Kit for Photoshop
+/images/2014-03-31-getting-started-with-android-wear/spiderfly_moto360_mockup.png: Spiderfly Moto 360 Mockup
+/images/2014-03-31-getting-started-with-android-wear/omnigraffle_stencil.png: Frank Erlich&rsquo;s Omnigraffle Stencil
+{% endfancyalbum %}</p>
 
 <p><strong>Please note</strong> that the current SDK focusses entirely on notifications. Refer to the Design Principles of Android Wear for a good overview of the <a href="http://developer.android.com/wear/design/index.html">Notifiaction UI Patterns available</a>. Let this be your guide when using the design resources I linked. Not everything that&rsquo;s possible in Photoshop might be possible with the current SDK.</p>
 
@@ -185,11 +185,11 @@ notificationManager.notify(notificationId, notificationBuilder.build());
 
 <p>Choose to create a custom icon and a custom launcher and place the project in a location of your liking.</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_1.png" class="fancybox" rel="gallery-71c5a075199ab4106dd4dd708b445982" title="New Create New Project &ndash; Step 1"><img src="/thumbs/robolectric_new_project_1_200x150.png" alt="New Create New Project &ndash; Step 1" /></a></li>
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_2.png" class="fancybox" rel="gallery-71c5a075199ab4106dd4dd708b445982" title="New Create New Project &ndash; Step 2"><img src="/thumbs/robolectric_new_project_2_200x150.png" alt="New Create New Project &ndash; Step 2" /></a></li>
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_3.png" class="fancybox" rel="gallery-71c5a075199ab4106dd4dd708b445982" title="New Create New Project &ndash; Step 3"><img src="/thumbs/robolectric_new_project_3_200x150.png" alt="New Create New Project &ndash; Step 3" /></a></li>
-</ul></p>
+<p>{% fancyalbum 200x150 %}
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_1.png: New Create New Project &ndash; Step 1
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_2.png: New Create New Project &ndash; Step 2
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/robolectric_new_project_3.png: New Create New Project &ndash; Step 3
+{% endfancyalbum %}</p>
 
 <p>On the <em>Create Activity</em> page, choose <em>Blank Activity</em>, and on the <em>Blank Activity</em> configuration page use the following settings:</p>
 
@@ -246,7 +246,7 @@ notificationManager.notify(notificationId, notificationBuilder.build());
 
 <p>```</p>
 
-<p><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/ui_layout.png" class="fancybox" title="Application Under Test UI"><img class="center" src="/thumbs/ui_layout_200x400.png" alt="Application Under Test UI" /></a></p>
+<p>{% fancyimage center /images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/ui_layout.png 200x400 Application Under Test UI %}</p>
 
 <h2>Preparing for Testing</h2>
 
@@ -269,10 +269,10 @@ notificationManager.notify(notificationId, notificationBuilder.build());
 </ol>
 
 
-<p><ul class="gallery">
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/testproject_1.png" class="fancybox" rel="gallery-8df2dbdc48dd06236a2b0a654863ff32" title="New Create New Test Project &ndash; Step 1"><img src="/thumbs/testproject_1_200x150.png" alt="New Create New Test Project &ndash; Step 1" /></a></li>
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/testproject_2.png" class="fancybox" rel="gallery-8df2dbdc48dd06236a2b0a654863ff32" title="New Create New Test Project &ndash; Step 2"><img src="/thumbs/testproject_2_200x150.png" alt="New Create New Test Project &ndash; Step 2" /></a></li>
-</ul></p>
+<p>{% fancyalbum 200x150 %}
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/testproject_1.png: New Create New Test Project &ndash; Step 1
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/testproject_2.png: New Create New Test Project &ndash; Step 2
+{% endfancyalbum %}</p>
 
 <h3>Adding Robolectric and its Dependencies</h3>
 
@@ -292,17 +292,17 @@ notificationManager.notify(notificationId, notificationBuilder.build());
 
 <p>As JUnit is the base for all our unit tests, we need to add it to our classpath, too. Open the project&rsquo;s properties, navigate to <em>Java Build Path &ndash;> Libraries</em> and click on <em>Add Library&hellip;</em>. In the next dialog, choose <em>JUnit</em> and press <em>Next</em>. Finaly, choose <em>JUnit 4</em> (Robolectric relies on JUnit 4) and press <em>Finish</em>.</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_1.png" class="fancybox" rel="gallery-a8c42e4e03479bd09d2b0e1d5e6938d2" title="Adding JUnit 4 &ndash; Step 1"><img src="/thumbs/add_junit_1_200x150.png" alt="Adding JUnit 4 &ndash; Step 1" /></a></li>
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_2.png" class="fancybox" rel="gallery-a8c42e4e03479bd09d2b0e1d5e6938d2" title="Adding JUnit 4 &ndash; Step 2"><img src="/thumbs/add_junit_2_200x150.png" alt="Adding JUnit 4 &ndash; Step 2" /></a></li>
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_3.png" class="fancybox" rel="gallery-a8c42e4e03479bd09d2b0e1d5e6938d2" title="Adding JUnit 4 &ndash; Step 3"><img src="/thumbs/add_junit_3_200x150.png" alt="Adding JUnit 4 &ndash; Step 3" /></a></li>
-</ul></p>
+<p>{% fancyalbum 200x150 %}
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_1.png: Adding JUnit 4 &ndash; Step 1
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_2.png: Adding JUnit 4 &ndash; Step 2
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_junit_3.png: Adding JUnit 4 &ndash; Step 3
+{% endfancyalbum %}</p>
 
 <p>Finally, we need to add the Android library itself as a dependency to our test project. To do this, open then project properties dialog (Right-click the test project, select <em>Properties</em>) and navigate to <em>Java Build Path</em>. In the dialog, click on <em>Add External JARs&hellip;</em> and navigate to <code>&lt;Android SDK&gt;/platforms/android-19/android.jar</code> to add the latest Android jar to the projects build path.</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_android.png" class="fancybox" rel="gallery-60ff47917794e39212af739e4db0b6e3" title="Adding the Android jar"><img src="/thumbs/add_android_200x150.png" alt="Adding the Android jar" /></a></li>
-</ul></p>
+<p>{% fancyalbum 200x150 %}
+/images/2013-11-27-unit-testing-android-apps-with-robolectric-and-eclipse/add_android.png: Adding the Android jar
+{% endfancyalbum %}</p>
 
 <h3>Helping Robolectric to Find Your Manifest</h3>
 
@@ -468,7 +468,7 @@ public void shouldProduceGreetingWhenButtonPressed() {
 
 <p>Here are the slides I used for presenting this topic at <a href="http://wiki.eclipse.org/Eclipse_DemoCamps_November_2013/Hamburg">Eclipse Democamp November 2013 in Hamburg</a>:</p>
 
-<p><iframe src="http://www.slideshare.net/slideshow/embed_code/28679137 " width="595" height="446" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe> </p>
+<p>{% slideshare 28679137 %}</p>
 
 <p>The source code for this blog post can be found on <a href="https://github.com/peterfriese/RobolectricDemoProjectEclipse">Github</a> &ndash; clone and enjoy!</p>
 ]]></content>
@@ -494,11 +494,11 @@ public void shouldProduceGreetingWhenButtonPressed() {
 
 <p>Create a new project using the settings you can see in the following screenshots. Choose <strong>Blank Activity</strong> and <strong>Navigation Type None</strong>.</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2013-10-23-android-testing-with-robolectric/new_project_1.png" class="fancybox" rel="gallery-bb45a15c1613049233feb92e00e099a8" title="New Create New Project &ndash; Step 1"><img src="/thumbs/new_project_1_200x150.png" alt="New Create New Project &ndash; Step 1" /></a></li>
-<li><a href="/images/2013-10-23-android-testing-with-robolectric/new_project_2.png" class="fancybox" rel="gallery-bb45a15c1613049233feb92e00e099a8" title="New Create New Project &ndash; Step 2"><img src="/thumbs/new_project_2_200x150.png" alt="New Create New Project &ndash; Step 2" /></a></li>
-<li><a href="/images/2013-10-23-android-testing-with-robolectric/new_project_3.png" class="fancybox" rel="gallery-bb45a15c1613049233feb92e00e099a8" title="New Create New Project &ndash; Step 3"><img src="/thumbs/new_project_3_200x150.png" alt="New Create New Project &ndash; Step 3" /></a></li>
-</ul></p>
+<p>{% fancyalbum 200x150 %}
+/images/2013-10-23-android-testing-with-robolectric/new_project_1.png: New Create New Project &ndash; Step 1
+/images/2013-10-23-android-testing-with-robolectric/new_project_2.png: New Create New Project &ndash; Step 2
+/images/2013-10-23-android-testing-with-robolectric/new_project_3.png: New Create New Project &ndash; Step 3
+{% endfancyalbum %}</p>
 
 <p>To make things a bit more interesting, let&rsquo;s change the UI so we&rsquo;ve got a <code>TextView</code>, an <code>InputView</code> and a <code>Button</code> on, just like this:</p>
 
@@ -546,7 +546,7 @@ public void shouldProduceGreetingWhenButtonPressed() {
 
 <p>```</p>
 
-<p><a href="/images/2013-10-23-android-testing-with-robolectric/robolectric_app_ui.png" class="fancybox" title="Application Under Test UI"><img class="center" src="/thumbs/robolectric_app_ui_200x400.png" alt="Application Under Test UI" /></a></p>
+<p>{% fancyimage center /images/2013-10-23-android-testing-with-robolectric/robolectric_app_ui.png 200x400 Application Under Test UI%}</p>
 
 <h2>Preparing for Testing</h2>
 
@@ -587,7 +587,7 @@ public void shouldProduceGreetingWhenButtonPressed() {
 
 <p>You will notice how the icon for your test files folder turns from orange to green:</p>
 
-<p><a href="/images/2013-10-23-android-testing-with-robolectric/robolectric_test_folder.png" class="fancybox" title="Test Folder Setup"><img class="center" src="/thumbs/robolectric_test_folder_200x150.png" alt="Test Folder Setup" /></a></p>
+<p>{% fancyimage center /images/2013-10-23-android-testing-with-robolectric/robolectric_test_folder.png 200x150 Test Folder Setup%}</p>
 
 <h3>Adding the Gradle Test Plug-in</h3>
 
@@ -749,7 +749,7 @@ public class MainActivityTest {
 
 <p>Firstly, we use the newly created <code>RobolectricGradleTestRunner</code>to make sure the test can access the Android manifest (and thereby the other Android components in your app).</p>
 
-<p>Secondly, we added a simple test method, making suer it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it <em>does not</em> fail, we know that something is wrong.</p>
+<p>Secondly, we added a simple test method, making sure it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it <em>does not</em> fail, we know that something is wrong.</p>
 
 <p>So, let&rsquo;s run the test!
 ``` sh</p>
@@ -899,7 +899,7 @@ public void shouldProduceGreetingWhenButtonPressed() {
 <pre><code>$ ./gradlew test
 BUILD SUCCESSFUL
 
-Total time: 7.066 secs  
+Total time: 7.066 secs
 </code></pre>
 
 <p>```</p>
@@ -945,9 +945,9 @@ Total time: 7.066 secs
 </ul>
 
 
-<p><ul class="gallery">
-<li><a href="/images/2011-05-21-code-generation-2011-dont-miss-out/cg2011.png" class="fancybox" rel="gallery-f9049cdceaffaf2ba66743d40d991d29" title="Code Generation 2011 Apps for iPhone and Android"><img src="/thumbs/cg2011_300x300.png" alt="Code Generation 2011 Apps for iPhone and Android" /></a></li>
-</ul></p>
+<p>{% fancyalbum 300x300 %}
+/images/2011-05-21-code-generation-2011-dont-miss-out/cg2011.png: Code Generation 2011 Apps for iPhone and Android
+{% endfancyalbum %}</p>
 
 <p>If you like the apps, please use the feedback feature of the respective store. Got comments or suggestions for improvement? <a href="mailto:mobile@itemis.de">Drop us a note</a> or track us down at the conference (best chance to see us: <a href="http://www.codegeneration.net/cg2011/sessioninfo.php?session=28">come to our talk</a> ;&ndash;) ).</p>
 ]]></content>
@@ -969,7 +969,7 @@ Total time: 7.066 secs
 
 <p>For a first glimpse, watch our video:</p>
 
-<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/20377509 "></iframe></div></p>
+<p>{% vimeo 20377509 %}</p>
 
 <p>As of today, both iPhone and Android users can download the apps from the Apple App Store respectively the Android Marketplace. Here are the links:</p>
 

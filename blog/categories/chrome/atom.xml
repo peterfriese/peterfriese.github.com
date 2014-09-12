@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Chrome | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/chrome/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-04-06T20:29:54+01:00</updated>
+  <updated>2014-09-12T16:06:08+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -83,7 +83,7 @@
 
 <p>Here is a short video of me using Speak to Search to search for some people on Xing and LinkedIn. Please note that the extension is making sure the speech recognition engine is configured to recognize German names on Xing.</p>
 
-<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/syMpQqMJcKU "></iframe></div></p>
+<p>{% youtube syMpQqMJcKU %}</p>
 
 <p>Language makes us human &ndash; this is a quote from a <a href="http://www.pbs.org/wnet/humanspark/video/spark-blog-video-dr-steven-pinker-language-makes-us-human/212/">video</a> I found during the research for this blog post. I don&rsquo;t necessarily think voice recognition and speech synthesis will make computers more human, but both technologies certainly can help to create a more immersive experience. I am looking forward to seeing a broader use of the new audio capabilities of modern browsers. Feel free to <a href="http://github.com/peterfriese/Speak2Search">grab my code from Github</a> and create something new and exciting!</p>
 ]]></content>

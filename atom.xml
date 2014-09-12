@@ -4,7 +4,7 @@
   <title><![CDATA[Peter Friese]]></title>
   <link href="http://www.peterfriese.de/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-04-06T20:29:54+01:00</updated>
+  <updated>2014-09-12T16:05:16+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -986,14 +986,12 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>   <br/>
-2. Add the plug-in to the dependencies section of your <code>build.gradle</code>file:</p>
-
-<pre><code>    classpath 'com.squareup.gradle:gradle-android-test-plugin:0.9.1-SNAPSHOT'
-</code></pre>
-
 <ol>
-<li>Apply the plug-in:</li>
+<li><p>Add the plug-in to the dependencies section of your <code>build.gradle</code>file:</p>
+
+<pre><code> classpath 'com.squareup.gradle:gradle-android-test-plugin:0.9.1-SNAPSHOT'
+</code></pre></li>
+<li><p>Apply the plug-in:</p></li>
 </ol>
 
 
@@ -1002,8 +1000,10 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>   <br/>
-4. Add test-only dependencies:</p>
+<ol>
+<li>Add test-only dependencies:</li>
+</ol>
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1237,7 +1237,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 
 <p>Firstly, we use the newly created <code>RobolectricGradleTestRunner</code>to make sure the test can access the Android manifest (and thereby the other Android components in your app).</p>
 
-<p>Secondly, we added a simple test method, making suer it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it <em>does not</em> fail, we know that something is wrong.</p>
+<p>Secondly, we added a simple test method, making sure it will fail. Why is this a good idea? Well, it makes sure our test fails when running it, so we can be sure the whole setup actually works. If we run the test and it <em>does not</em> fail, we know that something is wrong.</p>
 
 <p>So, let&rsquo;s run the test!</p>
 
@@ -1441,7 +1441,7 @@ frame #22: 0x000032dd TodoMobile`main(argc=1, argv=0xbfffedc0) + 141 at main.m:1
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>./gradlew <span class="nb">test</span>
 </span><span class='line'>BUILD SUCCESSFUL
 </span><span class='line'>
-</span><span class='line'>Total <span class="nb">time</span>: 7.066 secs    
+</span><span class='line'>Total <span class="nb">time</span>: 7.066 secs
 </span></code></pre></td></tr></table></div></figure>
 
 

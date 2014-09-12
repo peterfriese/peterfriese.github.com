@@ -9,7 +9,7 @@
   <meta name="author" content="Peter Friese">
 
   
-  <meta name="description" content="By default, runtime instances of Eclipse will start with large fonts. To get rid of this behaviour, just add -Dorg.eclipse.swt.internal.carbon. &hellip;">
+  <meta name="description" content="Yesterday, I complained about large fonts being used in Eclipse runtime instances on Mac OS X. Much to my delight, Chris was kind enough to point &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -111,6 +111,55 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/eclipse-you-live-and-learn/">Eclipse - You Live and Learn.</a></h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-10-02T01:56:18+01:00" pubdate data-updated="true">Oct 2<span>nd</span>, 2008</time>
+        
+         | <a href="/eclipse-you-live-and-learn/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+        
+    <p><a href="http://www.peterfriese.de/eclipse-on-macos/">Yesterday, I complained</a> about large fonts being used in Eclipse runtime instances on Mac OS X. Much to my delight, <a href="http://mea-bloga.blogspot.com/">Chris</a> was kind enough to point out that you can define a launch configuration template for PDE-based launches. It is a bit hidden and doesn&rsquo;t have the &ldquo;launch&rdquo; keyword assigned. To globally define launch config parameters, open the preference dialog and navigate to Plug-in Development &ndash;> Target Platform &ndash;> Launching Arguments:</p>
+
+<p>[caption id=&ldquo;attachment_130&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;500&rdquo; caption=&ldquo;Launch template for PDE launches&rdquo;]<a href="http://www.peterfriese.de/wp-content/launchtemplate.png"><img src="http://www.peterfriese.de/wp-content/launchtemplate.png" alt="Launch template for PDE launches" /></a>[/caption]</p>
+
+<p>After ou have defined your favourite launching arguments, subsequently created launch configurations will be initialized with these arguments:
+[caption id=&ldquo;attachment_133&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;500&rdquo; caption=&ldquo;Launch configuration&rdquo;]<a href="http://www.peterfriese.de/wp-content/launchconfig.png"><img src="http://www.peterfriese.de/wp-content/launchconfig.png" alt="Launch configuration" /></a>[/caption]</p>
+
+<p>Who would have thought you can learn something by just <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249179">filing a bug</a>?</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -665,86 +714,6 @@ If you use the generation gap pattern (illustrated below), you should set aside 
 If you use protected regions, you need a way to decorate the parts in your code that won&rsquo;t be touched by the generator. The Eclipse Modeling Framework Technology project (EMFT) has a subcomponent which was written with this in mind &ndash; <a href="http://wiki.eclipse.org/Mint">MINT</a>.
 Using MINT, you can highlight the parts of the source code which have been changed by you:
 <a href="http://www.peterfriese.de/wp-content/emf-jdt-outline.png"><img src="http://www.peterfriese.de/wp-content/emf-jdt-outline-300x225.png" alt="Highlighting handcrafted code with MINT" /></a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/eclipse-democamp-hamburg-review/">Eclipse DemoCamp Hamburg Review</a></h1>
-      
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-06-17T14:24:36+01:00" pubdate data-updated="true">Jun 17<span>th</span>, 2008</time>
-        
-         | <a href="/eclipse-democamp-hamburg-review/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-        
-    <p>Yesterday, the Eclipse DemoCamp in Hamburg took place in the beautiful &ldquo;<a href="http://de.wikipedia.org/wiki/Speicherstadt">Speicherstadt</a>&rdquo; in Hamburg:</p>
-
-<p><img src="http://farm4.static.flickr.com/3087/2587210416_4dc18af47f_m.jpg" alt="Speicherstadt" /></p>
-
-<p><img src="http://farm4.static.flickr.com/3135/2587209784_211c01889a_m.jpg" alt="Speicherstadt" /></p>
-
-<p>We had about 50 registrations and more than 40 people actually showed up:</p>
-
-<p><a href="http://www.flickr.com/photos/81029262@N00/2586214951/"><img src="http://farm4.static.flickr.com/3059/2586214951_30c2d13207.jpg" alt="Eclipse DemoCamp" /></a></p>
-
-<p>After a short introduction by <a href="http://www.xing.com/profile/Martin_Lippert">Martin</a> and <a href="http://www.xing.com/profile/Peter_Friese">me</a>, <a href="http://www.xing.com/profile/Sven_Efftinge">Sven</a> (itemis AG) gave an introduction to <a href="http://wiki.eclipse.org/Xtext">Xtext</a> and highlighted some o the new features in the upcoming version Xtext 2.0.</p>
-
-<p><a href="http://www.xing.com/profile/Matthias_Luebken">Matthias Lübken</a> of it-agile gave a talk on <a href="http://code.google.com/webtoolkit/">GWT</a> (Google Web Toolkit) and <a href="http://www.osgi.org/Main/HomePage">OSGi</a> and showed us how easy it is to build great-looking web-applications that can be dynamically enhanced by means of OSGi runtime features like loading / unloading bundles. Matthias mentioned several times that <a href="http://www.xing.com/profile/Gunnar_Wagenknecht">Gunnar Wagenknecht</a> provided a patch that fixes some classloading issues in the serialization code. So Gunnar, thanks again!</p>
-
-<p>Thanks to <a href="http://www.itemis.eu">itemis</a>, <a href="http://www.it-agile.de">it-agile</a> and of course the <a href="http://www.eclipse.org">Eclipse Foundation</a> who all sponsored the event, we could then enjoy a break with drinks and some sandwiches.</p>
-
-<p>After the break, <a href="http://www.xing.com/profile/Stefan_Reichert5">Stefan Reichert</a> of <a href="http://www.lhsystems.com">Lufthansa Systems</a> presented his Plug-in <a href="http://www.wickedshell.net/">Wickedshell</a> that enables you to execute shell scripts for your favourite command shell from inside Eclipse.</p>
-
-<p><a href="http://www.xing.com/profile/Reginald_Stadlbauer">Reginald Stadlbauer</a> of <a href="http://www.froglogic.com/">Froglogic</a> gave a demo of their GUI testing tool, <a href="http://www.froglogic.com/pg?id=Products&amp;category=squish&amp;sub=overview&amp;subsub=overview">Squish</a>. Besides being able to create test scripts for a wide variety of GUI technologies, Squish can also create GUI tests for Eclipse RCP / SWT applications. You can modify the scripts afterwards, and introduce conditions, which is great.</p>
-
-<p>The demos were concluded by a presentation on the topic of &ldquo;Generation of format adapters for SAP XI. A model driven approach.&rdquo; by <a href="http://www.xing.com/profile/Frank_Zimmermann74">Frank Zimmermann</a> of the Nordakademie and two of his students, Henning Banneitz and <a href="http://www.xing.com/profile/Stefan_Tanck">Stefan Tanck</a>. It very nicely showed how to use modern technology (Xtext) to tackle legacy technology (EDI / EDIFACT).</p>
-
-<p>They finished just in time so all soccer fans could watch the encounter Germany &ndash; Austria, which also was a success (at least for the German team).</p>
-
-<p>A big thank-you is due to our sponsors, it-agile, itemis and the Eclipse Foundation. Martin and I would especially like to say &ldquo;thank you&rdquo; to <a href="http://www.xing.com/profile/Arne_Roock">Arne Roock</a> for taking care of all he organizational details!</p>
-
-<p>Also thanks a lot to everyone who attended the Camp! We would to gather feedback on how you liked the camp, so pleace voice your opinion on the <a href="http://www.peterfriese.de/hamburg-eclipse-democamp-2008-poll/">poll</a>.</p>
-
-<p>Here is a list of resource (slides, screencasts and screenshots) for your reference:</p>
-
-<ul>
-<li><p>Xtext <a href="http://wiki.eclipse.org/images/8/85/Xtext-Democamp.pdf">Slides</a></p></li>
-<li><p><a href="http://luebken.com/?p=98">Serverside OSGi and GWT Slides and Screencast</a></p></li>
-<li><p>Squish <a href="http://www.froglogic.com/download/demos/squish_java_rcp/squish_java_rcp.html">Screencast</a></p></li>
-<li><p><a href="http://wiki.eclipse.org/images/7/7a/SAP_XI_model_driven.pdf">Generation of format adapters for SAP XI Slides</a></p></li>
-<li><p><a href="http://wiki.eclipse.org/images/d/d8/EclipseDemoCamp-SpringDM.pdf">Spring Dynamic Module Slides</a></p></li>
-<li><p><a href="http://www.flickr.com/photos/81029262@N00/sets/72157605662715189/">More pictures</a></p></li>
-</ul>
-
 </div>
   
   

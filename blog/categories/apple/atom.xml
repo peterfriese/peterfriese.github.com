@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Apple | Peter Friese]]></title>
   <link href="http://www.peterfriese.de/blog/categories/apple/atom.xml" rel="self"/>
   <link href="http://www.peterfriese.de/"/>
-  <updated>2014-04-06T20:29:54+01:00</updated>
+  <updated>2014-09-12T16:06:08+01:00</updated>
   <id>http://www.peterfriese.de/</id>
   <author>
     <name><![CDATA[Peter Friese]]></name>
@@ -25,15 +25,15 @@
 
 <p>At first sight, everything looked OK. Have a look at the following screenshot. It clearly violates <a href="http://code.google.com/apis/maps/terms.html">Google&rsquo;s terms of service for Maps</a>, but can you spot what is wrong?</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png" class="fancybox" rel="gallery-2541fd897745d40b916d6d0c64b0c4f5" title="Google Maps in your app &ndash; without Google Logo: you&rsquo;re doing it wrong!"><img src="/thumbs/maps_without_google_logo_240x300.png" alt="Google Maps in your app &ndash; without Google Logo: you&rsquo;re doing it wrong!" /></a></li>
-</ul></p>
+<p>{% fancyalbum 240x300 %}
+/images/2011-02-16-appropriate-use-of-mapkit/maps_without_google_logo.png: Google Maps in your app &ndash; without Google Logo: you&rsquo;re doing it wrong!
+{% endfancyalbum %}</p>
 
 <p>Maybe you can better see what&rsquo;s wrong when I show you another screenshot, this time obeying the TOS:</p>
 
-<p><ul class="gallery">
-<li><a href="/images/2011-02-16-appropriate-use-of-mapkit/maps_with_google_logo.png" class="fancybox" rel="gallery-8590c5cd892556ccc1df97f31d1c3e84" title="Google Maps with logo: well done!"><img src="/thumbs/maps_with_google_logo_240x300.png" alt="Google Maps with logo: well done!" /></a></li>
-</ul></p>
+<p>{% fancyalbum 240x300 %}
+/images/2011-02-16-appropriate-use-of-mapkit/maps_with_google_logo.png: Google Maps with logo: well done!
+{% endfancyalbum %}</p>
 
 <p>Can you spot the difference? It&rsquo;s the Google logo!</p>
 
@@ -123,20 +123,20 @@
 
 <p>Without further ado, here&rsquo;s a preview of the iPhone app in action:</p>
 
-<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/16367311 "></iframe></div></p>
+<p>{% vimeo 16367311 %}</p>
 
 <p>You can download the <strong>iPhone app</strong> from the App Store. It is available world-wide and we already have a few downloads from Singapore, Korea and India! For your convenience, <a href="http://bit.ly/ese_app_intl">here&rsquo;s the link to the app</a>.</p>
 
 <p>We also prepared a version for <strong>Android</strong> users. Here&rsquo;s how it will look like on your Android device:
-<a href="/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/ESE_Android.png" class="fancybox" title="ESE Android app"><img class="center" src="/thumbs/ESE_Android_151x300.png" alt="ESE Android app" /></a></p>
+{% fancyimage center /images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/ESE_Android.png 151x300 ESE Android app%}</p>
 
 <p>Head over to the Android Marketplace and search for &ldquo;eclipse summit&rdquo;, or use your barcode scanner:</p>
 
-<p><a href="/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/1078516-1288452914800.png" class="fancybox" title="Android app barcode"><img class="center" src="/thumbs/1078516-1288452914800_164x164.png" alt="Android app barcode" /></a></p>
+<p>{% fancyimage center /images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/1078516-1288452914800.png 164x164 Android app barcode %}</p>
 
 <p>The <strong>mobile web app</strong> <del>will be available from the Wifi landing page at the conference venue</del> is available via the following URL: <a href="http://bit.ly/ese_app_mobile2">http://bit.ly/ese_app_mobile2/</a>.</p>
 
-<p><a href="/images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/mobileweb3.png" class="fancybox" title="Mobile Web App"><img class="center" src="/thumbs/mobileweb3_150x192.png" alt="Mobile Web App" /></a></p>
+<p>{% fancyimage center /images/2010-11-01-updated-use-your-iphone-android-or-blackberry-to-build-your-eclipse-summit-europe-2010/mobileweb3.png 150x192 Mobile Web App %}</p>
 
 <p><del>Rumor has it even BlackBerry users will get a native app.</del> <a href="http://ekkescorner.wordpress.com/2010/11/02/ese-app-for-blackberry/">Ekke</a> has created a native app for BlackBerry.</p>
 
@@ -188,7 +188,7 @@
 
 <p>At <a href="http://www.itemis.com">itemis</a>, we&rsquo;re very much into programming languages. We&rsquo;re even building our own language development toolkit to support development of programming languages &ndash; <a href="http://www.xtext.org">Xtext</a>. With this toolkit, it is very easy to create your own domain specific programming languages (DSLs). In the past, we&rsquo;ve mainly been using it to create languages for enterprise and web applications. We&rsquo;re also helping others to (re-)build languages such as SQL. Of course, Xtext is being used to build itself &ndash; isn&rsquo;t that nice?  About one year ago, we started implementing a programming language tailored towards creating data-driven mobile applications for the iOS platform. We&rsquo;re not aiming at creating a language you can use to build arbitrary iOS applications. Instead, we&rsquo;re focussing on data-driven applications with a drill-down metaphor. Something you can find in many applications such as FaceBook, LinkedIn, Kayak and the like. Watch the following video to see it in action:</p>
 
-<p><div class="embed-video-container"><iframe src="http://player.vimeo.com/video/15018235 "></iframe></div></p>
+<p>{% vimeo 15018235 %}</p>
 
 <p>If you&rsquo;re interested in learning more about APPlause, get in touch with us by mail [heiko.behrens|peter.friese]@itemis.de, subscribe to <a href="http://www.heikobehrens.net">our</a> <a href="http://www.peterfriese.de">blogs</a> and follow us on Twitter (<a href="http://www.twitter.com/peterfriese">@peterfriese</a>, <a href="http://www.twitter.com/HBehrens">@HBehrens</a>, <a href="http://www.twitter.com/applausedsl">@APPlauseDSL</a>).</p>
 
